@@ -1,0 +1,12 @@
+{
+  "id": "fact-jerrod-father-of-kitana-original",
+  "type": "fact",
+  "name": "Jerrod was Kitana's father",
+  "subjectId": "jerrod",
+  "predicate": "father_of",
+  "objectId": "kitana",
+  "timelineIds": ["original"],
+  "canonStatus": "supplemental",
+  "sourceIds": ["mk3-sindel-ending"],
+  "notes": "Sindel's Mortal Kombat 3 arcade ending says that she and Jerrod had a daughter named Kitana. The fact is kept supplemental rather than promoting the ending into canonical outcome evidence."
+}

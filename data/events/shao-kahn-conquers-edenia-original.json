@@ -1,0 +1,13 @@
+{
+  "id": "shao-kahn-conquers-edenia-original",
+  "type": "event",
+  "name": "Shao Kahn conquers Edenia",
+  "timelineId": "original",
+  "participantIds": ["shao-kahn", "sindel", "kitana"],
+  "realmIds": ["edenia"],
+  "causeEventIds": [],
+  "consequenceEventIds": [],
+  "order": -760,
+  "description": "After rising to power in Outworld, Shao Kahn takes Edenia from Kitana's parents and takes Queen Sindel as his bride.",
+  "tags": ["ancient", "conquest", "edenia", "outworld"]
+}

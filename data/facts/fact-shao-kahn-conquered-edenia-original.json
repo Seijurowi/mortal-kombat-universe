@@ -1,0 +1,12 @@
+{
+  "id": "fact-shao-kahn-conquered-edenia-original",
+  "type": "fact",
+  "name": "Shao Kahn conquered Edenia",
+  "subjectId": "shao-kahn",
+  "predicate": "conquered",
+  "objectId": "edenia",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkt-shao-kahn-bio"],
+  "notes": "Mortal Kombat Trilogy describes Shao Kahn as usurping the realm from Kitana's parents."
+}

@@ -1,0 +1,12 @@
+{
+  "id": "fact-kitana-liberated-edenia-original",
+  "type": "fact",
+  "name": "Kitana freed Edenia from Shao Kahn",
+  "subjectId": "kitana",
+  "predicate": "liberated",
+  "objectId": "edenia",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkda-kitana-bio"],
+  "notes": "Kitana's Deadly Alliance biography treats Edenia's liberation from Shao Kahn as prior established history."
+}

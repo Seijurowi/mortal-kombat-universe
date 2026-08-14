@@ -32,11 +32,11 @@ Delivered:
 
 ## Phase 5 — Cosmology and ancient history 🔨
 
-Status: implementation in progress on `agent/phase5-cosmology`.
+Status: implementation in progress on `agent/phase5-edenia-outworld`.
 
-Goal: expand from character-scale lore into the oldest Mortal Kombat history while preserving source and continuity caveats instead of presenting one synthetic creation myth as timeless canon.
+Goal: expand from character-scale lore into the oldest Mortal Kombat history while preserving source and continuity caveats instead of presenting one synthetic creation myth or one flattened ancient history as timeless canon.
 
-### Deception cosmology foundation
+### Deception cosmology foundation ✅
 
 - [x] Add `One Being` as a non-playable primordial Character/being in Original continuity.
 - [x] Add `Elder Gods` as a Faction rather than pretending the collective is one Character.
@@ -46,17 +46,18 @@ Goal: expand from character-scale lore into the oldest Mortal Kombat history whi
 - [x] Record the Kamidogu/reawakening danger without turning it into unsupported causal edges.
 - [x] Expand Event participants from Character-only to `Character | Faction`, proven by the Elder Gods acting collectively in the creation event.
 - [x] Add `game_manual` as a first-class Source type after the Deception instruction booklet proved the need.
+- [x] Correct creation-event realm semantics so `realmIds` is location/scope, not an output list.
 
-### Onaga ancient-history slice
+### Onaga ancient-history slice ✅
 
 - [x] Add Onaga, Shao Kahn, and Shujinko as Original-continuity Characters.
-- [x] Add Raiden biography and Shujinko ending evidence from Deception.
+- [x] Add Raiden biography, Shujinko ending, and later Armageddon follow-up evidence.
 - [x] Model `Shao Kahn poisons Onaga → Shao Kahn seizes Outworld` as a supported causal chain.
 - [x] Model `Onaga manipulates Shujinko → Shujinko gathers the Kamidogu` as a supported causal chain.
 - [x] Model `Shujinko shatters the Kamidogu → Shujinko defeats Onaga` as a supported causal chain.
 - [x] Deliberately leave the gather → shatter gap unconnected until a source supports that direct causal edge.
 
-### Shinnok ancient-history slice
+### Shinnok ancient-history slice ✅
 
 - [x] Add Shinnok and Lucifer as Original-continuity Characters.
 - [x] Represent Shinnok's former Elder God status as a Fact, not timeless static faction membership.
@@ -64,13 +65,24 @@ Goal: expand from character-scale lore into the oldest Mortal Kombat history whi
 - [x] Model `Quan Chi allies with Shinnok → Shinnok becomes ruler of the Netherrealm`.
 - [x] Reuse the existing Mortal Kombat Mythologies: Sub-Zero primary game source rather than duplicating source records.
 
+### Edenia / Outworld conquest slice 🔨
+
+- [x] Add Original-continuity Kitana, Sindel, and Jerrod Characters.
+- [x] Add Mortal Kombat Trilogy Shao Kahn biography evidence for the Edenian conquest and Sindel marriage history.
+- [x] Add Deadly Alliance Kitana biography evidence confirming Edenia's later liberation.
+- [x] Add Mortal Kombat 3 Sindel ending as explicitly ending-level evidence for Jerrod family details.
+- [x] Model `Shao Kahn conquered Edenia` and `Kitana liberated Edenia` as realm-target Facts instead of overloading Event `realmIds`.
+- [x] Keep conquest and later liberation as separate chronological events without inventing one direct causal edge across the unmodeled intervening history.
+- [x] Keep Jerrod spouse/father claims `supplemental` while their only evidence in this slice is a character ending.
+- [ ] Final AGENTS/manual review and CI for the slice.
+
 ### Next lore slices
 
+- [ ] Great Kung Lao, Goro, Shang Tsung, and pre-1992 tournament history.
 - [ ] Onaga's resurrection/return mechanism and post-Deception fate with stronger source coverage.
 - [ ] Shinnok escape/MK4 and Reboot continuity comparison.
-- [ ] Edenia / Outworld conquest history and Shao Kahn.
-- [ ] Great Kung Lao and pre-1992 tournament history.
 - [ ] Compare Original cosmology against MK11-era Titan/Kronika cosmology without forcing them into one universal truth.
+- [ ] Compare Original/Reboot/New Era Sindel portrayals with claim-history discipline rather than a synthetic character biography.
 
 ### Phase 5 acceptance criteria
 
@@ -83,7 +95,9 @@ A user should be able to:
 5. distinguish Deception's Original-continuity cosmology from later Titan/New Era material;
 6. follow supported Onaga/Shao Kahn/Shujinko chains without chronology-only edges being invented;
 7. follow Shinnok's fall/banishment and later Netherrealm rise without treating former Elder God status as eternal membership;
-8. see intentional causal gaps where the sources establish sequence or context but not direct causation.
+8. inspect Edenia's conquest/liberation as sourced realm-target claims while `realmIds` remains event location/scope metadata;
+9. distinguish biography-backed Edenian canon claims from ending-only supplemental Jerrod details;
+10. see intentional causal gaps where the sources establish sequence or context but not direct causation.
 
 See `PHASE5_MANUAL_VERIFICATION.md`.
 

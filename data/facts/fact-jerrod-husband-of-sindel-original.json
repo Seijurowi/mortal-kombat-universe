@@ -1,0 +1,12 @@
+{
+  "id": "fact-jerrod-husband-of-sindel-original",
+  "type": "fact",
+  "name": "Jerrod was Sindel's husband",
+  "subjectId": "jerrod",
+  "predicate": "spouse_of",
+  "objectId": "sindel",
+  "timelineIds": ["original"],
+  "canonStatus": "supplemental",
+  "sourceIds": ["mk3-sindel-ending"],
+  "notes": "Sindel's Mortal Kombat 3 arcade ending names Jerrod as her true husband. The relationship is retained as supplemental because the ending itself is not treated as an automatic canonical outcome."
+}
