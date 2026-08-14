@@ -47,15 +47,16 @@ Where a timeline contains disconnected causal components:
 - [ ] Selecting another chain focuses its root and displays that chain only.
 - [ ] Independent chains are never joined merely because their event orders are close.
 
-## 5. Timeline isolation
+## 5. Timeline isolation and reset bridges
 
 Switch Original / Reboot / New Era.
 
-- [ ] No event from another continuity appears anywhere in the tree.
+- [ ] No event from another continuity appears inside an ordinary story tree.
 - [ ] Switching timeline chooses a valid chain/root in that continuity.
 - [ ] A timeline with few causal links remains usable and does not invent missing edges.
 - [ ] Similarly named events across timelines are not presented as the same occurrence.
-- [ ] `pnpm validate` rejects any causal event reference that crosses timeline boundaries.
+- [ ] The Reboot `hourglass-reset → liu-kang-new-era` link remains valid model data but is **not** folded into either ordinary continuity tree.
+- [ ] `pnpm validate` rejects an arbitrary cross-timeline causal edge unless the source event is explicitly tagged as a reset/rewrite bridge (`reset`, `rewrite`, or `timeline-bridge`).
 
 ## 6. Chronology is not causality
 
@@ -89,8 +90,8 @@ Verify the whole chain can visibly express:
 
 The local cause/effect panel remains secondary to the whole tree.
 
-- [ ] `Why?` shows only immediate parent event(s) of `You are here`.
-- [ ] `What next?` shows only immediate child event(s).
+- [ ] `Why?` shows only immediate parent event(s) of `You are here` within the active timeline.
+- [ ] `What next?` shows only immediate child event(s) within the active timeline.
 - [ ] Clicking either side updates `You are here` in the tree without losing whole-chain orientation.
 
 ## 9. Dossier integration
@@ -115,6 +116,7 @@ Answer these before Phase 3 is considered complete:
 - Does the whole-chain tree solve the “where does this event chain start?” problem?
 - Are current one-to-many branches understandable with the vertical tree?
 - At what real chain complexity does a true 2D graph become more readable than the story tree?
+- Should reset/rewrite bridges get a separate timeline-transition visualization later?
 - Should non-causal chronological milestones ever appear as muted context between causal nodes, or would that weaken trust in the graph?
 
 Do **not** introduce React Flow, Cytoscape, a graph database, or a new causal schema solely because a richer diagram is theoretically possible. Let larger real chains—and a real branch-merge case—demonstrate the need first.
