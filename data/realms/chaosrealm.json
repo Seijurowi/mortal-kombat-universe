@@ -1,0 +1,8 @@
+{
+  "id": "chaosrealm",
+  "type": "realm",
+  "name": "Chaosrealm",
+  "timelineIds": ["original"],
+  "description": "The Realm of Chaos traversed in Mortal Kombat: Deception's Konquest mode.",
+  "tags": ["realm", "deception"]
+}
