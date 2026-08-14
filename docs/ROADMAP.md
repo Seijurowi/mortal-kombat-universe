@@ -36,58 +36,65 @@ Delivered:
 
 Key model decision: Bi-Han remains one `Character`; Sub-Zero and Noob Saibot are timeline-scoped identities/states rather than duplicate person records.
 
-## Phase 2 — Timeline-first reading experience 🔨
+## Phase 2 — Timeline-first reading experience ✅
 
-Status: implementation in progress on `agent/timeline-first-ux`.
+Status: complete and merged after manual review.
 
-Goal: stop the encyclopedia feeling like a warehouse of disconnected records. A character should be something a reader can follow as a continuity-specific story.
+Delivered:
+
+- specialized character dossiers;
+- in-page Original / Reboot / New Era continuity switching;
+- generated `Compare all` continuity overview;
+- dedicated chronological event presentation;
+- separation between chronology, evidence-backed facts, and relationship connections;
+- shareable `entity` + `timeline` state and copy-deep-link action;
+- Phase 2 manual verification guide;
+- repository changelog practice and contributor policy.
+
+The product now supports reading a character as a continuity-specific story rather than only inspecting isolated entity records.
+
+## Phase 3 — Causality and focused graph 🔨
+
+Status: implementation in progress on `agent/causality-focused-graph`.
+
+Goal: answer **why did this happen?** and **what did this lead to?** without rendering one unusable universe-wide graph or confusing chronology with causality.
 
 ### Implemented in this phase
 
-- [x] Specialized character dossier view.
-- [x] Continuity selector inside character pages without returning to the index.
-- [x] `Compare all` continuity overview generated from existing facts/events.
-- [x] Dedicated chronological event presentation ordered by event `order`.
-- [x] Clear separation between chronology, evidence-backed facts, and relationship connections.
-- [x] URL state for `entity` + `timeline` so a specific reading state can be linked directly.
-- [x] Copy-deep-link action.
-- [x] Manual Phase 2 UX verification checklist.
+- [x] Dedicated `/causality` workbench.
+- [x] Focused `cause → event → consequence` layout.
+- [x] Click-to-recenter navigation through neighboring causal events.
+- [x] Timeline isolation for causal neighborhoods.
+- [x] Explicit separation between event causality and ordinary relationship edges.
+- [x] Links back to event and participant dossiers while preserving timeline scope.
+- [x] Global Explorer / Causality mode switch.
+- [x] Phase 3 manual verification checklist.
+- [x] Reuse existing `causeEventIds` / `consequenceEventIds` without schema expansion.
 
 ### Still to evaluate manually
 
-- [ ] Does the character page now feel readable rather than inspectable?
-- [ ] Is `Compare all` sufficient, or does it need stronger generated summaries / side-by-side identity tables?
-- [ ] Does chronology remain understandable when a character has many more events?
-- [ ] Are direct links useful enough to justify moving state into Next.js route segments later?
-- [ ] Does mobile chronology remain usable?
+- [ ] Does focused causality answer "why?" better than the old dependency list?
+- [ ] Is click-to-recenter enough, or is visible multi-hop expansion needed?
+- [ ] Does the three-column desktop graph remain understandable for events with multiple causes/consequences?
+- [ ] Should relationship edges ever be composed into the same graph, or remain separate?
+- [ ] Is a dedicated graph library justified by actual interaction needs?
 
-See `PHASE2_MANUAL_VERIFICATION.md`.
+See `PHASE3_MANUAL_VERIFICATION.md`.
 
-### Phase 2 acceptance criteria
+### Phase 3 acceptance criteria
 
-For Bi-Han, a user should be able to:
+A user should be able to:
 
-1. open the character once;
-2. switch Original / Reboot / New Era without leaving the dossier;
-3. read important events in chronological order;
-4. inspect sourced facts separately from the event narrative;
-5. follow people/faction connections separately from chronology;
-6. compare continuity coverage;
-7. copy a URL that restores the same character + timeline state.
+1. open `/causality`;
+2. choose a continuity;
+3. focus an event;
+4. distinguish explicit causes from explicit consequences;
+5. re-center the graph by clicking a neighbor;
+6. navigate several causal steps through the Bi-Han / Hanzo chain;
+7. open the full event or participant dossier without losing timeline scope;
+8. verify that chronology-only neighbors do not become causal arrows.
 
-All automated quality gates must pass before merge.
-
-## Phase 3 — Causality and focused graph
-
-Goal: answer **why did this happen?** and **what did this lead to?** visually without rendering one unusable universe-wide graph.
-
-Candidates:
-
-- focused entity neighborhood graph;
-- cause → event → consequence explorer;
-- graph filters by timeline, relation type, and canon status;
-- neighborhood expansion from a selected entity/event;
-- resolve alternate-timeline character variants such as Titan Havik if real graph navigation proves the need.
+All automated quality gates and the Phase 3 manual verification checklist must pass before merge.
 
 ## Phase 4 — Retcon registry and evidence explorer
 
@@ -135,6 +142,6 @@ Possible future additions:
 - graph index;
 - content authoring tools;
 - automated source coverage reports;
-- richer graph invariant tests.
+- richer graph invariant tests;
 
 These are not goals until scale or contributor workflow proves they are needed.
