@@ -8,14 +8,17 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 
 ### Added
 
-- Dedicated `/claims` workbench for comparing sourced versions of the same subject/predicate claim across continuities.
+- Dedicated `/claims` workbench for inspecting sourced claim families grouped by shared subject and predicate.
 - Claim-history cards showing timeline scope, canon status, notes, source chronology, official source links, and fact-dossier navigation.
-- Search across divergent claim groups.
-- Phase 4 manual verification focused on distinguishing continuity divergence, explicit retcons, alternate portrayals, uncertainty, and source chronology.
+- Evidence-safe family labels for value variation, cross-continuity agreement, alternate portrayals, canon-status variation, and explicit retcon evidence.
+- Search across claim families by subject, predicate, and displayed values.
+- Phase 4 manual verification focused on preventing claim-family grouping from inventing contradiction or retcon semantics.
 
 ### Changed
 
-- Phase 4 product and agent guidance now explicitly treats continuity divergence as different from a confirmed retcon.
+- Phase 4 product and agent guidance treats subject/predicate grouping as a presentation aid rather than proof of divergence or contradiction.
+- Different displayed values are no longer automatically labelled continuity divergence; they may represent time-dependent or multi-valued predicates such as identity.
+- Search keeps the selected detail synchronized with visible results instead of leaving a filtered-out family active.
 - Source year is used as evidence-history context when available, not as automatic canonical priority.
 - Schema expansion for explicit `contradicts` / `supersedes` links remains deferred until a real sourced lore case proves it necessary.
 
