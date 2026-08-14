@@ -30,6 +30,11 @@ jobs:
           cp .shadcn-reference/app/globals.css app/globals.css
           cp .shadcn-reference/postcss.config.mjs postcss.config.mjs
           cp .shadcn-reference/lib/utils.ts lib/utils.ts
+          cat > pnpm-workspace.yaml <<'EOF'
+          allowBuilds:
+            sharp: true
+            unrs-resolver: true
+          EOF
           mkdir -p components
           cat > components/theme-provider.tsx <<'EOF'
           "use client"
@@ -49,6 +54,7 @@ jobs:
           const current = JSON.parse(fs.readFileSync('package.json', 'utf8'))
           const reference = JSON.parse(fs.readFileSync('.shadcn-reference/package.json', 'utf8'))
           current.packageManager = 'pnpm@11.21.0'
+          delete current.pnpm
           current.scripts = {
             ...current.scripts,
             check: 'pnpm validate && pnpm lint && pnpm typecheck && pnpm build',
@@ -57,10 +63,6 @@ jobs:
           }
           current.dependencies = { ...reference.dependencies, ...current.dependencies }
           current.devDependencies = { ...reference.devDependencies, ...current.devDependencies }
-          current.pnpm = {
-            ...(current.pnpm || {}),
-            onlyBuiltDependencies: ['sharp', 'unrs-resolver']
-          }
           fs.writeFileSync('package.json', JSON.stringify(current, null, 2) + '\n')
           NODE
       - name: Install and add base shadcn components
@@ -72,6 +74,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add package.json pnpm-lock.yaml components.json app/globals.css postcss.config.mjs lib/utils.ts components/theme-provider.tsx components/ui
+          git add package.json pnpm-lock.yaml pnpm-workspace.yaml components.json app/globals.css postcss.config.mjs lib/utils.ts components/theme-provider.tsx components/ui
           git commit -m "Adopt pnpm and shadcn preset"
           git push origin HEAD:agent/nextjs-foundation
