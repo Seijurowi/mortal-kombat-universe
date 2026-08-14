@@ -1,0 +1,9 @@
+{
+  "id": "shang-tsung",
+  "type": "character",
+  "name": "Shang Tsung",
+  "timelineIds": ["original"],
+  "realmIds": ["outworld"],
+  "description": "Sorcerer who came to control and corrupt the Mortal Kombat tournament before the events of the first game.",
+  "tags": ["sorcerer", "tournament", "ancient-history"]
+}

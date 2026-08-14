@@ -36,6 +36,8 @@ Phase 5 expanded participant validation from Character-only to `Character | Fact
 
 Sequence alone does not prove causality. Ordinary causal links connect events in the same timeline. Cross-timeline causal links are reserved for explicit reset/rewrite bridges whose source event creates or rewrites the following continuity; the validator recognizes `reset`, `rewrite`, and `timeline-bridge` source-event tags.
 
+Temporal phrases such as **“during this period,” “after,” “before,” or “years later”** establish chronology/context unless the source also states a causal relationship. The Great Kung Lao tournament slice proves this distinction: the original Mortal Kombat story says Goro defeated Kung Lao and that during this period the tournament fell into Shang Tsung's hands. Those are separate Events/Facts with no `causeEventIds` edge because temporal co-occurrence is not proof that Goro's victory caused Shang Tsung's takeover.
+
 ## 4. Relationships are graph projections
 
 `Relationship` exists for navigation and graph traversal. Meaningful lore claims should be backed by Facts where possible. Do not treat Relationship as evidence by itself.
@@ -46,9 +48,11 @@ Prefer stable person entities such as `bi-han`, `kuai-liang`, `hanzo-hasashi`, a
 
 Do not encode a historical office, rank, divine state, or faction membership as timeless static Character metadata when the lore shows that it changes. Phase 5 proves this with Shinnok: he **was** an Elder God, fell, was banished, and later ruled the Netherrealm. His former Elder God status is therefore a Fact (`former_member_of`) rather than `factionIds: ["elder-gods"]` on the Character.
 
+Historical titles and reign lengths follow the same rule. Goro's Grand Champion status and roughly 500-year undefeated reign are sourced Facts, not timeless Character metadata.
+
 ## 6. Transformation and state changes
 
-Deaths, resurrections, corruption, revenant/wraith states, ascensions, banishments, rulership changes, conquests, and liberations are best represented as Events plus Facts. Avoid putting all historical states into a static Character or Realm description.
+Deaths, resurrections, corruption, revenant/wraith states, ascensions, banishments, rulership changes, conquests, liberations, title changes, and similar transitions are best represented as Events plus Facts. Avoid putting all historical states into a static Character or Realm description.
 
 ## 7. Timeline discipline
 
@@ -90,6 +94,8 @@ When a primary work is only accessible through a preservation mirror, the Source
 
 Phase 5 adds `game_manual` as a first-class Source type after the Mortal Kombat: Deception instruction booklet proved that official manuals are a reusable evidence category rather than generic `other` material.
 
+Later games may clarify the identity or wording of an older event without replacing the older source. The Great Kung Lao slice uses Mortal Kombat (1992) to establish Goro's ancient victory and Mortal Kombat II to identify the defeated ancestor explicitly as the **Great Kung Lao**. This is evidence accumulation, not “newer source automatically wins.”
+
 ## 10. Source granularity
 
 The current schema stores sources mostly at work-level granularity. Add chapter/scene/page/timestamp/quote locators only when real evidence review proves they are necessary.
@@ -104,9 +110,11 @@ Phase 5 also deliberately keeps Shujinko's `gathers Kamidogu` and later `shatter
 
 Likewise, `Shao Kahn conquers Edenia` and the much later `Kitana frees Edenia` remain disconnected causal components for now. The conquest establishes the historical condition that is later reversed, but the dataset does not yet model the long chain of intervening events needed to claim one direct causal edge.
 
+The Great Kung Lao/Goro slice adds another reusable case: `Goro defeats the Great Kung Lao` and `Shang Tsung takes control of the tournament` belong to the same historical period, but remain disconnected because the source does not explicitly say one caused the other.
+
 ## 12. Cosmology and ancient-history modeling
 
-Phase 5 begins with the Original-continuity creation account in Mortal Kombat: Deception and expands into Onaga, Shinnok, and Edenia/Outworld conquest history.
+Phase 5 begins with the Original-continuity creation account in Mortal Kombat: Deception and expands through Onaga, Shinnok, Edenia/Outworld conquest history, and pre-1992 tournament history.
 
 Current choices:
 
@@ -116,10 +124,11 @@ Current choices:
 - realm-target claims use Facts; `realmIds` stays event location/scope metadata.
 - the shattering is an `Event`.
 - statements about the Kamidogu and creation are `Fact` records with source evidence.
-- Onaga, Shao Kahn, Shujinko, Shinnok, Lucifer, Sindel, Kitana, and Jerrod remain stable Characters; changes in rulership, allegiance, divine status, conquest, liberation, or banishment are represented through Events and Facts.
+- Onaga, Shao Kahn, Shujinko, Shinnok, Lucifer, Sindel, Kitana, Jerrod, Great Kung Lao, Goro, and Shang Tsung remain stable Characters; changes in rulership, allegiance, divine status, conquest, liberation, banishment, titles, or tournament control are represented through Events and Facts.
 - ending-only details may be preserved with conservative `supplemental` status instead of being promoted into biography-level canon.
+- tournament-era chronology is allowed to remain a set of disconnected Events when sources provide sequence/context but not explicit causality.
 
-Do **not** project this Original-continuity material automatically into Reboot or New Era. Later Titan/Kronika cosmology, reboot Shinnok, and later Sindel reinterpretations must be added with their own scoped evidence and compared rather than silently reconciled.
+Do **not** project this Original-continuity material automatically into Reboot or New Era. Later Titan/Kronika cosmology, reboot Shinnok, later Sindel reinterpretations, and MK9/New Era tournament-history variants must be added with their own scoped evidence and compared rather than silently reconciled.
 
 The One Being is a deliberate stress test for whether `Character` remains semantically acceptable for unique cosmic beings. Do not add a `CosmicEntity` type until additional real cases prove the existing class materially harms navigation or meaning.
 
@@ -149,7 +158,8 @@ Proven cases include:
 - official game manuals as a distinct source category;
 - historical divine/faction status represented as Facts rather than timeless Character membership, proven by Shinnok;
 - realms acting as the object of sourced claims without overloading Event `realmIds`, proven by Edenia conquest/liberation;
-- ending-only lore retained conservatively as supplemental evidence rather than automatic canonical history.
+- ending-only lore retained conservatively as supplemental evidence rather than automatic canonical history;
+- temporal association kept separate from causality, proven by the Great Kung Lao/Goro/Shang Tsung tournament history.
 
 Current pressure points include:
 
@@ -159,6 +169,7 @@ Current pressure points include:
 - whether unique cosmic beings eventually justify a more specific entity type;
 - whether Kamidogu and other important objects eventually justify a first-class Artifact entity;
 - how Deception cosmology compares with MK11-era Titan/Kronika cosmology without flattening the difference;
-- how Original/Reboot/New Era Sindel portrayals should be compared without treating every changed characterization as one simple retcon.
+- how Original/Reboot/New Era Sindel portrayals should be compared without treating every changed characterization as one simple retcon;
+- how far to extend pre-1992 tournament history before later retellings require explicit claim-family comparison rather than one merged chronology.
 
 Do not add new schema merely because these concepts exist. Add it when a concrete sourced slice cannot be represented or navigated cleanly with the current model.

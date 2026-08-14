@@ -1,9 +1,10 @@
 {
   "id": "mk-1992-game",
   "type": "source",
-  "name": "Mortal Kombat (1992)",
+  "name": "Mortal Kombat (1992) — Arcade Story",
   "sourceType": "game_story",
   "game": "Mortal Kombat",
   "year": 1992,
-  "notes": "Primary game-era source for the original tournament continuity."
+  "url": "https://www.mksecrets.net/mk1/eng/mk-story.php",
+  "notes": "Primary arcade story text preserved by Mortal Kombat Secrets. It states that Goro had remained undefeated for 500 years, won the Grand Champion title by defeating Kung Lao, and that during this period the tournament fell into Shang Tsung's hands and was corrupted. The preservation site is access infrastructure, not canonical authority."
 }

@@ -1,0 +1,10 @@
+{
+  "id": "great-kung-lao",
+  "type": "character",
+  "name": "Great Kung Lao",
+  "aliases": ["Kung Lao"],
+  "timelineIds": ["original"],
+  "realmIds": ["earthrealm"],
+  "description": "Ancient Shaolin champion and ancestor of the later Kung Lao, defeated by Goro roughly five centuries before the first Mortal Kombat game.",
+  "tags": ["shaolin", "champion", "ancient-history"]
+}

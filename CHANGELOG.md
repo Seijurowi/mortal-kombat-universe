@@ -12,13 +12,17 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 - Onaga / Shao Kahn / Shujinko Original-continuity records with sourced ancient succession and Deception-era story chains.
 - Shinnok / Lucifer Original-continuity records with sourced ancient Earthrealm war, banishment, Quan Chi alliance, and Netherrealm succession events.
 - Kitana, Sindel, and Jerrod Original-continuity records for the Edenia / Outworld conquest slice.
+- Great Kung Lao, Goro, and Shang Tsung Original-continuity records for pre-1992 tournament history.
 - Mortal Kombat: Deception Shujinko biography, Raiden biography, Shujinko ending, and instruction-booklet source records.
 - Mortal Kombat: Armageddon Shujinko biography as later follow-up evidence confirming Onaga's defeat.
 - Mortal Kombat Trilogy Shao Kahn biography, Mortal Kombat 3 Sindel ending, and Deadly Alliance Kitana biography source records for Edenian history.
+- Mortal Kombat II Kung Lao biography as primary in-game evidence identifying the ancient champion defeated by Goro as the Great Kung Lao.
+- Preservation URL and explicit provenance notes for the original Mortal Kombat (1992) arcade story source now used by the tournament-history Facts.
 - Sourced realm-target Facts for `Shao Kahn conquered Edenia` and `Kitana liberated Edenia`.
 - Supplemental Jerrod family Facts retained from Sindel's Mortal Kombat 3 ending without promoting ending-only evidence into biography-level canon.
+- Pre-1992 tournament Facts for Goro defeating the Great Kung Lao, becoming Grand Champion, remaining undefeated for roughly 500 years, and Shang Tsung controlling/corrupting the tournament.
 - Supported causal chains for `Shao Kahn poisons Onaga → seizes Outworld`, `Onaga manipulates Shujinko → Shujinko gathers Kamidogu`, `Shujinko shatters Kamidogu → defeats Onaga`, `Shinnok wars with Raiden → banishment`, and `Quan Chi allies with Shinnok → Shinnok rules Netherrealm`.
-- Phase 5 manual verification for ancient cosmology, continuity scope, source provenance, collective event participants, status changes, realm-target semantics, ending evidence strength, and causal gaps.
+- Phase 5 manual verification for ancient cosmology, continuity scope, source provenance, collective event participants, status changes, realm-target semantics, ending evidence strength, tournament chronology, and causal gaps.
 
 ### Changed
 
@@ -31,8 +35,9 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 - Kamidogu reawakening lore is represented as sourced Facts without manufacturing unsupported causal event edges.
 - Onaga chronology intentionally keeps unsupported transitions disconnected rather than turning sequence into causality.
 - Edenia conquest and later liberation remain disconnected causal components until their long intervening history is explicitly modeled.
+- Great Kung Lao/Goro chronology keeps `Goro defeats the Great Kung Lao` separate from `Shang Tsung takes control of the tournament`; the source's “during this period” wording is treated as temporal association, not proof of causality.
 - Shinnok's Elder God status is represented as a historical Fact (`former_member_of`) instead of timeless static faction membership.
-- Product and domain documentation now identifies Phase 5 as the active milestone instead of leaving the PRD on Phase 4.
+- Product and domain documentation identifies Phase 5 as the active milestone and tracks each ancient-history slice as it is merged.
 
 ## 2026-08-14 — Phase 4: Claim history, retcons, and evidence
 

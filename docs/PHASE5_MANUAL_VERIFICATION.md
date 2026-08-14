@@ -81,7 +81,7 @@ Search/open `Shao Kahn conquers Edenia`, `Kitana frees Edenia from Shao Kahn`, a
 
 ## 9. Edenian evidence strength
 
-Open Kitana, Sindel, Jerrod, and the three new source records.
+Open Kitana, Sindel, Jerrod, and the three source records used by the slice.
 
 - [ ] `Mortal Kombat Trilogy — Shao Kahn Biography` supports the conquest and Sindel-bride claims as `canon` Facts.
 - [ ] `Mortal Kombat: Deadly Alliance — Kitana Biography` supports Edenia's liberation as a `canon` Fact.
@@ -89,19 +89,41 @@ Open Kitana, Sindel, Jerrod, and the three new source records.
 - [ ] Jerrod's `spouse_of Sindel` and `father_of Kitana` Facts are `supplemental`, not silently promoted to `canon` in this slice.
 - [ ] `/claims` does not label ending-vs-biography evidence-strength differences as a contradiction by itself.
 
-## 10. Continuity discipline
+## 10. Great Kung Lao / Goro tournament history
 
-- [ ] Deception/Mythologies/MKT/MK3/MKDA Original-history claims are not copied into Reboot or New Era without independent evidence.
+Search/open `Great Kung Lao`, `Goro`, and `Goro defeats the Great Kung Lao`.
+
+- [ ] Great Kung Lao, Goro, and Shang Tsung are Original-continuity Characters in this slice.
+- [ ] `Goro defeated the Great Kung Lao` cites both the original Mortal Kombat story and Mortal Kombat II Kung Lao biography.
+- [ ] Goro's Grand Champion title is a historical Fact rather than timeless Character metadata.
+- [ ] Goro's roughly 500-year undefeated reign is a separate sourced Fact.
+- [ ] The Mortal Kombat II source is identified as `game_bio` and as a reproduction of the in-game biography rather than TRMK being treated as canon authority.
+- [ ] The Mortal Kombat (1992) arcade story source exposes a preservation URL and explicitly identifies the preservation site as access infrastructure rather than canonical authority.
+
+## 11. Tournament chronology versus causality
+
+Open `Goro defeats the Great Kung Lao` and `Shang Tsung takes control of the tournament`, then inspect `/causality`.
+
+- [ ] Both Events are chronologically placed before the first-game tournament.
+- [ ] `Shang Tsung controlled and corrupted the tournament` is represented as a sourced Fact.
+- [ ] There is **no** direct `Goro defeats Great Kung Lao → Shang Tsung takes control` causal edge.
+- [ ] The phrase “during this period” is treated as temporal association/context, not proof of causality.
+- [ ] `/causality` therefore shows these as disconnected components unless a future primary source establishes a direct causal relation.
+
+## 12. Continuity discipline
+
+- [ ] Deception/Mythologies/MKT/MK3/MKDA/MK1/MKII Original-history claims are not copied into Reboot or New Era without independent evidence.
 - [ ] MK11 Titan/Kronika cosmology is not silently reconciled with Deception cosmology yet.
 - [ ] Later Sindel reinterpretations are not used to rewrite the Original-continuity Edenia records in this slice.
-- [ ] Future reboot/New Era Sindel comparison should use scoped Facts and claim history.
+- [ ] MK9/New Era tournament retellings are not silently used to fill gaps in the Original Great Kung Lao history.
+- [ ] Future reboot/New Era comparisons should use scoped Facts and claim history.
 
-## 11. Responsive/navigation checks
+## 13. Responsive/navigation checks
 
 - [ ] New Characters, realms, events, facts, and sources are reachable through normal Explorer navigation.
 - [ ] `/claims` can inspect the new Facts without inventing contradiction semantics.
 - [ ] `/causality` shows only explicit causal edges and keeps intentional gaps/disconnected components visible.
-- [ ] Kitana, Sindel, and Jerrod dossiers remain readable on narrow/mobile widths.
+- [ ] Kitana, Sindel, Jerrod, Great Kung Lao, Goro, and Shang Tsung dossiers remain readable on narrow/mobile widths.
 
 ## Decision after this slice
 
@@ -112,5 +134,6 @@ Before the next Phase 5 expansion, answer:
 - Does `former_member_of` plus Events model Shinnok's changing divine/political status clearly enough?
 - Is the `realmIds = location/scope` plus realm-target Fact pattern clear enough for future realm mergers and conquests?
 - Does `supplemental` adequately preserve ending-only Jerrod lore without overstating its evidence strength?
+- Is the chronology-without-causality rule clear enough for tournament history where sources say events occurred “during this period”?
 - Do we need a first-class Artifact entity once individual Kamidogu histories become navigable, or can Facts continue to carry that concept for now?
 - Are the separate short ancient-history chains easier to trust than one artificially connected story tree?

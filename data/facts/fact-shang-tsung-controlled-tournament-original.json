@@ -1,0 +1,12 @@
+{
+  "id": "fact-shang-tsung-controlled-tournament-original",
+  "type": "fact",
+  "name": "Shang Tsung controlled and corrupted the tournament",
+  "subjectId": "shang-tsung",
+  "predicate": "controlled",
+  "value": "Mortal Kombat tournament",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk-1992-game"],
+  "notes": "The first Mortal Kombat story states that during Goro's rise the tournament fell into Shang Tsung's hands and was corrupted. This Fact does not assert that Goro's victory caused that transfer of control."
+}

@@ -1,0 +1,13 @@
+{
+  "id": "shang-tsung-controls-tournament-original",
+  "type": "event",
+  "name": "Shang Tsung takes control of the tournament",
+  "timelineId": "original",
+  "participantIds": ["shang-tsung"],
+  "realmIds": [],
+  "causeEventIds": [],
+  "consequenceEventIds": [],
+  "order": -490,
+  "description": "During the era of Goro's rise, the Mortal Kombat tournament falls into Shang Tsung's hands and is corrupted.",
+  "tags": ["tournament", "corruption", "ancient-history"]
+}

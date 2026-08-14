@@ -1,0 +1,13 @@
+{
+  "id": "goro-defeats-great-kung-lao-original",
+  "type": "event",
+  "name": "Goro defeats the Great Kung Lao",
+  "timelineId": "original",
+  "participantIds": ["goro", "great-kung-lao"],
+  "realmIds": [],
+  "causeEventIds": [],
+  "consequenceEventIds": [],
+  "order": -500,
+  "description": "Roughly five centuries before the first Mortal Kombat game, Goro defeats the Great Kung Lao and becomes Grand Champion.",
+  "tags": ["tournament", "championship", "ancient-history"]
+}
