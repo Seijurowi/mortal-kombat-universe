@@ -74,6 +74,8 @@ Use the narrowest defensible status. Prefer small atomic assertions over paragra
 
 Prefer stable person entities such as `bi-han`, `kuai-liang`, and `hanzo-hasashi`. Do not create duplicate characters merely because a mantle changes. Model identities, deaths, resurrections, corruption, revenant/wraith states, ascensions, historical offices, titles, and reigns through sourced facts/events unless a future proven requirement introduces a more specific entity/version concept.
 
+Do not promote qualified source language into a stronger state. `Apparent death`, `believed dead`, `missing`, and similar wording are not death Facts/Events unless stronger evidence establishes death.
+
 A `Character` may represent a unique non-playable being when it is still a single agent/entity in the lore. Phase 5 currently uses this for the One Being. Do not add a `CosmicEntity` type until multiple concrete cases prove that `Character` materially distorts the model or UI.
 
 ## Retcons, contradictions, and claim history
@@ -130,7 +132,7 @@ Prefer, in order:
 
 If a primary work is accessed through a third-party preservation mirror, identify the primary work in the Source record and describe the mirror honestly. Do not promote the mirror itself to canonical authority.
 
-A later primary source may clarify an earlier source without automatically superseding it. Preserve both when they add distinct evidence. In the current tournament slice, Mortal Kombat (1992) establishes Goro's ancient victory and Mortal Kombat II identifies the defeated ancestor explicitly as the Great Kung Lao.
+A later primary source may clarify or confirm an earlier source without automatically superseding it. Preserve both when they add distinct evidence. An arcade ending can contribute to a canon outcome when later story/biography material independently treats that outcome as established history; do not infer that every detail of the ending therefore happened.
 
 Do not invent a source to satisfy validation.
 
@@ -146,7 +148,7 @@ Before changing a schema or validator rule:
 
 Phase 5's first proven evolution is allowing Factions in Event `participantIds`: the Elder Gods collectively act in the One Being shattering event. This is reusable for clans, armies, organizations, and other collective actors.
 
-Do **not** change schema merely because a new lore slice is old, complicated, or important. The Great Kung Lao/Goro/Shang Tsung slice is representable with existing Character, Event, Fact, and Source contracts; its challenge is evidence and causality discipline, not missing entity types.
+Do **not** change schema merely because a new lore slice is old, complicated, or important. The tournament-history slices remain representable with existing Character, Event, Fact, and Source contracts; their challenge is evidence and causality discipline, not missing entity types.
 
 Never weaken validation to make incorrect data pass.
 
@@ -169,6 +171,7 @@ Before a substantive PR is ready:
 - new facts have evidence and timeline scope;
 - realm-target assertions are not hidden in `realmIds` semantics;
 - temporal association is not promoted into causality;
+- qualified states such as `apparent death` are not promoted into stronger Facts/Events;
 - retcon/contradiction UI does not promote mere variation into a confirmed retcon;
 - documentation matches behavior;
 - `CHANGELOG.md` has been reviewed;
@@ -186,8 +189,8 @@ A green build does not prove lore accuracy, causal accuracy, retcon accuracy, or
 
 ## Current scope
 
-Phases 1, 2, 3, and 4 are complete and merged. The Deception cosmology / Onaga / Shinnok foundation and Edenia / Outworld conquest slice of Phase 5 are also merged.
+Phases 1, 2, 3, and 4 are complete and merged. Phase 5's Deception cosmology / Onaga / Shinnok foundation, Edenia / Outworld conquest, and Great Kung Lao tournament slices are merged.
 
 The active work remains **Phase 5 — Cosmology and ancient history**, defined in `docs/ROADMAP.md` and reviewed through `docs/PHASE5_MANUAL_VERIFICATION.md`.
 
-The current slice is **Great Kung Lao / Goro / Shang Tsung pre-1992 tournament history** on `agent/phase5-great-kung-lao`: establish the ancient championship era from early game sources, preserve later source clarification, and keep “during this period” chronology separate from unsupported causal edges.
+The current slice is **Liu Kang / MK1992 tournament bridge** on `agent/phase5-liu-kang-1992`: confirm the first-game outcome with later primary sources, enrich the existing tournament Event rather than duplicate it, and connect Shang Tsung's documented failure to his MKII second-chance plea without converting Goro's `apparent death` into a death event.
