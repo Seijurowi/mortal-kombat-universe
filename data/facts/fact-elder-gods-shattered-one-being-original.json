@@ -1,0 +1,12 @@
+{
+  "id": "fact-elder-gods-shattered-one-being-original",
+  "type": "fact",
+  "name": "The Elder Gods shattered the One Being with the Kamidogu",
+  "subjectId": "elder-gods",
+  "predicate": "shattered",
+  "objectId": "one-being",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk-deception-shujinko-bio"],
+  "notes": "The in-game Shujinko biography identifies the Kamidogu as the weapons used by the Elder Gods to smash the One Being."
+}
