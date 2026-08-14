@@ -69,17 +69,39 @@ In Original continuity, inspect the causal story components.
 - [ ] `Quan Chi allies with Shinnok → Shinnok becomes ruler of the Netherrealm` renders as a separate supported chain.
 - [ ] Lucifer is reachable as the prior Netherrealm ruler involved in the second chain.
 
-## 8. Continuity discipline
+## 8. Edenia / Outworld conquest semantics
 
-- [ ] Deception/Mythologies ancient-history claims are not copied into Reboot or New Era without independent evidence.
+Search/open `Shao Kahn conquers Edenia`, `Kitana frees Edenia from Shao Kahn`, and the Edenia dossier.
+
+- [ ] The conquest event uses `realmIds: ["edenia"]` only as event location/scope.
+- [ ] The statement that Shao Kahn conquered Edenia is a sourced Fact with `objectId: "edenia"`.
+- [ ] The statement that Kitana liberated Edenia is a separate sourced Fact with `objectId: "edenia"`.
+- [ ] The conquest and liberation events are **not** directly connected by a causal edge merely because one reverses the other historically.
+- [ ] `/causality` therefore keeps those events disconnected until the intervening history is explicitly modeled.
+
+## 9. Edenian evidence strength
+
+Open Kitana, Sindel, Jerrod, and the three new source records.
+
+- [ ] `Mortal Kombat Trilogy — Shao Kahn Biography` supports the conquest and Sindel-bride claims as `canon` Facts.
+- [ ] `Mortal Kombat: Deadly Alliance — Kitana Biography` supports Edenia's liberation as a `canon` Fact.
+- [ ] `Mortal Kombat 3 — Sindel Ending` is identified as `game_ending`, not biography/story evidence.
+- [ ] Jerrod's `spouse_of Sindel` and `father_of Kitana` Facts are `supplemental`, not silently promoted to `canon` in this slice.
+- [ ] `/claims` does not label ending-vs-biography evidence-strength differences as a contradiction by itself.
+
+## 10. Continuity discipline
+
+- [ ] Deception/Mythologies/MKT/MK3/MKDA Original-history claims are not copied into Reboot or New Era without independent evidence.
 - [ ] MK11 Titan/Kronika cosmology is not silently reconciled with Deception cosmology yet.
-- [ ] Future reboot Shinnok comparison should use scoped Facts rather than rewriting the Original history.
+- [ ] Later Sindel reinterpretations are not used to rewrite the Original-continuity Edenia records in this slice.
+- [ ] Future reboot/New Era Sindel comparison should use scoped Facts and claim history.
 
-## 9. Responsive/navigation checks
+## 11. Responsive/navigation checks
 
-- [ ] New Characters, Faction, realms, events, facts, and sources are reachable through normal Explorer navigation.
+- [ ] New Characters, realms, events, facts, and sources are reachable through normal Explorer navigation.
 - [ ] `/claims` can inspect the new Facts without inventing contradiction semantics.
 - [ ] `/causality` shows only explicit causal edges and keeps intentional gaps/disconnected components visible.
+- [ ] Kitana, Sindel, and Jerrod dossiers remain readable on narrow/mobile widths.
 
 ## Decision after this slice
 
@@ -88,5 +110,7 @@ Before the next Phase 5 expansion, answer:
 - Does `Character` remain acceptable for unique non-playable beings such as the One Being?
 - Is `Faction` sufficient for collective divine groups such as the Elder Gods?
 - Does `former_member_of` plus Events model Shinnok's changing divine/political status clearly enough?
+- Is the `realmIds = location/scope` plus realm-target Fact pattern clear enough for future realm mergers and conquests?
+- Does `supplemental` adequately preserve ending-only Jerrod lore without overstating its evidence strength?
 - Do we need a first-class Artifact entity once individual Kamidogu histories become navigable, or can Facts continue to carry that concept for now?
 - Are the separate short ancient-history chains easier to trust than one artificially connected story tree?
