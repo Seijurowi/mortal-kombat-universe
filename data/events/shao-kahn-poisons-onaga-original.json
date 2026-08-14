@@ -1,0 +1,13 @@
+{
+  "id": "shao-kahn-poisons-onaga-original",
+  "type": "event",
+  "name": "Shao Kahn poisons Onaga",
+  "timelineId": "original",
+  "participantIds": ["shao-kahn", "onaga"],
+  "realmIds": ["outworld"],
+  "causeEventIds": [],
+  "consequenceEventIds": ["shao-kahn-seizes-outworld-original"],
+  "order": -800,
+  "description": "While serving as Onaga's advisor, Shao Kahn poisons the Dragon King.",
+  "tags": ["ancient", "betrayal", "succession"]
+}

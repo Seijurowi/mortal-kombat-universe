@@ -1,0 +1,13 @@
+{
+  "id": "onaga-manipulates-shujinko-original",
+  "type": "event",
+  "name": "Onaga manipulates Shujinko",
+  "timelineId": "original",
+  "participantIds": ["onaga", "shujinko"],
+  "realmIds": ["earthrealm", "outworld", "netherrealm", "orderrealm", "chaosrealm", "edenia"],
+  "causeEventIds": [],
+  "consequenceEventIds": ["shujinko-gathers-kamidogu-original"],
+  "order": 40,
+  "description": "Onaga deceives Shujinko into believing he serves a greater good and uses him to bring together the lost Kamidogu.",
+  "tags": ["deception", "kamidogu", "manipulation"]
+}

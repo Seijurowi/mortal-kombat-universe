@@ -1,0 +1,11 @@
+{
+  "id": "fact-shao-kahn-poisoned-onaga-original",
+  "type": "fact",
+  "name": "Shao Kahn poisoned Onaga",
+  "subjectId": "shao-kahn",
+  "predicate": "poisoned",
+  "objectId": "onaga",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk-deception-raiden-bio"]
+}

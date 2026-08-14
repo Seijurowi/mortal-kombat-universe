@@ -1,0 +1,11 @@
+{
+  "id": "fact-shujinko-shattered-kamidogu-original",
+  "type": "fact",
+  "name": "Shujinko shattered the Kamidogu to weaken Onaga",
+  "subjectId": "shujinko",
+  "predicate": "shattered_kamidogu_to_weaken",
+  "objectId": "onaga",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk-deception-shujinko-ending"]
+}

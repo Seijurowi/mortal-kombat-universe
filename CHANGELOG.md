@@ -8,6 +8,29 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 
 ### Added
 
+- Phase 5 Deception cosmology foundation: One Being, Elder Gods, Edenia, Orderrealm/Seido, Chaosrealm, the ancient shattering event, and sourced creation-myth facts.
+- Onaga / Shao Kahn / Shujinko Original-continuity records with sourced ancient succession and Deception-era story chains.
+- Shinnok / Lucifer Original-continuity records with sourced ancient Earthrealm war, banishment, Quan Chi alliance, and Netherrealm succession events.
+- Mortal Kombat: Deception Shujinko biography, Raiden biography, Shujinko ending, and instruction-booklet source records.
+- Mortal Kombat: Armageddon Shujinko biography as later follow-up evidence confirming Onaga's defeat.
+- Supported causal chains for `Shao Kahn poisons Onaga → seizes Outworld`, `Onaga manipulates Shujinko → Shujinko gathers Kamidogu`, `Shujinko shatters Kamidogu → defeats Onaga`, `Shinnok wars with Raiden → banishment`, and `Quan Chi allies with Shinnok → Shinnok rules Netherrealm`.
+- Phase 5 manual verification for ancient cosmology, continuity scope, source provenance, collective event participants, status changes, and causal gaps.
+
+### Changed
+
+- Event participant validation now accepts `Character | Faction` instead of Character-only, proven necessary by the Elder Gods acting collectively in the Deception creation account.
+- Source taxonomy now includes `game_manual`, proven necessary by the official Deception instruction booklet.
+- Ancient Original-continuity cosmology remains explicitly scoped instead of being projected onto Reboot or New Era.
+- The One Being creation event no longer uses `realmIds` to represent realms produced by the event; `realmIds` remains location/scope metadata.
+- The One Being realm-formation Fact is narrowed to the source-supported statement that the shattering formed **the realms**, rather than synthesizing the manual's six Konquest realms into an exhaustive creation-output claim.
+- Kamidogu reawakening lore is represented as sourced Facts without manufacturing unsupported causal event edges.
+- Onaga chronology intentionally keeps unsupported transitions disconnected rather than turning sequence into causality.
+- Shinnok's Elder God status is represented as a historical Fact (`former_member_of`) instead of timeless static faction membership.
+
+## 2026-08-14 — Phase 4: Claim history, retcons, and evidence
+
+### Added
+
 - Dedicated `/claims` workbench for inspecting sourced claim families grouped by shared subject and predicate.
 - Claim-history cards showing timeline scope, canon status, notes, source chronology, official source links, and fact-dossier navigation.
 - Evidence-safe family labels for value variation, cross-continuity agreement, alternate portrayals, canon-status variation, and explicit retcon evidence.
@@ -16,10 +39,10 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 
 ### Changed
 
-- Phase 4 product and agent guidance treats subject/predicate grouping as a presentation aid rather than proof of divergence or contradiction.
-- Different displayed values are no longer automatically labelled continuity divergence; they may represent time-dependent or multi-valued predicates such as identity.
-- Search keeps the selected detail synchronized with visible results instead of leaving a filtered-out family active.
-- Source year is used as evidence-history context when available, not as automatic canonical priority.
+- Subject/predicate grouping is a presentation aid rather than proof of divergence or contradiction.
+- Different displayed values are not automatically labelled continuity divergence; they may represent time-dependent or multi-valued predicates such as identity.
+- Search keeps the selected detail synchronized with visible results.
+- Source year is evidence-history context, not automatic canonical priority.
 - Schema expansion for explicit `contradicts` / `supersedes` links remains deferred until a real sourced lore case proves it necessary.
 
 ## 2026-08-14 — Phase 3: Story chains and causality

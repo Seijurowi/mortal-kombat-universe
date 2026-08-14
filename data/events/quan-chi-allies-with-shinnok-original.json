@@ -1,0 +1,13 @@
+{
+  "id": "quan-chi-allies-with-shinnok-original",
+  "type": "event",
+  "name": "Quan Chi allies with Shinnok",
+  "timelineId": "original",
+  "participantIds": ["quan-chi", "shinnok", "lucifer"],
+  "realmIds": ["netherrealm"],
+  "causeEventIds": [],
+  "consequenceEventIds": ["shinnok-rules-netherrealm-original"],
+  "order": -680,
+  "description": "Quan Chi offers to help the banished Shinnok defeat Lucifer and his forces in exchange for power and a place at Shinnok's side.",
+  "tags": ["ancient", "alliance", "netherrealm", "quan-chi"]
+}

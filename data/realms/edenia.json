@@ -1,0 +1,8 @@
+{
+  "id": "edenia",
+  "type": "realm",
+  "name": "Edenia",
+  "timelineIds": ["original"],
+  "description": "One of the six realms traversed in Mortal Kombat: Deception's Konquest mode.",
+  "tags": ["realm", "deception"]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "shinnok-banished-netherrealm-original",
+  "type": "event",
+  "name": "Shinnok is banished to the Netherrealm",
+  "timelineId": "original",
+  "participantIds": ["shinnok", "raiden", "elder-gods"],
+  "realmIds": ["earthrealm", "netherrealm"],
+  "causeEventIds": ["shinnok-wars-with-raiden-original"],
+  "consequenceEventIds": [],
+  "order": -690,
+  "description": "After Raiden defeats Shinnok and strips away his amulet advantage, Raiden and the Elder Gods banish the fallen god to the Netherrealm.",
+  "tags": ["ancient", "banishment", "netherrealm", "elder-gods"]
+}

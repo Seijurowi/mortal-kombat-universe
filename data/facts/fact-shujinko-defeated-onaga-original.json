@@ -1,0 +1,12 @@
+{
+  "id": "fact-shujinko-defeated-onaga-original",
+  "type": "fact",
+  "name": "Shujinko defeated Onaga",
+  "subjectId": "shujinko",
+  "predicate": "defeated",
+  "objectId": "onaga",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk-deception-shujinko-ending", "mk-armageddon-shujinko-bio"],
+  "notes": "Shujinko's Deception ending presents the defeat, and his later Armageddon biography confirms that Onaga was defeated by Shujinko's assault."
+}

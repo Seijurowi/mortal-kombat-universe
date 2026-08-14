@@ -1,0 +1,13 @@
+{
+  "id": "shujinko-defeats-onaga-original",
+  "type": "event",
+  "name": "Shujinko defeats Onaga",
+  "timelineId": "original",
+  "participantIds": ["shujinko", "onaga"],
+  "realmIds": ["outworld"],
+  "causeEventIds": ["shujinko-shatters-kamidogu-original"],
+  "consequenceEventIds": [],
+  "order": 91,
+  "description": "After destroying the Kamidogu and weakening Onaga, Shujinko attacks and defeats the Dragon King.",
+  "tags": ["deception", "dragon-king", "defeat"]
+}

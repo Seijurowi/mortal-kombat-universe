@@ -64,6 +64,7 @@ The project uses the shadcn `bcivVKXQ` preset: `base-nova`, Zinc variables, Luci
 - Timeline filters must continue to apply after navigation into detail pages and specialized views.
 - Ordinary causal edges stay inside one timeline.
 - A cross-timeline causal edge is allowed only when the source event is an explicit reset/rewrite bridge (currently tagged `reset`, `rewrite`, or `timeline-bridge`).
+- Ancient/cosmology lore from one continuity must not be projected into another without independent evidence.
 
 ## Facts, canon, and identity
 
@@ -73,26 +74,27 @@ Use the narrowest defensible status. Prefer small atomic assertions over paragra
 
 Prefer stable person entities such as `bi-han`, `kuai-liang`, and `hanzo-hasashi`. Do not create duplicate characters merely because a mantle changes. Model identities, deaths, resurrections, corruption, revenant/wraith states, and ascensions through sourced facts/events unless a future proven requirement introduces an explicit identity/version entity.
 
+A `Character` may represent a unique non-playable being when it is still a single agent/entity in the lore. Phase 5 currently uses this for the One Being. Do not add a `CosmicEntity` type until multiple concrete cases prove that `Character` materially distorts the model or UI.
+
 ## Retcons, contradictions, and claim history
 
-Phase 4 treats **retcon**, **continuity divergence**, **alternate portrayal**, and **uncertainty** as different concepts.
-
-Rules:
+Treat **retcon**, **continuity divergence**, **alternate portrayal**, and **uncertainty** as different concepts.
 
 - Do not call two timeline-scoped facts a retcon merely because their values differ.
-- A fact marked `retconned` is strong evidence that an older portrayal has been superseded, but still inspect the source context before summarizing the whole claim group as one simple before/after rewrite.
-- `alternate` means an alternate/versioned portrayal, not automatically a correction of another fact.
+- A fact marked `retconned` is strong evidence that an older portrayal has been superseded, but inspect source context before summarizing a whole claim family as a simple before/after rewrite.
+- `alternate` is not automatically a correction of another fact.
 - `unconfirmed` means evidence is insufficient for stronger status.
-- Claim-history views may group facts by shared subject + predicate for comparison, but grouping is a presentation operation and must not invent contradiction semantics.
-- Order claim versions by source chronology when reliable source years exist; missing years must not be fabricated.
-- Always keep source links and timeline scope visible when presenting disputed or changing claims.
-- Do not add `contradicts`, `supersedes`, or dedicated retcon entity fields until a concrete sourced case proves that current facts + statuses cannot represent the needed distinction cleanly.
+- Claim-history grouping by subject + predicate is presentation only and must not invent contradiction semantics.
+- Source chronology is evidence-history context, not canonical priority.
+- Do not add `contradicts`, `supersedes`, or dedicated retcon fields until a concrete sourced case proves the current model insufficient.
 
-## Relationships and causality
+## Relationships, participants, and causality
 
 - Every graph edge references existing IDs.
 - Relationship direction matters.
 - Meaningful lore claims should have supporting facts; relationship edges improve navigation.
+- Event `participantIds` may reference `Character` or `Faction` entities. This is proven necessary by collective actors such as the Elder Gods in Deception cosmology.
+- Do not duplicate a Faction as a fake Character merely to make it an event participant.
 - `causeEventIds` means supported causality, not “happened shortly before.”
 - `consequenceEventIds` means supported outcome, not mere chronology.
 - Never manufacture causal links because events are sequential or have adjacent `order` values.
@@ -121,19 +123,23 @@ Prefer, in order:
 2. official in-game bios/codex;
 3. official Mortal Kombat / NetherRealm / WB material;
 4. official supplemental material with clear continuity scope;
-5. secondary references only as research aids when primary evidence cannot be recovered.
+5. secondary references only as research aids or preservation mirrors when primary evidence cannot be directly recovered.
+
+If a primary work is accessed through a third-party preservation mirror, identify the primary work in the Source record and describe the mirror honestly. Do not promote the mirror itself to canonical authority.
 
 Do not invent a source to satisfy validation.
 
 ## Schema evolution
 
-Before changing a schema:
+Before changing a schema or validator rule:
 
 1. identify a concrete sourced lore case that cannot be represented cleanly;
 2. explain why the current model is insufficient;
-3. prefer a reusable domain concept over a character-specific escape hatch;
+3. prefer a reusable domain concept over a one-off escape hatch;
 4. update validators and migrations if necessary;
 5. update `docs/LORE_MODEL.md` and relevant product docs.
+
+Phase 5's first proven evolution is allowing Factions in Event `participantIds`: the Elder Gods collectively act in the One Being shattering event. This is reusable for clans, armies, organizations, and other collective actors.
 
 Never weaken validation to make incorrect data pass.
 
@@ -150,10 +156,11 @@ Before a substantive PR is ready:
 - `pnpm typecheck` passes;
 - `pnpm build` passes;
 - all new references resolve;
+- event participants resolve to allowed entity types;
 - causal references are mirrored;
 - cross-timeline causal references are explicit reset/rewrite bridges;
 - new facts have evidence and timeline scope;
-- retcon/contradiction UI does not promote mere continuity divergence into a confirmed retcon;
+- retcon/contradiction UI does not promote mere variation into a confirmed retcon;
 - documentation matches behavior;
 - `CHANGELOG.md` has been reviewed;
 - relevant manual verification has been performed.
@@ -170,8 +177,8 @@ A green build does not prove lore accuracy, causal accuracy, retcon accuracy, or
 
 ## Current scope
 
-Phases 1, 2, and 3 are complete and merged.
+Phases 1, 2, 3, and 4 are complete and merged.
 
-The active milestone is **Phase 4 — Claim history, retcons, and evidence**, defined in `docs/ROADMAP.md` and reviewed through `docs/PHASE4_MANUAL_VERIFICATION.md`.
+The active milestone is **Phase 5 — Cosmology and ancient history**, defined in `docs/ROADMAP.md` and reviewed through `docs/PHASE5_MANUAL_VERIFICATION.md`.
 
-The immediate goal is to let a reader compare sourced versions of the same claim across continuities and source chronology while clearly distinguishing **continuity divergence** from a genuinely **retconned** assertion. Schema expansion is explicitly deferred until a real sourced case proves it necessary.
+The first slice is the Original-continuity creation account from Mortal Kombat: Deception: One Being, Elder Gods, the six Konquest realms, the Kamidogu warning, and the ancient shattering event. The immediate goal is to expand cosmology with explicit source/continuity scope while letting real ancient-lore cases—not theoretical neatness—drive any further schema evolution.

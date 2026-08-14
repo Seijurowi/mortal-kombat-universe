@@ -1,0 +1,9 @@
+{
+  "id": "shao-kahn",
+  "type": "character",
+  "name": "Shao Kahn",
+  "timelineIds": ["original"],
+  "realmIds": ["outworld"],
+  "description": "Onaga's advisor who poisoned the Dragon King and seized Outworld in the original continuity.",
+  "tags": ["ruler", "emperor", "ancient"]
+}

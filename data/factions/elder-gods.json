@@ -1,0 +1,8 @@
+{
+  "id": "elder-gods",
+  "type": "faction",
+  "name": "Elder Gods",
+  "timelineIds": ["original"],
+  "description": "The collective of Elder Gods described in Mortal Kombat: Deception's creation myth.",
+  "tags": ["cosmology", "gods"]
+}

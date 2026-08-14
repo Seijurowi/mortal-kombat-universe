@@ -1,0 +1,13 @@
+{
+  "id": "shinnok-rules-netherrealm-original",
+  "type": "event",
+  "name": "Shinnok becomes ruler of the Netherrealm",
+  "timelineId": "original",
+  "participantIds": ["shinnok", "quan-chi", "lucifer"],
+  "realmIds": ["netherrealm"],
+  "causeEventIds": ["quan-chi-allies-with-shinnok-original"],
+  "consequenceEventIds": [],
+  "order": -670,
+  "description": "With Quan Chi's aid, Shinnok overthrows Lucifer and takes control of the Netherrealm.",
+  "tags": ["ancient", "netherrealm", "ruler", "succession"]
+}
