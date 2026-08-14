@@ -83,7 +83,7 @@ for (const record of records.values()) {
       break;
     case "event":
       if (!timelineIds.has(record.timelineId)) errors.push(`${record.id}: unknown timeline '${record.timelineId}'`);
-      requireRefs(record.id, "participantIds", record.participantIds, ["character"]);
+      requireRefs(record.id, "participantIds", record.participantIds, ["character", "faction"]);
       requireRefs(record.id, "realmIds", record.realmIds, ["realm"]);
       requireRefs(record.id, "causeEventIds", record.causeEventIds, ["event"]);
       requireRefs(record.id, "consequenceEventIds", record.consequenceEventIds, ["event"]);
