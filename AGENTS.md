@@ -52,6 +52,7 @@ The project uses the shadcn `bcivVKXQ` preset: `base-nova`, Zinc variables, Luci
 - Preserve accessibility, keyboard behavior, focus states, and semantic controls.
 - Keep Mortal Kombat styling as a theme layer on shadcn tokens.
 - Do not redesign speculatively; let real lore/navigation friction prove the need.
+- Do not assume Radix `asChild`; the current shadcn foundation uses Base UI.
 
 ## Continuity rules
 
@@ -62,7 +63,7 @@ The project uses the shadcn `bcivVKXQ` preset: `base-nova`, Zinc variables, Luci
 - Conflicting continuities coexist as separate facts/events.
 - Timeline filters must continue to apply after navigation into detail pages and specialized views.
 - Ordinary causal edges stay inside one timeline.
-- A cross-timeline causal edge is allowed only when the source event is an explicit reset/rewrite bridge (currently tagged `reset`, `rewrite`, or `timeline-bridge`), such as the Hourglass reset leading into the New Era.
+- A cross-timeline causal edge is allowed only when the source event is an explicit reset/rewrite bridge (currently tagged `reset`, `rewrite`, or `timeline-bridge`).
 
 ## Facts, canon, and identity
 
@@ -70,7 +71,22 @@ Every `Fact` requires at least one source. Supported canon statuses are `canon`,
 
 Use the narrowest defensible status. Prefer small atomic assertions over paragraph-like facts.
 
-Prefer stable person entities such as `bi-han`, `kuai-liang`, and `hanzo-hasashi`. Do not create duplicate characters merely because a mantle changes. Model Sub-Zero, Scorpion, Noob Saibot, deaths, resurrections, corruption, revenant/wraith states, and ascensions through sourced facts/events unless a future proven requirement introduces an explicit identity/version entity.
+Prefer stable person entities such as `bi-han`, `kuai-liang`, and `hanzo-hasashi`. Do not create duplicate characters merely because a mantle changes. Model identities, deaths, resurrections, corruption, revenant/wraith states, and ascensions through sourced facts/events unless a future proven requirement introduces an explicit identity/version entity.
+
+## Retcons, contradictions, and claim history
+
+Phase 4 treats **retcon**, **continuity divergence**, **alternate portrayal**, and **uncertainty** as different concepts.
+
+Rules:
+
+- Do not call two timeline-scoped facts a retcon merely because their values differ.
+- A fact marked `retconned` is strong evidence that an older portrayal has been superseded, but still inspect the source context before summarizing the whole claim group as one simple before/after rewrite.
+- `alternate` means an alternate/versioned portrayal, not automatically a correction of another fact.
+- `unconfirmed` means evidence is insufficient for stronger status.
+- Claim-history views may group facts by shared subject + predicate for comparison, but grouping is a presentation operation and must not invent contradiction semantics.
+- Order claim versions by source chronology when reliable source years exist; missing years must not be fabricated.
+- Always keep source links and timeline scope visible when presenting disputed or changing claims.
+- Do not add `contradicts`, `supersedes`, or dedicated retcon entity fields until a concrete sourced case proves that current facts + statuses cannot represent the needed distinction cleanly.
 
 ## Relationships and causality
 
@@ -85,21 +101,17 @@ Prefer stable person entities such as `bi-han`, `kuai-liang`, and `hanzo-hasashi
 
 ## Story-chain causality UX
 
-Phase 3 introduces `/causality` as a timeline-scoped story-chain explorer.
+Phase 3 delivered `/causality` as a timeline-scoped story-chain explorer.
 
-Rules:
-
-- show the complete connected causal chain from root event(s) to terminal event(s) when the chain is small enough to read;
-- keep the selected event highlighted as `You are here` without removing earlier/later causal context;
-- create tree branches only from explicit `causeEventIds` / `consequenceEventIds`;
-- use event `order` only for chronology/moment context, never to create a causal edge;
-- keep disconnected causal components as separate story chains;
-- keep cross-timeline reset/rewrite bridges out of ordinary within-continuity story trees; they belong to future timeline-transition UX;
-- keep ordinary `Relationship` edges visually and semantically separate from causal event edges unless manual usage proves composition is useful;
-- keep the local `Why? / What next?` view as a secondary close-up, not the main orientation mechanism;
-- link causal nodes back to ordinary dossiers so evidence remains inspectable;
-- do not add React Flow, Cytoscape, a graph database, or new causal schema fields merely because richer graph tooling exists;
-- if real data introduces branch merges or graph complexity that the vertical tree cannot represent unambiguously, treat that as model/UX pressure and prove the next representation with a concrete lore case.
+- show complete connected causal chains when small enough to read;
+- highlight `You are here` without removing surrounding causal context;
+- create tree branches only from explicit causal fields;
+- use event `order` only for chronology/moment context;
+- keep disconnected causal components separate;
+- keep reset/rewrite bridges out of ordinary within-continuity trees;
+- keep ordinary `Relationship` edges separate from causal edges unless proven useful to combine;
+- retain `Why? / What next?` as a secondary close-up;
+- treat real branch merges or graph complexity as future stress cases rather than pretending the simple tree handles them perfectly.
 
 ## Sources
 
@@ -139,13 +151,14 @@ Before a substantive PR is ready:
 - `pnpm build` passes;
 - all new references resolve;
 - causal references are mirrored;
-- cross-timeline causal references are explicit reset/rewrite bridges rather than accidental continuity leakage;
+- cross-timeline causal references are explicit reset/rewrite bridges;
 - new facts have evidence and timeline scope;
+- retcon/contradiction UI does not promote mere continuity divergence into a confirmed retcon;
 - documentation matches behavior;
 - `CHANGELOG.md` has been reviewed;
 - relevant manual verification has been performed.
 
-A green build does not prove lore accuracy, causal accuracy, or good UX.
+A green build does not prove lore accuracy, causal accuracy, retcon accuracy, or good UX.
 
 ## Git hygiene
 
@@ -157,8 +170,8 @@ A green build does not prove lore accuracy, causal accuracy, or good UX.
 
 ## Current scope
 
-Phases 1 and 2 are complete and merged.
+Phases 1, 2, and 3 are complete and merged.
 
-The active milestone is **Phase 3 — Story chains and causality**, defined in `docs/ROADMAP.md` and reviewed through `docs/PHASE3_MANUAL_VERIFICATION.md`.
+The active milestone is **Phase 4 — Claim history, retcons, and evidence**, defined in `docs/ROADMAP.md` and reviewed through `docs/PHASE4_MANUAL_VERIFICATION.md`.
 
-The goal is to let a reader understand where a causal story begins, where the selected event sits inside it, where it branches, and what it leads to—without confusing story order, relationships, or alternate continuities with causal proof.
+The immediate goal is to let a reader compare sourced versions of the same claim across continuities and source chronology while clearly distinguishing **continuity divergence** from a genuinely **retconned** assertion. Schema expansion is explicitly deferred until a real sourced case proves it necessary.

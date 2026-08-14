@@ -6,128 +6,89 @@ The roadmap is deliberately staged. We expand the universe only after the model 
 
 Status: complete and merged.
 
-Delivered:
-
-- Next.js App Router + TypeScript
-- pnpm-only package management
-- shadcn/ui + Tailwind CSS v4
-- JSON source-of-truth data store and JSON Schemas
-- cross-reference validation
-- 8 entity types
-- search, timeline filters, entity cards, sourced facts, clickable dependencies
-- `AGENTS.md` and CI quality gate
+Delivered: Next.js + TypeScript, pnpm, shadcn/Tailwind, JSON source-of-truth data, schemas, cross-reference validation, 8 entity types, search/filter/detail UX, `AGENTS.md`, and CI.
 
 ## Phase 1 — Bi-Han lore stress test ✅
 
 Status: complete and merged after human review.
 
-Anchor chain:
-
-`Bi-Han → Hanzo Hasashi → Quan Chi → Shirai Ryu → Noob Saibot`
-
-Delivered:
-
-- sourced Original / Reboot / New Era facts and events;
-- timeline-aware evidence and relationship filtering;
-- correction of chronology-only causal links;
-- source pages showing facts that cite them;
-- documented model pressure around alternate-timeline Titan Havik;
-- manual lore verification checklist.
-
-Key model decision: Bi-Han remains one `Character`; Sub-Zero and Noob Saibot are timeline-scoped identities/states rather than duplicate person records.
+Delivered sourced Original / Reboot / New Era Bi-Han, Hanzo, Quan Chi, Shirai Ryu, and Noob Saibot coverage; timeline-aware facts/relationships; corrected unsupported causal assumptions; source pages; manual lore verification; and the stable-person identity model.
 
 ## Phase 2 — Timeline-first reading experience ✅
 
 Status: complete and merged after manual review.
 
+Delivered character dossiers, continuity switching, generated `Compare all`, chronology, evidence separation, shareable reading state, and changelog practice.
+
+## Phase 3 — Story chains and causality ✅
+
+Status: complete and merged after manual review.
+
 Delivered:
 
-- specialized character dossiers;
-- in-page Original / Reboot / New Era continuity switching;
-- generated `Compare all` continuity overview;
-- dedicated chronological event presentation;
-- separation between chronology, evidence-backed facts, and relationship connections;
-- shareable `entity` + `timeline` state and copy-deep-link action;
-- Phase 2 manual verification guide;
-- repository changelog practice and contributor policy.
+- `/causality` whole-chain vertical story trees;
+- `Start`, `You are here`, `End`, and moment markers;
+- separate disconnected causal chains;
+- local `Why? / What next?` close-up;
+- strict continuity isolation for ordinary story trees;
+- reset/rewrite bridge validation for legitimate cross-timeline transitions;
+- explicit separation of chronology, causality, and ordinary relationships;
+- Phase 3 manual verification.
 
-The product now supports reading a character as a continuity-specific story rather than only inspecting isolated entity records.
+Known future pressure remains around branch-merge/DAG rendering and dedicated timeline-reset transition UX.
 
-## Phase 3 — Story chains and causality 🔨
+## Phase 4 — Claim history, retcons, and evidence 🔨
 
-Status: implementation in progress on `agent/causality-focused-graph`.
+Status: implementation in progress on `agent/phase4-retcon-explorer`.
 
-Goal: help a reader see **where a causal story begins, what happens at each moment, where it branches, and where it leads** without rendering one unusable universe-wide graph or confusing chronology with causality.
+Goal: make franchise evolution itself navigable **without calling every value or continuity difference a contradiction or retcon**.
 
 ### Implemented in this phase
 
-- [x] Dedicated `/causality` workbench.
-- [x] Whole-chain vertical tree derived from explicit event causal links.
-- [x] `Start`, `You are here`, `End`, and moment/position markers.
-- [x] Branch rendering that keeps the complete chain visible while the selected event changes.
-- [x] Separate chain selection when one continuity contains disconnected causal components.
-- [x] Local `Why? / What next?` view retained as a secondary close-up.
-- [x] Timeline isolation for every rendered story-chain edge.
-- [x] Explicit separation between event causality and ordinary relationship edges.
-- [x] Links back to event and participant dossiers while preserving timeline scope.
-- [x] Global Explorer / Causality mode switch.
-- [x] Phase 3 manual verification checklist.
-- [x] Reuse existing `causeEventIds` / `consequenceEventIds` without schema expansion.
-- [x] Validation of mirrored causal references plus explicit reset/rewrite bridge rules for the rare causal edge that legitimately crosses timelines.
+- [x] Dedicated `/claims` workbench.
+- [x] Group facts by shared `subject + predicate` as presentation-only claim families.
+- [x] Treat grouping as an inspection aid rather than evidence of contradiction.
+- [x] Classify observable family shape conservatively: value variation, cross-continuity agreement, alternate portrayal, canon-status variation, or explicit retcon evidence.
+- [x] Show each claim record with canon status, timeline scope, notes, and sources.
+- [x] Order claim records by known source year when available without fabricating missing dates.
+- [x] Search across subject, predicate, and presented values.
+- [x] Keep the selected detail synchronized with filtered search results.
+- [x] Link comparison cards back to ordinary fact dossiers and official source URLs.
+- [x] Reuse current `Fact`, `Source`, canon-status, and timeline model with no schema expansion.
 
 ### Still to evaluate manually
 
-- [ ] Does the whole-chain tree solve the “where does this sequence start?” orientation problem?
-- [ ] Are one-to-many branches understandable in a vertical reading layout?
-- [ ] Should non-causal chronological milestones ever appear as muted context between causal nodes, or would that blur the causality contract?
-- [ ] At what real chain complexity does a true 2D graph become more readable than the story tree?
-- [ ] Should ordinary relationship edges remain separate from event-causal chains?
-- [ ] What UX should represent explicit timeline reset/rewrite bridges such as the Hourglass transition into the New Era?
-- [ ] How should a real branch-merge/DAG case render without visually duplicating one canonical event?
+- [ ] Does the user understand that a claim family is a comparison aid, not an asserted contradiction?
+- [ ] Are grouped `subject + predicate` families semantically useful, or are some predicates too coarse for trustworthy comparison?
+- [ ] Does `Value variation` remain appropriately cautious for time-dependent/multi-valued predicates such as identities?
+- [ ] Does `Cross-continuity agreement` correctly communicate repeated claims without implying divergence?
+- [ ] Does source-year ordering read as evidence history rather than canonical priority?
+- [ ] Do we have enough real `retconned` facts to justify a stronger dedicated retcon registry yet?
+- [ ] Which real sourced case, if any, proves the need for explicit `contradicts` / `supersedes` links?
+- [ ] Do source records need chapter/scene/page/timestamp locators before contradiction review can be reliable at larger scale?
 
-See `PHASE3_MANUAL_VERIFICATION.md`.
+See `PHASE4_MANUAL_VERIFICATION.md`.
 
-### Phase 3 acceptance criteria
+### Phase 4 acceptance criteria
 
 A user should be able to:
 
-1. open `/causality` and choose a continuity;
-2. identify the start and end of a connected within-continuity causal chain immediately;
-3. understand the selected event's position inside that whole chain;
-4. follow explicit branches from one event to multiple consequences;
-5. select another event without losing whole-chain orientation;
-6. distinguish immediate causes/consequences in the secondary close-up;
-7. walk the Bi-Han / Hanzo chain without repeatedly navigating backward to discover where it began;
-8. open the full event or participant dossier without losing timeline scope;
-9. verify that chronology-only neighbors do not become causal branches;
-10. verify that legitimate reset/rewrite bridges remain valid model data without leaking into ordinary continuity trees.
+1. open `/claims` and find useful claim families;
+2. see which subject/predicate is being grouped;
+3. understand whether the family shows value variation, cross-continuity agreement, alternate portrayal, canon-status variation, or explicit retcon evidence;
+4. avoid interpreting `uses_identity` or other multi-valued/time-dependent predicates as contradiction merely because values differ;
+5. inspect every claim record's timeline scope and canon status;
+6. inspect the source(s) supporting each claim record;
+7. open the underlying fact dossier;
+8. verify that source chronology is not presented as proof that a newer source automatically supersedes an older one;
+9. verify that search never leaves an invisible claim family active in the detail pane;
+10. verify that the UI never invents contradiction or retcon semantics solely because values differ or facts span multiple timelines.
 
-All automated quality gates and the Phase 3 manual verification checklist must pass before merge.
-
-## Phase 4 — Retcon registry and evidence explorer
-
-Goal: make franchise evolution itself navigable.
-
-Candidates:
-
-- explicit retcon / contradiction views;
-- claim history by source/date;
-- stronger source coverage views;
-- improved citation granularity when proven necessary.
+All automated quality gates and Phase 4 manual verification must pass before merge.
 
 ## Phase 5 — Cosmology and ancient history
 
-Expand systematically into:
-
-- One Being and early cosmology;
-- Elder Gods / gods / Titans with continuity caveats;
-- realms and realm-merging rules;
-- Shinnok;
-- Onaga;
-- Edenia;
-- Shao Kahn;
-- Great Kung Lao;
-- pre-tournament history.
+Expand systematically into One Being/early cosmology, Elder Gods/Titans with continuity caveats, realms and merging rules, Shinnok, Onaga, Edenia, Shao Kahn, Great Kung Lao, and pre-tournament history.
 
 This phase must track retcons rather than present one synthetic cosmology as timeless canon.
 
@@ -143,13 +104,6 @@ Expansion should be event-driven and sourced, not roster-driven.
 
 ## Later infrastructure — only when justified
 
-Possible future additions:
+Possible future additions include generated SQLite/search indexes, full-text search, graph indexes, authoring tools, automated source coverage reports, richer graph invariants, explicit contradiction relations, and fine-grained evidence locators.
 
-- generated SQLite/search index;
-- full-text search;
-- graph index;
-- content authoring tools;
-- automated source coverage reports;
-- richer graph invariant tests.
-
-These are not goals until scale or contributor workflow proves they are needed.
+These are not goals until scale or real lore cases prove they are needed.

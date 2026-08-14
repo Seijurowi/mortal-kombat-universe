@@ -5,13 +5,14 @@ This directory contains the product and domain contracts for the project. The re
 ## Start here
 
 1. [`PRD.md`](./PRD.md) — product vision, user experience, requirements, non-goals, and acceptance criteria.
-2. [`LORE_MODEL.md`](./LORE_MODEL.md) — how Mortal Kombat continuity, facts, events, relationships, sources, canon, and causality are represented.
+2. [`LORE_MODEL.md`](./LORE_MODEL.md) — how continuity, facts, events, relationships, sources, canon, and causality are represented.
 3. [`ROADMAP.md`](./ROADMAP.md) — staged implementation plan and current milestone.
 4. [`CHANGELOG_POLICY.md`](./CHANGELOG_POLICY.md) — rules for maintaining the root [`CHANGELOG.md`](../CHANGELOG.md).
 5. [`MANUAL_VERIFICATION.md`](./MANUAL_VERIFICATION.md) — Phase 1 lore/source verification.
-6. [`PHASE2_MANUAL_VERIFICATION.md`](./PHASE2_MANUAL_VERIFICATION.md) — timeline-first character reading, chronology, comparison, deep-link, and responsive UX checks.
-7. [`PHASE3_MANUAL_VERIFICATION.md`](./PHASE3_MANUAL_VERIFICATION.md) — whole causal story-chain orientation, timeline isolation, chronology separation, and graph UX checks.
-8. [`../AGENTS.md`](../AGENTS.md) — execution rules for agents and contributors.
+6. [`PHASE2_MANUAL_VERIFICATION.md`](./PHASE2_MANUAL_VERIFICATION.md) — timeline-first character reading checks.
+7. [`PHASE3_MANUAL_VERIFICATION.md`](./PHASE3_MANUAL_VERIFICATION.md) — whole causal story-chain checks.
+8. [`PHASE4_MANUAL_VERIFICATION.md`](./PHASE4_MANUAL_VERIFICATION.md) — claim-history, retcon-vs-divergence, source chronology, and evidence checks.
+9. [`../AGENTS.md`](../AGENTS.md) — execution rules for agents and contributors.
 
 ## Document responsibilities
 
@@ -29,4 +30,4 @@ When implementation changes a product requirement, data-model assumption, source
 
 ## Verification rule
 
-Automated validation proves JSON shape, references, causal-edge invariants, TypeScript safety, linting, and production build health. It does **not** prove that a continuity interpretation is correct or that the product is understandable. Lore-heavy milestones and major UX milestones should keep a manual verification checklist and review it before merge.
+Automated validation proves JSON shape, references, causal-edge invariants, TypeScript safety, linting, and production build health. It does **not** prove continuity interpretation, retcon interpretation, evidence sufficiency, or good UX. Lore-heavy milestones and major UX milestones must keep a human verification checklist.

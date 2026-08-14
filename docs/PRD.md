@@ -7,13 +7,13 @@ Mortal Kombat Universe is a source-aware, navigable history and knowledge graph 
 The product should answer not only **what happened**, but also:
 
 - which continuity it happened in;
-- what caused it;
-- what it caused next;
+- what caused it and what followed;
 - which characters, factions, and realms were involved;
 - which identity a character held at that time;
 - whether a claim is canon, supplemental, retconned, alternate, unconfirmed, or gameplay-only;
 - which source supports the claim;
-- how the same subject differs across Original, Reboot, and New Era continuities.
+- how related assertions compare across Original, Reboot, and New Era continuities;
+- whether a difference is merely value/timeline variation or is actually documented as a retcon.
 
 The goal is not to reproduce a wiki. The goal is to make Mortal Kombat's complicated continuity understandable as an explorable system.
 
@@ -21,7 +21,7 @@ The goal is not to reproduce a wiki. The goal is to make Mortal Kombat's complic
 
 ### Continuity first
 
-No timeline-dependent claim should be displayed as universally true. Original, Reboot, and New Era must remain independently inspectable.
+No timeline-dependent claim should be displayed as universally true. Original, Reboot, and New Era remain independently inspectable.
 
 ### Evidence first
 
@@ -29,7 +29,11 @@ Important claims should be traceable to sources. `Fact` is the smallest source-a
 
 ### Causality over chronology alone
 
-Chronological proximity does not create a causal edge. The product should distinguish story order from explicit `cause → event → consequence` relationships.
+Chronological proximity does not create a causal edge.
+
+### Variation is not automatically contradiction or retcon
+
+Two facts in the same subject/predicate family can differ because they belong to different continuities, alternate portrayals, valid time-dependent states, multi-valued predicates, or uncertain evidence. The UI must not call value variation a contradiction or retcon unless the data supports that stronger interpretation.
 
 ### Data before presentation
 
@@ -51,33 +55,31 @@ Users can browse/search Characters, Events, Realms, Factions, Timelines, Facts, 
 
 ### Character dossier
 
-A character page should answer who the person is in the selected continuity, their identities, important events in chronological order, sourced facts, relationships, and differences across timelines.
+A character page should answer who the person is in the selected continuity, identities, important events, sourced facts, relationships, and differences across timelines.
 
 ### Event dossier
 
-An event page should show timeline, participants, realms, known causes, known consequences, associated facts, and evidence.
-
-### Timeline comparison
-
-Comparison must be generated from structured data rather than hard-coded lore tables.
+An event page should show timeline, participants, realms, known causes, consequences, associated facts, and evidence.
 
 ### Story-chain causality
 
-Users should be able to choose a continuity and see a complete connected causal chain from its root event(s) to terminal event(s), while selecting one event without losing the surrounding chain.
+`/causality` presents connected within-continuity causal chains from root event(s) to terminal event(s), highlights `You are here`, and keeps chronology distinct from causal edges. Explicit reset/rewrite bridges remain valid model data but are excluded from ordinary continuity trees.
 
-The causal view must:
+### Claim history and retcons
 
-- clearly identify where the chain starts and ends;
-- highlight the selected event as `You are here` while preserving earlier/later causal context;
-- derive branches only from explicit `causeEventIds` / `consequenceEventIds`;
-- use event `order` only for chronology/moment context, never to create a causal edge;
-- keep disconnected causal components as separate story chains;
-- keep ordinary story chains inside one timeline;
-- exclude cross-timeline reset/rewrite bridges from the ordinary within-continuity tree; those bridges are valid model data for future timeline-transition UX;
-- retain an immediate `Why? / What next?` close-up as secondary detail;
-- link back to ordinary event/character dossiers;
-- keep ordinary relationship edges separate unless future usage proves that combining them improves understanding;
-- avoid a universe-wide graph by default.
+`/claims` should help a reader inspect families of related sourced assertions across franchise history.
+
+The claim-history view must:
+
+- group facts by shared subject + predicate from structured data rather than hard-coded tables;
+- treat that grouping as an inspection aid, not a contradiction claim;
+- show subject and predicate being compared;
+- show timeline scope and canon status for every claim record;
+- show source evidence for every claim record;
+- distinguish value variation, cross-continuity agreement, alternate portrayals, canon-status variation, and explicit retcon evidence without conflating them;
+- treat source year as chronology/context, not proof that the newest source is automatically correct;
+- avoid inventing contradiction/supersession semantics that the current model does not contain;
+- link back to ordinary fact dossiers and official sources.
 
 ## 4. Canon model
 
@@ -120,22 +122,20 @@ Contracts live in `schema/`; runtime/presentation live in `app/`, `components/`,
 
 JSON remains the source of truth. SQLite or graph indexes may later be generated as derived infrastructure if scale proves the need.
 
-## 7. Current milestone — Phase 3: Story chains and causality
+## 7. Current milestone — Phase 4: Claim history, retcons, and evidence
 
-Phase 1 proved the lore model. Phase 2 made continuity-specific character reading useful. Phase 3 now proves that the existing event model can present whole causal stories clearly.
+Phases 1–3 proved the lore model, timeline-first reading, and whole-chain causality. Phase 4 now tests whether the existing `Fact + Source + canonStatus + timelineIds` model can explain related, changing, or conflicting portrayals without prematurely adding contradiction-specific schema.
 
 Current outputs:
 
-- dedicated `/causality` workbench;
-- continuity selector;
-- whole-chain vertical causal tree;
-- `Start`, `You are here`, `End`, and moment/position markers;
-- separate story-chain selection for disconnected causal components;
-- immediate cause/consequence close-up beneath the full chain;
-- dossier links preserving timeline scope;
-- validation that causal references are mirrored and that cross-timeline edges are explicit reset/rewrite bridges rather than accidental leakage;
-- manual verification that chronology-only neighbors never become branches;
-- no schema change or graph library unless real chain complexity proves a concrete need.
+- dedicated `/claims` workbench;
+- generated claim families grouped by `subject + predicate`;
+- evidence-safe family labels such as value variation, cross-continuity agreement, alternate portrayal, canon-status variation, and retcon evidence;
+- claim records with timeline scope, canon status, notes, and evidence;
+- source-year ordering when known;
+- search and dossier/source navigation;
+- Phase 4 manual verification;
+- no `contradicts`, `supersedes`, retcon entity, or citation-locator schema until a real sourced case proves the need.
 
 Detailed status and acceptance criteria live in `docs/ROADMAP.md`.
 
@@ -144,26 +144,27 @@ Detailed status and acceptance criteria live in `docs/ROADMAP.md`.
 Do not:
 
 - add the entire roster merely to increase record count;
+- label every cross-continuity difference or value variation as a retcon;
+- assume a newer source automatically supersedes an older one;
+- infer contradiction from differing values without continuity/source/time-state context;
+- add `contradicts` / `supersedes` fields only because they seem useful in theory;
+- invent missing source dates or evidence locators;
 - render the entire universe as one force-directed graph;
 - introduce a graph database solely for visualization;
-- mix ordinary relationship edges with causal edges by default;
-- infer causality from chronology;
-- claim robust merged-branch UX until a real dataset case proves and tests it;
-- fold timeline reset/rewrite bridges into ordinary within-continuity trees;
 - introduce authentication or a CMS/admin editor;
 - introduce SQLite as primary storage;
-- hard-code narrative prose in React to compensate for missing structured lore.
+- hard-code lore conclusions in React to compensate for missing structured evidence.
 
 ## 9. Future capabilities
 
-Likely milestones after Phase 3 include:
+Likely capabilities after Phase 4 include:
 
-- retcon / contradiction explorer;
-- richer source/evidence views;
-- explicit timeline-reset / rewrite transition UX;
+- explicit contradiction/supersession relations if real lore cases prove them necessary;
+- chapter/scene/page/timestamp evidence locators if work-level sources become insufficient;
+- dedicated timeline-reset transition UX;
 - cosmology and ancient-history expansion;
 - systematic Original, Reboot, and New Era expansion;
-- richer graph infrastructure only if real story-chain usage proves it necessary.
+- richer graph infrastructure only if real usage proves it necessary.
 
 ## 10. Definition of done
 
@@ -175,11 +176,12 @@ Relevant changes must satisfy:
 - timelines remain correctly scoped;
 - ordinary causal edges remain inside one timeline and cross-timeline edges are explicit reset/rewrite bridges;
 - important lore claims have evidence;
+- claim-family grouping does not promote mere value/timeline variation into contradiction or retcon semantics;
 - contradictions are not silently flattened;
-- causal branches represent explicit causal data, not chronology;
+- source chronology is not presented as canonical priority;
 - UI remains navigable and accessible;
 - implementation follows `AGENTS.md`;
 - product/domain documentation is updated when contracts change;
-- `CHANGELOG.md` is updated under `Unreleased` when notable;
+- `CHANGELOG.md` is updated when notable;
 - relevant manual verification is performed;
 - `pnpm check` passes.

@@ -8,23 +8,40 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 
 ### Added
 
+- Dedicated `/claims` workbench for inspecting sourced claim families grouped by shared subject and predicate.
+- Claim-history cards showing timeline scope, canon status, notes, source chronology, official source links, and fact-dossier navigation.
+- Evidence-safe family labels for value variation, cross-continuity agreement, alternate portrayals, canon-status variation, and explicit retcon evidence.
+- Search across claim families by subject, predicate, and displayed values.
+- Phase 4 manual verification focused on preventing claim-family grouping from inventing contradiction or retcon semantics.
+
+### Changed
+
+- Phase 4 product and agent guidance treats subject/predicate grouping as a presentation aid rather than proof of divergence or contradiction.
+- Different displayed values are no longer automatically labelled continuity divergence; they may represent time-dependent or multi-valued predicates such as identity.
+- Search keeps the selected detail synchronized with visible results instead of leaving a filtered-out family active.
+- Source year is used as evidence-history context when available, not as automatic canonical priority.
+- Schema expansion for explicit `contradicts` / `supersedes` links remains deferred until a real sourced lore case proves it necessary.
+
+## 2026-08-14 — Phase 3: Story chains and causality
+
+### Added
+
 - Dedicated `/causality` workbench for story-chain exploration built from explicit `causeEventIds` / `consequenceEventIds`.
 - Whole-chain vertical tree that keeps the start, branches, selected event, and terminal event(s) visible at the same time.
 - `Start`, `You are here`, `End`, and moment/position markers for causal-chain orientation.
 - Separate chain cards when one continuity contains disconnected causal components.
-- Local immediate `Why? / What next?` close-up retained beneath the full-chain view.
-- Links from causal events and participants back to their normal dossiers while preserving continuity scope.
-- Global Explorer / Causality mode switch.
-- Phase 3 manual verification checklist focused on whole-chain orientation, branch readability, chronology separation, navigation, and responsive behavior.
+- Local immediate `Why? / What next?` close-up beneath the full-chain view.
+- Links from causal events and participants back to ordinary dossiers while preserving continuity scope.
+- Explorer / Causality mode navigation.
+- Phase 3 manual verification checklist.
 
 ### Changed
 
-- Phase 3 now prioritizes reading a complete causal story tree over click-to-recenter navigation through isolated three-node diagrams.
+- Story-chain UX prioritizes whole-chain orientation over isolated click-to-recenter diagrams.
 - Selecting an event highlights `You are here` without removing the rest of the causal chain from view.
-- Product, lore-model, and agent guidance now describe whole-chain story causality as the active Phase 3 contract.
+- Product, lore-model, and agent guidance describe whole-chain story causality as the Phase 3 contract.
 - Causal validation requires mirrored cause/consequence references and rejects arbitrary cross-timeline edges unless the source event is explicitly tagged as a reset/rewrite bridge.
 - Explicit reset/rewrite bridges remain valid model data but are excluded from ordinary within-continuity story trees pending future timeline-transition UX.
-- The project still derives causal visualization from the existing event model; no graph library, graph database, or schema expansion is introduced yet.
 
 ## 2026-08-14 — Phase 2: Timeline-first reading experience
 
@@ -39,7 +56,7 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 
 ### Changed
 
-- Character pages now separate chronology, evidence-backed facts, and relationship connections instead of presenting one flat entity-inspection view.
+- Character pages separate chronology, evidence-backed facts, and relationship connections instead of presenting one flat entity-inspection view.
 - Product documentation and agent guidance were aligned around the timeline-first reading experience.
 
 ## 2026-08-14 — Phase 1: Bi-Han lore stress test

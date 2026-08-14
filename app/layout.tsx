@@ -50,6 +50,12 @@ export default function RootLayout({
             >
               Causality
             </Link>
+            <Link
+              className="rounded-lg px-3 py-2 text-xs font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+              href="/claims"
+            >
+              Claims
+            </Link>
           </nav>
           {children}
         </ThemeProvider>
