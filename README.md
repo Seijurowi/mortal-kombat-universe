@@ -14,7 +14,7 @@ The repository deliberately separates **knowledge** from **presentation**:
 - `lib/load-data.ts` — server-only loader for the knowledge base.
 - `components/universe-explorer.tsx` — interactive explorer and timeline-first reading UI.
 - `components/causality-explorer.tsx` — whole-chain causal story explorer.
-- `components/claim-history-explorer.tsx` — claim divergence / retcon evidence explorer.
+- `components/claim-history-explorer.tsx` — claim-family and retcon-evidence explorer.
 - `components/ui/` — shadcn UI primitives.
 - `app/` — Next.js App Router shell and Mortal Kombat theme layer.
 - `docs/` — PRD, lore model, roadmap, changelog policy, and manual verification guides.
@@ -52,7 +52,7 @@ The validated dataset contains 75 records across 8 entity types, including the B
 
 Phases 1–3 are complete. The current product milestone is **Phase 4 — Claim history, retcons, and evidence**.
 
-The new `/claims` view groups comparable facts by `subject + predicate` and shows each scoped version with canon status, timelines, notes, and supporting sources. A continuity difference is explicitly **not** treated as a retcon unless the data contains retcon evidence. Source years provide historical ordering only; they do not make the newest source automatically canonical.
+The `/claims` view groups related facts into presentation-only claim families by `subject + predicate` and shows each claim record with canon status, timelines, notes, and supporting sources. Family labels stay conservative: multiple values can represent time-dependent or multi-valued states, repeated values across timelines can show agreement, and only an explicit `retconned` fact is treated as retcon evidence. Source years provide historical ordering only; they do not make the newest source automatically canonical.
 
 Existing `/causality` story trees remain continuity-scoped; explicit timeline reset/rewrite bridges remain valid model data but are not folded into ordinary continuity trees.
 
@@ -99,5 +99,5 @@ Read `AGENTS.md` before making substantive changes. In particular:
 - every `Fact` needs timeline scope, canon status, and source evidence;
 - do not merge conflicting continuities into one unscoped claim;
 - do not infer causal edges from chronology;
-- do not label ordinary continuity divergence as a retcon without evidence;
+- do not promote claim-family variation into contradiction or retcon semantics without evidence;
 - review `CHANGELOG.md` before requesting merge.
