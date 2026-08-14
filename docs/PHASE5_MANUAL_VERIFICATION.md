@@ -98,6 +98,7 @@ Search/open `Great Kung Lao`, `Goro`, and `Goro defeats the Great Kung Lao`.
 - [ ] Goro's Grand Champion title is a historical Fact rather than timeless Character metadata.
 - [ ] Goro's roughly 500-year undefeated reign is a separate sourced Fact.
 - [ ] The Mortal Kombat II source is identified as `game_bio` and as a reproduction of the in-game biography rather than TRMK being treated as canon authority.
+- [ ] The Mortal Kombat (1992) arcade story source exposes a preservation URL and explicitly identifies the preservation site as access infrastructure rather than canonical authority.
 
 ## 11. Tournament chronology versus causality
 
