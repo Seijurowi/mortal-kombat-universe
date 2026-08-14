@@ -12,8 +12,8 @@ The product should answer not only **what happened**, but also:
 - which identity a character held at that time;
 - whether a claim is canon, supplemental, retconned, alternate, unconfirmed, or gameplay-only;
 - which source supports the claim;
-- how the same subject differs across Original, Reboot, and New Era continuities;
-- whether a difference is merely continuity divergence or is actually documented as a retcon.
+- how related assertions compare across Original, Reboot, and New Era continuities;
+- whether a difference is merely value/timeline variation or is actually documented as a retcon.
 
 The goal is not to reproduce a wiki. The goal is to make Mortal Kombat's complicated continuity understandable as an explorable system.
 
@@ -31,9 +31,9 @@ Important claims should be traceable to sources. `Fact` is the smallest source-a
 
 Chronological proximity does not create a causal edge.
 
-### Divergence is not automatically retcon
+### Variation is not automatically contradiction or retcon
 
-Two versions of a claim can differ because they belong to different continuities, alternate portrayals, or uncertain evidence. The UI must not call a difference a retcon unless the data supports that status.
+Two facts in the same subject/predicate family can differ because they belong to different continuities, alternate portrayals, valid time-dependent states, multi-valued predicates, or uncertain evidence. The UI must not call value variation a contradiction or retcon unless the data supports that stronger interpretation.
 
 ### Data before presentation
 
@@ -67,15 +67,16 @@ An event page should show timeline, participants, realms, known causes, conseque
 
 ### Claim history and retcons
 
-`/claims` should help a reader inspect how a sourced assertion varies across franchise history.
+`/claims` should help a reader inspect families of related sourced assertions across franchise history.
 
 The claim-history view must:
 
-- group comparable facts from structured data rather than hard-coded tables;
+- group facts by shared subject + predicate from structured data rather than hard-coded tables;
+- treat that grouping as an inspection aid, not a contradiction claim;
 - show subject and predicate being compared;
-- show timeline scope and canon status for every version;
-- show source evidence for every version;
-- distinguish ordinary continuity divergence from facts explicitly marked `retconned`;
+- show timeline scope and canon status for every claim record;
+- show source evidence for every claim record;
+- distinguish value variation, cross-continuity agreement, alternate portrayals, canon-status variation, and explicit retcon evidence without conflating them;
 - treat source year as chronology/context, not proof that the newest source is automatically correct;
 - avoid inventing contradiction/supersession semantics that the current model does not contain;
 - link back to ordinary fact dossiers and official sources.
@@ -123,14 +124,14 @@ JSON remains the source of truth. SQLite or graph indexes may later be generated
 
 ## 7. Current milestone — Phase 4: Claim history, retcons, and evidence
 
-Phases 1–3 proved the lore model, timeline-first reading, and whole-chain causality. Phase 4 now tests whether the existing `Fact + Source + canonStatus + timelineIds` model can explain changing or conflicting portrayals without prematurely adding contradiction-specific schema.
+Phases 1–3 proved the lore model, timeline-first reading, and whole-chain causality. Phase 4 now tests whether the existing `Fact + Source + canonStatus + timelineIds` model can explain related, changing, or conflicting portrayals without prematurely adding contradiction-specific schema.
 
 Current outputs:
 
 - dedicated `/claims` workbench;
-- generated grouping by `subject + predicate`;
-- continuity-divergence vs explicit-retcon distinction;
-- fact versions with timeline scope, canon status, notes, and evidence;
+- generated claim families grouped by `subject + predicate`;
+- evidence-safe family labels such as value variation, cross-continuity agreement, alternate portrayal, canon-status variation, and retcon evidence;
+- claim records with timeline scope, canon status, notes, and evidence;
 - source-year ordering when known;
 - search and dossier/source navigation;
 - Phase 4 manual verification;
@@ -143,9 +144,9 @@ Detailed status and acceptance criteria live in `docs/ROADMAP.md`.
 Do not:
 
 - add the entire roster merely to increase record count;
-- label every cross-continuity difference as a retcon;
+- label every cross-continuity difference or value variation as a retcon;
 - assume a newer source automatically supersedes an older one;
-- infer contradiction from differing values without continuity/source context;
+- infer contradiction from differing values without continuity/source/time-state context;
 - add `contradicts` / `supersedes` fields only because they seem useful in theory;
 - invent missing source dates or evidence locators;
 - render the entire universe as one force-directed graph;
@@ -175,7 +176,7 @@ Relevant changes must satisfy:
 - timelines remain correctly scoped;
 - ordinary causal edges remain inside one timeline and cross-timeline edges are explicit reset/rewrite bridges;
 - important lore claims have evidence;
-- continuity divergence is not promoted into a retcon without support;
+- claim-family grouping does not promote mere value/timeline variation into contradiction or retcon semantics;
 - contradictions are not silently flattened;
 - source chronology is not presented as canonical priority;
 - UI remains navigable and accessible;
