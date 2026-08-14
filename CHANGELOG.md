@@ -8,6 +8,20 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 
 ### Added
 
+- First Phase 5 cosmology slice: One Being, Elder Gods, Edenia, Orderrealm/Seido, Chaosrealm, the ancient shattering event, and sourced Deception cosmology facts.
+- Mortal Kombat: Deception Shujinko biography and instruction-booklet source records.
+- Phase 5 manual verification for ancient cosmology, continuity scope, source provenance, and collective event participants.
+
+### Changed
+
+- Event participant validation now accepts `Character | Faction` instead of Character-only, proven necessary by the Elder Gods acting collectively in the Deception creation account.
+- Ancient Original-continuity cosmology remains explicitly scoped instead of being projected onto Reboot or New Era.
+- Kamidogu reawakening lore is represented as sourced Facts without manufacturing unsupported causal event edges.
+
+## 2026-08-14 — Phase 4: Claim history, retcons, and evidence
+
+### Added
+
 - Dedicated `/claims` workbench for inspecting sourced claim families grouped by shared subject and predicate.
 - Claim-history cards showing timeline scope, canon status, notes, source chronology, official source links, and fact-dossier navigation.
 - Evidence-safe family labels for value variation, cross-continuity agreement, alternate portrayals, canon-status variation, and explicit retcon evidence.
@@ -16,10 +30,10 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 
 ### Changed
 
-- Phase 4 product and agent guidance treats subject/predicate grouping as a presentation aid rather than proof of divergence or contradiction.
-- Different displayed values are no longer automatically labelled continuity divergence; they may represent time-dependent or multi-valued predicates such as identity.
-- Search keeps the selected detail synchronized with visible results instead of leaving a filtered-out family active.
-- Source year is used as evidence-history context when available, not as automatic canonical priority.
+- Subject/predicate grouping is a presentation aid rather than proof of divergence or contradiction.
+- Different displayed values are not automatically labelled continuity divergence; they may represent time-dependent or multi-valued predicates such as identity.
+- Search keeps the selected detail synchronized with visible results.
+- Source year is evidence-history context, not automatic canonical priority.
 - Schema expansion for explicit `contradicts` / `supersedes` links remains deferred until a real sourced lore case proves it necessary.
 
 ## 2026-08-14 — Phase 3: Story chains and causality
