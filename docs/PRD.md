@@ -67,70 +67,33 @@ Do not expand schemas because a field seems theoretically useful. Add or change 
 
 ### 4.1 Universe explorer
 
-Users can browse and search:
-
-- Characters
-- Events
-- Realms
-- Factions
-- Timelines
-- Facts
-- Sources
-
-The current explorer is the foundation, not the final information architecture.
+Users can browse and search Characters, Events, Realms, Factions, Timelines, Facts, and Sources. The explorer remains a discovery surface rather than the final reading experience.
 
 ### 4.2 Character experience
 
-A character page should ultimately answer:
+A character page should answer:
 
 - Who is this person in the selected continuity?
 - What names or identities do they use?
 - What faction(s) and realm(s) are they connected to?
-- What important events involve them?
+- What important events involve them, in readable chronological order?
 - Which relationships matter?
 - What sourced facts define them?
 - What changed in another timeline?
 
-Bi-Han is the first anchor character used to prove this experience.
+Character pages should support continuity switching without forcing the reader back to the global index. Bi-Han remains the first anchor character used to prove this experience.
 
 ### 4.3 Event experience
 
-An event page should ultimately show:
-
-- timeline;
-- participants;
-- realms;
-- known causes;
-- known consequences;
-- sourced facts associated with the event;
-- related events in chronological context.
+An event page should ultimately show timeline, participants, realms, known causes, known consequences, associated sourced facts, and related chronological context.
 
 ### 4.4 Timeline comparison
 
-Users should eventually be able to compare the same concept across continuities, for example:
-
-| Subject | Original / Reboot | New Era |
-| --- | --- | --- |
-| Scorpion | Hanzo Hasashi | Kuai Liang |
-| Sub-Zero | Bi-Han, then Kuai Liang | Bi-Han |
-| Raiden | God / Earthrealm protector | Mortal champion |
-| Liu Kang | Mortal champion | Fire God / architect of New Era |
-
-This comparison must be generated from structured data rather than a hard-coded table.
+Users should be able to compare the same concept across continuities. Comparison must be generated from structured data rather than hard-coded lore tables.
 
 ### 4.5 Dependency / graph experience
 
-The product should support a focused graph around an entity or event, rather than immediately attempting to render the entire universe at once.
-
-Examples:
-
-`Bi-Han → killed by → Hanzo Hasashi`
-
-`Quan Chi → manipulates → Hanzo Hasashi`
-
-`Bi-Han's death → leads to → Noob Saibot`
-
-Graph edges are navigation aids; evidence remains attached to facts/sources.
+The product should support a focused graph around an entity or event rather than immediately rendering the entire universe. Graph edges are navigation aids; evidence remains attached to facts/sources.
 
 ## 5. Canon model
 
@@ -143,7 +106,7 @@ Supported canon statuses:
 - `unconfirmed`
 - `gameplay_only`
 
-The UI should distinguish these visually without implying that every non-canon item is worthless. Supplemental and retconned material can be historically important for understanding how the franchise evolved.
+The UI should distinguish these visually without implying that every non-canon item is worthless.
 
 ## 6. Source hierarchy
 
@@ -151,9 +114,9 @@ Prefer sources in this order when practical:
 
 1. Canonical game story / narrative.
 2. Official in-game bios, codex material, and explicit character information.
-3. Official Mortal Kombat / NetherRealm material.
+3. Official Mortal Kombat / NetherRealm / WB material.
 4. Other official supplemental material with clearly identified continuity.
-5. Secondary references only as research aids when primary material is unavailable; do not silently promote them to primary evidence.
+5. Secondary references only as research aids when primary material is unavailable.
 
 Arcade endings, intros, dialogue, adaptations, and gameplay mechanics require explicit canon judgment rather than default acceptance.
 
@@ -173,121 +136,66 @@ data/
   sources/
 ```
 
-Contracts:
+Contracts live in `schema/`; runtime and presentation live in `app/`, `components/`, and `lib/`.
 
-```text
-schema/
-```
-
-Runtime/UI:
-
-```text
-app/
-components/
-lib/
-```
-
-A future SQLite database may be generated for indexing/search performance, but JSON remains the editable source of truth unless the architecture is deliberately changed through a documented decision.
+A future SQLite database may be generated for indexing/search performance, but JSON remains the editable source of truth unless deliberately changed through a documented architecture decision.
 
 ## 8. Core entities
 
-### Character
-
-Stable person/entity record and broad continuity membership.
-
-### Event
-
-A timeline-scoped occurrence with participants, realms, and supported causal links.
-
-### Realm
-
-A realm such as Earthrealm, Outworld, or Netherrealm.
-
-### Faction
-
-A clan, order, empire, organization, or comparable group.
-
-### Timeline
-
-A continuity scope such as Original, Reboot, or New Era.
-
-### Fact
-
-The smallest sourced assertion. Owns timeline scope, canon status, and source evidence.
-
-### Relationship
-
-A graph/navigation projection between entities. It may point to supporting facts but does not substitute for evidence.
-
-### Source
-
-A game, story mode, official page, bio, comic, adaptation, or other identifiable evidence source.
+- **Character** — stable person/entity record and broad continuity membership.
+- **Event** — timeline-scoped occurrence with participants, realms, and supported causal links.
+- **Realm** — realm such as Earthrealm, Outworld, or Netherrealm.
+- **Faction** — clan, order, empire, organization, or comparable group.
+- **Timeline** — continuity scope such as Original, Reboot, or New Era.
+- **Fact** — smallest sourced assertion; owns timeline scope, canon status, and evidence.
+- **Relationship** — graph/navigation projection between entities; does not substitute for evidence.
+- **Source** — identifiable game, story, bio, official page, or other evidence source.
 
 ## 9. MVP success criteria
 
-The first meaningful MVP is reached when a user can open Bi-Han and understand the major chain around him without prior Mortal Kombat expertise:
+The first meaningful MVP is reached when a user can open Bi-Han and understand the major chain around him without prior Mortal Kombat expertise, including identity, family, Hanzo conflict, Quan Chi's supported role, death/transformation, New Era divergence, sources, continuity scope, chronology, and clickable navigation.
 
-1. Bi-Han's identity as Sub-Zero.
-2. His relationship to Kuai Liang.
-3. His conflict with Hanzo Hasashi / Scorpion in relevant continuities.
-4. Quan Chi's role where supported.
-5. Bi-Han's death in earlier continuities.
-6. His transformation/return as Noob Saibot.
-7. The New Era divergence.
-8. Sources and canon/timeline scope for the important claims.
-9. Clickable navigation between the involved characters, factions, events, and facts.
-10. `pnpm check` remains green.
+`pnpm check` must remain green.
 
-## 10. Current milestone — Bi-Han lore stress test
+## 10. Current milestone — Phase 2: Timeline-first reading experience
 
-Anchor chain:
+Phase 1 proved that the lore model can represent the Bi-Han / Hanzo / Quan Chi chain across continuities. Phase 2 focuses on turning that structured data into a readable character experience.
 
-`Bi-Han → Hanzo Hasashi → Quan Chi → Shirai Ryu → Noob Saibot`
+Current outputs:
 
-The milestone should introduce only the additional entities and model changes required to represent this chain accurately across:
+- continuity selector inside character dossiers;
+- generated `Compare all` continuity overview;
+- chronological story presentation driven by structured events;
+- separation of story chronology, evidence-backed facts, and relationship connections;
+- shareable character + timeline reading state;
+- manual UX verification for readability, continuity isolation, deep links, and responsive behavior.
 
-- Original continuity;
-- Reboot continuity;
-- New Era.
+The milestone is successful when a reader experiences a character as a continuity-specific story rather than a warehouse record.
 
-Expected outputs:
+Detailed status and acceptance criteria live in `docs/ROADMAP.md`.
 
-- sourced atomic facts;
-- timeline-scoped events;
-- causal links where explicitly defensible;
-- relevant relationships;
-- missing sources;
-- UI improvements proven necessary by the data;
-- documented schema changes if the existing schema cannot cleanly represent a real case.
-
-## 11. Non-goals for the current milestone
+## 11. Current non-goals
 
 Do not:
 
-- add the entire roster;
+- add the entire roster merely to increase record count;
 - build a giant all-universe force-directed graph;
-- introduce authentication;
-- introduce a CMS/admin editor;
+- introduce authentication or a CMS/admin editor;
 - introduce SQLite as primary storage;
 - model every arcade ending;
-- solve every continuity contradiction;
-- redesign the whole site before the new lore exposes a concrete UX need.
+- solve every continuity contradiction before a real browsing need demands it;
+- hard-code narrative prose in React to compensate for missing structured lore.
 
 ## 12. Future capabilities
 
-After the first stress test succeeds, likely milestones include:
+Likely milestones after Phase 2 include:
 
-- timeline-aware character pages;
-- event chronology views;
 - cause/consequence explorer;
 - focused relationship graph;
-- timeline comparison mode;
 - retcon registry;
 - richer source/evidence views;
 - cosmology and ancient-history expansion;
-- systematic Original timeline expansion;
-- Reboot expansion;
-- New Era / MK1 and Khaos Reigns expansion;
+- systematic Original, Reboot, and New Era expansion;
 - generated search/index database if scale requires it.
 
 ## 13. Definition of done for product changes
@@ -302,5 +210,7 @@ Relevant changes must satisfy:
 - contradictions are not silently flattened;
 - UI remains navigable and accessible;
 - implementation follows `AGENTS.md`;
-- documentation is updated when the product/data contract changes;
+- product/domain documentation is updated when contracts change;
+- `CHANGELOG.md` is updated under `Unreleased` when the change is notable according to `docs/CHANGELOG_POLICY.md`;
+- relevant manual verification is performed;
 - `pnpm check` passes.
