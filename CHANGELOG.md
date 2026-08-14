@@ -21,7 +21,8 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 
 - Phase 3 now prioritizes reading a complete causal story tree over click-to-recenter navigation through isolated three-node diagrams.
 - Selecting an event highlights `You are here` without removing the rest of the causal chain from view.
-- Product and agent guidance continues to distinguish event causality from chronology and ordinary relationship edges.
+- Product, lore-model, and agent guidance now describe whole-chain story causality as the active Phase 3 contract.
+- Causal validation now rejects event edges that cross timeline boundaries in addition to requiring mirrored cause/consequence references.
 - The project still derives causal visualization from the existing event model; no graph library, graph database, or schema expansion is introduced yet.
 
 ## 2026-08-14 — Phase 2: Timeline-first reading experience
