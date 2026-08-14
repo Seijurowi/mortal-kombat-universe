@@ -1,0 +1,9 @@
+{
+  "id": "shujinko",
+  "type": "character",
+  "name": "Shujinko",
+  "timelineIds": ["original"],
+  "realmIds": ["earthrealm"],
+  "description": "An Earthrealm warrior manipulated by Onaga into gathering the Kamidogu before ultimately turning that power against the Dragon King.",
+  "tags": ["champion", "deception", "kamidogu"]
+}
