@@ -6,6 +6,7 @@ import {
   BookOpen,
   Clock3,
   Database,
+  ExternalLink,
   Globe2,
   Link2,
   Network,
@@ -80,7 +81,11 @@ function timelineIdsOf(entity: UniverseEntity, timelines: Timeline[]) {
   if ("timelineIds" in entity && Array.isArray(entity.timelineIds)) {
     return entity.timelineIds
   }
-  return timelines.map((timeline) => timeline.id)
+  return timelines.map((item) => item.id)
+}
+
+function matchesTimeline(ids: string[], timeline: string) {
+  return timeline === "all" || ids.includes(timeline)
 }
 
 function humanize(value: string) {
@@ -100,12 +105,29 @@ function summary(entity: UniverseEntity) {
   return entity.id
 }
 
+function searchText(entity: UniverseEntity) {
+  const extra: Array<string | undefined> = []
+
+  if ("aliases" in entity) extra.push(entity.aliases?.join(" "))
+  if ("tags" in entity) extra.push(entity.tags?.join(" "))
+
+  if (entity.type === "fact") {
+    extra.push(entity.subjectId, entity.predicate, entity.objectId, String(entity.value ?? ""), entity.notes)
+  }
+
+  if (entity.type === "source") {
+    extra.push(entity.game, entity.sourceType, entity.notes)
+  }
+
+  return [entity.name, entity.id, entity.description, ...extra]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase()
+}
+
 export function UniverseExplorer({ data }: { data: UniverseData }) {
   const all = useMemo<UniverseEntity[]>(() => Object.values(data).flat(), [data])
-  const byId = useMemo(
-    () => new Map(all.map((entity) => [entity.id, entity])),
-    [all]
-  )
+  const byId = useMemo(() => new Map(all.map((entity) => [entity.id, entity])), [all])
   const timelines = useMemo(
     () => [...data.timelines].sort((a, b) => a.order - b.order),
     [data.timelines]
@@ -123,21 +145,11 @@ export function UniverseExplorer({ data }: { data: UniverseData }) {
     return all.filter((entity) => {
       if (entity.type === "relationship") return false
 
-      const timelineOk =
-        timeline === "all" || timelineIdsOf(entity, timelines).includes(timeline)
+      const timelineOk = matchesTimeline(timelineIdsOf(entity, timelines), timeline)
       const typeOk = type === "all" || entity.type === type
-      const searchable = [
-        entity.name,
-        entity.id,
-        entity.description,
-        "aliases" in entity ? entity.aliases?.join(" ") : undefined,
-        "tags" in entity ? entity.tags?.join(" ") : undefined,
-      ]
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase()
+      const queryOk = !q || searchText(entity).includes(q)
 
-      return timelineOk && typeOk && (!q || searchable.includes(q))
+      return timelineOk && typeOk && queryOk
     })
   }, [all, query, timeline, timelines, type])
 
@@ -255,9 +267,14 @@ export function UniverseExplorer({ data }: { data: UniverseData }) {
                     : TYPE_LABELS[type]}
               </h1>
             </div>
-            <Badge variant="outline" className="hidden md:inline-flex">
-              {selected ? humanize(selected.type) : `${filtered.length} visible`}
-            </Badge>
+            <div className="hidden items-center gap-2 md:flex">
+              {timeline !== "all" ? (
+                <Badge variant="secondary">{byId.get(timeline)?.name ?? timeline}</Badge>
+              ) : null}
+              <Badge variant="outline">
+                {selected ? humanize(selected.type) : `${filtered.length} visible`}
+              </Badge>
+            </div>
           </div>
         </header>
 
@@ -267,6 +284,8 @@ export function UniverseExplorer({ data }: { data: UniverseData }) {
               entity={selected}
               data={data}
               byId={byId}
+              timelines={timelines}
+              activeTimeline={timeline}
               onSelect={select}
               onBack={resetSelection}
             />
@@ -389,27 +408,38 @@ function EntityDetail({
   entity,
   data,
   byId,
+  timelines,
+  activeTimeline,
   onSelect,
   onBack,
 }: {
   entity: UniverseEntity
   data: UniverseData
   byId: Map<string, UniverseEntity>
+  timelines: Timeline[]
+  activeTimeline: string
   onSelect: (id: string) => void
   onBack: () => void
 }) {
   const relationships = data.relationships.filter(
-    (item) => item.fromId === entity.id || item.toId === entity.id
+    (item) =>
+      (item.fromId === entity.id || item.toId === entity.id) &&
+      matchesTimeline(item.timelineIds, activeTimeline)
   )
+
   const events = data.events.filter(
-    (event) => event.id === entity.id || event.participantIds.includes(entity.id)
+    (event) =>
+      (event.id === entity.id || event.participantIds.includes(entity.id)) &&
+      matchesTimeline([event.timelineId], activeTimeline)
   )
-  const facts =
-    entity.type === "fact"
-      ? [entity]
-      : data.facts.filter(
-          (fact) => fact.subjectId === entity.id || fact.objectId === entity.id
-        )
+
+  const facts = data.facts.filter((fact) => {
+    if (!matchesTimeline(fact.timelineIds, activeTimeline)) return false
+    if (entity.type === "fact") return fact.id === entity.id
+    if (entity.type === "source") return fact.sourceIds.includes(entity.id)
+    return fact.subjectId === entity.id || fact.objectId === entity.id
+  })
+
   const dependencies = [
     ...relationships.map((relationship) =>
       relationshipDependency(relationship, entity.id, byId)
@@ -429,8 +459,13 @@ function EntityDetail({
       <div className="grid gap-4 xl:grid-cols-[minmax(0,2fr)_minmax(18rem,1fr)]">
         <Card>
           <CardHeader className="border-b">
-            <div className="mb-1 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-primary">
-              {entity.type}
+            <div className="mb-1 flex flex-wrap items-center gap-2 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-primary">
+              <span>{entity.type}</span>
+              {activeTimeline !== "all" ? (
+                <Badge variant="secondary" className="normal-case tracking-normal">
+                  {byId.get(activeTimeline)?.name ?? activeTimeline}
+                </Badge>
+              ) : null}
             </div>
             <CardTitle className="text-2xl md:text-3xl">{entity.name}</CardTitle>
             <CardDescription className="max-w-3xl text-sm leading-6">
@@ -444,28 +479,29 @@ function EntityDetail({
             ) : null}
 
             {entity.type === "source" ? (
-              <dl className="grid grid-cols-[7rem_1fr] gap-x-4 gap-y-2 rounded-lg border bg-muted/20 p-4 text-sm">
-                <dt className="text-muted-foreground">Source type</dt>
-                <dd>{humanize(entity.sourceType)}</dd>
-                <dt className="text-muted-foreground">Game</dt>
-                <dd>{entity.game ?? "—"}</dd>
-                <dt className="text-muted-foreground">Year</dt>
-                <dd>{entity.year ?? "—"}</dd>
-              </dl>
+              <SourceMeta source={entity} />
             ) : null}
 
             <section>
               <div className="mb-3 flex items-center justify-between gap-3">
-                <h3 className="font-heading font-medium">Verified facts</h3>
+                <h3 className="font-heading font-medium">
+                  {entity.type === "source" ? "Facts using this source" : "Verified facts"}
+                </h3>
                 <Badge variant="secondary">{facts.length}</Badge>
               </div>
               <div className="grid gap-3">
                 {facts.length ? (
                   facts.map((fact) => (
-                    <FactCard key={fact.id} fact={fact} byId={byId} onSelect={onSelect} />
+                    <FactCard
+                      key={fact.id}
+                      fact={fact}
+                      byId={byId}
+                      timelines={timelines}
+                      onSelect={onSelect}
+                    />
                   ))
                 ) : (
-                  <EmptyState compact>No directly linked facts yet.</EmptyState>
+                  <EmptyState compact>No facts in the active timeline scope.</EmptyState>
                 )}
               </div>
             </section>
@@ -479,7 +515,7 @@ function EntityDetail({
               Dependencies & connections
             </CardTitle>
             <CardDescription>
-              Follow graph edges and events connected to this entity.
+              Graph edges and events are filtered to the active timeline.
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -501,7 +537,7 @@ function EntityDetail({
                   </Button>
                 ))
               ) : (
-                <EmptyState compact>No graph edges yet.</EmptyState>
+                <EmptyState compact>No graph edges in this timeline.</EmptyState>
               )}
             </div>
           </CardContent>
@@ -517,9 +553,10 @@ function relationshipDependency(
   byId: Map<string, UniverseEntity>
 ) {
   const other = relationship.fromId === entityId ? relationship.toId : relationship.fromId
+  const reverse = relationship.directed && relationship.toId === entityId
   return {
     id: other,
-    kind: relationship.relationType,
+    kind: reverse ? `${relationship.relationType} by` : relationship.relationType,
     name: byId.get(other)?.name ?? other,
   }
 }
@@ -535,6 +572,7 @@ function EventMeta({
 }) {
   return (
     <dl className="grid grid-cols-[7rem_1fr] gap-x-4 gap-y-3 rounded-lg border bg-muted/20 p-4 text-sm">
+      <MetaRow label="Timeline" ids={[event.timelineId]} byId={byId} onSelect={onSelect} />
       <MetaRow label="Caused by" ids={event.causeEventIds ?? []} byId={byId} onSelect={onSelect} />
       <MetaRow
         label="Consequences"
@@ -544,6 +582,35 @@ function EventMeta({
       />
       <MetaRow label="Participants" ids={event.participantIds} byId={byId} onSelect={onSelect} />
       <MetaRow label="Realms" ids={event.realmIds ?? []} byId={byId} onSelect={onSelect} />
+    </dl>
+  )
+}
+
+function SourceMeta({ source }: { source: Extract<UniverseEntity, { type: "source" }> }) {
+  return (
+    <dl className="grid grid-cols-[7rem_1fr] gap-x-4 gap-y-2 rounded-lg border bg-muted/20 p-4 text-sm">
+      <dt className="text-muted-foreground">Source type</dt>
+      <dd>{humanize(source.sourceType)}</dd>
+      <dt className="text-muted-foreground">Game</dt>
+      <dd>{source.game ?? "—"}</dd>
+      <dt className="text-muted-foreground">Year</dt>
+      <dd>{source.year ?? "—"}</dd>
+      {source.url ? (
+        <>
+          <dt className="text-muted-foreground">Reference</dt>
+          <dd>
+            <a
+              className="inline-flex items-center gap-1 text-primary underline-offset-4 hover:underline"
+              href={source.url}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open official source
+              <ExternalLink className="size-3.5" />
+            </a>
+          </dd>
+        </>
+      ) : null}
     </dl>
   )
 }
@@ -565,7 +632,13 @@ function MetaRow({
       <dd className="flex flex-wrap gap-1.5">
         {ids.length
           ? ids.map((id) => (
-              <Button key={id} variant="link" size="xs" className="h-auto px-0" onClick={() => onSelect(id)}>
+              <Button
+                key={id}
+                variant="link"
+                size="xs"
+                className="h-auto px-0"
+                onClick={() => onSelect(id)}
+              >
                 {byId.get(id)?.name ?? id}
               </Button>
             ))
@@ -578,17 +651,26 @@ function MetaRow({
 function FactCard({
   fact,
   byId,
+  timelines,
   onSelect,
 }: {
   fact: Fact
   byId: Map<string, UniverseEntity>
+  timelines: Timeline[]
   onSelect: (id: string) => void
 }) {
   return (
     <article className="rounded-lg border bg-muted/20 p-4">
-      <div className="mb-3 flex items-center justify-between gap-2">
+      <div className="mb-3 flex flex-wrap items-center gap-1.5">
         <CanonBadge status={fact.canonStatus} />
-        <span className="truncate font-mono text-[0.65rem] text-muted-foreground">{fact.id}</span>
+        {fact.timelineIds.map((timelineId) => (
+          <Badge key={timelineId} variant="secondary">
+            {timelines.find((item) => item.id === timelineId)?.name ?? timelineId}
+          </Badge>
+        ))}
+        <span className="ml-auto max-w-full truncate font-mono text-[0.65rem] text-muted-foreground">
+          {fact.id}
+        </span>
       </div>
 
       <div className="text-sm leading-6">
@@ -600,6 +682,8 @@ function FactCard({
           String(fact.value)
         )}
       </div>
+
+      {fact.notes ? <p className="mt-2 text-xs leading-5 text-muted-foreground">{fact.notes}</p> : null}
 
       <Separator className="my-3" />
 
