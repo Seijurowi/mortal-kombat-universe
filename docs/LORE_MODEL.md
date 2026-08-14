@@ -4,208 +4,141 @@ This document explains how Mortal Kombat lore should be represented in the repos
 
 ## 1. Separation of concerns
 
-The model deliberately separates:
-
-- **entities** — who/what exists;
-- **events** — what happens;
-- **facts** — sourced assertions;
-- **relationships** — navigable graph edges;
-- **sources** — evidence;
-- **timelines** — continuity scope.
-
-Do not overload one entity type to perform another type's job.
+The model separates entities, events, facts, relationships, sources, and timelines. Do not overload one entity type to perform another type's job.
 
 ## 2. Fact as the evidence unit
 
-A `Fact` should represent one useful assertion that can be independently sourced and scoped.
+A `Fact` is the smallest independently sourced and scoped assertion. Prefer several narrow facts over one paragraph-like fact.
 
-Example:
+Every important Fact should declare:
 
-```json
-{
-  "id": "fact-bi-han-kuai-liang-brothers",
-  "type": "fact",
-  "subjectId": "bi-han",
-  "predicate": "brother_of",
-  "objectId": "kuai-liang",
-  "timelineIds": ["original", "reboot", "new-era"],
-  "canonStatus": "canon",
-  "sourceIds": ["mk9-story", "mk1-story"]
-}
-```
-
-Prefer several narrow facts over one large paragraph-like fact.
+- `subjectId`;
+- a narrow `predicate`;
+- `objectId` or literal `value` when appropriate;
+- `timelineIds`;
+- `canonStatus`;
+- one or more `sourceIds`.
 
 ## 3. Events are occurrences, not evidence
 
-An event describes an occurrence in a particular timeline. The event itself may be linked from facts that establish what happened.
+An Event describes an occurrence in one timeline. Facts establish sourced assertions about what happened.
 
 Use:
 
-- `participantIds` for involved characters;
+- `participantIds` for involved **Characters or Factions**;
 - `realmIds` for locations/realm scope;
 - `causeEventIds` only when a causal connection is defensible;
 - `consequenceEventIds` for supported outcomes.
 
-Sequence alone does not prove causality.
+Phase 5 expanded participant validation from Character-only to `Character | Faction`. The concrete case is the Deception creation account: the **Elder Gods collectively** act in the event that shatters the One Being. Modeling that actor as one fake Character would distort the lore, while omitting it would lose an essential participant. The same rule is reusable for wars, clans, armies, and other collective actors.
 
-Ordinary causal links connect events in the same timeline. A cross-timeline causal link is reserved for an explicit reset/rewrite bridge where the source event creates or rewrites the following continuity. The current validator recognizes source-event tags `reset`, `rewrite`, and `timeline-bridge` for this purpose.
+Sequence alone does not prove causality. Ordinary causal links connect events in the same timeline. Cross-timeline causal links are reserved for explicit reset/rewrite bridges whose source event creates or rewrites the following continuity; the validator recognizes `reset`, `rewrite`, and `timeline-bridge` source-event tags.
 
 ## 4. Relationships are graph projections
 
-`Relationship` exists to make exploration fast and expressive.
-
-Examples:
-
-- `brother_of`
-- `member_of`
-- `killed_by`
-- `manipulated_by`
-- `serves`
-- `ruler_of`
-
-For meaningful lore claims, prefer a relationship to point at one or more supporting `factIds`.
-
-Do not treat a relationship record as evidence by itself.
+`Relationship` exists for navigation and graph traversal. Meaningful lore claims should be backed by Facts where possible. Do not treat Relationship as evidence by itself.
 
 ## 5. Identity handling
 
-Mortal Kombat repeatedly reuses identities such as Sub-Zero and Scorpion.
-
-The stable entity should normally be the person:
-
-- `bi-han`
-- `kuai-liang`
-- `hanzo-hasashi`
-
-Identity claims should be timeline-scoped facts such as:
-
-- Bi-Han `uses_identity` Sub-Zero;
-- Hanzo Hasashi `uses_identity` Scorpion in earlier continuities;
-- Kuai Liang `uses_identity` Scorpion in the New Era.
-
-Do not create a separate character entity for an identity unless later lore proves that the identity itself must behave as an independent entity in the graph.
+Prefer stable person entities such as `bi-han`, `kuai-liang`, and `hanzo-hasashi`. Identities such as Sub-Zero, Scorpion, and Noob Saibot are normally timeline-scoped Facts rather than duplicate Characters.
 
 ## 6. Transformation and state changes
 
-Death, resurrection, corruption, revenant state, wraith transformation, ascension, and similar changes are best modeled as events plus facts.
-
-Example pattern:
-
-```text
-Bi-Han dies
-    ↓
-transformation / return event
-    ↓
-Fact: Bi-Han uses identity Noob Saibot
-Fact: Bi-Han has nature/status wraith (if explicitly supported)
-```
-
-Avoid putting all historical states into the character's static description.
+Deaths, resurrections, corruption, revenant/wraith states, ascensions, and similar changes are best represented as Events plus Facts. Avoid putting all historical states into a static Character description.
 
 ## 7. Timeline discipline
 
-Current top-level continuity scopes:
+Current top-level continuity scopes are:
 
 - `original`
 - `reboot`
 - `new-era`
 
-Rules:
+Never infer that a fact from one continuity applies to another. Use separate Facts when details differ materially. An Event belongs to one timeline. Cross-timeline comparison is presentation over scoped data, not merged canon.
 
-- never infer that a fact from one continuity applies to another;
-- use separate facts when details differ materially;
-- an event belongs to one timeline;
-- ordinary causal links stay inside that timeline;
-- explicit reset/rewrite events may bridge into a successor timeline when the lore supports that transition;
-- cross-timeline comparison is a presentation operation over scoped data, not a merged canon.
-
-The Reboot `hourglass-reset` event leading to `liu-kang-new-era` is the current concrete bridge case. It should not be shown as an ordinary Reboot or New Era story-tree branch; it belongs to future timeline-transition UX.
+The Reboot `hourglass-reset` → `liu-kang-new-era` edge is an explicit reset/rewrite bridge and remains outside ordinary within-continuity story trees.
 
 ## 8. Retcons and contradictions
 
 When a later source contradicts an older portrayal:
 
-1. Preserve the older claim if it remains useful to franchise history.
-2. Scope it correctly.
-3. Mark it `retconned` when appropriate.
-4. Add the newer claim separately.
-5. Do not rewrite the older record to make the contradiction disappear.
+1. preserve the older useful claim;
+2. scope it correctly;
+3. mark it `retconned` only when defensible;
+4. add the newer claim separately;
+5. do not rewrite history to hide the contradiction.
 
-If the exact status is uncertain, use `unconfirmed` rather than inventing certainty.
+Claim-family grouping by `subject + predicate` is an inspection aid, not an automatic contradiction relation. Different values may reflect time-dependent or multi-valued predicates.
 
 ## 9. Source discipline
 
-Every important fact must have real evidence.
+Prefer, in order:
 
-Preferred hierarchy:
-
-1. canonical story modes;
+1. canonical game story/narrative;
 2. official in-game bios/codex;
-3. official Mortal Kombat / NetherRealm material;
+3. official Mortal Kombat / NetherRealm / WB material;
 4. clearly scoped official supplemental material;
-5. secondary sources only as research aids where primary evidence cannot be recovered.
+5. secondary mirrors/research aids when primary material cannot be directly recovered.
 
-A source record should identify the work well enough that a researcher can later verify the claim.
+When a primary work is only accessible through a preservation mirror, the Source record must identify the primary work honestly. Do not present the mirror itself as the canonical authority.
 
 ## 10. Source granularity
 
-The current schema stores sources at work-level granularity, for example `mk9-story`.
-
-If later work proves that chapter, scene, bio-entry, timestamp, page, or quote-level references are required for reliable provenance, evolve the source/fact model deliberately and document the decision. Do not add ad-hoc fields to individual JSON files.
+The current schema stores sources mostly at work-level granularity. Add chapter/scene/page/timestamp/quote locators only when real evidence review proves they are necessary.
 
 ## 11. Causal graph guidance
 
-The product wants to answer "why did this happen?" and "what did this cause?"
+Only encode causal edges supported by lore. Event `order` is chronology context and never manufactures parent/child edges.
 
-Use explicit causal edges only for supported relationships like:
+The Kamidogu warning in Shujinko's Deception biography is therefore currently represented as a Fact: misuse can merge the realms and reawaken the One Being. We do not invent a separate causal event chain until the actual event sequence is modeled from sourced material.
 
-```text
-Hanzo returns as Scorpion
-    ↓
-Bi-Han dies
-    ↓
-Bi-Han returns as Noob Saibot
-```
+## 12. Cosmology modeling
 
-Only encode an edge if the lore supports that interpretation. If the chain is interpretive rather than explicit, represent the component facts and leave the causal edge absent or model the assertion conservatively.
+Phase 5 begins with the Original-continuity creation account in Mortal Kombat: Deception.
 
-Phase 3 presents within-continuity connected causal components as story chains. Event `order` can help sort and label moments inside a chain, but it must never manufacture a parent/child edge.
+Current choices:
 
-Timeline reset/rewrite bridges are intentionally excluded from ordinary Phase 3 story trees even though they remain valid causal model data.
+- `One Being` is represented as a unique non-playable `Character`/being because Character is currently the reusable entity class for unique agents/beings, playable or not.
+- `Elder Gods` is represented as a `Faction` because the source describes a collective actor.
+- individual realms remain `Realm` entities.
+- the shattering is an `Event`.
+- statements about the Kamidogu and creation are `Fact` records with source evidence.
 
-## 12. Model-evolution rule
+Do **not** project this Deception account automatically into Reboot or New Era. Later Titan/Kronika cosmology must be added with its own scoped evidence and compared rather than silently reconciled.
 
-Before modifying a schema, write down the concrete lore case that fails under the current model.
+The One Being is a deliberate stress test for whether `Character` remains semantically acceptable for unique cosmic beings. Do not add a `CosmicEntity` type until additional real cases prove the existing class materially harms navigation or meaning.
 
-A schema change should answer:
+## 13. Model-evolution rule
 
-- What real example cannot be represented cleanly?
+Before modifying a schema or validator rule, answer:
+
+- What real sourced example cannot be represented cleanly?
 - Why do existing fields fail?
-- Is the new concept reusable beyond one character?
-- How will existing records migrate?
-- How will the validator enforce it?
-- Does the PRD or this document need updating?
+- Is the change reusable beyond one case?
+- How do existing records migrate?
+- How will validation enforce the new rule?
+- Which product/domain docs must change?
 
-## 13. Proven stress cases and current pressure
+Never weaken validation merely to make incorrect data pass.
 
-The Bi-Han / Hanzo / Quan Chi work established that the current model can represent, with continuity scope:
+## 14. Proven stress cases and current pressure
 
-- Bi-Han as Sub-Zero in the relevant continuities;
-- Bi-Han and Kuai Liang as distinct people sharing an identity over franchise history;
-- Hanzo Hasashi as Scorpion in Original/Reboot continuity;
-- Quan Chi's supported role in the Shirai Ryu / Hanzo chain;
-- Bi-Han's death at Hanzo/Scorpion's hands in earlier continuities;
-- Bi-Han's return/transformation as Noob Saibot;
-- the New Era divergence, including Kuai Liang as Scorpion;
-- New Era developments involving Bi-Han/Noob Saibot where supported by MK1: Khaos Reigns.
+Proven cases include:
 
-Phase 3 now stress-tests the event model as a readable causal tree. Current pressure points include:
+- stable characters carrying different identities across continuities;
+- sourced death/resurrection/transformation chains;
+- whole-chain causality without chronology-derived edges;
+- explicit reset/rewrite bridges;
+- claim-family comparison without inventing contradiction semantics;
+- Factions acting as Event participants, proven by the Elder Gods in Deception cosmology.
 
-- larger branching chains;
-- branch merges (DAGs) that could be visually duplicated by a naive tree renderer;
-- explicit reset/rewrite bridges between continuities;
+Current pressure points include:
+
 - alternate-timeline character variants such as Titan Havik;
-- whether chronology-only milestones should ever appear as non-causal context.
+- branch merges/DAG visualization;
+- dedicated timeline-reset presentation;
+- whether unique cosmic beings eventually justify a more specific entity type;
+- whether Kamidogu and other important objects eventually justify a first-class Artifact entity;
+- how Deception cosmology compares with MK11-era Titan/Kronika cosmology without flattening the difference.
 
-Do not invent schema or graph complexity until a concrete sourced case demonstrates that the current representation is insufficient.
+Do not add new schema merely because these concepts exist. Add it when a concrete sourced slice cannot be represented or navigated cleanly with the current model.
