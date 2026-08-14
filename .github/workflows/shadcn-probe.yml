@@ -1,41 +1,59 @@
 name: Probe shadcn preset
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - agent/nextjs-foundation
+    paths:
+      - .github/workflows/shadcn-probe.yml
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: agent/nextjs-foundation
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
       - uses: pnpm/action-setup@v4
         with:
-          version: 11.13.0
-      - name: Apply requested shadcn preset
-        run: pnpm dlx shadcn@latest init --preset bcivVKXQ --template next
-      - name: Print generated environment
-        if: always()
+          version: 11.21.0
+      - name: Scaffold requested preset in a clean directory
         shell: bash
         run: |
-          echo '=== git status ==='
-          git status --short
-          echo '=== package.json diff ==='
-          git diff -- package.json || true
-          echo '=== components.json ==='
-          cat components.json 2>/dev/null || true
-          echo '=== globals.css ==='
-          cat app/globals.css 2>/dev/null || true
-          echo '=== postcss.config.mjs ==='
-          cat postcss.config.mjs 2>/dev/null || true
-          echo '=== lib/utils.ts ==='
-          cat lib/utils.ts 2>/dev/null || true
-          echo '=== app/layout.tsx ==='
-          cat app/layout.tsx 2>/dev/null || true
+          rm -rf /tmp/mk-shadcn
+          mkdir -p /tmp/mk-shadcn
+          cd /tmp/mk-shadcn
+          pnpm dlx shadcn@latest init --preset bcivVKXQ --template next --name reference
+      - name: Capture the preset contract
+        shell: bash
+        run: |
+          rm -rf .shadcn-reference
+          mkdir -p .shadcn-reference/app .shadcn-reference/lib
+          ROOT="$(find /tmp/mk-shadcn -name components.json -print -quit | xargs dirname)"
+          echo "Reference root: $ROOT"
+          cp "$ROOT/components.json" .shadcn-reference/components.json
+          cp "$ROOT/package.json" .shadcn-reference/package.json
+          cp "$ROOT/app/globals.css" .shadcn-reference/app/globals.css
+          cp "$ROOT/app/layout.tsx" .shadcn-reference/app/layout.tsx
+          cp "$ROOT/postcss.config.mjs" .shadcn-reference/postcss.config.mjs
+          cp "$ROOT/lib/utils.ts" .shadcn-reference/lib/utils.ts
+          if [ -f "$ROOT/pnpm-lock.yaml" ]; then cp "$ROOT/pnpm-lock.yaml" .shadcn-reference/pnpm-lock.yaml; fi
+      - name: Commit reference scaffold
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .shadcn-reference
+          if git diff --cached --quiet; then
+            echo "No reference changes"
+          else
+            git commit -m "Capture shadcn preset reference"
+            git push origin HEAD:agent/nextjs-foundation
+          fi
