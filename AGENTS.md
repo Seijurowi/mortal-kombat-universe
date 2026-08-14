@@ -11,23 +11,20 @@ Before substantial work, read:
 - `docs/PRD.md` — product vision and target experience.
 - `docs/LORE_MODEL.md` — domain semantics and schema-evolution rules.
 - `docs/ROADMAP.md` — active milestone and acceptance criteria.
-- `docs/CHANGELOG_POLICY.md` — what counts as a notable change and how `CHANGELOG.md` is maintained.
+- `docs/CHANGELOG_POLICY.md` — changelog practice.
 - the current milestone's manual verification document under `docs/`.
 
-Documentation is part of the implementation contract. Do not leave durable product/model decisions only in chat, commit messages, or PR descriptions.
-
-When behavior, model semantics, source policy, architecture assumptions, roadmap scope, or contributor workflow changes, update the relevant documentation in the same PR.
+Documentation is part of the implementation contract. Durable product/model decisions must not live only in chat, commits, or PR descriptions.
 
 ## Source of truth
 
-- `data/` is the canonical editable lore store.
-- Keep one atomic JSON entity per file.
+- `data/` is the canonical editable lore store; keep one atomic JSON entity per file.
 - `schema/` defines entity contracts.
 - `Fact` is the smallest sourced assertion and owns timeline scope, canon status, and source evidence.
 - `Relationship` is a navigation/graph projection; it is not evidence by itself.
-- `Event` represents timeline-scoped occurrences and supported causal links.
+- `Event` represents timeline-scoped occurrences and explicit causal links.
 - React/UI code must not become a hidden lore store.
-- Do not introduce SQLite or another database as the primary store. A future database may be generated as a derived index only.
+- Do not introduce SQLite, a graph database, or another database as the primary store. Derived indexes may be added later only when proven necessary.
 
 ## Package manager
 
@@ -43,32 +40,18 @@ pnpm build
 pnpm check
 ```
 
-Do not create npm/yarn lockfiles. Keep `pnpm-lock.yaml` committed and synchronized with `package.json`.
+Do not create npm/yarn lockfiles. Keep `pnpm-lock.yaml` synchronized with `package.json`.
 
 ## UI system
 
-The project uses the shadcn preset originally scaffolded with:
+The project uses the shadcn `bcivVKXQ` preset: `base-nova`, Zinc variables, Lucide icons, Tailwind CSS v4, and Base UI.
 
-```bash
-pnpm dlx shadcn@latest init --preset bcivVKXQ --template next
-```
-
-Resolved foundation:
-
-- `base-nova`
-- Zinc variables
-- Lucide icons
-- Tailwind CSS v4
-- Base UI
-
-Rules:
-
-- Prefer existing `components/ui/*` primitives before creating custom equivalents.
+- Prefer existing `components/ui/*` primitives.
 - Add registry components with `pnpm dlx shadcn@latest add <component>`.
 - Keep domain components outside `components/ui/`.
 - Preserve accessibility, keyboard behavior, focus states, and semantic controls.
-- Keep Mortal Kombat styling as a theme layer on top of shadcn tokens.
-- Do not redesign speculatively; let actual lore/navigation friction prove the need.
+- Keep Mortal Kombat styling as a theme layer on shadcn tokens.
+- Do not redesign speculatively; let real lore/navigation friction prove the need.
 
 ## Continuity rules
 
@@ -76,66 +59,55 @@ Rules:
 - Original, Reboot, and New Era must remain independently inspectable.
 - Every timeline-dependent fact declares `timelineIds`.
 - Every event belongs to its declared `timelineId`.
-- Conflicting continuities should coexist as separate facts/events, not be reconciled into synthetic prose.
-- Timeline filters must continue to apply after navigation into detail pages.
+- Conflicting continuities coexist as separate facts/events.
+- Timeline filters must continue to apply after navigation into detail pages and specialized views.
 
-## Fact and canon rules
+## Facts, canon, and identity
 
-Every `Fact` requires at least one source.
+Every `Fact` requires at least one source. Supported canon statuses are `canon`, `supplemental`, `retconned`, `alternate`, `unconfirmed`, and `gameplay_only`.
 
-Supported canon statuses:
+Use the narrowest defensible status. Prefer small atomic assertions over paragraph-like facts.
 
-- `canon`
-- `supplemental`
-- `retconned`
-- `alternate`
-- `unconfirmed`
-- `gameplay_only`
+Prefer stable person entities such as `bi-han`, `kuai-liang`, and `hanzo-hasashi`. Do not create duplicate characters merely because a mantle changes. Model Sub-Zero, Scorpion, Noob Saibot, deaths, resurrections, corruption, revenant/wraith states, and ascensions through sourced facts/events unless a future proven requirement introduces an explicit identity/version entity.
 
-Use the narrowest defensible status. Do not promote speculation, fan interpretation, gameplay mechanics, intros, or endings into primary canon without explicit evidence.
+## Relationships and causality
 
-Prefer small atomic assertions over paragraph-like facts containing several disputable claims.
-
-## Identity and transformation
-
-Prefer stable person entities such as `bi-han`, `kuai-liang`, and `hanzo-hasashi`.
-
-Do not create duplicate characters merely because a mantle changes.
-
-Model timeline-dependent identities such as Sub-Zero, Scorpion, or Noob Saibot through sourced facts unless a future proven requirement introduces an explicit identity/version entity.
-
-Deaths, resurrections, corruption, wraith/revenant states, ascensions, and similar changes should be modeled through events plus facts.
-
-## Relationships
-
-- Every graph edge references existing entity IDs.
-- Direction matters for causal, membership, manipulation, and creation relations.
-- Symmetric relations should use `directed` consistently.
-- Meaningful lore claims should have supporting facts; graph edges exist to improve navigation.
-
-## Events and causality
-
-- `causeEventIds` means supported causality, not "happened shortly before".
+- Every graph edge references existing IDs.
+- Relationship direction matters.
+- Meaningful lore claims should have supporting facts; relationship edges improve navigation.
+- `causeEventIds` means supported causality, not “happened shortly before.”
 - `consequenceEventIds` means supported outcome, not mere chronology.
-- Do not manufacture causal links because events are sequential.
-- Keep participants and realms explicit.
-- If causality is interpretive, model the component facts and avoid overstating the edge.
+- Never manufacture causal links because events are sequential or have adjacent `order` values.
+- Keep participant and realm references explicit.
+- If causality is interpretive, model the supported facts and avoid overstating the edge.
+
+## Focused causality UX
+
+Phase 3 introduces `/causality` as a focused event graph.
+
+Rules:
+
+- show `cause → focused event → consequence`, not a universe-wide graph;
+- create causal arrows only from `causeEventIds` / `consequenceEventIds`;
+- keep timeline isolation strict;
+- allow click-to-recenter navigation rather than rendering unlimited graph depth;
+- keep ordinary `Relationship` edges visually and semantically separate from causal event edges unless manual usage proves composition is useful;
+- link graph nodes back to ordinary dossiers so evidence remains inspectable;
+- do not add React Flow, Cytoscape, a graph database, or new causal schema fields merely because richer graph tooling exists.
 
 ## Sources
 
 Prefer, in order:
 
 1. canonical game story/narrative;
-2. official in-game bios/codex material;
+2. official in-game bios/codex;
 3. official Mortal Kombat / NetherRealm / WB material;
 4. official supplemental material with clear continuity scope;
 5. secondary references only as research aids when primary evidence cannot be recovered.
 
-Do not invent a source to satisfy validation. Record enough source identity for later human verification.
+Do not invent a source to satisfy validation.
 
 ## Schema evolution
-
-Do not add fields because they seem theoretically useful.
 
 Before changing a schema:
 
@@ -145,36 +117,11 @@ Before changing a schema:
 4. update validators and migrations if necessary;
 5. update `docs/LORE_MODEL.md` and relevant product docs.
 
-Never weaken schema/data validation to make incorrect data pass.
-
-## Timeline-first reading UX
-
-The current product direction is to move from a warehouse of entities toward readable continuity-specific dossiers.
-
-For character pages:
-
-- continuity selection should be available inside the dossier;
-- chronology, evidence-backed facts, and relationship connections should be visually distinct;
-- `Compare all` must compare continuity-scoped data without implying simultaneous truth;
-- direct links should preserve useful reading state where implemented;
-- expanding the dataset must not silently make chronology misleading.
-
-Do not hard-code character-specific story prose into React to improve readability. Improve the structured data or generated presentation instead.
+Never weaken validation to make incorrect data pass.
 
 ## Changelog discipline
 
-`CHANGELOG.md` is the curated record of what materially changed. It is not a copy of Git history and not a roadmap.
-
-For every substantive PR:
-
-1. read `docs/CHANGELOG_POLICY.md`;
-2. decide whether the PR changes product/UX, lore/data, domain semantics, developer workflow, or security in a notable way;
-3. when it does, update `CHANGELOG.md` under `## Unreleased` in the same PR;
-4. group related work into reader-meaningful entries rather than one entry per commit/file;
-5. do not add changelog noise for typo-only, formatting-only, or behavior-neutral refactors;
-6. ensure changelog wording matches the implementation, PRD, roadmap, and lore-model documentation.
-
-Until a versioning policy is adopted, do not invent semantic versions. Completed milestones may be moved from `Unreleased` to dated milestone headings according to the changelog policy.
+For every substantive PR, review `docs/CHANGELOG_POLICY.md` and update `CHANGELOG.md` under `## Unreleased` when product/UX, lore/data, domain semantics, contributor workflow, or security changes materially. Do not create changelog noise for typo-only, formatting-only, or behavior-neutral refactors. Do not invent semantic versions until a versioning policy exists.
 
 ## Validation discipline
 
@@ -187,23 +134,23 @@ Before a substantive PR is ready:
 - all new references resolve;
 - new facts have evidence and timeline scope;
 - documentation matches behavior;
-- `CHANGELOG.md` has been reviewed and updated when required;
+- `CHANGELOG.md` has been reviewed;
 - relevant manual verification has been performed.
 
-A green build does not prove lore accuracy or good UX. Human verification remains required where documented.
+A green build does not prove lore accuracy, causal accuracy, or good UX.
 
 ## Git hygiene
 
-- Use focused `agent/*` branches for agent-authored work.
+- Use focused `agent/*` branches.
 - Keep commits scoped and descriptive.
-- Do not commit `node_modules`, `.next`, local caches, generated databases, or temporary scaffolds.
-- Avoid formatting/re-writing unrelated lore in UI-only work.
+- Do not commit `node_modules`, `.next`, caches, generated databases, or temporary scaffolds.
+- Avoid rewriting unrelated lore in UI-only work.
 - Never silently overwrite user-authored changes.
 
 ## Current scope
 
-Phase 1 (Bi-Han lore stress test) is complete and merged.
+Phases 1 and 2 are complete and merged.
 
-The active milestone is **Phase 2 — Timeline-first reading experience**, defined in `docs/ROADMAP.md` and manually reviewed through `docs/PHASE2_MANUAL_VERIFICATION.md`.
+The active milestone is **Phase 3 — Causality and focused graph**, defined in `docs/ROADMAP.md` and reviewed through `docs/PHASE3_MANUAL_VERIFICATION.md`.
 
-The goal is to make a character feel like a continuity-specific story that can be read, compared, deep-linked, and explored—not merely an entity record in a warehouse.
+The goal is to let a reader answer “why did this happen?” and “what did this lead to?” from explicit event causality without confusing story order, relationships, or alternate continuities with causal proof.
