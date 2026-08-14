@@ -1,0 +1,13 @@
+{
+  "id": "shao-kahn-seizes-outworld-original",
+  "type": "event",
+  "name": "Shao Kahn seizes Outworld",
+  "timelineId": "original",
+  "participantIds": ["shao-kahn", "onaga"],
+  "realmIds": ["outworld"],
+  "causeEventIds": ["shao-kahn-poisons-onaga-original"],
+  "consequenceEventIds": [],
+  "order": -790,
+  "description": "After poisoning Onaga, Shao Kahn takes control of Outworld.",
+  "tags": ["ancient", "succession", "outworld"]
+}
