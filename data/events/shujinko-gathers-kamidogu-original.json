@@ -1,0 +1,13 @@
+{
+  "id": "shujinko-gathers-kamidogu-original",
+  "type": "event",
+  "name": "Shujinko gathers the Kamidogu",
+  "timelineId": "original",
+  "participantIds": ["shujinko", "onaga"],
+  "realmIds": ["earthrealm", "outworld", "netherrealm", "orderrealm", "chaosrealm", "edenia"],
+  "causeEventIds": ["onaga-manipulates-shujinko-original"],
+  "consequenceEventIds": [],
+  "order": 50,
+  "description": "Acting under Onaga's deception, Shujinko brings together the lost Kamidogu from across the realms.",
+  "tags": ["deception", "kamidogu", "quest"]
+}
