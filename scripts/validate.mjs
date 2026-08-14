@@ -14,6 +14,7 @@ const typeFolders = {
   fact: "facts",
   source: "sources",
 };
+const timelineBridgeTags = new Set(["reset", "rewrite", "timeline-bridge"]);
 
 async function readJson(file) {
   return JSON.parse(await fs.readFile(file, "utf8"));
@@ -55,6 +56,18 @@ function requireRefs(owner, field, ids, allowedTypes) {
   }
 }
 
+function isTimelineBridge(source, target) {
+  return source.timelineId !== target.timelineId && (source.tags ?? []).some((tag) => timelineBridgeTags.has(tag));
+}
+
+function validateCausalTimeline(source, target) {
+  if (source.timelineId === target.timelineId) return;
+  if (isTimelineBridge(source, target)) return;
+  errors.push(
+    `${source.id} -> ${target.id} crosses timelines (${source.timelineId} -> ${target.timelineId}) without an explicit reset/rewrite bridge tag on the source event`
+  );
+}
+
 for (const record of records.values()) {
   for (const timelineId of record.timelineIds ?? []) {
     if (!timelineIds.has(timelineId)) errors.push(`${record.id}: unknown timeline '${timelineId}'`);
@@ -91,18 +104,14 @@ for (const record of records.values()) {
 for (const event of byType.event.values()) {
   for (const causeId of event.causeEventIds ?? []) {
     const cause = byType.event.get(causeId);
-    if (cause && cause.timelineId !== event.timelineId) {
-      errors.push(`${causeId} -> ${event.id} crosses timelines (${cause.timelineId} -> ${event.timelineId})`);
-    }
+    if (cause) validateCausalTimeline(cause, event);
     if (cause && !(cause.consequenceEventIds ?? []).includes(event.id)) {
       errors.push(`${causeId} -> ${event.id} must be mirrored in consequenceEventIds`);
     }
   }
   for (const consequenceId of event.consequenceEventIds ?? []) {
     const consequence = byType.event.get(consequenceId);
-    if (consequence && consequence.timelineId !== event.timelineId) {
-      errors.push(`${event.id} -> ${consequenceId} crosses timelines (${event.timelineId} -> ${consequence.timelineId})`);
-    }
+    if (consequence) validateCausalTimeline(event, consequence);
     if (consequence && !(consequence.causeEventIds ?? []).includes(event.id)) {
       errors.push(`${event.id} -> ${consequenceId} must be mirrored in causeEventIds`);
     }
