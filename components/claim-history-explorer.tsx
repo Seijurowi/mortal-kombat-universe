@@ -29,6 +29,46 @@ function sourceYear(source?: Source) {
   return source?.year ?? Number.MAX_SAFE_INTEGER
 }
 
+function familyLabel(group: {
+  hasRetconned: boolean
+  hasAlternate: boolean
+  hasValueVariation: boolean
+  hasTimelineSpread: boolean
+  hasStatusVariation: boolean
+}) {
+  if (group.hasRetconned) return "Retcon evidence present"
+  if (group.hasAlternate) return "Alternate portrayal present"
+  if (group.hasValueVariation) return "Value variation"
+  if (group.hasTimelineSpread) return "Cross-continuity agreement"
+  if (group.hasStatusVariation) return "Canon-status variation"
+  return "Multiple sourced assertions"
+}
+
+function familyExplanation(group: {
+  hasRetconned: boolean
+  hasAlternate: boolean
+  hasValueVariation: boolean
+  hasTimelineSpread: boolean
+  hasStatusVariation: boolean
+}) {
+  if (group.hasRetconned) {
+    return "At least one fact in this family is explicitly marked retconned. Inspect the individual fact cards and sources before treating the family as one simple before/after rewrite."
+  }
+  if (group.hasAlternate) {
+    return "At least one fact in this family is explicitly marked alternate. Alternate portrayals remain inspectable, but alternate does not mean that another claim was corrected or replaced."
+  }
+  if (group.hasValueVariation) {
+    return "This family contains more than one displayed value. That can represent a real continuity difference, but it can also reflect a multi-valued or time-dependent predicate such as identity. Value variation alone is not proof of contradiction or retcon."
+  }
+  if (group.hasTimelineSpread) {
+    return "The same displayed claim appears across more than one continuity. Cross-continuity agreement is useful history, but it is not a divergence or a retcon."
+  }
+  if (group.hasStatusVariation) {
+    return "These facts share a subject and predicate but use different canon statuses. Inspect each status and its evidence rather than collapsing the family into one canonical answer."
+  }
+  return "Multiple sourced facts share this subject and predicate. They are grouped for inspection only; the grouping does not assert contradiction or replacement."
+}
+
 export function ClaimHistoryExplorer({ data }: { data: UniverseData }) {
   const [query, setQuery] = useState("")
   const [selectedKey, setSelectedKey] = useState<string | null>(null)
@@ -57,22 +97,33 @@ export function ClaimHistoryExplorer({ data }: { data: UniverseData }) {
         const subject = entitiesById.get(facts[0].subjectId)
         const values = new Set(facts.map((fact) => factValue(fact, entitiesById)))
         const timelines = new Set(facts.flatMap((fact) => fact.timelineIds))
+        const statuses = new Set(facts.map((fact) => fact.canonStatus))
         const hasRetconned = facts.some((fact) => fact.canonStatus === "retconned")
         const hasAlternate = facts.some((fact) => fact.canonStatus === "alternate")
-        const hasDivergence = values.size > 1 || timelines.size > 1 || hasRetconned || hasAlternate
+        const hasValueVariation = values.size > 1
+        const hasTimelineSpread = timelines.size > 1
+        const hasStatusVariation = statuses.size > 1
+        const isComparable = facts.length > 1 || hasRetconned || hasAlternate || hasStatusVariation
         return {
           key,
           facts,
           subjectName: subject?.name ?? facts[0].subjectId,
           predicate: facts[0].predicate,
           hasRetconned,
-          hasDivergence,
+          hasAlternate,
+          hasValueVariation,
+          hasTimelineSpread,
+          hasStatusVariation,
+          isComparable,
           timelineCount: timelines.size,
+          valueCount: values.size,
         }
       })
-      .filter((group) => group.hasDivergence)
+      .filter((group) => group.isComparable)
       .sort((a, b) => {
         if (a.hasRetconned !== b.hasRetconned) return a.hasRetconned ? -1 : 1
+        if (a.hasAlternate !== b.hasAlternate) return a.hasAlternate ? -1 : 1
+        if (a.hasValueVariation !== b.hasValueVariation) return a.hasValueVariation ? -1 : 1
         if (b.timelineCount !== a.timelineCount) return b.timelineCount - a.timelineCount
         return `${a.subjectName} ${a.predicate}`.localeCompare(`${b.subjectName} ${b.predicate}`)
       })
@@ -85,7 +136,7 @@ export function ClaimHistoryExplorer({ data }: { data: UniverseData }) {
     return haystack.includes(query.trim().toLowerCase())
   })
 
-  const active = groups.find((group) => group.key === selectedKey) ?? filtered[0] ?? groups[0]
+  const active = filtered.find((group) => group.key === selectedKey) ?? filtered[0] ?? null
 
   const orderedFacts = active
     ? [...active.facts].sort((a, b) => {
@@ -106,10 +157,10 @@ export function ClaimHistoryExplorer({ data }: { data: UniverseData }) {
           </div>
           <div className="max-w-4xl">
             <h1 className="font-heading text-3xl font-semibold tracking-tight md:text-5xl">
-              See how a claim changes across Mortal Kombat history
+              Compare how claims are recorded across Mortal Kombat history
             </h1>
             <p className="mt-3 text-sm leading-6 text-muted-foreground md:text-base">
-              This view separates confirmed retcons from ordinary continuity divergence. It groups sourced facts by subject and predicate, then shows each scoped version with canon status and evidence instead of flattening them into one answer.
+              Facts are grouped into claim families by subject and predicate for inspection. Different values can reflect continuity changes, alternate portrayals, or valid time-dependent states, so the grouping itself never asserts contradiction or retcon.
             </p>
           </div>
         </header>
@@ -119,15 +170,15 @@ export function ClaimHistoryExplorer({ data }: { data: UniverseData }) {
             <CardHeader className="border-b">
               <CardTitle className="flex items-center gap-2 text-lg">
                 <GitCompareArrows className="size-4 text-primary" />
-                Divergent claims
+                Claim families
               </CardTitle>
-              <CardDescription>A difference between timelines is not automatically a retcon.</CardDescription>
+              <CardDescription>Grouped for comparison; grouping does not assert contradiction.</CardDescription>
             </CardHeader>
             <CardContent className="space-y-3">
               <div className="relative">
                 <Search className="absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground" />
                 <Input
-                  aria-label="Search divergent claims"
+                  aria-label="Search claim families"
                   className="pl-9"
                   placeholder="Search subject, predicate, or value..."
                   value={query}
@@ -146,7 +197,7 @@ export function ClaimHistoryExplorer({ data }: { data: UniverseData }) {
                     onClick={() => setSelectedKey(group.key)}
                   >
                     <div className="flex flex-wrap items-center gap-1.5">
-                      {group.hasRetconned ? <Badge>Confirmed retcon marker</Badge> : <Badge variant="outline">Continuity divergence</Badge>}
+                      <Badge variant={group.hasRetconned ? "default" : "outline"}>{familyLabel(group)}</Badge>
                       <Badge variant="secondary">{group.facts.length} fact{group.facts.length === 1 ? "" : "s"}</Badge>
                     </div>
                     <div className="mt-2 font-heading text-sm">{group.subjectName}</div>
@@ -156,7 +207,7 @@ export function ClaimHistoryExplorer({ data }: { data: UniverseData }) {
 
                 {filtered.length === 0 ? (
                   <div className="rounded-xl border border-dashed p-6 text-center text-sm text-muted-foreground">
-                    No divergent claim groups match this search.
+                    No claim families match this search.
                   </div>
                 ) : null}
               </div>
@@ -168,20 +219,20 @@ export function ClaimHistoryExplorer({ data }: { data: UniverseData }) {
               <Card>
                 <CardHeader className="border-b">
                   <div className="flex flex-wrap items-center gap-2">
-                    <Badge variant={active.hasRetconned ? "default" : "outline"}>
-                      {active.hasRetconned ? "Retcon evidence present" : "Continuity divergence"}
-                    </Badge>
+                    <Badge variant={active.hasRetconned ? "default" : "outline"}>{familyLabel(active)}</Badge>
                     <Badge variant="secondary">{active.timelineCount} timeline{active.timelineCount === 1 ? "" : "s"}</Badge>
+                    <Badge variant="secondary">{active.valueCount} displayed value{active.valueCount === 1 ? "" : "s"}</Badge>
                   </div>
                   <CardTitle className="mt-2 text-xl md:text-2xl">{active.subjectName}</CardTitle>
                   <CardDescription className="font-mono">{active.predicate}</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="rounded-xl border bg-muted/10 p-4 text-sm leading-6 text-muted-foreground">
-                    {active.hasRetconned
-                      ? "At least one fact in this group is explicitly marked retconned. Read the individual fact cards and sources before treating the entire group as one simple before/after rewrite."
-                      : "These records disagree or vary by continuity, but none is explicitly marked retconned. Treat this as scoped divergence, not proof that one version replaced another."}
+                    {familyExplanation(active)}
                   </div>
+                  <p className="text-xs leading-5 text-muted-foreground">
+                    Claim records below are ordered by the earliest known year among their supporting sources. That order is evidence-history context, not canonical priority.
+                  </p>
                 </CardContent>
               </Card>
 
@@ -193,7 +244,7 @@ export function ClaimHistoryExplorer({ data }: { data: UniverseData }) {
                     <Card key={fact.id}>
                       <CardHeader className="border-b">
                         <div className="flex flex-wrap items-center gap-1.5">
-                          <Badge variant="secondary">Version {index + 1}</Badge>
+                          <Badge variant="secondary">Claim record {index + 1}</Badge>
                           <Badge variant={fact.canonStatus === "retconned" ? "default" : "outline"}>{statusLabel(fact.canonStatus)}</Badge>
                           {timelineNames.map((name) => <Badge key={name} variant="outline">{name}</Badge>)}
                         </div>
@@ -242,7 +293,7 @@ export function ClaimHistoryExplorer({ data }: { data: UniverseData }) {
           ) : (
             <Card>
               <CardContent className="py-12 text-center text-sm text-muted-foreground">
-                The current dataset does not yet contain a claim group with enough scoped variation to compare.
+                No claim family is available for the current search.
               </CardContent>
             </Card>
           )}
