@@ -36,7 +36,7 @@ Status: implementation in progress on `agent/phase5-cosmology`.
 
 Goal: expand from character-scale lore into the oldest Mortal Kombat history while preserving source and continuity caveats instead of presenting one synthetic creation myth as timeless canon.
 
-### First stress slice — Deception cosmology
+### Deception cosmology foundation
 
 - [x] Add `One Being` as a non-playable primordial Character/being in Original continuity.
 - [x] Add `Elder Gods` as a Faction rather than pretending the collective is one Character.
@@ -45,10 +45,20 @@ Goal: expand from character-scale lore into the oldest Mortal Kombat history whi
 - [x] Add the Elder Gods shattering the One Being as an ancient Event plus sourced Facts.
 - [x] Record the Kamidogu/reawakening danger without turning it into unsupported causal edges.
 - [x] Expand Event participants from Character-only to `Character | Faction`, proven by the Elder Gods acting collectively in the creation event.
+- [x] Add `game_manual` as a first-class Source type after the Deception instruction booklet proved the need.
+
+### Onaga ancient-history slice
+
+- [x] Add Onaga, Shao Kahn, and Shujinko as Original-continuity Characters.
+- [x] Add Raiden biography and Shujinko ending evidence from Deception.
+- [x] Model `Shao Kahn poisons Onaga → Shao Kahn seizes Outworld` as a supported causal chain.
+- [x] Model `Onaga manipulates Shujinko → Shujinko gathers the Kamidogu` as a supported causal chain.
+- [x] Model `Shujinko shatters the Kamidogu → Shujinko defeats Onaga` as a supported causal chain.
+- [x] Deliberately leave the gather → shatter gap unconnected until a source supports that direct causal edge.
 
 ### Next lore slices
 
-- [ ] Onaga's reign, death, return, and Kamidogu plan.
+- [ ] Onaga's resurrection/return mechanism and post-Deception fate with stronger source coverage.
 - [ ] Shinnok as Elder God, fall, Netherrealm rule, and continuity differences.
 - [ ] Edenia / Outworld conquest history and Shao Kahn.
 - [ ] Great Kung Lao and pre-1992 tournament history.
@@ -63,7 +73,8 @@ A user should be able to:
 3. see that the creation event includes a Faction actor without mis-modeling that faction as a Character;
 4. trace every important cosmology claim back to a named primary work/source record;
 5. distinguish Deception's Original-continuity cosmology from later Titan/New Era material;
-6. avoid unsupported causal edges where a source establishes lore context but not direct event causation.
+6. follow supported Onaga/Shao Kahn/Shujinko chains without chronology-only edges being invented;
+7. see intentional causal gaps where the sources establish sequence or context but not direct causation.
 
 See `PHASE5_MANUAL_VERIFICATION.md`.
 
