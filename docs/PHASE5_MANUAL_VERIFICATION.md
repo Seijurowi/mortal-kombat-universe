@@ -22,20 +22,24 @@ Open `Elder Gods shatter the One Being`.
 
 - [ ] Both `Elder Gods` and `One Being` appear as participants.
 - [ ] The event is Original-continuity only.
-- [ ] The six Deception Konquest realms are attached to the event.
+- [ ] The event does **not** attach the six later realms through `realmIds`; `realmIds` remains location/scope rather than an event-output field.
+- [ ] The associated Fact says the shattering formed **the realms** without claiming the separately enumerated six Konquest realms are an exhaustive set of One Being fragments.
 - [ ] The ancient order value places it before ordinary tournament-era events without creating causal edges by chronology alone.
 
-## 3. Six-realm Deception scope
+## 3. Six-realm Deception navigation scope
 
 Confirm the dataset contains and can navigate Earthrealm, Netherrealm, Outworld, Orderrealm / Seido, Chaosrealm, and Edenia.
 
+- [ ] These realm records are independently useful for Deception navigation.
 - [ ] The UI does not imply that this six-realm set is an exhaustive list of every realm in every continuity.
+- [ ] The UI does not imply that the manual's six Konquest realms prove those exact six are the complete output of the One Being shattering event.
 
 ## 4. Evidence and source taxonomy
 
 - [ ] The Shujinko and Raiden biography sources use `game_bio` and identify the original in-game material even when the accessible URL is a preservation/reproduction page.
 - [ ] The Deception instruction booklet is identified as `game_manual`, not generic `other`.
 - [ ] The Shujinko ending is identified as `game_ending`.
+- [ ] The Armageddon Shujinko biography is available as later follow-up evidence confirming Onaga's defeat.
 - [ ] The shattering Fact cites the Shujinko biography.
 - [ ] The Kamidogu reawakening Fact does not invent a causal event chain that the current source does not establish.
 
@@ -43,6 +47,7 @@ Confirm the dataset contains and can navigate Earthrealm, Netherrealm, Outworld,
 
 - [ ] Existing Character-only events still render normally.
 - [ ] The creation and Shinnok-banishment events can include the Elder Gods Faction as a participant.
+- [ ] Faction participants link to normal Faction dossiers in `/causality` and event detail views.
 - [ ] No Faction was duplicated as a fake Character merely to satisfy validation.
 
 ## 6. Onaga story chains
@@ -53,6 +58,7 @@ In Original continuity, inspect the causal story components.
 - [ ] `Onaga manipulates Shujinko → Shujinko gathers the Kamidogu` appears as a separate supported chain.
 - [ ] `Shujinko shatters the Kamidogu → Shujinko defeats Onaga` appears as another supported chain.
 - [ ] There is no manufactured `gathers Kamidogu → shatters Kamidogu` edge simply to make one continuous tree.
+- [ ] The `Shujinko defeated Onaga` Fact exposes both the Deception ending and later Armageddon biography evidence.
 - [ ] Onaga, Shao Kahn, and Shujinko dossiers expose their scoped Facts and sources.
 
 ## 7. Shinnok historical-state modeling
