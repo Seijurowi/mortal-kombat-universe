@@ -1,0 +1,12 @@
+{
+  "id": "fact-goro-undefeated-five-centuries-original",
+  "type": "fact",
+  "name": "Goro remained undefeated for roughly 500 years",
+  "subjectId": "goro",
+  "predicate": "undefeated_for",
+  "value": "approximately 500 years",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk-1992-game"],
+  "notes": "The first Mortal Kombat game's story describes Goro as undefeated for the previous 500 years."
+}
