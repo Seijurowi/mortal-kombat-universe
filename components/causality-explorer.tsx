@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useMemo, useState, type ReactNode } from "react"
-import { CircleDot, Flag, GitBranch, Network, Route, Swords, Users } from "lucide-react"
+import { CircleDot, Flag, GitBranch, Network, Route, Users } from "lucide-react"
 
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -351,7 +351,7 @@ export function CausalityExplorer({ data }: { data: UniverseData }) {
                   <CardTitle className="text-base">How to read this</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3 text-sm leading-6 text-muted-foreground">
-                  <p><strong className="text-foreground">Moment</strong> is the event's chronological position inside this chain.</p>
+                  <p><strong className="text-foreground">Moment</strong> is the event&apos;s chronological position inside this chain.</p>
                   <p><strong className="text-foreground">Tree branches</strong> exist only when an explicit causal edge exists in the event data.</p>
                   <p>Chronological neighbors without a causal edge are intentionally absent from the tree.</p>
                   <p>If multiple independent chains exist in one continuity, choose the chain first instead of scanning every event.</p>
