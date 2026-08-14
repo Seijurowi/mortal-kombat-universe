@@ -91,12 +91,18 @@ for (const record of records.values()) {
 for (const event of byType.event.values()) {
   for (const causeId of event.causeEventIds ?? []) {
     const cause = byType.event.get(causeId);
+    if (cause && cause.timelineId !== event.timelineId) {
+      errors.push(`${causeId} -> ${event.id} crosses timelines (${cause.timelineId} -> ${event.timelineId})`);
+    }
     if (cause && !(cause.consequenceEventIds ?? []).includes(event.id)) {
       errors.push(`${causeId} -> ${event.id} must be mirrored in consequenceEventIds`);
     }
   }
   for (const consequenceId of event.consequenceEventIds ?? []) {
     const consequence = byType.event.get(consequenceId);
+    if (consequence && consequence.timelineId !== event.timelineId) {
+      errors.push(`${event.id} -> ${consequenceId} crosses timelines (${event.timelineId} -> ${consequence.timelineId})`);
+    }
     if (consequence && !(consequence.causeEventIds ?? []).includes(event.id)) {
       errors.push(`${event.id} -> ${consequenceId} must be mirrored in causeEventIds`);
     }
