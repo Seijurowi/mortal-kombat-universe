@@ -1,32 +1,55 @@
-import "server-only";
+import "server-only"
 
-import { promises as fs } from "node:fs";
-import path from "node:path";
-import type { UniverseData } from "@/lib/types";
+import { promises as fs } from "node:fs"
+import path from "node:path"
 
-const folders: Array<[keyof UniverseData, string]> = [
-  ["characters", "characters"],
-  ["events", "events"],
-  ["realms", "realms"],
-  ["factions", "factions"],
-  ["timelines", "timelines"],
-  ["relationships", "relationships"],
-  ["facts", "facts"],
-  ["sources", "sources"],
-];
+import type {
+  Character,
+  Event,
+  Fact,
+  Faction,
+  Realm,
+  Relationship,
+  Source,
+  Timeline,
+  UniverseData,
+} from "@/lib/types"
 
-async function loadFolder(folder: string) {
-  const dir = path.join(process.cwd(), "data", folder);
-  const files = (await fs.readdir(dir)).filter((file) => file.endsWith(".json")).sort();
+async function loadFolder<T>(folder: string): Promise<T[]> {
+  const dir = path.join(process.cwd(), "data", folder)
+  const files = (await fs.readdir(dir))
+    .filter((file) => file.endsWith(".json"))
+    .sort()
+
   return Promise.all(
-    files.map(async (file) => JSON.parse(await fs.readFile(path.join(dir, file), "utf8"))),
-  );
+    files.map(async (file) => {
+      const raw = await fs.readFile(path.join(dir, file), "utf8")
+      return JSON.parse(raw) as T
+    })
+  )
 }
 
 export async function loadUniverseData(): Promise<UniverseData> {
-  const entries = await Promise.all(
-    folders.map(async ([key, folder]) => [key, await loadFolder(folder)] as const),
-  );
+  const [characters, events, realms, factions, timelines, relationships, facts, sources] =
+    await Promise.all([
+      loadFolder<Character>("characters"),
+      loadFolder<Event>("events"),
+      loadFolder<Realm>("realms"),
+      loadFolder<Faction>("factions"),
+      loadFolder<Timeline>("timelines"),
+      loadFolder<Relationship>("relationships"),
+      loadFolder<Fact>("facts"),
+      loadFolder<Source>("sources"),
+    ])
 
-  return Object.fromEntries(entries) as UniverseData;
+  return {
+    characters,
+    events,
+    realms,
+    factions,
+    timelines,
+    relationships,
+    facts,
+    sources,
+  }
 }
