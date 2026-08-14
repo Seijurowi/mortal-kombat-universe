@@ -10,9 +10,10 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 
 - Phase 5 Deception cosmology foundation: One Being, Elder Gods, Edenia, Orderrealm/Seido, Chaosrealm, the ancient shattering event, and sourced creation-myth facts.
 - Onaga / Shao Kahn / Shujinko Original-continuity records with sourced ancient succession and Deception-era story chains.
+- Shinnok / Lucifer Original-continuity records with sourced ancient Earthrealm war, banishment, Quan Chi alliance, and Netherrealm succession events.
 - Mortal Kombat: Deception Shujinko biography, Raiden biography, Shujinko ending, and instruction-booklet source records.
-- Supported causal chains for `Shao Kahn poisons Onaga → seizes Outworld`, `Onaga manipulates Shujinko → Shujinko gathers Kamidogu`, and `Shujinko shatters Kamidogu → defeats Onaga`.
-- Phase 5 manual verification for ancient cosmology, continuity scope, source provenance, collective event participants, and causal gaps.
+- Supported causal chains for `Shao Kahn poisons Onaga → seizes Outworld`, `Onaga manipulates Shujinko → Shujinko gathers Kamidogu`, `Shujinko shatters Kamidogu → defeats Onaga`, `Shinnok wars with Raiden → banishment`, and `Quan Chi allies with Shinnok → Shinnok rules Netherrealm`.
+- Phase 5 manual verification for ancient cosmology, continuity scope, source provenance, collective event participants, status changes, and causal gaps.
 
 ### Changed
 
@@ -21,6 +22,7 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 - Ancient Original-continuity cosmology remains explicitly scoped instead of being projected onto Reboot or New Era.
 - Kamidogu reawakening lore is represented as sourced Facts without manufacturing unsupported causal event edges.
 - Onaga chronology intentionally keeps unsupported transitions disconnected rather than turning sequence into causality.
+- Shinnok's Elder God status is represented as a historical Fact (`former_member_of`) instead of timeless static faction membership.
 
 ## 2026-08-14 — Phase 4: Claim history, retcons, and evidence
 
