@@ -1,0 +1,12 @@
+{
+  "id": "fact-goro-grand-champion-original",
+  "type": "fact",
+  "name": "Goro became Grand Champion",
+  "subjectId": "goro",
+  "predicate": "held_title",
+  "value": "Grand Champion of Mortal Kombat",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk-1992-game"],
+  "notes": "The original Mortal Kombat story states that Goro won the title of Grand Champion by defeating Kung Lao."
+}
