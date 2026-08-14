@@ -1,0 +1,9 @@
+{
+  "id": "goro",
+  "type": "character",
+  "name": "Goro",
+  "timelineIds": ["original"],
+  "realmIds": ["outworld"],
+  "description": "Shokan prince who defeated the Great Kung Lao and held the Mortal Kombat grand championship for roughly five centuries before the first game.",
+  "tags": ["shokan", "prince", "champion", "ancient-history"]
+}
