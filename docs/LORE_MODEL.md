@@ -47,7 +47,9 @@ Use:
 - `causeEventIds` only when a causal connection is defensible;
 - `consequenceEventIds` for supported outcomes.
 
-Sequence alone does not prove causality. Causal event references must point to events in the same timeline.
+Sequence alone does not prove causality.
+
+Ordinary causal links connect events in the same timeline. A cross-timeline causal link is reserved for an explicit reset/rewrite bridge where the source event creates or rewrites the following continuity. The current validator recognizes source-event tags `reset`, `rewrite`, and `timeline-bridge` for this purpose.
 
 ## 4. Relationships are graph projections
 
@@ -114,8 +116,11 @@ Rules:
 - never infer that a fact from one continuity applies to another;
 - use separate facts when details differ materially;
 - an event belongs to one timeline;
-- causal links may connect only events from that same timeline;
+- ordinary causal links stay inside that timeline;
+- explicit reset/rewrite events may bridge into a successor timeline when the lore supports that transition;
 - cross-timeline comparison is a presentation operation over scoped data, not a merged canon.
+
+The Reboot `hourglass-reset` event leading to `liu-kang-new-era` is the current concrete bridge case. It should not be shown as an ordinary Reboot or New Era story-tree branch; it belongs to future timeline-transition UX.
 
 ## 8. Retcons and contradictions
 
@@ -165,7 +170,9 @@ Bi-Han returns as Noob Saibot
 
 Only encode an edge if the lore supports that interpretation. If the chain is interpretive rather than explicit, represent the component facts and leave the causal edge absent or model the assertion conservatively.
 
-Phase 3 presents connected causal components as story chains. Event `order` can help sort and label moments inside a chain, but it must never manufacture a parent/child edge.
+Phase 3 presents within-continuity connected causal components as story chains. Event `order` can help sort and label moments inside a chain, but it must never manufacture a parent/child edge.
+
+Timeline reset/rewrite bridges are intentionally excluded from ordinary Phase 3 story trees even though they remain valid causal model data.
 
 ## 12. Model-evolution rule
 
@@ -197,6 +204,7 @@ Phase 3 now stress-tests the event model as a readable causal tree. Current pres
 
 - larger branching chains;
 - branch merges (DAGs) that could be visually duplicated by a naive tree renderer;
+- explicit reset/rewrite bridges between continuities;
 - alternate-timeline character variants such as Titan Havik;
 - whether chronology-only milestones should ever appear as non-causal context.
 
