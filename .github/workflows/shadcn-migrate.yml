@@ -51,12 +51,16 @@ jobs:
           current.packageManager = 'pnpm@11.21.0'
           current.scripts = {
             ...current.scripts,
-            check: 'pnpm validate && pnpm lint && pnpm build',
+            check: 'pnpm validate && pnpm lint && pnpm typecheck && pnpm build',
             format: 'prettier --write "**/*.{ts,tsx,css,md}"',
             typecheck: 'tsc --noEmit'
           }
           current.dependencies = { ...reference.dependencies, ...current.dependencies }
           current.devDependencies = { ...reference.devDependencies, ...current.devDependencies }
+          current.pnpm = {
+            ...(current.pnpm || {}),
+            onlyBuiltDependencies: ['sharp', 'unrs-resolver']
+          }
           fs.writeFileSync('package.json', JSON.stringify(current, null, 2) + '\n')
           NODE
       - name: Install and add base shadcn components
