@@ -1,0 +1,12 @@
+{
+  "id": "fact-kamidogu-can-reawaken-one-being-original",
+  "type": "fact",
+  "name": "Misusing the Kamidogu can reawaken the One Being",
+  "subjectId": "one-being",
+  "predicate": "can_be_reawakened_by",
+  "value": "Merging the realms through misuse of the Kamidogu",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk-deception-shujinko-bio"],
+  "notes": "Shujinko warns that misuse of the Kamidogu can bring the realms crashing together again and reawaken the One Being."
+}
