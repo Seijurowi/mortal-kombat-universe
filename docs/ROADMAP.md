@@ -56,10 +56,18 @@ Goal: expand from character-scale lore into the oldest Mortal Kombat history whi
 - [x] Model `Shujinko shatters the Kamidogu → Shujinko defeats Onaga` as a supported causal chain.
 - [x] Deliberately leave the gather → shatter gap unconnected until a source supports that direct causal edge.
 
+### Shinnok ancient-history slice
+
+- [x] Add Shinnok and Lucifer as Original-continuity Characters.
+- [x] Represent Shinnok's former Elder God status as a Fact, not timeless static faction membership.
+- [x] Model `Shinnok wars with Raiden → Shinnok is banished to the Netherrealm`.
+- [x] Model `Quan Chi allies with Shinnok → Shinnok becomes ruler of the Netherrealm`.
+- [x] Reuse the existing Mortal Kombat Mythologies: Sub-Zero primary game source rather than duplicating source records.
+
 ### Next lore slices
 
 - [ ] Onaga's resurrection/return mechanism and post-Deception fate with stronger source coverage.
-- [ ] Shinnok as Elder God, fall, Netherrealm rule, and continuity differences.
+- [ ] Shinnok escape/MK4 and Reboot continuity comparison.
 - [ ] Edenia / Outworld conquest history and Shao Kahn.
 - [ ] Great Kung Lao and pre-1992 tournament history.
 - [ ] Compare Original cosmology against MK11-era Titan/Kronika cosmology without forcing them into one universal truth.
@@ -74,7 +82,8 @@ A user should be able to:
 4. trace every important cosmology claim back to a named primary work/source record;
 5. distinguish Deception's Original-continuity cosmology from later Titan/New Era material;
 6. follow supported Onaga/Shao Kahn/Shujinko chains without chronology-only edges being invented;
-7. see intentional causal gaps where the sources establish sequence or context but not direct causation.
+7. follow Shinnok's fall/banishment and later Netherrealm rise without treating former Elder God status as eternal membership;
+8. see intentional causal gaps where the sources establish sequence or context but not direct causation.
 
 See `PHASE5_MANUAL_VERIFICATION.md`.
 
