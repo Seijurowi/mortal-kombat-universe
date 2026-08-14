@@ -1,0 +1,13 @@
+{
+  "id": "bi-han-killed-by-scorpion-reboot",
+  "type": "event",
+  "name": "Scorpion kills Bi-Han in the reboot tournament",
+  "timelineId": "reboot",
+  "participantIds": ["bi-han", "hanzo-hasashi", "quan-chi"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": ["hanzo-resurrected-scorpion-reboot"],
+  "consequenceEventIds": ["bi-han-resurrected-noob-reboot"],
+  "order": 212,
+  "description": "Manipulated by Quan Chi's deception and driven by vengeance, Scorpion kills Bi-Han during the first tournament retold in Mortal Kombat (2011).",
+  "tags": ["death", "revenge", "deception"]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "fact-quan-chi-resurrected-hanzo-reboot",
+  "type": "fact",
+  "name": "Quan Chi resurrects Hanzo Hasashi as Scorpion",
+  "subjectId": "quan-chi",
+  "predicate": "resurrected",
+  "objectId": "hanzo-hasashi",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-scorpion-bio"]
+}

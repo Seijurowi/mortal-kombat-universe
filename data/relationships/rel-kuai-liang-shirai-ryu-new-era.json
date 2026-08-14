@@ -6,6 +6,6 @@
   "fromId": "kuai-liang",
   "toId": "shirai-ryu",
   "timelineIds": ["new-era"],
-  "factIds": ["fact-kuai-liang-scorpion-new-era"],
+  "factIds": ["fact-kuai-liang-member-shirai-ryu-new-era"],
   "directed": true
 }

@@ -1,0 +1,12 @@
+{
+  "id": "fact-bi-han-soul-stolen-titan-havik-new-era",
+  "type": "fact",
+  "name": "Titan Havik steals Bi-Han's soul to create Noob Saibot",
+  "subjectId": "bi-han",
+  "predicate": "soul_stolen_by",
+  "value": "Titan Havik",
+  "timelineIds": ["new-era"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk1-khaos-reigns-wb-announcement"],
+  "notes": "Titan Havik is intentionally stored as a literal value until alternate-timeline character variants have a safe model."
+}

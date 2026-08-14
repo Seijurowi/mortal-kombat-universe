@@ -1,0 +1,11 @@
+{
+  "id": "fact-bi-han-sub-zero-original",
+  "type": "fact",
+  "name": "Bi-Han is the original Sub-Zero",
+  "subjectId": "bi-han",
+  "predicate": "uses_identity",
+  "value": "Sub-Zero",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk-1992-game", "mk30-sub-zero-profile"]
+}

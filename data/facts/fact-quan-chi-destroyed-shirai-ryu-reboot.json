@@ -1,0 +1,11 @@
+{
+  "id": "fact-quan-chi-destroyed-shirai-ryu-reboot",
+  "type": "fact",
+  "name": "Quan Chi is responsible for the Shirai Ryu's destruction in the reboot continuity",
+  "subjectId": "quan-chi",
+  "predicate": "destroyed",
+  "objectId": "shirai-ryu",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk30-scorpion-profile", "mk11-scorpion-bio"]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "titan-havik-creates-noob-new-era",
+  "type": "event",
+  "name": "Titan Havik creates Noob Saibot from Bi-Han",
+  "timelineId": "new-era",
+  "participantIds": ["bi-han"],
+  "realmIds": [],
+  "causeEventIds": [],
+  "consequenceEventIds": [],
+  "order": 320,
+  "description": "During the Khaos Reigns conflict, the alternate-timeline Titan Havik steals Bi-Han's soul and creates Noob Saibot. Titan Havik is kept as sourced text here until the multiverse model can represent character variants safely.",
+  "tags": ["transformation", "identity", "khaos-reigns", "multiverse"]
+}

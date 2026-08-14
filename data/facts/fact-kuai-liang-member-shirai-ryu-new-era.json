@@ -1,0 +1,12 @@
+{
+  "id": "fact-kuai-liang-member-shirai-ryu-new-era",
+  "type": "fact",
+  "name": "Kuai Liang belongs to the New Era Shirai Ryu",
+  "subjectId": "kuai-liang",
+  "predicate": "member_of",
+  "objectId": "shirai-ryu",
+  "timelineIds": ["new-era"],
+  "canonStatus": "supplemental",
+  "sourceIds": ["mk1-scorpion-ending"],
+  "notes": "Kept supplemental until the same status is confirmed from the Khaos Reigns story or another primary story source."
+}

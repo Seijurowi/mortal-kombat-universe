@@ -1,0 +1,11 @@
+{
+  "id": "fact-bi-han-killed-hanzo-original",
+  "type": "fact",
+  "name": "Bi-Han kills Hanzo Hasashi before the first tournament",
+  "subjectId": "bi-han",
+  "predicate": "killed",
+  "objectId": "hanzo-hasashi",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk-mythologies-sub-zero"]
+}

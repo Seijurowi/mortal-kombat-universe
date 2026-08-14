@@ -3,20 +3,11 @@
   "type": "event",
   "name": "Bi-Han becomes Noob Saibot",
   "timelineId": "original",
-  "participantIds": [
-    "bi-han",
-    "quan-chi"
-  ],
-  "realmIds": [
-    "netherrealm"
-  ],
-  "causeEventIds": [
-    "bi-han-killed-by-scorpion-original"
-  ],
+  "participantIds": ["bi-han"],
+  "realmIds": ["netherrealm"],
+  "causeEventIds": ["bi-han-killed-by-scorpion-original"],
   "consequenceEventIds": [],
   "order": 120,
-  "description": "After death, Bi-Han returns as the wraith Noob Saibot.",
-  "tags": [
-    "transformation"
-  ]
+  "description": "After his death at Scorpion's hands, Bi-Han later appears as the wraith Noob Saibot. The original continuity does not attribute the transformation to Quan Chi here without stronger direct evidence.",
+  "tags": ["transformation", "identity"]
 }

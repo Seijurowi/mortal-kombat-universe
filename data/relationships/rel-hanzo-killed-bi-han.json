@@ -1,0 +1,11 @@
+{
+  "id": "rel-hanzo-killed-bi-han",
+  "type": "relationship",
+  "name": "Hanzo Hasashi → Bi-Han",
+  "relationType": "killed",
+  "fromId": "hanzo-hasashi",
+  "toId": "bi-han",
+  "timelineIds": ["original", "reboot"],
+  "factIds": ["fact-hanzo-killed-bi-han-original", "fact-hanzo-killed-bi-han-reboot"],
+  "directed": true
+}

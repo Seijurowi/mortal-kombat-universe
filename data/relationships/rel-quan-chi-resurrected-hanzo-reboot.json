@@ -1,0 +1,11 @@
+{
+  "id": "rel-quan-chi-resurrected-hanzo-reboot",
+  "type": "relationship",
+  "name": "Quan Chi → Hanzo Hasashi",
+  "relationType": "resurrected",
+  "fromId": "quan-chi",
+  "toId": "hanzo-hasashi",
+  "timelineIds": ["reboot"],
+  "factIds": ["fact-quan-chi-resurrected-hanzo-reboot"],
+  "directed": true
+}

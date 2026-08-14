@@ -1,0 +1,13 @@
+{
+  "id": "shirai-ryu-destroyed-quan-chi-original",
+  "type": "event",
+  "name": "Quan Chi destroys the Shirai Ryu",
+  "timelineId": "original",
+  "participantIds": ["quan-chi", "hanzo-hasashi"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": [],
+  "consequenceEventIds": [],
+  "order": 85,
+  "description": "Quan Chi fulfills his bargain with the Lin Kuei by destroying the rival Shirai Ryu after Hanzo's death.",
+  "tags": ["clan", "massacre"]
+}

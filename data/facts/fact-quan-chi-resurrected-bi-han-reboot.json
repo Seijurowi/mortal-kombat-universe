@@ -1,0 +1,11 @@
+{
+  "id": "fact-quan-chi-resurrected-bi-han-reboot",
+  "type": "fact",
+  "name": "Quan Chi resurrects Bi-Han as Noob Saibot",
+  "subjectId": "quan-chi",
+  "predicate": "resurrected",
+  "objectId": "bi-han",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk11-noob-bio"]
+}

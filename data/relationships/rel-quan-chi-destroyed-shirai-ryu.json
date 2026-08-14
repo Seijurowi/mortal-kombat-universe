@@ -1,0 +1,11 @@
+{
+  "id": "rel-quan-chi-destroyed-shirai-ryu",
+  "type": "relationship",
+  "name": "Quan Chi → Shirai Ryu",
+  "relationType": "destroyed",
+  "fromId": "quan-chi",
+  "toId": "shirai-ryu",
+  "timelineIds": ["original", "reboot"],
+  "factIds": ["fact-quan-chi-destroyed-shirai-ryu-original", "fact-quan-chi-destroyed-shirai-ryu-reboot"],
+  "directed": true
+}
