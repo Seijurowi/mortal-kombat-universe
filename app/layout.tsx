@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { Geist_Mono, Inter } from "next/font/google"
 
 import { ThemeProvider } from "@/components/theme-provider"
@@ -33,6 +34,23 @@ export default function RootLayout({
     >
       <body>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <nav
+            aria-label="Universe modes"
+            className="fixed right-3 bottom-3 z-50 flex items-center gap-1 rounded-xl border border-border/80 bg-background/90 p-1 shadow-lg backdrop-blur md:right-5 md:bottom-5"
+          >
+            <Link
+              className="rounded-lg px-3 py-2 text-xs font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+              href="/"
+            >
+              Explorer
+            </Link>
+            <Link
+              className="rounded-lg px-3 py-2 text-xs font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+              href="/causality"
+            >
+              Causality
+            </Link>
+          </nav>
           {children}
         </ThemeProvider>
       </body>

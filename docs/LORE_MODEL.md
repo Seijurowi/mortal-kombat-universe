@@ -49,6 +49,8 @@ Use:
 
 Sequence alone does not prove causality.
 
+Ordinary causal links connect events in the same timeline. A cross-timeline causal link is reserved for an explicit reset/rewrite bridge where the source event creates or rewrites the following continuity. The current validator recognizes source-event tags `reset`, `rewrite`, and `timeline-bridge` for this purpose.
+
 ## 4. Relationships are graph projections
 
 `Relationship` exists to make exploration fast and expressive.
@@ -114,7 +116,11 @@ Rules:
 - never infer that a fact from one continuity applies to another;
 - use separate facts when details differ materially;
 - an event belongs to one timeline;
+- ordinary causal links stay inside that timeline;
+- explicit reset/rewrite events may bridge into a successor timeline when the lore supports that transition;
 - cross-timeline comparison is a presentation operation over scoped data, not a merged canon.
+
+The Reboot `hourglass-reset` event leading to `liu-kang-new-era` is the current concrete bridge case. It should not be shown as an ordinary Reboot or New Era story-tree branch; it belongs to future timeline-transition UX.
 
 ## 8. Retcons and contradictions
 
@@ -146,25 +152,27 @@ A source record should identify the work well enough that a researcher can later
 
 The current schema stores sources at work-level granularity, for example `mk9-story`.
 
-If the stress test proves that chapter, scene, bio-entry, timestamp, page, or quote-level references are required for reliable provenance, evolve the source/fact model deliberately and document the decision. Do not add ad-hoc fields to individual JSON files.
+If later work proves that chapter, scene, bio-entry, timestamp, page, or quote-level references are required for reliable provenance, evolve the source/fact model deliberately and document the decision. Do not add ad-hoc fields to individual JSON files.
 
 ## 11. Causal graph guidance
 
 The product wants to answer "why did this happen?" and "what did this cause?"
 
-Use explicit causal edges only for relationships like:
+Use explicit causal edges only for supported relationships like:
 
 ```text
-Quan Chi deception
-    ↓ causes/supports
-Hanzo targets Bi-Han
+Hanzo returns as Scorpion
     ↓
 Bi-Han dies
     ↓
 Bi-Han returns as Noob Saibot
 ```
 
-But only encode an edge if the lore actually supports that interpretation. If the chain is interpretive rather than explicit, represent the component facts and leave the causal edge absent or mark the relevant assertion conservatively.
+Only encode an edge if the lore supports that interpretation. If the chain is interpretive rather than explicit, represent the component facts and leave the causal edge absent or model the assertion conservatively.
+
+Phase 3 presents within-continuity connected causal components as story chains. Event `order` can help sort and label moments inside a chain, but it must never manufacture a parent/child edge.
+
+Timeline reset/rewrite bridges are intentionally excluded from ordinary Phase 3 story trees even though they remain valid causal model data.
 
 ## 12. Model-evolution rule
 
@@ -179,18 +187,25 @@ A schema change should answer:
 - How will the validator enforce it?
 - Does the PRD or this document need updating?
 
-## 13. Bi-Han stress-test questions
+## 13. Proven stress cases and current pressure
 
-The current milestone should test whether the model can represent, without ambiguity:
+The Bi-Han / Hanzo / Quan Chi work established that the current model can represent, with continuity scope:
 
 - Bi-Han as Sub-Zero in the relevant continuities;
 - Bi-Han and Kuai Liang as distinct people sharing an identity over franchise history;
 - Hanzo Hasashi as Scorpion in Original/Reboot continuity;
-- Quan Chi's role in Hanzo's understanding of the Shirai Ryu tragedy;
+- Quan Chi's supported role in the Shirai Ryu / Hanzo chain;
 - Bi-Han's death at Hanzo/Scorpion's hands in earlier continuities;
 - Bi-Han's return/transformation as Noob Saibot;
 - the New Era divergence, including Kuai Liang as Scorpion;
-- New Era developments involving Bi-Han/Noob Saibot where supported by MK1: Khaos Reigns;
-- differences between explicit source statements and commonly repeated fan shorthand.
+- New Era developments involving Bi-Han/Noob Saibot where supported by MK1: Khaos Reigns.
 
-If those cannot be represented cleanly, the stress test has found a legitimate model gap.
+Phase 3 now stress-tests the event model as a readable causal tree. Current pressure points include:
+
+- larger branching chains;
+- branch merges (DAGs) that could be visually duplicated by a naive tree renderer;
+- explicit reset/rewrite bridges between continuities;
+- alternate-timeline character variants such as Titan Havik;
+- whether chronology-only milestones should ever appear as non-causal context.
+
+Do not invent schema or graph complexity until a concrete sourced case demonstrates that the current representation is insufficient.

@@ -36,58 +36,73 @@ Delivered:
 
 Key model decision: Bi-Han remains one `Character`; Sub-Zero and Noob Saibot are timeline-scoped identities/states rather than duplicate person records.
 
-## Phase 2 — Timeline-first reading experience 🔨
+## Phase 2 — Timeline-first reading experience ✅
 
-Status: implementation in progress on `agent/timeline-first-ux`.
+Status: complete and merged after manual review.
 
-Goal: stop the encyclopedia feeling like a warehouse of disconnected records. A character should be something a reader can follow as a continuity-specific story.
+Delivered:
+
+- specialized character dossiers;
+- in-page Original / Reboot / New Era continuity switching;
+- generated `Compare all` continuity overview;
+- dedicated chronological event presentation;
+- separation between chronology, evidence-backed facts, and relationship connections;
+- shareable `entity` + `timeline` state and copy-deep-link action;
+- Phase 2 manual verification guide;
+- repository changelog practice and contributor policy.
+
+The product now supports reading a character as a continuity-specific story rather than only inspecting isolated entity records.
+
+## Phase 3 — Story chains and causality 🔨
+
+Status: implementation in progress on `agent/causality-focused-graph`.
+
+Goal: help a reader see **where a causal story begins, what happens at each moment, where it branches, and where it leads** without rendering one unusable universe-wide graph or confusing chronology with causality.
 
 ### Implemented in this phase
 
-- [x] Specialized character dossier view.
-- [x] Continuity selector inside character pages without returning to the index.
-- [x] `Compare all` continuity overview generated from existing facts/events.
-- [x] Dedicated chronological event presentation ordered by event `order`.
-- [x] Clear separation between chronology, evidence-backed facts, and relationship connections.
-- [x] URL state for `entity` + `timeline` so a specific reading state can be linked directly.
-- [x] Copy-deep-link action.
-- [x] Manual Phase 2 UX verification checklist.
+- [x] Dedicated `/causality` workbench.
+- [x] Whole-chain vertical tree derived from explicit event causal links.
+- [x] `Start`, `You are here`, `End`, and moment/position markers.
+- [x] Branch rendering that keeps the complete chain visible while the selected event changes.
+- [x] Separate chain selection when one continuity contains disconnected causal components.
+- [x] Local `Why? / What next?` view retained as a secondary close-up.
+- [x] Timeline isolation for every rendered story-chain edge.
+- [x] Explicit separation between event causality and ordinary relationship edges.
+- [x] Links back to event and participant dossiers while preserving timeline scope.
+- [x] Global Explorer / Causality mode switch.
+- [x] Phase 3 manual verification checklist.
+- [x] Reuse existing `causeEventIds` / `consequenceEventIds` without schema expansion.
+- [x] Validation of mirrored causal references plus explicit reset/rewrite bridge rules for the rare causal edge that legitimately crosses timelines.
 
 ### Still to evaluate manually
 
-- [ ] Does the character page now feel readable rather than inspectable?
-- [ ] Is `Compare all` sufficient, or does it need stronger generated summaries / side-by-side identity tables?
-- [ ] Does chronology remain understandable when a character has many more events?
-- [ ] Are direct links useful enough to justify moving state into Next.js route segments later?
-- [ ] Does mobile chronology remain usable?
+- [ ] Does the whole-chain tree solve the “where does this sequence start?” orientation problem?
+- [ ] Are one-to-many branches understandable in a vertical reading layout?
+- [ ] Should non-causal chronological milestones ever appear as muted context between causal nodes, or would that blur the causality contract?
+- [ ] At what real chain complexity does a true 2D graph become more readable than the story tree?
+- [ ] Should ordinary relationship edges remain separate from event-causal chains?
+- [ ] What UX should represent explicit timeline reset/rewrite bridges such as the Hourglass transition into the New Era?
+- [ ] How should a real branch-merge/DAG case render without visually duplicating one canonical event?
 
-See `PHASE2_MANUAL_VERIFICATION.md`.
+See `PHASE3_MANUAL_VERIFICATION.md`.
 
-### Phase 2 acceptance criteria
+### Phase 3 acceptance criteria
 
-For Bi-Han, a user should be able to:
+A user should be able to:
 
-1. open the character once;
-2. switch Original / Reboot / New Era without leaving the dossier;
-3. read important events in chronological order;
-4. inspect sourced facts separately from the event narrative;
-5. follow people/faction connections separately from chronology;
-6. compare continuity coverage;
-7. copy a URL that restores the same character + timeline state.
+1. open `/causality` and choose a continuity;
+2. identify the start and end of a connected within-continuity causal chain immediately;
+3. understand the selected event's position inside that whole chain;
+4. follow explicit branches from one event to multiple consequences;
+5. select another event without losing whole-chain orientation;
+6. distinguish immediate causes/consequences in the secondary close-up;
+7. walk the Bi-Han / Hanzo chain without repeatedly navigating backward to discover where it began;
+8. open the full event or participant dossier without losing timeline scope;
+9. verify that chronology-only neighbors do not become causal branches;
+10. verify that legitimate reset/rewrite bridges remain valid model data without leaking into ordinary continuity trees.
 
-All automated quality gates must pass before merge.
-
-## Phase 3 — Causality and focused graph
-
-Goal: answer **why did this happen?** and **what did this lead to?** visually without rendering one unusable universe-wide graph.
-
-Candidates:
-
-- focused entity neighborhood graph;
-- cause → event → consequence explorer;
-- graph filters by timeline, relation type, and canon status;
-- neighborhood expansion from a selected entity/event;
-- resolve alternate-timeline character variants such as Titan Havik if real graph navigation proves the need.
+All automated quality gates and the Phase 3 manual verification checklist must pass before merge.
 
 ## Phase 4 — Retcon registry and evidence explorer
 
