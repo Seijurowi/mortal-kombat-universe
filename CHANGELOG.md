@@ -8,6 +8,21 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 
 ### Added
 
+- Dedicated `/causality` workbench for focused `cause → event → consequence` exploration.
+- Click-to-recenter causal event navigation with strict timeline isolation.
+- Links from causal events and participants back to their normal dossiers while preserving continuity scope.
+- Global Explorer / Causality mode switch.
+- Phase 3 manual verification checklist focused on causal accuracy, chronology separation, navigation, and responsive behavior.
+
+### Changed
+
+- Phase 3 product and agent guidance now treats event causality as a distinct view from chronology and ordinary relationship edges.
+- The project continues to derive causal visualization directly from existing `causeEventIds` / `consequenceEventIds`; no graph library, graph database, or schema expansion is introduced yet.
+
+## 2026-08-14 — Phase 2: Timeline-first reading experience
+
+### Added
+
 - Timeline-first character dossiers with in-page Original / Reboot / New Era switching.
 - Generated `Compare all` continuity overview for character pages.
 - Dedicated character story chronology ordered from structured event data.
@@ -18,7 +33,7 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 ### Changed
 
 - Character pages now separate chronology, evidence-backed facts, and relationship connections instead of presenting one flat entity-inspection view.
-- Product documentation and agent guidance are aligned around the Phase 2 timeline-first reading experience.
+- Product documentation and agent guidance were aligned around the timeline-first reading experience.
 
 ## 2026-08-14 — Phase 1: Bi-Han lore stress test
 
