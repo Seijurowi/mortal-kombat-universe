@@ -11,11 +11,12 @@ Before substantial work, read:
 - `docs/PRD.md` — product vision and target experience.
 - `docs/LORE_MODEL.md` — domain semantics and schema-evolution rules.
 - `docs/ROADMAP.md` — active milestone and acceptance criteria.
+- `docs/CHANGELOG_POLICY.md` — what counts as a notable change and how `CHANGELOG.md` is maintained.
 - the current milestone's manual verification document under `docs/`.
 
 Documentation is part of the implementation contract. Do not leave durable product/model decisions only in chat, commit messages, or PR descriptions.
 
-When behavior, model semantics, source policy, architecture assumptions, or roadmap scope changes, update the relevant documentation in the same PR.
+When behavior, model semantics, source policy, architecture assumptions, roadmap scope, or contributor workflow changes, update the relevant documentation in the same PR.
 
 ## Source of truth
 
@@ -97,11 +98,7 @@ Prefer small atomic assertions over paragraph-like facts containing several disp
 
 ## Identity and transformation
 
-Prefer stable person entities such as:
-
-- `bi-han`
-- `kuai-liang`
-- `hanzo-hasashi`
+Prefer stable person entities such as `bi-han`, `kuai-liang`, and `hanzo-hasashi`.
 
 Do not create duplicate characters merely because a mantle changes.
 
@@ -164,6 +161,21 @@ For character pages:
 
 Do not hard-code character-specific story prose into React to improve readability. Improve the structured data or generated presentation instead.
 
+## Changelog discipline
+
+`CHANGELOG.md` is the curated record of what materially changed. It is not a copy of Git history and not a roadmap.
+
+For every substantive PR:
+
+1. read `docs/CHANGELOG_POLICY.md`;
+2. decide whether the PR changes product/UX, lore/data, domain semantics, developer workflow, or security in a notable way;
+3. when it does, update `CHANGELOG.md` under `## Unreleased` in the same PR;
+4. group related work into reader-meaningful entries rather than one entry per commit/file;
+5. do not add changelog noise for typo-only, formatting-only, or behavior-neutral refactors;
+6. ensure changelog wording matches the implementation, PRD, roadmap, and lore-model documentation.
+
+Until a versioning policy is adopted, do not invent semantic versions. Completed milestones may be moved from `Unreleased` to dated milestone headings according to the changelog policy.
+
 ## Validation discipline
 
 Before a substantive PR is ready:
@@ -175,6 +187,7 @@ Before a substantive PR is ready:
 - all new references resolve;
 - new facts have evidence and timeline scope;
 - documentation matches behavior;
+- `CHANGELOG.md` has been reviewed and updated when required;
 - relevant manual verification has been performed.
 
 A green build does not prove lore accuracy or good UX. Human verification remains required where documented.
