@@ -72,7 +72,7 @@ Every `Fact` requires at least one source. Supported canon statuses are `canon`,
 
 Use the narrowest defensible status. Prefer small atomic assertions over paragraph-like facts.
 
-Prefer stable person entities such as `bi-han`, `kuai-liang`, and `hanzo-hasashi`. Do not create duplicate characters merely because a mantle changes. Model identities, deaths, resurrections, corruption, revenant/wraith states, and ascensions through sourced facts/events unless a future proven requirement introduces an explicit identity/version entity.
+Prefer stable person entities such as `bi-han`, `kuai-liang`, and `hanzo-hasashi`. Do not create duplicate characters merely because a mantle changes. Model identities, deaths, resurrections, corruption, revenant/wraith states, ascensions, historical offices, titles, and reigns through sourced facts/events unless a future proven requirement introduces a more specific entity/version concept.
 
 A `Character` may represent a unique non-playable being when it is still a single agent/entity in the lore. Phase 5 currently uses this for the One Being. Do not add a `CosmicEntity` type until multiple concrete cases prove that `Character` materially distorts the model or UI.
 
@@ -100,6 +100,7 @@ Treat **retcon**, **continuity divergence**, **alternate portrayal**, and **unce
 - `causeEventIds` means supported causality, not “happened shortly before.”
 - `consequenceEventIds` means supported outcome, not mere chronology.
 - Never manufacture causal links because events are sequential or have adjacent `order` values.
+- Temporal wording such as **“during this period,” “after,” “before,” or “years later”** establishes chronology/context unless the source also states a causal relationship.
 - Keep participant and realm references explicit.
 - If causality is interpretive, model the supported facts and avoid overstating the edge.
 
@@ -129,6 +130,8 @@ Prefer, in order:
 
 If a primary work is accessed through a third-party preservation mirror, identify the primary work in the Source record and describe the mirror honestly. Do not promote the mirror itself to canonical authority.
 
+A later primary source may clarify an earlier source without automatically superseding it. Preserve both when they add distinct evidence. In the current tournament slice, Mortal Kombat (1992) establishes Goro's ancient victory and Mortal Kombat II identifies the defeated ancestor explicitly as the Great Kung Lao.
+
 Do not invent a source to satisfy validation.
 
 ## Schema evolution
@@ -142,6 +145,8 @@ Before changing a schema or validator rule:
 5. update `docs/LORE_MODEL.md` and relevant product docs.
 
 Phase 5's first proven evolution is allowing Factions in Event `participantIds`: the Elder Gods collectively act in the One Being shattering event. This is reusable for clans, armies, organizations, and other collective actors.
+
+Do **not** change schema merely because a new lore slice is old, complicated, or important. The Great Kung Lao/Goro/Shang Tsung slice is representable with existing Character, Event, Fact, and Source contracts; its challenge is evidence and causality discipline, not missing entity types.
 
 Never weaken validation to make incorrect data pass.
 
@@ -163,6 +168,7 @@ Before a substantive PR is ready:
 - cross-timeline causal references are explicit reset/rewrite bridges;
 - new facts have evidence and timeline scope;
 - realm-target assertions are not hidden in `realmIds` semantics;
+- temporal association is not promoted into causality;
 - retcon/contradiction UI does not promote mere variation into a confirmed retcon;
 - documentation matches behavior;
 - `CHANGELOG.md` has been reviewed;
@@ -180,8 +186,8 @@ A green build does not prove lore accuracy, causal accuracy, retcon accuracy, or
 
 ## Current scope
 
-Phases 1, 2, 3, and 4 are complete and merged. The Deception cosmology / Onaga / Shinnok foundation of Phase 5 is also merged.
+Phases 1, 2, 3, and 4 are complete and merged. The Deception cosmology / Onaga / Shinnok foundation and Edenia / Outworld conquest slice of Phase 5 are also merged.
 
 The active work remains **Phase 5 — Cosmology and ancient history**, defined in `docs/ROADMAP.md` and reviewed through `docs/PHASE5_MANUAL_VERIFICATION.md`.
 
-The current slice is **Edenia / Outworld conquest history** on `agent/phase5-edenia-outworld`: model Shao Kahn's conquest, Sindel/Kitana/Jerrod evidence, and Edenia's later liberation without using realm location metadata as action semantics or promoting arcade endings beyond their evidence strength.
+The current slice is **Great Kung Lao / Goro / Shang Tsung pre-1992 tournament history** on `agent/phase5-great-kung-lao`: establish the ancient championship era from early game sources, preserve later source clarification, and keep “during this period” chronology separate from unsupported causal edges.
