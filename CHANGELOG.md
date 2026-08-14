@@ -17,6 +17,7 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 - Mortal Kombat: Armageddon Shujinko biography as later follow-up evidence confirming Onaga's defeat.
 - Mortal Kombat Trilogy Shao Kahn biography, Mortal Kombat 3 Sindel ending, and Deadly Alliance Kitana biography source records for Edenian history.
 - Mortal Kombat II Kung Lao biography as primary in-game evidence identifying the ancient champion defeated by Goro as the Great Kung Lao.
+- Preservation URL and explicit provenance notes for the original Mortal Kombat (1992) arcade story source now used by the tournament-history Facts.
 - Sourced realm-target Facts for `Shao Kahn conquered Edenia` and `Kitana liberated Edenia`.
 - Supplemental Jerrod family Facts retained from Sindel's Mortal Kombat 3 ending without promoting ending-only evidence into biography-level canon.
 - Pre-1992 tournament Facts for Goro defeating the Great Kung Lao, becoming Grand Champion, remaining undefeated for roughly 500 years, and Shang Tsung controlling/corrupting the tournament.
