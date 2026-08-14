@@ -1,0 +1,13 @@
+{
+  "id": "elder-gods-shatter-one-being-original",
+  "type": "event",
+  "name": "Elder Gods shatter the One Being",
+  "timelineId": "original",
+  "participantIds": ["elder-gods", "one-being"],
+  "realmIds": ["earthrealm", "netherrealm", "outworld", "orderrealm", "chaosrealm", "edenia"],
+  "causeEventIds": [],
+  "consequenceEventIds": [],
+  "order": -1000,
+  "description": "In the creation account presented by Mortal Kombat: Deception, the Elder Gods use the Kamidogu to shatter the One Being; its fragments become the six realms traversed in Konquest.",
+  "tags": ["cosmology", "creation", "kamidogu"]
+}
