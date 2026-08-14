@@ -1,0 +1,9 @@
+{
+  "id": "orderrealm",
+  "type": "realm",
+  "name": "Orderrealm",
+  "aliases": ["Seido"],
+  "timelineIds": ["original"],
+  "description": "The Realm of Order, called Seido in Mortal Kombat: Deception.",
+  "tags": ["realm", "deception"]
+}
