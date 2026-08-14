@@ -1,0 +1,10 @@
+{
+  "id": "onaga",
+  "type": "character",
+  "name": "Onaga",
+  "aliases": ["Dragon King"],
+  "timelineIds": ["original"],
+  "realmIds": ["outworld"],
+  "description": "The Dragon King and former ruler of Outworld in the original continuity, later returned from death during Mortal Kombat: Deception.",
+  "tags": ["ruler", "dragon-king", "ancient"]
+}
