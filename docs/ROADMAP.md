@@ -41,23 +41,27 @@ Known future pressure remains around branch-merge/DAG rendering and dedicated ti
 
 Status: implementation in progress on `agent/phase4-retcon-explorer`.
 
-Goal: make franchise evolution itself navigable **without calling every continuity difference a retcon**.
+Goal: make franchise evolution itself navigable **without calling every value or continuity difference a contradiction or retcon**.
 
 ### Implemented in this phase
 
 - [x] Dedicated `/claims` workbench.
-- [x] Group facts by shared `subject + predicate` as a presentation-only comparison.
-- [x] Separate `Continuity divergence` from groups containing an explicit `retconned` fact.
-- [x] Show each scoped version with canon status, timeline scope, notes, and sources.
-- [x] Order claim versions by known source year when available without fabricating missing dates.
+- [x] Group facts by shared `subject + predicate` as presentation-only claim families.
+- [x] Treat grouping as an inspection aid rather than evidence of contradiction.
+- [x] Classify observable family shape conservatively: value variation, cross-continuity agreement, alternate portrayal, canon-status variation, or explicit retcon evidence.
+- [x] Show each claim record with canon status, timeline scope, notes, and sources.
+- [x] Order claim records by known source year when available without fabricating missing dates.
 - [x] Search across subject, predicate, and presented values.
+- [x] Keep the selected detail synchronized with filtered search results.
 - [x] Link comparison cards back to ordinary fact dossiers and official source URLs.
 - [x] Reuse current `Fact`, `Source`, canon-status, and timeline model with no schema expansion.
 
 ### Still to evaluate manually
 
-- [ ] Does the user understand that a continuity divergence is **not automatically a retcon**?
-- [ ] Are grouped `subject + predicate` claims semantically useful, or are some predicates too coarse for trustworthy comparison?
+- [ ] Does the user understand that a claim family is a comparison aid, not an asserted contradiction?
+- [ ] Are grouped `subject + predicate` families semantically useful, or are some predicates too coarse for trustworthy comparison?
+- [ ] Does `Value variation` remain appropriately cautious for time-dependent/multi-valued predicates such as identities?
+- [ ] Does `Cross-continuity agreement` correctly communicate repeated claims without implying divergence?
 - [ ] Does source-year ordering read as evidence history rather than canonical priority?
 - [ ] Do we have enough real `retconned` facts to justify a stronger dedicated retcon registry yet?
 - [ ] Which real sourced case, if any, proves the need for explicit `contradicts` / `supersedes` links?
@@ -69,14 +73,16 @@ See `PHASE4_MANUAL_VERIFICATION.md`.
 
 A user should be able to:
 
-1. open `/claims` and find claim groups with meaningful continuity variation;
-2. see which subject/predicate is being compared;
-3. distinguish continuity divergence from an explicitly retconned fact;
-4. inspect every version's timeline scope and canon status;
-5. inspect the source(s) supporting each version;
-6. open the underlying fact dossier;
-7. verify that source chronology is not presented as proof that a newer source automatically supersedes an older one;
-8. verify that the UI never invents a contradiction or retcon solely because values differ across timelines.
+1. open `/claims` and find useful claim families;
+2. see which subject/predicate is being grouped;
+3. understand whether the family shows value variation, cross-continuity agreement, alternate portrayal, canon-status variation, or explicit retcon evidence;
+4. avoid interpreting `uses_identity` or other multi-valued/time-dependent predicates as contradiction merely because values differ;
+5. inspect every claim record's timeline scope and canon status;
+6. inspect the source(s) supporting each claim record;
+7. open the underlying fact dossier;
+8. verify that source chronology is not presented as proof that a newer source automatically supersedes an older one;
+9. verify that search never leaves an invisible claim family active in the detail pane;
+10. verify that the UI never invents contradiction or retcon semantics solely because values differ or facts span multiple timelines.
 
 All automated quality gates and Phase 4 manual verification must pass before merge.
 
