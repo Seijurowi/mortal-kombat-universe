@@ -1,0 +1,13 @@
+{
+  "id": "hanzo-killed-by-bi-han-original",
+  "type": "event",
+  "name": "Bi-Han kills Hanzo Hasashi",
+  "timelineId": "original",
+  "participantIds": ["bi-han", "hanzo-hasashi"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": [],
+  "consequenceEventIds": ["hanzo-returns-as-scorpion-original"],
+  "order": 80,
+  "description": "During the events later depicted in Mortal Kombat Mythologies: Sub-Zero, Bi-Han kills the Shirai Ryu warrior Hanzo Hasashi.",
+  "tags": ["death", "rivalry"]
+}

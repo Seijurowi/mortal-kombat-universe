@@ -1,0 +1,11 @@
+{
+  "id": "fact-bi-han-noob-new-era",
+  "type": "fact",
+  "name": "Bi-Han becomes Noob Saibot in Khaos Reigns",
+  "subjectId": "bi-han",
+  "predicate": "uses_identity",
+  "value": "Noob Saibot",
+  "timelineIds": ["new-era"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk1-khaos-reigns-wb-announcement"]
+}

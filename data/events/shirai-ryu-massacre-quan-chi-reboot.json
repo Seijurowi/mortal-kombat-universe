@@ -1,0 +1,13 @@
+{
+  "id": "shirai-ryu-massacre-quan-chi-reboot",
+  "type": "event",
+  "name": "Quan Chi exterminates Hanzo's family and clan",
+  "timelineId": "reboot",
+  "participantIds": ["quan-chi", "hanzo-hasashi"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": [],
+  "consequenceEventIds": ["hanzo-resurrected-scorpion-reboot"],
+  "order": 202,
+  "description": "Quan Chi is responsible for the destruction of Hanzo Hasashi's family and Shirai Ryu, while Sub-Zero is framed for the atrocity.",
+  "tags": ["clan", "massacre", "deception"]
+}

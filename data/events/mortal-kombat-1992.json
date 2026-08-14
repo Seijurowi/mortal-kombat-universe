@@ -6,7 +6,7 @@
   "participantIds": ["liu-kang", "raiden", "bi-han", "hanzo-hasashi"],
   "realmIds": ["earthrealm"],
   "causeEventIds": [],
-  "consequenceEventIds": ["bi-han-killed-by-scorpion-original"],
+  "consequenceEventIds": [],
   "order": 100,
   "description": "The tournament represented by the first Mortal Kombat game.",
   "tags": ["tournament"]

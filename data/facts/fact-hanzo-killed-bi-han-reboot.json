@@ -1,0 +1,11 @@
+{
+  "id": "fact-hanzo-killed-bi-han-reboot",
+  "type": "fact",
+  "name": "Scorpion kills Bi-Han in the reboot continuity",
+  "subjectId": "hanzo-hasashi",
+  "predicate": "killed",
+  "objectId": "bi-han",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story", "mk11-noob-bio"]
+}

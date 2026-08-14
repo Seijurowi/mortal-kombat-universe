@@ -1,0 +1,11 @@
+{
+  "id": "fact-quan-chi-destroyed-shirai-ryu-original",
+  "type": "fact",
+  "name": "Quan Chi destroys the Shirai Ryu in the original continuity",
+  "subjectId": "quan-chi",
+  "predicate": "destroyed",
+  "objectId": "shirai-ryu",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk-mythologies-sub-zero"]
+}

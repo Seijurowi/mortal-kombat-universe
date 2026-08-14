@@ -1,0 +1,13 @@
+{
+  "id": "bi-han-resurrected-noob-reboot",
+  "type": "event",
+  "name": "Quan Chi resurrects Bi-Han as Noob Saibot",
+  "timelineId": "reboot",
+  "participantIds": ["bi-han", "quan-chi"],
+  "realmIds": ["netherrealm"],
+  "causeEventIds": ["bi-han-killed-by-scorpion-reboot"],
+  "consequenceEventIds": [],
+  "order": 220,
+  "description": "After Bi-Han's death, Quan Chi resurrects him as Noob Saibot and grants him power over darkness.",
+  "tags": ["resurrection", "transformation", "identity"]
+}

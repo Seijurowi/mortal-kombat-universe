@@ -1,0 +1,11 @@
+{
+  "id": "rel-quan-chi-resurrected-bi-han-reboot",
+  "type": "relationship",
+  "name": "Quan Chi → Bi-Han",
+  "relationType": "resurrected",
+  "fromId": "quan-chi",
+  "toId": "bi-han",
+  "timelineIds": ["reboot"],
+  "factIds": ["fact-quan-chi-resurrected-bi-han-reboot"],
+  "directed": true
+}

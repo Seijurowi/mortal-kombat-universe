@@ -1,0 +1,13 @@
+{
+  "id": "hanzo-returns-as-scorpion-original",
+  "type": "event",
+  "name": "Hanzo returns as Scorpion",
+  "timelineId": "original",
+  "participantIds": ["hanzo-hasashi"],
+  "realmIds": ["netherrealm"],
+  "causeEventIds": ["hanzo-killed-by-bi-han-original"],
+  "consequenceEventIds": ["bi-han-killed-by-scorpion-original"],
+  "order": 90,
+  "description": "After death, Hanzo Hasashi returns as the specter Scorpion and seeks vengeance against Sub-Zero.",
+  "tags": ["resurrection", "identity", "revenge"]
+}

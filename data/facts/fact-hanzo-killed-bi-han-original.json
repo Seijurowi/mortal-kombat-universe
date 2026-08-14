@@ -1,0 +1,12 @@
+{
+  "id": "fact-hanzo-killed-bi-han-original",
+  "type": "fact",
+  "name": "Scorpion kills Bi-Han in the original continuity",
+  "subjectId": "hanzo-hasashi",
+  "predicate": "killed",
+  "objectId": "bi-han",
+  "timelineIds": ["original"],
+  "canonStatus": "supplemental",
+  "sourceIds": ["mk-deception-noob-smoke-ending"],
+  "notes": "The retrospective Deception ending explicitly states that the original Sub-Zero died at Scorpion's hand; kept supplemental because the evidence is delivered through ending material."
+}

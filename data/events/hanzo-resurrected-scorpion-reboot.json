@@ -1,0 +1,13 @@
+{
+  "id": "hanzo-resurrected-scorpion-reboot",
+  "type": "event",
+  "name": "Quan Chi resurrects Hanzo as Scorpion",
+  "timelineId": "reboot",
+  "participantIds": ["hanzo-hasashi", "quan-chi"],
+  "realmIds": ["netherrealm"],
+  "causeEventIds": ["shirai-ryu-massacre-quan-chi-reboot"],
+  "consequenceEventIds": ["bi-han-killed-by-scorpion-reboot"],
+  "order": 204,
+  "description": "Quan Chi resurrects Hanzo Hasashi as the specter Scorpion and directs his vengeance toward Sub-Zero.",
+  "tags": ["resurrection", "identity", "manipulation"]
+}
