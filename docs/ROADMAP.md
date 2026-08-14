@@ -32,7 +32,7 @@ Delivered:
 
 ## Phase 5 — Cosmology and ancient history 🔨
 
-Status: implementation in progress on `agent/phase5-edenia-outworld`.
+Status: implementation in progress on `agent/phase5-great-kung-lao`.
 
 Goal: expand from character-scale lore into the oldest Mortal Kombat history while preserving source and continuity caveats instead of presenting one synthetic creation myth or one flattened ancient history as timeless canon.
 
@@ -65,7 +65,7 @@ Goal: expand from character-scale lore into the oldest Mortal Kombat history whi
 - [x] Model `Quan Chi allies with Shinnok → Shinnok becomes ruler of the Netherrealm`.
 - [x] Reuse the existing Mortal Kombat Mythologies: Sub-Zero primary game source rather than duplicating source records.
 
-### Edenia / Outworld conquest slice 🔨
+### Edenia / Outworld conquest slice ✅
 
 - [x] Add Original-continuity Kitana, Sindel, and Jerrod Characters.
 - [x] Add Mortal Kombat Trilogy Shao Kahn biography evidence for the Edenian conquest and Sindel marriage history.
@@ -74,11 +74,22 @@ Goal: expand from character-scale lore into the oldest Mortal Kombat history whi
 - [x] Model `Shao Kahn conquered Edenia` and `Kitana liberated Edenia` as realm-target Facts instead of overloading Event `realmIds`.
 - [x] Keep conquest and later liberation as separate chronological events without inventing one direct causal edge across the unmodeled intervening history.
 - [x] Keep Jerrod spouse/father claims `supplemental` while their only evidence in this slice is a character ending.
+- [x] Merge the reviewed slice through PR #7.
+
+### Great Kung Lao / pre-1992 tournament slice 🔨
+
+- [x] Add Original-continuity Great Kung Lao, Goro, and Shang Tsung Characters.
+- [x] Reuse the original Mortal Kombat (1992) game story for Goro's ancient championship history.
+- [x] Add Mortal Kombat II Kung Lao biography evidence identifying the ancient defeated champion as the Great Kung Lao.
+- [x] Model `Goro defeats the Great Kung Lao` as an ancient tournament Event and sourced Fact.
+- [x] Record Goro's Grand Champion title and roughly 500-year undefeated reign as sourced Facts.
+- [x] Model Shang Tsung taking control of and corrupting the tournament as a separate Event/Fact.
+- [x] Do **not** connect Goro's victory to Shang Tsung's takeover with a causal edge: the source says these happened in the same period, not that one caused the other.
 - [ ] Final AGENTS/manual review and CI for the slice.
 
 ### Next lore slices
 
-- [ ] Great Kung Lao, Goro, Shang Tsung, and pre-1992 tournament history.
+- [ ] Extend the tournament bridge through Liu Kang's 1992 victory using later confirming sources rather than arcade-ending evidence alone.
 - [ ] Onaga's resurrection/return mechanism and post-Deception fate with stronger source coverage.
 - [ ] Shinnok escape/MK4 and Reboot continuity comparison.
 - [ ] Compare Original cosmology against MK11-era Titan/Kronika cosmology without forcing them into one universal truth.
@@ -97,7 +108,8 @@ A user should be able to:
 7. follow Shinnok's fall/banishment and later Netherrealm rise without treating former Elder God status as eternal membership;
 8. inspect Edenia's conquest/liberation as sourced realm-target claims while `realmIds` remains event location/scope metadata;
 9. distinguish biography-backed Edenian canon claims from ending-only supplemental Jerrod details;
-10. see intentional causal gaps where the sources establish sequence or context but not direct causation.
+10. inspect the Great Kung Lao/Goro/Shang Tsung tournament era without turning temporal association into causality;
+11. see intentional causal gaps where the sources establish sequence or context but not direct causation.
 
 See `PHASE5_MANUAL_VERIFICATION.md`.
 
