@@ -1,6 +1,6 @@
 # Phase 5 Manual Verification — Cosmology and Ancient History
 
-This checklist verifies the first Deception-era cosmology slice without flattening later continuities into it.
+This checklist verifies the current Original-continuity cosmology / ancient-history slice without flattening later continuities into it.
 
 Run:
 
@@ -27,50 +27,60 @@ Open `Elder Gods shatter the One Being`.
 
 ## 3. Six-realm Deception scope
 
-Confirm the dataset contains and can navigate:
+Confirm the dataset contains and can navigate Earthrealm, Netherrealm, Outworld, Orderrealm / Seido, Chaosrealm, and Edenia.
 
-- [ ] Earthrealm
-- [ ] Netherrealm
-- [ ] Outworld
-- [ ] Orderrealm / Seido
-- [ ] Chaosrealm
-- [ ] Edenia
+- [ ] The UI does not imply that this six-realm set is an exhaustive list of every realm in every continuity.
 
-Do not infer that this six-realm list is an exhaustive list of every realm ever mentioned in every continuity.
+## 4. Evidence and source taxonomy
 
-## 4. Evidence
-
-- [ ] The Shujinko biography source is identified as an in-game bio even though the accessible URL is a preservation/reproduction page.
-- [ ] The Deception instruction booklet is identified as an official game manual preserved on a third-party archive.
+- [ ] The Shujinko and Raiden biography sources use `game_bio` and identify the original in-game material even when the accessible URL is a preservation/reproduction page.
+- [ ] The Deception instruction booklet is identified as `game_manual`, not generic `other`.
+- [ ] The Shujinko ending is identified as `game_ending`.
 - [ ] The shattering Fact cites the Shujinko biography.
-- [ ] The realms-from-One-Being Fact exposes both the biography and manual context.
-- [ ] The Kamidogu reawakening Fact does not invent a separate causal event chain that the current source does not establish.
+- [ ] The Kamidogu reawakening Fact does not invent a causal event chain that the current source does not establish.
 
 ## 5. Participant model change
 
 - [ ] Existing Character-only events still render normally.
-- [ ] The new cosmology event can include a Faction participant.
+- [ ] The creation and Shinnok-banishment events can include the Elder Gods Faction as a participant.
 - [ ] No Faction was duplicated as a fake Character merely to satisfy validation.
 
-This is the concrete Phase 5 schema-pressure case: collective actors such as the Elder Gods can participate in events. The validator now accepts `Character | Faction` for `participantIds`.
+## 6. Onaga story chains
 
-## 6. Continuity discipline
+In Original continuity, inspect the causal story components.
 
-- [ ] Deception creation-myth claims are not copied into Reboot or New Era without independent evidence.
+- [ ] `Shao Kahn poisons Onaga → Shao Kahn seizes Outworld` appears as one supported chain.
+- [ ] `Onaga manipulates Shujinko → Shujinko gathers the Kamidogu` appears as a separate supported chain.
+- [ ] `Shujinko shatters the Kamidogu → Shujinko defeats Onaga` appears as another supported chain.
+- [ ] There is no manufactured `gathers Kamidogu → shatters Kamidogu` edge simply to make one continuous tree.
+- [ ] Onaga, Shao Kahn, and Shujinko dossiers expose their scoped Facts and sources.
+
+## 7. Shinnok historical-state modeling
+
+- [ ] Shinnok is a stable Character, not duplicated as separate `Elder God Shinnok` and `Netherrealm Shinnok` entities.
+- [ ] Shinnok's former Elder God status appears as a sourced Fact rather than timeless `factionIds` membership.
+- [ ] `Shinnok wars with Raiden → Shinnok is banished to the Netherrealm` renders as a supported chain.
+- [ ] `Quan Chi allies with Shinnok → Shinnok becomes ruler of the Netherrealm` renders as a separate supported chain.
+- [ ] Lucifer is reachable as the prior Netherrealm ruler involved in the second chain.
+
+## 8. Continuity discipline
+
+- [ ] Deception/Mythologies ancient-history claims are not copied into Reboot or New Era without independent evidence.
 - [ ] MK11 Titan/Kronika cosmology is not silently reconciled with Deception cosmology yet.
-- [ ] Future comparison should use scoped Facts/claim history rather than rewriting this Original-continuity material.
+- [ ] Future reboot Shinnok comparison should use scoped Facts rather than rewriting the Original history.
 
-## 7. Responsive/navigation checks
+## 9. Responsive/navigation checks
 
-- [ ] One Being, Elder Gods, realms, event, facts, and sources are reachable through normal Explorer navigation.
+- [ ] New Characters, Faction, realms, events, facts, and sources are reachable through normal Explorer navigation.
 - [ ] `/claims` can inspect the new Facts without inventing contradiction semantics.
-- [ ] `/causality` does not manufacture ancient causal branches just because the event has an early `order` value.
+- [ ] `/causality` shows only explicit causal edges and keeps intentional gaps/disconnected components visible.
 
 ## Decision after this slice
 
-Before expanding into Onaga and Shinnok, answer:
+Before the next Phase 5 expansion, answer:
 
-- Does `Character` remain an acceptable representation for unique non-playable beings such as the One Being?
+- Does `Character` remain acceptable for unique non-playable beings such as the One Being?
 - Is `Faction` sufficient for collective divine groups such as the Elder Gods?
-- Does allowing Factions as event participants remain clear in the UI?
-- Do we need a first-class Artifact entity for Kamidogu once their individual histories become navigable, or can Facts continue to carry that concept for now?
+- Does `former_member_of` plus Events model Shinnok's changing divine/political status clearly enough?
+- Do we need a first-class Artifact entity once individual Kamidogu histories become navigable, or can Facts continue to carry that concept for now?
+- Are the separate short ancient-history chains easier to trust than one artificially connected story tree?
