@@ -1,0 +1,9 @@
+{
+  "id": "lucifer",
+  "type": "character",
+  "name": "Lucifer",
+  "timelineIds": ["original"],
+  "realmIds": ["netherrealm"],
+  "description": "A former ruler of the Netherrealm who tormented the banished Shinnok before being overthrown.",
+  "tags": ["ruler", "netherrealm", "ancient"]
+}
