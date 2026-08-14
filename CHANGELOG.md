@@ -12,6 +12,7 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 - Onaga / Shao Kahn / Shujinko Original-continuity records with sourced ancient succession and Deception-era story chains.
 - Shinnok / Lucifer Original-continuity records with sourced ancient Earthrealm war, banishment, Quan Chi alliance, and Netherrealm succession events.
 - Mortal Kombat: Deception Shujinko biography, Raiden biography, Shujinko ending, and instruction-booklet source records.
+- Mortal Kombat: Armageddon Shujinko biography as later follow-up evidence confirming Onaga's defeat.
 - Supported causal chains for `Shao Kahn poisons Onaga → seizes Outworld`, `Onaga manipulates Shujinko → Shujinko gathers Kamidogu`, `Shujinko shatters Kamidogu → defeats Onaga`, `Shinnok wars with Raiden → banishment`, and `Quan Chi allies with Shinnok → Shinnok rules Netherrealm`.
 - Phase 5 manual verification for ancient cosmology, continuity scope, source provenance, collective event participants, status changes, and causal gaps.
 
@@ -20,6 +21,8 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 - Event participant validation now accepts `Character | Faction` instead of Character-only, proven necessary by the Elder Gods acting collectively in the Deception creation account.
 - Source taxonomy now includes `game_manual`, proven necessary by the official Deception instruction booklet.
 - Ancient Original-continuity cosmology remains explicitly scoped instead of being projected onto Reboot or New Era.
+- The One Being creation event no longer uses `realmIds` to represent realms produced by the event; `realmIds` remains location/scope metadata.
+- The One Being realm-formation Fact is narrowed to the source-supported statement that the shattering formed **the realms**, rather than synthesizing the manual's six Konquest realms into an exhaustive creation-output claim.
 - Kamidogu reawakening lore is represented as sourced Facts without manufacturing unsupported causal event edges.
 - Onaga chronology intentionally keeps unsupported transitions disconnected rather than turning sequence into causality.
 - Shinnok's Elder God status is represented as a historical Fact (`former_member_of`) instead of timeless static faction membership.
