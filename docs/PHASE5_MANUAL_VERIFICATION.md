@@ -110,20 +110,40 @@ Open `Goro defeats the Great Kung Lao` and `Shang Tsung takes control of the tou
 - [ ] The phrase “during this period” is treated as temporal association/context, not proof of causality.
 - [ ] `/causality` therefore shows these as disconnected components unless a future primary source establishes a direct causal relation.
 
-## 12. Continuity discipline
+## 12. Liu Kang / MK1992 outcome bridge
+
+Open `First game tournament`, Liu Kang, Goro, Shang Tsung, and `Shang Tsung seeks a second chance`.
+
+- [ ] The existing `mortal-kombat-1992` Event is enriched rather than duplicated.
+- [ ] Liu Kang, Goro, and Shang Tsung are visible as relevant participants alongside existing first-game participants.
+- [ ] `Liu Kang defeated Goro` is a `canon` Fact citing the MK1992 ending plus later MKII story evidence.
+- [ ] `Liu Kang won the tournament from Shang Tsung's control` is a `canon` Fact citing the MK1992 ending plus MKII Liu Kang biography.
+- [ ] The UI does not imply that every detail of Liu Kang's arcade ending became canonical merely because later sources confirm these narrower outcomes.
+- [ ] Goro has **no confirmed death Fact/Event** from this slice; MKII's wording remains `apparent death`.
+
+## 13. First-game consequence into MKII
+
+Inspect `/causality` around the first-game tournament.
+
+- [ ] `First game tournament → Shang Tsung seeks a second chance` appears as a supported causal edge.
+- [ ] The follow-up Event includes Shang Tsung and Shao Kahn and is scoped to Outworld.
+- [ ] The causal edge is justified by MKII story text connecting Tsung's failure/Goro's apparent death to his plea for another chance.
+- [ ] This new supported edge does not cause unrelated pre-1992 tournament events to become causally connected.
+
+## 14. Continuity discipline
 
 - [ ] Deception/Mythologies/MKT/MK3/MKDA/MK1/MKII Original-history claims are not copied into Reboot or New Era without independent evidence.
 - [ ] MK11 Titan/Kronika cosmology is not silently reconciled with Deception cosmology yet.
 - [ ] Later Sindel reinterpretations are not used to rewrite the Original-continuity Edenia records in this slice.
-- [ ] MK9/New Era tournament retellings are not silently used to fill gaps in the Original Great Kung Lao history.
+- [ ] MK9/New Era tournament retellings are not silently used to fill gaps in the Original tournament history.
 - [ ] Future reboot/New Era comparisons should use scoped Facts and claim history.
 
-## 13. Responsive/navigation checks
+## 15. Responsive/navigation checks
 
 - [ ] New Characters, realms, events, facts, and sources are reachable through normal Explorer navigation.
 - [ ] `/claims` can inspect the new Facts without inventing contradiction semantics.
 - [ ] `/causality` shows only explicit causal edges and keeps intentional gaps/disconnected components visible.
-- [ ] Kitana, Sindel, Jerrod, Great Kung Lao, Goro, and Shang Tsung dossiers remain readable on narrow/mobile widths.
+- [ ] Liu Kang, Goro, Shang Tsung, Great Kung Lao, Kitana, Sindel, and Jerrod dossiers remain readable on narrow/mobile widths.
 
 ## Decision after this slice
 
@@ -135,5 +155,7 @@ Before the next Phase 5 expansion, answer:
 - Is the `realmIds = location/scope` plus realm-target Fact pattern clear enough for future realm mergers and conquests?
 - Does `supplemental` adequately preserve ending-only Jerrod lore without overstating its evidence strength?
 - Is the chronology-without-causality rule clear enough for tournament history where sources say events occurred “during this period”?
+- Is ending + later primary confirmation clear enough to support a narrower `canon` outcome without canonizing an ending wholesale?
+- Are qualified states such as `apparent death` staying visibly weaker than confirmed death?
 - Do we need a first-class Artifact entity once individual Kamidogu histories become navigable, or can Facts continue to carry that concept for now?
 - Are the separate short ancient-history chains easier to trust than one artificially connected story tree?
