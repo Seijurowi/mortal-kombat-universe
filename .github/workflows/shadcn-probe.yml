@@ -1,0 +1,41 @@
+name: Probe shadcn preset
+
+on:
+  push:
+    branches:
+      - agent/nextjs-foundation
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.13.0
+      - name: Apply requested shadcn preset
+        run: pnpm dlx shadcn@latest init --preset bcivVKXQ --template next
+      - name: Print generated environment
+        if: always()
+        shell: bash
+        run: |
+          echo '=== git status ==='
+          git status --short
+          echo '=== package.json diff ==='
+          git diff -- package.json || true
+          echo '=== components.json ==='
+          cat components.json 2>/dev/null || true
+          echo '=== globals.css ==='
+          cat app/globals.css 2>/dev/null || true
+          echo '=== postcss.config.mjs ==='
+          cat postcss.config.mjs 2>/dev/null || true
+          echo '=== lib/utils.ts ==='
+          cat lib/utils.ts 2>/dev/null || true
+          echo '=== app/layout.tsx ==='
+          cat app/layout.tsx 2>/dev/null || true
