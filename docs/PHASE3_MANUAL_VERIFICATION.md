@@ -28,8 +28,9 @@ Using a continuity with existing causal links:
 - [ ] Events are shown as a connected vertical tree from root toward consequences.
 - [ ] Clicking any event changes only the focus/highlight; it does not collapse the reader back into a three-node-only view.
 - [ ] Branches are visually indented from the event that causes them.
-- [ ] If two causal branches merge into one event, the UI does not silently invent a second distinct event.
 - [ ] A malformed causal cycle cannot cause infinite recursive rendering; expansion stops with a visible cycle note.
+
+Merged causal branches are a **known future stress case**, not a proven Phase 3 capability. The current 75-record dataset does not provide a real merge case to validate. If a sourced merge is added later, do not accept a renderer that makes one canonical event look like two distinct occurrences.
 
 ## 3. Moment / chronology context
 
@@ -54,6 +55,7 @@ Switch Original / Reboot / New Era.
 - [ ] Switching timeline chooses a valid chain/root in that continuity.
 - [ ] A timeline with few causal links remains usable and does not invent missing edges.
 - [ ] Similarly named events across timelines are not presented as the same occurrence.
+- [ ] `pnpm validate` rejects any causal event reference that crosses timeline boundaries.
 
 ## 6. Chronology is not causality
 
@@ -111,8 +113,8 @@ Check desktop and narrow/mobile widths.
 Answer these before Phase 3 is considered complete:
 
 - Does the whole-chain tree solve the “where does this event chain start?” problem?
-- Are branching and merging understandable with the current simple tree rendering?
-- Do we eventually need a true 2D graph for highly branching chains, or is the vertical story tree preferable for reading?
+- Are current one-to-many branches understandable with the vertical tree?
+- At what real chain complexity does a true 2D graph become more readable than the story tree?
 - Should non-causal chronological milestones ever appear as muted context between causal nodes, or would that weaken trust in the graph?
 
-Do **not** introduce React Flow, Cytoscape, a graph database, or a new causal schema solely because a richer diagram is theoretically possible. Let larger real chains demonstrate the need first.
+Do **not** introduce React Flow, Cytoscape, a graph database, or a new causal schema solely because a richer diagram is theoretically possible. Let larger real chains—and a real branch-merge case—demonstrate the need first.
