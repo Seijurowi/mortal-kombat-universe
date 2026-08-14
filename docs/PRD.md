@@ -61,17 +61,19 @@ An event page should show timeline, participants, realms, known causes, known co
 
 Comparison must be generated from structured data rather than hard-coded lore tables.
 
-### Focused causality
+### Story-chain causality
 
-Users should be able to focus one event and see:
-
-`explicit causes → focused event → explicit consequences`
+Users should be able to choose a continuity and see a complete connected causal chain from its root event(s) to terminal event(s), while selecting one event without losing the surrounding chain.
 
 The causal view must:
 
-- never infer arrows from event order alone;
-- keep timelines isolated;
-- allow click-to-recenter navigation;
+- clearly identify where the chain starts and ends;
+- highlight the selected event as `You are here` while preserving earlier/later causal context;
+- derive branches only from explicit `causeEventIds` / `consequenceEventIds`;
+- use event `order` only for chronology/moment context, never to create a causal edge;
+- keep disconnected causal components as separate story chains;
+- keep timelines isolated, including causal edges themselves;
+- retain an immediate `Why? / What next?` close-up as secondary detail;
 - link back to ordinary event/character dossiers;
 - keep ordinary relationship edges separate unless future usage proves that combining them improves understanding;
 - avoid a universe-wide graph by default.
@@ -117,19 +119,22 @@ Contracts live in `schema/`; runtime/presentation live in `app/`, `components/`,
 
 JSON remains the source of truth. SQLite or graph indexes may later be generated as derived infrastructure if scale proves the need.
 
-## 7. Current milestone — Phase 3: Causality and focused graph
+## 7. Current milestone — Phase 3: Story chains and causality
 
-Phase 1 proved the lore model. Phase 2 made continuity-specific character reading useful. Phase 3 now proves that the existing event model can answer causal questions directly.
+Phase 1 proved the lore model. Phase 2 made continuity-specific character reading useful. Phase 3 now proves that the existing event model can present whole causal stories clearly.
 
 Current outputs:
 
 - dedicated `/causality` workbench;
 - continuity selector;
-- focused cause/event/consequence layout;
-- click-to-recenter causal navigation;
+- whole-chain vertical causal tree;
+- `Start`, `You are here`, `End`, and moment/position markers;
+- separate story-chain selection for disconnected causal components;
+- immediate cause/consequence close-up beneath the full chain;
 - dossier links preserving timeline scope;
-- manual verification that chronology-only neighbors never become arrows;
-- no schema change or graph library unless manual usage proves a concrete need.
+- validation that causal references are mirrored and cannot cross timelines;
+- manual verification that chronology-only neighbors never become branches;
+- no schema change or graph library unless real chain complexity proves a concrete need.
 
 Detailed status and acceptance criteria live in `docs/ROADMAP.md`.
 
@@ -142,6 +147,7 @@ Do not:
 - introduce a graph database solely for visualization;
 - mix ordinary relationship edges with causal edges by default;
 - infer causality from chronology;
+- claim robust merged-branch UX until a real dataset case proves and tests it;
 - introduce authentication or a CMS/admin editor;
 - introduce SQLite as primary storage;
 - hard-code narrative prose in React to compensate for missing structured lore.
@@ -154,7 +160,7 @@ Likely milestones after Phase 3 include:
 - richer source/evidence views;
 - cosmology and ancient-history expansion;
 - systematic Original, Reboot, and New Era expansion;
-- richer graph infrastructure only if focused graph usage proves it necessary.
+- richer graph infrastructure only if real story-chain usage proves it necessary.
 
 ## 10. Definition of done
 
@@ -164,9 +170,10 @@ Relevant changes must satisfy:
 
 - data validates;
 - timelines remain correctly scoped;
+- causal references never cross timelines;
 - important lore claims have evidence;
 - contradictions are not silently flattened;
-- causal arrows represent explicit causal data, not chronology;
+- causal branches represent explicit causal data, not chronology;
 - UI remains navigable and accessible;
 - implementation follows `AGENTS.md`;
 - product/domain documentation is updated when contracts change;
