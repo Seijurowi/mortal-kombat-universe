@@ -1,0 +1,12 @@
+{
+  "id": "fact-shinnok-elder-god-original",
+  "type": "fact",
+  "name": "Shinnok existed as an Elder God",
+  "subjectId": "shinnok",
+  "predicate": "former_member_of",
+  "objectId": "elder-gods",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk-mythologies-sub-zero"],
+  "notes": "The Mythologies story explicitly describes Shinnok as an Elder God before his fall."
+}
