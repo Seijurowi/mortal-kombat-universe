@@ -61,6 +61,7 @@ The project uses the shadcn `bcivVKXQ` preset: `base-nova`, Zinc variables, Luci
 - Every event belongs to its declared `timelineId`.
 - Conflicting continuities coexist as separate facts/events.
 - Timeline filters must continue to apply after navigation into detail pages and specialized views.
+- Causal event edges must never cross timelines.
 
 ## Facts, canon, and identity
 
@@ -81,19 +82,22 @@ Prefer stable person entities such as `bi-han`, `kuai-liang`, and `hanzo-hasashi
 - Keep participant and realm references explicit.
 - If causality is interpretive, model the supported facts and avoid overstating the edge.
 
-## Focused causality UX
+## Story-chain causality UX
 
-Phase 3 introduces `/causality` as a focused event graph.
+Phase 3 introduces `/causality` as a timeline-scoped story-chain explorer.
 
 Rules:
 
-- show `cause → focused event → consequence`, not a universe-wide graph;
-- create causal arrows only from `causeEventIds` / `consequenceEventIds`;
-- keep timeline isolation strict;
-- allow click-to-recenter navigation rather than rendering unlimited graph depth;
+- show the complete connected causal chain from root event(s) to terminal event(s) when the chain is small enough to read;
+- keep the selected event highlighted as `You are here` without removing earlier/later causal context;
+- create tree branches only from explicit `causeEventIds` / `consequenceEventIds`;
+- use event `order` only for chronology/moment context, never to create a causal edge;
+- keep disconnected causal components as separate story chains;
 - keep ordinary `Relationship` edges visually and semantically separate from causal event edges unless manual usage proves composition is useful;
-- link graph nodes back to ordinary dossiers so evidence remains inspectable;
-- do not add React Flow, Cytoscape, a graph database, or new causal schema fields merely because richer graph tooling exists.
+- keep the local `Why? / What next?` view as a secondary close-up, not the main orientation mechanism;
+- link causal nodes back to ordinary dossiers so evidence remains inspectable;
+- do not add React Flow, Cytoscape, a graph database, or new causal schema fields merely because richer graph tooling exists;
+- if real data introduces branch merges or graph complexity that the vertical tree cannot represent unambiguously, treat that as model/UX pressure and prove the next representation with a concrete lore case.
 
 ## Sources
 
@@ -132,6 +136,7 @@ Before a substantive PR is ready:
 - `pnpm typecheck` passes;
 - `pnpm build` passes;
 - all new references resolve;
+- causal references are mirrored and remain inside one timeline;
 - new facts have evidence and timeline scope;
 - documentation matches behavior;
 - `CHANGELOG.md` has been reviewed;
@@ -151,6 +156,6 @@ A green build does not prove lore accuracy, causal accuracy, or good UX.
 
 Phases 1 and 2 are complete and merged.
 
-The active milestone is **Phase 3 — Causality and focused graph**, defined in `docs/ROADMAP.md` and reviewed through `docs/PHASE3_MANUAL_VERIFICATION.md`.
+The active milestone is **Phase 3 — Story chains and causality**, defined in `docs/ROADMAP.md` and reviewed through `docs/PHASE3_MANUAL_VERIFICATION.md`.
 
-The goal is to let a reader answer “why did this happen?” and “what did this lead to?” from explicit event causality without confusing story order, relationships, or alternate continuities with causal proof.
+The goal is to let a reader understand where a causal story begins, where the selected event sits inside it, where it branches, and what it leads to—without confusing story order, relationships, or alternate continuities with causal proof.
