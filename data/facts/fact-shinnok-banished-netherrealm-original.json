@@ -1,0 +1,12 @@
+{
+  "id": "fact-shinnok-banished-netherrealm-original",
+  "type": "fact",
+  "name": "Raiden and the Elder Gods banished Shinnok to the Netherrealm",
+  "subjectId": "shinnok",
+  "predicate": "banished_to",
+  "objectId": "netherrealm",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk-mythologies-sub-zero"],
+  "notes": "The Mythologies story states that Raiden, with the aid of the Elder Gods, banished Shinnok to the Netherrealm."
+}
