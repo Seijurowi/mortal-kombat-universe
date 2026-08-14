@@ -53,18 +53,21 @@ Delivered:
 
 The product now supports reading a character as a continuity-specific story rather than only inspecting isolated entity records.
 
-## Phase 3 — Causality and focused graph 🔨
+## Phase 3 — Story chains and causality 🔨
 
 Status: implementation in progress on `agent/causality-focused-graph`.
 
-Goal: answer **why did this happen?** and **what did this lead to?** without rendering one unusable universe-wide graph or confusing chronology with causality.
+Goal: help a reader see **where a causal story begins, what happens at each moment, where it branches, and where it leads** without rendering one unusable universe-wide graph or confusing chronology with causality.
 
 ### Implemented in this phase
 
 - [x] Dedicated `/causality` workbench.
-- [x] Focused `cause → event → consequence` layout.
-- [x] Click-to-recenter navigation through neighboring causal events.
-- [x] Timeline isolation for causal neighborhoods.
+- [x] Whole-chain vertical tree derived from explicit event causal links.
+- [x] `Start`, `You are here`, `End`, and moment/position markers.
+- [x] Branch rendering that keeps the complete chain visible while the selected event changes.
+- [x] Separate chain selection when one continuity contains disconnected causal components.
+- [x] Local `Why? / What next?` view retained as a secondary close-up.
+- [x] Timeline isolation for every chain and edge.
 - [x] Explicit separation between event causality and ordinary relationship edges.
 - [x] Links back to event and participant dossiers while preserving timeline scope.
 - [x] Global Explorer / Causality mode switch.
@@ -73,11 +76,11 @@ Goal: answer **why did this happen?** and **what did this lead to?** without ren
 
 ### Still to evaluate manually
 
-- [ ] Does focused causality answer "why?" better than the old dependency list?
-- [ ] Is click-to-recenter enough, or is visible multi-hop expansion needed?
-- [ ] Does the three-column desktop graph remain understandable for events with multiple causes/consequences?
-- [ ] Should relationship edges ever be composed into the same graph, or remain separate?
-- [ ] Is a dedicated graph library justified by actual interaction needs?
+- [ ] Does the whole-chain tree solve the “where does this sequence start?” orientation problem?
+- [ ] Are branches and merged branches understandable in a vertical reading layout?
+- [ ] Should non-causal chronological milestones ever appear as muted context between causal nodes, or would that blur the causality contract?
+- [ ] At what real chain complexity does a true 2D graph become more readable than the story tree?
+- [ ] Should ordinary relationship edges remain separate from event-causal chains?
 
 See `PHASE3_MANUAL_VERIFICATION.md`.
 
@@ -85,14 +88,15 @@ See `PHASE3_MANUAL_VERIFICATION.md`.
 
 A user should be able to:
 
-1. open `/causality`;
-2. choose a continuity;
-3. focus an event;
-4. distinguish explicit causes from explicit consequences;
-5. re-center the graph by clicking a neighbor;
-6. navigate several causal steps through the Bi-Han / Hanzo chain;
-7. open the full event or participant dossier without losing timeline scope;
-8. verify that chronology-only neighbors do not become causal arrows.
+1. open `/causality` and choose a continuity;
+2. identify the start and end of a connected causal chain immediately;
+3. understand the selected event's position inside that whole chain;
+4. follow explicit branches from one event to multiple consequences;
+5. select another event without losing whole-chain orientation;
+6. distinguish immediate causes/consequences in the secondary close-up;
+7. walk the Bi-Han / Hanzo chain without repeatedly navigating backward to discover where it began;
+8. open the full event or participant dossier without losing timeline scope;
+9. verify that chronology-only neighbors do not become causal branches.
 
 All automated quality gates and the Phase 3 manual verification checklist must pass before merge.
 
@@ -142,6 +146,6 @@ Possible future additions:
 - graph index;
 - content authoring tools;
 - automated source coverage reports;
-- richer graph invariant tests;
+- richer graph invariant tests.
 
 These are not goals until scale or contributor workflow proves they are needed.
