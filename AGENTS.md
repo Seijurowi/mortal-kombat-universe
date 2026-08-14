@@ -61,7 +61,8 @@ The project uses the shadcn `bcivVKXQ` preset: `base-nova`, Zinc variables, Luci
 - Every event belongs to its declared `timelineId`.
 - Conflicting continuities coexist as separate facts/events.
 - Timeline filters must continue to apply after navigation into detail pages and specialized views.
-- Causal event edges must never cross timelines.
+- Ordinary causal edges stay inside one timeline.
+- A cross-timeline causal edge is allowed only when the source event is an explicit reset/rewrite bridge (currently tagged `reset`, `rewrite`, or `timeline-bridge`), such as the Hourglass reset leading into the New Era.
 
 ## Facts, canon, and identity
 
@@ -93,6 +94,7 @@ Rules:
 - create tree branches only from explicit `causeEventIds` / `consequenceEventIds`;
 - use event `order` only for chronology/moment context, never to create a causal edge;
 - keep disconnected causal components as separate story chains;
+- keep cross-timeline reset/rewrite bridges out of ordinary within-continuity story trees; they belong to future timeline-transition UX;
 - keep ordinary `Relationship` edges visually and semantically separate from causal event edges unless manual usage proves composition is useful;
 - keep the local `Why? / What next?` view as a secondary close-up, not the main orientation mechanism;
 - link causal nodes back to ordinary dossiers so evidence remains inspectable;
@@ -136,7 +138,8 @@ Before a substantive PR is ready:
 - `pnpm typecheck` passes;
 - `pnpm build` passes;
 - all new references resolve;
-- causal references are mirrored and remain inside one timeline;
+- causal references are mirrored;
+- cross-timeline causal references are explicit reset/rewrite bridges rather than accidental continuity leakage;
 - new facts have evidence and timeline scope;
 - documentation matches behavior;
 - `CHANGELOG.md` has been reviewed;
