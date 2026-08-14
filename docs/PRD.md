@@ -47,6 +47,10 @@ Retcons, alternate versions, and unresolved contradictions should remain visible
 
 Do not expand schemas because a field seems theoretically useful. Add or change a schema only when a real sourced lore case cannot be represented cleanly.
 
+### Preserve field semantics
+
+Do not overload structural fields to express a different domain concept. In particular, Event `realmIds` represents location/realm scope. If a realm is the object of conquest, liberation, creation, destruction, or merging, that assertion belongs in a sourced Fact.
+
 ## 3. Target experience
 
 ### Universe explorer
@@ -59,7 +63,7 @@ A character page should answer who the person is in the selected continuity, ide
 
 ### Event dossier
 
-An event page should show timeline, participants, realms, known causes, consequences, associated facts, and evidence.
+An event page should show timeline, participants, realm scope, known causes, consequences, associated facts, and evidence.
 
 ### Story-chain causality
 
@@ -67,7 +71,7 @@ An event page should show timeline, participants, realms, known causes, conseque
 
 ### Claim history and retcons
 
-`/claims` should help a reader inspect families of related sourced assertions across franchise history.
+`/claims` helps a reader inspect families of related sourced assertions across franchise history.
 
 The claim-history view must:
 
@@ -79,7 +83,17 @@ The claim-history view must:
 - distinguish value variation, cross-continuity agreement, alternate portrayals, canon-status variation, and explicit retcon evidence without conflating them;
 - treat source year as chronology/context, not proof that the newest source is automatically correct;
 - avoid inventing contradiction/supersession semantics that the current model does not contain;
-- link back to ordinary fact dossiers and official sources.
+- link back to ordinary fact dossiers and source records.
+
+### Ancient-history reading
+
+Phase 5 data should let readers move from cosmology into ancient political history without losing source strength or continuity scope. The UI should support:
+
+- unique beings and collective actors without fake duplicate Characters;
+- changing divine/political status through Facts and Events;
+- realm conquest/liberation through sourced realm-target Facts;
+- ending-only details with conservative canon status;
+- intentional gaps where chronology exists but direct causality is not yet modeled.
 
 ## 4. Canon model
 
@@ -98,9 +112,11 @@ Prefer:
 
 1. canonical game story / narrative;
 2. official in-game bios/codex;
-3. official Mortal Kombat / NetherRealm / WB material;
+3. official game manuals and official Mortal Kombat / NetherRealm / WB material;
 4. official supplemental material with clear continuity;
-5. secondary references only as research aids when primary evidence cannot be recovered.
+5. secondary references only as research aids or preservation mirrors when primary evidence cannot be directly recovered.
+
+A preservation URL may host the evidence, but the Source record must identify the original primary work rather than treating the mirror as canonical authority.
 
 ## 6. Data architecture
 
@@ -122,22 +138,29 @@ Contracts live in `schema/`; runtime/presentation live in `app/`, `components/`,
 
 JSON remains the source of truth. SQLite or graph indexes may later be generated as derived infrastructure if scale proves the need.
 
-## 7. Current milestone — Phase 4: Claim history, retcons, and evidence
+## 7. Current milestone — Phase 5: Cosmology and ancient history
 
-Phases 1–3 proved the lore model, timeline-first reading, and whole-chain causality. Phase 4 now tests whether the existing `Fact + Source + canonStatus + timelineIds` model can explain related, changing, or conflicting portrayals without prematurely adding contradiction-specific schema.
+Phases 1–4 are complete and merged. Phase 5 expands the evidence model from character-scale continuity into the oldest Original-continuity history before comparing later cosmological and character reinterpretations.
 
-Current outputs:
+Merged Phase 5 foundation includes:
 
-- dedicated `/claims` workbench;
-- generated claim families grouped by `subject + predicate`;
-- evidence-safe family labels such as value variation, cross-continuity agreement, alternate portrayal, canon-status variation, and retcon evidence;
-- claim records with timeline scope, canon status, notes, and evidence;
-- source-year ordering when known;
-- search and dossier/source navigation;
-- Phase 4 manual verification;
-- no `contradicts`, `supersedes`, retcon entity, or citation-locator schema until a real sourced case proves the need.
+- Deception creation cosmology with One Being and Elder Gods;
+- Factions as valid Event participants;
+- `game_manual` as a source category;
+- Onaga / Shao Kahn / Shujinko story slices;
+- Shinnok fall, banishment, and Netherrealm rulership;
+- strict separation of `realmIds` location/scope from realm creation/output claims.
 
-Detailed status and acceptance criteria live in `docs/ROADMAP.md`.
+Current Edenia / Outworld slice adds:
+
+- Kitana, Sindel, and Jerrod Original-continuity records;
+- Shao Kahn's Edenian conquest and Sindel marriage history from Mortal Kombat Trilogy biography evidence;
+- Edenia's later liberation from Deadly Alliance Kitana biography evidence;
+- ending-only Jerrod family details as `supplemental` rather than automatically canonical;
+- realm-target Facts for conquest/liberation while Event `realmIds` remains location/scope;
+- no direct conquest → liberation causal edge until the intervening history is explicitly represented.
+
+Detailed status and acceptance criteria live in `docs/ROADMAP.md` and `docs/PHASE5_MANUAL_VERIFICATION.md`.
 
 ## 8. Current non-goals
 
@@ -149,6 +172,8 @@ Do not:
 - infer contradiction from differing values without continuity/source/time-state context;
 - add `contradicts` / `supersedes` fields only because they seem useful in theory;
 - invent missing source dates or evidence locators;
+- promote a character ending into canonical story outcome merely because it contains useful lore detail;
+- use Event `realmIds` as a hidden action-object or output field;
 - render the entire universe as one force-directed graph;
 - introduce a graph database solely for visualization;
 - introduce authentication or a CMS/admin editor;
@@ -157,12 +182,14 @@ Do not:
 
 ## 9. Future capabilities
 
-Likely capabilities after Phase 4 include:
+Likely capabilities after the current Phase 5 slices include:
 
-- explicit contradiction/supersession relations if real lore cases prove them necessary;
+- Great Kung Lao / Goro / Shang Tsung pre-1992 tournament history;
+- scoped comparison of Deception cosmology against MK11-era Titan/Kronika cosmology;
+- scoped Original/Reboot/New Era Sindel comparison through claim history;
+- explicit contradiction/supersession relations only if real lore cases prove them necessary;
 - chapter/scene/page/timestamp evidence locators if work-level sources become insufficient;
 - dedicated timeline-reset transition UX;
-- cosmology and ancient-history expansion;
 - systematic Original, Reboot, and New Era expansion;
 - richer graph infrastructure only if real usage proves it necessary.
 
@@ -176,9 +203,11 @@ Relevant changes must satisfy:
 - timelines remain correctly scoped;
 - ordinary causal edges remain inside one timeline and cross-timeline edges are explicit reset/rewrite bridges;
 - important lore claims have evidence;
+- source strength is represented conservatively;
 - claim-family grouping does not promote mere value/timeline variation into contradiction or retcon semantics;
 - contradictions are not silently flattened;
 - source chronology is not presented as canonical priority;
+- realm-target semantics are represented by Facts rather than overloaded Event metadata;
 - UI remains navigable and accessible;
 - implementation follows `AGENTS.md`;
 - product/domain documentation is updated when contracts change;
