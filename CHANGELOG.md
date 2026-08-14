@@ -8,16 +8,21 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 
 ### Added
 
-- Dedicated `/causality` workbench for focused `cause → event → consequence` exploration.
-- Click-to-recenter causal event navigation with strict timeline isolation.
+- Dedicated `/causality` workbench for story-chain exploration built from explicit `causeEventIds` / `consequenceEventIds`.
+- Whole-chain vertical tree that keeps the start, branches, selected event, and terminal event(s) visible at the same time.
+- `Start`, `You are here`, `End`, and moment/position markers for causal-chain orientation.
+- Separate chain cards when one continuity contains disconnected causal components.
+- Local immediate `Why? / What next?` close-up retained beneath the full-chain view.
 - Links from causal events and participants back to their normal dossiers while preserving continuity scope.
 - Global Explorer / Causality mode switch.
-- Phase 3 manual verification checklist focused on causal accuracy, chronology separation, navigation, and responsive behavior.
+- Phase 3 manual verification checklist focused on whole-chain orientation, branch readability, chronology separation, navigation, and responsive behavior.
 
 ### Changed
 
-- Phase 3 product and agent guidance now treats event causality as a distinct view from chronology and ordinary relationship edges.
-- The project continues to derive causal visualization directly from existing `causeEventIds` / `consequenceEventIds`; no graph library, graph database, or schema expansion is introduced yet.
+- Phase 3 now prioritizes reading a complete causal story tree over click-to-recenter navigation through isolated three-node diagrams.
+- Selecting an event highlights `You are here` without removing the rest of the causal chain from view.
+- Product and agent guidance continues to distinguish event causality from chronology and ordinary relationship edges.
+- The project still derives causal visualization from the existing event model; no graph library, graph database, or schema expansion is introduced yet.
 
 ## 2026-08-14 — Phase 2: Timeline-first reading experience
 
