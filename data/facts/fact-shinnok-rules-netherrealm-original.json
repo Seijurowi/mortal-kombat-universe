@@ -1,0 +1,12 @@
+{
+  "id": "fact-shinnok-rules-netherrealm-original",
+  "type": "fact",
+  "name": "Shinnok became ruler of the Netherrealm",
+  "subjectId": "shinnok",
+  "predicate": "rules",
+  "objectId": "netherrealm",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk-mythologies-sub-zero"],
+  "notes": "The Mythologies story describes Quan Chi helping Shinnok defeat Lucifer, after which Shinnok takes the throne of the Netherrealm."
+}
