@@ -57,6 +57,8 @@ The validated dataset contains 75 records across 8 entity types, including the B
 
 The current product milestone is **Phase 3 — Story chains and causality**. The `/causality` view shows complete connected causal chains inside one continuity, keeps root/terminal events visible, highlights the selected event as `You are here`, and retains a local `Why? / What next?` close-up. Causal branches come only from explicit event links; chronology alone never creates an edge.
 
+Cross-timeline causal links are reserved for explicit reset/rewrite transitions (for example the Hourglass reset leading into the New Era). They remain valid model data but are intentionally excluded from ordinary within-continuity story trees until a dedicated timeline-transition UX is built.
+
 See:
 
 - `docs/PRD.md`
@@ -82,7 +84,7 @@ Open `http://localhost:3000`.
 pnpm check
 ```
 
-This runs knowledge validation, ESLint, TypeScript type checking, and a production Next.js build. Validation also rejects causal event links that are missing, unmirrored, or cross continuity boundaries. GitHub Actions runs the same gate on pushes and pull requests.
+This runs knowledge validation, ESLint, TypeScript type checking, and a production Next.js build. Validation requires mirrored causal references and rejects arbitrary cross-timeline causal edges unless the source event is explicitly tagged as a reset/rewrite bridge. GitHub Actions runs the same gate on pushes and pull requests.
 
 ## Change tracking
 
