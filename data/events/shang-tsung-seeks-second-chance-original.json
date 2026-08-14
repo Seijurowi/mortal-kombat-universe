@@ -1,0 +1,13 @@
+{
+  "id": "shang-tsung-seeks-second-chance-original",
+  "type": "event",
+  "name": "Shang Tsung seeks a second chance",
+  "timelineId": "original",
+  "participantIds": ["shang-tsung", "shao-kahn"],
+  "realmIds": ["outworld"],
+  "causeEventIds": ["mortal-kombat-1992"],
+  "consequenceEventIds": [],
+  "order": 110,
+  "description": "After his failure in the first-game tournament and Goro's apparent death, Shang Tsung convinces Shao Kahn to grant him another chance.",
+  "tags": ["tournament", "outworld", "mk2-setup"]
+}
