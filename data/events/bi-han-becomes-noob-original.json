@@ -1,0 +1,22 @@
+{
+  "id": "bi-han-becomes-noob-original",
+  "type": "event",
+  "name": "Bi-Han becomes Noob Saibot",
+  "timelineId": "original",
+  "participantIds": [
+    "bi-han",
+    "quan-chi"
+  ],
+  "realmIds": [
+    "netherrealm"
+  ],
+  "causeEventIds": [
+    "bi-han-killed-by-scorpion-original"
+  ],
+  "consequenceEventIds": [],
+  "order": 120,
+  "description": "After death, Bi-Han returns as the wraith Noob Saibot.",
+  "tags": [
+    "transformation"
+  ]
+}

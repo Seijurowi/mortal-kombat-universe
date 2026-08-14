@@ -1,0 +1,9 @@
+{
+  "id": "white-lotus",
+  "type": "faction",
+  "name": "White Lotus Society",
+  "timelineIds": ["original", "reboot", "new-era"],
+  "realmIds": ["earthrealm"],
+  "description": "An Earthrealm order connected to its martial champions.",
+  "tags": ["order"]
+}

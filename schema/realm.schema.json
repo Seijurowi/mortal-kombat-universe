@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "realm.schema.json",
+  "title": "Realm",
+  "type": "object",
+  "required": ["id", "type", "name", "timelineIds"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "type": {"const": "realm"},
+    "name": {"type": "string", "minLength": 1},
+    "description": {"type": "string"},
+    "timelineIds": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+    "tags": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+  }
+}

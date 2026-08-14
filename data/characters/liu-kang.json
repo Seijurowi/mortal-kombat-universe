@@ -1,0 +1,24 @@
+{
+  "id": "liu-kang",
+  "type": "character",
+  "name": "Liu Kang",
+  "aliases": [
+    "Fire God Liu Kang"
+  ],
+  "timelineIds": [
+    "original",
+    "reboot",
+    "new-era"
+  ],
+  "realmIds": [
+    "earthrealm"
+  ],
+  "factionIds": [
+    "white-lotus"
+  ],
+  "description": "Earthrealm champion whose role changes dramatically across continuities.",
+  "tags": [
+    "champion",
+    "god"
+  ]
+}

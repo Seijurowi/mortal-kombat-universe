@@ -1,0 +1,13 @@
+{
+  "id": "liu-kang-new-era",
+  "type": "event",
+  "name": "Liu Kang shapes the New Era",
+  "timelineId": "new-era",
+  "participantIds": ["liu-kang"],
+  "realmIds": ["earthrealm", "outworld", "netherrealm"],
+  "causeEventIds": ["hourglass-reset"],
+  "consequenceEventIds": ["new-era-earthrealm-champions"],
+  "order": 300,
+  "description": "Fire God Liu Kang establishes the New Era explored in Mortal Kombat 1.",
+  "tags": ["creation", "time"]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "fact-hanzo-scorpion-original",
+  "type": "fact",
+  "name": "Hanzo Hasashi is Scorpion in earlier continuities",
+  "subjectId": "hanzo-hasashi",
+  "predicate": "uses_identity",
+  "value": "Scorpion",
+  "timelineIds": ["original", "reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk-1992-game", "mk9-story"]
+}

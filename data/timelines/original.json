@@ -1,0 +1,10 @@
+{
+  "id": "original",
+  "type": "timeline",
+  "name": "Original Timeline",
+  "order": 1,
+  "description": "The continuity running from the early Mortal Kombat games through Armageddon.",
+  "eraLabel": "Original continuity",
+  "startsWith": "mortal-kombat-1992",
+  "endsWith": "armageddon"
+}

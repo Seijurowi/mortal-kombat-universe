@@ -1,0 +1,11 @@
+{
+  "id": "rel-bi-han-lin-kuei",
+  "type": "relationship",
+  "name": "Bi-Han → Lin Kuei",
+  "relationType": "member_of",
+  "fromId": "bi-han",
+  "toId": "lin-kuei",
+  "timelineIds": ["original", "reboot", "new-era"],
+  "factIds": [],
+  "directed": true
+}

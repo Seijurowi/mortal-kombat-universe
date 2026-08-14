@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "relationship.schema.json",
+  "title": "Relationship",
+  "type": "object",
+  "required": ["id", "type", "relationType", "fromId", "toId", "timelineIds"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "type": {"const": "relationship"},
+    "name": {"type": "string", "minLength": 1},
+    "description": {"type": "string"},
+    "relationType": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+    "fromId": {"type": "string"},
+    "toId": {"type": "string"},
+    "timelineIds": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+    "factIds": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "directed": {"type": "boolean"}
+  }
+}

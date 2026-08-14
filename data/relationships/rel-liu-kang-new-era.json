@@ -1,0 +1,11 @@
+{
+  "id": "rel-liu-kang-new-era",
+  "type": "relationship",
+  "name": "Liu Kang → New Era",
+  "relationType": "shaped_timeline",
+  "fromId": "liu-kang",
+  "toId": "new-era",
+  "timelineIds": ["new-era"],
+  "factIds": ["fact-liu-kang-created-new-era"],
+  "directed": true
+}

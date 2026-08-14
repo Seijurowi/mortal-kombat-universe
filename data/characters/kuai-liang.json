@@ -1,0 +1,26 @@
+{
+  "id": "kuai-liang",
+  "type": "character",
+  "name": "Kuai Liang",
+  "aliases": [
+    "Sub-Zero",
+    "Scorpion"
+  ],
+  "timelineIds": [
+    "original",
+    "reboot",
+    "new-era"
+  ],
+  "realmIds": [
+    "earthrealm"
+  ],
+  "factionIds": [
+    "lin-kuei",
+    "shirai-ryu"
+  ],
+  "description": "Bi-Han's brother; historically Sub-Zero, and Scorpion in the New Era.",
+  "tags": [
+    "lin-kuei",
+    "shirai-ryu"
+  ]
+}

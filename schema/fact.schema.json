@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "fact.schema.json",
+  "title": "Fact",
+  "type": "object",
+  "required": ["id", "type", "subjectId", "predicate", "timelineIds", "canonStatus", "sourceIds"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "type": {"const": "fact"},
+    "name": {"type": "string", "minLength": 1},
+    "description": {"type": "string"},
+    "subjectId": {"type": "string"},
+    "predicate": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+    "objectId": {"type": "string"},
+    "value": {"type": ["string", "number", "boolean"]},
+    "timelineIds": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+    "canonStatus": {"enum": ["canon", "supplemental", "retconned", "alternate", "unconfirmed", "gameplay_only"]},
+    "sourceIds": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+    "notes": {"type": "string"}
+  },
+  "allOf": [{"oneOf": [{"required": ["objectId"], "not": {"required": ["value"]}}, {"required": ["value"], "not": {"required": ["objectId"]}}]}]
+}

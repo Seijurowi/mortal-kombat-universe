@@ -1,0 +1,9 @@
+{
+  "id": "mk1-story",
+  "type": "source",
+  "name": "Mortal Kombat 1 Story Mode",
+  "sourceType": "game_story",
+  "game": "Mortal Kombat 1",
+  "year": 2023,
+  "notes": "Primary story source for the New Era."
+}

@@ -1,0 +1,13 @@
+{
+  "id": "raiden-message-to-past",
+  "type": "event",
+  "name": "Raiden sends a warning to his past self",
+  "timelineId": "reboot",
+  "participantIds": ["raiden"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": [],
+  "consequenceEventIds": ["mk9-tournament"],
+  "order": 200,
+  "description": "At Armageddon's end, Raiden's warning creates the altered continuity explored from MK9 onward.",
+  "tags": ["time", "reset"]
+}

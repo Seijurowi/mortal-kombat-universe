@@ -1,0 +1,11 @@
+{
+  "id": "fact-raiden-mortal-new-era",
+  "type": "fact",
+  "name": "Raiden is mortal in the New Era",
+  "subjectId": "raiden",
+  "predicate": "has_nature",
+  "value": "mortal",
+  "timelineIds": ["new-era"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk1-story", "mk1-official-site"]
+}

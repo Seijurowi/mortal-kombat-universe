@@ -1,0 +1,13 @@
+{
+  "id": "mortal-kombat-1992",
+  "type": "event",
+  "name": "First game tournament",
+  "timelineId": "original",
+  "participantIds": ["liu-kang", "raiden", "bi-han", "hanzo-hasashi"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": [],
+  "consequenceEventIds": ["bi-han-killed-by-scorpion-original"],
+  "order": 100,
+  "description": "The tournament represented by the first Mortal Kombat game.",
+  "tags": ["tournament"]
+}

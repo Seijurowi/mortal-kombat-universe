@@ -1,0 +1,11 @@
+{
+  "id": "rel-hanzo-shirai-ryu",
+  "type": "relationship",
+  "name": "Hanzo Hasashi → Shirai Ryu",
+  "relationType": "member_of",
+  "fromId": "hanzo-hasashi",
+  "toId": "shirai-ryu",
+  "timelineIds": ["original", "reboot"],
+  "factIds": [],
+  "directed": true
+}

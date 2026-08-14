@@ -1,0 +1,8 @@
+{
+  "id": "outworld",
+  "type": "realm",
+  "name": "Outworld",
+  "timelineIds": ["original", "reboot", "new-era"],
+  "description": "A major realm and recurring political power in Mortal Kombat history.",
+  "tags": ["realm", "empire"]
+}

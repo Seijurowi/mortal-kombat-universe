@@ -1,0 +1,10 @@
+{
+  "id": "new-era",
+  "type": "timeline",
+  "name": "New Era",
+  "order": 3,
+  "description": "The reality shaped by Fire God Liu Kang and explored in Mortal Kombat 1.",
+  "eraLabel": "Mortal Kombat 1 continuity",
+  "startsWith": "liu-kang-new-era",
+  "endsWith": null
+}
