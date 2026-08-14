@@ -38,13 +38,15 @@ Sequence alone does not prove causality. Ordinary causal links connect events in
 
 `Relationship` exists for navigation and graph traversal. Meaningful lore claims should be backed by Facts where possible. Do not treat Relationship as evidence by itself.
 
-## 5. Identity handling
+## 5. Identity and historical status handling
 
-Prefer stable person entities such as `bi-han`, `kuai-liang`, and `hanzo-hasashi`. Identities such as Sub-Zero, Scorpion, and Noob Saibot are normally timeline-scoped Facts rather than duplicate Characters.
+Prefer stable person entities such as `bi-han`, `kuai-liang`, `hanzo-hasashi`, and `shinnok`. Identities such as Sub-Zero, Scorpion, and Noob Saibot are normally timeline-scoped Facts rather than duplicate Characters.
+
+Do not encode a historical office, rank, divine state, or faction membership as timeless static Character metadata when the lore shows that it changes. Phase 5 proves this with Shinnok: he **was** an Elder God, fell, was banished, and later ruled the Netherrealm. His former Elder God status is therefore a Fact (`former_member_of`) rather than `factionIds: ["elder-gods"]` on the Character.
 
 ## 6. Transformation and state changes
 
-Deaths, resurrections, corruption, revenant/wraith states, ascensions, and similar changes are best represented as Events plus Facts. Avoid putting all historical states into a static Character description.
+Deaths, resurrections, corruption, revenant/wraith states, ascensions, banishments, rulership changes, and similar transitions are best represented as Events plus Facts. Avoid putting all historical states into a static Character description.
 
 ## 7. Timeline discipline
 
@@ -76,11 +78,13 @@ Prefer, in order:
 
 1. canonical game story/narrative;
 2. official in-game bios/codex;
-3. official Mortal Kombat / NetherRealm / WB material;
+3. official game manuals and official Mortal Kombat / NetherRealm / WB material;
 4. clearly scoped official supplemental material;
 5. secondary mirrors/research aids when primary material cannot be directly recovered.
 
 When a primary work is only accessible through a preservation mirror, the Source record must identify the primary work honestly. Do not present the mirror itself as the canonical authority.
+
+Phase 5 adds `game_manual` as a first-class Source type after the Mortal Kombat: Deception instruction booklet proved that official manuals are a reusable evidence category rather than generic `other` material.
 
 ## 10. Source granularity
 
@@ -90,11 +94,13 @@ The current schema stores sources mostly at work-level granularity. Add chapter/
 
 Only encode causal edges supported by lore. Event `order` is chronology context and never manufactures parent/child edges.
 
-The Kamidogu warning in Shujinko's Deception biography is therefore currently represented as a Fact: misuse can merge the realms and reawaken the One Being. We do not invent a separate causal event chain until the actual event sequence is modeled from sourced material.
+The Kamidogu warning in Shujinko's Deception biography is therefore represented as a Fact: misuse can merge the realms and reawaken the One Being. We do not invent a separate causal event chain until the actual event sequence is modeled from sourced material.
 
-## 12. Cosmology modeling
+Phase 5 also deliberately keeps Shujinko's `gathers Kamidogu` and later `shatters Kamidogu` events disconnected because the current evidence establishes both story states but does not require a direct causal edge between them.
 
-Phase 5 begins with the Original-continuity creation account in Mortal Kombat: Deception.
+## 12. Cosmology and ancient-history modeling
+
+Phase 5 begins with the Original-continuity creation account in Mortal Kombat: Deception and expands into Onaga and Shinnok.
 
 Current choices:
 
@@ -103,8 +109,9 @@ Current choices:
 - individual realms remain `Realm` entities.
 - the shattering is an `Event`.
 - statements about the Kamidogu and creation are `Fact` records with source evidence.
+- Onaga, Shao Kahn, Shujinko, Shinnok, and Lucifer remain stable Characters; changes in rulership, allegiance, divine status, or banishment are represented through Events and Facts.
 
-Do **not** project this Deception account automatically into Reboot or New Era. Later Titan/Kronika cosmology must be added with its own scoped evidence and compared rather than silently reconciled.
+Do **not** project this Original-continuity material automatically into Reboot or New Era. Later Titan/Kronika cosmology and reboot Shinnok material must be added with their own scoped evidence and compared rather than silently reconciled.
 
 The One Being is a deliberate stress test for whether `Character` remains semantically acceptable for unique cosmic beings. Do not add a `CosmicEntity` type until additional real cases prove the existing class materially harms navigation or meaning.
 
@@ -130,7 +137,9 @@ Proven cases include:
 - whole-chain causality without chronology-derived edges;
 - explicit reset/rewrite bridges;
 - claim-family comparison without inventing contradiction semantics;
-- Factions acting as Event participants, proven by the Elder Gods in Deception cosmology.
+- Factions acting as Event participants, proven by the Elder Gods in Deception cosmology;
+- official game manuals as a distinct source category;
+- historical divine/faction status represented as Facts rather than timeless Character membership, proven by Shinnok.
 
 Current pressure points include:
 
