@@ -1,0 +1,12 @@
+{
+  "id": "fact-shao-kahn-stole-outworld-from-onaga-original",
+  "type": "fact",
+  "name": "Shao Kahn stole Outworld from Onaga",
+  "subjectId": "shao-kahn",
+  "predicate": "stole_realm_from",
+  "objectId": "onaga",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk-deception-raiden-bio"],
+  "notes": "Raiden's Deception biography states that Shao Kahn poisoned Onaga and stole Outworld for himself."
+}
