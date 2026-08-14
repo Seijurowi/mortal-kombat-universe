@@ -1,0 +1,8 @@
+{
+  "id": "earthrealm",
+  "type": "realm",
+  "name": "Earthrealm",
+  "timelineIds": ["original", "reboot", "new-era"],
+  "description": "The realm protected by Earthrealm's champions.",
+  "tags": ["realm"]
+}

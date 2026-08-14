@@ -1,0 +1,11 @@
+{
+  "id": "rel-bi-han-kuai-liang-brothers",
+  "type": "relationship",
+  "name": "Bi-Han ↔ Kuai Liang",
+  "relationType": "brother_of",
+  "fromId": "bi-han",
+  "toId": "kuai-liang",
+  "timelineIds": ["original", "reboot", "new-era"],
+  "factIds": ["fact-bi-han-kuai-liang-brothers"],
+  "directed": false
+}

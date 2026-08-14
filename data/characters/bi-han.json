@@ -1,0 +1,25 @@
+{
+  "id": "bi-han",
+  "type": "character",
+  "name": "Bi-Han",
+  "aliases": [
+    "Sub-Zero",
+    "Noob Saibot"
+  ],
+  "timelineIds": [
+    "original",
+    "reboot",
+    "new-era"
+  ],
+  "realmIds": [
+    "earthrealm"
+  ],
+  "factionIds": [
+    "lin-kuei"
+  ],
+  "description": "A Lin Kuei warrior whose identity and fate vary by continuity.",
+  "tags": [
+    "lin-kuei",
+    "sub-zero"
+  ]
+}

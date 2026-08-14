@@ -1,0 +1,11 @@
+{
+  "id": "fact-bi-han-sub-zero-new-era",
+  "type": "fact",
+  "name": "Bi-Han is Sub-Zero in the New Era",
+  "subjectId": "bi-han",
+  "predicate": "uses_identity",
+  "value": "Sub-Zero",
+  "timelineIds": ["new-era"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk1-story", "mk1-official-site"]
+}

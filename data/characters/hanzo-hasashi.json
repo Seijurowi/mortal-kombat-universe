@@ -1,0 +1,24 @@
+{
+  "id": "hanzo-hasashi",
+  "type": "character",
+  "name": "Hanzo Hasashi",
+  "aliases": [
+    "Scorpion"
+  ],
+  "timelineIds": [
+    "original",
+    "reboot"
+  ],
+  "realmIds": [
+    "earthrealm",
+    "netherrealm"
+  ],
+  "factionIds": [
+    "shirai-ryu"
+  ],
+  "description": "The Shirai Ryu warrior known as Scorpion in the Original and Reboot continuities.",
+  "tags": [
+    "shirai-ryu",
+    "scorpion"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "bi-han-killed-by-scorpion-original",
+  "type": "event",
+  "name": "Bi-Han is killed by Scorpion",
+  "timelineId": "original",
+  "participantIds": [
+    "bi-han",
+    "hanzo-hasashi"
+  ],
+  "realmIds": [
+    "earthrealm"
+  ],
+  "causeEventIds": [
+    "mortal-kombat-1992"
+  ],
+  "consequenceEventIds": [
+    "bi-han-becomes-noob-original"
+  ],
+  "order": 110,
+  "description": "Scorpion kills the original Sub-Zero, Bi-Han.",
+  "tags": [
+    "death"
+  ]
+}

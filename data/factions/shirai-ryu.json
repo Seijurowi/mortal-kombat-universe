@@ -1,0 +1,9 @@
+{
+  "id": "shirai-ryu",
+  "type": "faction",
+  "name": "Shirai Ryu",
+  "timelineIds": ["original", "reboot", "new-era"],
+  "realmIds": ["earthrealm"],
+  "description": "A warrior clan historically associated with Scorpion.",
+  "tags": ["clan"]
+}

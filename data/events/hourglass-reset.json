@@ -1,0 +1,13 @@
+{
+  "id": "hourglass-reset",
+  "type": "event",
+  "name": "Liu Kang gains control of history",
+  "timelineId": "reboot",
+  "participantIds": ["liu-kang", "raiden"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": [],
+  "consequenceEventIds": ["liu-kang-new-era"],
+  "order": 290,
+  "description": "The end-state that enables Liu Kang to shape a new history.",
+  "tags": ["time", "reset"]
+}

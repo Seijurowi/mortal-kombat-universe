@@ -1,0 +1,11 @@
+{
+  "id": "fact-bi-han-kuai-liang-brothers",
+  "type": "fact",
+  "name": "Bi-Han and Kuai Liang are brothers",
+  "subjectId": "bi-han",
+  "predicate": "brother_of",
+  "objectId": "kuai-liang",
+  "timelineIds": ["original", "reboot", "new-era"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story", "mk1-story"]
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "source.schema.json",
+  "title": "Source",
+  "type": "object",
+  "required": ["id", "type", "name", "sourceType"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "type": {"const": "source"},
+    "name": {"type": "string", "minLength": 1},
+    "description": {"type": "string"},
+    "sourceType": {"enum": ["game_story", "game_bio", "game_ending", "game_dialogue", "official_web", "comic", "film", "series", "other"]},
+    "game": {"type": "string"},
+    "year": {"type": "integer", "minimum": 1992, "maximum": 2100},
+    "url": {"type": "string"},
+    "notes": {"type": "string"}
+  }
+}

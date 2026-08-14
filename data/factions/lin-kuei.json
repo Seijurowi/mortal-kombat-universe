@@ -1,0 +1,9 @@
+{
+  "id": "lin-kuei",
+  "type": "faction",
+  "name": "Lin Kuei",
+  "timelineIds": ["original", "reboot", "new-era"],
+  "realmIds": ["earthrealm"],
+  "description": "An ancient warrior clan associated with Sub-Zero.",
+  "tags": ["clan"]
+}

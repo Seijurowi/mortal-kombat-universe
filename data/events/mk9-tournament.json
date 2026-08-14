@@ -1,0 +1,13 @@
+{
+  "id": "mk9-tournament",
+  "type": "event",
+  "name": "MK9 tournament events",
+  "timelineId": "reboot",
+  "participantIds": ["liu-kang", "raiden", "bi-han", "kuai-liang", "hanzo-hasashi", "quan-chi"],
+  "realmIds": ["earthrealm", "outworld"],
+  "causeEventIds": ["raiden-message-to-past"],
+  "consequenceEventIds": [],
+  "order": 210,
+  "description": "The altered retelling of the early tournament era in Mortal Kombat (2011).",
+  "tags": ["tournament"]
+}

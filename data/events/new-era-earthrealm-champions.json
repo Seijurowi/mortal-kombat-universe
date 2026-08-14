@@ -1,0 +1,13 @@
+{
+  "id": "new-era-earthrealm-champions",
+  "type": "event",
+  "name": "New Era Earthrealm champions assemble",
+  "timelineId": "new-era",
+  "participantIds": ["liu-kang", "raiden", "kuai-liang", "bi-han"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": ["liu-kang-new-era"],
+  "consequenceEventIds": [],
+  "order": 310,
+  "description": "Liu Kang gathers and guides Earthrealm's champions in the New Era.",
+  "tags": ["champions"]
+}

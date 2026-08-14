@@ -1,0 +1,19 @@
+{
+  "id": "quan-chi",
+  "type": "character",
+  "name": "Quan Chi",
+  "aliases": [],
+  "timelineIds": [
+    "original",
+    "reboot",
+    "new-era"
+  ],
+  "realmIds": [
+    "netherrealm"
+  ],
+  "factionIds": [],
+  "description": "A powerful sorcerer whose schemes repeatedly reshape other characters' fates.",
+  "tags": [
+    "sorcerer"
+  ]
+}

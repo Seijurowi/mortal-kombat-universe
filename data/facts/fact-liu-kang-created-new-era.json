@@ -1,0 +1,11 @@
+{
+  "id": "fact-liu-kang-created-new-era",
+  "type": "fact",
+  "name": "Liu Kang shapes the New Era",
+  "subjectId": "liu-kang",
+  "predicate": "caused_event",
+  "objectId": "liu-kang-new-era",
+  "timelineIds": ["new-era"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk11-aftermath-story", "mk1-story"]
+}

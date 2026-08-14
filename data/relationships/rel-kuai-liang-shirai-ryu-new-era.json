@@ -1,0 +1,11 @@
+{
+  "id": "rel-kuai-liang-shirai-ryu-new-era",
+  "type": "relationship",
+  "name": "Kuai Liang → Shirai Ryu",
+  "relationType": "member_of",
+  "fromId": "kuai-liang",
+  "toId": "shirai-ryu",
+  "timelineIds": ["new-era"],
+  "factIds": ["fact-kuai-liang-scorpion-new-era"],
+  "directed": true
+}

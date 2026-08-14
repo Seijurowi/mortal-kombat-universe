@@ -1,0 +1,24 @@
+{
+  "id": "raiden",
+  "type": "character",
+  "name": "Raiden",
+  "aliases": [
+    "Lord Raiden"
+  ],
+  "timelineIds": [
+    "original",
+    "reboot",
+    "new-era"
+  ],
+  "realmIds": [
+    "earthrealm"
+  ],
+  "factionIds": [
+    "white-lotus"
+  ],
+  "description": "A protector of Earthrealm in earlier continuities; a young mortal champion in the New Era.",
+  "tags": [
+    "protector",
+    "champion"
+  ]
+}

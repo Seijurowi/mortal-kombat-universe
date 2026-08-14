@@ -1,0 +1,10 @@
+{
+  "id": "reboot",
+  "type": "timeline",
+  "name": "Reboot Timeline",
+  "order": 2,
+  "description": "The continuity initiated by Raiden sending a warning to his past self and spanning MK9 through MK11/Aftermath.",
+  "eraLabel": "MK9–MK11 continuity",
+  "startsWith": "raiden-message-to-past",
+  "endsWith": "hourglass-reset"
+}

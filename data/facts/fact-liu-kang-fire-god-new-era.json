@@ -1,0 +1,11 @@
+{
+  "id": "fact-liu-kang-fire-god-new-era",
+  "type": "fact",
+  "name": "Liu Kang is Fire God in the New Era",
+  "subjectId": "liu-kang",
+  "predicate": "has_role",
+  "value": "Fire God and keeper of the New Era",
+  "timelineIds": ["new-era"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk1-story", "mk1-official-site"]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "netherrealm",
+  "type": "realm",
+  "name": "Netherrealm",
+  "timelineIds": ["original", "reboot", "new-era"],
+  "description": "A hellish realm associated with demons, sorcery, and corrupted souls.",
+  "tags": ["realm"]
+}

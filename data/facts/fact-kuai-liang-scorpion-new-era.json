@@ -1,0 +1,11 @@
+{
+  "id": "fact-kuai-liang-scorpion-new-era",
+  "type": "fact",
+  "name": "Kuai Liang is Scorpion in the New Era",
+  "subjectId": "kuai-liang",
+  "predicate": "uses_identity",
+  "value": "Scorpion",
+  "timelineIds": ["new-era"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk1-story", "mk1-official-site"]
+}

@@ -1,0 +1,35 @@
+:root {
+  --mk-gold: oklch(0.78 0.14 78);
+}
+
+.dark {
+  --background: oklch(0.11 0.006 75);
+  --foreground: oklch(0.96 0.01 80);
+  --card: oklch(0.16 0.008 70);
+  --card-foreground: oklch(0.96 0.01 80);
+  --popover: oklch(0.16 0.008 70);
+  --popover-foreground: oklch(0.96 0.01 80);
+  --primary: var(--mk-gold);
+  --primary-foreground: oklch(0.16 0.03 70);
+  --secondary: oklch(0.22 0.01 70);
+  --secondary-foreground: oklch(0.94 0.01 80);
+  --muted: oklch(0.205 0.009 70);
+  --muted-foreground: oklch(0.68 0.015 80);
+  --accent: oklch(0.24 0.018 70);
+  --accent-foreground: oklch(0.96 0.01 80);
+  --border: oklch(0.95 0.01 80 / 12%);
+  --input: oklch(0.95 0.01 80 / 16%);
+  --ring: var(--mk-gold);
+  --sidebar: oklch(0.135 0.007 70);
+  --sidebar-foreground: oklch(0.96 0.01 80);
+  --sidebar-primary: var(--mk-gold);
+  --sidebar-primary-foreground: oklch(0.16 0.03 70);
+  --sidebar-accent: oklch(0.22 0.01 70);
+  --sidebar-accent-foreground: oklch(0.96 0.01 80);
+  --sidebar-border: oklch(0.95 0.01 80 / 10%);
+  --sidebar-ring: var(--mk-gold);
+}
+
+::selection {
+  background: color-mix(in oklch, var(--primary) 35%, transparent);
+}
