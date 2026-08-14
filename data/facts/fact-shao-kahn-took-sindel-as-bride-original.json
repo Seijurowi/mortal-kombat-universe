@@ -1,0 +1,12 @@
+{
+  "id": "fact-shao-kahn-took-sindel-as-bride-original",
+  "type": "fact",
+  "name": "Shao Kahn took Sindel as his bride",
+  "subjectId": "shao-kahn",
+  "predicate": "took_as_bride",
+  "objectId": "sindel",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkt-shao-kahn-bio"],
+  "notes": "Mortal Kombat Trilogy states this as part of Shao Kahn's ancient rise and Edenian conquest history."
+}
