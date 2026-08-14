@@ -1,0 +1,13 @@
+{
+  "id": "kitana-liberates-edenia-original",
+  "type": "event",
+  "name": "Kitana frees Edenia from Shao Kahn",
+  "timelineId": "original",
+  "participantIds": ["kitana", "shao-kahn"],
+  "realmIds": ["edenia"],
+  "causeEventIds": [],
+  "consequenceEventIds": [],
+  "order": 260,
+  "description": "By the time of Mortal Kombat: Deadly Alliance, Kitana has freed her home realm of Edenia from Shao Kahn's grasp.",
+  "tags": ["liberation", "edenia", "kitana"]
+}
