@@ -1,0 +1,73 @@
+name: Apply shadcn preset
+
+on:
+  push:
+    branches:
+      - agent/nextjs-foundation
+    paths:
+      - .github/workflows/shadcn-migrate.yml
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/nextjs-foundation
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.21.0
+      - name: Apply captured preset contract
+        shell: bash
+        run: |
+          cp .shadcn-reference/components.json components.json
+          cp .shadcn-reference/app/globals.css app/globals.css
+          cp .shadcn-reference/postcss.config.mjs postcss.config.mjs
+          cp .shadcn-reference/lib/utils.ts lib/utils.ts
+          mkdir -p components
+          cat > components/theme-provider.tsx <<'EOF'
+          "use client"
+
+          import * as React from "react"
+          import { ThemeProvider as NextThemesProvider } from "next-themes"
+
+          export function ThemeProvider({
+            children,
+            ...props
+          }: React.ComponentProps<typeof NextThemesProvider>) {
+            return <NextThemesProvider {...props}>{children}</NextThemesProvider>
+          }
+          EOF
+          node <<'NODE'
+          const fs = require('fs')
+          const current = JSON.parse(fs.readFileSync('package.json', 'utf8'))
+          const reference = JSON.parse(fs.readFileSync('.shadcn-reference/package.json', 'utf8'))
+          current.packageManager = 'pnpm@11.21.0'
+          current.scripts = {
+            ...current.scripts,
+            check: 'pnpm validate && pnpm lint && pnpm build',
+            format: 'prettier --write "**/*.{ts,tsx,css,md}"',
+            typecheck: 'tsc --noEmit'
+          }
+          current.dependencies = { ...reference.dependencies, ...current.dependencies }
+          current.devDependencies = { ...reference.devDependencies, ...current.devDependencies }
+          fs.writeFileSync('package.json', JSON.stringify(current, null, 2) + '\n')
+          NODE
+      - name: Install and add base shadcn components
+        run: |
+          pnpm install
+          pnpm dlx shadcn@latest add button card input badge separator scroll-area
+      - name: Commit migration
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add package.json pnpm-lock.yaml components.json app/globals.css postcss.config.mjs lib/utils.ts components/theme-provider.tsx components/ui
+          git commit -m "Adopt pnpm and shadcn preset"
+          git push origin HEAD:agent/nextjs-foundation
