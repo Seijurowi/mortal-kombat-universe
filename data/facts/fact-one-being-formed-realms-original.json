@@ -4,9 +4,9 @@
   "name": "The shattered One Being formed the realms",
   "subjectId": "one-being",
   "predicate": "fragments_formed",
-  "value": "Earthrealm, Netherrealm, Outworld, Orderrealm, Chaosrealm, and Edenia",
+  "value": "the realms",
   "timelineIds": ["original"],
   "canonStatus": "canon",
-  "sourceIds": ["mk-deception-shujinko-bio", "mk-deception-manual"],
-  "notes": "Deception's Shujinko biography ties the One Being's shattering to the formation of the realms; the manual separately enumerates the six Konquest realms."
+  "sourceIds": ["mk-deception-shujinko-bio"],
+  "notes": "Deception's Shujinko biography ties the One Being's shattering to the formation of the realms. The separate Deception manual enumerates six Konquest realms but does not itself identify that list as the complete set of fragments from this creation event."
 }
