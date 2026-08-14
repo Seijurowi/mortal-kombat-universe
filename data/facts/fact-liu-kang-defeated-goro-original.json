@@ -1,0 +1,12 @@
+{
+  "id": "fact-liu-kang-defeated-goro-original",
+  "type": "fact",
+  "name": "Liu Kang defeated Goro",
+  "subjectId": "liu-kang",
+  "predicate": "defeated",
+  "objectId": "goro",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk1-liu-kang-ending", "mk2-story"],
+  "notes": "Liu Kang's first-game ending states that he defeated Goro; Mortal Kombat II's story treats Goro's apparent death and Shang Tsung's failure as established prior events."
+}
