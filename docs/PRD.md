@@ -72,7 +72,8 @@ The causal view must:
 - derive branches only from explicit `causeEventIds` / `consequenceEventIds`;
 - use event `order` only for chronology/moment context, never to create a causal edge;
 - keep disconnected causal components as separate story chains;
-- keep timelines isolated, including causal edges themselves;
+- keep ordinary story chains inside one timeline;
+- exclude cross-timeline reset/rewrite bridges from the ordinary within-continuity tree; those bridges are valid model data for future timeline-transition UX;
 - retain an immediate `Why? / What next?` close-up as secondary detail;
 - link back to ordinary event/character dossiers;
 - keep ordinary relationship edges separate unless future usage proves that combining them improves understanding;
@@ -132,7 +133,7 @@ Current outputs:
 - separate story-chain selection for disconnected causal components;
 - immediate cause/consequence close-up beneath the full chain;
 - dossier links preserving timeline scope;
-- validation that causal references are mirrored and cannot cross timelines;
+- validation that causal references are mirrored and that cross-timeline edges are explicit reset/rewrite bridges rather than accidental leakage;
 - manual verification that chronology-only neighbors never become branches;
 - no schema change or graph library unless real chain complexity proves a concrete need.
 
@@ -148,6 +149,7 @@ Do not:
 - mix ordinary relationship edges with causal edges by default;
 - infer causality from chronology;
 - claim robust merged-branch UX until a real dataset case proves and tests it;
+- fold timeline reset/rewrite bridges into ordinary within-continuity trees;
 - introduce authentication or a CMS/admin editor;
 - introduce SQLite as primary storage;
 - hard-code narrative prose in React to compensate for missing structured lore.
@@ -158,6 +160,7 @@ Likely milestones after Phase 3 include:
 
 - retcon / contradiction explorer;
 - richer source/evidence views;
+- explicit timeline-reset / rewrite transition UX;
 - cosmology and ancient-history expansion;
 - systematic Original, Reboot, and New Era expansion;
 - richer graph infrastructure only if real story-chain usage proves it necessary.
@@ -170,7 +173,7 @@ Relevant changes must satisfy:
 
 - data validates;
 - timelines remain correctly scoped;
-- causal references never cross timelines;
+- ordinary causal edges remain inside one timeline and cross-timeline edges are explicit reset/rewrite bridges;
 - important lore claims have evidence;
 - contradictions are not silently flattened;
 - causal branches represent explicit causal data, not chronology;
