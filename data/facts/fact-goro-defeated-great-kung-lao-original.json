@@ -1,0 +1,12 @@
+{
+  "id": "fact-goro-defeated-great-kung-lao-original",
+  "type": "fact",
+  "name": "Goro defeated the Great Kung Lao",
+  "subjectId": "goro",
+  "predicate": "defeated",
+  "objectId": "great-kung-lao",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk-1992-game", "mk2-kung-lao-bio"],
+  "notes": "The first Mortal Kombat game establishes Goro's victory over Kung Lao; Mortal Kombat II identifies that ancient opponent as the Great Kung Lao and places the defeat 500 years earlier."
+}
