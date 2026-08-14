@@ -67,20 +67,23 @@ Goal: help a reader see **where a causal story begins, what happens at each mome
 - [x] Branch rendering that keeps the complete chain visible while the selected event changes.
 - [x] Separate chain selection when one continuity contains disconnected causal components.
 - [x] Local `Why? / What next?` view retained as a secondary close-up.
-- [x] Timeline isolation for every chain and edge.
+- [x] Timeline isolation for every rendered story-chain edge.
 - [x] Explicit separation between event causality and ordinary relationship edges.
 - [x] Links back to event and participant dossiers while preserving timeline scope.
 - [x] Global Explorer / Causality mode switch.
 - [x] Phase 3 manual verification checklist.
 - [x] Reuse existing `causeEventIds` / `consequenceEventIds` without schema expansion.
+- [x] Validation of mirrored causal references plus explicit reset/rewrite bridge rules for the rare causal edge that legitimately crosses timelines.
 
 ### Still to evaluate manually
 
 - [ ] Does the whole-chain tree solve the “where does this sequence start?” orientation problem?
-- [ ] Are branches and merged branches understandable in a vertical reading layout?
+- [ ] Are one-to-many branches understandable in a vertical reading layout?
 - [ ] Should non-causal chronological milestones ever appear as muted context between causal nodes, or would that blur the causality contract?
 - [ ] At what real chain complexity does a true 2D graph become more readable than the story tree?
 - [ ] Should ordinary relationship edges remain separate from event-causal chains?
+- [ ] What UX should represent explicit timeline reset/rewrite bridges such as the Hourglass transition into the New Era?
+- [ ] How should a real branch-merge/DAG case render without visually duplicating one canonical event?
 
 See `PHASE3_MANUAL_VERIFICATION.md`.
 
@@ -89,14 +92,15 @@ See `PHASE3_MANUAL_VERIFICATION.md`.
 A user should be able to:
 
 1. open `/causality` and choose a continuity;
-2. identify the start and end of a connected causal chain immediately;
+2. identify the start and end of a connected within-continuity causal chain immediately;
 3. understand the selected event's position inside that whole chain;
 4. follow explicit branches from one event to multiple consequences;
 5. select another event without losing whole-chain orientation;
 6. distinguish immediate causes/consequences in the secondary close-up;
 7. walk the Bi-Han / Hanzo chain without repeatedly navigating backward to discover where it began;
 8. open the full event or participant dossier without losing timeline scope;
-9. verify that chronology-only neighbors do not become causal branches.
+9. verify that chronology-only neighbors do not become causal branches;
+10. verify that legitimate reset/rewrite bridges remain valid model data without leaking into ordinary continuity trees.
 
 All automated quality gates and the Phase 3 manual verification checklist must pass before merge.
 
