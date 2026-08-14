@@ -1,0 +1,12 @@
+{
+  "id": "fact-onaga-manipulated-shujinko-original",
+  "type": "fact",
+  "name": "Onaga manipulated Shujinko into gathering the Kamidogu",
+  "subjectId": "onaga",
+  "predicate": "manipulated",
+  "objectId": "shujinko",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk-deception-shujinko-bio"],
+  "notes": "Shujinko's biography identifies Onaga as the deceiver who used him to bring together the lost Kamidogu."
+}
