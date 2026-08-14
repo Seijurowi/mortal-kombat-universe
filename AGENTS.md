@@ -88,13 +88,15 @@ Treat **retcon**, **continuity divergence**, **alternate portrayal**, and **unce
 - Source chronology is evidence-history context, not canonical priority.
 - Do not add `contradicts`, `supersedes`, or dedicated retcon fields until a concrete sourced case proves the current model insufficient.
 
-## Relationships, participants, and causality
+## Relationships, participants, realms, and causality
 
 - Every graph edge references existing IDs.
 - Relationship direction matters.
 - Meaningful lore claims should have supporting facts; relationship edges improve navigation.
 - Event `participantIds` may reference `Character` or `Faction` entities. This is proven necessary by collective actors such as the Elder Gods in Deception cosmology.
 - Do not duplicate a Faction as a fake Character merely to make it an event participant.
+- Event `realmIds` describes event location/scope. It is **not** an output field and does not mean the realm is the grammatical object of the action.
+- If a realm is conquered, liberated, merged, created, destroyed, or otherwise the object of a lore assertion, represent that assertion as a sourced `Fact` with the Realm in `objectId` where appropriate.
 - `causeEventIds` means supported causality, not “happened shortly before.”
 - `consequenceEventIds` means supported outcome, not mere chronology.
 - Never manufacture causal links because events are sequential or have adjacent `order` values.
@@ -160,6 +162,7 @@ Before a substantive PR is ready:
 - causal references are mirrored;
 - cross-timeline causal references are explicit reset/rewrite bridges;
 - new facts have evidence and timeline scope;
+- realm-target assertions are not hidden in `realmIds` semantics;
 - retcon/contradiction UI does not promote mere variation into a confirmed retcon;
 - documentation matches behavior;
 - `CHANGELOG.md` has been reviewed;
@@ -177,8 +180,8 @@ A green build does not prove lore accuracy, causal accuracy, retcon accuracy, or
 
 ## Current scope
 
-Phases 1, 2, 3, and 4 are complete and merged.
+Phases 1, 2, 3, and 4 are complete and merged. The Deception cosmology / Onaga / Shinnok foundation of Phase 5 is also merged.
 
-The active milestone is **Phase 5 — Cosmology and ancient history**, defined in `docs/ROADMAP.md` and reviewed through `docs/PHASE5_MANUAL_VERIFICATION.md`.
+The active work remains **Phase 5 — Cosmology and ancient history**, defined in `docs/ROADMAP.md` and reviewed through `docs/PHASE5_MANUAL_VERIFICATION.md`.
 
-The first slice is the Original-continuity creation account from Mortal Kombat: Deception: One Being, Elder Gods, the six Konquest realms, the Kamidogu warning, and the ancient shattering event. The immediate goal is to expand cosmology with explicit source/continuity scope while letting real ancient-lore cases—not theoretical neatness—drive any further schema evolution.
+The current slice is **Edenia / Outworld conquest history** on `agent/phase5-edenia-outworld`: model Shao Kahn's conquest, Sindel/Kitana/Jerrod evidence, and Edenia's later liberation without using realm location metadata as action semantics or promoting arcade endings beyond their evidence strength.
