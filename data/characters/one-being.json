@@ -1,0 +1,8 @@
+{
+  "id": "one-being",
+  "type": "character",
+  "name": "One Being",
+  "timelineIds": ["original"],
+  "description": "A primordial being whose shattered essence forms the realms in Mortal Kombat: Deception's cosmology.",
+  "tags": ["primordial", "cosmology", "non-playable"]
+}
