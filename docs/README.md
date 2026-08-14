@@ -10,7 +10,8 @@ This directory contains the product and domain contracts for the project. The re
 4. [`CHANGELOG_POLICY.md`](./CHANGELOG_POLICY.md) — rules for maintaining the root [`CHANGELOG.md`](../CHANGELOG.md).
 5. [`MANUAL_VERIFICATION.md`](./MANUAL_VERIFICATION.md) — Phase 1 lore/source verification.
 6. [`PHASE2_MANUAL_VERIFICATION.md`](./PHASE2_MANUAL_VERIFICATION.md) — timeline-first character reading, chronology, comparison, deep-link, and responsive UX checks.
-7. [`../AGENTS.md`](../AGENTS.md) — execution rules for Codex and other coding agents.
+7. [`PHASE3_MANUAL_VERIFICATION.md`](./PHASE3_MANUAL_VERIFICATION.md) — whole causal story-chain orientation, timeline isolation, chronology separation, and graph UX checks.
+8. [`../AGENTS.md`](../AGENTS.md) — execution rules for agents and contributors.
 
 ## Document responsibilities
 
@@ -28,4 +29,4 @@ When implementation changes a product requirement, data-model assumption, source
 
 ## Verification rule
 
-Automated validation proves JSON shape, references, TypeScript safety, linting, and production build health. It does **not** prove that a continuity interpretation is correct or that the product is understandable. Lore-heavy milestones and major UX milestones should keep a manual verification checklist and review it before merge.
+Automated validation proves JSON shape, references, causal-edge invariants, TypeScript safety, linting, and production build health. It does **not** prove that a continuity interpretation is correct or that the product is understandable. Lore-heavy milestones and major UX milestones should keep a manual verification checklist and review it before merge.
