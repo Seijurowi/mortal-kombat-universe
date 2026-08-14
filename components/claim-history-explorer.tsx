@@ -5,7 +5,7 @@ import { useMemo, useState } from "react"
 import { BookOpenCheck, GitCompareArrows, History, Search } from "lucide-react"
 
 import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import type { Fact, Source, UniverseData } from "@/lib/types"
@@ -68,7 +68,6 @@ export function ClaimHistoryExplorer({ data }: { data: UniverseData }) {
           hasRetconned,
           hasDivergence,
           timelineCount: timelines.size,
-          valueCount: values.size,
         }
       })
       .filter((group) => group.hasDivergence)
@@ -122,9 +121,7 @@ export function ClaimHistoryExplorer({ data }: { data: UniverseData }) {
                 <GitCompareArrows className="size-4 text-primary" />
                 Divergent claims
               </CardTitle>
-              <CardDescription>
-                A difference between timelines is not automatically a retcon.
-              </CardDescription>
+              <CardDescription>A difference between timelines is not automatically a retcon.</CardDescription>
             </CardHeader>
             <CardContent className="space-y-3">
               <div className="relative">
@@ -218,9 +215,14 @@ export function ClaimHistoryExplorer({ data }: { data: UniverseData }) {
                                 </div>
                               </div>
                               {source.url ? (
-                                <Button asChild={false} size="sm" variant="outline">
-                                  <a href={source.url} target="_blank" rel="noreferrer">Official source</a>
-                                </Button>
+                                <a
+                                  className={buttonVariants({ variant: "outline", size: "sm" })}
+                                  href={source.url}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                >
+                                  Official source
+                                </a>
                               ) : null}
                             </div>
                           ))}
