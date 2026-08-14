@@ -1,0 +1,9 @@
+{
+  "id": "jerrod",
+  "type": "character",
+  "name": "Jerrod",
+  "timelineIds": ["original"],
+  "realmIds": ["edenia"],
+  "description": "The Edenian king presented in original-continuity material as Sindel's husband and Kitana's father before Shao Kahn took Edenia.",
+  "tags": ["edenian", "king", "ancient-history"]
+}
