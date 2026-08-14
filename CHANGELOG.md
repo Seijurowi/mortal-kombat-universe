@@ -8,15 +8,19 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 
 ### Added
 
-- First Phase 5 cosmology slice: One Being, Elder Gods, Edenia, Orderrealm/Seido, Chaosrealm, the ancient shattering event, and sourced Deception cosmology facts.
-- Mortal Kombat: Deception Shujinko biography and instruction-booklet source records.
-- Phase 5 manual verification for ancient cosmology, continuity scope, source provenance, and collective event participants.
+- Phase 5 Deception cosmology foundation: One Being, Elder Gods, Edenia, Orderrealm/Seido, Chaosrealm, the ancient shattering event, and sourced creation-myth facts.
+- Onaga / Shao Kahn / Shujinko Original-continuity records with sourced ancient succession and Deception-era story chains.
+- Mortal Kombat: Deception Shujinko biography, Raiden biography, Shujinko ending, and instruction-booklet source records.
+- Supported causal chains for `Shao Kahn poisons Onaga → seizes Outworld`, `Onaga manipulates Shujinko → Shujinko gathers Kamidogu`, and `Shujinko shatters Kamidogu → defeats Onaga`.
+- Phase 5 manual verification for ancient cosmology, continuity scope, source provenance, collective event participants, and causal gaps.
 
 ### Changed
 
 - Event participant validation now accepts `Character | Faction` instead of Character-only, proven necessary by the Elder Gods acting collectively in the Deception creation account.
+- Source taxonomy now includes `game_manual`, proven necessary by the official Deception instruction booklet.
 - Ancient Original-continuity cosmology remains explicitly scoped instead of being projected onto Reboot or New Era.
 - Kamidogu reawakening lore is represented as sourced Facts without manufacturing unsupported causal event edges.
+- Onaga chronology intentionally keeps unsupported transitions disconnected rather than turning sequence into causality.
 
 ## 2026-08-14 — Phase 4: Claim history, retcons, and evidence
 
