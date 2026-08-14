@@ -14,6 +14,7 @@ The repository deliberately separates **knowledge** from **presentation**:
 - `lib/load-data.ts` — server-only loader for the knowledge base.
 - `components/universe-explorer.tsx` — interactive explorer and timeline-first reading UI.
 - `components/causality-explorer.tsx` — whole-chain causal story explorer.
+- `components/claim-history-explorer.tsx` — claim divergence / retcon evidence explorer.
 - `components/ui/` — shadcn UI primitives.
 - `app/` — Next.js App Router shell and Mortal Kombat theme layer.
 - `docs/` — PRD, lore model, roadmap, changelog policy, and manual verification guides.
@@ -45,25 +46,21 @@ pnpm dlx shadcn@latest init --preset bcivVKXQ --template next
 
 The preset resolves to the `base-nova` style with Zinc CSS variables, Lucide icons, Tailwind CSS v4, and Base UI.
 
-Add future shadcn components with:
-
-```bash
-pnpm dlx shadcn@latest add <component>
-```
-
 ## Current state
 
 The validated dataset contains 75 records across 8 entity types, including the Bi-Han / Hanzo Hasashi / Quan Chi / Shirai Ryu / Noob Saibot cross-continuity stress test.
 
-The current product milestone is **Phase 3 — Story chains and causality**. The `/causality` view shows complete connected causal chains inside one continuity, keeps root/terminal events visible, highlights the selected event as `You are here`, and retains a local `Why? / What next?` close-up. Causal branches come only from explicit event links; chronology alone never creates an edge.
+Phases 1–3 are complete. The current product milestone is **Phase 4 — Claim history, retcons, and evidence**.
 
-Cross-timeline causal links are reserved for explicit reset/rewrite transitions (for example the Hourglass reset leading into the New Era). They remain valid model data but are intentionally excluded from ordinary within-continuity story trees until a dedicated timeline-transition UX is built.
+The new `/claims` view groups comparable facts by `subject + predicate` and shows each scoped version with canon status, timelines, notes, and supporting sources. A continuity difference is explicitly **not** treated as a retcon unless the data contains retcon evidence. Source years provide historical ordering only; they do not make the newest source automatically canonical.
+
+Existing `/causality` story trees remain continuity-scoped; explicit timeline reset/rewrite bridges remain valid model data but are not folded into ordinary continuity trees.
 
 See:
 
 - `docs/PRD.md`
 - `docs/ROADMAP.md`
-- `docs/PHASE3_MANUAL_VERIFICATION.md`
+- `docs/PHASE4_MANUAL_VERIFICATION.md`
 - `CHANGELOG.md`
 
 ## Development
@@ -84,7 +81,7 @@ Open `http://localhost:3000`.
 pnpm check
 ```
 
-This runs knowledge validation, ESLint, TypeScript type checking, and a production Next.js build. Validation requires mirrored causal references and rejects arbitrary cross-timeline causal edges unless the source event is explicitly tagged as a reset/rewrite bridge. GitHub Actions runs the same gate on pushes and pull requests.
+This runs knowledge validation, ESLint, TypeScript type checking, and a production Next.js build. GitHub Actions runs the same gate on pushes and pull requests.
 
 ## Change tracking
 
@@ -98,8 +95,9 @@ Read `AGENTS.md` before making substantive changes. In particular:
 
 - use pnpm only;
 - keep lore in `data/`, not React components;
-- prefer shadcn primitives over hand-rolled UI equivalents;
+- prefer shadcn/Base UI primitives over hand-rolled equivalents;
 - every `Fact` needs timeline scope, canon status, and source evidence;
-- do not merge conflicting Mortal Kombat continuities into a single unscoped claim;
+- do not merge conflicting continuities into one unscoped claim;
 - do not infer causal edges from chronology;
+- do not label ordinary continuity divergence as a retcon without evidence;
 - review `CHANGELOG.md` before requesting merge.
