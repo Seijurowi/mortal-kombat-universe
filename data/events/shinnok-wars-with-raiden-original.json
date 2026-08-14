@@ -1,0 +1,13 @@
+{
+  "id": "shinnok-wars-with-raiden-original",
+  "type": "event",
+  "name": "Shinnok wars with Raiden for Earthrealm",
+  "timelineId": "original",
+  "participantIds": ["shinnok", "raiden"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": [],
+  "consequenceEventIds": ["shinnok-banished-netherrealm-original"],
+  "order": -700,
+  "description": "Shinnok, then an Elder God, seeks control of Earthrealm and fights its protector Raiden in a devastating ancient war.",
+  "tags": ["ancient", "earthrealm", "elder-gods", "war"]
+}
