@@ -1,0 +1,9 @@
+{
+  "id": "shinnok",
+  "type": "character",
+  "name": "Shinnok",
+  "timelineIds": ["original"],
+  "realmIds": ["netherrealm"],
+  "description": "A fallen Elder God who warred against Raiden for Earthrealm, was banished to the Netherrealm, and later rose to rule it in the original continuity.",
+  "tags": ["fallen-elder-god", "ruler", "ancient"]
+}
