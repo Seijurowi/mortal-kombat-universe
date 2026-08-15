@@ -132,14 +132,17 @@ Inspect `/causality` around the first-game tournament.
 - [ ] The causal edge is justified by MKII story text connecting Tsung's failure/Goro's apparent death to his plea for another chance.
 - [ ] This new supported edge does not cause unrelated pre-1992 tournament events to become causally connected.
 
-## 14. MKII Outworld plan and conflict
+## 14. MKII Outworld plan and confirmed tournament
 
-Open `Shang Tsung plans an Outworld tournament`, `Mortal Kombat II conflict in Outworld`, and the `Shang Tsung planned to lure his enemies to compete in Outworld` Fact.
+Open `Shang Tsung plans an Outworld tournament`, `Second Mortal Kombat tournament in Outworld`, `Shang Tsung planned to lure his enemies to compete in Outworld`, and `Liu Kang was lured into Outworld for the second tournament`.
 
 - [ ] The planning Event has **no** `realmIds` entry because the source establishes the target realm of the plan, not the location where the plan is made.
-- [ ] The plan Fact is `canon` and cites the existing `Mortal Kombat II — Arcade Story` source.
-- [ ] `Mortal Kombat II conflict in Outworld` carries `realmIds: ["outworld"]` because MKII explicitly places the competition in Outworld.
-- [ ] `/causality` shows `First game tournament → Shang Tsung seeks a second chance → Shang Tsung plans an Outworld tournament → Mortal Kombat II conflict in Outworld`.
+- [ ] The plan Fact is `canon` and cites `Mortal Kombat II — Arcade Story`.
+- [ ] The MKII Source notes explicitly include the new plan to lure enemies to compete in Outworld.
+- [ ] `Mortal Kombat Trilogy — Story` is present as later Original-continuity confirmation that Liu Kang and his comrades were actually lured into Outworld for a second tournament.
+- [ ] `Second Mortal Kombat tournament in Outworld` carries `realmIds: ["outworld"]` and does not rely on the MKII plan alone as proof that the plan occurred.
+- [ ] `Liu Kang was lured into Outworld for the second tournament` is a `canon` Fact citing the MKT story.
+- [ ] `/causality` shows `First game tournament → Shang Tsung seeks a second chance → Shang Tsung plans an Outworld tournament → Second Mortal Kombat tournament in Outworld`.
 - [ ] The new links do not connect the older Great Kung Lao-era events merely to make one continuous tournament tree.
 - [ ] No later Reboot/New Era retelling is used to fill Original-continuity details in this chain.
 
@@ -171,6 +174,6 @@ Before the next Phase 5 expansion, answer:
 - Is ending + later primary confirmation clear enough to support a narrower `canon` outcome without canonizing an ending wholesale?
 - Are qualified states such as `apparent death` staying visibly weaker than confirmed death?
 - Are event locations omitted when realm scope is not directly supported, even if the surrounding story later moves to a known realm?
-- Is the plan-versus-occurrence split clear enough to distinguish “plan targets Outworld” from “event happens in Outworld”?
+- Is the plan-versus-occurrence split clear enough to distinguish “plan targets Outworld” from “later source confirms that plan happened”?
 - Do we need a first-class Artifact entity once individual Kamidogu histories become navigable, or can Facts continue to carry that concept for now?
 - Are the separate short ancient-history chains easier to trust than one artificially connected story tree?
