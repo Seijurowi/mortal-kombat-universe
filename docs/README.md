@@ -1,6 +1,6 @@
 # Mortal Kombat Universe — Documentation
 
-This directory contains the product, domain, planning, and verification contracts for the project. The repository should remain understandable without relying on chat history, PR descriptions, or hidden implementation context.
+This directory contains the product, domain, planning, readiness, and verification contracts for the project. The repository should remain understandable without relying on chat history, PR descriptions, or hidden implementation context.
 
 ## Start here
 
@@ -9,8 +9,9 @@ For substantive work, read these in order:
 1. [`PRD.md`](./PRD.md) — what product we are building and the stable reader-facing principles.
 2. [`LORE_MODEL.md`](./LORE_MODEL.md) — how continuity, facts, events, relationships, sources, canon, realms, and causality are represented.
 3. [`ROADMAP.md`](./ROADMAP.md) — the **authoritative current milestone/status/next-work document**.
-4. [`CHANGELOG_POLICY.md`](./CHANGELOG_POLICY.md) — how to maintain the root [`CHANGELOG.md`](../CHANGELOG.md).
-5. [`../AGENTS.md`](../AGENTS.md) — execution rules for agents and contributors.
+4. [`DEFINITION_OF_DONE.md`](./DEFINITION_OF_DONE.md) — the repository-wide completion/readiness gate for substantive PRs.
+5. [`CHANGELOG_POLICY.md`](./CHANGELOG_POLICY.md) — how to maintain the root [`CHANGELOG.md`](../CHANGELOG.md).
+6. [`../AGENTS.md`](../AGENTS.md) — execution rules for agents and contributors.
 
 ## Documentation ownership
 
@@ -19,13 +20,14 @@ Each document has one primary job. Avoid duplicating short-lived status across s
 - `PRD.md` defines **what product we are building** and stable product principles.
 - `LORE_MODEL.md` defines **how lore is represented** and records proven reusable domain decisions.
 - `ROADMAP.md` defines **what is complete, what is active, and what we intend to work on next**. It is the sole owner of active slice/branch status.
+- `DEFINITION_OF_DONE.md` defines **what must be true before a substantive PR is ready to be considered complete**.
 - `CHANGELOG.md` records **what materially changed**; it is history, not a backlog.
 - `CHANGELOG_POLICY.md` defines **how that history is maintained**.
 - manual verification files define **what a human must check that automation cannot prove**.
-- `AGENTS.md` defines **how contributors and agents execute work**; it should reference the roadmap rather than duplicate branch-specific status.
+- `AGENTS.md` defines **how contributors and agents execute work** and references the Definition of Done rather than duplicating its full readiness checklist.
 - the root `README.md` is onboarding and architecture orientation; it should point to the roadmap for live project status rather than carry fragile record counts or active-branch details.
 
-When implementation changes a product requirement, domain assumption, source policy, contributor workflow, or major architecture behavior, update the owning document in the same pull request. Do not leave durable decisions only in chat, commit messages, or PR descriptions.
+When implementation changes a product requirement, domain assumption, source policy, completion gate, contributor workflow, or major architecture behavior, update the owning document in the same pull request. Do not leave durable decisions only in chat, commit messages, or PR descriptions.
 
 ## Manual verification index
 
@@ -35,7 +37,7 @@ Manual checklists are **repeatable procedures**, not status trackers. An uncheck
 
 - [`MANUAL_VERIFICATION.md`](./MANUAL_VERIFICATION.md) — Phase 1 Bi-Han identity/continuity stress test.
 - [`PHASE2_MANUAL_VERIFICATION.md`](./PHASE2_MANUAL_VERIFICATION.md) — timeline-first character reading.
-- [`PHASE3_MANUAL_VERIFICATION.md`](./PHASE3_MANUAL_VERIFICATION.md) — story-chain causality. Some wording records the original Phase 3 acceptance state; later Phase 5 DAG/chronology improvements supersede older UI-specific assumptions.
+- [`PHASE3_MANUAL_VERIFICATION.md`](./PHASE3_MANUAL_VERIFICATION.md) — story-chain causality and current chronology/DAG regression behavior.
 - [`PHASE4_MANUAL_VERIFICATION.md`](./PHASE4_MANUAL_VERIFICATION.md) — claim history, retcon-vs-variation, source chronology, and evidence.
 
 ### Phase 5 cumulative and slice-specific checks
@@ -46,8 +48,8 @@ Manual checklists are **repeatable procedures**, not status trackers. An uncheck
 
 For Phase 5 work, run the broad regression checklist when the change can affect shared model/UI behavior, then run the latest relevant slice-specific checklist. New large slices may get their own checklist instead of indefinitely appending duplicate detail to the cumulative file.
 
-## Verification rule
+## Verification and readiness rule
 
 Automated validation proves JSON shape, references, causal-edge invariants, TypeScript safety, linting, and production build health. It does **not** prove continuity interpretation, source sufficiency, retcon interpretation, causal interpretation, evidence strength, or good UX.
 
-A green `pnpm check` is necessary but never sufficient for lore-heavy or model-heavy work.
+A green `pnpm check` is necessary but never sufficient for lore-heavy or model-heavy work. Use [`DEFINITION_OF_DONE.md`](./DEFINITION_OF_DONE.md) for the final readiness pass before a substantive PR is marked ready for review.
