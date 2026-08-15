@@ -6,7 +6,7 @@
   "participantIds": ["liu-kang", "shang-tsung", "shao-kahn"],
   "realmIds": ["outworld"],
   "causeEventIds": ["shang-tsung-plans-outworld-tournament-original"],
-  "consequenceEventIds": ["shao-kahn-enacts-sindel-plan-original"],
+  "consequenceEventIds": [],
   "order": 130,
   "description": "Liu Kang and his allies are lured into Outworld to compete in a second tournament, carrying out the plan introduced in Mortal Kombat II.",
   "tags": ["tournament", "outworld", "mk2"]
