@@ -30,7 +30,7 @@ Complete and merged. Delivered `/claims`, evidence-safe claim-family labels, sou
 
 **Status: in progress.**
 
-**Current work:** Original-continuity **Quan Chi / Shinnok MK4 role detail** in draft PR #17 on `agent/phase5-mk4-quan-chi-shinnok-role`, branched from verified PR #16 merge commit `36cb0dc3fd71075c15ef3451df54b9aa721dac1a`.
+**Current work:** Original-continuity **Quan Chi / Shinnok MK4 role detail** in PR #17 on `agent/phase5-mk4-quan-chi-shinnok-role`, branched from verified PR #16 merge commit `36cb0dc3fd71075c15ef3451df54b9aa721dac1a`. Implementation, maintainer manual review, source recheck, and final contract review are complete; final-head CI remains before Ready for review.
 
 Goal: expand from character-scale lore into ancient and Original-continuity history while preserving source, continuity, causality, and evidence caveats instead of presenting one synthetic canon narrative.
 
@@ -133,11 +133,12 @@ This slice adds only directly sourced Original-continuity detail about Quan Chi'
 - [x] Do not create a precisely ordered amulet-theft Event or defeat→theft causal edge because the later bio does not date the theft sufficiently.
 - [x] Keep Original history separate from MKX/Reboot claims that Quan Chi helped Shinnok escape.
 - [x] Add/index a slice-specific manual verification checklist.
-- [ ] Review/update CHANGELOG for this slice.
+- [x] Review/update CHANGELOG for this slice.
 - [x] Open draft PR #17.
-- [ ] Run CI on the draft head.
-- [ ] Perform maintainer manual UI/source pass.
-- [ ] Perform final AGENTS + LORE_MODEL + DoD review after manual pass.
+- [x] Draft-head CI passed before final review.
+- [x] Maintainer manual UI/source pass completed.
+- [x] Final AGENTS + LORE_MODEL + DoD review completed after rechecking the MK Gold and Deadly Alliance source wording; no semantic correction was required.
+- [ ] Final-head CI after readiness-status update.
 - [ ] Merge only after explicit user/maintainer action.
 
 ### Next lore slices
