@@ -1,0 +1,12 @@
+{
+  "id": "fact-baraka-led-shaolin-temple-attack-original",
+  "type": "fact",
+  "name": "Baraka led the attack on Liu Kang's Shaolin temples",
+  "subjectId": "baraka",
+  "predicate": "led_attack_on",
+  "value": "Liu Kang's Shaolin temples",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk2-baraka-bio"],
+  "notes": "Mortal Kombat II's Baraka biography directly identifies Baraka as the leader of the attack against Liu Kang's Shaolin temples."
+}
