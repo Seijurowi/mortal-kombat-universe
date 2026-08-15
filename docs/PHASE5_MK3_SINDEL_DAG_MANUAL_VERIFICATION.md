@@ -57,26 +57,24 @@ Open `MK3 frames Shao Kahn as enacting the Sindel plan after failed tournament a
 
 ## 6. Chronology versus causality UX
 
-Inspect the active seven-event component in `/causality`.
+Inspect `/causality` around the seven-event Sindel/MKII component.
 
-- [ ] A dedicated `Chronology` strip appears above the causal tree.
-- [ ] Every Event appears exactly once in the strip in story-order sequence, currently `1 → 7` for this component.
-- [ ] Selecting a chronology item moves `You are here` to that Event without changing the active continuity/component.
-- [ ] The strip explicitly says that chronological neighbors are not automatically causal neighbors.
-- [ ] The causal tree uses `Causal start` / `Causal end` wording so those badges are not mistaken for chronological endpoints.
-- [ ] The local selected-event card shows its chronology position separately from its `Why? / What next?` causal context.
+- [ ] The `Chronology · story order` rail lists each event exactly once, left-to-right as Moment 1 through Moment 7.
+- [ ] Clicking a chronology item moves `You are here` without changing the stored graph.
+- [ ] The chronology rail is explicitly described as sequence only; neighboring moments are not implied to be causal.
+- [ ] `Causal start` / `Causal end` labels are visually distinct from chronology positions.
+- [ ] The causal tree may branch in a reading order different from 1 → 7 without making chronology ambiguous because the chronology rail remains visible above it.
 
 ## 7. DAG merge rendering
 
 Inspect the whole-tree rendering around `Second Mortal Kombat tournament in Outworld`.
 
 - [ ] The local `Why?` view shows both causal parents.
-- [ ] The full shared tournament card is rendered only once in the whole causal tree.
-- [ ] The other causal parent renders an explicit `Merges into` reference pointing to the same tournament Event.
-- [ ] The merge reference is selectable and focuses the shared tournament Event.
-- [ ] The shared Event remains labelled as a merge node with two parents.
-- [ ] No lore edge was removed merely to simplify rendering.
+- [ ] The second tournament appears as one full Event card in the whole causal tree, not duplicated under both parents.
+- [ ] The additional parent branch shows an explicit `Merges into Second Mortal Kombat tournament in Outworld` reference.
+- [ ] Clicking the merge reference focuses the shared tournament Event.
+- [ ] Both causal edges remain visible; no lore edge was removed merely to simplify rendering.
 
 ## Decision
 
-The key acceptance question is whether chronology can now be followed independently from causality while the multi-parent Event remains visibly one shared occurrence. The data should stay more trustworthy than a visually simpler but historically flattened chain.
+The key acceptance question is whether chronology and causality now answer different questions clearly: the chronology rail answers **what happened when**, while the causal tree answers **why it happened / what it led to**. The first sourced multi-parent node should remain trustworthy without forcing the reader to infer chronology from tree layout.
