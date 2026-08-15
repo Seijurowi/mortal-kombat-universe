@@ -47,15 +47,19 @@ Do not create npm/yarn lockfiles. Keep `pnpm-lock.yaml` synchronized with `packa
 
 ## UI system
 
-The project uses the shadcn `bcivVKXQ` preset: `base-nova`, Zinc variables, Lucide icons, Tailwind CSS v4, and Base UI.
+The project uses the shadcn `bcivVKXQ` preset: `base-nova`, Zinc variables, Lucide icons, Tailwind CSS v4, and Base UI. The repository's `components/ui/` inventory is the **default primitive layer** for product UI.
 
-- Prefer existing `components/ui/*` primitives.
-- Add registry components with `pnpm dlx shadcn@latest add <component>`.
-- Keep domain components outside `components/ui/`.
-- Preserve accessibility, keyboard behavior, focus states, and semantic controls.
-- Keep Mortal Kombat styling as a theme layer on shadcn tokens.
+- Before hand-building a button, input, select, dialog, popover, tooltip, tabs, accordion, navigation control, form primitive, feedback state, or similar generic control, check `components/ui/` first and compose the existing shadcn/Base UI primitive when it fits.
+- Prefer composition and variants of existing `components/ui/*` primitives over parallel one-off implementations with duplicated interaction/accessibility behavior.
+- Add missing registry components with `pnpm dlx shadcn@latest add <component>` rather than copying arbitrary third-party snippets into the repository.
+- Keep domain/product components outside `components/ui/`; `components/ui/` should remain reusable UI primitives rather than Mortal Kombat-specific business components.
+- Registry-generated components are repository-owned code and may be adjusted when required for React/Next compatibility, lint/type safety, accessibility, or the established visual system. Preserve their public API and expected behavior unless a deliberate breaking change is reviewed.
+- Do not import or render a component merely because it exists in the inventory. Use the smallest appropriate primitive/composition for the actual UX requirement.
+- Preserve accessibility, keyboard behavior, focus states, semantic controls, and mobile behavior when composing or modifying primitives.
+- Keep Mortal Kombat styling as a theme/composition layer on shadcn tokens; avoid creating a second unrelated design system in feature code.
 - Do not redesign speculatively; let real lore/navigation friction prove the need.
-- Do not assume Radix `asChild`; the current shadcn foundation uses Base UI.
+- Do not assume Radix `asChild`; the current shadcn foundation uses Base UI and its APIs.
+- When a shadcn/registry update adds dependencies or generated support files, keep `package.json` and `pnpm-lock.yaml` synchronized and run the final `pnpm check` against the resulting inventory.
 
 ## Continuity rules
 
