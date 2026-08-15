@@ -1,0 +1,13 @@
+{
+  "id": "shang-tsung-plans-outworld-tournament-original",
+  "type": "event",
+  "name": "Shang Tsung plans an Outworld tournament",
+  "timelineId": "original",
+  "participantIds": ["shang-tsung", "shao-kahn"],
+  "realmIds": [],
+  "causeEventIds": ["shang-tsung-seeks-second-chance-original"],
+  "consequenceEventIds": ["mortal-kombat-ii-outworld-original"],
+  "order": 120,
+  "description": "With Shao Kahn granting him another chance, Shang Tsung's new plan is to lure his enemies to compete in Outworld, where Shao Kahn intends to destroy them.",
+  "tags": ["tournament", "plan", "mk2-setup"]
+}

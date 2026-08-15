@@ -1,0 +1,12 @@
+{
+  "id": "fact-shang-tsung-planned-outworld-tournament-original",
+  "type": "fact",
+  "name": "Shang Tsung planned to lure his enemies to compete in Outworld",
+  "subjectId": "shang-tsung",
+  "predicate": "planned",
+  "value": "lure his enemies to compete in Outworld",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk2-story"],
+  "notes": "The Mortal Kombat II arcade intro explicitly describes this as Shang Tsung's new plan after Shao Kahn grants him a second chance."
+}

@@ -1,0 +1,12 @@
+{
+  "id": "fact-liu-kang-lured-into-outworld-tournament-original",
+  "type": "fact",
+  "name": "Liu Kang was lured into Outworld for the second tournament",
+  "subjectId": "liu-kang",
+  "predicate": "lured_to_compete_in",
+  "objectId": "outworld",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkt-story"],
+  "notes": "Mortal Kombat Trilogy's story explicitly states that Liu Kang and his comrades were lured into Outworld to compete in a second tournament. This confirms that Shang Tsung's earlier Outworld plan was carried out."
+}

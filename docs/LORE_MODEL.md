@@ -36,6 +36,8 @@ Phase 5 expanded participant validation from Character-only to `Character | Fact
 
 Event realm scope also requires direct support. Do not infer a location merely from the realms associated with participants or from the location of a later consequence. The MKII setup does not establish where Shang Tsung makes his plea to Shao Kahn, so `Shang Tsung seeks a second chance` intentionally has no `realmIds` entry even though the plan that follows concerns Outworld.
 
+A stated plan, intention, threat, prophecy, or possibility is not evidence that the planned occurrence actually happened. Model the planning state separately, then require a source that treats the occurrence as established history before creating/promoting the resulting Event. The MKII slice uses the arcade story for Shang Tsung's Outworld plan and Mortal Kombat Trilogy story for later confirmation that Liu Kang and his comrades were actually lured into Outworld for a second tournament.
+
 Sequence alone does not prove causality. Ordinary causal links connect events in the same timeline. Cross-timeline causal links are reserved for explicit reset/rewrite bridges whose source event creates or rewrites the following continuity; the validator recognizes `reset`, `rewrite`, and `timeline-bridge` source-event tags.
 
 Temporal phrases such as **“during this period,” “after,” “before,” or “years later”** establish chronology/context unless the source also states a causal relationship. The Great Kung Lao tournament slice proves this distinction: the original Mortal Kombat story says Goro defeated Kung Lao and that during this period the tournament fell into Shang Tsung's hands. Those are separate Events/Facts with no `causeEventIds` edge because temporal co-occurrence is not proof that Goro's victory caused Shang Tsung's takeover.
@@ -100,7 +102,7 @@ When a primary work is only accessible through a preservation mirror, the Source
 
 Phase 5 adds `game_manual` as a first-class Source type after the Mortal Kombat: Deception instruction booklet proved that official manuals are a reusable evidence category rather than generic `other` material.
 
-Later games may clarify or confirm an older event without replacing the older source. The Great Kung Lao slice uses Mortal Kombat (1992) to establish Goro's ancient victory and Mortal Kombat II to identify the defeated ancestor explicitly as the **Great Kung Lao**. The Liu Kang slice uses direct later biographies to confirm specific first-game outcomes first shown in Liu Kang's ending. A source should only support the claim it actually states: MKII's general account of Goro's apparent death is not used as direct proof that Liu Kang personally defeated Goro. This is evidence accumulation, not “newer source automatically wins.”
+Later games may clarify or confirm an older event without replacing the older source. The Great Kung Lao slice uses Mortal Kombat (1992) to establish Goro's ancient victory and Mortal Kombat II to identify the defeated ancestor explicitly as the **Great Kung Lao**. The Liu Kang slice uses direct later biographies to confirm specific first-game outcomes first shown in Liu Kang's ending. A source should only support the claim it actually states: MKII's general account of Goro's apparent death is not used as direct proof that Liu Kang personally defeated Goro. The MKII/MKT slice similarly separates Shang Tsung's plan from later confirmation that the second Outworld tournament occurred. This is evidence accumulation, not “newer source automatically wins.”
 
 ## 10. Source granularity
 
@@ -120,6 +122,8 @@ The Great Kung Lao/Goro slice adds another reusable case: `Goro defeats the Grea
 
 The first-game tournament now has one explicit consequence edge to Shang Tsung's second-chance plea because MKII story text supplies the missing causal language. This demonstrates that causal gaps can be filled later when stronger evidence appears without retroactively treating all chronology as causality.
 
+The MKII continuation distinguishes planning from occurrence. `Shang Tsung plans an Outworld tournament` is supported by the MKII intro; `Second Mortal Kombat tournament in Outworld` is supported by later MKT story text that says Liu Kang and his comrades were lured there to compete. The causal edge links a sourced plan to a separately sourced occurrence rather than assuming plans automatically succeed.
+
 ## 12. Cosmology and ancient-history modeling
 
 Phase 5 begins with the Original-continuity creation account in Mortal Kombat: Deception and expands through Onaga, Shinnok, Edenia/Outworld conquest history, pre-1992 tournament history, and the MK1992 transition into MKII.
@@ -132,6 +136,7 @@ Current choices:
 - realm-target claims use Facts; `realmIds` stays event location/scope metadata and is omitted when event location is not directly supported.
 - historical titles, reigns, tournament control, and victories are Facts/Events rather than timeless metadata.
 - ending-only details may be preserved conservatively, while specific ending outcomes may be promoted to canon only when independent primary sources confirm them.
+- plans/intentions remain separate from later occurrences unless another source establishes that the intended event actually happened.
 - qualified states such as Goro's `apparent death` remain qualified rather than becoming stronger death events.
 - tournament-era chronology may remain disconnected when sources provide only sequence/context, and may gain causal edges later when direct evidence is found.
 
@@ -168,7 +173,8 @@ Proven cases include:
 - ending-only lore retained conservatively until later primary evidence confirms a narrower canonical outcome;
 - temporal association kept separate from causality, proven by Great Kung Lao/Goro/Shang Tsung history;
 - qualified states kept weaker than confirmed transformations, proven by Goro's `apparent death` in the MKII setup;
-- event location omitted when realm scope is contextual but not directly stated, proven by Shang Tsung's second-chance plea.
+- event location omitted when realm scope is contextual but not directly stated, proven by Shang Tsung's second-chance plea;
+- plans kept distinct from later occurrences until occurrence evidence exists, proven by the MKII Outworld plan and MKT confirmation of the second tournament.
 
 Current pressure points include:
 

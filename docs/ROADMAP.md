@@ -32,7 +32,7 @@ Delivered:
 
 ## Phase 5 — Cosmology and ancient history 🔨
 
-Status: implementation in progress on `agent/phase5-liu-kang-1992`.
+Status: implementation in progress on `agent/phase5-mk2-outworld`.
 
 Goal: expand from character-scale lore into the oldest Mortal Kombat history while preserving source and continuity caveats instead of presenting one synthetic creation myth or one flattened ancient history as timeless canon.
 
@@ -87,7 +87,7 @@ Goal: expand from character-scale lore into the oldest Mortal Kombat history whi
 - [x] Do **not** connect Goro's victory to Shang Tsung's takeover with a causal edge: the source says these happened in the same period, not that one caused the other.
 - [x] Merge the reviewed slice through PR #8.
 
-### Liu Kang / MK1992 bridge slice 🔨
+### Liu Kang / MK1992 bridge slice ✅
 
 - [x] Enrich the existing `mortal-kombat-1992` Event instead of duplicating the first-game tournament.
 - [x] Add Goro and Shang Tsung as participants in that Event.
@@ -96,11 +96,23 @@ Goal: expand from character-scale lore into the oldest Mortal Kombat history whi
 - [x] Record Liu Kang defeating Goro and winning the tournament from Shang Tsung's control as canon Facts supported by later primary sources.
 - [x] Model `first-game tournament → Shang Tsung seeks a second chance` because MKII explicitly connects Tsung's failure/Goro's apparent death to his plea to Shao Kahn.
 - [x] Do not model Goro's death; MKII says only `apparent death`.
-- [ ] Final AGENTS/manual review and CI for the slice.
+- [x] Merge the reviewed slice through PR #9.
+
+### Mortal Kombat II / Outworld setup slice 🔨
+
+- [x] Extend `Shang Tsung seeks a second chance` into his explicitly sourced new plan.
+- [x] Add `Shang Tsung plans an Outworld tournament` as a separate Event rather than pretending the plea itself occurred in Outworld.
+- [x] Add a canon Fact for the plan to lure enemies to compete in Outworld.
+- [x] Reuse and expand the existing `mk2-story` Source notes so the plan claim is directly reviewable.
+- [x] Add Mortal Kombat Trilogy story as later Original-continuity confirmation that Liu Kang and his comrades were actually lured into Outworld for a second tournament.
+- [x] Add `Second Mortal Kombat tournament in Outworld` with `realmIds: ["outworld"]` and a canon Fact confirming Liu Kang was lured there to compete.
+- [x] Model `second-chance plea → Outworld plan → second Outworld tournament` as the supported continuation of the story chain.
+- [x] Keep plan and occurrence distinct: the MKII intro establishes intent; MKT confirms that intent was carried out.
+- [x] Final AGENTS/manual review and CI for the slice.
 
 ### Next lore slices
 
-- [ ] Extend the MKII setup through Shao Kahn's Outworld tournament invitation/invasion material with primary sources.
+- [ ] Decide after review whether to continue into MKII outcome / Shaolin attack details or pivot to a higher-value cosmology/retcon comparison stress case.
 - [ ] Onaga's resurrection/return mechanism and post-Deception fate with stronger source coverage.
 - [ ] Shinnok escape/MK4 and Reboot continuity comparison.
 - [ ] Compare Original cosmology against MK11-era Titan/Kronika cosmology without forcing them into one universal truth.
@@ -121,7 +133,8 @@ A user should be able to:
 9. distinguish biography-backed Edenian canon claims from ending-only supplemental Jerrod details;
 10. inspect the Great Kung Lao/Goro/Shang Tsung tournament era without turning temporal association into causality;
 11. follow Liu Kang's first-game victory into Shang Tsung's documented second-chance plea without treating Goro's apparent death as confirmed death;
-12. see intentional causal gaps where the sources establish sequence or context but not direct causation.
+12. follow the plea into Shang Tsung's Outworld plan and then the later-confirmed second tournament without confusing plan target with planning-event location;
+13. see intentional causal gaps where the sources establish sequence or context but not direct causation.
 
 See `PHASE5_MANUAL_VERIFICATION.md`.
 

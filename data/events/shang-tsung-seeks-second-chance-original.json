@@ -6,7 +6,7 @@
   "participantIds": ["shang-tsung", "shao-kahn"],
   "realmIds": [],
   "causeEventIds": ["mortal-kombat-1992"],
-  "consequenceEventIds": [],
+  "consequenceEventIds": ["shang-tsung-plans-outworld-tournament-original"],
   "order": 110,
   "description": "After his failure in the first-game tournament and Goro's apparent death, Shang Tsung convinces Shao Kahn to grant him another chance.",
   "tags": ["tournament", "mk2-setup"]
