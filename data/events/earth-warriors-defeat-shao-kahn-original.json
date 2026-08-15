@@ -1,0 +1,13 @@
+{
+  "id": "earth-warriors-defeat-shao-kahn-original",
+  "type": "event",
+  "name": "Earth warriors defeat Shao Kahn",
+  "timelineId": "original",
+  "participantIds": ["shao-kahn", "liu-kang"],
+  "realmIds": [],
+  "causeEventIds": [],
+  "consequenceEventIds": [],
+  "order": 180,
+  "description": "Shao Kahn is defeated at the hands of the Earth warriors, an outcome later treated as established history by Mortal Kombat 4.",
+  "tags": ["mk3-outcome", "defeat"]
+}
