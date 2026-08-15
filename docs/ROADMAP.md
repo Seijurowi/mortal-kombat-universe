@@ -30,7 +30,7 @@ Complete and merged. Delivered `/claims`, evidence-safe claim-family labels, sou
 
 **Status: in progress.**
 
-**Current work:** Original-continuity **Shao Kahn / Deadly Alliance apparent-death stress test** in draft PR #19 on `agent/phase5-shao-kahn-apparent-death`, branched exactly from verified PR #18 merge commit `68da6291f05870187394cddc4912a56afe6ed611`. The slice preserves the older Deadly Alliance death portrayal as retconned evidence, adds later Deception clone/survival evidence, and avoids asserting that the real Shao Kahn died or that a specific attacker killed the clone. Documentation, manual review, and final-head CI remain part of the readiness gate; merge remains an explicit user/maintainer action.
+**Current work:** Original-continuity **Shao Kahn / Deadly Alliance apparent-death stress test** in draft PR #19 on `agent/phase5-shao-kahn-apparent-death`, branched exactly from verified PR #18 merge commit `68da6291f05870187394cddc4912a56afe6ed611`. The slice preserves the older Deadly Alliance death portrayal as retconned evidence, adds later Deception clone-decoy evidence plus direct post-Deadly-Alliance evidence that the real Shao Kahn is alive, and avoids asserting that the real Shao Kahn died, that the clone specifically received the Deadly Alliance attack, or that a specific attacker killed the clone. Documentation, manual review, and final-head CI remain part of the readiness gate; merge remains an explicit user/maintainer action.
 
 Goal: expand from character-scale lore into ancient and Original-continuity history while preserving source, continuity, causality, and evidence caveats instead of presenting one synthetic canon narrative.
 
@@ -146,15 +146,15 @@ This slice tests the existing retcon/claim-history model against a real same-con
 - [x] Add the MKDA Kitana ending as explicit older evidence portraying Shao Kahn as dead.
 - [x] Mark that older `deadly_alliance_era_status = dead` portrayal `retconned` rather than current canon.
 - [x] Add Deception Shao Kahn biography evidence that he created a clone decoy and escaped.
-- [x] Add Deception Goro biography evidence that Goro later encountered the real Shao Kahn alive.
-- [x] Add current-canon `deadly_alliance_era_status = survived via clone decoy` without asserting who struck or killed the clone.
-- [x] Add a narrow canon Fact that Shao Kahn created a clone decoy.
+- [x] Add Deception Goro biography evidence that Goro encountered the real Shao Kahn alive.
+- [x] Add current-canon `deadly_alliance_era_status = alive after Deadly Alliance` from later primary evidence.
+- [x] Keep the clone-decoy mechanism as a separate canon Fact rather than claiming the clone specifically received the Deadly Alliance attack or enabled survival from that attack.
 - [x] Exercise `/claims` with the first useful real `retconned` Fact family without adding speculative `contradicts` / `supersedes` schema.
-- [ ] Add/index the slice-specific manual verification checklist.
-- [ ] Review/update CHANGELOG for this slice.
+- [x] Add/index the slice-specific manual verification checklist.
+- [x] Review/update CHANGELOG for this slice.
 - [x] Open draft PR #19.
 - [ ] Run maintainer manual UI/source pass.
-- [ ] Perform final AGENTS + LORE_MODEL + DoD review and source wording recheck.
+- [ ] Perform final AGENTS + LORE_MODEL + DoD review and post-manual source wording recheck.
 - Current-head CI must be green before Ready for review; CI state is owned by the PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
@@ -192,7 +192,7 @@ A user should be able to:
 21. inspect Quan Chi's theft of Shinnok's amulet without an invented exact date or defeat→theft causal bridge;
 22. follow the Deadly Alliance into Liu Kang's death with an explicit plan→occurrence edge while formation→plan remains chronology-only;
 23. see Shang Tsung identified as Liu Kang's killer and soul-consumer without upgrading Quan Chi's assistance into a co-killer Fact;
-24. inspect the Shao Kahn Deadly Alliance-era death portrayal as retconned evidence alongside later clone/survival evidence without being told that the real Shao Kahn died or that the sources identify who killed the clone;
+24. inspect the Shao Kahn Deadly Alliance-era death portrayal as retconned evidence alongside later clone-decoy and post-MKDA-alive evidence without being told that the real Shao Kahn died, that the clone received the Deadly Alliance attack, or that the sources identify who killed the clone;
 25. see intentional causal gaps where sources establish sequence/context but not direct causation;
 26. navigate documentation without conflicting live-status claims.
 
