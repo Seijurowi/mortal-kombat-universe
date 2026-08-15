@@ -103,9 +103,11 @@ Goal: expand from character-scale lore into the oldest Mortal Kombat history whi
 - [x] Extend `Shang Tsung seeks a second chance` into his explicitly sourced new plan.
 - [x] Add `Shang Tsung plans an Outworld tournament` as a separate Event rather than pretending the plea itself occurred in Outworld.
 - [x] Add a canon Fact for the plan to lure enemies to compete in Outworld.
-- [x] Add `Mortal Kombat II conflict in Outworld` with `realmIds: ["outworld"]` because the MKII story explicitly places the competition there.
-- [x] Model `second-chance plea → Outworld plan → MKII Outworld conflict` as the supported continuation of the story chain.
-- [x] Reuse the existing `mk2-story` Source instead of creating duplicate source records.
+- [x] Reuse and expand the existing `mk2-story` Source notes so the plan claim is directly reviewable.
+- [x] Add Mortal Kombat Trilogy story as later Original-continuity confirmation that Liu Kang and his comrades were actually lured into Outworld for a second tournament.
+- [x] Add `Second Mortal Kombat tournament in Outworld` with `realmIds: ["outworld"]` and a canon Fact confirming Liu Kang was lured there to compete.
+- [x] Model `second-chance plea → Outworld plan → second Outworld tournament` as the supported continuation of the story chain.
+- [x] Keep plan and occurrence distinct: the MKII intro establishes intent; MKT confirms that intent was carried out.
 - [ ] Final AGENTS/manual review and CI for the slice.
 
 ### Next lore slices
@@ -131,7 +133,7 @@ A user should be able to:
 9. distinguish biography-backed Edenian canon claims from ending-only supplemental Jerrod details;
 10. inspect the Great Kung Lao/Goro/Shang Tsung tournament era without turning temporal association into causality;
 11. follow Liu Kang's first-game victory into Shang Tsung's documented second-chance plea without treating Goro's apparent death as confirmed death;
-12. follow the plea into Shang Tsung's Outworld plan and the MKII conflict without inventing a realm location for the planning conversation;
+12. follow the plea into Shang Tsung's Outworld plan and then the later-confirmed second tournament without confusing plan target with planning-event location;
 13. see intentional causal gaps where the sources establish sequence or context but not direct causation.
 
 See `PHASE5_MANUAL_VERIFICATION.md`.
