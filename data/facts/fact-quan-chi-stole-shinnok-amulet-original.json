@@ -1,0 +1,12 @@
+{
+  "id": "fact-quan-chi-stole-shinnok-amulet-original",
+  "type": "fact",
+  "name": "Quan Chi stole Shinnok's amulet",
+  "subjectId": "quan-chi",
+  "predicate": "stole_amulet_from",
+  "objectId": "shinnok",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkda-quan-chi-bio"],
+  "notes": "Mortal Kombat: Deadly Alliance's Quan Chi biography states that Quan Chi had stolen the amulet from Shinnok. The source establishes the theft but not its exact date relative to Shinnok's later-confirmed defeat, so this slice does not manufacture a defeat-to-theft causal edge or a precisely ordered theft Event."
+}
