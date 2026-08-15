@@ -1,8 +1,8 @@
 "use client"
 
 import Link from "next/link"
-import { useMemo, useState, type ReactNode } from "react"
-import { CircleDot, Flag, GitBranch, Network, Route, Users } from "lucide-react"
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react"
+import { ArrowLeft, ArrowRight, CircleDot, Flag, GitBranch, Network, Route, Users } from "lucide-react"
 
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -175,6 +175,7 @@ export function CausalityExplorer({ data }: { data: UniverseData }) {
   const components = useMemo(() => causalComponents(timelineEvents), [timelineEvents])
   const initialFocus = defaultEventForComponents(components, timelineEvents, eventsById)?.id ?? ""
   const [focusId, setFocusId] = useState(initialFocus)
+  const chronologyRefs = useRef(new Map<string, HTMLButtonElement>())
 
   const requestedFocus = eventsById.get(focusId)
   const focusedEvent =
@@ -185,12 +186,25 @@ export function CausalityExplorer({ data }: { data: UniverseData }) {
   const activeComponent =
     components.find((component) => component.some((event) => event.id === focusedEvent?.id)) ??
     (focusedEvent ? [focusedEvent] : [])
-  const chronology = sortEvents(activeComponent)
+  const chronology = timelineEvents
   const roots = rootsOf(activeComponent, eventsById)
   const leaves = leavesOf(activeComponent, eventsById)
   const causes = focusedEvent ? parentsOf(focusedEvent, activeComponent, eventsById) : []
   const consequences = focusedEvent ? childrenOf(focusedEvent, activeComponent, eventsById) : []
   const positions = new Map(chronology.map((event, index) => [event.id, index + 1]))
+  const chronologyIndex = focusedEvent
+    ? chronology.findIndex((event) => event.id === focusedEvent.id)
+    : -1
+  const previousChronologyEvent = chronologyIndex > 0 ? chronology[chronologyIndex - 1] : undefined
+  const nextChronologyEvent =
+    chronologyIndex >= 0 && chronologyIndex < chronology.length - 1
+      ? chronology[chronologyIndex + 1]
+      : undefined
+
+  useEffect(() => {
+    if (!focusedEvent) return
+    chronologyRefs.current.get(focusedEvent.id)?.scrollIntoView({ block: "nearest", inline: "center" })
+  }, [focusedEvent])
 
   const changeTimeline = (timeline: Timeline) => {
     const nextEvents = sortEvents(data.events.filter((event) => event.timelineId === timeline.id))
@@ -288,17 +302,37 @@ export function CausalityExplorer({ data }: { data: UniverseData }) {
               <CardHeader className="border-b">
                 <CardTitle className="flex items-center gap-2 text-lg">
                   <Route className="size-4 text-primary" />
-                  Chronology
+                  Chronology · full continuity
                 </CardTitle>
                 <CardDescription>
-                  Read left to right. Every event appears once; neighboring moments are chronological, not automatically causal.
+                  Read left to right across every event in this continuity. Chronological neighbors may belong to different causal components and are not automatically causal.
                 </CardDescription>
               </CardHeader>
               <CardContent>
+                <div className="mb-4 grid gap-2 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center">
+                  <ChronologyNavButton
+                    direction="previous"
+                    event={previousChronologyEvent}
+                    onClick={() => previousChronologyEvent && setFocusId(previousChronologyEvent.id)}
+                  />
+                  <div className="rounded-lg border bg-muted/10 px-3 py-2 text-center text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
+                    {chronologyIndex >= 0 ? chronologyIndex + 1 : "—"} of {chronology.length}
+                  </div>
+                  <ChronologyNavButton
+                    direction="next"
+                    event={nextChronologyEvent}
+                    onClick={() => nextChronologyEvent && setFocusId(nextChronologyEvent.id)}
+                  />
+                </div>
+
                 <ol className="flex gap-2 overflow-x-auto pb-2">
                   {chronology.map((event, index) => (
                     <li key={event.id} className="flex shrink-0 items-stretch gap-2">
                       <button
+                        ref={(node) => {
+                          if (node) chronologyRefs.current.set(event.id, node)
+                          else chronologyRefs.current.delete(event.id)
+                        }}
                         className={cn(
                           "min-w-52 max-w-64 rounded-xl border bg-background p-3 text-left transition-colors hover:border-primary/40 hover:bg-muted/20",
                           event.id === focusedEvent.id && "border-primary/60 bg-primary/10 ring-2 ring-primary/15"
@@ -317,7 +351,13 @@ export function CausalityExplorer({ data }: { data: UniverseData }) {
                         </div>
                       </button>
                       {index < chronology.length - 1 ? (
-                        <div aria-hidden="true" className="flex items-center text-lg text-muted-foreground/60">→</div>
+                        <div
+                          className="flex w-12 shrink-0 flex-col items-center justify-center gap-1 text-muted-foreground/60"
+                          title="Next in chronology; not a causal edge"
+                        >
+                          <span className="text-[0.55rem] font-semibold uppercase tracking-[0.12em]">then</span>
+                          <ArrowRight className="size-4" aria-hidden="true" />
+                        </div>
                       ) : null}
                     </li>
                   ))}
@@ -352,7 +392,7 @@ export function CausalityExplorer({ data }: { data: UniverseData }) {
                       entitiesById={entitiesById}
                       focusId={focusedEvent.id}
                       positions={positions}
-                      total={activeComponent.length}
+                      total={chronology.length}
                       onFocus={setFocusId}
                       path={new Set<string>()}
                     />
@@ -381,7 +421,7 @@ export function CausalityExplorer({ data }: { data: UniverseData }) {
 
                   <div className="rounded-xl border border-primary/40 bg-primary/5 p-4 shadow-[0_0_32px_-24px_var(--primary)]">
                     <div className="mb-2 text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-primary">
-                      You are here · chronology {positions.get(focusedEvent.id) ?? "—"} of {activeComponent.length}
+                      You are here · chronology {positions.get(focusedEvent.id) ?? "—"} of {chronology.length}
                     </div>
                     <h2 className="font-heading text-xl">{focusedEvent.name}</h2>
                     {focusedEvent.description ? (
@@ -403,7 +443,8 @@ export function CausalityExplorer({ data }: { data: UniverseData }) {
                   <CardTitle className="text-base">How to read this</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3 text-sm leading-6 text-muted-foreground">
-                  <p><strong className="text-foreground">Chronology</strong> is the numbered strip above: one event, one position, ordered only by story order.</p>
+                  <p><strong className="text-foreground">Chronology</strong> is the numbered strip above: every event in the selected continuity appears once in story order.</p>
+                  <p><strong className="text-foreground">Previous / next chronology</strong> can move you across separate causal components without inventing an edge between them.</p>
                   <p><strong className="text-foreground">Causal branches</strong> exist only when explicit event edges are recorded.</p>
                   <p><strong className="text-foreground">Merge node</strong> means multiple sourced causal parents lead to the same event. The full event card is shown once.</p>
                   <p>Chronological neighbors without a causal edge remain neighbors in the strip but are intentionally disconnected in the causal tree.</p>
@@ -420,6 +461,41 @@ export function CausalityExplorer({ data }: { data: UniverseData }) {
         )}
       </div>
     </main>
+  )
+}
+
+function ChronologyNavButton({
+  direction,
+  event,
+  onClick,
+}: {
+  direction: "previous" | "next"
+  event?: Event
+  onClick: () => void
+}) {
+  const isPrevious = direction === "previous"
+  const label = isPrevious ? "Previous in chronology" : "Next in chronology"
+  const edgeLabel = isPrevious ? "Beginning of chronology" : "End of chronology"
+
+  return (
+    <Button
+      variant="outline"
+      className={cn(
+        "h-auto min-h-14 w-full whitespace-normal p-3",
+        isPrevious ? "justify-start text-left" : "justify-end text-right"
+      )}
+      disabled={!event}
+      onClick={onClick}
+    >
+      {isPrevious ? <ArrowLeft className="size-4 shrink-0" /> : null}
+      <span className="min-w-0">
+        <span className="block text-[0.6rem] font-semibold uppercase tracking-[0.13em] text-muted-foreground">
+          {event ? label : edgeLabel}
+        </span>
+        {event ? <span className="mt-0.5 block truncate font-heading text-xs">{event.name}</span> : null}
+      </span>
+      {!isPrevious ? <ArrowRight className="size-4 shrink-0" /> : null}
+    </Button>
   )
 }
 
