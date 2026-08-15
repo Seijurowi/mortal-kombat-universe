@@ -22,9 +22,10 @@ Use this checklist for the Original-continuity Deadly Alliance-era Shao Kahn dea
 
 - [ ] The MKDA Kitana ending is inspectable as the older explicit portrayal that Shao Kahn was dead.
 - [ ] `deadly_alliance_era_status = dead` is marked `retconned`, not `canon` or `supplemental`.
-- [ ] The Deception Shao Kahn biography directly supports the clone-decoy Fact and escape/survival interpretation.
-- [ ] The Deception Goro biography independently confirms that Goro later encountered the real Shao Kahn alive.
-- [ ] `deadly_alliance_era_status = survived via clone decoy` is `canon` and appears in the same `/claims` family as the older retconned status.
+- [ ] The Deception Shao Kahn biography directly supports the separate clone-decoy Fact and also shows Shao Kahn speaking as a living actor after Onaga's return.
+- [ ] The Deception Goro biography independently confirms that Goro encountered the real Shao Kahn alive.
+- [ ] `deadly_alliance_era_status = alive after Deadly Alliance` is `canon` and appears in the same `/claims` family as the older retconned status.
+- [ ] The status Fact does not claim that the clone specifically received the Deadly Alliance attack or that the clone was the mechanism by which Shao Kahn survived that attack.
 - [ ] `/claims` labels the family as having retcon evidence because an underlying Fact is actually `retconned`; it does not infer a formal `supersedes` relation that is absent from the schema.
 - [ ] Source-year ordering remains evidence-history context rather than a generic newer-source-wins rule.
 
@@ -32,7 +33,7 @@ Use this checklist for the Original-continuity Deadly Alliance-era Shao Kahn dea
 
 - [ ] `Shao Kahn created a clone decoy before escaping` is a narrow canon Fact supported by Shao Kahn's Deception biography.
 - [ ] The project does not assert that Quan Chi or Shang Tsung explicitly killed the clone; the later biography does not say which enemies encountered or killed it.
-- [ ] The project does not assert a Shao Kahn resurrection because the later evidence establishes survival, not return from death.
+- [ ] The project does not assert a Shao Kahn resurrection because the later evidence establishes that he is alive, not that he returned from death.
 - [ ] The project does not silently turn the MKDA Kitana ending into canonical scene detail beyond preserving its explicit older death portrayal as retconned evidence.
 
 ## Regression
