@@ -36,9 +36,9 @@ Complete and merged. Delivered:
 
 **Status: in progress.**
 
-**Current work:** intermediate project/documentation review on `agent/intermediate-project-review` after PR #13.
+**Current work:** intermediate project/documentation review in PR #14 (`agent/intermediate-project-review`) after merged PR #13. The review is complete and awaiting merge.
 
-**Next lore slice after this review:** Original-continuity **MK4 / Shinnok return setup**, starting from the reviewed/merged documentation state rather than from stale branch-specific assumptions.
+**Next lore slice after PR #14 merges:** Original-continuity **MK4 / Shinnok return setup**, starting from the reviewed documentation baseline.
 
 Goal: expand from character-scale lore into ancient and Original-continuity history while preserving source, continuity, causality, and evidence caveats instead of presenting one synthetic canon narrative.
 
@@ -123,7 +123,7 @@ Goal: expand from character-scale lore into ancient and Original-continuity hist
 - breach → soul claim kept chronological without unsupported direct causal edge.
 - invasion campaign → later defeat kept chronological without unsupported immediate causal edge.
 
-### Current intermediate review 🔨
+### Intermediate documentation/project-contract review ✅ — PR #14 awaiting merge
 
 Purpose: reduce documentation drift before the next lore era.
 
@@ -135,16 +135,18 @@ Review targets:
 - [x] audit `PRD.md` for stale current-slice/future-work text;
 - [x] audit `LORE_MODEL.md` for proven-vs-pressure drift;
 - [x] audit `docs/README.md` for manual-verification discoverability;
-- [ ] audit/update historical Phase 3 manual wording superseded by DAG/chronology improvements;
-- [ ] clarify Phase 5 cumulative-vs-slice-specific manual ownership;
-- [ ] review `CHANGELOG.md` structure after the large Phase 5 accumulation;
-- [ ] review `CHANGELOG_POLICY.md` against actual workflow;
-- [ ] run final `pnpm check` on the documentation-review head;
-- [ ] open a focused review PR and merge only after user approval/action.
+- [x] audit/update historical Phase 3 manual wording superseded by DAG/chronology improvements;
+- [x] clarify Phase 5 cumulative-vs-slice-specific manual ownership;
+- [x] review and consolidate `CHANGELOG.md` after large Phase 5 accumulation;
+- [x] review `CHANGELOG_POLICY.md` against actual workflow;
+- [x] run full `pnpm check` on the documentation-review head;
+- [x] open focused PR #14; merge only after explicit user action/instruction.
+
+Key governance result: `ROADMAP.md` owns live status; PRD, LORE_MODEL, AGENTS, README, CHANGELOG, and manual files have stable non-overlapping responsibilities.
 
 ### Next lore slices
 
-After the intermediate review:
+After PR #14 merges:
 
 1. **MK4 / Shinnok return setup** — extend Original continuity from Shao Kahn's defeat into Shinnok's return only where primary evidence supports causal or chronological bridges.
 2. Shinnok MK4 outcome / aftermath with later-primary confirmation discipline.
