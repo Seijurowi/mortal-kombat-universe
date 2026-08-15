@@ -3,7 +3,7 @@
   "type": "event",
   "name": "Earth warriors defeat Shao Kahn",
   "timelineId": "original",
-  "participantIds": ["shao-kahn", "liu-kang"],
+  "participantIds": ["shao-kahn"],
   "realmIds": [],
   "causeEventIds": [],
   "consequenceEventIds": [],
