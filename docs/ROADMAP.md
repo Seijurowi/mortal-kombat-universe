@@ -108,7 +108,7 @@ Goal: expand from character-scale lore into the oldest Mortal Kombat history whi
 - [x] Add `Second Mortal Kombat tournament in Outworld` with `realmIds: ["outworld"]` and a canon Fact confirming Liu Kang was lured there to compete.
 - [x] Model `second-chance plea → Outworld plan → second Outworld tournament` as the supported continuation of the story chain.
 - [x] Keep plan and occurrence distinct: the MKII intro establishes intent; MKT confirms that intent was carried out.
-- [ ] Final AGENTS/manual review and CI for the slice.
+- [x] Final AGENTS/manual review and CI for the slice.
 
 ### Next lore slices
 
