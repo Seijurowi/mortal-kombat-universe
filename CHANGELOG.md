@@ -20,6 +20,7 @@ See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 - **MK3 invasion outcome:** soul-taking/extermination coverage, Liu Kang as the prime extermination target, and later MK4 confirmation that Earth warriors defeated Shao Kahn without promoting Liu Kang as the individual victor from ending-only evidence.
 - **Causality UX evolution:** a dedicated chronology/story-order rail, real DAG merge rendering, one full shared node plus explicit merge references, and clearer causal-start/causal-end semantics.
 - Phase 5 cumulative and slice-specific manual verification covering evidence strength, source provenance, realm semantics, chronology-versus-causality, plans versus occurrences, DAG merges, and broad-versus-narrow later confirmation.
+- **Repository Definition of Done:** a dedicated `docs/DEFINITION_OF_DONE.md` readiness gate covering scope, lore/evidence, graph/model semantics, UX, documentation ownership, changelog discipline, manual verification, final-head CI, PR review, and explicit human/user merge authority.
 
 ### Changed
 
@@ -35,7 +36,8 @@ See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 - The second Outworld tournament now proves real multi-parent causality: MKII's lure plan and the older Sindel/diversion scheme converge on one occurrence.
 - `/causality` separates chronology from causal topology so history remains readable even when causal components are disconnected or merge.
 - Claim history continues to treat subject/predicate grouping as presentation rather than automatic contradiction/retcon evidence; source year remains chronology context, not canonical priority.
-- **Documentation governance was consolidated:** `ROADMAP.md` is the sole owner of live milestone/active-slice status; PRD, LORE_MODEL, AGENTS, README, changelog, and manuals now have explicit stable ownership boundaries to reduce documentation drift.
+- **Documentation governance was consolidated:** `ROADMAP.md` is the sole owner of live milestone/active-slice status; PRD, LORE_MODEL, AGENTS, README, changelog, manuals, and Definition of Done now have explicit ownership boundaries to reduce documentation drift.
+- `AGENTS.md` now references the dedicated Definition of Done as the authoritative readiness/completion gate instead of duplicating the full final PR checklist.
 - Root/documentation README files no longer carry fragile record counts, branch-specific status, or stale milestone claims; manual verification documents are explicitly indexed as cumulative/regression/slice-specific procedures rather than status trackers.
 - Changelog practice now explicitly supports consolidating long `Unreleased` sections into milestone/slice-level history instead of mirroring every source/Event/Fact file.
 
