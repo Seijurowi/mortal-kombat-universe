@@ -98,6 +98,7 @@ Treat **retcon**, **continuity divergence**, **alternate portrayal**, and **unce
 - Event `participantIds` may reference `Character` or `Faction` entities. This is proven necessary by collective actors such as the Elder Gods in Deception cosmology.
 - Do not duplicate a Faction as a fake Character merely to make it an event participant.
 - Event `realmIds` describes event location/scope. It is **not** an output field and does not mean the realm is the grammatical object of the action.
+- Do not infer Event `realmIds` merely from participant affiliation or from the location of a later consequence. Attach a realm only when evidence establishes that event's location/scope.
 - If a realm is conquered, liberated, merged, created, destroyed, or otherwise the object of a lore assertion, represent that assertion as a sourced `Fact` with the Realm in `objectId` where appropriate.
 - `causeEventIds` means supported causality, not “happened shortly before.”
 - `consequenceEventIds` means supported outcome, not mere chronology.
@@ -189,8 +190,8 @@ A green build does not prove lore accuracy, causal accuracy, retcon accuracy, or
 
 ## Current scope
 
-Phases 1, 2, 3, and 4 are complete and merged. Phase 5's Deception cosmology / Onaga / Shinnok foundation, Edenia / Outworld conquest, and Great Kung Lao tournament slices are merged.
+Phases 1, 2, 3, and 4 are complete and merged. Phase 5's Deception cosmology / Onaga / Shinnok foundation, Edenia / Outworld conquest, Great Kung Lao tournament history, and Liu Kang / MK1992 bridge are merged.
 
 The active work remains **Phase 5 — Cosmology and ancient history**, defined in `docs/ROADMAP.md` and reviewed through `docs/PHASE5_MANUAL_VERIFICATION.md`.
 
-The current slice is **Liu Kang / MK1992 tournament bridge** on `agent/phase5-liu-kang-1992`: confirm the first-game outcome with later primary sources, enrich the existing tournament Event rather than duplicate it, and connect Shang Tsung's documented failure to his MKII second-chance plea without converting Goro's `apparent death` into a death event.
+The current slice is **Mortal Kombat II / Outworld setup** on `agent/phase5-mk2-outworld`: extend Shang Tsung's sourced second-chance plea into his explicit plan to lure enemies to compete in Outworld, then model the MKII Outworld conflict without inventing locations for planning events or importing later retellings.
