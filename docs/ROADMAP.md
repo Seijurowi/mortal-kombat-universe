@@ -30,7 +30,7 @@ Complete and merged. Delivered `/claims`, evidence-safe claim-family labels, sou
 
 **Status: in progress.**
 
-**Current work:** Original-continuity **MK4 / Shinnok outcome** in PR #16 on `agent/phase5-mk4-shinnok-outcome`, branched from verified PR #15 merge commit `38dd666597ca0a321e691a06fb6ed09015bdeaee`. Implementation, manual/source review, final contract review, and final-head CI are being completed before Ready for review.
+**Current work:** Original-continuity **Quan Chi / Shinnok MK4 role detail** in PR #17 on `agent/phase5-mk4-quan-chi-shinnok-role`, branched from verified PR #16 merge commit `36cb0dc3fd71075c15ef3451df54b9aa721dac1a`. Implementation, maintainer manual review, source recheck, and final contract review are complete; final-head CI remains before Ready for review.
 
 Goal: expand from character-scale lore into ancient and Original-continuity history while preserving source, continuity, causality, and evidence caveats instead of presenting one synthetic canon narrative.
 
@@ -110,37 +110,44 @@ Goal: expand from character-scale lore into ancient and Original-continuity hist
 - continuity-wide chronology and Previous/Next navigation added across causal-component boundaries.
 - full Shadcn/Base UI inventory incorporated; `components/ui/` is now the default primitive layer in `AGENTS.md`.
 - React 19 lint compatibility fixes completed.
-- final manual review and final-head CI completed before merge.
-- merged as `38dd666597ca0a321e691a06fb6ed09015bdeaee`.
+- merged as `38dd666597ca0a321e691a06fb6ed09015bdeaee` after manual review and final-head CI.
 
-### Current MK4 / Shinnok outcome slice 🔨
+#### MK4 / Shinnok outcome ✅ — PR #16
+- later Armageddon material confirms the broad prior outcome that Shinnok was defeated.
+- canon Fact stays broad (`was_defeated: true`) without inventing an individual victor.
+- battle Realm and full victor roster remain unasserted.
+- direct source wording is separated from chronology placement: Armageddon confirms a prior defeat but does not itself label a specific MK4 scene.
+- merged as `36cb0dc3fd71075c15ef3451df54b9aa721dac1a` after manual/source review and final-head CI.
 
-This slice tests later-primary confirmation at the next level: promote only the broad outcome that later Original material actually confirms, without canonizing an arcade ending wholesale or inventing a narrower victor.
+### Current Quan Chi / Shinnok MK4 role slice 🔨 — PR #17
 
-- [x] Add `Mortal Kombat: Armageddon — Johnny Cage Biography` as a later primary Original-continuity source.
-- [x] Add `Shinnok is defeated` as a later-confirmed Original Event.
-- [x] Add canon Fact `Shinnok was defeated` at the broad `was_defeated: true` level.
-- [x] Keep the Event participant list to Shinnok only; do not infer Liu Kang or a complete victor roster.
-- [x] Keep `realmIds: []`; the later biography does not establish the battle location.
-- [x] Keep `The war against Shinnok resumes → Shinnok is defeated` chronological only until a source establishes a direct causal mechanism.
-- [x] Separate direct source wording from chronology placement: Armageddon directly confirms a prior Shinnok defeat but does not itself label that defeat as a specific MK4 scene.
+This slice adds only directly sourced Original-continuity detail about Quan Chi's active combat role around Mortal Kombat Gold and the later amulet-theft fact, without projecting Reboot escape mechanics back into Original continuity.
+
+- [x] Add Mortal Kombat Gold's Kitana biography as primary evidence.
+- [x] Add `Kitana joins the battle against Shinnok and Quan Chi` at story order 205.
+- [x] Add atomic canon Facts that Kitana battled Shinnok and battled Quan Chi.
+- [x] Keep the battle Event's `realmIds: []`; Quan Chi's forces leaving Edenia does not establish the battle destination/location.
+- [x] Keep resumed war → Kitana battle → Shinnok defeat chronological only; no direct causal edges are supplied by these sources.
+- [x] Add Deadly Alliance's Quan Chi biography as later primary evidence.
+- [x] Add canon Fact that Quan Chi stole Shinnok's amulet.
+- [x] Do not create a precisely ordered amulet-theft Event or defeat→theft causal edge because the later bio does not date the theft sufficiently.
+- [x] Keep Original history separate from MKX/Reboot claims that Quan Chi helped Shinnok escape.
 - [x] Add/index a slice-specific manual verification checklist.
-- [x] Review/update CHANGELOG for this outcome slice.
-- [x] Open draft PR #16.
-- [x] CI passed on the pre-review draft head.
-- [x] Manual UI/source pass completed by the maintainer.
-- [x] Final AGENTS + LORE_MODEL + DoD review completed; source/Event wording narrowed to avoid attributing the chronology inference directly to the Armageddon biography.
-- [ ] Run final-head CI after the review wording correction.
+- [x] Review/update CHANGELOG for this slice.
+- [x] Open draft PR #17.
+- [x] Draft-head CI passed before final review.
+- [x] Maintainer manual UI/source pass completed.
+- [x] Final AGENTS + LORE_MODEL + DoD review completed after rechecking the MK Gold and Deadly Alliance source wording; no semantic correction was required.
+- [ ] Final-head CI after readiness-status update.
 - [ ] Merge only after explicit user/maintainer action.
 
 ### Next lore slices
 
-1. **Quan Chi / Shinnok MK4 role detail** — only where direct Original primary evidence supports specific mechanisms, betrayal, or post-MK4 state.
-2. **Deadly Alliance bridge** — Liu Kang's death, Shang Tsung/Quan Chi alliance, and the transition into the Deadly Alliance era with exact causal evidence discipline.
-3. Onaga resurrection/return mechanism and post-Deception fate with stronger coverage.
-4. Deception cosmology vs MK11 Titan/Kronika comparison without flattening continuities.
-5. Original/Reboot/New Era Sindel comparison through claim history.
-6. Revisit exact MKII/MK3/MK4 individual-victor attribution only if direct later Original evidence supports it.
+1. **Deadly Alliance bridge** — Liu Kang's death, Shang Tsung/Quan Chi alliance, and the transition into the Deadly Alliance era with exact causal evidence discipline.
+2. Onaga resurrection/return mechanism and post-Deception fate with stronger coverage.
+3. Deception cosmology vs MK11 Titan/Kronika comparison without flattening continuities.
+4. Original/Reboot/New Era Sindel comparison through claim history.
+5. Revisit exact MKII/MK3/MK4 individual-victor attribution only if direct later Original evidence supports it.
 
 ### Phase 5 acceptance criteria
 
@@ -165,8 +172,10 @@ A user should be able to:
 17. follow continuity-wide chronology from the MK3 defeat through Shinnok's MK4 return and later defeat even when those Events belong to different/no causal components;
 18. navigate Previous/Next chronological neighbors without being told that `after` means `caused by`;
 19. see Shinnok's defeat promoted to canon without being told that Liu Kang individually defeated him unless independently corroborated;
-20. see intentional causal gaps where sources establish sequence/context but not direct causation;
-21. navigate documentation without conflicting live-status claims.
+20. see Quan Chi as a directly sourced active opponent in the MK4/Gold conflict without being told he caused Shinnok's escape;
+21. inspect Quan Chi's theft of Shinnok's amulet without an invented exact date or defeat→theft causal bridge;
+22. see intentional causal gaps where sources establish sequence/context but not direct causation;
+23. navigate documentation without conflicting live-status claims.
 
 Manual verification procedures are indexed in `docs/README.md`. Final readiness is governed by `docs/DEFINITION_OF_DONE.md`.
 
