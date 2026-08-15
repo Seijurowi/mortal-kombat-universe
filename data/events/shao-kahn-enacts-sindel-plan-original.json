@@ -1,0 +1,13 @@
+{
+  "id": "shao-kahn-enacts-sindel-plan-original",
+  "type": "event",
+  "name": "Shao Kahn enacts the Sindel plan",
+  "timelineId": "original",
+  "participantIds": ["shao-kahn", "shang-tsung", "sindel"],
+  "realmIds": [],
+  "causeEventIds": ["mortal-kombat-1992", "mortal-kombat-ii-outworld-original"],
+  "consequenceEventIds": [],
+  "order": 140,
+  "description": "Frustrated by failed attempts to take Earth through tournament battle, Shao Kahn enacts an ancient plan involving Sindel's rebirth on Earth Realm.",
+  "tags": ["mk3-setup", "plan", "sindel"]
+}
