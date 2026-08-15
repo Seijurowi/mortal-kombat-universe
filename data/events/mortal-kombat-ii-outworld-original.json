@@ -5,9 +5,9 @@
   "timelineId": "original",
   "participantIds": ["liu-kang", "shang-tsung", "shao-kahn"],
   "realmIds": ["outworld"],
-  "causeEventIds": ["shang-tsung-plans-outworld-tournament-original"],
+  "causeEventIds": ["shang-tsung-arranges-sindel-reincarnation-original", "shang-tsung-plans-outworld-tournament-original"],
   "consequenceEventIds": [],
   "order": 130,
-  "description": "Liu Kang and his allies are lured into Outworld to compete in a second tournament, carrying out the plan introduced in Mortal Kombat II.",
-  "tags": ["tournament", "outworld", "mk2"]
+  "description": "Liu Kang and his allies are lured into Outworld to compete in a second tournament. Mortal Kombat II establishes Shang Tsung's lure plan, while Mortal Kombat Trilogy later identifies the tournament as a diversion within the longer-running Sindel reincarnation scheme.",
+  "tags": ["tournament", "outworld", "mk2", "merged-cause"]
 }
