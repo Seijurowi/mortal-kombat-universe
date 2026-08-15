@@ -19,14 +19,15 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 - Mortal Kombat II Kung Lao biography as primary in-game evidence identifying the ancient champion defeated by Goro as the Great Kung Lao.
 - Preservation URL and explicit provenance notes for the original Mortal Kombat (1992) arcade story source now used by the tournament-history Facts.
 - Mortal Kombat (1992) Liu Kang ending, Mortal Kombat II story/Liu Kang biography, and Mortal Kombat 4 Goro biography source records for the first-game outcome bridge.
+- Mortal Kombat Trilogy story as later Original-continuity confirmation that Liu Kang and his comrades were actually lured into Outworld for a second tournament.
 - Sourced realm-target Facts for `Shao Kahn conquered Edenia` and `Kitana liberated Edenia`.
 - Supplemental Jerrod family Facts retained from Sindel's Mortal Kombat 3 ending without promoting ending-only evidence into biography-level canon.
 - Pre-1992 tournament Facts for Goro defeating the Great Kung Lao, becoming Grand Champion, remaining undefeated for roughly 500 years, and Shang Tsung controlling/corrupting the tournament.
 - Canon Facts for Liu Kang defeating Goro and winning the first-game tournament from Shang Tsung's control, each paired with direct later Original-continuity confirmation rather than relying on the arcade ending alone.
 - `Shang Tsung seeks a second chance` as the sourced Original-continuity bridge from the failed first-game tournament into the Mortal Kombat II setup.
-- `Shang Tsung plans an Outworld tournament`, a canon Fact for that plan, and the `Mortal Kombat II conflict in Outworld` Event using the existing MKII arcade-story source.
-- Supported causal chains for `Shao Kahn poisons Onaga → seizes Outworld`, `Onaga manipulates Shujinko → Shujinko gathers Kamidogu`, `Shujinko shatters Kamidogu → defeats Onaga`, `Shinnok wars with Raiden → banishment`, `Quan Chi allies with Shinnok → Shinnok rules Netherrealm`, and `first-game tournament → Shang Tsung seeks a second chance → Outworld tournament plan → MKII Outworld conflict`.
-- Phase 5 manual verification for ancient cosmology, continuity scope, source provenance, collective event participants, status changes, realm-target semantics, ending evidence strength, tournament chronology, first-game outcome confirmation, and causal gaps.
+- `Shang Tsung plans an Outworld tournament`, a canon Fact for that plan, `Second Mortal Kombat tournament in Outworld`, and a canon Fact confirming Liu Kang was lured there to compete.
+- Supported causal chains for `Shao Kahn poisons Onaga → seizes Outworld`, `Onaga manipulates Shujinko → Shujinko gathers Kamidogu`, `Shujinko shatters Kamidogu → defeats Onaga`, `Shinnok wars with Raiden → banishment`, `Quan Chi allies with Shinnok → Shinnok rules Netherrealm`, and `first-game tournament → Shang Tsung seeks a second chance → Outworld tournament plan → second Outworld tournament`.
+- Phase 5 manual verification for ancient cosmology, continuity scope, source provenance, collective event participants, status changes, realm-target semantics, ending evidence strength, tournament chronology, first-game outcome confirmation, plan-versus-occurrence evidence, and causal gaps.
 
 ### Changed
 
@@ -45,7 +46,8 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 - Liu Kang's arcade-ending outcome is promoted only at the level directly confirmed by later primary sources; MK4 Goro biography now provides explicit later support for Liu Kang taking the title from Goro, while MKII Liu Kang biography supports the tournament-control outcome.
 - Goro's MKII `apparent death` wording is intentionally not converted into a confirmed death Fact/Event.
 - `Shang Tsung seeks a second chance` no longer carries an inferred Outworld realm scope; MKII establishes the later Outworld plan but not the location of the plea itself.
-- The MKII continuation separates the locationless planning Event from the actual Outworld conflict, which legitimately carries `realmIds: ["outworld"]`.
+- The MKII continuation separates the locationless planning Event from the later-confirmed second tournament in Outworld; a plan is not treated as proof that the planned occurrence happened.
+- The reused `mk2-story` Source notes now cover all load-bearing claims supported by that source, including Shang Tsung's explicit Outworld plan.
 - Shinnok's Elder God status is represented as a historical Fact (`former_member_of`) instead of timeless static faction membership.
 - Product and domain documentation identifies Phase 5 as the active milestone and tracks each ancient-history slice as it is merged.
 
