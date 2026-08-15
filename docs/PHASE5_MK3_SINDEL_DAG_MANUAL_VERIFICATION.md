@@ -55,15 +55,28 @@ Open `MK3 frames Shao Kahn as enacting the Sindel plan after failed tournament a
 - [ ] `/claims` does not automatically label this difference a retcon unless explicit retcon evidence is later modeled.
 - [ ] No chronology is rewritten merely to make all three sources read like one perfectly identical narration.
 
-## 6. DAG rendering pressure
+## 6. Chronology versus causality UX
+
+Inspect the active seven-event component in `/causality`.
+
+- [ ] A dedicated `Chronology` strip appears above the causal tree.
+- [ ] Every Event appears exactly once in the strip in story-order sequence, currently `1 → 7` for this component.
+- [ ] Selecting a chronology item moves `You are here` to that Event without changing the active continuity/component.
+- [ ] The strip explicitly says that chronological neighbors are not automatically causal neighbors.
+- [ ] The causal tree uses `Causal start` / `Causal end` wording so those badges are not mistaken for chronological endpoints.
+- [ ] The local selected-event card shows its chronology position separately from its `Why? / What next?` causal context.
+
+## 7. DAG merge rendering
 
 Inspect the whole-tree rendering around `Second Mortal Kombat tournament in Outworld`.
 
 - [ ] The local `Why?` view shows both causal parents.
-- [ ] Confirm whether the whole-tree duplicates the shared tournament card beneath both parents.
-- [ ] If duplicated, treat that as the proven UI requirement for a follow-up DAG-rendering fix: one canonical shared node plus an explicit merge reference from the other branch.
-- [ ] Do not change lore edges merely to make the current tree renderer look simpler.
+- [ ] The full shared tournament card is rendered only once in the whole causal tree.
+- [ ] The other causal parent renders an explicit `Merges into` reference pointing to the same tournament Event.
+- [ ] The merge reference is selectable and focuses the shared tournament Event.
+- [ ] The shared Event remains labelled as a merge node with two parents.
+- [ ] No lore edge was removed merely to simplify rendering.
 
 ## Decision
 
-The key acceptance question is whether the data remains more trustworthy than a visually simpler but historically flattened chain. The multi-parent node is now a real sourced requirement; renderer work should follow the data rather than weakening the graph to fit the existing tree.
+The key acceptance question is whether chronology can now be followed independently from causality while the multi-parent Event remains visibly one shared occurrence. The data should stay more trustworthy than a visually simpler but historically flattened chain.
