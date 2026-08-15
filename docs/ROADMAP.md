@@ -30,7 +30,7 @@ Complete and merged. Delivered `/claims`, evidence-safe claim-family labels, sou
 
 **Status: in progress.**
 
-**Current work:** Original-continuity **Deadly Alliance / Liu Kang bridge** in draft PR #18 on `agent/phase5-deadly-alliance-bridge`, branched exactly from verified PR #17 merge commit `513d2196d5ac7f7b1fd1d026e784918fd6567b42`. Implementation, docs/CHANGELOG sync, draft-head CI, maintainer manual pass, source recheck, and final AGENTS/LORE_MODEL/DoD review are complete; final-head CI remains before Ready for review.
+**Current work:** Original-continuity **Deadly Alliance / Liu Kang bridge** in draft PR #18 on `agent/phase5-deadly-alliance-bridge`, branched exactly from verified PR #17 merge commit `513d2196d5ac7f7b1fd1d026e784918fd6567b42`. Implementation, docs/CHANGELOG sync, maintainer manual pass, source recheck, and final AGENTS/LORE_MODEL/DoD review are complete. Ready for review requires a green CI run on the current PR head; merge remains an explicit user/maintainer action.
 
 Goal: expand from character-scale lore into ancient and Original-continuity history while preserving source, continuity, causality, and evidence caveats instead of presenting one synthetic canon narrative.
 
@@ -148,7 +148,7 @@ This slice enters the Deadly Alliance era using direct Original-continuity prima
 - [x] Draft-head CI #550 passed.
 - [x] Maintainer manual UI/source pass completed.
 - [x] Final AGENTS + LORE_MODEL + DoD review completed; MKDA/Deception source wording rechecked and no semantic correction was required.
-- [ ] Run final-head CI after readiness-status update.
+- Current-head CI must be green before Ready for review; CI state is owned by the PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
 ### Next lore slices
