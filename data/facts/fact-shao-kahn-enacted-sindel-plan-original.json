@@ -1,0 +1,12 @@
+{
+  "id": "fact-shao-kahn-enacted-sindel-plan-original",
+  "type": "fact",
+  "name": "Shao Kahn enacted the Sindel plan after failed tournament attempts",
+  "subjectId": "shao-kahn",
+  "predicate": "enacted_plan_after",
+  "value": "failed attempts to take Earth through tournament battle",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk3-story"],
+  "notes": "Mortal Kombat 3 explicitly uses plural failed tournament attempts as the context for Kahn enacting the ancient Sindel plan."
+}
