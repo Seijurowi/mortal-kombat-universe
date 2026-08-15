@@ -13,10 +13,12 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 - Shinnok / Lucifer Original-continuity records with sourced ancient Earthrealm war, banishment, Quan Chi alliance, and Netherrealm succession events.
 - Kitana, Sindel, and Jerrod Original-continuity records for the Edenia / Outworld conquest slice.
 - Great Kung Lao, Goro, and Shang Tsung Original-continuity records for pre-1992 tournament history.
+- Baraka as an Original-continuity Character plus the sourced Shaolin-temple attack and Liu Kang revenge-response Events.
 - Mortal Kombat: Deception Shujinko biography, Raiden biography, Shujinko ending, and instruction-booklet source records.
 - Mortal Kombat: Armageddon Shujinko biography as later follow-up evidence confirming Onaga's defeat.
 - Mortal Kombat Trilogy Shao Kahn biography, Mortal Kombat 3 Sindel ending, and Deadly Alliance Kitana biography source records for Edenian history.
 - Mortal Kombat II Kung Lao biography as primary in-game evidence identifying the ancient champion defeated by Goro as the Great Kung Lao.
+- Mortal Kombat II Baraka biography as primary evidence that Baraka led the attack against Liu Kang's Shaolin temples.
 - Preservation URL and explicit provenance notes for the original Mortal Kombat (1992) arcade story source now used by the tournament-history Facts.
 - Mortal Kombat (1992) Liu Kang ending, Mortal Kombat II story/Liu Kang biography, and Mortal Kombat 4 Goro biography source records for the first-game outcome bridge.
 - Mortal Kombat Trilogy story as later Original-continuity confirmation that Liu Kang and his comrades were actually lured into Outworld for a second tournament.
@@ -24,9 +26,10 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 - Supplemental Jerrod family Facts retained from Sindel's Mortal Kombat 3 ending without promoting ending-only evidence into biography-level canon.
 - Pre-1992 tournament Facts for Goro defeating the Great Kung Lao, becoming Grand Champion, remaining undefeated for roughly 500 years, and Shang Tsung controlling/corrupting the tournament.
 - Canon Facts for Liu Kang defeating Goro and winning the first-game tournament from Shang Tsung's control, each paired with direct later Original-continuity confirmation rather than relying on the arcade ending alone.
+- Canon Facts for Baraka leading the Shaolin-temple attack, Liu Kang's Shaolin brothers being killed by Outworld warriors, and Liu Kang seeking revenge after discovering the destruction.
 - `Shang Tsung seeks a second chance` as the sourced Original-continuity bridge from the failed first-game tournament into the Mortal Kombat II setup.
 - `Shang Tsung plans an Outworld tournament`, a canon Fact for that plan, `Second Mortal Kombat tournament in Outworld`, and a canon Fact confirming Liu Kang was lured there to compete.
-- Supported causal chains for `Shao Kahn poisons Onaga → seizes Outworld`, `Onaga manipulates Shujinko → Shujinko gathers Kamidogu`, `Shujinko shatters Kamidogu → defeats Onaga`, `Shinnok wars with Raiden → banishment`, `Quan Chi allies with Shinnok → Shinnok rules Netherrealm`, and `first-game tournament → Shang Tsung seeks a second chance → Outworld tournament plan → second Outworld tournament`.
+- Supported causal chains for `Shao Kahn poisons Onaga → seizes Outworld`, `Onaga manipulates Shujinko → Shujinko gathers Kamidogu`, `Shujinko shatters Kamidogu → defeats Onaga`, `Shinnok wars with Raiden → banishment`, `Quan Chi allies with Shinnok → Shinnok rules Netherrealm`, `first-game tournament → Shang Tsung seeks a second chance → Outworld tournament plan → second Outworld tournament`, and `Baraka attacks the Shaolin temples → Liu Kang seeks revenge`.
 - Phase 5 manual verification for ancient cosmology, continuity scope, source provenance, collective event participants, status changes, realm-target semantics, ending evidence strength, tournament chronology, first-game outcome confirmation, plan-versus-occurrence evidence, and causal gaps.
 
 ### Changed
@@ -47,6 +50,7 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 - Goro's MKII `apparent death` wording is intentionally not converted into a confirmed death Fact/Event.
 - `Shang Tsung seeks a second chance` no longer carries an inferred Outworld realm scope; MKII establishes the later Outworld plan but not the location of the plea itself.
 - The MKII continuation separates the locationless planning Event from the later-confirmed second tournament in Outworld; a plan is not treated as proof that the planned occurrence happened.
+- The Shaolin-temple attack is modeled as a separate causal component leading to Liu Kang's revenge response; it is not asserted to be the cause of the second tournament or part of Shang Tsung's lure plan without direct primary evidence.
 - The reused `mk2-story` Source notes now cover all load-bearing claims supported by that source, including Shang Tsung's explicit Outworld plan.
 - Shinnok's Elder God status is represented as a historical Fact (`former_member_of`) instead of timeless static faction membership.
 - Product and domain documentation identifies Phase 5 as the active milestone and tracks each ancient-history slice as it is merged.
