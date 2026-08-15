@@ -1,0 +1,13 @@
+{
+  "id": "deadly-alliance-plots-eliminate-obstacles-original",
+  "type": "event",
+  "name": "The Deadly Alliance plots to eliminate its strongest obstacles",
+  "timelineId": "original",
+  "participantIds": ["quan-chi", "shang-tsung"],
+  "realmIds": [],
+  "causeEventIds": [],
+  "consequenceEventIds": ["liu-kang-killed-by-shang-tsung-original"],
+  "order": 225,
+  "description": "With their combined strength, Quan Chi and Shang Tsung plot to overpower the two beings presented by Mortal Kombat: Deadly Alliance as the principal obstacles to their domination. This Event records the explicit plan rather than treating the plan itself as proof that every intended target was actually eliminated.",
+  "tags": ["mkda", "plan", "deadly-alliance"]
+}
