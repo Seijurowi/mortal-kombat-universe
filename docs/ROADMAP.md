@@ -30,7 +30,7 @@ Complete and merged. Delivered `/claims`, evidence-safe claim-family labels, sou
 
 **Status: in progress.**
 
-**Current work:** Original-continuity **MK4 / Shinnok outcome** on `agent/phase5-mk4-shinnok-outcome`, branched from verified PR #15 merge commit `38dd666597ca0a321e691a06fb6ed09015bdeaee`.
+**Current work:** Original-continuity **MK4 / Shinnok outcome** in PR #16 on `agent/phase5-mk4-shinnok-outcome`, branched from verified PR #15 merge commit `38dd666597ca0a321e691a06fb6ed09015bdeaee`. Implementation, manual/source review, final contract review, and final-head CI are being completed before Ready for review.
 
 Goal: expand from character-scale lore into ancient and Original-continuity history while preserving source, continuity, causality, and evidence caveats instead of presenting one synthetic canon narrative.
 
@@ -115,7 +115,7 @@ Goal: expand from character-scale lore into ancient and Original-continuity hist
 
 ### Current MK4 / Shinnok outcome slice 🔨
 
-This slice tests later-primary confirmation at the next level: promote only the broad MK4 outcome that later Original material actually confirms, without canonizing an arcade ending wholesale or inventing a narrower victor.
+This slice tests later-primary confirmation at the next level: promote only the broad outcome that later Original material actually confirms, without canonizing an arcade ending wholesale or inventing a narrower victor.
 
 - [x] Add `Mortal Kombat: Armageddon — Johnny Cage Biography` as a later primary Original-continuity source.
 - [x] Add `Shinnok is defeated` as a later-confirmed Original Event.
@@ -123,12 +123,14 @@ This slice tests later-primary confirmation at the next level: promote only the 
 - [x] Keep the Event participant list to Shinnok only; do not infer Liu Kang or a complete victor roster.
 - [x] Keep `realmIds: []`; the later biography does not establish the battle location.
 - [x] Keep `The war against Shinnok resumes → Shinnok is defeated` chronological only until a source establishes a direct causal mechanism.
+- [x] Separate direct source wording from chronology placement: Armageddon directly confirms a prior Shinnok defeat but does not itself label that defeat as a specific MK4 scene.
 - [x] Add/index a slice-specific manual verification checklist.
-- [ ] Review/update CHANGELOG for this outcome slice.
-- [ ] Open draft PR #16.
-- [ ] Run CI on the draft head.
-- [ ] Perform manual UI/source pass.
-- [ ] Perform final AGENTS + LORE_MODEL + DoD review after manual pass.
+- [x] Review/update CHANGELOG for this outcome slice.
+- [x] Open draft PR #16.
+- [x] CI passed on the pre-review draft head.
+- [x] Manual UI/source pass completed by the maintainer.
+- [x] Final AGENTS + LORE_MODEL + DoD review completed; source/Event wording narrowed to avoid attributing the chronology inference directly to the Armageddon biography.
+- [ ] Run final-head CI after the review wording correction.
 - [ ] Merge only after explicit user/maintainer action.
 
 ### Next lore slices
