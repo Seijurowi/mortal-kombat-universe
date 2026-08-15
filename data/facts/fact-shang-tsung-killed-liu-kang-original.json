@@ -1,0 +1,12 @@
+{
+  "id": "fact-shang-tsung-killed-liu-kang-original",
+  "type": "fact",
+  "name": "Shang Tsung killed Liu Kang",
+  "subjectId": "shang-tsung",
+  "predicate": "killed",
+  "objectId": "liu-kang",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkda-story", "mk-deception-liu-kang-bio"],
+  "notes": "Mortal Kombat: Deadly Alliance presents Liu Kang's death during the sorcerers' Earthrealm attack, and Mortal Kombat: Deception later has Liu Kang explicitly state that Shang Tsung killed him. Quan Chi is a participant in the confrontation and assists Shang Tsung, but this Fact intentionally identifies only Shang Tsung as the killer because the later primary wording does so directly."
+}
