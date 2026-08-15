@@ -25,6 +25,7 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 - Mortal Kombat 3 story plus expanded Mortal Kombat Mythologies: Sub-Zero and Mortal Kombat Trilogy story provenance for the Sindel reincarnation / Earthrealm-invasion setup.
 - `Shang Tsung arranges Sindel's reincarnation`, `Sindel is reborn on Earthrealm`, and `Shao Kahn breaches Earthrealm` as sourced Original-continuity Events.
 - Canon Facts for Shang Tsung arranging the Sindel reincarnation scheme, the second tournament serving as a diversion, Sindel's Earthrealm rebirth, and that rebirth enabling Shao Kahn to cross the dimensional gates.
+- Dedicated chronology rail in `/causality` that lists each event once in story order, independently from causal-tree branching.
 - Sourced realm-target Facts for `Shao Kahn conquered Edenia` and `Kitana liberated Edenia`.
 - Supplemental Jerrod family Facts retained from Sindel's Mortal Kombat 3 ending without promoting ending-only evidence into biography-level canon.
 - Pre-1992 tournament Facts for Goro defeating the Great Kung Lao, becoming Grand Champion, remaining undefeated for roughly 500 years, and Shang Tsung controlling/corrupting the tournament.
@@ -33,7 +34,7 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 - `Shang Tsung seeks a second chance` as the sourced Original-continuity bridge from the failed first-game tournament into the Mortal Kombat II setup.
 - `Shang Tsung plans an Outworld tournament`, a canon Fact for that plan, `Second Mortal Kombat tournament in Outworld`, and a canon Fact confirming Liu Kang was lured there to compete.
 - Supported causal chains for `Shao Kahn poisons Onaga → seizes Outworld`, `Onaga manipulates Shujinko → Shujinko gathers Kamidogu`, `Shujinko shatters Kamidogu → defeats Onaga`, `Shinnok wars with Raiden → banishment`, `Quan Chi allies with Shinnok → Shinnok rules Netherrealm`, `first-game tournament → Shang Tsung seeks a second chance → Outworld tournament plan → second Outworld tournament`, `Baraka attacks the Shaolin temples → Liu Kang seeks revenge`, and `Sindel scheme → Sindel rebirth → Shao Kahn breaches Earthrealm`.
-- Phase 5 manual verification for ancient cosmology, continuity scope, source provenance, collective event participants, status changes, realm-target semantics, ending evidence strength, tournament chronology, first-game outcome confirmation, plan-versus-occurrence evidence, causal gaps, and the first proven multi-parent causal node.
+- Phase 5 manual verification for ancient cosmology, continuity scope, source provenance, collective event participants, status changes, realm-target semantics, ending evidence strength, tournament chronology, first-game outcome confirmation, plan-versus-occurrence evidence, causal gaps, chronology-versus-causality UX, and the first proven multi-parent causal node.
 
 ### Changed
 
@@ -57,6 +58,8 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 - The reused `mk2-story` Source notes now cover all load-bearing claims supported by that source, including Shang Tsung's explicit Outworld plan.
 - The second Outworld tournament is now the first proven multi-parent causal node: MKII supports Shang Tsung's lure plan while MKT independently identifies the tournament as a diversion inside the older Sindel reincarnation scheme.
 - MK3's wording that Shao Kahn enacts the ancient plan after failed tournament attempts is preserved as a sourced Fact rather than converted into unsupported direct causal edges from MK1/MKII to a newly invented post-tournament plan Event; Mythologies and MKT establish that the Sindel scheme was already in motion.
+- `/causality` now separates chronology from causal topology: chronology is read once left-to-right, while causal starts/ends and branches remain graph semantics rather than implied timeline endpoints.
+- Shared multi-parent Events render one full node plus explicit `Merges into` references from additional causal parents instead of duplicating the same Event card under every branch.
 - Shinnok's Elder God status is represented as a historical Fact (`former_member_of`) instead of timeless static faction membership.
 - Product and domain documentation identifies Phase 5 as the active milestone and tracks each ancient-history slice as it is merged.
 
@@ -76,7 +79,7 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 - Different displayed values are not automatically labelled continuity divergence; they may represent time-dependent or multi-valued predicates such as identity.
 - Search keeps the selected detail synchronized with visible results.
 - Source year is evidence-history context, not automatic canonical priority.
-- Schema expansion for explicit `contradicts` / `supersedes` links remains deferred until a real sourced lore case proves the current model insufficient.
+- Schema expansion for explicit `contradicts` / `supersedes` links remains deferred until a real sourced case proves the current model insufficient.
 
 ## 2026-08-14 — Phase 3: Story chains and causality
 
