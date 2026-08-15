@@ -103,6 +103,7 @@ Treat **retcon**, **continuity divergence**, **alternate portrayal**, and **unce
 - `causeEventIds` means supported causality, not “happened shortly before.”
 - `consequenceEventIds` means supported outcome, not mere chronology.
 - Never manufacture causal links because events are sequential or have adjacent `order` values.
+- A plan, prophecy, threat, intention, or possibility does **not** prove that the described occurrence happened. Model the plan/intention itself, and require separate occurrence evidence before creating or promoting the resulting Event as established history.
 - Temporal wording such as **“during this period,” “after,” “before,” or “years later”** establishes chronology/context unless the source also states a causal relationship.
 - Keep participant and realm references explicit.
 - If causality is interpretive, model the supported facts and avoid overstating the edge.
@@ -172,6 +173,7 @@ Before a substantive PR is ready:
 - new facts have evidence and timeline scope;
 - realm-target assertions are not hidden in `realmIds` semantics;
 - temporal association is not promoted into causality;
+- plans/intentions are not promoted into completed occurrences without separate evidence;
 - qualified states such as `apparent death` are not promoted into stronger Facts/Events;
 - retcon/contradiction UI does not promote mere variation into a confirmed retcon;
 - documentation matches behavior;
@@ -194,4 +196,4 @@ Phases 1, 2, 3, and 4 are complete and merged. Phase 5's Deception cosmology / O
 
 The active work remains **Phase 5 — Cosmology and ancient history**, defined in `docs/ROADMAP.md` and reviewed through `docs/PHASE5_MANUAL_VERIFICATION.md`.
 
-The current slice is **Mortal Kombat II / Outworld setup** on `agent/phase5-mk2-outworld`: extend Shang Tsung's sourced second-chance plea into his explicit plan to lure enemies to compete in Outworld, then model the MKII Outworld conflict without inventing locations for planning events or importing later retellings.
+The current slice is **Mortal Kombat II / Outworld setup** on `agent/phase5-mk2-outworld`: extend Shang Tsung's sourced second-chance plea into his explicit plan to lure enemies to compete in Outworld, then confirm the second Outworld tournament with later Original-continuity story evidence rather than treating the plan itself as proof of occurrence.
