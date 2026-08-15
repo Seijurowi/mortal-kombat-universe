@@ -1,0 +1,13 @@
+{
+  "id": "shang-tsung-arranges-sindel-reincarnation-original",
+  "type": "event",
+  "name": "Shang Tsung arranges Sindel's reincarnation",
+  "timelineId": "original",
+  "participantIds": ["shang-tsung", "quan-chi"],
+  "realmIds": [],
+  "causeEventIds": [],
+  "consequenceEventIds": ["mortal-kombat-ii-outworld-original"],
+  "order": 90,
+  "description": "Shang Tsung bargains with Quan Chi for Shinnok's help tainting Sindel's soul and reincarnating her on Earth, part of a long-running scheme intended to let Shao Kahn bypass the dimensional barrier protecting Earth.",
+  "tags": ["sindel", "scheme", "mk3-setup"]
+}
