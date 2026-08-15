@@ -1,0 +1,13 @@
+{
+  "id": "shinnok-escapes-netherrealm-original",
+  "type": "event",
+  "name": "Shinnok escapes the Netherrealm",
+  "timelineId": "original",
+  "participantIds": ["shinnok"],
+  "realmIds": ["netherrealm"],
+  "causeEventIds": [],
+  "consequenceEventIds": [],
+  "order": 190,
+  "description": "After Shao Kahn's defeat at the hands of the Earth warriors, Mortal Kombat 4 establishes that Shinnok has escaped his confinement in the Netherrealm.",
+  "tags": ["mk4", "escape", "netherrealm"]
+}
