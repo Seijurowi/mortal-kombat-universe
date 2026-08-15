@@ -1,0 +1,12 @@
+{
+  "id": "fact-kitana-battled-shinnok-original",
+  "type": "fact",
+  "name": "Kitana battled Shinnok",
+  "subjectId": "kitana",
+  "predicate": "battled",
+  "objectId": "shinnok",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk-gold-kitana-bio"],
+  "notes": "Mortal Kombat Gold's Kitana biography directly states that Kitana moves into the battle against Shinnok and Quan Chi. This Fact records only Kitana's combat against Shinnok; it does not claim that she defeated him or identify the battle location."
+}
