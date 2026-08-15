@@ -30,7 +30,7 @@ Complete and merged. Delivered `/claims`, evidence-safe claim-family labels, sou
 
 **Status: in progress.**
 
-**Current work:** Original-continuity **MK4 / Shinnok return setup** in draft PR #15 on `agent/phase5-mk4-shinnok-return`, based on merged PR #14 and the refreshed project contracts/Definition of Done.
+**Current work:** Original-continuity **MK4 / Shinnok return setup** in PR #15 on `agent/phase5-mk4-shinnok-return`. Implementation, manual UI verification, final contract review, and final-head CI are complete; the PR is ready for review/merge decision but must not be merged without explicit user/maintainer action.
 
 Goal: expand from character-scale lore into ancient and Original-continuity history while preserving source, continuity, causality, and evidence caveats instead of presenting one synthetic canon narrative.
 
@@ -104,14 +104,14 @@ Goal: expand from character-scale lore into ancient and Original-continuity hist
 - root/docs README, PRD, LORE_MODEL, AGENTS, Phase 3 regression manual, changelog policy, and changelog refreshed.
 - `docs/DEFINITION_OF_DONE.md` added as the authoritative readiness/completion gate.
 
-### Current MK4 / Shinnok return slice 🔨
+### Current MK4 / Shinnok return slice ✅ — PR #15 awaiting merge decision
 
-This slice deliberately tests whether the refreshed DoD keeps an inter-game chronological bridge from turning into fake causality while still making that bridge easy to follow in the UI.
+This slice tests whether the refreshed DoD keeps an inter-game chronological bridge from turning into fake causality while still making that bridge easy to follow in the UI.
 
 - [x] Reuse `Mortal Kombat 4 — Game Story` rather than duplicating the source.
 - [x] Expand its source notes to cover Shinnok's Netherrealm escape and the renewed-war framing.
 - [x] Add `Shinnok escapes the Netherrealm` as an Original Event and canon Fact.
-- [x] Add `The war against Shinnok resumes` as a broad Original Event and canon Fact.
+- [x] Add the resumed Shinnok-war beat as a broad Original Event and narrowly sourced canon Fact.
 - [x] Keep `Earth warriors defeat Shao Kahn → Shinnok escapes the Netherrealm` **chronological only**: MK4 says `after`, not that Kahn's defeat caused/enabled the escape.
 - [x] Keep `Shinnok escapes → renewed war` chronological/contextual only until a source explicitly supplies the direct causal relation.
 - [x] Do not attribute the specific MK4 escape mechanism to Quan Chi merely from older alliance/escape-attempt context.
@@ -120,12 +120,12 @@ This slice deliberately tests whether the refreshed DoD keeps an inter-game chro
 - [x] Add Previous/Next chronology navigation that can cross causal-component boundaries without creating graph edges.
 - [x] Auto-scroll the selected chronology card into view and keep causal context independently derived from explicit edges.
 - [x] Add/index a slice-specific manual verification checklist covering the chronology navigation.
-- [x] Review/update CHANGELOG for the lore slice, chronology UX, and intentional Shadcn UI inventory expansion.
-- [x] Open draft PR #15.
-- [x] Incorporate maintainer-added Shadcn/Base UI component inventory without overwriting it; package/lockfile changes are part of the final-head scope.
-- [ ] Run final-head CI after the chronology UX and documentation updates.
-- [ ] Perform manual UI pass for chronology navigation and Shadcn regression.
-- [ ] Perform final AGENTS + LORE_MODEL + DoD review after manual UI pass.
+- [x] Review/update CHANGELOG for the lore slice, chronology UX, Shadcn inventory, and contributor UI-system rules.
+- [x] Incorporate maintainer-added Shadcn/Base UI component inventory without overwriting it; package/lockfile changes are intentional scope.
+- [x] Fix React 19 lint blockers in the generated carousel/mobile support code without changing their intended public behavior.
+- [x] Manual UI pass completed by the maintainer for chronology navigation and overall affected experience.
+- [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed; resumed-war Fact narrowed after primary-source recheck.
+- [x] Final-head CI passed after the last substantive correction.
 - [ ] Merge only after explicit user/maintainer action.
 
 ### Next lore slices
