@@ -11,6 +11,7 @@ Before substantial work, read:
 - `docs/PRD.md` — stable product vision and target experience.
 - `docs/LORE_MODEL.md` — domain semantics and schema-evolution rules.
 - `docs/ROADMAP.md` — **authoritative active milestone/status/next work**.
+- `docs/DEFINITION_OF_DONE.md` — repository-wide completion/readiness gate.
 - `docs/CHANGELOG_POLICY.md` — changelog practice.
 - the relevant manual verification document(s) indexed in `docs/README.md`.
 
@@ -165,32 +166,19 @@ For every substantive PR, review `docs/CHANGELOG_POLICY.md` and update `CHANGELO
 
 `CHANGELOG.md` records completed material changes. It must not become the active roadmap or a dump of every JSON file changed.
 
-## Validation discipline
+## Definition of Done and validation discipline
 
-Before a substantive PR is ready:
+`docs/DEFINITION_OF_DONE.md` is the authoritative repository-wide readiness/completion gate for substantive PRs. Use it before marking a PR ready for review.
 
-- `pnpm validate` passes;
-- `pnpm lint` passes;
-- `pnpm typecheck` passes;
-- `pnpm build` passes;
-- all new references resolve;
-- event participants resolve to allowed entity types;
-- causal references are mirrored;
-- cross-timeline causal references are explicit reset/rewrite bridges;
-- new facts have evidence and timeline scope;
-- realm-target assertions are not hidden in `realmIds` semantics;
-- event realm scope is supported rather than inferred from a named place, participant affiliation, or later consequence;
-- temporal association is not promoted into causality;
-- plans/intentions are not promoted into completed occurrences without separate evidence;
-- qualified states such as `apparent death` are not promoted into stronger Facts/Events;
-- later broad outcome confirmation is not strengthened into a named-victor claim without direct corroboration;
-- retcon/contradiction UI does not promote mere variation into a confirmed retcon;
-- documentation matches behavior and ownership boundaries from `docs/README.md`;
-- `CHANGELOG.md` has been reviewed;
-- relevant manual verification has been performed;
-- `docs/ROADMAP.md` reflects the actual merged/active state.
+At minimum, the final PR head must pass the repository quality gate:
 
-A green build does not prove lore accuracy, causal accuracy, retcon accuracy, or good UX.
+```bash
+pnpm check
+```
+
+The DoD also requires evidence/model/UX/documentation/manual-review checks that CI cannot prove. Do not treat a green build as proof of lore accuracy, causal accuracy, retcon accuracy, or good UX.
+
+If the DoD conflicts with a branch-specific draft plan, fix the implementation or plan; do not weaken the DoD merely to merge the PR.
 
 ## Git hygiene
 
