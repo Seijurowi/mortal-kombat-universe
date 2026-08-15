@@ -1,13 +1,13 @@
 {
   "id": "mortal-kombat-ii-outworld-original",
   "type": "event",
-  "name": "Mortal Kombat II conflict in Outworld",
+  "name": "Second Mortal Kombat tournament in Outworld",
   "timelineId": "original",
   "participantIds": ["liu-kang", "shang-tsung", "shao-kahn"],
   "realmIds": ["outworld"],
   "causeEventIds": ["shang-tsung-plans-outworld-tournament-original"],
   "consequenceEventIds": [],
   "order": 130,
-  "description": "The Mortal Kombat II conflict takes the surviving Earthrealm opposition into Outworld, where Shang Tsung's plan places them against Shao Kahn's forces.",
+  "description": "Liu Kang and his allies are lured into Outworld to compete in a second tournament, carrying out the plan introduced in Mortal Kombat II.",
   "tags": ["tournament", "outworld", "mk2"]
 }
