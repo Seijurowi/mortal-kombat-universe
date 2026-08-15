@@ -1,0 +1,13 @@
+{
+  "id": "kitana-battles-shinnok-quan-chi-original",
+  "type": "event",
+  "name": "Kitana joins the battle against Shinnok and Quan Chi",
+  "timelineId": "original",
+  "participantIds": ["kitana", "shinnok", "quan-chi"],
+  "realmIds": [],
+  "causeEventIds": [],
+  "consequenceEventIds": [],
+  "order": 205,
+  "description": "Mortal Kombat Gold establishes that after Quan Chi's forces leave Edenia to battle Raiden and his forces, Kitana moves into the battle against Shinnok and Quan Chi. The source confirms the combatants but not the battle's structured Realm location or a direct causal edge to Shinnok's later-confirmed defeat.",
+  "tags": ["mk4", "mortal-kombat-gold", "battle", "quan-chi", "kitana"]
+}
