@@ -6,7 +6,7 @@
   "participantIds": ["shao-kahn", "sindel"],
   "realmIds": ["earthrealm"],
   "causeEventIds": ["sindel-reborn-earthrealm-original"],
-  "consequenceEventIds": ["shao-kahn-claims-earthrealm-souls-original"],
+  "consequenceEventIds": [],
   "order": 150,
   "description": "Sindel's rebirth on Earthrealm enables Shao Kahn to step through the dimensional gates, reclaim his queen, and begin his invasion of Earthrealm.",
   "tags": ["invasion", "earthrealm", "mk3"]
