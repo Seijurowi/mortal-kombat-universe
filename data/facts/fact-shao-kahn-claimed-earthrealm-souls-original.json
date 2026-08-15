@@ -1,0 +1,12 @@
+{
+  "id": "fact-shao-kahn-claimed-earthrealm-souls-original",
+  "type": "fact",
+  "name": "Shao Kahn claimed human souls in Earthrealm",
+  "subjectId": "shao-kahn",
+  "predicate": "claimed_souls_in",
+  "objectId": "earthrealm",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk3-story"],
+  "notes": "Mortal Kombat 3's story says that after breaching Earth, Shao Kahn strips it of human life by claiming souls, while the chosen warriors' souls remain protected."
+}
