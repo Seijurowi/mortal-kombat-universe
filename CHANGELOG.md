@@ -24,7 +24,10 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 - Mortal Kombat Trilogy story as later Original-continuity confirmation that Liu Kang and his comrades were actually lured into Outworld for a second tournament.
 - Mortal Kombat 3 story plus expanded Mortal Kombat Mythologies: Sub-Zero and Mortal Kombat Trilogy story provenance for the Sindel reincarnation / Earthrealm-invasion setup.
 - `Shang Tsung arranges Sindel's reincarnation`, `Sindel is reborn on Earthrealm`, and `Shao Kahn breaches Earthrealm` as sourced Original-continuity Events.
+- Mortal Kombat 3 Liu Kang biography and Mortal Kombat 4 story source records for the invasion aftermath and later-confirmed Shao Kahn defeat.
+- `Shao Kahn claims Earthrealm's human souls`, `Shao Kahn sends extermination squads after the survivors`, and `Earth warriors defeat Shao Kahn` as Original-continuity Events.
 - Canon Facts for Shang Tsung arranging the Sindel reincarnation scheme, the second tournament serving as a diversion, Sindel's Earthrealm rebirth, and that rebirth enabling Shao Kahn to cross the dimensional gates.
+- Canon Facts for Shao Kahn claiming Earthrealm's human souls, Liu Kang becoming the prime target of the extermination squads, and Earth warriors defeating Shao Kahn.
 - Dedicated chronology rail in `/causality` that lists each event once in story order, independently from causal-tree branching.
 - Sourced realm-target Facts for `Shao Kahn conquered Edenia` and `Kitana liberated Edenia`.
 - Supplemental Jerrod family Facts retained from Sindel's Mortal Kombat 3 ending without promoting ending-only evidence into biography-level canon.
@@ -33,8 +36,8 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 - Canon Facts for Baraka leading the Shaolin-temple attack, Liu Kang's Shaolin brothers being killed by Outworld warriors, and Liu Kang seeking revenge after discovering the destruction.
 - `Shang Tsung seeks a second chance` as the sourced Original-continuity bridge from the failed first-game tournament into the Mortal Kombat II setup.
 - `Shang Tsung plans an Outworld tournament`, a canon Fact for that plan, `Second Mortal Kombat tournament in Outworld`, and a canon Fact confirming Liu Kang was lured there to compete.
-- Supported causal chains for `Shao Kahn poisons Onaga → seizes Outworld`, `Onaga manipulates Shujinko → Shujinko gathers Kamidogu`, `Shujinko shatters Kamidogu → defeats Onaga`, `Shinnok wars with Raiden → banishment`, `Quan Chi allies with Shinnok → Shinnok rules Netherrealm`, `first-game tournament → Shang Tsung seeks a second chance → Outworld tournament plan → second Outworld tournament`, `Baraka attacks the Shaolin temples → Liu Kang seeks revenge`, and `Sindel scheme → Sindel rebirth → Shao Kahn breaches Earthrealm`.
-- Phase 5 manual verification for ancient cosmology, continuity scope, source provenance, collective event participants, status changes, realm-target semantics, ending evidence strength, tournament chronology, first-game outcome confirmation, plan-versus-occurrence evidence, causal gaps, chronology-versus-causality UX, and the first proven multi-parent causal node.
+- Supported causal chains for `Shao Kahn poisons Onaga → seizes Outworld`, `Onaga manipulates Shujinko → Shujinko gathers Kamidogu`, `Shujinko shatters Kamidogu → defeats Onaga`, `Shinnok wars with Raiden → banishment`, `Quan Chi allies with Shinnok → Shinnok rules Netherrealm`, `first-game tournament → Shang Tsung seeks a second chance → Outworld tournament plan → second Outworld tournament`, `Baraka attacks the Shaolin temples → Liu Kang seeks revenge`, `Sindel scheme → Sindel rebirth → Shao Kahn breaches Earthrealm`, and `protected Earth warriors survive soul-taking → Shao Kahn sends extermination squads`.
+- Phase 5 manual verification for ancient cosmology, continuity scope, source provenance, collective event participants, status changes, realm-target semantics, ending evidence strength, tournament chronology, first-game outcome confirmation, plan-versus-occurrence evidence, causal gaps, chronology-versus-causality UX, multi-parent causal nodes, and the MK3 invasion outcome.
 
 ### Changed
 
@@ -60,6 +63,8 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 - MK3's wording that Shao Kahn enacts the ancient plan after failed tournament attempts is preserved as a sourced Fact rather than converted into unsupported direct causal edges from MK1/MKII to a newly invented post-tournament plan Event; Mythologies and MKT establish that the Sindel scheme was already in motion.
 - `/causality` now separates chronology from causal topology: chronology is read once left-to-right, while causal starts/ends and branches remain graph semantics rather than implied timeline endpoints.
 - Shared multi-parent Events render one full node plus explicit `Merges into` references from additional causal parents instead of duplicating the same Event card under every branch.
+- The MK3 invasion keeps `Shao Kahn breaches Earthrealm` and the later soul-claim as chronological neighbors without a direct causal edge; the source establishes the invasion sequence but not that narrow causal relation.
+- Shao Kahn's MK3 defeat is promoted only to the broad later-confirmed outcome `defeated by Earth warriors`; Liu Kang is not named as the individual victor from ending-only evidence.
 - Shinnok's Elder God status is represented as a historical Fact (`former_member_of`) instead of timeless static faction membership.
 - Product and domain documentation identifies Phase 5 as the active milestone and tracks each ancient-history slice as it is merged.
 
@@ -130,7 +135,7 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 
 ### Changed
 
-- Kept Bi-Han as one stable character entity while representing Sub-Zero / Noob Saibot identity changes through timeline-scoped facts and events.
+- Kept Bi-Han as one stable character entity while representing Sub-Zero / Noob Saibot identity changes through timeline-scoped facts/events.
 - Documented alternate-timeline Titan Havik as model pressure without prematurely introducing a character-variant schema.
 
 ### Fixed

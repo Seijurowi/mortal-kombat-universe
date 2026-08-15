@@ -32,7 +32,7 @@ Delivered:
 
 ## Phase 5 — Cosmology and ancient history 🔨
 
-Status: implementation in progress on `agent/phase5-mk2-shaolin-attack`.
+Status: implementation in progress on `agent/phase5-mk3-invasion-outcome`.
 
 Goal: expand from character-scale lore into the oldest Mortal Kombat history while preserving source and continuity caveats instead of presenting one synthetic creation myth or one flattened ancient history as timeless canon.
 
@@ -111,7 +111,7 @@ Goal: expand from character-scale lore into the oldest Mortal Kombat history whi
 - [x] Final AGENTS/manual review and CI for the slice.
 - [x] Merge the reviewed slice through PR #10.
 
-### Mortal Kombat II / Shaolin temple attack slice 🔨
+### Mortal Kombat II / Shaolin temple attack slice ✅
 
 - [x] Add Baraka as an Original-continuity Character.
 - [x] Add the Mortal Kombat II Baraka biography as direct primary evidence that Baraka led the attack on Liu Kang's Shaolin temples.
@@ -119,15 +119,38 @@ Goal: expand from character-scale lore into the oldest Mortal Kombat history whi
 - [x] Model `Baraka leads the attack on the Shaolin temples → Liu Kang seeks revenge after the Shaolin attack` as a supported causal chain.
 - [x] Keep the attack Event's `realmIds` empty because the primary bio names the Shaolin temples but does not itself map that named place to a Realm.
 - [x] Keep the attack/revenge component separate from the second-tournament lure; the current primary evidence does not say the attack caused or implemented Shang Tsung's lure plan.
-- [ ] Final AGENTS/manual review and CI for the slice.
+- [x] Final manual review and CI.
+- [x] Merge the reviewed slice through PR #11.
+
+### Sindel scheme / MK3 invasion setup slice ✅
+
+- [x] Add MK3 story evidence and expand Mythologies/MKT source notes for the long-running Sindel scheme.
+- [x] Model `Shang Tsung arranges Sindel's reincarnation` before the first tournament without inventing a Realm location.
+- [x] Treat the second Outworld tournament as the first proven multi-parent causal node: Shang Tsung's lure plan plus the older Sindel scheme/diversion framing.
+- [x] Preserve MK3's `failed tournament attempts` framing as a Fact rather than forcing unsupported tournament → newly-created-plan edges.
+- [x] Model `Sindel is reborn on Earthrealm → Shao Kahn breaches Earthrealm` where the source directly supplies the mechanism.
+- [x] Add a separate chronology rail to `/causality` and deduplicate shared DAG nodes with explicit merge references.
+- [x] Merge the reviewed slice through PR #12.
+
+### Mortal Kombat 3 / invasion outcome slice 🔨
+
+- [x] Add MK3 soul-taking and extermination-campaign Events/Facts with the protected-warrior qualification preserved.
+- [x] Add MK3 Liu Kang biography evidence that Liu Kang becomes the prime target of Shao Kahn's extermination squads.
+- [x] Add MK4 story as later Original-continuity confirmation that Earth warriors defeated Shao Kahn.
+- [x] Keep the broad defeat outcome canon without promoting Liu Kang as the individual victor from ending-only evidence.
+- [x] Keep `Shao Kahn breaches Earthrealm` and the later soul claim in chronology without a direct causal edge; adjacent invasion narration is not sufficient proof of that narrow causal relation.
+- [x] Keep the later defeat after the invasion in chronology without inventing an extermination-squads → defeat causal edge.
+- [x] Update manual verification, AGENTS guidance, and CHANGELOG.
+- [ ] Final CI on the review-corrected head.
+- [ ] Merge only after explicit user action/instruction.
 
 ### Next lore slices
 
-- [ ] Decide after the Shaolin-attack review whether to continue into the MKII outcome / Shao Kahn defeat or pivot to a higher-value cosmology/retcon comparison stress case.
+- [ ] Shinnok escape / MK4 setup and the bridge from Shao Kahn's defeat into the next Original-continuity conflict.
 - [ ] Onaga's resurrection/return mechanism and post-Deception fate with stronger source coverage.
-- [ ] Shinnok escape/MK4 and Reboot continuity comparison.
 - [ ] Compare Original cosmology against MK11-era Titan/Kronika cosmology without forcing them into one universal truth.
 - [ ] Compare Original/Reboot/New Era Sindel portrayals with claim-history discipline rather than a synthetic character biography.
+- [ ] Revisit exact MKII/MK3 individual-victor attribution only when direct later Original evidence supports the narrower claim.
 
 ### Phase 5 acceptance criteria
 
@@ -146,9 +169,12 @@ A user should be able to:
 11. follow Liu Kang's first-game victory into Shang Tsung's documented second-chance plea without treating Goro's apparent death as confirmed death;
 12. follow the plea into Shang Tsung's Outworld plan and then the later-confirmed second tournament without confusing plan target with planning-event location;
 13. inspect Baraka's Shaolin-temple attack and Liu Kang's revenge response without inventing a realm mapping or a lure-plan causal edge;
-14. see intentional causal gaps where the sources establish sequence or context but not direct causation.
+14. read chronology independently from causal topology when a shared Event has multiple parents;
+15. follow the sourced Sindel-rebirth mechanism into Shao Kahn's Earthrealm breach without rewriting the older scheme as a post-MKII invention;
+16. inspect MK3's soul-taking/extermination campaign and later-confirmed Shao Kahn defeat without promoting chronology into causality or broad outcome confirmation into an unsupported named victor;
+17. see intentional causal gaps where the sources establish sequence or context but not direct causation.
 
-See `PHASE5_MANUAL_VERIFICATION.md`.
+See `PHASE5_MANUAL_VERIFICATION.md` and the slice-specific manual verification documents.
 
 ## Phase 6 — Systematic timeline expansion
 
