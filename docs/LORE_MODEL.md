@@ -1,70 +1,167 @@
 # Lore Model
 
-This document explains how Mortal Kombat lore should be represented in the repository.
+This document defines how Mortal Kombat lore is represented in the repository. It is a durable domain contract, not a live project-status document. Active work belongs in `ROADMAP.md`.
 
 ## 1. Separation of concerns
 
-The model separates entities, events, facts, relationships, sources, and timelines. Do not overload one entity type to perform another type's job.
+The model separates entities, events, facts, relationships, sources, and timelines. Do not overload one entity type or field to perform another type's job.
 
-## 2. Fact as the evidence unit
+Current top-level entity types:
 
-A `Fact` is the smallest independently sourced and scoped assertion. Prefer several narrow facts over one paragraph-like fact.
+- `Character`
+- `Event`
+- `Realm`
+- `Faction`
+- `Timeline`
+- `Relationship`
+- `Source`
+- `Fact`
+
+JSON under `data/` is the canonical editable lore store.
+
+## 2. Fact is the evidence unit
+
+A `Fact` is the smallest independently sourced and scoped assertion. Prefer several narrow Facts over one paragraph-like claim.
 
 Every important Fact should declare:
 
 - `subjectId`;
 - a narrow `predicate`;
-- `objectId` or literal `value` when appropriate;
+- `objectId` or literal `value` where appropriate;
 - `timelineIds`;
 - `canonStatus`;
 - one or more `sourceIds`.
 
+A Fact's source should directly support the narrow assertion whenever possible. Contextual corroboration must not be described as direct proof of a stronger claim.
+
+Supported canon statuses:
+
+- `canon`
+- `supplemental`
+- `retconned`
+- `alternate`
+- `unconfirmed`
+- `gameplay_only`
+
+Use the narrowest defensible status.
+
 ## 3. Events are occurrences, not evidence
 
-An Event describes an occurrence in one timeline. Facts establish sourced assertions about what happened.
+An `Event` describes an occurrence in one timeline. Facts establish sourced assertions about what happened.
 
 Use:
 
-- `participantIds` for involved **Characters or Factions**;
+- `participantIds` for involved Characters or Factions;
 - `realmIds` for event location/realm scope;
-- `causeEventIds` only when a causal connection is defensible;
-- `consequenceEventIds` for supported outcomes.
+- `causeEventIds` only for defensible causal relations;
+- `consequenceEventIds` only for defensible causal outcomes;
+- `order` for chronology/story ordering, never as automatic causality.
 
-Phase 5 expanded participant validation from Character-only to `Character | Faction`. The concrete case is the Deception creation account: the **Elder Gods collectively** act in the event that shatters the One Being. Modeling that actor as one fake Character would distort the lore, while omitting it would lose an essential participant. The same rule is reusable for wars, clans, armies, and other collective actors.
+### Participants
 
-`realmIds` must not be overloaded as an event-output or action-object field. The One Being review proved this when the creation event initially attached later realms as if they were locations of a pre-realm event. The Edenia conquest slice proves the reusable positive rule: an event may have `realmIds: ["edenia"]` because it occurs in/concerns Edenia, while a sourced Fact such as `Shao Kahn conquered Edenia` uses `objectId: "edenia"` to express Edenia as the object of the claim. Apply the same pattern to liberation, merging, destruction, creation, or similar realm-target assertions.
+Event participants may be `Character | Faction`. Phase 5 proved this with the Elder Gods collectively acting in the One Being shattering event. Do not fabricate a Character for a collective actor merely to satisfy event validation.
 
-Event realm scope also requires direct support. Do not infer a location merely from the realms associated with participants or from the location of a later consequence. The MKII setup does not establish where Shang Tsung makes his plea to Shao Kahn, so `Shang Tsung seeks a second chance` intentionally has no `realmIds` entry even though the plan that follows concerns Outworld.
+Do not insert a named participant merely because a broader source phrase makes that participant likely. If a later source says “Earth warriors defeated Shao Kahn,” that supports Shao Kahn as the defeated subject and a broad victor class; it does not independently identify Liu Kang as the individual victor.
 
-A named place does not automatically justify a broader Realm mapping. The MKII biographies name Liu Kang's Shaolin temples but do not, in those claims, explicitly map that named place to Earthrealm; the Shaolin-temple attack Event therefore leaves `realmIds` empty. The same conservative rule applies to islands, academies, palaces, arenas, and other local places until the dataset has direct or separately established evidence for the Realm mapping.
+### Realm semantics
 
-A stated plan, intention, threat, prophecy, or possibility is not evidence that the planned occurrence actually happened. Model the planning state separately, then require a source that treats the occurrence as established history before creating/promoting the resulting Event. The MKII slice uses the arcade story for Shang Tsung's Outworld plan and Mortal Kombat Trilogy story for later confirmation that Liu Kang and his comrades were actually lured into Outworld for a second tournament.
+`realmIds` means **where the Event occurs / its realm scope**. It is not an action-object or output field.
 
-Sequence alone does not prove causality. Ordinary causal links connect events in the same timeline. Cross-timeline causal links are reserved for explicit reset/rewrite bridges whose source event creates or rewrites the following continuity; the validator recognizes `reset`, `rewrite`, and `timeline-bridge` source-event tags.
+If a realm is conquered, liberated, merged, created, destroyed, transformed, or otherwise the object of a lore assertion, represent that assertion as a sourced Fact with the Realm in `objectId` where appropriate.
 
-Temporal phrases such as **“during this period,” “after,” “before,” or “years later”** establish chronology/context unless the source also states a causal relationship. The Great Kung Lao tournament slice proves this distinction: the original Mortal Kombat story says Goro defeated Kung Lao and that during this period the tournament fell into Shang Tsung's hands. Those are separate Events/Facts with no `causeEventIds` edge because temporal co-occurrence is not proof that Goro's victory caused Shang Tsung's takeover.
+Examples:
 
-The Liu Kang/MK1992 slice proves the positive counterpart: Mortal Kombat II explicitly frames Shang Tsung's plea to Shao Kahn as a response to his first-tournament failure and Goro's apparent death. That wording supports a causal edge from the first-game tournament to `Shang Tsung seeks a second chance`.
+- the One Being shattering Event does not attach later realms as if they were locations of a pre-realm event;
+- `Shao Kahn conquered Edenia` is a Fact whose object is Edenia;
+- `Shang Tsung seeks a second chance` has no Outworld realm scope because MKII establishes the later plan's target, not the plea's location.
 
-## 4. Relationships are graph projections
+A named place is not automatically a Realm mapping. A temple, academy, island, palace, arena, or city does not justify a broader `realmIds` value unless the source or separately established evidence supports that mapping. The MKII Shaolin-temple attack is the concrete proof case.
 
-`Relationship` exists for navigation and graph traversal. Meaningful lore claims should be backed by Facts where possible. Do not treat Relationship as evidence by itself.
+## 4. Chronology is not causality
 
-## 5. Identity and historical status handling
+Sequence alone never proves cause.
 
-Prefer stable person entities such as `bi-han`, `kuai-liang`, `hanzo-hasashi`, and `shinnok`. Identities such as Sub-Zero, Scorpion, and Noob Saibot are normally timeline-scoped Facts rather than duplicate Characters.
+`causeEventIds` / `consequenceEventIds` mean supported causal relation, not:
 
-Do not encode a historical office, rank, divine state, or faction membership as timeless static Character metadata when the lore shows that it changes. Phase 5 proves this with Shinnok: he **was** an Elder God, fell, was banished, and later ruled the Netherrealm. His former Elder God status is therefore a Fact (`former_member_of`) rather than `factionIds: ["elder-gods"]` on the Character.
+- “happened shortly before/after”;
+- adjacent `order` values;
+- “during this period”;
+- “years later”;
+- broad narrative sequence inside one intro.
 
-Historical titles and reign lengths follow the same rule. Goro's Grand Champion status and roughly 500-year undefeated reign are sourced Facts, not timeless Character metadata.
+Temporal language establishes chronology/context unless the source also supplies the causal link.
 
-Do not strengthen qualified source language. `Apparent death`, `believed dead`, `missing`, or similar states are not equivalent to confirmed death. The MKII setup describes Goro's **apparent death**, so this slice does not create a Goro death Fact/Event.
+Proven examples:
 
-## 6. Transformation and state changes
+- Goro defeating the Great Kung Lao and Shang Tsung taking control of the tournament occur in the same historical period but remain causally disconnected;
+- MKII explicitly frames Shang Tsung's plea to Shao Kahn as a response to first-tournament failure, so that edge is supported;
+- MK3 places Shao Kahn's Earthrealm breach before his soul-taking, but the project deliberately does not encode the narrow `breach → soul claim` causal edge merely from adjacent invasion narration;
+- later defeat of Shao Kahn remains chronologically after the invasion campaign without inventing an extermination-squads → defeat edge.
 
-Deaths, resurrections, corruption, revenant/wraith states, ascensions, banishments, rulership changes, conquests, liberations, title changes, and similar transitions are best represented as Events plus Facts. Avoid putting all historical states into a static Character or Realm description.
+Causal gaps are valid data-model outcomes. Do not connect events merely to make a prettier tree.
 
-## 7. Timeline discipline
+## 5. Plans, intentions, threats, and prophecies
+
+A plan, intention, threat, prophecy, possibility, or predicted outcome is not evidence that the described occurrence happened.
+
+Model the intention itself, then require separate occurrence evidence before creating or promoting the intended Event as established history.
+
+Concrete case:
+
+- MKII establishes Shang Tsung's plan to lure enemies into Outworld;
+- later Mortal Kombat Trilogy story material establishes that Liu Kang and his comrades were actually lured into Outworld for a second tournament.
+
+The source proving a plan may still support a causal edge to a later separately proven occurrence when the later evidence shows the plan was carried out.
+
+## 6. Later-primary confirmation and ending evidence
+
+Character/arcade endings can preserve useful evidence without making every ending detail canonical.
+
+A later primary source may independently treat a narrower ending outcome as established history. In that case the narrower outcome may be promoted to `canon`, while unsupported details remain weaker.
+
+Examples:
+
+- Liu Kang's first-game ending plus later MK4 Goro biography can support the narrower claim that Liu Kang took the title from Goro;
+- MKII Liu Kang biography supports the narrower first-tournament-control outcome;
+- MK4 story supports that Shao Kahn was defeated by Earth warriors after MK3, but does not by itself establish Liu Kang as the individual victor.
+
+Reusable rule: **broad confirmation stays broad**. Do not strengthen later evidence into a more specific actor, method, death, or causal chain than the source establishes.
+
+## 7. Qualified states stay qualified
+
+Do not strengthen source language such as:
+
+- apparent death;
+- believed dead;
+- missing;
+- rumored;
+- possibly;
+- apparently.
+
+MKII's `Goro's apparent death` is not a confirmed Goro death Fact/Event.
+
+Deaths, resurrections, corruption, revenant/wraith states, ascensions, banishments, rulership changes, and similar state transitions are best represented through scoped Events plus Facts when evidence supports them.
+
+## 8. Identity and historical status
+
+Prefer stable person entities such as `bi-han`, `kuai-liang`, and `hanzo-hasashi`. Do not duplicate a Character merely because a mantle, form, title, allegiance, or state changes.
+
+Represent changing identities/statuses through timeline-scoped Facts and Events unless a future proven requirement introduces a more specific entity/version concept.
+
+Historical status should not be encoded as timeless static metadata when it changes:
+
+- Shinnok's former Elder God status is a Fact, not eternal faction membership;
+- Goro's Grand Champion status and undefeated reign are Facts, not permanent Character properties.
+
+A unique non-playable being may currently use `Character` when it is still a single agent/entity in lore. The One Being is the current proof case. Do not add `CosmicEntity` until additional cases show that `Character` materially damages meaning or navigation.
+
+## 9. Relationships are projections
+
+`Relationship` supports navigation/graph traversal. It is not evidence by itself.
+
+Meaningful lore claims should be backed by Facts where possible. Relationship direction matters. Do not derive causal Event edges from ordinary Relationship edges without separate causal evidence.
+
+## 10. Timeline discipline
 
 Current top-level continuity scopes are:
 
@@ -72,25 +169,26 @@ Current top-level continuity scopes are:
 - `reboot`
 - `new-era`
 
-Never infer that a fact from one continuity applies to another. Use separate Facts when details differ materially. An Event belongs to one timeline. Cross-timeline comparison is presentation over scoped data, not merged canon.
+Never infer that a fact from one continuity applies to another. Cross-continuity comparison is presentation over scoped data, not merged canon.
 
-The Reboot `hourglass-reset` → `liu-kang-new-era` edge is an explicit reset/rewrite bridge and remains outside ordinary within-continuity story trees.
+Ordinary causal edges stay inside one timeline.
 
-## 8. Retcons and contradictions
+The Reboot `hourglass-reset → liu-kang-new-era` edge is a special explicit reset/rewrite bridge. Cross-timeline causal edges require an explicit source-event tag such as `reset`, `rewrite`, or `timeline-bridge` and remain outside ordinary within-continuity story trees.
 
-When a later source contradicts an older portrayal:
+## 11. Retcons, contradictions, and claim history
 
-1. preserve the older useful claim;
-2. scope it correctly;
-3. mark it `retconned` only when defensible;
-4. add the newer claim separately;
-5. do not rewrite history to hide the contradiction.
+Treat retcon, continuity divergence, alternate portrayal, uncertainty, and ordinary time-state change as different concepts.
 
-Claim-family grouping by `subject + predicate` is an inspection aid, not an automatic contradiction relation. Different values may reflect time-dependent or multi-valued predicates.
+- Do not call differing timeline-scoped facts a retcon merely because values differ.
+- `retconned` is strong evidence that an older portrayal has been superseded, but review the source context before summarizing a whole family as a simple before/after rewrite.
+- `alternate` is not automatically a correction of another fact.
+- `unconfirmed` means evidence is insufficient for stronger status.
+- claim-family grouping by `subject + predicate` is presentation only and does not create contradiction semantics.
+- source year is evidence-history context, not canonical priority.
 
-Arcade/character endings require evidence discipline. An ending can preserve useful detail without proving every part of its outcome. If later primary story/biography material independently treats a specific outcome as established history, that narrower outcome may be represented as `canon` while unsupported ending details remain weaker. The Liu Kang slice applies this with his MK1992 ending plus direct later confirmation: MK4's Goro biography says the title was won from Goro by Liu Kang, while MKII's Liu Kang biography confirms that Liu Kang won the tournament from Shang Tsung's control.
+Do not add explicit `contradicts` / `supersedes` relations until a concrete sourced case proves the current model insufficient.
 
-## 9. Source discipline
+## 12. Source discipline
 
 Prefer, in order:
 
@@ -100,97 +198,99 @@ Prefer, in order:
 4. clearly scoped official supplemental material;
 5. secondary mirrors/research aids when primary material cannot be directly recovered.
 
-When a primary work is only accessible through a preservation mirror, the Source record must identify the primary work honestly. Do not present the mirror itself as the canonical authority.
+When primary material is accessed through a preservation mirror, identify the primary work as the source and describe the mirror honestly as access infrastructure. The mirror does not become canonical authority.
 
-Phase 5 adds `game_manual` as a first-class Source type after the Mortal Kombat: Deception instruction booklet proved that official manuals are a reusable evidence category rather than generic `other` material.
+Later games may clarify or confirm earlier events without automatically replacing earlier sources. Preserve both when they add distinct evidence.
 
-Later games may clarify or confirm an older event without replacing the older source. The Great Kung Lao slice uses Mortal Kombat (1992) to establish Goro's ancient victory and Mortal Kombat II to identify the defeated ancestor explicitly as the **Great Kung Lao**. The Liu Kang slice uses direct later biographies to confirm specific first-game outcomes first shown in Liu Kang's ending. A source should only support the claim it actually states: MKII's general account of Goro's apparent death is not used as direct proof that Liu Kang personally defeated Goro. The MKII/MKT slice similarly separates Shang Tsung's plan from later confirmation that the second Outworld tournament occurred. This is evidence accumulation, not “newer source automatically wins.”
+Current source records are mostly work-level. Add scene/chapter/page/timestamp/quote locators only when evidence review proves work-level granularity insufficient.
 
-## 10. Source granularity
+Never invent a source to satisfy validation.
 
-The current schema stores sources mostly at work-level granularity. Add chapter/scene/page/timestamp/quote locators only when real evidence review proves they are necessary.
+## 13. Causal graph and chronology UX
 
-## 11. Causal graph guidance
+The presentation model must preserve the distinction between chronological sequence and causal topology.
 
-Only encode causal edges supported by lore. Event `order` is chronology context and never manufactures parent/child edges.
+`/causality` currently supports:
 
-The Kamidogu warning in Shujinko's Deception biography is therefore represented as a Fact: misuse can merge the realms and reawaken the One Being. We do not invent a separate causal event chain until the actual event sequence is modeled from sourced material.
+- disconnected causal components;
+- chronology/story-order rail where each Event appears once;
+- whole causal trees generated only from explicit causal fields;
+- local `Why? / What next?` parent/child inspection;
+- real multi-parent/DAG merges;
+- one full shared merge node plus explicit merge references from additional parents instead of duplicating one occurrence as multiple full cards;
+- reset/rewrite bridges excluded from ordinary continuity trees.
 
-Phase 5 also deliberately keeps Shujinko's `gathers Kamidogu` and later `shatters Kamidogu` events disconnected because the current evidence establishes both story states but does not require a direct causal edge between them.
+The second Outworld tournament is the first proven multi-parent Event: MKII's lure plan and the older Sindel scheme/diversion framing converge on the same tournament occurrence.
 
-Likewise, `Shao Kahn conquers Edenia` and the much later `Kitana frees Edenia` remain disconnected causal components for now. The conquest establishes the historical condition that is later reversed, but the dataset does not yet model the long chain of intervening events needed to claim one direct causal edge.
+Do not weaken correct lore edges because a renderer is simpler without them. UI must follow the model, not the reverse.
 
-The Great Kung Lao/Goro slice adds another reusable case: `Goro defeats the Great Kung Lao` and `Shang Tsung takes control of the tournament` belong to the same historical period, but remain disconnected because the source does not explicitly say one caused the other.
+## 14. Ancient-history modeling choices
 
-The first-game tournament now has one explicit consequence edge to Shang Tsung's second-chance plea because MKII story text supplies the missing causal language. This demonstrates that causal gaps can be filled later when stronger evidence appears without retroactively treating all chronology as causality.
+Phase 5 has proven these reusable choices:
 
-The MKII continuation distinguishes planning from occurrence. `Shang Tsung plans an Outworld tournament` is supported by the MKII intro; `Second Mortal Kombat tournament in Outworld` is supported by later MKT story text that says Liu Kang and his comrades were lured there to compete. The causal edge links a sourced plan to a separately sourced occurrence rather than assuming plans automatically succeed.
+- `One Being` can currently be modeled as a unique non-playable Character/being;
+- `Elder Gods` is a Faction because the source describes a collective actor;
+- realms remain Realm entities;
+- realm-target actions belong in Facts while Event `realmIds` stays location/scope;
+- historical divine/political status belongs in Facts/Events rather than timeless metadata;
+- ending-only detail is conservative until later primary confirmation narrows what can safely become canon;
+- plans and occurrences are separate evidence questions;
+- qualified states stay weaker than confirmed transitions;
+- named-place evidence does not automatically produce broader Realm scope;
+- chronology may contain intentional causal gaps;
+- parallel causal components remain separate until evidence connects them;
+- real multi-parent causality is allowed when independently sourced parent relations converge on one Event;
+- later broad historical confirmation does not identify a narrower actor unless the source does.
 
-The Shaolin-temple slice demonstrates parallel causal components. Baraka's biography says he led the attack on Liu Kang's Shaolin temples, and Liu Kang's biography directly links the ruined home and slain brothers to his revenge journey. That supports `Shaolin attack → Liu Kang seeks revenge`. It does **not** by itself support `Shaolin attack → second tournament` or `Shaolin attack → Shang Tsung's lure plan`, so those components remain disconnected unless stronger primary evidence is added later.
+Do not project Original-continuity cosmology or ancient history automatically into Reboot or New Era. Later Titan/Kronika cosmology, reboot Shinnok, Sindel reinterpretations, and tournament retellings require their own scoped evidence.
 
-## 12. Cosmology and ancient-history modeling
-
-Phase 5 begins with the Original-continuity creation account in Mortal Kombat: Deception and expands through Onaga, Shinnok, Edenia/Outworld conquest history, pre-1992 tournament history, and the MK1992 transition into MKII.
-
-Current choices:
-
-- `One Being` is represented as a unique non-playable `Character`/being because Character is currently the reusable entity class for unique agents/beings, playable or not.
-- `Elder Gods` is represented as a `Faction` because the source describes a collective actor.
-- individual realms remain `Realm` entities.
-- realm-target claims use Facts; `realmIds` stays event location/scope metadata and is omitted when event location is not directly supported, including when a source names only a local place without establishing its broader Realm mapping.
-- historical titles, reigns, tournament control, and victories are Facts/Events rather than timeless metadata.
-- ending-only details may be preserved conservatively, while specific ending outcomes may be promoted to canon only when independent primary sources confirm them.
-- plans/intentions remain separate from later occurrences unless another source establishes that the intended event actually happened.
-- qualified states such as Goro's `apparent death` remain qualified rather than becoming stronger death events.
-- tournament-era chronology may remain disconnected when sources provide only sequence/context, and parallel causal components remain separate until evidence connects them.
-
-Do **not** project this Original-continuity material automatically into Reboot or New Era. Later Titan/Kronika cosmology, reboot Shinnok, later Sindel reinterpretations, and MK9/New Era tournament-history variants must be added with their own scoped evidence and compared rather than silently reconciled.
-
-The One Being is a deliberate stress test for whether `Character` remains semantically acceptable for unique cosmic beings. Do not add a `CosmicEntity` type until additional real cases prove the existing class materially harms navigation or meaning.
-
-## 13. Model-evolution rule
+## 15. Schema-evolution rule
 
 Before modifying a schema or validator rule, answer:
 
-- What real sourced example cannot be represented cleanly?
-- Why do existing fields fail?
-- Is the change reusable beyond one case?
-- How do existing records migrate?
-- How will validation enforce the new rule?
-- Which product/domain docs must change?
+1. What concrete sourced case cannot be represented cleanly?
+2. Why do existing fields fail?
+3. Is the proposed concept reusable beyond one case?
+4. How do existing records migrate?
+5. How will validation enforce the new rule?
+6. Which owning docs must change?
 
 Never weaken validation merely to make incorrect data pass.
 
-## 14. Proven stress cases and current pressure
+## 16. Proven stress cases
 
-Proven cases include:
+The current model has been tested by:
 
-- stable characters carrying different identities across continuities;
+- stable Characters carrying different identities across continuities;
 - sourced death/resurrection/transformation chains;
-- whole-chain causality without chronology-derived edges;
 - explicit reset/rewrite bridges;
-- claim-family comparison without inventing contradiction semantics;
-- Factions acting as Event participants, proven by the Elder Gods in Deception cosmology;
-- official game manuals as a distinct source category;
-- historical divine/faction status represented as Facts rather than timeless Character membership, proven by Shinnok;
-- realms acting as the object of sourced claims without overloading Event `realmIds`, proven by Edenia conquest/liberation;
-- ending-only lore retained conservatively until later primary evidence confirms a narrower canonical outcome;
-- temporal association kept separate from causality, proven by Great Kung Lao/Goro/Shang Tsung history;
-- qualified states kept weaker than confirmed transformations, proven by Goro's `apparent death` in the MKII setup;
-- event location omitted when realm scope is contextual but not directly stated, proven by Shang Tsung's second-chance plea;
-- named-place evidence not automatically promoted to a broader Realm mapping, proven by the Shaolin-temple attack;
-- plans kept distinct from later occurrences until occurrence evidence exists, proven by the MKII Outworld plan and MKT confirmation of the second tournament;
-- parallel causal components kept separate when sources establish motivations but not a bridge between them, proven by the Shaolin attack/revenge chain versus the second-tournament lure chain.
+- claim-family comparison without invented contradiction semantics;
+- Factions acting as Event participants;
+- official game manuals as a first-class source category;
+- changing divine/faction status represented as Facts;
+- realms as Fact objects without overloading Event `realmIds`;
+- named places without inferred broader Realm scope;
+- temporal association separated from causality;
+- plans separated from later occurrences;
+- qualified states kept weaker than confirmed events;
+- ending evidence narrowed by later primary confirmation;
+- parallel disconnected causal components;
+- real multi-parent/DAG causality and merge rendering;
+- chronology made readable independently of causal topology;
+- later broad outcome confirmation kept broad rather than upgraded into a named victor.
 
-Current pressure points include:
+## 17. Current model pressure
 
-- alternate-timeline character variants such as Titan Havik;
-- branch merges/DAG visualization;
+Pressure points that may justify future work, but are **not schema commitments**:
+
+- alternate/multiverse character variants such as Titan Havik;
 - dedicated timeline-reset presentation;
 - whether unique cosmic beings eventually justify a more specific entity type;
-- whether Kamidogu and other important objects eventually justify a first-class Artifact entity;
-- how Deception cosmology compares with MK11-era Titan/Kronika cosmology without flattening the difference;
-- how Original/Reboot/New Era Sindel portrayals should be compared without treating every changed characterization as one simple retcon;
-- how far tournament-history expansion should continue before cross-continuity comparison becomes the higher-value next stress case.
+- whether Kamidogu and other important objects justify a first-class Artifact entity;
+- Deception cosmology versus MK11-era Titan/Kronika cosmology;
+- Original/Reboot/New Era Sindel comparison;
+- whether work-level source records eventually require precise locators;
+- whether explicit contradiction/supersession relations become necessary;
+- whether graph scale eventually requires derived indexes or richer visualization.
 
-Do not add new schema merely because these concepts exist. Add it when a concrete sourced slice cannot be represented or navigated cleanly with the current model.
+Do not add schema merely because these concepts exist. Add it only when a concrete sourced/navigational case cannot be represented cleanly with the current model.
