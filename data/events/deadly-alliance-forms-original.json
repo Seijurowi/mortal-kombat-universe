@@ -1,0 +1,13 @@
+{
+  "id": "deadly-alliance-forms-original",
+  "type": "event",
+  "name": "Quan Chi and Shang Tsung form the Deadly Alliance",
+  "timelineId": "original",
+  "participantIds": ["quan-chi", "shang-tsung"],
+  "realmIds": ["outworld"],
+  "causeEventIds": [],
+  "consequenceEventIds": [],
+  "order": 220,
+  "description": "After Quan Chi returned from the Netherrealm, he proposed a mutually beneficial alliance to Shang Tsung in Outworld. Shang Tsung accepted, forming the Deadly Alliance.",
+  "tags": ["mkda", "alliance", "quan-chi", "shang-tsung"]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "deadly-alliance",
+  "type": "faction",
+  "name": "Deadly Alliance",
+  "timelineIds": ["original"],
+  "description": "The Original-continuity alliance formed by Quan Chi and Shang Tsung in Mortal Kombat: Deadly Alliance.",
+  "tags": ["mkda", "sorcerers", "alliance"]
+}

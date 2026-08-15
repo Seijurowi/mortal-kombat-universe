@@ -1,0 +1,12 @@
+{
+  "id": "fact-shang-tsung-consumed-liu-kang-soul-original",
+  "type": "fact",
+  "name": "Shang Tsung consumed Liu Kang's soul",
+  "subjectId": "shang-tsung",
+  "predicate": "consumed_soul_of",
+  "objectId": "liu-kang",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkda-story", "mk-deception-liu-kang-bio"],
+  "notes": "Mortal Kombat: Deadly Alliance states that Shang Tsung, with Quan Chi's assistance, achieves his long-standing goal of consuming Liu Kang's soul. Mortal Kombat: Deception later has Liu Kang independently confirm that Shang Tsung consumed his soul. This Fact records Shang Tsung's act without promoting Quan Chi to a co-consumer or co-killer claim."
+}

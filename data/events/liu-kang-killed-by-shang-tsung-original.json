@@ -1,0 +1,13 @@
+{
+  "id": "liu-kang-killed-by-shang-tsung-original",
+  "type": "event",
+  "name": "Shang Tsung kills Liu Kang",
+  "timelineId": "original",
+  "participantIds": ["liu-kang", "shang-tsung", "quan-chi"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": ["deadly-alliance-plots-eliminate-obstacles-original"],
+  "consequenceEventIds": [],
+  "order": 230,
+  "description": "The Deadly Alliance travels to Earthrealm and confronts Liu Kang. With Quan Chi's assistance, Shang Tsung achieves his goal of consuming Liu Kang's soul; Liu Kang dies. Later Deception material independently confirms that Shang Tsung killed Liu Kang and consumed his soul.",
+  "tags": ["mkda", "death", "liu-kang", "shang-tsung", "quan-chi"]
+}

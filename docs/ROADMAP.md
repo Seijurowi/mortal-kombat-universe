@@ -30,7 +30,7 @@ Complete and merged. Delivered `/claims`, evidence-safe claim-family labels, sou
 
 **Status: in progress.**
 
-**Current work:** Original-continuity **Quan Chi / Shinnok MK4 role detail** in PR #17 on `agent/phase5-mk4-quan-chi-shinnok-role`, branched from verified PR #16 merge commit `36cb0dc3fd71075c15ef3451df54b9aa721dac1a`. Implementation, maintainer manual review, source recheck, and final contract review are complete; final-head CI remains before Ready for review.
+**Current work:** Original-continuity **Deadly Alliance / Liu Kang bridge** in draft PR #18 on `agent/phase5-deadly-alliance-bridge`, branched exactly from verified PR #17 merge commit `513d2196d5ac7f7b1fd1d026e784918fd6567b42`. Implementation, docs/CHANGELOG sync, maintainer manual pass, source recheck, and final AGENTS/LORE_MODEL/DoD review are complete. Ready for review requires a green CI run on the current PR head; merge remains an explicit user/maintainer action.
 
 Goal: expand from character-scale lore into ancient and Original-continuity history while preserving source, continuity, causality, and evidence caveats instead of presenting one synthetic canon narrative.
 
@@ -119,31 +119,41 @@ Goal: expand from character-scale lore into ancient and Original-continuity hist
 - direct source wording is separated from chronology placement: Armageddon confirms a prior defeat but does not itself label a specific MK4 scene.
 - merged as `36cb0dc3fd71075c15ef3451df54b9aa721dac1a` after manual/source review and final-head CI.
 
-### Current Quan Chi / Shinnok MK4 role slice 🔨 — PR #17
+#### MK4 / Quan Chi role detail ✅ — PR #17
+- Mortal Kombat Gold directly anchors Kitana entering battle against Shinnok and Quan Chi.
+- Quan Chi's active Original-continuity MK4/Gold combat role is visible without making him the cause of Shinnok's escape.
+- battle Realm remains unasserted because the source says Quan Chi's forces leave Edenia rather than locating the later battle there.
+- Deadly Alliance later confirms Quan Chi had stolen Shinnok's amulet without precisely dating the theft or creating a defeat→theft causal edge.
+- merged as `513d2196d5ac7f7b1fd1d026e784918fd6567b42` after manual/source review and final-head CI.
 
-This slice adds only directly sourced Original-continuity detail about Quan Chi's active combat role around Mortal Kombat Gold and the later amulet-theft fact, without projecting Reboot escape mechanics back into Original continuity.
+### Current Deadly Alliance / Liu Kang bridge 🔨 — PR #18
 
-- [x] Add Mortal Kombat Gold's Kitana biography as primary evidence.
-- [x] Add `Kitana joins the battle against Shinnok and Quan Chi` at story order 205.
-- [x] Add atomic canon Facts that Kitana battled Shinnok and battled Quan Chi.
-- [x] Keep the battle Event's `realmIds: []`; Quan Chi's forces leaving Edenia does not establish the battle destination/location.
-- [x] Keep resumed war → Kitana battle → Shinnok defeat chronological only; no direct causal edges are supplied by these sources.
-- [x] Add Deadly Alliance's Quan Chi biography as later primary evidence.
-- [x] Add canon Fact that Quan Chi stole Shinnok's amulet.
-- [x] Do not create a precisely ordered amulet-theft Event or defeat→theft causal edge because the later bio does not date the theft sufficiently.
-- [x] Keep Original history separate from MKX/Reboot claims that Quan Chi helped Shinnok escape.
+This slice enters the Deadly Alliance era using direct Original-continuity primary evidence while distinguishing explicit plan→occurrence causality from mere narrative adjacency.
+
+- [x] Add Mortal Kombat: Deadly Alliance story/intro as primary evidence.
+- [x] Add Shang Tsung's Deadly Alliance biography as direct alliance-formation evidence.
+- [x] Add Deception Liu Kang biography as later primary corroboration of his death and soul consumption.
+- [x] Add the named `Deadly Alliance` Faction.
+- [x] Add `Quan Chi and Shang Tsung form the Deadly Alliance` at story order 220.
+- [x] Add `The Deadly Alliance plots to eliminate its strongest obstacles` at story order 225.
+- [x] Add `Shang Tsung kills Liu Kang` at story order 230 with Earthrealm scope explicitly sourced.
+- [x] Add direct causal edge from the elimination plan to Liu Kang's death because MKDA shows the plan being carried out.
+- [x] Keep formation → plan chronology-only rather than inventing a direct causal edge from adjacency alone.
+- [x] Keep Quan Chi as an Event participant/assistant without inventing a `Quan Chi killed Liu Kang` Fact.
+- [x] Add canon Facts that Shang Tsung killed Liu Kang and consumed his soul, corroborated by Deception.
+- [x] Deliberately defer a simple Shao Kahn death Event/Fact because later Original-continuity clone/decoy evidence complicates the MKDA presentation.
 - [x] Add/index a slice-specific manual verification checklist.
 - [x] Review/update CHANGELOG for this slice.
-- [x] Open draft PR #17.
-- [x] Draft-head CI passed before final review.
+- [x] Open draft PR #18.
+- [x] Draft-head CI #550 passed.
 - [x] Maintainer manual UI/source pass completed.
-- [x] Final AGENTS + LORE_MODEL + DoD review completed after rechecking the MK Gold and Deadly Alliance source wording; no semantic correction was required.
-- [ ] Final-head CI after readiness-status update.
+- [x] Final AGENTS + LORE_MODEL + DoD review completed; MKDA/Deception source wording rechecked and no semantic correction was required.
+- Current-head CI must be green before Ready for review; CI state is owned by the PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
 ### Next lore slices
 
-1. **Deadly Alliance bridge** — Liu Kang's death, Shang Tsung/Quan Chi alliance, and the transition into the Deadly Alliance era with exact causal evidence discipline.
+1. **Shao Kahn / Deadly Alliance apparent-death stress test** — reconcile MKDA's assassination framing with later Original-continuity clone/decoy evidence before adding any death claim.
 2. Onaga resurrection/return mechanism and post-Deception fate with stronger coverage.
 3. Deception cosmology vs MK11 Titan/Kronika comparison without flattening continuities.
 4. Original/Reboot/New Era Sindel comparison through claim history.
@@ -174,8 +184,11 @@ A user should be able to:
 19. see Shinnok's defeat promoted to canon without being told that Liu Kang individually defeated him unless independently corroborated;
 20. see Quan Chi as a directly sourced active opponent in the MK4/Gold conflict without being told he caused Shinnok's escape;
 21. inspect Quan Chi's theft of Shinnok's amulet without an invented exact date or defeat→theft causal bridge;
-22. see intentional causal gaps where sources establish sequence/context but not direct causation;
-23. navigate documentation without conflicting live-status claims.
+22. follow the Deadly Alliance into Liu Kang's death with an explicit plan→occurrence edge while formation→plan remains chronology-only;
+23. see Shang Tsung identified as Liu Kang's killer and soul-consumer without upgrading Quan Chi's assistance into a co-killer Fact;
+24. see the Shao Kahn assassination framing deferred rather than flattened into a simple death before clone/decoy evidence is reconciled;
+25. see intentional causal gaps where sources establish sequence/context but not direct causation;
+26. navigate documentation without conflicting live-status claims.
 
 Manual verification procedures are indexed in `docs/README.md`. Final readiness is governed by `docs/DEFINITION_OF_DONE.md`.
 
