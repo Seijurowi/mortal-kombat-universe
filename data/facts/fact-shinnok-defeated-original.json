@@ -1,0 +1,12 @@
+{
+  "id": "fact-shinnok-defeated-original",
+  "type": "fact",
+  "name": "Shinnok was defeated",
+  "subjectId": "shinnok",
+  "predicate": "was_defeated",
+  "value": true,
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk-armageddon-johnny-cage-bio"],
+  "notes": "Mortal Kombat: Armageddon's Johnny Cage biography independently treats Shinnok's defeat years earlier as established Original-continuity history. This supports the broad defeat outcome only; it does not by itself establish Liu Kang as the individual victor, a complete victor roster, the battle location, or a direct renewed-war-to-defeat causal edge."
+}
