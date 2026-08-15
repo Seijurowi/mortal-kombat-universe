@@ -1,0 +1,12 @@
+{
+  "id": "fact-second-tournament-was-diversion-original",
+  "type": "fact",
+  "name": "The second tournament was a diversion within the Sindel scheme",
+  "subjectId": "shao-kahn",
+  "predicate": "used_tournament_as",
+  "value": "a diversion within the scheme to enable Sindel's reincarnation on Earth",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkt-story"],
+  "notes": "Mortal Kombat Trilogy explicitly describes the second Outworld tournament as merely a diversion inside Shao Kahn's broader scheme."
+}

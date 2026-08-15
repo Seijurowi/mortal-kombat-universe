@@ -1,0 +1,12 @@
+{
+  "id": "fact-sindel-rebirth-enabled-kahn-breach-original",
+  "type": "fact",
+  "name": "Sindel's rebirth enabled Shao Kahn to breach Earthrealm",
+  "subjectId": "sindel",
+  "predicate": "enabled",
+  "value": "Shao Kahn to step through the dimensional gates into Earthrealm",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk3-story", "mkt-story"],
+  "notes": "Both MK3 and MKT explicitly connect Sindel's reincarnation on Earth with Shao Kahn gaining the ability to cross the dimensional gates and seize Earth."
+}

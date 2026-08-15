@@ -21,9 +21,10 @@ function timelineEdgeCount(timelineId: string, events: Event[]) {
 }
 
 function sortEvents(events: Event[]) {
-  return [...events].sort(
-    (a, b) => (a.order ?? Number.MAX_SAFE_INTEGER) - (b.order ?? Number.MAX_SAFE_INTEGER)
-  )
+  return [...events].sort((a, b) => {
+    const orderDifference = (a.order ?? Number.MAX_SAFE_INTEGER) - (b.order ?? Number.MAX_SAFE_INTEGER)
+    return orderDifference || a.name.localeCompare(b.name)
+  })
 }
 
 function eventOrder(event: Event) {
@@ -123,6 +124,16 @@ function leavesOf(component: Event[], eventsById: Map<string, Event>) {
   return leaves.length ? sortEvents(leaves) : component.slice(-1)
 }
 
+function canonicalParentOf(event: Event, component: Event[], eventsById: Map<string, Event>) {
+  const parents = parentsOf(event, component, eventsById)
+  if (!parents.length) return undefined
+
+  return [...parents].sort((a, b) => {
+    const orderDifference = eventOrder(b) - eventOrder(a)
+    return orderDifference || a.id.localeCompare(b.id)
+  })[0]
+}
+
 function defaultEventForComponents(components: Event[][], timelineEvents: Event[], eventsById: Map<string, Event>) {
   const primary = components[0]
   if (primary?.length) return rootsOf(primary, eventsById)[0] ?? primary[0]
@@ -174,11 +185,12 @@ export function CausalityExplorer({ data }: { data: UniverseData }) {
   const activeComponent =
     components.find((component) => component.some((event) => event.id === focusedEvent?.id)) ??
     (focusedEvent ? [focusedEvent] : [])
+  const chronology = sortEvents(activeComponent)
   const roots = rootsOf(activeComponent, eventsById)
   const leaves = leavesOf(activeComponent, eventsById)
   const causes = focusedEvent ? parentsOf(focusedEvent, activeComponent, eventsById) : []
   const consequences = focusedEvent ? childrenOf(focusedEvent, activeComponent, eventsById) : []
-  const positions = new Map(sortEvents(activeComponent).map((event, index) => [event.id, index + 1]))
+  const positions = new Map(chronology.map((event, index) => [event.id, index + 1]))
 
   const changeTimeline = (timeline: Timeline) => {
     const nextEvents = sortEvents(data.events.filter((event) => event.timelineId === timeline.id))
@@ -206,9 +218,8 @@ export function CausalityExplorer({ data }: { data: UniverseData }) {
               Follow the whole chain
             </h1>
             <p className="mt-3 text-sm leading-6 text-muted-foreground md:text-base">
-              Start at the beginning of a recorded causal chain, follow each consequence, and keep the
-              current event visible in context. Story order tells you when an event happens; explicit
-              causal links tell you where the chain branches or leads next.
+              Read chronology and causality separately: chronology tells you what happened first, while
+              explicit causal links explain why branches split, merge, or lead to later events.
             </p>
           </div>
         </header>
@@ -276,18 +287,59 @@ export function CausalityExplorer({ data }: { data: UniverseData }) {
             <Card>
               <CardHeader className="border-b">
                 <CardTitle className="flex items-center gap-2 text-lg">
+                  <Route className="size-4 text-primary" />
+                  Chronology
+                </CardTitle>
+                <CardDescription>
+                  Read left to right. Every event appears once; neighboring moments are chronological, not automatically causal.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ol className="flex gap-2 overflow-x-auto pb-2">
+                  {chronology.map((event, index) => (
+                    <li key={event.id} className="flex shrink-0 items-stretch gap-2">
+                      <button
+                        className={cn(
+                          "min-w-52 max-w-64 rounded-xl border bg-background p-3 text-left transition-colors hover:border-primary/40 hover:bg-muted/20",
+                          event.id === focusedEvent.id && "border-primary/60 bg-primary/10 ring-2 ring-primary/15"
+                        )}
+                        onClick={() => setFocusId(event.id)}
+                      >
+                        <div className="flex items-center gap-2">
+                          <Badge variant={event.id === focusedEvent.id ? "default" : "secondary"}>{index + 1}</Badge>
+                          <span className="text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
+                            of {chronology.length}
+                          </span>
+                        </div>
+                        <div className="mt-2 font-heading text-sm leading-5">{event.name}</div>
+                        <div className="mt-2 text-[0.68rem] text-muted-foreground">
+                          {event.order !== undefined ? `Story order ${event.order}` : "Story order not recorded"}
+                        </div>
+                      </button>
+                      {index < chronology.length - 1 ? (
+                        <div aria-hidden="true" className="flex items-center text-lg text-muted-foreground/60">→</div>
+                      ) : null}
+                    </li>
+                  ))}
+                </ol>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader className="border-b">
+                <CardTitle className="flex items-center gap-2 text-lg">
                   <GitBranch className="size-4 text-primary" />
                   Whole causal chain
                 </CardTitle>
                 <CardDescription>
-                  The chain stays visible while you select events. `Start`, `You are here`, and `End` markers keep orientation.
+                  Causal branches may skip chronological neighbors. Shared merge events are rendered once and referenced from other parents.
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-5">
                 <div className="grid gap-3 rounded-xl border bg-muted/10 p-4 sm:grid-cols-3">
-                  <ChainSummary label="Starts with" values={roots.map((event) => event.name)} />
-                  <ChainSummary label="Chain size" values={[`${activeComponent.length} event${activeComponent.length === 1 ? "" : "s"}`]} />
-                  <ChainSummary label="Ends with" values={leaves.map((event) => event.name)} />
+                  <ChainSummary label="Causal starts" values={roots.map((event) => event.name)} />
+                  <ChainSummary label="Unique events" values={[`${activeComponent.length} event${activeComponent.length === 1 ? "" : "s"}`]} />
+                  <ChainSummary label="Causal ends" values={leaves.map((event) => event.name)} />
                 </div>
 
                 <div className="space-y-4">
@@ -317,7 +369,7 @@ export function CausalityExplorer({ data }: { data: UniverseData }) {
                     Local cause / effect
                   </CardTitle>
                   <CardDescription>
-                    The original focused view remains as a close-up of the selected event.
+                    Inspect the immediate causal parents and consequences of the selected event.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="grid gap-3 lg:grid-cols-3">
@@ -329,7 +381,7 @@ export function CausalityExplorer({ data }: { data: UniverseData }) {
 
                   <div className="rounded-xl border border-primary/40 bg-primary/5 p-4 shadow-[0_0_32px_-24px_var(--primary)]">
                     <div className="mb-2 text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-primary">
-                      You are here
+                      You are here · chronology {positions.get(focusedEvent.id) ?? "—"} of {activeComponent.length}
                     </div>
                     <h2 className="font-heading text-xl">{focusedEvent.name}</h2>
                     {focusedEvent.description ? (
@@ -351,10 +403,10 @@ export function CausalityExplorer({ data }: { data: UniverseData }) {
                   <CardTitle className="text-base">How to read this</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3 text-sm leading-6 text-muted-foreground">
-                  <p><strong className="text-foreground">Moment</strong> is the event&apos;s chronological position inside this chain.</p>
-                  <p><strong className="text-foreground">Tree branches</strong> exist only when an explicit causal edge exists in the event data.</p>
-                  <p>Chronological neighbors without a causal edge are intentionally absent from the tree.</p>
-                  <p>If multiple independent chains exist in one continuity, choose the chain first instead of scanning every event.</p>
+                  <p><strong className="text-foreground">Chronology</strong> is the numbered strip above: one event, one position, ordered only by story order.</p>
+                  <p><strong className="text-foreground">Causal branches</strong> exist only when explicit event edges are recorded.</p>
+                  <p><strong className="text-foreground">Merge node</strong> means multiple sourced causal parents lead to the same event. The full event card is shown once.</p>
+                  <p>Chronological neighbors without a causal edge remain neighbors in the strip but are intentionally disconnected in the causal tree.</p>
                 </CardContent>
               </Card>
             </div>
@@ -421,11 +473,11 @@ function TreeEventBranch({
         onClick={() => onFocus(event.id)}
       >
         <div className="flex flex-wrap items-center gap-1.5">
-          {isStart ? <Badge><Flag className="size-3" />Start</Badge> : null}
-          {typeof moment === "number" ? <Badge variant="secondary">Moment {moment} of {total}</Badge> : null}
+          {isStart ? <Badge><Flag className="size-3" />Causal start</Badge> : null}
+          {typeof moment === "number" ? <Badge variant="secondary">Chronology {moment} of {total}</Badge> : null}
           {isFocused ? <Badge variant="outline">You are here</Badge> : null}
-          {isEnd ? <Badge variant="outline">End</Badge> : null}
-          {isShared ? <Badge variant="outline">Merged branch</Badge> : null}
+          {isEnd ? <Badge variant="outline">Causal end</Badge> : null}
+          {isShared ? <Badge variant="outline">Merge node · {parents.length} parents</Badge> : null}
         </div>
         <div className="mt-2 font-heading text-base md:text-lg">{event.name}</div>
         {event.description ? (
@@ -441,30 +493,52 @@ function TreeEventBranch({
 
       {children.length ? (
         <div className="relative ml-4 mt-3 space-y-3 border-l border-border/80 pl-5 md:ml-8 md:pl-7">
-          {children.map((child) => (
-            <div
-              key={`${event.id}-${child.id}`}
-              className="relative before:absolute before:-left-5 before:top-6 before:w-5 before:border-t before:border-border/80 md:before:-left-7 md:before:w-7"
-            >
-              {nextPath.has(child.id) ? (
-                <div className="rounded-lg border border-dashed p-3 text-xs text-muted-foreground">
-                  Cycle back to {child.name}; tree expansion stops here.
-                </div>
-              ) : (
-                <TreeEventBranch
-                  event={child}
-                  component={component}
-                  eventsById={eventsById}
-                  entitiesById={entitiesById}
-                  focusId={focusId}
-                  positions={positions}
-                  total={total}
-                  onFocus={onFocus}
-                  path={nextPath}
-                />
-              )}
-            </div>
-          ))}
+          {children.map((child) => {
+            const childParents = parentsOf(child, component, eventsById)
+            const canonicalParent = canonicalParentOf(child, component, eventsById)
+            const renderAsMergeReference = childParents.length > 1 && canonicalParent?.id !== event.id
+
+            return (
+              <div
+                key={`${event.id}-${child.id}`}
+                className="relative before:absolute before:-left-5 before:top-6 before:w-5 before:border-t before:border-border/80 md:before:-left-7 md:before:w-7"
+              >
+                {nextPath.has(child.id) ? (
+                  <div className="rounded-lg border border-dashed p-3 text-xs text-muted-foreground">
+                    Cycle back to {child.name}; tree expansion stops here.
+                  </div>
+                ) : renderAsMergeReference ? (
+                  <button
+                    className="w-full rounded-xl border border-dashed bg-muted/10 p-3 text-left transition-colors hover:border-primary/40 hover:bg-muted/20"
+                    onClick={() => onFocus(child.id)}
+                  >
+                    <div className="flex flex-wrap items-center gap-1.5">
+                      <Badge variant="outline">Merges into</Badge>
+                      {positions.get(child.id) ? (
+                        <Badge variant="secondary">Chronology {positions.get(child.id)} of {total}</Badge>
+                      ) : null}
+                    </div>
+                    <div className="mt-2 font-heading text-sm">{child.name}</div>
+                    <p className="mt-1 text-xs leading-5 text-muted-foreground">
+                      This branch also causes the shared event. Its full card is shown once under the other causal parent.
+                    </p>
+                  </button>
+                ) : (
+                  <TreeEventBranch
+                    event={child}
+                    component={component}
+                    eventsById={eventsById}
+                    entitiesById={entitiesById}
+                    focusId={focusId}
+                    positions={positions}
+                    total={total}
+                    onFocus={onFocus}
+                    path={nextPath}
+                  />
+                )}
+              </div>
+            )
+          })}
         </div>
       ) : null}
     </div>

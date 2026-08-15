@@ -1,0 +1,13 @@
+{
+  "id": "sindel-reborn-earthrealm-original",
+  "type": "event",
+  "name": "Sindel is reborn on Earthrealm",
+  "timelineId": "original",
+  "participantIds": ["sindel"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": ["shang-tsung-arranges-sindel-reincarnation-original"],
+  "consequenceEventIds": ["shao-kahn-breaches-earthrealm-original"],
+  "order": 140,
+  "description": "The long-running Sindel reincarnation scheme reaches its intended occurrence when Sindel is reborn on Earthrealm.",
+  "tags": ["sindel", "rebirth", "mk3-setup"]
+}

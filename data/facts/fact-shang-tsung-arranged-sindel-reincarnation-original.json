@@ -1,0 +1,12 @@
+{
+  "id": "fact-shang-tsung-arranged-sindel-reincarnation-original",
+  "type": "fact",
+  "name": "Shang Tsung arranged Sindel's reincarnation through Quan Chi",
+  "subjectId": "shang-tsung",
+  "predicate": "arranged",
+  "value": "Quan Chi would secure Shinnok's help to taint Sindel's soul and reincarnate her on Earth",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk-mythologies-sub-zero"],
+  "notes": "Mythologies: Sub-Zero describes Shang Tsung bargaining with Quan Chi for this long-running scheme and says it would take more than a decade to accomplish."
+}

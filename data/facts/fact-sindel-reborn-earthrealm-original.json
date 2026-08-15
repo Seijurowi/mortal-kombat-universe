@@ -1,0 +1,12 @@
+{
+  "id": "fact-sindel-reborn-earthrealm-original",
+  "type": "fact",
+  "name": "Sindel was reborn on Earthrealm",
+  "subjectId": "sindel",
+  "predicate": "reborn_in",
+  "objectId": "earthrealm",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk3-story", "mkt-story"],
+  "notes": "MK3 states that Sindel's spirit would be reborn on Earthrealm; MKT later treats that reincarnation as the central act of Shao Kahn's scheme."
+}
