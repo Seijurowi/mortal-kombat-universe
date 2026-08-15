@@ -10,10 +10,10 @@ pnpm dev
 
 ## 1. Invasion consequences
 
-- [ ] `Shao Kahn breaches Earthrealm` leads to `Shao Kahn claims Earthrealm's human souls`.
+- [ ] `Shao Kahn breaches Earthrealm` and `Shao Kahn claims Earthrealm's human souls` appear in that story order, but no direct causal edge connects them merely because one follows the other.
 - [ ] The soul-claim Event is Earthrealm-scoped and cites the MK3 story through its associated Fact.
 - [ ] The wording preserves the important exception that the chosen Earth warriors' souls are protected; it does not imply literally every human soul is taken.
-- [ ] `Shao Kahn claims Earthrealm's human souls → Shao Kahn sends extermination squads after the survivors` appears as a supported causal continuation.
+- [ ] `Shao Kahn claims Earthrealm's human souls → Shao Kahn sends extermination squads after the survivors` appears as the supported causal continuation: the protected survivors cannot simply have their souls taken, so Kahn sends warriors to eliminate them.
 
 ## 2. Liu Kang's role
 
@@ -32,10 +32,10 @@ pnpm dev
 
 ## 4. Chronology versus causality
 
-- [ ] The chronology rail makes the outcome easy to place after the invasion campaign even though it remains a separate causal component.
-- [ ] `/causality` does not manufacture a connection merely to produce one continuous tree.
+- [ ] The chronology rail makes breach → soul claim → extermination campaign → defeat easy to place historically even where direct causal edges are intentionally absent.
+- [ ] `/causality` does not manufacture `breach → soul claim` or `extermination squads → Shao Kahn defeat` merely to produce one continuous tree.
 - [ ] The distinction between established outcome and exact victor attribution is understandable from the Facts and sources.
 
 ## Decision
 
-This slice should prove that later primary confirmation can establish a broad historical outcome while narrower ending-only attribution remains unpromoted until independently corroborated.
+This slice should prove two reusable rules at once: later primary confirmation can establish a broad historical outcome while narrower ending-only attribution remains unpromoted, and chronology can remain readable without promoting adjacent invasion events into unsupported causal links.
