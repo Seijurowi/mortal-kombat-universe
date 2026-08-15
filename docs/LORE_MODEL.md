@@ -34,6 +34,8 @@ Phase 5 expanded participant validation from Character-only to `Character | Fact
 
 `realmIds` must not be overloaded as an event-output or action-object field. The One Being review proved this when the creation event initially attached later realms as if they were locations of a pre-realm event. The Edenia conquest slice proves the reusable positive rule: an event may have `realmIds: ["edenia"]` because it occurs in/concerns Edenia, while a sourced Fact such as `Shao Kahn conquered Edenia` uses `objectId: "edenia"` to express Edenia as the object of the claim. Apply the same pattern to liberation, merging, destruction, creation, or similar realm-target assertions.
 
+Event realm scope also requires direct support. Do not infer a location merely from the realms associated with participants or from the location of a later consequence. The MKII setup does not establish where Shang Tsung makes his plea to Shao Kahn, so `Shang Tsung seeks a second chance` intentionally has no `realmIds` entry even though the plan that follows concerns Outworld.
+
 Sequence alone does not prove causality. Ordinary causal links connect events in the same timeline. Cross-timeline causal links are reserved for explicit reset/rewrite bridges whose source event creates or rewrites the following continuity; the validator recognizes `reset`, `rewrite`, and `timeline-bridge` source-event tags.
 
 Temporal phrases such as **“during this period,” “after,” “before,” or “years later”** establish chronology/context unless the source also states a causal relationship. The Great Kung Lao tournament slice proves this distinction: the original Mortal Kombat story says Goro defeated Kung Lao and that during this period the tournament fell into Shang Tsung's hands. Those are separate Events/Facts with no `causeEventIds` edge because temporal co-occurrence is not proof that Goro's victory caused Shang Tsung's takeover.
@@ -82,7 +84,7 @@ When a later source contradicts an older portrayal:
 
 Claim-family grouping by `subject + predicate` is an inspection aid, not an automatic contradiction relation. Different values may reflect time-dependent or multi-valued predicates.
 
-Arcade/character endings require evidence discipline. An ending can preserve useful detail without proving every part of its outcome. If later primary story/biography material independently treats a specific outcome as established history, that narrower outcome may be represented as `canon` while unsupported ending details remain weaker. The Liu Kang slice applies this by pairing his MK1992 ending with MKII story/biography evidence for his victory over Goro and Shang Tsung's tournament control.
+Arcade/character endings require evidence discipline. An ending can preserve useful detail without proving every part of its outcome. If later primary story/biography material independently treats a specific outcome as established history, that narrower outcome may be represented as `canon` while unsupported ending details remain weaker. The Liu Kang slice applies this with his MK1992 ending plus direct later confirmation: MK4's Goro biography says the title was won from Goro by Liu Kang, while MKII's Liu Kang biography confirms that Liu Kang won the tournament from Shang Tsung's control.
 
 ## 9. Source discipline
 
@@ -98,7 +100,7 @@ When a primary work is only accessible through a preservation mirror, the Source
 
 Phase 5 adds `game_manual` as a first-class Source type after the Mortal Kombat: Deception instruction booklet proved that official manuals are a reusable evidence category rather than generic `other` material.
 
-Later games may clarify or confirm an older event without replacing the older source. The Great Kung Lao slice uses Mortal Kombat (1992) to establish Goro's ancient victory and Mortal Kombat II to identify the defeated ancestor explicitly as the **Great Kung Lao**. The Liu Kang slice similarly uses MKII to confirm specific first-game outcomes first shown in Liu Kang's ending. This is evidence accumulation, not “newer source automatically wins.”
+Later games may clarify or confirm an older event without replacing the older source. The Great Kung Lao slice uses Mortal Kombat (1992) to establish Goro's ancient victory and Mortal Kombat II to identify the defeated ancestor explicitly as the **Great Kung Lao**. The Liu Kang slice uses direct later biographies to confirm specific first-game outcomes first shown in Liu Kang's ending. A source should only support the claim it actually states: MKII's general account of Goro's apparent death is not used as direct proof that Liu Kang personally defeated Goro. This is evidence accumulation, not “newer source automatically wins.”
 
 ## 10. Source granularity
 
@@ -127,7 +129,7 @@ Current choices:
 - `One Being` is represented as a unique non-playable `Character`/being because Character is currently the reusable entity class for unique agents/beings, playable or not.
 - `Elder Gods` is represented as a `Faction` because the source describes a collective actor.
 - individual realms remain `Realm` entities.
-- realm-target claims use Facts; `realmIds` stays event location/scope metadata.
+- realm-target claims use Facts; `realmIds` stays event location/scope metadata and is omitted when event location is not directly supported.
 - historical titles, reigns, tournament control, and victories are Facts/Events rather than timeless metadata.
 - ending-only details may be preserved conservatively, while specific ending outcomes may be promoted to canon only when independent primary sources confirm them.
 - qualified states such as Goro's `apparent death` remain qualified rather than becoming stronger death events.
@@ -165,7 +167,8 @@ Proven cases include:
 - realms acting as the object of sourced claims without overloading Event `realmIds`, proven by Edenia conquest/liberation;
 - ending-only lore retained conservatively until later primary evidence confirms a narrower canonical outcome;
 - temporal association kept separate from causality, proven by Great Kung Lao/Goro/Shang Tsung history;
-- qualified states kept weaker than confirmed transformations, proven by Goro's `apparent death` in the MKII setup.
+- qualified states kept weaker than confirmed transformations, proven by Goro's `apparent death` in the MKII setup;
+- event location omitted when realm scope is contextual but not directly stated, proven by Shang Tsung's second-chance plea.
 
 Current pressure points include:
 
