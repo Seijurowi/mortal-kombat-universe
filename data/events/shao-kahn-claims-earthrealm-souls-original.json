@@ -1,0 +1,13 @@
+{
+  "id": "shao-kahn-claims-earthrealm-souls-original",
+  "type": "event",
+  "name": "Shao Kahn claims Earthrealm's human souls",
+  "timelineId": "original",
+  "participantIds": ["shao-kahn"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": ["shao-kahn-breaches-earthrealm-original"],
+  "consequenceEventIds": ["shao-kahn-sends-extermination-squads-original"],
+  "order": 160,
+  "description": "After breaching Earthrealm, Shao Kahn claims human souls as he begins transforming the realm into part of Outworld, while the chosen Earth warriors remain protected from having their souls taken.",
+  "tags": ["invasion", "souls", "mk3"]
+}
