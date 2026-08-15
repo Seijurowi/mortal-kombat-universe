@@ -1,0 +1,12 @@
+{
+  "id": "fact-liu-kang-defeated-goro-original",
+  "type": "fact",
+  "name": "Liu Kang defeated Goro",
+  "subjectId": "liu-kang",
+  "predicate": "defeated",
+  "objectId": "goro",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk1-liu-kang-ending", "mk4-goro-bio"],
+  "notes": "Liu Kang's first-game ending states that he defeated Goro; Mortal Kombat 4's home-version Goro biography later states that the Mortal Kombat title was won from Goro by Liu Kang. The MK4 biography is used only for this victory claim, not for its known erroneous Kung Lao genealogy wording."
+}

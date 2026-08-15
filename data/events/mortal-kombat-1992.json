@@ -3,11 +3,11 @@
   "type": "event",
   "name": "First game tournament",
   "timelineId": "original",
-  "participantIds": ["liu-kang", "raiden", "bi-han", "hanzo-hasashi"],
+  "participantIds": ["liu-kang", "raiden", "bi-han", "hanzo-hasashi", "goro", "shang-tsung"],
   "realmIds": ["earthrealm"],
   "causeEventIds": [],
-  "consequenceEventIds": [],
+  "consequenceEventIds": ["shang-tsung-seeks-second-chance-original"],
   "order": 100,
-  "description": "The tournament represented by the first Mortal Kombat game.",
+  "description": "The tournament represented by the first Mortal Kombat game, where Liu Kang defeats Goro and Shang Tsung loses control of the contest.",
   "tags": ["tournament"]
 }

@@ -1,0 +1,12 @@
+{
+  "id": "fact-liu-kang-won-tournament-original",
+  "type": "fact",
+  "name": "Liu Kang won the tournament from Shang Tsung's control",
+  "subjectId": "liu-kang",
+  "predicate": "won",
+  "value": "Shaolin Tournament from Shang Tsung's control",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk1-liu-kang-ending", "mk2-liu-kang-bio"],
+  "notes": "The first-game ending presents Liu Kang as ending Shang Tsung's rule over the contest; Mortal Kombat II's biography independently treats Liu Kang's tournament victory over Shang Tsung's control as established history."
+}

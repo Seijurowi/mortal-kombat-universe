@@ -34,9 +34,13 @@ Phase 5 expanded participant validation from Character-only to `Character | Fact
 
 `realmIds` must not be overloaded as an event-output or action-object field. The One Being review proved this when the creation event initially attached later realms as if they were locations of a pre-realm event. The Edenia conquest slice proves the reusable positive rule: an event may have `realmIds: ["edenia"]` because it occurs in/concerns Edenia, while a sourced Fact such as `Shao Kahn conquered Edenia` uses `objectId: "edenia"` to express Edenia as the object of the claim. Apply the same pattern to liberation, merging, destruction, creation, or similar realm-target assertions.
 
+Event realm scope also requires direct support. Do not infer a location merely from the realms associated with participants or from the location of a later consequence. The MKII setup does not establish where Shang Tsung makes his plea to Shao Kahn, so `Shang Tsung seeks a second chance` intentionally has no `realmIds` entry even though the plan that follows concerns Outworld.
+
 Sequence alone does not prove causality. Ordinary causal links connect events in the same timeline. Cross-timeline causal links are reserved for explicit reset/rewrite bridges whose source event creates or rewrites the following continuity; the validator recognizes `reset`, `rewrite`, and `timeline-bridge` source-event tags.
 
 Temporal phrases such as **“during this period,” “after,” “before,” or “years later”** establish chronology/context unless the source also states a causal relationship. The Great Kung Lao tournament slice proves this distinction: the original Mortal Kombat story says Goro defeated Kung Lao and that during this period the tournament fell into Shang Tsung's hands. Those are separate Events/Facts with no `causeEventIds` edge because temporal co-occurrence is not proof that Goro's victory caused Shang Tsung's takeover.
+
+The Liu Kang/MK1992 slice proves the positive counterpart: Mortal Kombat II explicitly frames Shang Tsung's plea to Shao Kahn as a response to his first-tournament failure and Goro's apparent death. That wording supports a causal edge from the first-game tournament to `Shang Tsung seeks a second chance`.
 
 ## 4. Relationships are graph projections
 
@@ -49,6 +53,8 @@ Prefer stable person entities such as `bi-han`, `kuai-liang`, `hanzo-hasashi`, a
 Do not encode a historical office, rank, divine state, or faction membership as timeless static Character metadata when the lore shows that it changes. Phase 5 proves this with Shinnok: he **was** an Elder God, fell, was banished, and later ruled the Netherrealm. His former Elder God status is therefore a Fact (`former_member_of`) rather than `factionIds: ["elder-gods"]` on the Character.
 
 Historical titles and reign lengths follow the same rule. Goro's Grand Champion status and roughly 500-year undefeated reign are sourced Facts, not timeless Character metadata.
+
+Do not strengthen qualified source language. `Apparent death`, `believed dead`, `missing`, or similar states are not equivalent to confirmed death. The MKII setup describes Goro's **apparent death**, so this slice does not create a Goro death Fact/Event.
 
 ## 6. Transformation and state changes
 
@@ -78,7 +84,7 @@ When a later source contradicts an older portrayal:
 
 Claim-family grouping by `subject + predicate` is an inspection aid, not an automatic contradiction relation. Different values may reflect time-dependent or multi-valued predicates.
 
-Arcade/character endings require the same evidence discipline. An ending may preserve important lore detail without proving that the ending's full outcome occurred canonically. In the Edenia slice, Jerrod family details sourced only from Sindel's Mortal Kombat 3 ending are therefore retained as `supplemental`, while Shao Kahn's conquest and Kitana's later liberation use biography evidence and are `canon`.
+Arcade/character endings require evidence discipline. An ending can preserve useful detail without proving every part of its outcome. If later primary story/biography material independently treats a specific outcome as established history, that narrower outcome may be represented as `canon` while unsupported ending details remain weaker. The Liu Kang slice applies this with his MK1992 ending plus direct later confirmation: MK4's Goro biography says the title was won from Goro by Liu Kang, while MKII's Liu Kang biography confirms that Liu Kang won the tournament from Shang Tsung's control.
 
 ## 9. Source discipline
 
@@ -94,7 +100,7 @@ When a primary work is only accessible through a preservation mirror, the Source
 
 Phase 5 adds `game_manual` as a first-class Source type after the Mortal Kombat: Deception instruction booklet proved that official manuals are a reusable evidence category rather than generic `other` material.
 
-Later games may clarify the identity or wording of an older event without replacing the older source. The Great Kung Lao slice uses Mortal Kombat (1992) to establish Goro's ancient victory and Mortal Kombat II to identify the defeated ancestor explicitly as the **Great Kung Lao**. This is evidence accumulation, not “newer source automatically wins.”
+Later games may clarify or confirm an older event without replacing the older source. The Great Kung Lao slice uses Mortal Kombat (1992) to establish Goro's ancient victory and Mortal Kombat II to identify the defeated ancestor explicitly as the **Great Kung Lao**. The Liu Kang slice uses direct later biographies to confirm specific first-game outcomes first shown in Liu Kang's ending. A source should only support the claim it actually states: MKII's general account of Goro's apparent death is not used as direct proof that Liu Kang personally defeated Goro. This is evidence accumulation, not “newer source automatically wins.”
 
 ## 10. Source granularity
 
@@ -112,21 +118,22 @@ Likewise, `Shao Kahn conquers Edenia` and the much later `Kitana frees Edenia` r
 
 The Great Kung Lao/Goro slice adds another reusable case: `Goro defeats the Great Kung Lao` and `Shang Tsung takes control of the tournament` belong to the same historical period, but remain disconnected because the source does not explicitly say one caused the other.
 
+The first-game tournament now has one explicit consequence edge to Shang Tsung's second-chance plea because MKII story text supplies the missing causal language. This demonstrates that causal gaps can be filled later when stronger evidence appears without retroactively treating all chronology as causality.
+
 ## 12. Cosmology and ancient-history modeling
 
-Phase 5 begins with the Original-continuity creation account in Mortal Kombat: Deception and expands through Onaga, Shinnok, Edenia/Outworld conquest history, and pre-1992 tournament history.
+Phase 5 begins with the Original-continuity creation account in Mortal Kombat: Deception and expands through Onaga, Shinnok, Edenia/Outworld conquest history, pre-1992 tournament history, and the MK1992 transition into MKII.
 
 Current choices:
 
 - `One Being` is represented as a unique non-playable `Character`/being because Character is currently the reusable entity class for unique agents/beings, playable or not.
 - `Elder Gods` is represented as a `Faction` because the source describes a collective actor.
 - individual realms remain `Realm` entities.
-- realm-target claims use Facts; `realmIds` stays event location/scope metadata.
-- the shattering is an `Event`.
-- statements about the Kamidogu and creation are `Fact` records with source evidence.
-- Onaga, Shao Kahn, Shujinko, Shinnok, Lucifer, Sindel, Kitana, Jerrod, Great Kung Lao, Goro, and Shang Tsung remain stable Characters; changes in rulership, allegiance, divine status, conquest, liberation, banishment, titles, or tournament control are represented through Events and Facts.
-- ending-only details may be preserved with conservative `supplemental` status instead of being promoted into biography-level canon.
-- tournament-era chronology is allowed to remain a set of disconnected Events when sources provide sequence/context but not explicit causality.
+- realm-target claims use Facts; `realmIds` stays event location/scope metadata and is omitted when event location is not directly supported.
+- historical titles, reigns, tournament control, and victories are Facts/Events rather than timeless metadata.
+- ending-only details may be preserved conservatively, while specific ending outcomes may be promoted to canon only when independent primary sources confirm them.
+- qualified states such as Goro's `apparent death` remain qualified rather than becoming stronger death events.
+- tournament-era chronology may remain disconnected when sources provide only sequence/context, and may gain causal edges later when direct evidence is found.
 
 Do **not** project this Original-continuity material automatically into Reboot or New Era. Later Titan/Kronika cosmology, reboot Shinnok, later Sindel reinterpretations, and MK9/New Era tournament-history variants must be added with their own scoped evidence and compared rather than silently reconciled.
 
@@ -158,8 +165,10 @@ Proven cases include:
 - official game manuals as a distinct source category;
 - historical divine/faction status represented as Facts rather than timeless Character membership, proven by Shinnok;
 - realms acting as the object of sourced claims without overloading Event `realmIds`, proven by Edenia conquest/liberation;
-- ending-only lore retained conservatively as supplemental evidence rather than automatic canonical history;
-- temporal association kept separate from causality, proven by the Great Kung Lao/Goro/Shang Tsung tournament history.
+- ending-only lore retained conservatively until later primary evidence confirms a narrower canonical outcome;
+- temporal association kept separate from causality, proven by Great Kung Lao/Goro/Shang Tsung history;
+- qualified states kept weaker than confirmed transformations, proven by Goro's `apparent death` in the MKII setup;
+- event location omitted when realm scope is contextual but not directly stated, proven by Shang Tsung's second-chance plea.
 
 Current pressure points include:
 
@@ -170,6 +179,6 @@ Current pressure points include:
 - whether Kamidogu and other important objects eventually justify a first-class Artifact entity;
 - how Deception cosmology compares with MK11-era Titan/Kronika cosmology without flattening the difference;
 - how Original/Reboot/New Era Sindel portrayals should be compared without treating every changed characterization as one simple retcon;
-- how far to extend pre-1992 tournament history before later retellings require explicit claim-family comparison rather than one merged chronology.
+- how far tournament-history expansion should continue before cross-continuity comparison becomes the higher-value next stress case.
 
 Do not add new schema merely because these concepts exist. Add it when a concrete sourced slice cannot be represented or navigated cleanly with the current model.
