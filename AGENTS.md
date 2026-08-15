@@ -108,20 +108,22 @@ Treat **retcon**, **continuity divergence**, **alternate portrayal**, and **unce
 - Temporal wording such as **“during this period,” “after,” “before,” or “years later”** establishes chronology/context unless the source also states a causal relationship.
 - Keep participant and realm references explicit.
 - If causality is interpretive, model the supported facts and avoid overstating the edge.
+- Later primary evidence may confirm a broad historical outcome without identifying a narrower participant or victor. Promote only the confirmed scope; do not backfill named actors from an older ending unless independently corroborated.
 
 ## Story-chain causality UX
 
-Phase 3 delivered `/causality` as a timeline-scoped story-chain explorer.
+Phase 3 delivered `/causality` as a timeline-scoped story-chain explorer, and Phase 5 proved the first real multi-parent merge.
 
 - show complete connected causal chains when small enough to read;
 - highlight `You are here` without removing surrounding causal context;
 - create tree branches only from explicit causal fields;
 - use event `order` only for chronology/moment context;
+- keep a dedicated chronology rail separate from causal topology so sequence remains readable without invented edges;
 - keep disconnected causal components separate;
 - keep reset/rewrite bridges out of ordinary within-continuity trees;
 - keep ordinary `Relationship` edges separate from causal edges unless proven useful to combine;
 - retain `Why? / What next?` as a secondary close-up;
-- treat real branch merges or graph complexity as future stress cases rather than pretending the simple tree handles them perfectly.
+- for multi-parent Events, render one full shared node plus explicit merge references from additional parents rather than duplicating the same Event card under every branch.
 
 ## Sources
 
@@ -177,6 +179,7 @@ Before a substantive PR is ready:
 - temporal association is not promoted into causality;
 - plans/intentions are not promoted into completed occurrences without separate evidence;
 - qualified states such as `apparent death` are not promoted into stronger Facts/Events;
+- later broad outcome confirmation is not strengthened into a named-victor claim without direct corroboration;
 - retcon/contradiction UI does not promote mere variation into a confirmed retcon;
 - documentation matches behavior;
 - `CHANGELOG.md` has been reviewed;
@@ -194,8 +197,8 @@ A green build does not prove lore accuracy, causal accuracy, retcon accuracy, or
 
 ## Current scope
 
-Phases 1, 2, 3, and 4 are complete and merged. Phase 5's Deception cosmology / Onaga / Shinnok foundation, Edenia / Outworld conquest, Great Kung Lao tournament history, Liu Kang / MK1992 bridge, and MKII Outworld setup are merged.
+Phases 1, 2, 3, and 4 are complete and merged. Phase 5's Deception cosmology / Onaga / Shinnok foundation, Edenia / Outworld conquest, Great Kung Lao tournament history, Liu Kang / MK1992 bridge, MKII Outworld setup, Shaolin-temple attack, and Sindel/MK3 invasion setup are merged.
 
-The active work remains **Phase 5 — Cosmology and ancient history**, defined in `docs/ROADMAP.md` and reviewed through `docs/PHASE5_MANUAL_VERIFICATION.md`.
+The active work remains **Phase 5 — Cosmology and ancient history**, defined in `docs/ROADMAP.md`.
 
-The current slice is **Mortal Kombat II / Shaolin temple attack** on `agent/phase5-mk2-shaolin-attack`: add Baraka and the sourced attack on Liu Kang's Shaolin home, model the attack's direct revenge consequence for Liu Kang, and keep that causal component separate from the second-tournament lure unless primary evidence directly connects them.
+The current slice is **MK3 invasion outcome** on `agent/phase5-mk3-invasion-outcome`: model the soul-taking and extermination campaign conservatively, use MK4 as later primary confirmation that Earth warriors defeated Shao Kahn, keep chronology distinct from causality, and do not promote Liu Kang as the individual victor without direct Original-continuity corroboration.
