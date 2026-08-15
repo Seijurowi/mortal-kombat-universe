@@ -1,0 +1,13 @@
+{
+  "id": "shao-kahn-sends-extermination-squads-original",
+  "type": "event",
+  "name": "Shao Kahn sends extermination squads after the survivors",
+  "timelineId": "original",
+  "participantIds": ["shao-kahn", "liu-kang"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": ["shao-kahn-claims-earthrealm-souls-original"],
+  "consequenceEventIds": [],
+  "order": 170,
+  "description": "Unable to claim the protected souls of Earthrealm's chosen warriors, Shao Kahn sends Outworld warriors to hunt the remaining humans; Liu Kang becomes the prime target of the extermination squads.",
+  "tags": ["invasion", "extermination", "mk3"]
+}
