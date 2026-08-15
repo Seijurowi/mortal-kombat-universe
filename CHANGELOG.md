@@ -1,72 +1,43 @@
 # Changelog
 
-This file records notable changes to the Mortal Kombat Universe project. It is intentionally curated: it tracks meaningful product, lore/data, model, tooling, and contributor-workflow changes rather than every commit.
+This file records notable changes to the Mortal Kombat Universe project. It is intentionally curated: meaningful product, lore/data, model, tooling, and contributor-workflow changes belong here; commit-by-commit detail does not.
 
-The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
+See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 
 ## Unreleased
 
 ### Added
 
-- Phase 5 Deception cosmology foundation: One Being, Elder Gods, Edenia, Orderrealm/Seido, Chaosrealm, the ancient shattering event, and sourced creation-myth facts.
-- Onaga / Shao Kahn / Shujinko Original-continuity records with sourced ancient succession and Deception-era story chains.
-- Shinnok / Lucifer Original-continuity records with sourced ancient Earthrealm war, banishment, Quan Chi alliance, and Netherrealm succession events.
-- Kitana, Sindel, and Jerrod Original-continuity records for the Edenia / Outworld conquest slice.
-- Great Kung Lao, Goro, and Shang Tsung Original-continuity records for pre-1992 tournament history.
-- Baraka as an Original-continuity Character plus the sourced Shaolin-temple attack and Liu Kang revenge-response Events.
-- Mortal Kombat: Deception Shujinko biography, Raiden biography, Shujinko ending, and instruction-booklet source records.
-- Mortal Kombat: Armageddon Shujinko biography as later follow-up evidence confirming Onaga's defeat.
-- Mortal Kombat Trilogy Shao Kahn biography, Mortal Kombat 3 Sindel ending, and Deadly Alliance Kitana biography source records for Edenian history.
-- Mortal Kombat II Kung Lao biography as primary in-game evidence identifying the ancient champion defeated by Goro as the Great Kung Lao.
-- Mortal Kombat II Baraka biography as primary evidence that Baraka led the attack against Liu Kang's Shaolin temples.
-- Preservation URL and explicit provenance notes for the original Mortal Kombat (1992) arcade story source now used by the tournament-history Facts.
-- Mortal Kombat (1992) Liu Kang ending, Mortal Kombat II story/Liu Kang biography, and Mortal Kombat 4 Goro biography source records for the first-game outcome bridge.
-- Mortal Kombat Trilogy story as later Original-continuity confirmation that Liu Kang and his comrades were actually lured into Outworld for a second tournament.
-- Mortal Kombat 3 story plus expanded Mortal Kombat Mythologies: Sub-Zero and Mortal Kombat Trilogy story provenance for the Sindel reincarnation / Earthrealm-invasion setup.
-- `Shang Tsung arranges Sindel's reincarnation`, `Sindel is reborn on Earthrealm`, and `Shao Kahn breaches Earthrealm` as sourced Original-continuity Events.
-- Mortal Kombat 3 Liu Kang biography and Mortal Kombat 4 story source records for the invasion aftermath and later-confirmed Shao Kahn defeat.
-- `Shao Kahn claims Earthrealm's human souls`, `Shao Kahn sends extermination squads after the survivors`, and `Earth warriors defeat Shao Kahn` as Original-continuity Events.
-- Canon Facts for Shang Tsung arranging the Sindel reincarnation scheme, the second tournament serving as a diversion, Sindel's Earthrealm rebirth, and that rebirth enabling Shao Kahn to cross the dimensional gates.
-- Canon Facts for Shao Kahn claiming Earthrealm's human souls, Liu Kang becoming the prime target of the extermination squads, and Earth warriors defeating Shao Kahn.
-- Dedicated chronology rail in `/causality` that lists each event once in story order, independently from causal-tree branching.
-- Sourced realm-target Facts for `Shao Kahn conquered Edenia` and `Kitana liberated Edenia`.
-- Supplemental Jerrod family Facts retained from Sindel's Mortal Kombat 3 ending without promoting ending-only evidence into biography-level canon.
-- Pre-1992 tournament Facts for Goro defeating the Great Kung Lao, becoming Grand Champion, remaining undefeated for roughly 500 years, and Shang Tsung controlling/corrupting the tournament.
-- Canon Facts for Liu Kang defeating Goro and winning the first-game tournament from Shang Tsung's control, each paired with direct later Original-continuity confirmation rather than relying on the arcade ending alone.
-- Canon Facts for Baraka leading the Shaolin-temple attack, Liu Kang's Shaolin brothers being killed by Outworld warriors, and Liu Kang seeking revenge after discovering the destruction.
-- `Shang Tsung seeks a second chance` as the sourced Original-continuity bridge from the failed first-game tournament into the Mortal Kombat II setup.
-- `Shang Tsung plans an Outworld tournament`, a canon Fact for that plan, `Second Mortal Kombat tournament in Outworld`, and a canon Fact confirming Liu Kang was lured there to compete.
-- Supported causal chains for `Shao Kahn poisons Onaga → seizes Outworld`, `Onaga manipulates Shujinko → Shujinko gathers Kamidogu`, `Shujinko shatters Kamidogu → defeats Onaga`, `Shinnok wars with Raiden → banishment`, `Quan Chi allies with Shinnok → Shinnok rules Netherrealm`, `first-game tournament → Shang Tsung seeks a second chance → Outworld tournament plan → second Outworld tournament`, `Baraka attacks the Shaolin temples → Liu Kang seeks revenge`, `Sindel scheme → Sindel rebirth → Shao Kahn breaches Earthrealm`, and `protected Earth warriors survive soul-taking → Shao Kahn sends extermination squads`.
-- Phase 5 manual verification for ancient cosmology, continuity scope, source provenance, collective event participants, status changes, realm-target semantics, ending evidence strength, tournament chronology, first-game outcome confirmation, plan-versus-occurrence evidence, causal gaps, chronology-versus-causality UX, multi-parent causal nodes, and the MK3 invasion outcome.
+- **Phase 5 Original-continuity cosmology foundation:** One Being, Elder Gods, the six Deception navigation realms, creation-myth evidence, `game_manual` sources, and Factions as valid Event participants.
+- **Onaga / Shujinko ancient-history coverage:** sourced succession, manipulation, Kamidogu, and defeat chains while preserving intentional causal gaps where evidence does not support a direct edge.
+- **Shinnok ancient-history coverage:** fall from Elder God status, war with Raiden, Netherrealm banishment, alliance with Quan Chi, Lucifer context, and later Netherrealm rulership.
+- **Edenia / Outworld history:** Kitana, Sindel, Jerrod, Shao Kahn's conquest, Edenia's later liberation, realm-target Facts, and conservative ending-only Jerrod family details.
+- **Pre-1992 tournament history:** Great Kung Lao, Goro, Shang Tsung, Goro's ancient victory/Grand Champion reign, and Shang Tsung's tournament control without turning shared chronology into causality.
+- **MK1992 → MKII bridge:** Liu Kang's first-game victory over Goro/tournament control at the narrow level later primary sources confirm; Shang Tsung's sourced second-chance plea; Goro's `apparent death` kept weaker than confirmed death.
+- **MKII Outworld setup:** Shang Tsung's explicit plan to lure enemies into Outworld, later Original-continuity confirmation that the second tournament occurred, and a strict plan-versus-occurrence split.
+- **MKII Shaolin-temple slice:** Baraka's attack and Liu Kang's revenge response as a separate causal component, without inferred Earthrealm scope or an invented connection to the tournament lure.
+- **Sindel scheme / MK3 setup:** the long-running reincarnation scheme, Sindel's Earthrealm rebirth, Shao Kahn's breach, and the second Outworld tournament as the first real multi-parent causal Event.
+- **MK3 invasion outcome:** soul-taking/extermination coverage, Liu Kang as the prime extermination target, and later MK4 confirmation that Earth warriors defeated Shao Kahn without promoting Liu Kang as the individual victor from ending-only evidence.
+- **Causality UX evolution:** a dedicated chronology/story-order rail, real DAG merge rendering, one full shared node plus explicit merge references, and clearer causal-start/causal-end semantics.
+- Phase 5 cumulative and slice-specific manual verification covering evidence strength, source provenance, realm semantics, chronology-versus-causality, plans versus occurrences, DAG merges, and broad-versus-narrow later confirmation.
 
 ### Changed
 
-- Event participant validation accepts `Character | Faction` instead of Character-only, proven necessary by the Elder Gods acting collectively in the Deception creation account.
-- Source taxonomy includes `game_manual`, proven necessary by the official Deception instruction booklet.
-- Ancient Original-continuity cosmology remains explicitly scoped instead of being projected onto Reboot or New Era.
-- The One Being creation event no longer uses `realmIds` to represent realms produced by the event; `realmIds` remains location/scope metadata.
-- The One Being realm-formation Fact is narrowed to the source-supported statement that the shattering formed **the realms**, rather than synthesizing the manual's six Konquest realms into an exhaustive creation-output claim.
-- Realm conquest/liberation semantics now follow the same reusable rule: Event `realmIds` describes location/scope while sourced Facts express a Realm as the object of conquest, liberation, merging, creation, destruction, or similar claims.
-- Event realm scope must be supported for that Event specifically; participant affiliation or the location of a later consequence is not enough to infer `realmIds`.
-- Kamidogu reawakening lore is represented as sourced Facts without manufacturing unsupported causal event edges.
-- Onaga chronology intentionally keeps unsupported transitions disconnected rather than turning sequence into causality.
-- Edenia conquest and later liberation remain disconnected causal components until their long intervening history is explicitly modeled.
-- Great Kung Lao/Goro chronology keeps `Goro defeats the Great Kung Lao` separate from `Shang Tsung takes control of the tournament`; the source's “during this period” wording is treated as temporal association, not proof of causality.
-- The existing `mortal-kombat-1992` Event is enriched with Goro and Shang Tsung participants and a sourced consequence edge instead of duplicating the first-game tournament as a second Event.
-- Liu Kang's arcade-ending outcome is promoted only at the level directly confirmed by later primary sources; MK4 Goro biography now provides explicit later support for Liu Kang taking the title from Goro, while MKII Liu Kang biography supports the tournament-control outcome.
-- Goro's MKII `apparent death` wording is intentionally not converted into a confirmed death Fact/Event.
-- `Shang Tsung seeks a second chance` no longer carries an inferred Outworld realm scope; MKII establishes the later Outworld plan but not the location of the plea itself.
-- The MKII continuation separates the locationless planning Event from the later-confirmed second tournament in Outworld; a plan is not treated as proof that the planned occurrence happened.
-- The Shaolin-temple attack is modeled as a separate causal component leading to Liu Kang's revenge response; it is not asserted to be the cause of the second tournament or part of Shang Tsung's lure plan without direct primary evidence.
-- The reused `mk2-story` Source notes now cover all load-bearing claims supported by that source, including Shang Tsung's explicit Outworld plan.
-- The second Outworld tournament is now the first proven multi-parent causal node: MKII supports Shang Tsung's lure plan while MKT independently identifies the tournament as a diversion inside the older Sindel reincarnation scheme.
-- MK3's wording that Shao Kahn enacts the ancient plan after failed tournament attempts is preserved as a sourced Fact rather than converted into unsupported direct causal edges from MK1/MKII to a newly invented post-tournament plan Event; Mythologies and MKT establish that the Sindel scheme was already in motion.
-- `/causality` now separates chronology from causal topology: chronology is read once left-to-right, while causal starts/ends and branches remain graph semantics rather than implied timeline endpoints.
-- Shared multi-parent Events render one full node plus explicit `Merges into` references from additional causal parents instead of duplicating the same Event card under every branch.
-- The MK3 invasion keeps `Shao Kahn breaches Earthrealm` and the later soul-claim as chronological neighbors without a direct causal edge; the source establishes the invasion sequence but not that narrow causal relation.
-- Shao Kahn's MK3 defeat is promoted only to the broad later-confirmed outcome `defeated by Earth warriors`; Liu Kang is not named as the individual victor from ending-only evidence.
-- Shinnok's Elder God status is represented as a historical Fact (`former_member_of`) instead of timeless static faction membership.
-- Product and domain documentation identifies Phase 5 as the active milestone and tracks each ancient-history slice as it is merged.
+- Event `participantIds` accepts `Character | Faction`, proven by the Elder Gods acting collectively.
+- Event `realmIds` is locked to location/scope semantics; realm creation, conquest, liberation, merging, destruction, and similar action-object claims belong in sourced Facts.
+- Named local places do not automatically justify a broader Realm mapping; the Shaolin-temple case is the explicit proof example.
+- The One Being shattering claim is narrowed to the source-supported formation of **the realms** rather than synthesizing a later six-realm navigation set into an exhaustive creation-output claim.
+- Historical identities, titles, reigns, divine states, and changing faction membership remain Facts/Events rather than timeless Character metadata.
+- Plans, intentions, prophecies, threats, and possibilities are not treated as proof that their described occurrences happened; later occurrence evidence is required.
+- Qualified wording such as `apparent death` remains weaker than a confirmed death/transformation Event.
+- Temporal association and adjacent story order never manufacture causal edges. This is applied across Great Kung Lao history, MK3 breach/soul-taking, and other chronology-only transitions.
+- Later primary sources may confirm a narrower ending outcome without canonizing an ending wholesale; conversely, broad later confirmation stays broad and does not silently identify a narrower named actor/victor.
+- The second Outworld tournament now proves real multi-parent causality: MKII's lure plan and the older Sindel/diversion scheme converge on one occurrence.
+- `/causality` separates chronology from causal topology so history remains readable even when causal components are disconnected or merge.
+- Claim history continues to treat subject/predicate grouping as presentation rather than automatic contradiction/retcon evidence; source year remains chronology context, not canonical priority.
+- **Documentation governance was consolidated:** `ROADMAP.md` is the sole owner of live milestone/active-slice status; PRD, LORE_MODEL, AGENTS, README, changelog, and manuals now have explicit stable ownership boundaries to reduce documentation drift.
+- Root/documentation README files no longer carry fragile record counts, branch-specific status, or stale milestone claims; manual verification documents are explicitly indexed as cumulative/regression/slice-specific procedures rather than status trackers.
+- Changelog practice now explicitly supports consolidating long `Unreleased` sections into milestone/slice-level history instead of mirroring every source/Event/Fact file.
 
 ## 2026-08-14 — Phase 4: Claim history, retcons, and evidence
 
@@ -81,31 +52,24 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 ### Changed
 
 - Subject/predicate grouping is a presentation aid rather than proof of divergence or contradiction.
-- Different displayed values are not automatically labelled continuity divergence; they may represent time-dependent or multi-valued predicates such as identity.
-- Search keeps the selected detail synchronized with visible results.
+- Different displayed values are not automatically labelled continuity divergence; they may represent time-dependent or multi-valued predicates.
 - Source year is evidence-history context, not automatic canonical priority.
-- Schema expansion for explicit `contradicts` / `supersedes` links remains deferred until a real sourced case proves the current model insufficient.
+- Explicit `contradicts` / `supersedes` schema remains deferred until a concrete sourced case proves the need.
 
 ## 2026-08-14 — Phase 3: Story chains and causality
 
 ### Added
 
-- Dedicated `/causality` workbench for story-chain exploration built from explicit `causeEventIds` / `consequenceEventIds`.
-- Whole-chain vertical tree that keeps the start, branches, selected event, and terminal event(s) visible at the same time.
-- `Start`, `You are here`, `End`, and moment/position markers for causal-chain orientation.
-- Separate chain cards when one continuity contains disconnected causal components.
-- Local immediate `Why? / What next?` close-up beneath the full-chain view.
+- Dedicated `/causality` workbench built from explicit `causeEventIds` / `consequenceEventIds`.
+- Whole-chain vertical tree with start/end orientation, selected-event context, disconnected-component selection, and local `Why? / What next?` inspection.
 - Links from causal events and participants back to ordinary dossiers while preserving continuity scope.
-- Explorer / Causality mode navigation.
-- Phase 3 manual verification checklist.
+- Explorer / Causality mode navigation and Phase 3 manual verification.
 
 ### Changed
 
 - Story-chain UX prioritizes whole-chain orientation over isolated click-to-recenter diagrams.
-- Selecting an event highlights `You are here` without removing the rest of the causal chain from view.
-- Product, lore-model, and agent guidance describe whole-chain story causality as the Phase 3 contract.
-- Causal validation requires mirrored cause/consequence references and rejects arbitrary cross-timeline edges unless the source event is explicitly tagged as a reset/rewrite bridge.
-- Explicit reset/rewrite bridges remain valid model data but are excluded from ordinary within-continuity story trees pending future timeline-transition UX.
+- Causal validation requires mirrored references and rejects arbitrary cross-timeline edges unless the source Event is an explicit reset/rewrite bridge.
+- Reset/rewrite bridges remain valid model data but are excluded from ordinary within-continuity story trees pending dedicated transition UX.
 
 ## 2026-08-14 — Phase 2: Timeline-first reading experience
 
@@ -113,30 +77,26 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 
 - Timeline-first character dossiers with in-page Original / Reboot / New Era switching.
 - Generated `Compare all` continuity overview for character pages.
-- Dedicated character story chronology ordered from structured event data.
-- Shareable `entity` + `timeline` reading state with a copy-deep-link action.
-- Phase 2 manual UX verification checklist.
-- Repository changelog policy and pull-request changelog checklist.
+- Dedicated character story chronology ordered from structured Event data.
+- Shareable `entity` + `timeline` reading state with copy-deep-link action.
+- Phase 2 manual UX verification and changelog policy/practice.
 
 ### Changed
 
 - Character pages separate chronology, evidence-backed facts, and relationship connections instead of presenting one flat entity-inspection view.
-- Product documentation and agent guidance were aligned around the timeline-first reading experience.
 
 ## 2026-08-14 — Phase 1: Bi-Han lore stress test
 
 ### Added
 
 - Sourced Bi-Han / Hanzo Hasashi / Quan Chi / Shirai Ryu / Noob Saibot lore across Original, Reboot, and New Era continuities.
-- Timeline-scoped events, facts, relationships, and source records, expanding the validated seed set to 75 records across 8 entity types.
-- Product requirements, lore-model documentation, roadmap, and manual lore verification guidance.
-- Source pages that show the facts citing each source.
-- Timeline badges and timeline-aware detail filtering.
+- Timeline-scoped events, facts, relationships, and sources proving the stable-person identity model.
+- Product requirements, lore-model documentation, source pages, timeline badges, and manual lore verification guidance.
 
 ### Changed
 
-- Kept Bi-Han as one stable character entity while representing Sub-Zero / Noob Saibot identity changes through timeline-scoped facts/events.
-- Documented alternate-timeline Titan Havik as model pressure without prematurely introducing a character-variant schema.
+- Bi-Han remains one stable Character while Sub-Zero / Noob Saibot identity changes are represented through scoped Facts/Events.
+- Alternate-timeline Titan Havik remains model pressure rather than a fabricated ordinary Character relationship.
 
 ### Fixed
 
@@ -151,6 +111,5 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 - pnpm-only package management and frozen-lockfile CI workflow.
 - shadcn/ui foundation using the requested `bcivVKXQ` preset, Tailwind CSS v4, Base UI, and Lucide icons.
 - Atomic JSON lore store with 8 entity types, JSON Schemas, and cross-reference validation.
-- Initial 41-record seed dataset.
-- Search, timeline filtering, entity detail pages, facts, sources, and relationship navigation.
+- Initial seed dataset, search, timeline filtering, entity detail pages, facts, sources, and relationship navigation.
 - `AGENTS.md` execution contract and `pnpm check` quality gate.
