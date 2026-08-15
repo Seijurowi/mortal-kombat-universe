@@ -1,12 +1,12 @@
 {
   "id": "fact-war-against-shinnok-resumed-original",
   "type": "fact",
-  "name": "The war against Shinnok resumed",
+  "name": "The war involving Shinnok resumed",
   "subjectId": "shinnok",
-  "predicate": "war_resumed_against",
-  "value": "the realms' defenders and mortals",
+  "predicate": "involved_in_resumed_war",
+  "value": "The war is being fought once again",
   "timelineIds": ["original"],
   "canonStatus": "canon",
   "sourceIds": ["mk4-story"],
-  "notes": "Mortal Kombat 4's intro states that the war is being fought once again and that mortals can now win it. This Fact preserves the resumed-conflict framing without inventing a narrower participant list or location not stated by the intro."
+  "notes": "Mortal Kombat 4's intro states that the war is being fought once again and that this time it can be won by mortals. This Fact preserves only that resumed-conflict framing and does not invent a narrower defender roster, location, or causal mechanism."
 }
