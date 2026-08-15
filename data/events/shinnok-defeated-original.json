@@ -1,0 +1,13 @@
+{
+  "id": "shinnok-defeated-original",
+  "type": "event",
+  "name": "Shinnok is defeated",
+  "timelineId": "original",
+  "participantIds": ["shinnok"],
+  "realmIds": [],
+  "causeEventIds": [],
+  "consequenceEventIds": [],
+  "order": 210,
+  "description": "Mortal Kombat: Armageddon later treats a prior defeat of Shinnok as established Original-continuity history. The project places that broad outcome after Shinnok's Mortal Kombat 4 return in chronology, without claiming that the Armageddon biography itself names a specific MK4 scene, victor, battle location, or causal mechanism.",
+  "tags": ["mk4", "defeat", "outcome"]
+}

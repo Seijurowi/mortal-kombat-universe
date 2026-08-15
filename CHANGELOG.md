@@ -19,10 +19,11 @@ See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 - **Sindel scheme / MK3 setup:** the long-running reincarnation scheme, Sindel's Earthrealm rebirth, Shao Kahn's breach, and the second Outworld tournament as the first real multi-parent causal Event.
 - **MK3 invasion outcome:** soul-taking/extermination coverage, Liu Kang as the prime extermination target, and later MK4 confirmation that Earth warriors defeated Shao Kahn without promoting Liu Kang as the individual victor from ending-only evidence.
 - **MK4 / Shinnok return setup:** Shinnok's escape from Netherrealm and the renewed war as sourced Original-continuity Events/Facts, with the MK3 defeat → escape → renewed-war sequence kept chronological rather than converted into unsupported direct causality.
+- **MK4 / Shinnok outcome:** Mortal Kombat: Armageddon's Johnny Cage biography now serves as later primary confirmation that Shinnok was defeated years earlier; the canon Fact stays at the broad defeat level without promoting Liu Kang or another fighter as the individual victor, inventing a battle location, or turning renewed-war chronology into a direct causal edge.
 - **Continuity-wide chronology navigation:** `/causality` now presents all Events in the selected continuity in story order, adds Previous/Next chronology navigation across causal-component boundaries, and auto-scrolls the selected chronology card into view.
 - **Shadcn UI component inventory:** the repository now includes the expanded Shadcn/Base UI component set under `components/ui/` plus the dependencies required by those primitives, while preserving the existing preset and pnpm lockfile discipline.
 - **Causality UX evolution:** a dedicated chronology/story-order rail, real DAG merge rendering, one full shared node plus explicit merge references, and clearer causal-start/causal-end semantics.
-- Phase 5 cumulative and slice-specific manual verification covering evidence strength, source provenance, realm semantics, chronology-versus-causality, plans versus occurrences, DAG merges, broad-versus-narrow later confirmation, and the MK4 Shinnok-return bridge.
+- Phase 5 cumulative and slice-specific manual verification covering evidence strength, source provenance, realm semantics, chronology-versus-causality, plans versus occurrences, DAG merges, broad-versus-narrow later confirmation, and the MK4 Shinnok return/outcome bridge.
 - **Repository Definition of Done:** a dedicated `docs/DEFINITION_OF_DONE.md` readiness gate covering scope, lore/evidence, graph/model semantics, UX, documentation ownership, changelog discipline, manual verification, final-head CI, PR review, and explicit human/user merge authority.
 
 ### Changed
@@ -34,7 +35,7 @@ See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 - Historical identities, titles, reigns, divine states, and changing faction membership remain Facts/Events rather than timeless Character metadata.
 - Plans, intentions, prophecies, threats, and possibilities are not treated as proof that their described occurrences happened; later occurrence evidence is required.
 - Qualified wording such as `apparent death` remains weaker than a confirmed death/transformation Event.
-- Temporal association and adjacent story order never manufacture causal edges. This is applied across Great Kung Lao history, MK3 breach/soul-taking, the MK3→MK4 Shinnok-return bridge, and other chronology-only transitions.
+- Temporal association and adjacent story order never manufacture causal edges. This is applied across Great Kung Lao history, MK3 breach/soul-taking, the MK3→MK4 Shinnok-return bridge, the renewed-war→Shinnok-defeat transition, and other chronology-only transitions.
 - Later primary sources may confirm a narrower ending outcome without canonizing an ending wholesale; conversely, broad later confirmation stays broad and does not silently identify a narrower named actor/victor.
 - The second Outworld tournament now proves real multi-parent causality: MKII's lure plan and the older Sindel/diversion scheme converge on one occurrence.
 - `/causality` separates chronology from causal topology so history remains readable even when causal components are disconnected or merge; chronology navigation can cross those component boundaries without creating graph edges.
