@@ -1,0 +1,12 @@
+{
+  "id": "fact-liu-kang-prime-extermination-target-original",
+  "type": "fact",
+  "name": "Liu Kang became the prime target of Shao Kahn's extermination squads",
+  "subjectId": "liu-kang",
+  "predicate": "targeted_by",
+  "value": "Shao Kahn's extermination squads",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk3-liu-kang-bio"],
+  "notes": "Mortal Kombat 3's Liu Kang biography explicitly identifies him as the prime target of Kahn's extermination squads after the Outworld invasion."
+}
