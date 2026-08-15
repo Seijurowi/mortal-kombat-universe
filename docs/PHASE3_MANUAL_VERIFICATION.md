@@ -1,6 +1,6 @@
-# Phase 3 Manual Verification — Story Chains
+# Phase 3 Manual Verification — Story Chains / Causality Regression
 
-This checklist verifies that the causality workbench helps a reader understand **where a story chain starts, what happens next, where it branches, and where the reader currently is** without confusing chronology with causality.
+This checklist began as the Phase 3 acceptance suite and now serves as a **regression checklist** for `/causality`. Later Phase 5 work extended the original implementation with a separate chronology rail and proven multi-parent/DAG merge rendering.
 
 Run:
 
@@ -10,113 +10,95 @@ pnpm check
 pnpm dev
 ```
 
-Then open `/causality`.
+Open `/causality`.
 
-## 1. Orientation first
+## 1. Orientation
 
-- [ ] The page feels like a story-chain explorer, not a flat event index.
-- [ ] The active chain clearly names its `Starts with` event(s).
-- [ ] The active chain clearly names its `Ends with` event(s).
-- [ ] The total number of events in the chain is visible.
-- [ ] The selected event is clearly marked `You are here` while the whole chain remains visible.
-- [ ] Root events are visibly marked `Start`; terminal events are visibly marked `End`.
+- [ ] The page reads as a story-chain explorer, not a flat event index.
+- [ ] The active causal component names its causal start(s) and causal end(s).
+- [ ] The selected event is clearly marked `You are here` while wider context remains visible.
+- [ ] Root/terminal badges are phrased as **causal** starts/ends rather than implying timeline endpoints.
+- [ ] The total number of unique events in the active component is understandable.
 
-## 2. Whole-chain tree
+## 2. Chronology is independently readable
+
+- [ ] A dedicated chronology/story-order representation lists each event exactly once in order.
+- [ ] Chronology can be followed without reading the causal tree depth-first.
+- [ ] Raw Event `order` remains chronology context, not causal evidence.
+- [ ] A chronological neighbor does not become a parent/child merely because its order is adjacent.
+- [ ] Events in the same chronology may remain in different/disconnected causal components.
+
+## 3. Whole causal topology
 
 Using a continuity with existing causal links:
 
-- [ ] Events are shown as a connected vertical tree from root toward consequences.
-- [ ] Clicking any event changes only the focus/highlight; it does not collapse the reader back into a three-node-only view.
-- [ ] Branches are visually indented from the event that causes them.
-- [ ] A malformed causal cycle cannot cause infinite recursive rendering; expansion stops with a visible cycle note.
+- [ ] Events are connected only from explicit `causeEventIds` / `consequenceEventIds`.
+- [ ] Clicking an event changes focus/highlight without collapsing the whole component into a three-node-only view.
+- [ ] Branches visually descend from the event that causes them.
+- [ ] A malformed causal cycle cannot recurse forever; expansion stops safely with a visible cycle note.
+- [ ] No chronology-only link is introduced merely to make one continuous tree.
 
-Merged causal branches are a **known future stress case**, not a proven Phase 3 capability. The current 75-record dataset does not provide a real merge case to validate. If a sourced merge is added later, do not accept a renderer that makes one canonical event look like two distinct occurrences.
+## 4. Multi-parent / DAG merge regression
 
-## 3. Moment / chronology context
+Use the Original-continuity second Outworld tournament as the proven merge case.
 
-- [ ] Every tree node with known ordering shows a readable moment/position indicator.
-- [ ] Raw event `order` remains available as story-order context.
-- [ ] Moment ordering helps answer “when in this chain does this happen?” without claiming that numerical adjacency itself is causality.
+- [ ] `Second Mortal Kombat tournament in Outworld` has both supported causal parents in the local `Why?` view.
+- [ ] The whole tree does **not** render that one Event as two independent full occurrences.
+- [ ] One deterministic branch renders the full shared node; additional parent branches use an explicit `Merges into …` reference.
+- [ ] The merge reference is selectable/navigable enough to understand what node it joins.
+- [ ] Correct lore edges are not removed merely to simplify rendering.
 
-## 4. Multiple chains in one continuity
+## 5. Multiple causal components
 
 Where a timeline contains disconnected causal components:
 
-- [ ] The user sees separate `Story chains in this continuity` cards instead of one undifferentiated event list.
-- [ ] Each chain card says what it starts with and what it leads to.
-- [ ] Selecting another chain focuses its root and displays that chain only.
-- [ ] Independent chains are never joined merely because their event orders are close.
+- [ ] The user sees separate story-chain/component choices rather than one fabricated super-chain.
+- [ ] Each component identifies what it causally starts with and leads to.
+- [ ] Selecting another component focuses a valid root/event in that component.
+- [ ] Independent components are never joined because their chronology is close.
 
-## 5. Timeline isolation and reset bridges
+## 6. Timeline isolation and reset bridges
 
 Switch Original / Reboot / New Era.
 
-- [ ] No event from another continuity appears inside an ordinary story tree.
-- [ ] Switching timeline chooses a valid chain/root in that continuity.
+- [ ] No ordinary causal tree contains events from another continuity.
+- [ ] Switching timeline chooses a valid component/root for that continuity.
 - [ ] A timeline with few causal links remains usable and does not invent missing edges.
 - [ ] Similarly named events across timelines are not presented as the same occurrence.
-- [ ] The Reboot `hourglass-reset → liu-kang-new-era` link remains valid model data but is **not** folded into either ordinary continuity tree.
-- [ ] `pnpm validate` rejects an arbitrary cross-timeline causal edge unless the source event is explicitly tagged as a reset/rewrite bridge (`reset`, `rewrite`, or `timeline-bridge`).
+- [ ] The Reboot `hourglass-reset → liu-kang-new-era` link remains valid model data but is not folded into either ordinary continuity tree.
+- [ ] `pnpm validate` rejects arbitrary cross-timeline causal edges unless the source event is explicitly tagged as a reset/rewrite bridge (`reset`, `rewrite`, or `timeline-bridge`).
 
-## 6. Chronology is not causality
+## 7. Chronology-versus-causality proof cases
 
-This remains the highest-value conceptual check.
-
-- [ ] An event does not become a parent/child merely because its `order` is immediately before/after another event.
-- [ ] Every visible tree branch corresponds to explicit `causeEventIds` / `consequenceEventIds` data.
-- [ ] The first Mortal Kombat tournament is not reintroduced as a cause of Bi-Han's death solely because of chronology.
-- [ ] Chronological events outside the causal component remain absent from the tree.
-
-## 7. Bi-Han / Hanzo stress case
-
-### Original
-
-Verify the whole chain can visibly express:
-
-`Hanzo dies → Hanzo returns as Scorpion → Scorpion kills Bi-Han → Bi-Han becomes Noob Saibot`
-
-- [ ] The start of the chain is visible without clicking backward repeatedly.
-- [ ] The final Noob event is visible without clicking forward repeatedly.
-- [ ] Selecting the middle Bi-Han death event marks `You are here` while both earlier and later steps remain visible.
-- [ ] No unsupported Quan Chi transformation edge appears for Original Bi-Han.
-
-### Reboot
-
-- [ ] Reboot chain(s) remain completely separate from Original.
-- [ ] Bi-Han's death and Noob resurrection are visible in their wider causal context where explicit links exist.
-- [ ] Quan Chi-related meaning is not inferred from ordinary relationship edges unless represented as event causality.
+- [ ] The first Mortal Kombat tournament is not treated as the cause of Bi-Han's death solely because of chronology.
+- [ ] Great Kung Lao/Goro/Shang Tsung temporal association remains disconnected where no causal language exists.
+- [ ] `Shao Kahn breaches Earthrealm` and later soul-taking remain chronologically ordered without a manufactured direct causal edge.
+- [ ] Shao Kahn's later defeat can appear after the invasion in chronology while remaining causally disconnected from the last modeled invasion Event.
 
 ## 8. Local close-up
 
-The local cause/effect panel remains secondary to the whole tree.
-
-- [ ] `Why?` shows only immediate parent event(s) of `You are here` within the active timeline.
-- [ ] `What next?` shows only immediate child event(s) within the active timeline.
-- [ ] Clicking either side updates `You are here` in the tree without losing whole-chain orientation.
+- [ ] `Why?` shows only immediate parent event(s) of `You are here` within the active timeline/component.
+- [ ] `What next?` shows only immediate child event(s).
+- [ ] Multi-parent Events show all immediate supported parents locally even though the whole-tree renderer deduplicates the shared node.
+- [ ] Clicking either side updates focus without losing whole-component orientation.
 
 ## 9. Dossier integration
 
 - [ ] `Open full event dossier` opens the correct event with the same timeline selected.
-- [ ] Participant links open the correct character dossier and preserve timeline scope.
-- [ ] The global Explorer / Causality switch remains reachable without obscuring important content.
+- [ ] Participant links open the correct Character/Faction dossier and preserve timeline scope.
+- [ ] Explorer / Causality navigation remains reachable.
 
 ## 10. Responsive layout
 
 Check desktop and narrow/mobile widths.
 
-- [ ] The vertical tree remains readable on both desktop and mobile.
-- [ ] Branch indentation does not create destructive horizontal overflow on mobile.
-- [ ] Event titles and long descriptions wrap safely.
-- [ ] `Start`, `You are here`, `End`, and moment badges remain understandable at narrow widths.
+- [ ] The chronology rail remains readable/scrollable without destructive layout overflow.
+- [ ] Causal branch indentation remains usable on mobile.
+- [ ] Event titles and descriptions wrap safely.
+- [ ] `Causal start`, `You are here`, `Causal end`, moment, and merge indicators remain understandable at narrow widths.
 
-## 11. Product decision after review
+## 11. Product boundary
 
-Answer these before Phase 3 is considered complete:
+Do not introduce React Flow, Cytoscape, a graph database, or a new causal schema merely because richer diagrams are possible. The current UI should evolve only when larger real chains prove the need.
 
-- Does the whole-chain tree solve the “where does this event chain start?” problem?
-- Are current one-to-many branches understandable with the vertical tree?
-- At what real chain complexity does a true 2D graph become more readable than the story tree?
-- Should reset/rewrite bridges get a separate timeline-transition visualization later?
-- Should non-causal chronological milestones ever appear as muted context between causal nodes, or would that weaken trust in the graph?
-
-Do **not** introduce React Flow, Cytoscape, a graph database, or a new causal schema solely because a richer diagram is theoretically possible. Let larger real chains—and a real branch-merge case—demonstrate the need first.
+Possible future pressure remains dedicated reset/rewrite visualization and graph scalability—not basic multi-parent support, which is now a proven capability.

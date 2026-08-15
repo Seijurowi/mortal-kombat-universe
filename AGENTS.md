@@ -8,13 +8,16 @@ Build a source-aware, navigable Mortal Kombat encyclopedia that makes continuity
 
 Before substantial work, read:
 
-- `docs/PRD.md` — product vision and target experience.
+- `docs/PRD.md` — stable product vision and target experience.
 - `docs/LORE_MODEL.md` — domain semantics and schema-evolution rules.
-- `docs/ROADMAP.md` — active milestone and acceptance criteria.
+- `docs/ROADMAP.md` — **authoritative active milestone/status/next work**.
+- `docs/DEFINITION_OF_DONE.md` — repository-wide completion/readiness gate.
 - `docs/CHANGELOG_POLICY.md` — changelog practice.
-- the current milestone's manual verification document under `docs/`.
+- the relevant manual verification document(s) indexed in `docs/README.md`.
 
 Documentation is part of the implementation contract. Durable product/model decisions must not live only in chat, commits, or PR descriptions.
+
+Do not duplicate branch-specific or short-lived project status across `AGENTS.md`, `PRD.md`, root `README.md`, and manuals. `docs/ROADMAP.md` owns live status; these other documents should stay durable unless their actual contract changes.
 
 ## Source of truth
 
@@ -95,7 +98,7 @@ Treat **retcon**, **continuity divergence**, **alternate portrayal**, and **unce
 - Every graph edge references existing IDs.
 - Relationship direction matters.
 - Meaningful lore claims should have supporting facts; relationship edges improve navigation.
-- Event `participantIds` may reference `Character` or `Faction` entities. This is proven necessary by collective actors such as the Elder Gods in Deception cosmology.
+- Event `participantIds` may reference `Character` or `Faction` entities.
 - Do not duplicate a Faction as a fake Character merely to make it an event participant.
 - Event `realmIds` describes event location/scope. It is **not** an output field and does not mean the realm is the grammatical object of the action.
 - Do not infer Event `realmIds` merely from participant affiliation or from the location of a later consequence. Attach a realm only when evidence establishes that event's location/scope.
@@ -112,7 +115,7 @@ Treat **retcon**, **continuity divergence**, **alternate portrayal**, and **unce
 
 ## Story-chain causality UX
 
-Phase 3 delivered `/causality` as a timeline-scoped story-chain explorer, and Phase 5 proved the first real multi-parent merge.
+`/causality` is a timeline-scoped story-chain explorer. Real Phase 5 data has proven multi-parent/DAG merges and the need to separate chronology from causal topology.
 
 - show complete connected causal chains when small enough to read;
 - highlight `You are here` without removing surrounding causal context;
@@ -153,7 +156,7 @@ Before changing a schema or validator rule:
 
 Phase 5's first proven evolution is allowing Factions in Event `participantIds`: the Elder Gods collectively act in the One Being shattering event. This is reusable for clans, armies, organizations, and other collective actors.
 
-Do **not** change schema merely because a new lore slice is old, complicated, or important. The tournament-history slices remain representable with existing Character, Event, Fact, and Source contracts; their challenge is evidence and causality discipline, not missing entity types.
+Do **not** change schema merely because a new lore slice is old, complicated, or important. Most current Phase 5 pressure has been solved through evidence and causality discipline rather than new entity types.
 
 Never weaken validation to make incorrect data pass.
 
@@ -161,31 +164,21 @@ Never weaken validation to make incorrect data pass.
 
 For every substantive PR, review `docs/CHANGELOG_POLICY.md` and update `CHANGELOG.md` under `## Unreleased` when product/UX, lore/data, domain semantics, contributor workflow, or security changes materially. Do not create changelog noise for typo-only, formatting-only, or behavior-neutral refactors. Do not invent semantic versions until a versioning policy exists.
 
-## Validation discipline
+`CHANGELOG.md` records completed material changes. It must not become the active roadmap or a dump of every JSON file changed.
 
-Before a substantive PR is ready:
+## Definition of Done and validation discipline
 
-- `pnpm validate` passes;
-- `pnpm lint` passes;
-- `pnpm typecheck` passes;
-- `pnpm build` passes;
-- all new references resolve;
-- event participants resolve to allowed entity types;
-- causal references are mirrored;
-- cross-timeline causal references are explicit reset/rewrite bridges;
-- new facts have evidence and timeline scope;
-- realm-target assertions are not hidden in `realmIds` semantics;
-- event realm scope is supported rather than inferred from a named place, participant affiliation, or later consequence;
-- temporal association is not promoted into causality;
-- plans/intentions are not promoted into completed occurrences without separate evidence;
-- qualified states such as `apparent death` are not promoted into stronger Facts/Events;
-- later broad outcome confirmation is not strengthened into a named-victor claim without direct corroboration;
-- retcon/contradiction UI does not promote mere variation into a confirmed retcon;
-- documentation matches behavior;
-- `CHANGELOG.md` has been reviewed;
-- relevant manual verification has been performed.
+`docs/DEFINITION_OF_DONE.md` is the authoritative repository-wide readiness/completion gate for substantive PRs. Use it before marking a PR ready for review.
 
-A green build does not prove lore accuracy, causal accuracy, retcon accuracy, or good UX.
+At minimum, the final PR head must pass the repository quality gate:
+
+```bash
+pnpm check
+```
+
+The DoD also requires evidence/model/UX/documentation/manual-review checks that CI cannot prove. Do not treat a green build as proof of lore accuracy, causal accuracy, retcon accuracy, or good UX.
+
+If the DoD conflicts with a branch-specific draft plan, fix the implementation or plan; do not weaken the DoD merely to merge the PR.
 
 ## Git hygiene
 
@@ -197,8 +190,4 @@ A green build does not prove lore accuracy, causal accuracy, retcon accuracy, or
 
 ## Current scope
 
-Phases 1, 2, 3, and 4 are complete and merged. Phase 5's Deception cosmology / Onaga / Shinnok foundation, Edenia / Outworld conquest, Great Kung Lao tournament history, Liu Kang / MK1992 bridge, MKII Outworld setup, Shaolin-temple attack, and Sindel/MK3 invasion setup are merged.
-
-The active work remains **Phase 5 — Cosmology and ancient history**, defined in `docs/ROADMAP.md`.
-
-The current slice is **MK3 invasion outcome** on `agent/phase5-mk3-invasion-outcome`: model the soul-taking and extermination campaign conservatively, use MK4 as later primary confirmation that Earth warriors defeated Shao Kahn, keep chronology distinct from causality, and do not promote Liu Kang as the individual victor without direct Original-continuity corroboration.
+For current phase status, completed slices, and the next planned lore work, read **`docs/ROADMAP.md`**. Do not copy that live status into this file unless the execution contract itself changes.

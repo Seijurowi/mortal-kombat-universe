@@ -2,23 +2,23 @@
 
 A source-aware Mortal Kombat knowledge graph and interactive encyclopedia built with Next.js.
 
-The goal is not to reproduce a flat wiki. The project makes Mortal Kombat continuity readable as structured, sourced history: timelines, identities, events, causality, relationships, retcons, and evidence.
+The goal is not to reproduce a flat wiki. The project makes Mortal Kombat continuity readable as structured, sourced history: timelines, identities, events, causality, relationships, retcons, realms, factions, and evidence.
 
 ## Architecture
 
 The repository deliberately separates **knowledge** from **presentation**:
 
-- `data/` — atomic JSON records; source of truth.
+- `data/` — atomic JSON records; canonical editable lore store.
 - `schema/` — JSON Schema contracts for every entity type.
 - `scripts/validate.mjs` — schema, cross-reference, dependency, and causal-edge validation.
 - `lib/load-data.ts` — server-only loader for the knowledge base.
 - `components/universe-explorer.tsx` — interactive explorer and timeline-first reading UI.
-- `components/causality-explorer.tsx` — whole-chain causal story explorer.
+- `components/causality-explorer.tsx` — chronology-aware causal story explorer with DAG merge handling.
 - `components/claim-history-explorer.tsx` — claim-family and retcon-evidence explorer.
 - `components/ui/` — shadcn UI primitives.
 - `app/` — Next.js App Router shell and Mortal Kombat theme layer.
-- `docs/` — PRD, lore model, roadmap, changelog policy, and manual verification guides.
-- `AGENTS.md` — development and lore-editing contract for agents/contributors.
+- `docs/` — product, lore-model, roadmap, changelog, and manual-verification contracts.
+- `AGENTS.md` — development and lore-editing execution contract.
 - `CHANGELOG.md` — curated history of notable project changes.
 
 JSON remains Git-friendly and reviewable. SQLite or graph indexes may later be generated as derived infrastructure if scale proves them useful, but they are not the primary lore store.
@@ -34,7 +34,34 @@ JSON remains Git-friendly and reviewable. SQLite or graph indexes may later be g
 7. `Source`
 8. `Fact`
 
-`Fact` is the smallest sourced assertion. A fact owns its timeline scope, canon status, and source evidence. `Relationship` is a graph/navigation projection of entity connections.
+`Fact` is the smallest sourced assertion. A fact owns its timeline scope, canon status, and source evidence. `Relationship` is a navigation/graph projection, not evidence by itself.
+
+## Product principles
+
+- continuity-dependent lore is always scoped;
+- JSON data is the source of truth, not React prose;
+- chronology and causality are separate concepts;
+- plans/intentions do not prove their intended occurrences;
+- broad later confirmation does not automatically prove a narrower named actor or victor;
+- source mirrors are access infrastructure, not canonical authority;
+- realm location/scope is not the same thing as a realm being the object of conquest, creation, destruction, or merging;
+- claim variation is not automatically contradiction or retcon;
+- schema changes must be justified by concrete sourced lore pressure.
+
+## Current project status
+
+Phases 1–4 are complete. Phase 5 is expanding Original-continuity cosmology and historical coverage while stress-testing the evidence model with ancient history, tournament history, multi-parent causality, realm semantics, ending evidence, and later-primary confirmation.
+
+**Live milestone status, completed slices, and the next planned work belong only in [`docs/ROADMAP.md`](docs/ROADMAP.md).** This README intentionally does not carry fragile record counts, branch names, or active-slice details.
+
+Useful entry points:
+
+- [`docs/README.md`](docs/README.md) — documentation map and ownership rules.
+- [`docs/PRD.md`](docs/PRD.md) — stable product contract.
+- [`docs/LORE_MODEL.md`](docs/LORE_MODEL.md) — domain semantics and proven modeling decisions.
+- [`docs/ROADMAP.md`](docs/ROADMAP.md) — current milestone and next work.
+- [`AGENTS.md`](AGENTS.md) — contributor/agent execution rules.
+- [`CHANGELOG.md`](CHANGELOG.md) — material project history.
 
 ## UI foundation
 
@@ -45,23 +72,6 @@ pnpm dlx shadcn@latest init --preset bcivVKXQ --template next
 ```
 
 The preset resolves to the `base-nova` style with Zinc CSS variables, Lucide icons, Tailwind CSS v4, and Base UI.
-
-## Current state
-
-The validated dataset contains 75 records across 8 entity types, including the Bi-Han / Hanzo Hasashi / Quan Chi / Shirai Ryu / Noob Saibot cross-continuity stress test.
-
-Phases 1–3 are complete. The current product milestone is **Phase 4 — Claim history, retcons, and evidence**.
-
-The `/claims` view groups related facts into presentation-only claim families by `subject + predicate` and shows each claim record with canon status, timelines, notes, and supporting sources. Family labels stay conservative: multiple values can represent time-dependent or multi-valued states, repeated values across timelines can show agreement, and only an explicit `retconned` fact is treated as retcon evidence. Source years provide historical ordering only; they do not make the newest source automatically canonical.
-
-Existing `/causality` story trees remain continuity-scoped; explicit timeline reset/rewrite bridges remain valid model data but are not folded into ordinary continuity trees.
-
-See:
-
-- `docs/PRD.md`
-- `docs/ROADMAP.md`
-- `docs/PHASE4_MANUAL_VERIFICATION.md`
-- `CHANGELOG.md`
 
 ## Development
 
@@ -83,11 +93,11 @@ pnpm check
 
 This runs knowledge validation, ESLint, TypeScript type checking, and a production Next.js build. GitHub Actions runs the same gate on pushes and pull requests.
 
+A green build proves technical consistency, not lore accuracy. Substantive lore/model work also requires the relevant human verification checklist from `docs/README.md`.
+
 ## Change tracking
 
-Notable product, lore, model, and contributor-workflow changes are recorded in `CHANGELOG.md`.
-
-During active development, changes go under `## Unreleased`. See `docs/CHANGELOG_POLICY.md` for what belongs in the changelog and how completed milestones are dated.
+Notable product, lore, model, and contributor-workflow changes are recorded in `CHANGELOG.md` under `## Unreleased` until a milestone/release is deliberately cut. See `docs/CHANGELOG_POLICY.md`.
 
 ## Agent guidance
 
@@ -100,4 +110,4 @@ Read `AGENTS.md` before making substantive changes. In particular:
 - do not merge conflicting continuities into one unscoped claim;
 - do not infer causal edges from chronology;
 - do not promote claim-family variation into contradiction or retcon semantics without evidence;
-- review `CHANGELOG.md` before requesting merge.
+- review `CHANGELOG.md` and the relevant documentation owner before requesting merge.
