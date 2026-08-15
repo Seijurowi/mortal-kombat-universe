@@ -1,0 +1,13 @@
+{
+  "id": "shinnok-war-resumes-original",
+  "type": "event",
+  "name": "The war against Shinnok resumes",
+  "timelineId": "original",
+  "participantIds": ["shinnok"],
+  "realmIds": [],
+  "causeEventIds": [],
+  "consequenceEventIds": [],
+  "order": 200,
+  "description": "Mortal Kombat 4 states that the war involving Shinnok is being fought once again and that mortals can now determine its outcome.",
+  "tags": ["mk4", "war", "return"]
+}

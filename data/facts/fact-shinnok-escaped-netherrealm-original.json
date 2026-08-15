@@ -1,0 +1,12 @@
+{
+  "id": "fact-shinnok-escaped-netherrealm-original",
+  "type": "fact",
+  "name": "Shinnok escaped the Netherrealm",
+  "subjectId": "shinnok",
+  "predicate": "escaped_from",
+  "objectId": "netherrealm",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk4-story"],
+  "notes": "Mortal Kombat 4's intro explicitly states that, after Shao Kahn's defeat, Shinnok managed to escape his confinement in the Netherrealm. The temporal phrase does not by itself make Shao Kahn's defeat the causal mechanism of the escape."
+}

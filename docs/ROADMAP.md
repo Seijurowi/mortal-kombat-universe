@@ -1,6 +1,6 @@
 # Roadmap
 
-The roadmap is the **authoritative owner of live project status**: what is complete, what is active, and what comes next. Stable product rules belong in `PRD.md`; domain rules belong in `LORE_MODEL.md`; execution rules belong in `AGENTS.md`; completed material changes belong in `CHANGELOG.md`.
+The roadmap is the **authoritative owner of live project status**: what is complete, what is active, and what comes next. Stable product rules belong in `PRD.md`; domain rules belong in `LORE_MODEL.md`; execution rules belong in `AGENTS.md`; completion criteria belong in `DEFINITION_OF_DONE.md`; completed material changes belong in `CHANGELOG.md`.
 
 The project expands only after the model and reading experience survive difficult continuity/evidence cases.
 
@@ -24,134 +24,116 @@ Later Phase 5 work extended this capability with a dedicated chronology rail and
 
 ## Phase 4 — Claim history, retcons, and evidence ✅
 
-Complete and merged. Delivered:
-
-- `/claims` claim-family workbench;
-- evidence-safe labels such as value variation and cross-continuity agreement;
-- explicit retcon evidence only when a Fact is marked `retconned`;
-- source-history ordering without treating newer as automatically canonical;
-- no speculative `contradicts` / `supersedes` schema.
+Complete and merged. Delivered `/claims`, evidence-safe claim-family labels, source-history ordering without newer-wins semantics, and no speculative contradiction/supersession schema.
 
 ## Phase 5 — Cosmology and ancient history 🔨
 
 **Status: in progress.**
 
-**Current work:** intermediate project/documentation review in PR #14 (`agent/intermediate-project-review`) after merged PR #13. The review is complete and awaiting merge.
-
-**Next lore slice after PR #14 merges:** Original-continuity **MK4 / Shinnok return setup**, starting from the reviewed documentation baseline.
+**Current work:** Original-continuity **MK4 / Shinnok return setup** in PR #15 on `agent/phase5-mk4-shinnok-return`. Implementation, manual UI verification, final contract review, and final-head CI are complete; the PR is ready for review/merge decision but must not be merged without explicit user/maintainer action.
 
 Goal: expand from character-scale lore into ancient and Original-continuity history while preserving source, continuity, causality, and evidence caveats instead of presenting one synthetic canon narrative.
 
 ### Completed Phase 5 slices
 
 #### Deception cosmology foundation ✅
-
 - One Being as unique non-playable Character/being.
 - Elder Gods as Faction and valid Event participant.
 - six Deception navigation realms represented.
-- Deception biography/manual/ending sources.
-- Elder Gods shatter the One Being Event/Facts.
-- `game_manual` source category.
-- realm-output correction: Event `realmIds` remains location/scope.
+- creation-myth evidence and `game_manual` source category.
+- Event `realmIds` locked to location/scope rather than event outputs.
 
 #### Onaga ancient history ✅
-
 - Onaga, Shao Kahn, Shujinko coverage.
 - `Shao Kahn poisons Onaga → seizes Outworld`.
 - `Onaga manipulates Shujinko → Shujinko gathers Kamidogu`.
 - `Shujinko shatters Kamidogu → defeats Onaga`.
-- intentional gather→shatter causal gap preserved.
+- intentional gather→shatter gap preserved.
 
 #### Shinnok ancient history ✅
-
 - Shinnok and Lucifer coverage.
 - former Elder God status as Fact rather than timeless membership.
 - `Shinnok wars with Raiden → banishment`.
 - `Quan Chi allies with Shinnok → Shinnok rules Netherrealm`.
 
 #### Edenia / Outworld conquest ✅ — PR #7
-
 - Kitana, Sindel, Jerrod Original records.
 - sourced Edenia conquest and later liberation.
 - realm-target Facts instead of abusing Event `realmIds`.
-- Jerrod ending-only family details kept `supplemental`.
-- conquest/liberation not joined by a fake direct causal edge.
+- ending-only Jerrod details kept `supplemental`.
 
 #### Great Kung Lao / pre-1992 tournament ✅ — PR #8
-
-- Great Kung Lao, Goro, Shang Tsung historical records.
+- Great Kung Lao, Goro, Shang Tsung history.
 - Goro victory, Grand Champion status, and ~500-year undefeated reign.
 - Shang Tsung tournament control/corruption.
 - “during this period” retained as chronology, not causality.
 
 #### Liu Kang / MK1992 bridge ✅ — PR #9
-
 - first-game tournament enriched rather than duplicated.
-- Liu Kang defeating Goro and winning the tournament/control as narrowly corroborated canon Facts.
+- Liu Kang/Goro and tournament-control results narrowly corroborated.
 - first tournament → Shang Tsung second-chance plea supported by MKII.
 - Goro `apparent death` not promoted to confirmed death.
 
 #### MKII / Outworld setup ✅ — PR #10
-
 - second-chance plea → explicit Outworld lure plan.
 - plan separated from occurrence.
-- later MKT story confirms second Outworld tournament occurred.
-- no inferred realm location for the planning/plea events.
+- MKT later confirms the second Outworld tournament occurred.
+- planning/plea events keep unsupported realm location empty.
 
 #### MKII / Shaolin temple attack ✅ — PR #11
-
 - Baraka and sourced Shaolin attack.
 - attack → Liu Kang revenge response.
 - named temple does not automatically become structured Earthrealm scope.
 - attack/revenge remains separate from tournament lure chain.
 
 #### Sindel scheme / MK3 invasion setup ✅ — PR #12
-
-- long-running Sindel reincarnation scheme established across Mythologies/MKT/MK3 source framing.
+- long-running Sindel reincarnation scheme.
 - second tournament becomes first real multi-parent Event.
 - `Sindel reborn on Earthrealm → Shao Kahn breaches Earthrealm`.
-- `/causality` gains separate chronology rail.
-- shared DAG nodes render once with explicit merge references.
-- unsupported “two tournament failures directly caused a newly invented Sindel plan” interpretation rejected.
+- `/causality` chronology rail and DAG merge rendering.
 
 #### MK3 invasion outcome ✅ — PR #13
-
 - soul-taking and extermination campaign represented conservatively.
-- Liu Kang identified as prime extermination target from MK3 biography.
-- later MK4 story confirms broad outcome: Earth warriors defeated Shao Kahn.
-- Liu Kang is not promoted as individual victor from ending-only evidence.
-- breach → soul claim kept chronological without unsupported direct causal edge.
-- invasion campaign → later defeat kept chronological without unsupported immediate causal edge.
+- Liu Kang identified as prime extermination target.
+- MK4 later confirms broad outcome: Earth warriors defeated Shao Kahn.
+- no unsupported Liu Kang individual-victor promotion.
+- chronology-only gaps preserved around breach/soul-taking and campaign/defeat.
 
-### Intermediate documentation/project-contract review ✅ — PR #14 awaiting merge
+#### Intermediate documentation/project-contract review ✅ — PR #14
+- documentation ownership clarified and live status centralized in this roadmap.
+- root/docs README, PRD, LORE_MODEL, AGENTS, Phase 3 regression manual, changelog policy, and changelog refreshed.
+- `docs/DEFINITION_OF_DONE.md` added as the authoritative readiness/completion gate.
 
-Purpose: reduce documentation drift before the next lore era.
+### Current MK4 / Shinnok return slice ✅ — PR #15 awaiting merge decision
 
-Review targets:
+This slice tests whether the refreshed DoD keeps an inter-game chronological bridge from turning into fake causality while still making that bridge easy to follow in the UI.
 
-- [x] verify PR #13 merged and record actual merge state;
-- [x] audit root `README.md` for stale milestone/record-count claims;
-- [x] audit `AGENTS.md` for branch-specific status duplication;
-- [x] audit `PRD.md` for stale current-slice/future-work text;
-- [x] audit `LORE_MODEL.md` for proven-vs-pressure drift;
-- [x] audit `docs/README.md` for manual-verification discoverability;
-- [x] audit/update historical Phase 3 manual wording superseded by DAG/chronology improvements;
-- [x] clarify Phase 5 cumulative-vs-slice-specific manual ownership;
-- [x] review and consolidate `CHANGELOG.md` after large Phase 5 accumulation;
-- [x] review `CHANGELOG_POLICY.md` against actual workflow;
-- [x] run full `pnpm check` on the documentation-review head;
-- [x] open focused PR #14; merge only after explicit user action/instruction.
-
-Key governance result: `ROADMAP.md` owns live status; PRD, LORE_MODEL, AGENTS, README, CHANGELOG, and manual files have stable non-overlapping responsibilities.
+- [x] Reuse `Mortal Kombat 4 — Game Story` rather than duplicating the source.
+- [x] Expand its source notes to cover Shinnok's Netherrealm escape and the renewed-war framing.
+- [x] Add `Shinnok escapes the Netherrealm` as an Original Event and canon Fact.
+- [x] Add the resumed Shinnok-war beat as a broad Original Event and narrowly sourced canon Fact.
+- [x] Keep `Earth warriors defeat Shao Kahn → Shinnok escapes the Netherrealm` **chronological only**: MK4 says `after`, not that Kahn's defeat caused/enabled the escape.
+- [x] Keep `Shinnok escapes → renewed war` chronological/contextual only until a source explicitly supplies the direct causal relation.
+- [x] Do not attribute the specific MK4 escape mechanism to Quan Chi merely from older alliance/escape-attempt context.
+- [x] Use `realmIds: ["netherrealm"]` for the escape because the source explicitly names the confinement realm; keep the renewed-war Event realm scope empty because the intro does not name its location.
+- [x] Make `/causality` chronology continuity-wide rather than limited to the active causal component.
+- [x] Add Previous/Next chronology navigation that can cross causal-component boundaries without creating graph edges.
+- [x] Auto-scroll the selected chronology card into view and keep causal context independently derived from explicit edges.
+- [x] Add/index a slice-specific manual verification checklist covering the chronology navigation.
+- [x] Review/update CHANGELOG for the lore slice, chronology UX, Shadcn inventory, and contributor UI-system rules.
+- [x] Incorporate maintainer-added Shadcn/Base UI component inventory without overwriting it; package/lockfile changes are intentional scope.
+- [x] Fix React 19 lint blockers in the generated carousel/mobile support code without changing their intended public behavior.
+- [x] Manual UI pass completed by the maintainer for chronology navigation and overall affected experience.
+- [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed; resumed-war Fact narrowed after primary-source recheck.
+- [x] Final-head CI passed after the last substantive correction.
+- [ ] Merge only after explicit user/maintainer action.
 
 ### Next lore slices
 
-After PR #14 merges:
-
-1. **MK4 / Shinnok return setup** — extend Original continuity from Shao Kahn's defeat into Shinnok's return only where primary evidence supports causal or chronological bridges.
-2. Shinnok MK4 outcome / aftermath with later-primary confirmation discipline.
+1. **Shinnok MK4 outcome / aftermath** — establish the broad result with later-primary confirmation where possible; avoid canonizing an arcade ending wholesale.
+2. **Quan Chi / Shinnok MK4 role detail** — only where direct Original primary evidence supports specific mechanisms or betrayals.
 3. Onaga resurrection/return mechanism and post-Deception fate with stronger coverage.
-4. Deception cosmology vs MK11 Titan/Kronika comparison without flattening the continuities.
+4. Deception cosmology vs MK11 Titan/Kronika comparison without flattening continuities.
 5. Original/Reboot/New Era Sindel comparison through claim history.
 6. Revisit exact MKII/MK3 individual-victor attribution only if direct later Original evidence supports it.
 
@@ -175,10 +157,12 @@ A user should be able to:
 14. understand one Event with multiple supported parents without duplicate-occurrence rendering;
 15. follow the sourced Sindel-rebirth mechanism into Shao Kahn's Earthrealm breach;
 16. inspect MK3 invasion consequences and later Shao Kahn defeat without broad→narrow evidence inflation;
-17. see intentional causal gaps where sources establish sequence but not direct causation;
-18. navigate documentation without conflicting “current branch/current slice” claims across README/PRD/AGENTS/manuals.
+17. follow continuity-wide chronology from the MK3 defeat into Shinnok's MK4 return even when those Events belong to different/no causal components;
+18. navigate Previous/Next chronological neighbors without being told that `after` means `caused by`;
+19. see intentional causal gaps where sources establish sequence/context but not direct causation;
+20. navigate documentation without conflicting live-status claims.
 
-Manual verification procedures are indexed in `docs/README.md`.
+Manual verification procedures are indexed in `docs/README.md`. Final readiness is governed by `docs/DEFINITION_OF_DONE.md`.
 
 ## Phase 6 — Systematic timeline expansion
 
