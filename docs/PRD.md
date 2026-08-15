@@ -229,30 +229,10 @@ Potential future capabilities include:
 
 These are model pressure points, not commitments. `docs/ROADMAP.md` decides what is actually next.
 
-## 10. Definition of done
+## 10. Definition of Done
 
-A feature or lore expansion is not done only because it renders.
+A feature or lore expansion is not done only because it renders or because CI is green.
 
-Relevant substantive changes must satisfy:
+The authoritative repository-wide completion/readiness gate is [`DEFINITION_OF_DONE.md`](./DEFINITION_OF_DONE.md). Substantive work must satisfy that gate before a PR is marked ready for review.
 
-- data validates;
-- timelines remain correctly scoped;
-- ordinary causal edges remain inside one timeline and cross-timeline edges are explicit reset/rewrite bridges;
-- important lore claims have evidence;
-- source strength is represented conservatively;
-- plans are not promoted into occurrences without occurrence evidence;
-- broad confirmation is not strengthened into unsupported narrow attribution;
-- claim-family grouping does not promote mere value/timeline variation into contradiction or retcon semantics;
-- contradictions are not silently flattened;
-- source chronology is not presented as canonical priority;
-- realm-target semantics are represented by Facts rather than overloaded Event metadata;
-- event realm scope is supported rather than inferred;
-- chronology remains readable without manufacturing causality;
-- multi-parent events remain one occurrence in presentation;
-- UI remains navigable and accessible;
-- implementation follows `AGENTS.md`;
-- product/domain documentation is updated when its owned contract changes;
-- `docs/ROADMAP.md` reflects actual merged/active status;
-- `CHANGELOG.md` is updated for notable changes;
-- relevant manual verification is performed;
-- `pnpm check` passes.
+The DoD combines technical quality with the parts automation cannot prove: evidence discipline, continuity/canon correctness, causal and Realm semantics, UX trustworthiness, documentation ownership, changelog review, relevant manual verification, final-head CI, and explicit human/user merge authority.
