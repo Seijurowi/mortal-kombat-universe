@@ -1,0 +1,12 @@
+{
+  "id": "fact-shao-kahn-created-clone-decoy-original",
+  "type": "fact",
+  "name": "Shao Kahn created a clone decoy before escaping",
+  "subjectId": "shao-kahn",
+  "predicate": "created_clone_decoy",
+  "value": true,
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk-deception-shao-kahn-bio"],
+  "notes": "Shao Kahn's Deception biography directly states that he created a clone of himself to draw his enemies' attention while he escaped into the wilds. This narrow Fact does not infer which specific enemies encountered the clone or claim that the Deadly Alliance explicitly killed it."
+}

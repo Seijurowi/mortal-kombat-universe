@@ -1,0 +1,12 @@
+{
+  "id": "fact-shao-kahn-deadly-alliance-era-status-survived-original",
+  "type": "fact",
+  "name": "Shao Kahn survived the Deadly Alliance era",
+  "subjectId": "shao-kahn",
+  "predicate": "deadly_alliance_era_status",
+  "value": "survived via clone decoy",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk-deception-shao-kahn-bio", "mk-deception-goro-bio"],
+  "notes": "Shao Kahn's Deception biography directly states that he created a clone to draw enemies while he escaped, and Goro's Deception biography independently confirms encountering the real Shao Kahn alive. Together these later primary biographies establish survival at the status level while leaving the exact identity and fate of the figure struck in the earlier Deadly Alliance attack unasserted."
+}

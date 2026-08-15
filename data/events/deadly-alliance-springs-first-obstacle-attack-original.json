@@ -1,0 +1,13 @@
+{
+  "id": "deadly-alliance-springs-first-obstacle-attack-original",
+  "type": "event",
+  "name": "The Deadly Alliance springs its first obstacle attack",
+  "timelineId": "original",
+  "participantIds": ["quan-chi", "shang-tsung"],
+  "realmIds": [],
+  "causeEventIds": ["deadly-alliance-plots-eliminate-obstacles-original"],
+  "consequenceEventIds": [],
+  "order": 227,
+  "description": "Mortal Kombat: Deadly Alliance presents Shao Kahn as the first obstacle and narrates Quan Chi and Shang Tsung springing a false-allegiance attack. Later Deception evidence establishes that Shao Kahn had created a clone to draw enemies while he escaped. This Event therefore records the sourced attack occurrence without encoding the attacked figure as the real Shao Kahn or promoting the scene into a confirmed Shao Kahn death.",
+  "tags": ["mkda", "deadly-alliance", "shao-kahn", "attack", "clone-retcon"]
+}
