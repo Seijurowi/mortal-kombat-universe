@@ -18,11 +18,11 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 - Mortal Kombat Trilogy Shao Kahn biography, Mortal Kombat 3 Sindel ending, and Deadly Alliance Kitana biography source records for Edenian history.
 - Mortal Kombat II Kung Lao biography as primary in-game evidence identifying the ancient champion defeated by Goro as the Great Kung Lao.
 - Preservation URL and explicit provenance notes for the original Mortal Kombat (1992) arcade story source now used by the tournament-history Facts.
-- Mortal Kombat (1992) Liu Kang ending plus Mortal Kombat II story and Liu Kang biography source records for the first-game outcome bridge.
+- Mortal Kombat (1992) Liu Kang ending, Mortal Kombat II story/Liu Kang biography, and Mortal Kombat 4 Goro biography source records for the first-game outcome bridge.
 - Sourced realm-target Facts for `Shao Kahn conquered Edenia` and `Kitana liberated Edenia`.
 - Supplemental Jerrod family Facts retained from Sindel's Mortal Kombat 3 ending without promoting ending-only evidence into biography-level canon.
 - Pre-1992 tournament Facts for Goro defeating the Great Kung Lao, becoming Grand Champion, remaining undefeated for roughly 500 years, and Shang Tsung controlling/corrupting the tournament.
-- Canon Facts for Liu Kang defeating Goro and winning the first-game tournament from Shang Tsung's control, supported by later Mortal Kombat II primary material.
+- Canon Facts for Liu Kang defeating Goro and winning the first-game tournament from Shang Tsung's control, each paired with direct later Original-continuity confirmation rather than relying on the arcade ending alone.
 - `Shang Tsung seeks a second chance` as the sourced Original-continuity bridge from the failed first-game tournament into the Mortal Kombat II setup.
 - Supported causal chains for `Shao Kahn poisons Onaga → seizes Outworld`, `Onaga manipulates Shujinko → Shujinko gathers Kamidogu`, `Shujinko shatters Kamidogu → defeats Onaga`, `Shinnok wars with Raiden → banishment`, `Quan Chi allies with Shinnok → Shinnok rules Netherrealm`, and `first-game tournament → Shang Tsung seeks a second chance`.
 - Phase 5 manual verification for ancient cosmology, continuity scope, source provenance, collective event participants, status changes, realm-target semantics, ending evidence strength, tournament chronology, first-game outcome confirmation, and causal gaps.
@@ -40,8 +40,9 @@ The working process is documented in [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG
 - Edenia conquest and later liberation remain disconnected causal components until their long intervening history is explicitly modeled.
 - Great Kung Lao/Goro chronology keeps `Goro defeats the Great Kung Lao` separate from `Shang Tsung takes control of the tournament`; the source's “during this period” wording is treated as temporal association, not proof of causality.
 - The existing `mortal-kombat-1992` Event is enriched with Goro and Shang Tsung participants and a sourced consequence edge instead of duplicating the first-game tournament as a second Event.
-- Liu Kang's arcade-ending outcome is promoted only at the level later MKII story/biography independently confirms; this does not make every ending detail canonical.
+- Liu Kang's arcade-ending outcome is promoted only at the level directly confirmed by later primary sources; MK4 Goro biography now provides explicit later support for Liu Kang taking the title from Goro, while MKII Liu Kang biography supports the tournament-control outcome.
 - Goro's MKII `apparent death` wording is intentionally not converted into a confirmed death Fact/Event.
+- `Shang Tsung seeks a second chance` no longer carries an inferred Outworld realm scope; MKII establishes the later Outworld plan but not the location of the plea itself.
 - Shinnok's Elder God status is represented as a historical Fact (`former_member_of`) instead of timeless static faction membership.
 - Product and domain documentation identifies Phase 5 as the active milestone and tracks each ancient-history slice as it is merged.
 
