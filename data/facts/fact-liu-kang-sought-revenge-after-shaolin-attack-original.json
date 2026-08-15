@@ -1,0 +1,12 @@
+{
+  "id": "fact-liu-kang-sought-revenge-after-shaolin-attack-original",
+  "type": "fact",
+  "name": "Liu Kang sought revenge after the Shaolin attack",
+  "subjectId": "liu-kang",
+  "predicate": "sought_revenge_after",
+  "value": "the destruction of his Shaolin home and the deaths of his Shaolin brothers",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk2-liu-kang-bio"],
+  "notes": "The Mortal Kombat II biography directly connects Liu Kang finding the temples in ruins and his brothers killed with his decision to travel into the Dark Realm seeking revenge."
+}

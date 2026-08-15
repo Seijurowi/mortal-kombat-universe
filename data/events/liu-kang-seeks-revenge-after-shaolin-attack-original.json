@@ -1,0 +1,13 @@
+{
+  "id": "liu-kang-seeks-revenge-after-shaolin-attack-original",
+  "type": "event",
+  "name": "Liu Kang seeks revenge after the Shaolin attack",
+  "timelineId": "original",
+  "participantIds": ["liu-kang"],
+  "realmIds": [],
+  "causeEventIds": ["baraka-attacks-shaolin-temples-original"],
+  "consequenceEventIds": [],
+  "order": 125,
+  "description": "After finding his sacred home in ruins and his Shaolin brothers killed by Outworld warriors, Liu Kang travels into the Dark Realm seeking revenge.",
+  "tags": ["liu-kang", "revenge", "mk2-setup"]
+}

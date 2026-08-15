@@ -1,0 +1,12 @@
+{
+  "id": "fact-liu-kang-shaolin-brothers-killed-original",
+  "type": "fact",
+  "name": "Liu Kang's Shaolin brothers were killed by Outworld warriors",
+  "subjectId": "liu-kang",
+  "predicate": "shaolin_brothers_killed_by",
+  "value": "a horde of Outworld warriors",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk2-liu-kang-bio"],
+  "notes": "Mortal Kombat II's Liu Kang biography states that he returned to find his sacred home in ruins and his Shaolin brothers killed in a vicious battle with Outworld warriors."
+}

@@ -1,0 +1,13 @@
+{
+  "id": "baraka-attacks-shaolin-temples-original",
+  "type": "event",
+  "name": "Baraka leads the attack on the Shaolin temples",
+  "timelineId": "original",
+  "participantIds": ["baraka"],
+  "realmIds": [],
+  "causeEventIds": [],
+  "consequenceEventIds": ["liu-kang-seeks-revenge-after-shaolin-attack-original"],
+  "order": 122,
+  "description": "Baraka leads the Outworld warriors who attack Liu Kang's Shaolin temples, leaving the sacred home in ruins and his Shaolin brothers dead.",
+  "tags": ["shaolin", "attack", "mk2-setup"]
+}

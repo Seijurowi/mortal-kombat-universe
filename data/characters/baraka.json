@@ -1,0 +1,9 @@
+{
+  "id": "baraka",
+  "type": "character",
+  "name": "Baraka",
+  "timelineIds": ["original"],
+  "realmIds": ["outworld"],
+  "description": "Outworld warrior recruited by Shao Kahn who led the attack against Liu Kang's Shaolin temples before the second tournament.",
+  "tags": ["outworld", "shao-kahn-army", "mk2"]
+}

@@ -99,6 +99,7 @@ Treat **retcon**, **continuity divergence**, **alternate portrayal**, and **unce
 - Do not duplicate a Faction as a fake Character merely to make it an event participant.
 - Event `realmIds` describes event location/scope. It is **not** an output field and does not mean the realm is the grammatical object of the action.
 - Do not infer Event `realmIds` merely from participant affiliation or from the location of a later consequence. Attach a realm only when evidence establishes that event's location/scope.
+- A named place such as a temple, academy, island, or palace does not automatically justify mapping the Event to a broader Realm unless the source or separately established evidence supports that mapping.
 - If a realm is conquered, liberated, merged, created, destroyed, or otherwise the object of a lore assertion, represent that assertion as a sourced `Fact` with the Realm in `objectId` where appropriate.
 - `causeEventIds` means supported causality, not “happened shortly before.”
 - `consequenceEventIds` means supported outcome, not mere chronology.
@@ -172,6 +173,7 @@ Before a substantive PR is ready:
 - cross-timeline causal references are explicit reset/rewrite bridges;
 - new facts have evidence and timeline scope;
 - realm-target assertions are not hidden in `realmIds` semantics;
+- event realm scope is supported rather than inferred from a named place, participant affiliation, or later consequence;
 - temporal association is not promoted into causality;
 - plans/intentions are not promoted into completed occurrences without separate evidence;
 - qualified states such as `apparent death` are not promoted into stronger Facts/Events;
@@ -192,8 +194,8 @@ A green build does not prove lore accuracy, causal accuracy, retcon accuracy, or
 
 ## Current scope
 
-Phases 1, 2, 3, and 4 are complete and merged. Phase 5's Deception cosmology / Onaga / Shinnok foundation, Edenia / Outworld conquest, Great Kung Lao tournament history, and Liu Kang / MK1992 bridge are merged.
+Phases 1, 2, 3, and 4 are complete and merged. Phase 5's Deception cosmology / Onaga / Shinnok foundation, Edenia / Outworld conquest, Great Kung Lao tournament history, Liu Kang / MK1992 bridge, and MKII Outworld setup are merged.
 
 The active work remains **Phase 5 — Cosmology and ancient history**, defined in `docs/ROADMAP.md` and reviewed through `docs/PHASE5_MANUAL_VERIFICATION.md`.
 
-The current slice is **Mortal Kombat II / Outworld setup** on `agent/phase5-mk2-outworld`: extend Shang Tsung's sourced second-chance plea into his explicit plan to lure enemies to compete in Outworld, then confirm the second Outworld tournament with later Original-continuity story evidence rather than treating the plan itself as proof of occurrence.
+The current slice is **Mortal Kombat II / Shaolin temple attack** on `agent/phase5-mk2-shaolin-attack`: add Baraka and the sourced attack on Liu Kang's Shaolin home, model the attack's direct revenge consequence for Liu Kang, and keep that causal component separate from the second-tournament lure unless primary evidence directly connects them.

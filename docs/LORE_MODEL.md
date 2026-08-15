@@ -36,6 +36,8 @@ Phase 5 expanded participant validation from Character-only to `Character | Fact
 
 Event realm scope also requires direct support. Do not infer a location merely from the realms associated with participants or from the location of a later consequence. The MKII setup does not establish where Shang Tsung makes his plea to Shao Kahn, so `Shang Tsung seeks a second chance` intentionally has no `realmIds` entry even though the plan that follows concerns Outworld.
 
+A named place does not automatically justify a broader Realm mapping. The MKII biographies name Liu Kang's Shaolin temples but do not, in those claims, explicitly map that named place to Earthrealm; the Shaolin-temple attack Event therefore leaves `realmIds` empty. The same conservative rule applies to islands, academies, palaces, arenas, and other local places until the dataset has direct or separately established evidence for the Realm mapping.
+
 A stated plan, intention, threat, prophecy, or possibility is not evidence that the planned occurrence actually happened. Model the planning state separately, then require a source that treats the occurrence as established history before creating/promoting the resulting Event. The MKII slice uses the arcade story for Shang Tsung's Outworld plan and Mortal Kombat Trilogy story for later confirmation that Liu Kang and his comrades were actually lured into Outworld for a second tournament.
 
 Sequence alone does not prove causality. Ordinary causal links connect events in the same timeline. Cross-timeline causal links are reserved for explicit reset/rewrite bridges whose source event creates or rewrites the following continuity; the validator recognizes `reset`, `rewrite`, and `timeline-bridge` source-event tags.
@@ -124,6 +126,8 @@ The first-game tournament now has one explicit consequence edge to Shang Tsung's
 
 The MKII continuation distinguishes planning from occurrence. `Shang Tsung plans an Outworld tournament` is supported by the MKII intro; `Second Mortal Kombat tournament in Outworld` is supported by later MKT story text that says Liu Kang and his comrades were lured there to compete. The causal edge links a sourced plan to a separately sourced occurrence rather than assuming plans automatically succeed.
 
+The Shaolin-temple slice demonstrates parallel causal components. Baraka's biography says he led the attack on Liu Kang's Shaolin temples, and Liu Kang's biography directly links the ruined home and slain brothers to his revenge journey. That supports `Shaolin attack → Liu Kang seeks revenge`. It does **not** by itself support `Shaolin attack → second tournament` or `Shaolin attack → Shang Tsung's lure plan`, so those components remain disconnected unless stronger primary evidence is added later.
+
 ## 12. Cosmology and ancient-history modeling
 
 Phase 5 begins with the Original-continuity creation account in Mortal Kombat: Deception and expands through Onaga, Shinnok, Edenia/Outworld conquest history, pre-1992 tournament history, and the MK1992 transition into MKII.
@@ -133,12 +137,12 @@ Current choices:
 - `One Being` is represented as a unique non-playable `Character`/being because Character is currently the reusable entity class for unique agents/beings, playable or not.
 - `Elder Gods` is represented as a `Faction` because the source describes a collective actor.
 - individual realms remain `Realm` entities.
-- realm-target claims use Facts; `realmIds` stays event location/scope metadata and is omitted when event location is not directly supported.
+- realm-target claims use Facts; `realmIds` stays event location/scope metadata and is omitted when event location is not directly supported, including when a source names only a local place without establishing its broader Realm mapping.
 - historical titles, reigns, tournament control, and victories are Facts/Events rather than timeless metadata.
 - ending-only details may be preserved conservatively, while specific ending outcomes may be promoted to canon only when independent primary sources confirm them.
 - plans/intentions remain separate from later occurrences unless another source establishes that the intended event actually happened.
 - qualified states such as Goro's `apparent death` remain qualified rather than becoming stronger death events.
-- tournament-era chronology may remain disconnected when sources provide only sequence/context, and may gain causal edges later when direct evidence is found.
+- tournament-era chronology may remain disconnected when sources provide only sequence/context, and parallel causal components remain separate until evidence connects them.
 
 Do **not** project this Original-continuity material automatically into Reboot or New Era. Later Titan/Kronika cosmology, reboot Shinnok, later Sindel reinterpretations, and MK9/New Era tournament-history variants must be added with their own scoped evidence and compared rather than silently reconciled.
 
@@ -174,7 +178,9 @@ Proven cases include:
 - temporal association kept separate from causality, proven by Great Kung Lao/Goro/Shang Tsung history;
 - qualified states kept weaker than confirmed transformations, proven by Goro's `apparent death` in the MKII setup;
 - event location omitted when realm scope is contextual but not directly stated, proven by Shang Tsung's second-chance plea;
-- plans kept distinct from later occurrences until occurrence evidence exists, proven by the MKII Outworld plan and MKT confirmation of the second tournament.
+- named-place evidence not automatically promoted to a broader Realm mapping, proven by the Shaolin-temple attack;
+- plans kept distinct from later occurrences until occurrence evidence exists, proven by the MKII Outworld plan and MKT confirmation of the second tournament;
+- parallel causal components kept separate when sources establish motivations but not a bridge between them, proven by the Shaolin attack/revenge chain versus the second-tournament lure chain.
 
 Current pressure points include:
 

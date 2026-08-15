@@ -32,7 +32,7 @@ Delivered:
 
 ## Phase 5 — Cosmology and ancient history 🔨
 
-Status: implementation in progress on `agent/phase5-mk2-outworld`.
+Status: implementation in progress on `agent/phase5-mk2-shaolin-attack`.
 
 Goal: expand from character-scale lore into the oldest Mortal Kombat history while preserving source and continuity caveats instead of presenting one synthetic creation myth or one flattened ancient history as timeless canon.
 
@@ -98,7 +98,7 @@ Goal: expand from character-scale lore into the oldest Mortal Kombat history whi
 - [x] Do not model Goro's death; MKII says only `apparent death`.
 - [x] Merge the reviewed slice through PR #9.
 
-### Mortal Kombat II / Outworld setup slice 🔨
+### Mortal Kombat II / Outworld setup slice ✅
 
 - [x] Extend `Shang Tsung seeks a second chance` into his explicitly sourced new plan.
 - [x] Add `Shang Tsung plans an Outworld tournament` as a separate Event rather than pretending the plea itself occurred in Outworld.
@@ -109,10 +109,21 @@ Goal: expand from character-scale lore into the oldest Mortal Kombat history whi
 - [x] Model `second-chance plea → Outworld plan → second Outworld tournament` as the supported continuation of the story chain.
 - [x] Keep plan and occurrence distinct: the MKII intro establishes intent; MKT confirms that intent was carried out.
 - [x] Final AGENTS/manual review and CI for the slice.
+- [x] Merge the reviewed slice through PR #10.
+
+### Mortal Kombat II / Shaolin temple attack slice 🔨
+
+- [x] Add Baraka as an Original-continuity Character.
+- [x] Add the Mortal Kombat II Baraka biography as direct primary evidence that Baraka led the attack on Liu Kang's Shaolin temples.
+- [x] Reuse the existing Mortal Kombat II Liu Kang biography for the ruined-temple, slain-brothers, and revenge claims.
+- [x] Model `Baraka leads the attack on the Shaolin temples → Liu Kang seeks revenge after the Shaolin attack` as a supported causal chain.
+- [x] Keep the attack Event's `realmIds` empty because the primary bio names the Shaolin temples but does not itself map that named place to a Realm.
+- [x] Keep the attack/revenge component separate from the second-tournament lure; the current primary evidence does not say the attack caused or implemented Shang Tsung's lure plan.
+- [ ] Final AGENTS/manual review and CI for the slice.
 
 ### Next lore slices
 
-- [ ] Decide after review whether to continue into MKII outcome / Shaolin attack details or pivot to a higher-value cosmology/retcon comparison stress case.
+- [ ] Decide after the Shaolin-attack review whether to continue into the MKII outcome / Shao Kahn defeat or pivot to a higher-value cosmology/retcon comparison stress case.
 - [ ] Onaga's resurrection/return mechanism and post-Deception fate with stronger source coverage.
 - [ ] Shinnok escape/MK4 and Reboot continuity comparison.
 - [ ] Compare Original cosmology against MK11-era Titan/Kronika cosmology without forcing them into one universal truth.
@@ -134,7 +145,8 @@ A user should be able to:
 10. inspect the Great Kung Lao/Goro/Shang Tsung tournament era without turning temporal association into causality;
 11. follow Liu Kang's first-game victory into Shang Tsung's documented second-chance plea without treating Goro's apparent death as confirmed death;
 12. follow the plea into Shang Tsung's Outworld plan and then the later-confirmed second tournament without confusing plan target with planning-event location;
-13. see intentional causal gaps where the sources establish sequence or context but not direct causation.
+13. inspect Baraka's Shaolin-temple attack and Liu Kang's revenge response without inventing a realm mapping or a lure-plan causal edge;
+14. see intentional causal gaps where the sources establish sequence or context but not direct causation.
 
 See `PHASE5_MANUAL_VERIFICATION.md`.
 
