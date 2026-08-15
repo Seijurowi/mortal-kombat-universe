@@ -46,6 +46,7 @@ Manual checklists are **repeatable procedures**, not status trackers. An uncheck
 - [`PHASE5_MK3_SINDEL_DAG_MANUAL_VERIFICATION.md`](./PHASE5_MK3_SINDEL_DAG_MANUAL_VERIFICATION.md) — Sindel scheme, first proven multi-parent causal node, chronology rail, and DAG rendering.
 - [`PHASE5_MK3_INVASION_OUTCOME_MANUAL_VERIFICATION.md`](./PHASE5_MK3_INVASION_OUTCOME_MANUAL_VERIFICATION.md) — MK3 invasion consequences, later-confirmed Shao Kahn defeat, and broad-outcome-vs-named-victor discipline.
 - [`PHASE5_MK4_SHINNOK_RETURN_MANUAL_VERIFICATION.md`](./PHASE5_MK4_SHINNOK_RETURN_MANUAL_VERIFICATION.md) — MK4 Shinnok escape/return chronology, renewed-war framing, and chronology-without-causality checks across the MK3→MK4 bridge.
+- [`PHASE5_MK4_SHINNOK_OUTCOME_MANUAL_VERIFICATION.md`](./PHASE5_MK4_SHINNOK_OUTCOME_MANUAL_VERIFICATION.md) — later-confirmed Shinnok defeat, broad-outcome-vs-individual-victor discipline, and chronology-without-fake-causality checks for the MK4 outcome.
 
 For Phase 5 work, run the broad regression checklist when the change can affect shared model/UI behavior, then run the latest relevant slice-specific checklist. New large slices may get their own checklist instead of indefinitely appending duplicate detail to the cumulative file.
 
