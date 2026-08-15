@@ -41,6 +41,7 @@ See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 - Claim history continues to treat subject/predicate grouping as presentation rather than automatic contradiction/retcon evidence; source year remains chronology context, not canonical priority.
 - **Documentation governance was consolidated:** `ROADMAP.md` is the sole owner of live milestone/active-slice status; PRD, LORE_MODEL, AGENTS, README, changelog, manuals, and Definition of Done now have explicit ownership boundaries to reduce documentation drift.
 - `AGENTS.md` now references the dedicated Definition of Done as the authoritative readiness/completion gate instead of duplicating the full final PR checklist.
+- **Shadcn/Base UI is now the explicit default primitive layer in `AGENTS.md`:** contributors should reuse `components/ui/*` before hand-building generic controls, keep domain components outside the primitive layer, and preserve primitive APIs/accessibility when compatibility fixes are required.
 - Root/documentation README files no longer carry fragile record counts, branch-specific status, or stale milestone claims; manual verification documents are explicitly indexed as cumulative/regression/slice-specific procedures rather than status trackers.
 - Changelog practice now explicitly supports consolidating long `Unreleased` sections into milestone/slice-level history instead of mirroring every source/Event/Fact file.
 
