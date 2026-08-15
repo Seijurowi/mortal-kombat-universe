@@ -1,0 +1,12 @@
+{
+  "id": "fact-earth-warriors-defeated-shao-kahn-original",
+  "type": "fact",
+  "name": "Earth warriors defeated Shao Kahn",
+  "subjectId": "shao-kahn",
+  "predicate": "defeated_by",
+  "value": "Earth warriors",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk4-story"],
+  "notes": "Mortal Kombat 4's story treats Shao Kahn's defeat at the hands of the Earth warriors as established history. This does not identify Liu Kang individually as the victor."
+}
