@@ -30,7 +30,7 @@ Complete and merged. Delivered `/claims`, evidence-safe claim-family labels, sou
 
 **Status: in progress.**
 
-**Current work:** Original-continuity **MK4 / Shinnok return setup** on `agent/phase5-mk4-shinnok-return`, based on merged PR #14 and the refreshed project contracts/Definition of Done.
+**Current work:** Original-continuity **MK4 / Shinnok return setup** in draft PR #15 on `agent/phase5-mk4-shinnok-return`, based on merged PR #14 and the refreshed project contracts/Definition of Done.
 
 Goal: expand from character-scale lore into ancient and Original-continuity history while preserving source, continuity, causality, and evidence caveats instead of presenting one synthetic canon narrative.
 
@@ -106,7 +106,7 @@ Goal: expand from character-scale lore into ancient and Original-continuity hist
 
 ### Current MK4 / Shinnok return slice 🔨
 
-This slice deliberately tests whether the refreshed DoD keeps an inter-game chronological bridge from turning into fake causality.
+This slice deliberately tests whether the refreshed DoD keeps an inter-game chronological bridge from turning into fake causality while still making that bridge easy to follow in the UI.
 
 - [x] Reuse `Mortal Kombat 4 — Game Story` rather than duplicating the source.
 - [x] Expand its source notes to cover Shinnok's Netherrealm escape and the renewed-war framing.
@@ -116,9 +116,15 @@ This slice deliberately tests whether the refreshed DoD keeps an inter-game chro
 - [x] Keep `Shinnok escapes → renewed war` chronological/contextual only until a source explicitly supplies the direct causal relation.
 - [x] Do not attribute the specific MK4 escape mechanism to Quan Chi merely from older alliance/escape-attempt context.
 - [x] Use `realmIds: ["netherrealm"]` for the escape because the source explicitly names the confinement realm; keep the renewed-war Event realm scope empty because the intro does not name its location.
-- [x] Add/index a slice-specific manual verification checklist.
-- [ ] Update/review CHANGELOG for the slice.
-- [ ] Open draft PR and run final-head CI.
+- [x] Make `/causality` chronology continuity-wide rather than limited to the active causal component.
+- [x] Add Previous/Next chronology navigation that can cross causal-component boundaries without creating graph edges.
+- [x] Auto-scroll the selected chronology card into view and keep causal context independently derived from explicit edges.
+- [x] Add/index a slice-specific manual verification checklist covering the chronology navigation.
+- [x] Review/update CHANGELOG for the lore slice, chronology UX, and intentional Shadcn UI inventory expansion.
+- [x] Open draft PR #15.
+- [x] Incorporate maintainer-added Shadcn/Base UI component inventory without overwriting it; package/lockfile changes are part of the final-head scope.
+- [ ] Run final-head CI after the chronology UX and documentation updates.
+- [ ] Perform manual UI pass for chronology navigation and Shadcn regression.
 - [ ] Perform final AGENTS + LORE_MODEL + DoD review after manual UI pass.
 - [ ] Merge only after explicit user/maintainer action.
 
@@ -151,9 +157,10 @@ A user should be able to:
 14. understand one Event with multiple supported parents without duplicate-occurrence rendering;
 15. follow the sourced Sindel-rebirth mechanism into Shao Kahn's Earthrealm breach;
 16. inspect MK3 invasion consequences and later Shao Kahn defeat without broad→narrow evidence inflation;
-17. follow chronology from the MK3 defeat into Shinnok's MK4 return without being told that `after` means `caused by`;
-18. see intentional causal gaps where sources establish sequence/context but not direct causation;
-19. navigate documentation without conflicting live-status claims.
+17. follow continuity-wide chronology from the MK3 defeat into Shinnok's MK4 return even when those Events belong to different/no causal components;
+18. navigate Previous/Next chronological neighbors without being told that `after` means `caused by`;
+19. see intentional causal gaps where sources establish sequence/context but not direct causation;
+20. navigate documentation without conflicting live-status claims.
 
 Manual verification procedures are indexed in `docs/README.md`. Final readiness is governed by `docs/DEFINITION_OF_DONE.md`.
 
