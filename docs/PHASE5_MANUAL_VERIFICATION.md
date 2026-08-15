@@ -146,7 +146,21 @@ Open `Shang Tsung plans an Outworld tournament`, `Second Mortal Kombat tournamen
 - [ ] The new links do not connect the older Great Kung Lao-era events merely to make one continuous tournament tree.
 - [ ] No later Reboot/New Era retelling is used to fill Original-continuity details in this chain.
 
-## 15. Continuity discipline
+## 15. MKII Shaolin-temple attack and Liu Kang revenge
+
+Open Baraka, `Baraka leads the attack on the Shaolin temples`, `Liu Kang seeks revenge after the Shaolin attack`, and the three new Facts.
+
+- [ ] Baraka is an Original-continuity Character with Outworld affiliation supported by his MKII biography.
+- [ ] `Mortal Kombat II — Baraka Biography` is a `game_bio` Source and identifies TRMK as preservation/access infrastructure rather than canonical authority.
+- [ ] `Baraka led the attack on Liu Kang's Shaolin temples` is a `canon` Fact citing the Baraka biography.
+- [ ] `Liu Kang's Shaolin brothers were killed by Outworld warriors` is a separate `canon` Fact citing the Liu Kang biography.
+- [ ] `Liu Kang sought revenge after the Shaolin attack` is a `canon` Fact citing the Liu Kang biography.
+- [ ] `/causality` shows `Baraka leads the attack on the Shaolin temples → Liu Kang seeks revenge after the Shaolin attack` as a separate supported causal component.
+- [ ] The Shaolin-attack Event has no `realmIds` mapping merely because the named place is understood to be in Earthrealm; the current cited bios do not themselves map that place to a Realm.
+- [ ] The revenge Event also keeps `realmIds` empty rather than equating the biography's `Dark Realm` wording with the structured Outworld Realm without explicit source support in that claim.
+- [ ] There is **no** causal edge from the Shaolin attack/revenge component into `Second Mortal Kombat tournament in Outworld`; current primary bios do not say the attack caused or implemented Shang Tsung's lure plan.
+
+## 16. Continuity discipline
 
 - [ ] Deception/Mythologies/MKT/MK3/MKDA/MK1/MKII/MK4 Original-history claims are not copied into Reboot or New Era without independent evidence.
 - [ ] MK11 Titan/Kronika cosmology is not silently reconciled with Deception cosmology yet.
@@ -154,12 +168,12 @@ Open `Shang Tsung plans an Outworld tournament`, `Second Mortal Kombat tournamen
 - [ ] MK9/New Era tournament retellings are not silently used to fill gaps in the Original tournament history.
 - [ ] Future reboot/New Era comparisons should use scoped Facts and claim history.
 
-## 16. Responsive/navigation checks
+## 17. Responsive/navigation checks
 
 - [ ] New Characters, realms, events, facts, and sources are reachable through normal Explorer navigation.
 - [ ] `/claims` can inspect the new Facts without inventing contradiction semantics.
 - [ ] `/causality` shows only explicit causal edges and keeps intentional gaps/disconnected components visible.
-- [ ] Liu Kang, Goro, Shang Tsung, Great Kung Lao, Kitana, Sindel, and Jerrod dossiers remain readable on narrow/mobile widths.
+- [ ] Liu Kang, Baraka, Goro, Shang Tsung, Great Kung Lao, Kitana, Sindel, and Jerrod dossiers remain readable on narrow/mobile widths.
 
 ## Decision after this slice
 
@@ -173,7 +187,8 @@ Before the next Phase 5 expansion, answer:
 - Is the chronology-without-causality rule clear enough for tournament history where sources say events occurred “during this period”?
 - Is ending + later primary confirmation clear enough to support a narrower `canon` outcome without canonizing an ending wholesale?
 - Are qualified states such as `apparent death` staying visibly weaker than confirmed death?
-- Are event locations omitted when realm scope is not directly supported, even if the surrounding story later moves to a known realm?
+- Are event locations omitted when realm scope is not directly supported, even when a named place seems obviously associated with a Realm?
 - Is the plan-versus-occurrence split clear enough to distinguish “plan targets Outworld” from “later source confirms that plan happened”?
+- Are parallel causal components staying separate when the source establishes multiple motivations/events but does not prove how they connect?
 - Do we need a first-class Artifact entity once individual Kamidogu histories become navigable, or can Facts continue to carry that concept for now?
 - Are the separate short ancient-history chains easier to trust than one artificially connected story tree?
