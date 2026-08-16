@@ -57,6 +57,12 @@ Manual checklists are **repeatable procedures**, not status trackers. An uncheck
 
 For Phase 5 work, run the broad regression checklist when the change can affect shared model/UI behavior, then run the latest relevant slice-specific checklist. New large slices may get their own checklist instead of indefinitely appending duplicate detail to the cumulative file.
 
+### Phase 6 systematic-expansion checks
+
+- [`PHASE6_MK9_FIRST_TOURNAMENT_MANUAL_VERIFICATION.md`](./PHASE6_MK9_FIRST_TOURNAMENT_MANUAL_VERIFICATION.md) — Reboot MK9 first-tournament decomposition, proposal-vs-occurrence discipline, warning-vs-causality separation, Bi-Han death Realm correction, and short maintainer test cases.
+
+For Phase 6 work, use the slice-specific checklist plus any earlier regression checklist whose shared behavior the slice actually touches.
+
 ## Verification and readiness rule
 
 Automated validation proves JSON shape, references, causal-edge invariants, TypeScript safety, linting, and production build health. It does **not** prove continuity interpretation, source sufficiency, retcon interpretation, causal interpretation, evidence strength, or good UX.
