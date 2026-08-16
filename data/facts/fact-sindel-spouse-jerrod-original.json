@@ -1,0 +1,12 @@
+{
+  "id": "fact-sindel-spouse-jerrod-original",
+  "type": "fact",
+  "name": "Jerrod is Sindel's husband",
+  "subjectId": "sindel",
+  "predicate": "spouse_of",
+  "objectId": "jerrod",
+  "timelineIds": ["original"],
+  "canonStatus": "supplemental",
+  "sourceIds": ["mk3-sindel-ending"],
+  "notes": "The MK3 Sindel ending presents King Jerrod as Sindel's husband. Because this specific relationship record currently relies on ending material rather than independent later direct wording, it remains supplemental instead of being silently upgraded."
+}
