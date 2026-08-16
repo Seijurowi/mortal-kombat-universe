@@ -1,0 +1,12 @@
+{
+  "id": "fact-kronika-keeper-of-time-reboot",
+  "type": "fact",
+  "name": "Kronika is the Keeper of Time",
+  "subjectId": "kronika",
+  "predicate": "has_role",
+  "value": "Keeper of Time",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk11-story", "mk11-official-launch"],
+  "notes": "MK11 story dialogue directly gives Kronika this title; official launch material independently uses the same role wording."
+}

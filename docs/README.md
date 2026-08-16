@@ -51,6 +51,7 @@ Manual checklists are **repeatable procedures**, not status trackers. An uncheck
 - [`PHASE5_DEADLY_ALLIANCE_BRIDGE_MANUAL_VERIFICATION.md`](./PHASE5_DEADLY_ALLIANCE_BRIDGE_MANUAL_VERIFICATION.md) — Deadly Alliance formation, explicit elimination plan, Liu Kang's death/soul consumption, plan→occurrence causality, and the deferred Shao Kahn clone/death question.
 - [`PHASE5_SHAO_KAHN_APPARENT_DEATH_MANUAL_VERIFICATION.md`](./PHASE5_SHAO_KAHN_APPARENT_DEATH_MANUAL_VERIFICATION.md) — Shao Kahn's older Deadly Alliance death portrayal, later Deception clone/survival evidence, real `retconned` claim-family behavior, and cautious target/clone attribution.
 - [`PHASE5_ONAGA_RETURN_FATE_MANUAL_VERIFICATION.md`](./PHASE5_ONAGA_RETURN_FATE_MANUAL_VERIFICATION.md) — Onaga's Reptile host-body return, Shujinko defeat, simultaneous Nightwolf soul binding, Shinnok release, original-body awakening, and ending-vs-later-bio evidence discipline. Includes a short maintainer test-case section for PR review.
+- [`PHASE5_KRONIKA_COSMOLOGY_COMPARISON_MANUAL_VERIFICATION.md`](./PHASE5_KRONIKA_COSMOLOGY_COMPARISON_MANUAL_VERIFICATION.md) — Deception-vs-MK11 cosmology comparison, Kronika evidence strength, continuity separation, comparison guardrails, source drill-down, and short maintainer test cases.
 
 For Phase 5 work, run the broad regression checklist when the change can affect shared model/UI behavior, then run the latest relevant slice-specific checklist. New large slices may get their own checklist instead of indefinitely appending duplicate detail to the cumulative file.
 

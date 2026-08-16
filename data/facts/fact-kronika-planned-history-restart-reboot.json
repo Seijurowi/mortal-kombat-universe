@@ -1,0 +1,12 @@
+{
+  "id": "fact-kronika-planned-history-restart-reboot",
+  "type": "fact",
+  "name": "Kronika planned to restart history",
+  "subjectId": "kronika",
+  "predicate": "planned_to",
+  "value": "wind time back to its beginning and restart history",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk11-story", "mk11-official-launch"],
+  "notes": "This records Kronika's explicit plan as a plan. It is not itself an assertion that every intended feature of her New Era occurred."
+}

@@ -1,0 +1,12 @@
+{
+  "id": "fact-kronika-described-creator-existence-reboot",
+  "type": "fact",
+  "name": "Official MK11 reveal material describes Kronika as creator of existence",
+  "subjectId": "kronika",
+  "predicate": "described_as_creator_of",
+  "value": "existence",
+  "timelineIds": ["reboot"],
+  "canonStatus": "supplemental",
+  "sourceIds": ["mk11-first-look-official"],
+  "notes": "This is preserved at supplemental promotional strength. It does not establish a specific realm-creation mechanism, does not identify Kronika with the One Being, and does not retcon the separate Original-continuity Deception account."
+}
