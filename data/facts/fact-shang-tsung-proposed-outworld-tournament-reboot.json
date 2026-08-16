@@ -1,0 +1,12 @@
+{
+  "id": "fact-shang-tsung-proposed-outworld-tournament-reboot",
+  "type": "fact",
+  "name": "Shang Tsung proposed a new tournament in Outworld",
+  "subjectId": "shang-tsung",
+  "predicate": "proposed",
+  "value": "new Mortal Kombat tournament in Outworld",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) story mode presents the proposal after the failed first tournament. This Fact establishes the proposal itself and does not treat the later Outworld tournament as already having occurred."
+}
