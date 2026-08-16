@@ -88,7 +88,7 @@ export function CosmologyComparison({ data }: { data: UniverseData }) {
               .map((id) => entityById(data, id))
               .filter((entity): entity is UniverseEntity => Boolean(entity))
             const facts = data.facts.filter(
-              (fact) => lens.subjectIds.includes(fact.subjectId as never) && fact.timelineIds.includes(lens.timelineId)
+              (fact) => lens.subjectIds.some((id) => id === fact.subjectId) && fact.timelineIds.includes(lens.timelineId)
             )
             const sources = sourcesFor(facts, data.sources)
 
