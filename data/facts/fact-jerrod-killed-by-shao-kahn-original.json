@@ -1,0 +1,12 @@
+{
+  "id": "fact-jerrod-killed-by-shao-kahn-original",
+  "type": "fact",
+  "name": "Original ending material attributes Jerrod's death to Shao Kahn",
+  "subjectId": "jerrod",
+  "predicate": "killed_by",
+  "objectId": "shao-kahn",
+  "timelineIds": ["original"],
+  "canonStatus": "supplemental",
+  "sourceIds": ["mk3-sindel-ending"],
+  "notes": "Sindel's MK3 ending attributes King Jerrod's death to Shao Kahn. This remains supplemental ending evidence here rather than being promoted into a stronger universal death account."
+}
