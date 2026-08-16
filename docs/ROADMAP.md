@@ -30,7 +30,7 @@ Complete and merged. Delivered `/claims`, evidence-safe claim-family labels, sou
 
 **Status: in progress.**
 
-**Current work:** **Deception cosmology vs MK11 Titan/Kronika comparison** in draft PR #21 on `agent/phase5-kronika-cosmology-comparison`, branched exactly from verified PR #20 merge commit `5ab9a24305325bfc33f8dc957ad4324f69ff6e2d`. The slice adds scoped Reboot-continuity Kronika evidence and a data-driven `/cosmology` comparison beside the existing Original-continuity One Being / Elder Gods framework. It must preserve continuity boundaries, keep official promotional wording at its actual evidence strength, and avoid inventing a Titan/Elder God/One Being hierarchy, Kronika/One Being identity, or automatic cross-continuity retcon. Implementation, documentation, source recheck, maintainer visual pass, final contract review, and final-head CI are completed incrementally before Ready for review; merge remains an explicit user/maintainer action.
+**Current work:** **Deception cosmology vs MK11 Titan/Kronika comparison** in PR #21 on `agent/phase5-kronika-cosmology-comparison`, branched exactly from verified PR #20 merge commit `5ab9a24305325bfc33f8dc957ad4324f69ff6e2d`. The slice adds scoped Reboot-continuity Kronika evidence and a data-driven `/cosmology` comparison beside the existing Original-continuity One Being / Elder Gods framework. Continuity boundaries, promotional-evidence strength, and the absence of invented Titan/Elder God/One Being hierarchy or Kronika/One Being identity have been manually reviewed. Source recheck, maintainer visual pass, documentation sync, and final AGENTS/LORE_MODEL/DoD review are complete; the final PR head must remain green before Ready for review. Merge remains an explicit user/maintainer action.
 
 Goal: expand from character-scale lore into ancient history and cosmology while preserving source, continuity, causality, and evidence caveats instead of presenting one synthetic canon narrative.
 
@@ -169,9 +169,10 @@ This slice tests whether the existing model can present materially different cos
 - [x] Add/index a slice-specific manual verification checklist with short maintainer test cases.
 - [x] Review/update CHANGELOG for this slice.
 - [x] Open draft PR #21.
-- [ ] Recheck MK11 source wording and source-access provenance after the first implementation pass.
-- [ ] Maintainer manual UI/source pass completed.
-- [ ] Final AGENTS + LORE_MODEL + DoD review completed.
+- [x] Recheck MK11 source wording and source-access provenance after the first implementation pass.
+- [x] Maintainer manual UI/source pass completed.
+- [x] Record the durable model result: existing Character + Fact + Source + timeline scoping is sufficient for this cross-continuity cosmology case; no schema change required.
+- [x] Final AGENTS + LORE_MODEL + DoD review completed; changed-file scope, source strength, plan semantics, continuity separation, and documentation ownership rechecked with no unresolved review threads or known correctness blockers.
 - Current-head CI must be green before Ready for review; CI state is owned by the PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
