@@ -30,7 +30,7 @@ Complete and merged. Delivered `/claims`, evidence-safe claim-family labels, sou
 
 **Status: in progress.**
 
-**Current work:** **Original/Reboot/New Era Sindel comparison through claim history** in PR #22 on `agent/phase5-sindel-claim-history`, branched exactly from verified PR #21 merge commit `d85d2cc728b160ae06f0bb061c849eb37c07b9b3`. The slice expands stable Sindel/Jerrod identity across the three continuities, adds scoped royal-role, spouse, and Jerrod-death Facts, and stress-tests `/claims` when same-value cross-continuity agreement coexists with different evidence strength. It does not import a killer into New Era, normalize distinct titles merely to make values match, or treat cross-continuity actor variation as an automatic retcon. Source recheck, documentation sync, maintainer manual UI/source pass, and final AGENTS/LORE_MODEL/DoD review are complete; final-head CI remains the required automated readiness gate and merge remains an explicit user/maintainer action.
+**Current work:** **Original-continuity MKII/MK3/MK4 individual-victor attribution evidence audit** in PR #23 on `agent/phase5-original-victor-attribution`, branched exactly from verified PR #22 merge commit `6de5ffb3d7b27bf10f9e7dec948338dc2e0d8889`. The slice preserves Liu Kang's MKII, MK3, and MK4 ending portrayals as ending-strength source history while testing whether any later non-ending Original-continuity source independently confirms those exact individual-victor attributions. The evidence result remains negative: existing canon outcomes stay broad, no `defeated_by = Liu Kang` canon Fact is added, and repeated protagonist endings are not treated as independent confirmation merely through repetition. Source wording/provenance, changed-file scope, maintainer manual review, and final AGENTS/LORE_MODEL/DoD review are complete; final-head CI remains the required automated readiness gate and merge remains an explicit user/maintainer action.
 
 Goal: expand from character-scale lore into ancient history and cosmology while preserving source, continuity, causality, and evidence caveats instead of presenting one synthetic canon narrative.
 
@@ -41,7 +41,7 @@ Goal: expand from character-scale lore into ancient history and cosmology while 
 - Elder Gods as Faction and valid Event participant.
 - six Deception navigation realms represented.
 - creation-myth evidence and `game_manual` source category.
-- Event `realmIds` locked to location/scope rather than event outputs.
+- Event `realmIds` locked to location/scope rather than realm outputs.
 
 #### Onaga ancient history ✅
 - Onaga, Shao Kahn, Shujinko coverage.
@@ -160,32 +160,40 @@ Goal: expand from character-scale lore into ancient history and cosmology while 
 - current Character + Fact + Source + timeline scoping proved sufficient; no schema change required.
 - merged as `d85d2cc728b160ae06f0bb061c849eb37c07b9b3` after source/manual review and final-head CI.
 
-### Current Original / Reboot / New Era Sindel claim history 🔨 — PR #22
+#### Original / Reboot / New Era Sindel claim history ✅ — PR #22
+- stable Sindel and Jerrod Characters span Original, Reboot, and New Era rather than being duplicated by continuity.
+- royal-role wording remains source-specific: Original `Queen of Edenia`, Reboot `Shao Kahn's Empress`, New Era `Empress of Outworld`.
+- `spouse_of = Jerrod` agrees across all three continuities while preserving Original `supplemental` versus Reboot/New Era `canon` evidence strength.
+- Original Deception canon attributes Jerrod's death to Shao Kahn; Reboot Aftermath canon attributes it to Sindel; New Era preserves only the broader murder outcome without inventing a killer.
+- `/claims?q=Sindel` deep-links into the comparison and same-value cross-continuity agreement can coexist visibly with status variation.
+- no schema or automatic contradiction/supersession/retcon relation was required.
+- merged as `6de5ffb3d7b27bf10f9e7dec948338dc2e0d8889` after source/manual review, final contract review, and final-head CI.
 
-This slice stress-tests claim-history presentation with a stable character whose titles, marriage evidence, and spouse-death history vary across continuities.
+### Current Original-continuity individual-victor attribution audit 🔨 — PR #23
 
-- [x] Start exactly from verified PR #21 merge commit `d85d2cc728b160ae06f0bb061c849eb37c07b9b3`.
-- [x] Expand stable Sindel and Jerrod Character coverage across Original, Reboot, and New Era rather than creating duplicate continuity-specific people.
-- [x] Add `has_royal_role` Facts with source-specific wording: Original `Queen of Edenia`, Reboot `Shao Kahn's Empress`, New Era `Empress of Outworld`.
-- [x] Add `spouse_of = Jerrod` across all three continuities while preserving Original ending evidence as `supplemental` and Reboot/New Era story evidence as `canon`.
-- [x] Add Original canon `Jerrod killed_by Shao Kahn` from Deception dialogue and Reboot canon `Jerrod killed_by Sindel` from Aftermath as value variation without automatic retcon semantics.
-- [x] Add the narrower New Era `Jerrod was_murdered = true` outcome without inventing his killer.
-- [x] Preserve transcript/preservation mirrors as access infrastructure rather than canonical authority.
-- [x] Add `/claims?q=Sindel` focused entry behavior using static-page-safe `useSearchParams` under Suspense.
-- [x] Make same-value cross-continuity agreement and canon-status variation visible simultaneously in claim-family presentation.
-- [x] Use the neutral external evidence label `Source` instead of implying every mirror URL is official.
+This slice reopens the deliberately deferred question of whether Liu Kang can be named as the exact individual victor for MKII, MK3, or MK4 at canon strength.
+
+- [x] Start exactly from verified PR #22 merge commit `6de5ffb3d7b27bf10f9e7dec948338dc2e0d8889`.
+- [x] Audit direct MKII Liu Kang ending attribution against later Original-continuity evidence.
+- [x] Audit direct MK3 Liu Kang ending attribution against the later MK4 broad Earth-warriors confirmation.
+- [x] Audit MK4 Liu Kang ending framing against later Armageddon broad Shinnok-defeat confirmation.
+- [x] Preserve the three Liu Kang ending works as `game_ending` Source records rather than promoting them into stronger canon Facts.
+- [x] Keep existing MK3 canon `Shao Kahn defeated_by Earth warriors` unchanged.
+- [x] Keep existing MK4 canon `Shinnok was_defeated = true` unchanged.
+- [x] Add no canon `defeated_by = Liu Kang` Fact, Event participant, causal edge, or schema change from ending repetition alone.
+- [x] Record the reusable repeated-ending evidence rule in `LORE_MODEL.md`.
 - [x] Add/index a slice-specific manual verification checklist with short maintainer test cases.
-- [x] Recheck the high-risk source wording: Deception Queen/Jerrod attribution, Aftermath Empress/Jerrod-killer wording, and MK1 Empress/late-husband/murder wording.
-- [x] Review/update CHANGELOG and record the durable no-schema claim-history result in LORE_MODEL.
-- [x] Open draft PR #22.
-- [x] Maintainer manual UI/source pass completed.
-- [x] Final AGENTS + LORE_MODEL + DoD review completed; scope, source strength, continuity separation, claim-family semantics, documentation ownership, and manual findings rechecked with no known correctness blocker.
+- [x] Review/update CHANGELOG without claiming a new canon victor.
+- [x] Open draft PR #23.
+- [x] Confirm changed-file scope and final source wording/provenance after all documentation sync.
+- [x] Maintainer manual source/UI pass completed.
+- [x] Final AGENTS + LORE_MODEL + DoD review completed; ending strength, broad-vs-narrow attribution, source provenance, documentation ownership, and no-Fact/Event/schema/UI scope were rechecked with no known correctness blocker.
 - Current-head CI must be green before Ready for review; CI state is owned by the PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
 ### Next lore slices
 
-1. Revisit exact MKII/MK3/MK4 individual-victor attribution only if direct later Original evidence supports it.
+1. If the victor-attribution audit remains negative after manual review, close the Phase 5 evidence pass without inventing named victors and prepare Phase 6 systematic timeline expansion.
 
 ### Phase 5 acceptance criteria
 
@@ -224,8 +232,9 @@ A user should be able to:
 31. see Jerrod as Sindel's spouse across all three continuities while retaining each Fact's own evidence strength;
 32. compare Original and Reboot Jerrod-killer attribution as scoped value variation rather than an automatic global retcon;
 33. see the New Era murder outcome without an invented killer when MK1 does not identify one in the evidence used;
-34. see intentional causal and continuity gaps where sources do not establish a direct connection;
-35. navigate documentation without conflicting live-status claims.
+34. inspect MKII/MK3/MK4 Liu Kang ending attributions as ending-strength evidence without seeing them silently promoted into canon individual-victor Facts when later evidence remains broad;
+35. see intentional causal and continuity gaps where sources do not establish a direct connection;
+36. navigate documentation without conflicting live-status claims.
 
 Manual verification procedures are indexed in `docs/README.md`. Final readiness is governed by `docs/DEFINITION_OF_DONE.md`.
 
