@@ -1,0 +1,12 @@
+{
+  "id": "fact-shinnok-freed-onaga-from-netherrealm-original",
+  "type": "fact",
+  "name": "Shinnok freed Onaga from the Netherrealm",
+  "subjectId": "shinnok",
+  "predicate": "freed_from_netherrealm",
+  "objectId": "onaga",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk-armageddon-onaga-bio"],
+  "notes": "Onaga's Armageddon biography directly describes Shinnok freeing his soul from the binding symbol and releasing him from the Netherrealm."
+}

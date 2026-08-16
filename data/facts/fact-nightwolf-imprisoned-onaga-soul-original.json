@@ -1,0 +1,12 @@
+{
+  "id": "fact-nightwolf-imprisoned-onaga-soul-original",
+  "type": "fact",
+  "name": "Nightwolf imprisoned Onaga's soul",
+  "subjectId": "nightwolf",
+  "predicate": "imprisoned_soul_of",
+  "objectId": "onaga",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk-deception-nightwolf-ending", "mk-armageddon-nightwolf-bio", "mk-armageddon-onaga-bio"],
+  "notes": "Nightwolf's Deception ending portrays the Netherrealm binding. His later Armageddon biography directly confirms that he imprisoned Onaga's soul, while Onaga's Armageddon biography independently confirms that an outside force ensnared him and left him bound to a rune in the Netherrealm."
+}

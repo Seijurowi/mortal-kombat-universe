@@ -1,0 +1,12 @@
+{
+  "id": "fact-shujinko-enabled-onaga-return-original",
+  "type": "fact",
+  "name": "Shujinko allowed Onaga to return",
+  "subjectId": "shujinko",
+  "predicate": "enabled_return_of",
+  "objectId": "onaga",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk-armageddon-shujinko-bio"],
+  "notes": "Shujinko's Armageddon biography directly says that he had allowed Onaga to return. This broad responsibility claim does not identify one specific quest Event as the physical return mechanism, so no gather-Kamidogu to return causal edge is inferred."
+}

@@ -1,0 +1,9 @@
+{
+  "id": "reptile",
+  "type": "character",
+  "name": "Reptile",
+  "aliases": ["Syzoth"],
+  "timelineIds": ["original"],
+  "description": "A Saurian warrior in the original continuity whose body later served as Onaga's host during the Dragon King's return.",
+  "tags": ["saurian", "host"]
+}

@@ -20,13 +20,14 @@ See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 - **MK3 invasion outcome:** soul-taking/extermination coverage, Liu Kang as the prime extermination target, and later MK4 confirmation that Earth warriors defeated Shao Kahn without promoting Liu Kang as the individual victor from ending-only evidence.
 - **MK4 / Shinnok return setup:** Shinnok's escape from Netherrealm and the renewed war as sourced Original-continuity Events/Facts, with the MK3 defeat → escape → renewed-war sequence kept chronological rather than converted into unsupported direct causality.
 - **MK4 / Shinnok outcome:** Mortal Kombat: Armageddon's Johnny Cage biography now serves as later primary confirmation that Shinnok was defeated years earlier; the canon Fact stays at the broad defeat level without promoting Liu Kang or another fighter as the individual victor, inventing a battle location, or turning renewed-war chronology into a direct causal edge.
-- **Quan Chi / Shinnok MK4 role detail:** Mortal Kombat Gold now directly establishes Kitana entering battle against Shinnok and Quan Chi, making Quan Chi's active Original-continuity combat role visible without retroactively crediting him with Shinnok's escape; Deadly Alliance later confirms that Quan Chi had stolen Shinnok's amulet, preserved as a narrow Fact without an invented exact theft date or defeat→theft causal edge.
+- **Quan Chi / Shinnok MK4 role detail:** Mortal Kombat Gold now directly establishes Kitana entering battle against Shinnok and Quan Chi, making Quan Chi's active Original-continuity MK4/Gold combat role visible without retroactively crediting him with Shinnok's escape; Deadly Alliance later confirms that Quan Chi had stolen Shinnok's amulet, preserved as a narrow Fact without an invented exact theft date or defeat→theft causal edge.
 - **Deadly Alliance / Liu Kang bridge:** Mortal Kombat: Deadly Alliance now establishes Quan Chi and Shang Tsung's named alliance, their plan to eliminate the principal obstacles to their domination, and Shang Tsung killing Liu Kang in Earthrealm with Quan Chi's assistance; Deception later independently corroborates Shang Tsung as Liu Kang's killer and the consumer of his soul. The explicit elimination-plan → Liu Kang-death causal edge is modeled while a simplistic Shao Kahn death claim is deliberately deferred for separate clone/decoy evidence review.
 - **Shao Kahn / Deadly Alliance apparent-death stress test:** the first-obstacle attack is now modeled without asserting that the attacked figure was definitely the real Shao Kahn; MKDA's explicit death portrayal is preserved as `retconned`, while later Deception biographies establish the real Shao Kahn's clone-decoy escape and survival. This creates the first useful real `retconned` claim family without inventing who struck or killed the clone.
+- **Onaga return and post-Deception fate:** Reptile is established as Onaga's later-confirmed host body without canonizing every Deadly Alliance ending detail; Nightwolf's imprisonment of Onaga's soul is preserved as a separate simultaneous story moment from Shujinko's final blow; Shinnok's later release of Onaga and Onaga's awakening in his original body extend the Original-continuity chain into Armageddon without claiming Onaga's soul was destroyed.
 - **Continuity-wide chronology navigation:** `/causality` now presents all Events in the selected continuity in story order, adds Previous/Next chronology navigation across causal-component boundaries, and auto-scrolls the selected chronology card into view.
 - **Shadcn UI component inventory:** the repository now includes the expanded Shadcn/Base UI component set under `components/ui/` plus the dependencies required by those primitives, while preserving the existing preset and pnpm lockfile discipline.
 - **Causality UX evolution:** a dedicated chronology/story-order rail, real DAG merge rendering, one full shared node plus explicit merge references, and clearer causal-start/causal-end semantics.
-- Phase 5 cumulative and slice-specific manual verification covering evidence strength, source provenance, realm semantics, chronology-versus-causality, plans versus occurrences, DAG merges, broad-versus-narrow later confirmation, the MK4 Shinnok return/outcome bridge, Quan Chi's sourced MK4/Gold role, the Deadly Alliance plan→Liu Kang-death bridge, and the Shao Kahn death/clone retcon stress test.
+- Phase 5 cumulative and slice-specific manual verification covering evidence strength, source provenance, realm semantics, chronology-versus-causality, plans versus occurrences, DAG merges, broad-versus-narrow later confirmation, the MK4 Shinnok return/outcome bridge, Quan Chi's sourced MK4/Gold role, the Deadly Alliance plan→Liu Kang-death bridge, the Shao Kahn death/clone retcon stress test, and the Onaga return/soul-binding/original-body chain; slice manuals now include short maintainer test cases where useful for PR review.
 - **Repository Definition of Done:** a dedicated `docs/DEFINITION_OF_DONE.md` readiness gate covering scope, lore/evidence, graph/model semantics, UX, documentation ownership, changelog discipline, manual verification, final-head CI, PR review, and explicit human/user merge authority.
 
 ### Changed
@@ -39,11 +40,11 @@ See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 - Plans, intentions, prophecies, threats, and possibilities are not treated as proof that their described occurrences happened; later occurrence evidence is required.
 - Qualified wording such as `apparent death` remains weaker than a confirmed death/transformation Event.
 - Temporal association and adjacent story order never manufacture causal edges. This is applied across Great Kung Lao history, MK3 breach/soul-taking, the MK3→MK4 Shinnok-return bridge, the renewed-war→Shinnok-defeat transition, Deadly Alliance formation→plan chronology, and other chronology-only transitions.
-- Later primary sources may confirm a narrower ending outcome without canonizing an ending wholesale; conversely, broad later confirmation stays broad and does not silently identify a narrower named actor/victor.
+- Later primary sources may confirm a narrower ending outcome without canonizing an ending wholesale; conversely, broad later confirmation stays broad and does not silently identify a narrower named actor/victor. The Onaga/Reptile and Nightwolf cases now also prove that later biographies can canonize a narrow host/body or imprisonment outcome while leaving uncorroborated ending-only mechanism detail at ending strength.
 - The second Outworld tournament now proves real multi-parent causality: MKII's lure plan and the older Sindel/diversion scheme converge on one occurrence.
 - Explicit plans may cause later occurrences only when primary evidence also shows the plan being carried out; the Deadly Alliance elimination plan → Liu Kang death is the newest proof case.
 - Real same-continuity retcon evidence may preserve the older portrayal as `retconned` alongside a later `canon` Fact in the same claim family; the Shao Kahn death/clone case does not yet require explicit `contradicts` or `supersedes` schema.
-- `/causality` separates chronology from causal topology so history remains readable even when causal components are disconnected or merge; chronology navigation can cross those component boundaries without creating graph edges.
+- `/causality` separates chronology from causal topology so history remains readable even when causal components are disconnected or merge; chronology navigation can cross those component boundaries without creating graph edges. Events may share one story order when primary material establishes simultaneity, without that shared moment manufacturing a causal edge.
 - Claim history continues to treat subject/predicate grouping as presentation rather than automatic contradiction/retcon evidence; source year remains chronology context, not canonical priority.
 - **Documentation governance was consolidated:** `ROADMAP.md` is the sole owner of live milestone/active-slice status; PRD, LORE_MODEL, AGENTS, README, changelog, manuals, and Definition of Done now have explicit ownership boundaries to reduce documentation drift.
 - `AGENTS.md` now references the dedicated Definition of Done as the authoritative readiness/completion gate instead of duplicating the full final PR checklist.
@@ -67,61 +68,3 @@ See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 - Different displayed values are not automatically labelled continuity divergence; they may represent time-dependent or multi-valued predicates.
 - Source year is evidence-history context, not automatic canonical priority.
 - Explicit `contradicts` / `supersedes` schema remains deferred until a concrete sourced case proves the need.
-
-## 2026-08-14 — Phase 3: Story chains and causality
-
-### Added
-
-- Dedicated `/causality` workbench built from explicit `causeEventIds` / `consequenceEventIds`.
-- Whole-chain vertical tree with start/end orientation, selected-event context, disconnected-component selection, and local `Why? / What next?` inspection.
-- Links from causal events and participants back to ordinary dossiers while preserving continuity scope.
-- Explorer / Causality mode navigation and Phase 3 manual verification.
-
-### Changed
-
-- Story-chain UX prioritizes whole-chain orientation over isolated click-to-recenter diagrams.
-- Causal validation requires mirrored references and rejects arbitrary cross-timeline edges unless the source Event is an explicit reset/rewrite bridge.
-- Reset/rewrite bridges remain valid model data but are excluded from ordinary within-continuity story trees pending dedicated transition UX.
-
-## 2026-08-14 — Phase 2: Timeline-first reading experience
-
-### Added
-
-- Timeline-first character dossiers with in-page Original / Reboot / New Era switching.
-- Generated `Compare all` continuity overview for character pages.
-- Dedicated character story chronology ordered from structured Event data.
-- Shareable `entity` + `timeline` reading state with copy-deep-link action.
-- Phase 2 manual UX verification and changelog policy/practice.
-
-### Changed
-
-- Character pages separate chronology, evidence-backed facts, and relationship connections instead of presenting one flat entity-inspection view.
-
-## 2026-08-14 — Phase 1: Bi-Han lore stress test
-
-### Added
-
-- Sourced Bi-Han / Hanzo Hasashi / Quan Chi / Shirai Ryu / Noob Saibot lore across Original, Reboot, and New Era continuities.
-- Timeline-scoped events, facts, relationships, and sources proving the stable-person identity model.
-- Product requirements, lore-model documentation, source pages, timeline badges, and manual lore verification guidance.
-
-### Changed
-
-- Bi-Han remains one stable Character while Sub-Zero / Noob Saibot identity changes are represented through scoped Facts/Events.
-- Alternate-timeline Titan Havik remains model pressure rather than a fabricated ordinary Character relationship.
-
-### Fixed
-
-- Removed a chronology-only causal edge that treated the first Mortal Kombat tournament as the cause of Bi-Han's death.
-- Removed unsupported Original-continuity Quan Chi participation from Bi-Han's Noob Saibot transformation.
-
-## 2026-08-14 — Foundation
-
-### Added
-
-- Next.js App Router + TypeScript application foundation.
-- pnpm-only package management and frozen-lockfile CI workflow.
-- shadcn/ui foundation using the requested `bcivVKXQ` preset, Tailwind CSS v4, Base UI, and Lucide icons.
-- Atomic JSON lore store with 8 entity types, JSON Schemas, and cross-reference validation.
-- Initial seed dataset, search, timeline filtering, entity detail pages, facts, sources, and relationship navigation.
-- `AGENTS.md` execution contract and `pnpm check` quality gate.

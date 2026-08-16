@@ -1,0 +1,13 @@
+{
+  "id": "nightwolf-binds-onaga-soul-netherrealm-original",
+  "type": "event",
+  "name": "Nightwolf binds Onaga's soul in the Netherrealm",
+  "timelineId": "original",
+  "participantIds": ["nightwolf", "onaga"],
+  "realmIds": ["netherrealm"],
+  "causeEventIds": [],
+  "consequenceEventIds": [],
+  "order": 281,
+  "description": "As Shujinko lands his final blow, an outside force simultaneously ensnares and expels Onaga's soul from his host body; later Armageddon biographies identify Nightwolf as the one who imprisoned Onaga and confirm that Onaga was bound in the Netherrealm. The shared story moment is preserved without encoding Shujinko's blow as the cause of Nightwolf's binding.",
+  "tags": ["deception", "nightwolf", "soul", "binding", "netherrealm"]
+}

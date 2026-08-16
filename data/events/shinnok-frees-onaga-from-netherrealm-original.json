@@ -1,0 +1,13 @@
+{
+  "id": "shinnok-frees-onaga-from-netherrealm-original",
+  "type": "event",
+  "name": "Shinnok frees Onaga from the Netherrealm",
+  "timelineId": "original",
+  "participantIds": ["shinnok", "onaga"],
+  "realmIds": ["netherrealm"],
+  "causeEventIds": [],
+  "consequenceEventIds": ["onaga-awakens-original-body-original"],
+  "order": 290,
+  "description": "After Onaga accepts Shinnok's offer in order to escape the Netherrealm, Shinnok frees Onaga's soul from the binding symbol and releases him from the realm.",
+  "tags": ["armageddon", "shinnok", "release", "netherrealm"]
+}

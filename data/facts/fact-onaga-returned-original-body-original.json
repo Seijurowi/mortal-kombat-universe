@@ -1,0 +1,12 @@
+{
+  "id": "fact-onaga-returned-original-body-original",
+  "type": "fact",
+  "name": "Onaga returned to his original body",
+  "subjectId": "onaga",
+  "predicate": "returned_to_original_body",
+  "value": true,
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk-armageddon-onaga-bio"],
+  "notes": "After Shinnok releases him from the Netherrealm, Onaga says he awoke in his original body. The Fact records that restored body state without importing the alternate outcome from Sindel's Deception ending."
+}
