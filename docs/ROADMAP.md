@@ -30,7 +30,7 @@ Complete and merged. Delivered `/claims`, evidence-safe claim-family labels, sou
 
 **Status: in progress.**
 
-**Current work:** Original-continuity **Shao Kahn / Deadly Alliance apparent-death stress test** in draft PR #19 on `agent/phase5-shao-kahn-apparent-death`, branched exactly from verified PR #18 merge commit `68da6291f05870187394cddc4912a56afe6ed611`. The slice preserves the older Deadly Alliance death portrayal as retconned evidence, adds later Deception clone-decoy evidence plus direct post-Deadly-Alliance evidence that the real Shao Kahn is alive, and avoids asserting that the real Shao Kahn died, that the clone specifically received the Deadly Alliance attack, or that a specific attacker killed the clone. Documentation, manual review, and final-head CI remain part of the readiness gate; merge remains an explicit user/maintainer action.
+**Current work:** Original-continuity **Shao Kahn / Deadly Alliance apparent-death stress test** in draft PR #19 on `agent/phase5-shao-kahn-apparent-death`, branched exactly from verified PR #18 merge commit `68da6291f05870187394cddc4912a56afe6ed611`. The slice preserves the older Deadly Alliance death portrayal as retconned evidence, adds later Deception clone-decoy evidence plus direct post-Deadly-Alliance evidence that the real Shao Kahn is alive, and avoids asserting that the real Shao Kahn died, that the clone specifically received the Deadly Alliance attack, or that a specific attacker killed the clone. Implementation, docs/CHANGELOG sync, maintainer manual pass, source recheck, and final AGENTS/LORE_MODEL/DoD review are complete. Ready for review requires a green CI run on the current PR head; merge remains an explicit user/maintainer action.
 
 Goal: expand from character-scale lore into ancient and Original-continuity history while preserving source, continuity, causality, and evidence caveats instead of presenting one synthetic canon narrative.
 
@@ -153,8 +153,8 @@ This slice tests the existing retcon/claim-history model against a real same-con
 - [x] Add/index the slice-specific manual verification checklist.
 - [x] Review/update CHANGELOG for this slice.
 - [x] Open draft PR #19.
-- [ ] Run maintainer manual UI/source pass.
-- [ ] Perform final AGENTS + LORE_MODEL + DoD review and post-manual source wording recheck.
+- [x] Maintainer manual UI/source pass completed.
+- [x] Final AGENTS + LORE_MODEL + DoD review completed; MKDA/Deception source wording rechecked after manual review and no further semantic correction was required.
 - Current-head CI must be green before Ready for review; CI state is owned by the PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
