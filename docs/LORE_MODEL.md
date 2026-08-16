@@ -127,6 +127,8 @@ Examples:
 
 Reusable rule: **broad confirmation stays broad**. Do not strengthen later evidence into a more specific actor, method, death, or causal chain than the source establishes. The same rule applies across continuity comparison: a New Era source saying Jerrod was murdered does not license importing a killer from Original or Reboot evidence.
 
+Repeated character endings are not independent later confirmation merely because multiple endings portray the same protagonist-specific attribution. The MKII, MK3, and MK4 Liu Kang endings can preserve ending-history evidence, but exact individual-victor attribution remains ending-strength until a later non-ending Original-continuity story, biography, or comparably strong source independently names Liu Kang at that same level of specificity.
+
 ## 7. Qualified states stay qualified
 
 Do not strengthen source language such as:
@@ -281,7 +283,8 @@ The current model has been tested by:
 - chronology made readable independently of causal topology;
 - later broad outcome confirmation kept broad rather than upgraded into a named victor;
 - cross-continuity cosmology comparison using scoped Facts and Sources without a merged hierarchy or automatic retcon, proving the current Character/Fact/Source/timeline model sufficient for the Deception-vs-MK11 case;
-- Original/Reboot/New Era Sindel comparison where royal-role values diverge, the Jerrod spouse claim agrees while evidence strength differs, and killer attribution varies by continuity while New Era preserves only the broader sourced murder outcome. This case remains representable through stable Characters, scoped Facts, canon status, and claim-family presentation without new schema or automatic retcon relations.
+- Original/Reboot/New Era Sindel comparison where royal-role values diverge, the Jerrod spouse claim agrees while evidence strength differs, and killer attribution varies by continuity while New Era preserves only the broader sourced murder outcome. This case remains representable through stable Characters, scoped Facts, canon status, and claim-family presentation without new schema or automatic retcon relations;
+- MKII/MK3/MK4 Liu Kang ending audit where repeated ending-specific individual-victor portrayals remain weaker than later broad Original-continuity story/biography confirmation, proving that source repetition at ending strength does not itself justify a canon named-victor Fact.
 
 ## 17. Current model pressure
 
