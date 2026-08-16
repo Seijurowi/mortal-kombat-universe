@@ -1,0 +1,8 @@
+{
+  "id": "kronika",
+  "type": "character",
+  "name": "Kronika",
+  "timelineIds": ["reboot"],
+  "description": "A Reboot-continuity cosmic figure introduced in Mortal Kombat 11, where she is identified as the Keeper of Time and a Titan.",
+  "tags": ["titan", "time", "cosmology", "non-playable"]
+}

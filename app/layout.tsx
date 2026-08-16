@@ -56,6 +56,12 @@ export default function RootLayout({
             >
               Claims
             </Link>
+            <Link
+              className="rounded-lg px-3 py-2 text-xs font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+              href="/cosmology"
+            >
+              Cosmology
+            </Link>
           </nav>
           {children}
         </ThemeProvider>

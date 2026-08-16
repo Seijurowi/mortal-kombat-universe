@@ -1,0 +1,12 @@
+{
+  "id": "fact-kronika-titan-reboot",
+  "type": "fact",
+  "name": "Kronika is a Titan",
+  "subjectId": "kronika",
+  "predicate": "has_nature",
+  "value": "Titan",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk11-story"],
+  "notes": "Kronika explicitly identifies herself as a Titan in MK11's story. This Fact does not infer a hierarchy or equivalence between Titans, Elder Gods, or the Original-continuity One Being."
+}

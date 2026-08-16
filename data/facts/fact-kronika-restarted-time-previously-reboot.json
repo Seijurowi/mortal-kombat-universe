@@ -1,0 +1,12 @@
+{
+  "id": "fact-kronika-restarted-time-previously-reboot",
+  "type": "fact",
+  "name": "Kronika had restarted time on countless previous occasions",
+  "subjectId": "kronika",
+  "predicate": "restarted_time_previously",
+  "value": "countless previous occasions",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk11-story"],
+  "notes": "Raiden states that Kronika has restarted time on countless previous occasions and used the differing timelines to refine her plan. This remains a Reboot-continuity claim and is not projected backward into Original continuity."
+}
