@@ -2,8 +2,8 @@
   "id": "jerrod",
   "type": "character",
   "name": "Jerrod",
-  "timelineIds": ["original"],
-  "realmIds": ["edenia"],
-  "description": "The Edenian king presented in original-continuity material as Sindel's husband and Kitana's father before Shao Kahn took Edenia.",
-  "tags": ["edenian", "king", "ancient-history"]
+  "timelineIds": ["original", "reboot", "new-era"],
+  "realmIds": ["edenia", "outworld"],
+  "description": "Sindel's husband in multiple continuities, with materially different death history and political context across Original, Reboot, and New Era sources.",
+  "tags": ["royal", "king", "claim-history"]
 }

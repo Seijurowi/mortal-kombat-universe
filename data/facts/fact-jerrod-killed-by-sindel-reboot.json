@@ -1,0 +1,12 @@
+{
+  "id": "fact-jerrod-killed-by-sindel-reboot",
+  "type": "fact",
+  "name": "Sindel killed Jerrod",
+  "subjectId": "jerrod",
+  "predicate": "killed_by",
+  "objectId": "sindel",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk11-aftermath-story"],
+  "notes": "Aftermath has Sindel explicitly state that she killed Jerrod for Shao Kahn. This is a Reboot-continuity claim and does not retroactively overwrite Original or New Era history."
+}

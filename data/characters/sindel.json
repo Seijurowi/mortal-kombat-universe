@@ -2,8 +2,8 @@
   "id": "sindel",
   "type": "character",
   "name": "Sindel",
-  "timelineIds": ["original"],
-  "realmIds": ["edenia"],
-  "description": "Queen of Edenia in the original continuity, mother of Kitana, and a central figure in Shao Kahn's conquest and later Edenian liberation history.",
-  "tags": ["edenian", "queen", "ancient-history"]
+  "timelineIds": ["original", "reboot", "new-era"],
+  "realmIds": ["edenia", "outworld"],
+  "description": "A royal figure whose title, rule, marriage history, and relationship to Shao Kahn differ materially across the Original, Reboot, and New Era continuities.",
+  "tags": ["edenian", "queen", "empress", "claim-history"]
 }

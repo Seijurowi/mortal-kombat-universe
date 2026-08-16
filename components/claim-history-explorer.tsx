@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { useSearchParams } from "next/navigation"
 import { useMemo, useState } from "react"
 import { BookOpenCheck, GitCompareArrows, History, Search } from "lucide-react"
 
@@ -39,6 +40,7 @@ function familyLabel(group: {
   if (group.hasRetconned) return "Retcon evidence present"
   if (group.hasAlternate) return "Alternate portrayal present"
   if (group.hasValueVariation) return "Value variation"
+  if (group.hasTimelineSpread && group.hasStatusVariation) return "Cross-continuity agreement · status variation"
   if (group.hasTimelineSpread) return "Cross-continuity agreement"
   if (group.hasStatusVariation) return "Canon-status variation"
   return "Multiple sourced assertions"
@@ -60,6 +62,9 @@ function familyExplanation(group: {
   if (group.hasValueVariation) {
     return "This family contains more than one displayed value. That can represent a real continuity difference, but it can also reflect a multi-valued or time-dependent predicate such as identity. Value variation alone is not proof of contradiction or retcon."
   }
+  if (group.hasTimelineSpread && group.hasStatusVariation) {
+    return "The same displayed claim appears across more than one continuity, but the individual records use different canon statuses. The agreement is useful history while the evidence strength still remains record-specific; neither fact alone implies a retcon."
+  }
   if (group.hasTimelineSpread) {
     return "The same displayed claim appears across more than one continuity. Cross-continuity agreement is useful history, but it is not a divergence or a retcon."
   }
@@ -70,7 +75,8 @@ function familyExplanation(group: {
 }
 
 export function ClaimHistoryExplorer({ data }: { data: UniverseData }) {
-  const [query, setQuery] = useState("")
+  const searchParams = useSearchParams()
+  const [query, setQuery] = useState(() => searchParams.get("q") ?? "")
   const [selectedKey, setSelectedKey] = useState<string | null>(null)
 
   const entitiesById = useMemo(
@@ -272,7 +278,7 @@ export function ClaimHistoryExplorer({ data }: { data: UniverseData }) {
                                   target="_blank"
                                   rel="noreferrer"
                                 >
-                                  Official source
+                                  Source
                                 </a>
                               ) : null}
                             </div>

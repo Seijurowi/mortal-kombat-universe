@@ -1,0 +1,12 @@
+{
+  "id": "fact-sindel-spouse-jerrod-reboot",
+  "type": "fact",
+  "name": "Jerrod was Sindel's first husband",
+  "subjectId": "sindel",
+  "predicate": "spouse_of",
+  "objectId": "jerrod",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk11-aftermath-story"],
+  "notes": "In Aftermath, Sindel directly calls Jerrod her first husband. This establishes the relationship in Reboot continuity independently of how that continuity reframes his death."
+}

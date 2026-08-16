@@ -30,7 +30,7 @@ Complete and merged. Delivered `/claims`, evidence-safe claim-family labels, sou
 
 **Status: in progress.**
 
-**Current work:** **Deception cosmology vs MK11 Titan/Kronika comparison** in PR #21 on `agent/phase5-kronika-cosmology-comparison`, branched exactly from verified PR #20 merge commit `5ab9a24305325bfc33f8dc957ad4324f69ff6e2d`. The slice adds scoped Reboot-continuity Kronika evidence and a data-driven `/cosmology` comparison beside the existing Original-continuity One Being / Elder Gods framework. Continuity boundaries, promotional-evidence strength, and the absence of invented Titan/Elder God/One Being hierarchy or Kronika/One Being identity have been manually reviewed. Source recheck, maintainer visual pass, documentation sync, and final AGENTS/LORE_MODEL/DoD review are complete; the final PR head must remain green before Ready for review. Merge remains an explicit user/maintainer action.
+**Current work:** **Original/Reboot/New Era Sindel comparison through claim history** in PR #22 on `agent/phase5-sindel-claim-history`, branched exactly from verified PR #21 merge commit `d85d2cc728b160ae06f0bb061c849eb37c07b9b3`. The slice expands stable Sindel/Jerrod identity across the three continuities, adds scoped royal-role, spouse, and Jerrod-death Facts, and stress-tests `/claims` when same-value cross-continuity agreement coexists with different evidence strength. It does not import a killer into New Era, normalize distinct titles merely to make values match, or treat cross-continuity actor variation as an automatic retcon. Source recheck, documentation sync, maintainer manual UI/source pass, and final AGENTS/LORE_MODEL/DoD review are complete; final-head CI remains the required automated readiness gate and merge remains an explicit user/maintainer action.
 
 Goal: expand from character-scale lore into ancient history and cosmology while preserving source, continuity, causality, and evidence caveats instead of presenting one synthetic canon narrative.
 
@@ -152,34 +152,40 @@ Goal: expand from character-scale lore into ancient history and cosmology while 
 - Onaga's soul is not modeled as destroyed after Deception.
 - merged as `5ab9a24305325bfc33f8dc957ad4324f69ff6e2d` after manual/source review, short maintainer test cases, and final-head CI.
 
-### Current Deception vs MK11 cosmology comparison 🔨 — PR #21
+#### Deception vs MK11 cosmology comparison ✅ — PR #21
+- Existing Original-continuity One Being / Elder Gods / Kamidogu facts remain intact while Reboot Kronika claims are independently scoped.
+- Kronika is sourced as Keeper of Time and Titan; her restart objective remains a plan and prior restarts remain Reboot-only.
+- Official `creator of existence` wording remains `supplemental` promotional evidence rather than an invented realm-creation mechanism.
+- `/cosmology` compares the frameworks without Kronika = One Being identity, Titan/Elder God/One Being hierarchy, or automatic cross-continuity retcon.
+- current Character + Fact + Source + timeline scoping proved sufficient; no schema change required.
+- merged as `d85d2cc728b160ae06f0bb061c849eb37c07b9b3` after source/manual review and final-head CI.
 
-This slice tests whether the existing model can present materially different cosmological frameworks across continuities without forcing them into one hierarchy or treating variation as an automatic retcon.
+### Current Original / Reboot / New Era Sindel claim history 🔨 — PR #22
 
-- [x] Start exactly from verified PR #20 merge commit `5ab9a24305325bfc33f8dc957ad4324f69ff6e2d`.
-- [x] Reuse the existing Original-continuity One Being / Elder Gods / Kamidogu Facts without rewriting their meaning around MK11 terminology.
-- [x] Add Kronika as a Reboot-continuity Character.
-- [x] Add canon Reboot Facts for Kronika as Keeper of Time and Titan from MK11 story evidence.
-- [x] Keep Kronika's rewind/restart objective explicitly represented as a plan rather than proof every intended outcome occurred.
-- [x] Add the sourced claim that Kronika had restarted time on countless previous occasions while keeping it Reboot-only.
-- [x] Preserve official `creator of existence` promotional wording as `supplemental` instead of silently strengthening it into an in-game realm-creation mechanism.
-- [x] Add a data-driven `/cosmology` Original/Reboot reader with Fact status and source drill-down.
-- [x] Make the comparison guardrails explicit: no Kronika = One Being identity, no Titan → Elder God → One Being hierarchy, and no automatic cross-continuity retcon.
-- [x] Add a global `Cosmology` navigation entry.
+This slice stress-tests claim-history presentation with a stable character whose titles, marriage evidence, and spouse-death history vary across continuities.
+
+- [x] Start exactly from verified PR #21 merge commit `d85d2cc728b160ae06f0bb061c849eb37c07b9b3`.
+- [x] Expand stable Sindel and Jerrod Character coverage across Original, Reboot, and New Era rather than creating duplicate continuity-specific people.
+- [x] Add `has_royal_role` Facts with source-specific wording: Original `Queen of Edenia`, Reboot `Shao Kahn's Empress`, New Era `Empress of Outworld`.
+- [x] Add `spouse_of = Jerrod` across all three continuities while preserving Original ending evidence as `supplemental` and Reboot/New Era story evidence as `canon`.
+- [x] Add Original canon `Jerrod killed_by Shao Kahn` from Deception dialogue and Reboot canon `Jerrod killed_by Sindel` from Aftermath as value variation without automatic retcon semantics.
+- [x] Add the narrower New Era `Jerrod was_murdered = true` outcome without inventing his killer.
+- [x] Preserve transcript/preservation mirrors as access infrastructure rather than canonical authority.
+- [x] Add `/claims?q=Sindel` focused entry behavior using static-page-safe `useSearchParams` under Suspense.
+- [x] Make same-value cross-continuity agreement and canon-status variation visible simultaneously in claim-family presentation.
+- [x] Use the neutral external evidence label `Source` instead of implying every mirror URL is official.
 - [x] Add/index a slice-specific manual verification checklist with short maintainer test cases.
-- [x] Review/update CHANGELOG for this slice.
-- [x] Open draft PR #21.
-- [x] Recheck MK11 source wording and source-access provenance after the first implementation pass.
+- [x] Recheck the high-risk source wording: Deception Queen/Jerrod attribution, Aftermath Empress/Jerrod-killer wording, and MK1 Empress/late-husband/murder wording.
+- [x] Review/update CHANGELOG and record the durable no-schema claim-history result in LORE_MODEL.
+- [x] Open draft PR #22.
 - [x] Maintainer manual UI/source pass completed.
-- [x] Record the durable model result: existing Character + Fact + Source + timeline scoping is sufficient for this cross-continuity cosmology case; no schema change required.
-- [x] Final AGENTS + LORE_MODEL + DoD review completed; changed-file scope, source strength, plan semantics, continuity separation, and documentation ownership rechecked with no unresolved review threads or known correctness blockers.
+- [x] Final AGENTS + LORE_MODEL + DoD review completed; scope, source strength, continuity separation, claim-family semantics, documentation ownership, and manual findings rechecked with no known correctness blocker.
 - Current-head CI must be green before Ready for review; CI state is owned by the PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
 ### Next lore slices
 
-1. Original/Reboot/New Era Sindel comparison through claim history.
-2. Revisit exact MKII/MK3/MK4 individual-victor attribution only if direct later Original evidence supports it.
+1. Revisit exact MKII/MK3/MK4 individual-victor attribution only if direct later Original evidence supports it.
 
 ### Phase 5 acceptance criteria
 
@@ -214,8 +220,12 @@ A user should be able to:
 27. follow Shinnok's sourced release of Onaga into his original body without an invented awakening Realm;
 28. compare Deception's Original cosmology with MK11's Kronika framework side by side without being told the two are one hierarchy, one entity, or an automatic retcon;
 29. distinguish direct in-game Kronika claims from stronger-sounding official promotional wording that remains supplemental;
-30. see intentional causal and continuity gaps where sources do not establish a direct connection;
-31. navigate documentation without conflicting live-status claims.
+30. compare Sindel's royal role across Original, Reboot, and New Era without normalizing distinct source wording into one synthetic title;
+31. see Jerrod as Sindel's spouse across all three continuities while retaining each Fact's own evidence strength;
+32. compare Original and Reboot Jerrod-killer attribution as scoped value variation rather than an automatic global retcon;
+33. see the New Era murder outcome without an invented killer when MK1 does not identify one in the evidence used;
+34. see intentional causal and continuity gaps where sources do not establish a direct connection;
+35. navigate documentation without conflicting live-status claims.
 
 Manual verification procedures are indexed in `docs/README.md`. Final readiness is governed by `docs/DEFINITION_OF_DONE.md`.
 

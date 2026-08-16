@@ -1,0 +1,12 @@
+{
+  "id": "fact-sindel-royal-role-original",
+  "type": "fact",
+  "name": "Sindel is Queen of Edenia",
+  "subjectId": "sindel",
+  "predicate": "has_royal_role",
+  "value": "Queen of Edenia",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkd-konquest"],
+  "notes": "Deception's Konquest material identifies Sindel as Queen Sindel in Edenia. This role is scoped to the Original continuity and is not projected into later timelines."
+}

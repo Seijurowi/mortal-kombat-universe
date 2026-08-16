@@ -1,0 +1,12 @@
+{
+  "id": "fact-jerrod-murdered-new-era",
+  "type": "fact",
+  "name": "Jerrod was murdered in the New Era",
+  "subjectId": "jerrod",
+  "predicate": "was_murdered",
+  "value": true,
+  "timelineIds": ["new-era"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk1-story"],
+  "notes": "Mortal Kombat 1 states that Jerrod was murdered but the story evidence used here does not identify his killer. The Fact therefore preserves the broad murder outcome without backfilling an actor from another continuity."
+}

@@ -1,0 +1,12 @@
+{
+  "id": "fact-sindel-royal-role-reboot",
+  "type": "fact",
+  "name": "Sindel is Shao Kahn's Empress",
+  "subjectId": "sindel",
+  "predicate": "has_royal_role",
+  "value": "Shao Kahn's Empress",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk11-aftermath-story"],
+  "notes": "Aftermath directly describes Sindel as Shao Kahn's Empress and repeatedly addresses her as Empress Sindel. This Reboot-continuity wording is kept narrow instead of normalizing it to another continuity's title."
+}

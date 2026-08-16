@@ -1,0 +1,12 @@
+{
+  "id": "fact-sindel-spouse-jerrod-new-era",
+  "type": "fact",
+  "name": "Jerrod was Sindel's husband",
+  "subjectId": "sindel",
+  "predicate": "spouse_of",
+  "objectId": "jerrod",
+  "timelineIds": ["new-era"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk1-story"],
+  "notes": "Mortal Kombat 1 has Sindel honor her late husband Jerrod and later reunites the two when Jerrod's soul takes control of Ermac. This establishes their New Era marriage independently of other continuities."
+}

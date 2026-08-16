@@ -1,0 +1,12 @@
+{
+  "id": "fact-sindel-royal-role-new-era",
+  "type": "fact",
+  "name": "Sindel is Empress of Outworld",
+  "subjectId": "sindel",
+  "predicate": "has_royal_role",
+  "value": "Empress of Outworld",
+  "timelineIds": ["new-era"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk1-story"],
+  "notes": "Mortal Kombat 1 repeatedly addresses Sindel as Empress and presents her as Outworld's ruler. This New Era role remains independently scoped even though its displayed value matches the Reboot role."
+}
