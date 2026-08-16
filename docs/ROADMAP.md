@@ -30,9 +30,9 @@ Complete and merged. Delivered `/claims`, evidence-safe claim-family labels, sou
 
 **Status: in progress.**
 
-**Current work:** Original-continuity **Onaga return and post-Deception fate** in PR #20 on `agent/phase5-onaga-return-fate`, branched exactly from verified PR #19 merge commit `4bb9b03afc744c8152e56fe88b1cd5d9eebe40bd`. The slice preserves ending-only detail at ending strength, uses later Armageddon biographies to establish the narrower Reptile-host and Nightwolf-binding outcomes, keeps Shujinko's broad responsibility for allowing Onaga's return separate from an invented physical-return causal mechanism, and follows Shinnok's later release of Onaga into his original body. Implementation, docs/CHANGELOG sync, source recheck, maintainer visual pass, and final AGENTS/LORE_MODEL/DoD review are complete. Ready for review requires green CI on the current final head; merge remains an explicit user/maintainer action.
+**Current work:** **Deception cosmology vs MK11 Titan/Kronika comparison** in draft PR #21 on `agent/phase5-kronika-cosmology-comparison`, branched exactly from verified PR #20 merge commit `5ab9a24305325bfc33f8dc957ad4324f69ff6e2d`. The slice adds scoped Reboot-continuity Kronika evidence and a data-driven `/cosmology` comparison beside the existing Original-continuity One Being / Elder Gods framework. It must preserve continuity boundaries, keep official promotional wording at its actual evidence strength, and avoid inventing a Titan/Elder God/One Being hierarchy, Kronika/One Being identity, or automatic cross-continuity retcon. Implementation, documentation, source recheck, maintainer visual pass, final contract review, and final-head CI are completed incrementally before Ready for review; merge remains an explicit user/maintainer action.
 
-Goal: expand from character-scale lore into ancient and Original-continuity history while preserving source, continuity, causality, and evidence caveats instead of presenting one synthetic canon narrative.
+Goal: expand from character-scale lore into ancient history and cosmology while preserving source, continuity, causality, and evidence caveats instead of presenting one synthetic canon narrative.
 
 ### Completed Phase 5 slices
 
@@ -143,35 +143,42 @@ Goal: expand from character-scale lore into ancient and Original-continuity hist
 - first useful real same-continuity `retconned` claim family works without `contradicts` / `supersedes` schema.
 - merged as `4bb9b03afc744c8152e56fe88b1cd5d9eebe40bd` after manual/source review and final-head CI.
 
-### Current Onaga return and post-Deception fate 🔨 — PR #20
+#### Onaga return and post-Deception fate ✅ — PR #20
+- Reptile and Nightwolf Original-continuity coverage added for the return/fate chain.
+- Deadly Alliance Reptile ending remains ending-strength evidence while later Armageddon material confirms the narrower Reptile-host outcome.
+- Shujinko's broad responsibility for allowing Onaga's return stays separate from any invented `gathers Kamidogu → physical return` causal edge.
+- Shujinko's final blow and Nightwolf's soul binding share one story moment without a causal edge between them.
+- Shinnok's release of Onaga from the Netherrealm leads to Onaga awakening in his original body; the awakening Realm remains unasserted.
+- Onaga's soul is not modeled as destroyed after Deception.
+- merged as `5ab9a24305325bfc33f8dc957ad4324f69ff6e2d` after manual/source review, short maintainer test cases, and final-head CI.
 
-This slice strengthens the bridge between Deadly Alliance/Deception and Armageddon while testing ending evidence against later primary corroboration.
+### Current Deception vs MK11 cosmology comparison 🔨 — PR #21
 
-- [x] Start exactly from verified PR #19 merge commit `4bb9b03afc744c8152e56fe88b1cd5d9eebe40bd`.
-- [x] Add Reptile and Nightwolf Original-continuity Character coverage needed by the sourced return/fate chain.
-- [x] Preserve the Deadly Alliance Reptile ending's egg/energy transformation as ending-level detail rather than wholesale canon.
-- [x] Use later Armageddon material to establish the narrower canon claim that Reptile served as Onaga's host body.
-- [x] Add a broad canon Fact that Shujinko allowed/enabled Onaga's return without inventing a specific `Kamidogu gathering → physical return` causal edge.
-- [x] Move the old Shujinko shatter/defeat placeholder orders into the post-Deadly-Alliance Deception chronology.
-- [x] Preserve `Kamidogu shattering → Onaga defeat` as the sourced causal edge.
-- [x] Add Nightwolf's later-confirmed imprisonment/binding of Onaga's soul in the Netherrealm.
-- [x] Represent Shujinko's final blow and Nightwolf's binding as the same story moment while keeping them causally disconnected.
-- [x] Do not model Onaga's soul as destroyed after Deception.
-- [x] Add Shinnok's explicit release of Onaga from the Netherrealm and the resulting awakening in Onaga's original body.
-- [x] Keep the original-body awakening Realm empty because the source does not establish its structured location.
+This slice tests whether the existing model can present materially different cosmological frameworks across continuities without forcing them into one hierarchy or treating variation as an automatic retcon.
+
+- [x] Start exactly from verified PR #20 merge commit `5ab9a24305325bfc33f8dc957ad4324f69ff6e2d`.
+- [x] Reuse the existing Original-continuity One Being / Elder Gods / Kamidogu Facts without rewriting their meaning around MK11 terminology.
+- [x] Add Kronika as a Reboot-continuity Character.
+- [x] Add canon Reboot Facts for Kronika as Keeper of Time and Titan from MK11 story evidence.
+- [x] Keep Kronika's rewind/restart objective explicitly represented as a plan rather than proof every intended outcome occurred.
+- [x] Add the sourced claim that Kronika had restarted time on countless previous occasions while keeping it Reboot-only.
+- [x] Preserve official `creator of existence` promotional wording as `supplemental` instead of silently strengthening it into an in-game realm-creation mechanism.
+- [x] Add a data-driven `/cosmology` Original/Reboot reader with Fact status and source drill-down.
+- [x] Make the comparison guardrails explicit: no Kronika = One Being identity, no Titan → Elder God → One Being hierarchy, and no automatic cross-continuity retcon.
+- [x] Add a global `Cosmology` navigation entry.
 - [x] Add/index a slice-specific manual verification checklist with short maintainer test cases.
-- [x] Source wording rechecked against the Deadly Alliance/Deception endings and later Armageddon biographies.
-- [x] Maintainer visual pass reported as looking correct.
 - [x] Review/update CHANGELOG for this slice.
-- [x] Final AGENTS + LORE_MODEL + DoD review complete; changed-file scope and causal/Realm/source-strength semantics rechecked with no unresolved review threads or known correctness blockers.
+- [x] Open draft PR #21.
+- [ ] Recheck MK11 source wording and source-access provenance after the first implementation pass.
+- [ ] Maintainer manual UI/source pass completed.
+- [ ] Final AGENTS + LORE_MODEL + DoD review completed.
 - Current-head CI must be green before Ready for review; CI state is owned by the PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
 ### Next lore slices
 
-1. Deception cosmology vs MK11 Titan/Kronika comparison without flattening continuities.
-2. Original/Reboot/New Era Sindel comparison through claim history.
-3. Revisit exact MKII/MK3/MK4 individual-victor attribution only if direct later Original evidence supports it.
+1. Original/Reboot/New Era Sindel comparison through claim history.
+2. Revisit exact MKII/MK3/MK4 individual-victor attribution only if direct later Original evidence supports it.
 
 ### Phase 5 acceptance criteria
 
@@ -204,8 +211,10 @@ A user should be able to:
 25. follow Onaga's Reptile-host return and post-Deception soul/body state without canonizing every ending detail or turning simultaneity into causality;
 26. see Nightwolf's Netherrealm binding and Shujinko's final blow as one story moment but separate causal components;
 27. follow Shinnok's sourced release of Onaga into his original body without an invented awakening Realm;
-28. see intentional causal gaps where sources establish sequence/context but not direct causation;
-29. navigate documentation without conflicting live-status claims.
+28. compare Deception's Original cosmology with MK11's Kronika framework side by side without being told the two are one hierarchy, one entity, or an automatic retcon;
+29. distinguish direct in-game Kronika claims from stronger-sounding official promotional wording that remains supplemental;
+30. see intentional causal and continuity gaps where sources do not establish a direct connection;
+31. navigate documentation without conflicting live-status claims.
 
 Manual verification procedures are indexed in `docs/README.md`. Final readiness is governed by `docs/DEFINITION_OF_DONE.md`.
 
