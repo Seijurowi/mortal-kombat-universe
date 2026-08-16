@@ -30,7 +30,7 @@ Complete and merged. Delivered `/claims`, evidence-safe claim-family labels, sou
 
 **Status: in progress.**
 
-**Current work:** **Original/Reboot/New Era Sindel comparison through claim history** in draft PR #22 on `agent/phase5-sindel-claim-history`, branched exactly from verified PR #21 merge commit `d85d2cc728b160ae06f0bb061c849eb37c07b9b3`. The slice expands stable Sindel/Jerrod identity across the three continuities, adds scoped royal-role, spouse, and Jerrod-death Facts, and stress-tests `/claims` when same-value cross-continuity agreement coexists with different evidence strength. It must not import a killer into New Era, normalize distinct titles merely to make values match, or treat cross-continuity actor variation as an automatic retcon. Source recheck, documentation sync, manual review, final contract review, and final-head CI are completed before Ready for review; merge remains an explicit user/maintainer action.
+**Current work:** **Original/Reboot/New Era Sindel comparison through claim history** in PR #22 on `agent/phase5-sindel-claim-history`, branched exactly from verified PR #21 merge commit `d85d2cc728b160ae06f0bb061c849eb37c07b9b3`. The slice expands stable Sindel/Jerrod identity across the three continuities, adds scoped royal-role, spouse, and Jerrod-death Facts, and stress-tests `/claims` when same-value cross-continuity agreement coexists with different evidence strength. It does not import a killer into New Era, normalize distinct titles merely to make values match, or treat cross-continuity actor variation as an automatic retcon. Source recheck, documentation sync, maintainer manual UI/source pass, and final AGENTS/LORE_MODEL/DoD review are complete; final-head CI remains the required automated readiness gate and merge remains an explicit user/maintainer action.
 
 Goal: expand from character-scale lore into ancient history and cosmology while preserving source, continuity, causality, and evidence caveats instead of presenting one synthetic canon narrative.
 
@@ -178,8 +178,8 @@ This slice stress-tests claim-history presentation with a stable character whose
 - [x] Recheck the high-risk source wording: Deception Queen/Jerrod attribution, Aftermath Empress/Jerrod-killer wording, and MK1 Empress/late-husband/murder wording.
 - [x] Review/update CHANGELOG and record the durable no-schema claim-history result in LORE_MODEL.
 - [x] Open draft PR #22.
-- [ ] Maintainer manual UI/source pass completed.
-- [ ] Final AGENTS + LORE_MODEL + DoD review completed.
+- [x] Maintainer manual UI/source pass completed.
+- [x] Final AGENTS + LORE_MODEL + DoD review completed; scope, source strength, continuity separation, claim-family semantics, documentation ownership, and manual findings rechecked with no known correctness blocker.
 - Current-head CI must be green before Ready for review; CI state is owned by the PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
