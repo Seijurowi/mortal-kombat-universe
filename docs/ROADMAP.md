@@ -168,7 +168,7 @@ This slice stress-tests claim-history presentation with a stable character whose
 - [x] Expand stable Sindel and Jerrod Character coverage across Original, Reboot, and New Era rather than creating duplicate continuity-specific people.
 - [x] Add `has_royal_role` Facts with source-specific wording: Original `Queen of Edenia`, Reboot `Shao Kahn's Empress`, New Era `Empress of Outworld`.
 - [x] Add `spouse_of = Jerrod` across all three continuities while preserving Original ending evidence as `supplemental` and Reboot/New Era story evidence as `canon`.
-- [x] Add Original ending-level `Jerrod killed_by Shao Kahn` and Reboot canon `Jerrod killed_by Sindel` as value variation without automatic retcon semantics.
+- [x] Add Original canon `Jerrod killed_by Shao Kahn` from Deception dialogue and Reboot canon `Jerrod killed_by Sindel` from Aftermath as value variation without automatic retcon semantics.
 - [x] Add the narrower New Era `Jerrod was_murdered = true` outcome without inventing his killer.
 - [x] Preserve transcript/preservation mirrors as access infrastructure rather than canonical authority.
 - [x] Add `/claims?q=Sindel` focused entry behavior using static-page-safe `useSearchParams` under Suspense.
