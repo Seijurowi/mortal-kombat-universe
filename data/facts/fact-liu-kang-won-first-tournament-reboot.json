@@ -1,0 +1,12 @@
+{
+  "id": "fact-liu-kang-won-first-tournament-reboot",
+  "type": "fact",
+  "name": "Liu Kang won the first tournament in the altered timeline",
+  "subjectId": "liu-kang",
+  "predicate": "won",
+  "value": "first Mortal Kombat tournament in the altered timeline",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) story mode directly shows Liu Kang defeating Goro and then Shang Tsung at the end of the first tournament."
+}
