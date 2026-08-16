@@ -6,8 +6,8 @@
   "participantIds": ["raiden"],
   "realmIds": ["earthrealm"],
   "causeEventIds": [],
-  "consequenceEventIds": ["mk9-tournament"],
+  "consequenceEventIds": [],
   "order": 200,
-  "description": "At Armageddon's end, Raiden's warning creates the altered continuity explored from MK9 onward.",
+  "description": "At Armageddon's end, Raiden sends a warning to his past self, creating the altered continuity explored from MK9 onward without implying that the warning caused the Mortal Kombat tournament itself to occur.",
   "tags": ["time", "reset"]
 }
