@@ -2,6 +2,30 @@
 
 Use this checklist for the Original-continuity Onaga return/post-Deception slice. These boxes are a repeatable human procedure, not live completion state; `ROADMAP.md` owns current status.
 
+## Quick maintainer test cases
+
+These are the short manual checks to run first when reviewing the PR UI.
+
+1. **Onaga return / host body**
+   - Open Onaga in Original continuity and follow the return-era Event/Fact links.
+   - Expect: Reptile is visible as Onaga's host body and the claim is `canon` from later corroboration.
+   - Must not say: the full Deadly Alliance dragon-egg/energy sequence is independently confirmed canon in every detail.
+2. **Deception defeat + Nightwolf binding**
+   - Open `/causality` in Original continuity around the Deception events.
+   - Expect: `Shujinko defeats Onaga` and `Nightwolf binds Onaga's soul in the Netherrealm` occupy the same story moment and remain separate causal components.
+   - Must not show: `Shujinko defeats Onaga → Nightwolf binds Onaga` as a causal arrow.
+3. **Onaga soul state**
+   - Open Onaga/Nightwolf facts and sources after the Deception defeat.
+   - Expect: Nightwolf imprisoned/bound Onaga's soul in the Netherrealm.
+   - Must not say: Shujinko permanently destroyed Onaga's soul.
+4. **Armageddon return**
+   - Follow `Shinnok frees Onaga from the Netherrealm → Onaga awakens in his original body`.
+   - Expect: this one causal edge is present because Onaga's biography explicitly supplies the sequence.
+   - Must not infer: a Realm for the awakening itself when the source does not establish one.
+5. **Source-strength sanity check**
+   - Open the Reptile and Nightwolf Deception-era ending Sources plus later Armageddon biographies.
+   - Expect: endings remain identifiable as ending evidence; later bios are used only to promote the narrower outcomes they actually corroborate.
+
 ## Source and continuity
 
 - [ ] Filter/read the Original continuity only; no Reboot or New Era Onaga/cosmology claim is projected into this slice.
@@ -20,7 +44,7 @@ Use this checklist for the Original-continuity Onaga return/post-Deception slice
 - [ ] Confirm `Shujinko shatters the Kamidogu` and `Shujinko defeats Onaga` were moved from their old early Phase 5 placeholder order into the post-Deadly-Alliance Deception chronology.
 - [ ] Confirm shattering the Kamidogu remains the explicit cause of Shujinko's defeat Event because the Deception ending directly says the shattering weakened Onaga before Shujinko attacked him.
 - [ ] Confirm the broad Fact `Shujinko allowed Onaga to return` does not create a synthetic `gathers Kamidogu → Onaga returns` causal edge.
-- [ ] Confirm `Nightwolf binds Onaga's soul in the Netherrealm` remains causally disconnected from `Shujinko defeats Onaga`; Onaga describes the outside force acting simultaneously with the final blow, not the final blow causing the binding.
+- [ ] Confirm `Nightwolf binds Onaga's soul in the Netherrealm` and `Shujinko defeats Onaga` share the same story order/moment, while remaining causally disconnected; Onaga describes the outside force acting simultaneously with the final blow, not the final blow causing the binding.
 - [ ] Confirm Nightwolf + Onaga are the binding Event participants and `netherrealm` is the Event Realm.
 - [ ] Confirm `Shinnok frees Onaga from the Netherrealm` has Shinnok + Onaga as participants and `netherrealm` as its Realm.
 - [ ] Confirm Shinnok's release explicitly leads to `Onaga awakens in his original body`.
