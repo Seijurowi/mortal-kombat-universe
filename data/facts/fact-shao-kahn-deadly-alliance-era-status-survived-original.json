@@ -1,0 +1,12 @@
+{
+  "id": "fact-shao-kahn-deadly-alliance-era-status-survived-original",
+  "type": "fact",
+  "name": "Shao Kahn is alive after the Deadly Alliance era",
+  "subjectId": "shao-kahn",
+  "predicate": "deadly_alliance_era_status",
+  "value": "alive after Deadly Alliance",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk-deception-shao-kahn-bio", "mk-deception-goro-bio"],
+  "notes": "Shao Kahn's Deception biography is a later Original-continuity first-person biography in which he describes his current plans after Onaga's return, while Goro's Deception biography independently confirms encountering the real Shao Kahn alive. These sources establish that the real Shao Kahn is alive after the Deadly Alliance era. A separate canon Fact records Shao Kahn's earlier creation of a clone decoy, but this status Fact does not claim that the clone specifically received the Deadly Alliance attack or that the clone was the mechanism by which Shao Kahn survived that attack."
+}

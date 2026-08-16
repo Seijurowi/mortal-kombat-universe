@@ -1,0 +1,12 @@
+{
+  "id": "fact-shao-kahn-deadly-alliance-era-status-dead-retconned",
+  "type": "fact",
+  "name": "Deadly Alliance portrayed Shao Kahn as dead",
+  "subjectId": "shao-kahn",
+  "predicate": "deadly_alliance_era_status",
+  "value": "dead",
+  "timelineIds": ["original"],
+  "canonStatus": "retconned",
+  "sourceIds": ["mkda-kitana-ending"],
+  "notes": "Kitana's Deadly Alliance ending explicitly presents Shao Kahn as dead. Later Deception primary biographies establish that the real Shao Kahn had created a clone decoy, escaped, and remained alive. This Fact preserves the earlier portrayal as retconned evidence instead of deleting it or treating it as current canon."
+}

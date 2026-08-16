@@ -49,6 +49,7 @@ Manual checklists are **repeatable procedures**, not status trackers. An uncheck
 - [`PHASE5_MK4_SHINNOK_OUTCOME_MANUAL_VERIFICATION.md`](./PHASE5_MK4_SHINNOK_OUTCOME_MANUAL_VERIFICATION.md) — later-confirmed Shinnok defeat, broad-outcome-vs-individual-victor discipline, and chronology-without-fake-causality checks for the MK4 outcome.
 - [`PHASE5_MK4_QUAN_CHI_SHINNOK_ROLE_MANUAL_VERIFICATION.md`](./PHASE5_MK4_QUAN_CHI_SHINNOK_ROLE_MANUAL_VERIFICATION.md) — Quan Chi's direct MK4/Gold combat role, Kitana's sourced participation, amulet theft, Realm discipline, and separation from unsupported escape/defeat mechanisms.
 - [`PHASE5_DEADLY_ALLIANCE_BRIDGE_MANUAL_VERIFICATION.md`](./PHASE5_DEADLY_ALLIANCE_BRIDGE_MANUAL_VERIFICATION.md) — Deadly Alliance formation, explicit elimination plan, Liu Kang's death/soul consumption, plan→occurrence causality, and the deferred Shao Kahn clone/death question.
+- [`PHASE5_SHAO_KAHN_APPARENT_DEATH_MANUAL_VERIFICATION.md`](./PHASE5_SHAO_KAHN_APPARENT_DEATH_MANUAL_VERIFICATION.md) — Shao Kahn's older Deadly Alliance death portrayal, later Deception clone/survival evidence, real `retconned` claim-family behavior, and cautious target/clone attribution.
 
 For Phase 5 work, run the broad regression checklist when the change can affect shared model/UI behavior, then run the latest relevant slice-specific checklist. New large slices may get their own checklist instead of indefinitely appending duplicate detail to the cumulative file.
 
