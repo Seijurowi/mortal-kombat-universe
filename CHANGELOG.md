@@ -8,6 +8,7 @@ See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 
 ### Added
 
+- **Phase 6 Reboot timeline kickoff:** the old broad MK9 tournament anchor is narrowed to the first Earthrealm tournament, Liu Kang's first-tournament victory is recorded as a canon Fact, and Shang Tsung's later proposal for a new Outworld tournament is represented separately as plan/proposal evidence rather than silently treating the later tournament as already completed.
 - **Phase 5 Original-continuity cosmology foundation:** One Being, Elder Gods, the six Deception navigation realms, creation-myth evidence, `game_manual` sources, and Factions as valid Event participants.
 - **Onaga / Shujinko ancient-history coverage:** sourced succession, manipulation, Kamidogu, and defeat chains while preserving intentional causal gaps where evidence does not support a direct edge.
 - **Shinnok ancient-history coverage:** fall from Elder God status, war with Raiden, Netherrealm banishment, alliance with Quan Chi, Lucifer context, and later Netherrealm rulership.
@@ -35,6 +36,7 @@ See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 
 ### Changed
 
+- **Reboot event semantics:** Raiden's warning remains reset/chronology context rather than an unsupported ordinary cause of the first tournament; Bi-Han's MK9 death Event is corrected from Earthrealm to Netherrealm; Kuai Liang is removed from the first-tournament umbrella because his MK9 story participation belongs to the later Outworld phase.
 - Event `participantIds` accepts `Character | Faction`, proven by the Elder Gods acting collectively.
 - Event `realmIds` is locked to location/scope semantics; realm creation, conquest, liberation, merging, destruction, and similar action-object claims belong in sourced Facts.
 - Named local places do not automatically justify a broader Realm mapping; the Shaolin-temple case is the explicit proof example.

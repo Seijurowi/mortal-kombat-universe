@@ -26,13 +26,11 @@ Later Phase 5 work extended this capability with a continuity-wide chronology ra
 
 Complete and merged. Delivered `/claims`, evidence-safe claim-family labels, source-history ordering without newer-wins semantics, and no speculative contradiction/supersession schema.
 
-## Phase 5 — Cosmology and ancient history 🔨
+## Phase 5 — Cosmology and ancient history ✅
 
-**Status: in progress.**
+**Status: complete.**
 
-**Current work:** **Original-continuity MKII/MK3/MK4 individual-victor attribution evidence audit** in PR #23 on `agent/phase5-original-victor-attribution`, branched exactly from verified PR #22 merge commit `6de5ffb3d7b27bf10f9e7dec948338dc2e0d8889`. The slice preserves Liu Kang's MKII, MK3, and MK4 ending portrayals as ending-strength source history while testing whether any later non-ending Original-continuity source independently confirms those exact individual-victor attributions. The evidence result remains negative: existing canon outcomes stay broad, no `defeated_by = Liu Kang` canon Fact is added, and repeated protagonist endings are not treated as independent confirmation merely through repetition. Source wording/provenance, changed-file scope, maintainer manual review, and final AGENTS/LORE_MODEL/DoD review are complete; final-head CI remains the required automated readiness gate and merge remains an explicit user/maintainer action.
-
-Goal: expand from character-scale lore into ancient history and cosmology while preserving source, continuity, causality, and evidence caveats instead of presenting one synthetic canon narrative.
+Phase 5 expanded from character-scale lore into ancient history and cosmology while preserving source, continuity, causality, and evidence caveats instead of presenting one synthetic canon narrative. Its final evidence audit deliberately kept MKII/MK3/MK4 individual-victor attribution broad where later Original-continuity evidence remained broad.
 
 ### Completed Phase 5 slices
 
@@ -169,31 +167,12 @@ Goal: expand from character-scale lore into ancient history and cosmology while 
 - no schema or automatic contradiction/supersession/retcon relation was required.
 - merged as `6de5ffb3d7b27bf10f9e7dec948338dc2e0d8889` after source/manual review, final contract review, and final-head CI.
 
-### Current Original-continuity individual-victor attribution audit 🔨 — PR #23
-
-This slice reopens the deliberately deferred question of whether Liu Kang can be named as the exact individual victor for MKII, MK3, or MK4 at canon strength.
-
-- [x] Start exactly from verified PR #22 merge commit `6de5ffb3d7b27bf10f9e7dec948338dc2e0d8889`.
-- [x] Audit direct MKII Liu Kang ending attribution against later Original-continuity evidence.
-- [x] Audit direct MK3 Liu Kang ending attribution against the later MK4 broad Earth-warriors confirmation.
-- [x] Audit MK4 Liu Kang ending framing against later Armageddon broad Shinnok-defeat confirmation.
-- [x] Preserve the three Liu Kang ending works as `game_ending` Source records rather than promoting them into stronger canon Facts.
-- [x] Keep existing MK3 canon `Shao Kahn defeated_by Earth warriors` unchanged.
-- [x] Keep existing MK4 canon `Shinnok was_defeated = true` unchanged.
-- [x] Add no canon `defeated_by = Liu Kang` Fact, Event participant, causal edge, or schema change from ending repetition alone.
-- [x] Record the reusable repeated-ending evidence rule in `LORE_MODEL.md`.
-- [x] Add/index a slice-specific manual verification checklist with short maintainer test cases.
-- [x] Review/update CHANGELOG without claiming a new canon victor.
-- [x] Open draft PR #23.
-- [x] Confirm changed-file scope and final source wording/provenance after all documentation sync.
-- [x] Maintainer manual source/UI pass completed.
-- [x] Final AGENTS + LORE_MODEL + DoD review completed; ending strength, broad-vs-narrow attribution, source provenance, documentation ownership, and no-Fact/Event/schema/UI scope were rechecked with no known correctness blocker.
-- Current-head CI must be green before Ready for review; CI state is owned by the PR checks rather than duplicated as a fragile checkbox here.
-- [ ] Merge only after explicit user/maintainer action.
-
-### Next lore slices
-
-1. If the victor-attribution audit remains negative after manual review, close the Phase 5 evidence pass without inventing named victors and prepare Phase 6 systematic timeline expansion.
+#### Original-continuity individual-victor attribution audit ✅ — PR #23
+- MKII/MK3/MK4 Liu Kang endings are preserved as `game_ending` source history rather than promoted into stronger canon Facts.
+- existing MK3 canon `Shao Kahn defeated_by Earth warriors` and MK4 canon `Shinnok was_defeated = true` stay broad.
+- repeated protagonist endings do not count as independent canon confirmation merely through repetition.
+- no canon `defeated_by = Liu Kang` Fact, Event participant, causal edge, schema change, or UI change was added from ending repetition alone.
+- merged as `1369869be29b42604d2f752fb0cc2f2dbed8ec48` after manual/source review, final contract review, and final-head CI.
 
 ### Phase 5 acceptance criteria
 
@@ -238,9 +217,50 @@ A user should be able to:
 
 Manual verification procedures are indexed in `docs/README.md`. Final readiness is governed by `docs/DEFINITION_OF_DONE.md`.
 
-## Phase 6 — Systematic timeline expansion
+## Phase 6 — Systematic timeline expansion 🔨
 
-Once the model and UX are sufficiently proven, expand event-first through Original, Reboot, and New Era / MK1 / Khaos Reigns.
+**Status: in progress.**
+
+**Current work:** first Reboot-continuity MK9 event-first decomposition slice on `agent/phase6-kickoff`, branched exactly from verified PR #23 merge commit `1369869be29b42604d2f752fb0cc2f2dbed8ec48`.
+
+Kickoff coverage audit found the current Event store heavily weighted toward Original continuity: **44 Original / 7 Reboot / 3 New Era Events** before this slice. Phase 6 therefore starts by expanding the underrepresented Reboot chronology rather than adding another Original slice.
+
+### Current MK9 first-tournament decomposition
+
+- [x] Start exactly from verified PR #23 merge commit `1369869be29b42604d2f752fb0cc2f2dbed8ec48`.
+- [x] Audit continuity Event coverage and choose Reboot as the first systematic-expansion target.
+- [x] Narrow the old `mk9-tournament` umbrella to the first Earthrealm tournament only.
+- [x] Remove Kuai Liang from that first-tournament Event and add directly represented final opponents Goro and Shang Tsung.
+- [x] Separate Shang Tsung's later Outworld-tournament proposal into its own plan/proposal Event.
+- [x] Add canon Facts for Liu Kang's first-tournament victory and Shang Tsung's proposal using `mk9-story`.
+- [x] Remove the unsupported `Raiden warning → tournament occurrence` causal edge while preserving chronological/reset context.
+- [x] Correct Bi-Han's MK9 death Realm from Earthrealm to Netherrealm.
+- [x] Add/index a Phase 6 slice manual with short maintainer test cases.
+- [x] Review/update `CHANGELOG.md` for the Phase 6 kickoff outcome.
+- [x] Confirm changed-file scope after documentation sync: exactly 10 expected files, limited to MK9/Reboot data corrections plus owning docs/manual.
+- [x] Open draft PR #24 for the slice.
+- [x] Maintainer manual source/UI pass completed.
+- [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
+- Current-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
+- [ ] Merge only after explicit user/maintainer action.
+
+### Next lore slices
+
+1. Model the **actual later MK9 Outworld tournament occurrence** separately from Shang Tsung's proposal, with its own sourced participant/Realm scope and only evidence-supported causal edges.
+2. Continue event-first through the remaining MK9 invasion-era story before advancing to MKX/MK11, unless evidence/model pressure proves a smaller cross-continuity comparison is needed first.
+3. Expand New Era / MK1 / Khaos Reigns after the Reboot chronology has enough structure to make cross-continuity navigation meaningful rather than sparse anchor comparison.
+
+### Phase 6 working acceptance criteria
+
+A user should be able to:
+
+1. read Reboot chronology as distinct events rather than one broad MK9 umbrella;
+2. distinguish tournament proposals/plans from later tournament occurrences;
+3. see Event participants and Realm scope only where the source supports them;
+4. follow chronology without warning/reset context being turned into unsupported ordinary causality;
+5. trace new event assertions back to primary story Sources and atomic Facts;
+6. retain Original, Reboot, and New Era as independently inspectable continuities while coverage grows;
+7. keep existing claim-history, chronology, DAG, source, and mobile behavior trustworthy as Event volume increases.
 
 ## Later infrastructure — only when justified
 
