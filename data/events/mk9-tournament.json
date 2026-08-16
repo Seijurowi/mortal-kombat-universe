@@ -1,13 +1,13 @@
 {
   "id": "mk9-tournament",
   "type": "event",
-  "name": "MK9 tournament events",
+  "name": "First tournament in the altered timeline",
   "timelineId": "reboot",
-  "participantIds": ["liu-kang", "raiden", "bi-han", "kuai-liang", "hanzo-hasashi", "quan-chi"],
-  "realmIds": ["earthrealm", "outworld"],
-  "causeEventIds": ["raiden-message-to-past"],
-  "consequenceEventIds": [],
+  "participantIds": ["liu-kang", "raiden", "bi-han", "hanzo-hasashi", "quan-chi", "goro", "shang-tsung"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": [],
+  "consequenceEventIds": ["shang-tsung-proposes-new-tournament-reboot"],
   "order": 210,
-  "description": "The altered retelling of the early tournament era in Mortal Kombat (2011).",
+  "description": "The first Mortal Kombat tournament of the altered continuity ends with Liu Kang defeating Goro and then Shang Tsung, preserving Earthrealm's victory without folding the later Outworld tournament into the same Event.",
   "tags": ["tournament"]
 }
