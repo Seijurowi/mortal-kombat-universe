@@ -30,7 +30,7 @@ Complete and merged. Delivered `/claims`, evidence-safe claim-family labels, sou
 
 **Status: in progress.**
 
-**Current work:** Original-continuity **Shao Kahn / Deadly Alliance apparent-death stress test** in draft PR #19 on `agent/phase5-shao-kahn-apparent-death`, branched exactly from verified PR #18 merge commit `68da6291f05870187394cddc4912a56afe6ed611`. The slice preserves the older Deadly Alliance death portrayal as retconned evidence, adds later Deception clone-decoy evidence plus direct post-Deadly-Alliance evidence that the real Shao Kahn is alive, and avoids asserting that the real Shao Kahn died, that the clone specifically received the Deadly Alliance attack, or that a specific attacker killed the clone. Implementation, docs/CHANGELOG sync, maintainer manual pass, source recheck, and final AGENTS/LORE_MODEL/DoD review are complete. Ready for review requires a green CI run on the current PR head; merge remains an explicit user/maintainer action.
+**Current work:** Original-continuity **Onaga return and post-Deception fate** in PR #20 on `agent/phase5-onaga-return-fate`, branched exactly from verified PR #19 merge commit `4bb9b03afc744c8152e56fe88b1cd5d9eebe40bd`. The slice preserves ending-only detail at ending strength, uses later Armageddon biographies to establish the narrower Reptile-host and Nightwolf-binding outcomes, keeps Shujinko's broad responsibility for allowing Onaga's return separate from an invented physical-return causal mechanism, and follows Shinnok's later release of Onaga into his original body. Source recheck and maintainer visual pass are complete; final documentation synchronization, final contract review, and final-head CI are being completed before Ready for review. Merge remains an explicit user/maintainer action.
 
 Goal: expand from character-scale lore into ancient and Original-continuity history while preserving source, continuity, causality, and evidence caveats instead of presenting one synthetic canon narrative.
 
@@ -135,35 +135,43 @@ Goal: expand from character-scale lore into ancient and Original-continuity hist
 - simplistic Shao Kahn death was deliberately deferred for clone/decoy review.
 - merged as `68da6291f05870187394cddc4912a56afe6ed611` after manual/source review and final-head CI.
 
-### Current Shao Kahn / Deadly Alliance apparent-death stress test 🔨 — PR #19
+#### Shao Kahn / Deadly Alliance apparent-death stress test ✅ — PR #19
+- MKDA's first-obstacle attack is preserved without asserting the attacked figure was definitely the real Shao Kahn.
+- MKDA's explicit older death portrayal is preserved as `retconned` evidence.
+- Deception biographies establish Shao Kahn's clone-decoy escape and the real Shao Kahn alive after the Deadly Alliance era.
+- no claim says the clone specifically received the Deadly Alliance attack or identifies who killed the clone.
+- first useful real same-continuity `retconned` claim family works without `contradicts` / `supersedes` schema.
+- merged as `4bb9b03afc744c8152e56fe88b1cd5d9eebe40bd` after manual/source review and final-head CI.
 
-This slice tests the existing retcon/claim-history model against a real same-continuity death portrayal that later primary evidence complicates.
+### Current Onaga return and post-Deception fate 🔨 — PR #20
 
-- [x] Start exactly from verified PR #18 merge commit `68da6291f05870187394cddc4912a56afe6ed611`.
-- [x] Preserve MKDA's first-obstacle attack as an occurrence without asserting that the attacked figure was definitely the real Shao Kahn.
-- [x] Extend the elimination-plan causal edge to the sourced first-obstacle attack.
-- [x] Keep the attack Event's Realm empty because the MKDA story does not itself establish a precise event location.
-- [x] Add the MKDA Kitana ending as explicit older evidence portraying Shao Kahn as dead.
-- [x] Mark that older `deadly_alliance_era_status = dead` portrayal `retconned` rather than current canon.
-- [x] Add Deception Shao Kahn biography evidence that he created a clone decoy and escaped.
-- [x] Add Deception Goro biography evidence that Goro encountered the real Shao Kahn alive.
-- [x] Add current-canon `deadly_alliance_era_status = alive after Deadly Alliance` from later primary evidence.
-- [x] Keep the clone-decoy mechanism as a separate canon Fact rather than claiming the clone specifically received the Deadly Alliance attack or enabled survival from that attack.
-- [x] Exercise `/claims` with the first useful real `retconned` Fact family without adding speculative `contradicts` / `supersedes` schema.
-- [x] Add/index the slice-specific manual verification checklist.
-- [x] Review/update CHANGELOG for this slice.
-- [x] Open draft PR #19.
-- [x] Maintainer manual UI/source pass completed.
-- [x] Final AGENTS + LORE_MODEL + DoD review completed; MKDA/Deception source wording rechecked after manual review and no further semantic correction was required.
+This slice strengthens the bridge between Deadly Alliance/Deception and Armageddon while testing ending evidence against later primary corroboration.
+
+- [x] Start exactly from verified PR #19 merge commit `4bb9b03afc744c8152e56fe88b1cd5d9eebe40bd`.
+- [x] Add Reptile and Nightwolf Original-continuity Character coverage needed by the sourced return/fate chain.
+- [x] Preserve the Deadly Alliance Reptile ending's egg/energy transformation as ending-level detail rather than wholesale canon.
+- [x] Use later Armageddon material to establish the narrower canon claim that Reptile served as Onaga's host body.
+- [x] Add a broad canon Fact that Shujinko allowed/enabled Onaga's return without inventing a specific `Kamidogu gathering → physical return` causal edge.
+- [x] Move the old Shujinko shatter/defeat placeholder orders into the post-Deadly-Alliance Deception chronology.
+- [x] Preserve `Kamidogu shattering → Onaga defeat` as the sourced causal edge.
+- [x] Add Nightwolf's later-confirmed imprisonment/binding of Onaga's soul in the Netherrealm.
+- [x] Represent Shujinko's final blow and Nightwolf's binding as the same story moment while keeping them causally disconnected.
+- [x] Do not model Onaga's soul as destroyed after Deception.
+- [x] Add Shinnok's explicit release of Onaga from the Netherrealm and the resulting awakening in Onaga's original body.
+- [x] Keep the original-body awakening Realm empty because the source does not establish its structured location.
+- [x] Add/index a slice-specific manual verification checklist with short maintainer test cases.
+- [x] Source wording rechecked against the Deadly Alliance/Deception endings and later Armageddon biographies.
+- [x] Maintainer visual pass reported as looking correct.
+- [ ] Review/update CHANGELOG for this slice.
+- [ ] Final AGENTS + LORE_MODEL + DoD review complete.
 - Current-head CI must be green before Ready for review; CI state is owned by the PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
 ### Next lore slices
 
-1. Onaga resurrection/return mechanism and post-Deception fate with stronger coverage.
-2. Deception cosmology vs MK11 Titan/Kronika comparison without flattening continuities.
-3. Original/Reboot/New Era Sindel comparison through claim history.
-4. Revisit exact MKII/MK3/MK4 individual-victor attribution only if direct later Original evidence supports it.
+1. Deception cosmology vs MK11 Titan/Kronika comparison without flattening continuities.
+2. Original/Reboot/New Era Sindel comparison through claim history.
+3. Revisit exact MKII/MK3/MK4 individual-victor attribution only if direct later Original evidence supports it.
 
 ### Phase 5 acceptance criteria
 
@@ -193,8 +201,11 @@ A user should be able to:
 22. follow the Deadly Alliance into Liu Kang's death with an explicit plan→occurrence edge while formation→plan remains chronology-only;
 23. see Shang Tsung identified as Liu Kang's killer and soul-consumer without upgrading Quan Chi's assistance into a co-killer Fact;
 24. inspect the Shao Kahn Deadly Alliance-era death portrayal as retconned evidence alongside later clone-decoy and post-MKDA-alive evidence without being told that the real Shao Kahn died, that the clone received the Deadly Alliance attack, or that the sources identify who killed the clone;
-25. see intentional causal gaps where sources establish sequence/context but not direct causation;
-26. navigate documentation without conflicting live-status claims.
+25. follow Onaga's Reptile-host return and post-Deception soul/body state without canonizing every ending detail or turning simultaneity into causality;
+26. see Nightwolf's Netherrealm binding and Shujinko's final blow as one story moment but separate causal components;
+27. follow Shinnok's sourced release of Onaga into his original body without an invented awakening Realm;
+28. see intentional causal gaps where sources establish sequence/context but not direct causation;
+29. navigate documentation without conflicting live-status claims.
 
 Manual verification procedures are indexed in `docs/README.md`. Final readiness is governed by `docs/DEFINITION_OF_DONE.md`.
 
