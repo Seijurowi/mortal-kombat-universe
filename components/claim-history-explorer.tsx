@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { useSearchParams } from "next/navigation"
 import { useMemo, useState } from "react"
 import { BookOpenCheck, GitCompareArrows, History, Search } from "lucide-react"
 
@@ -73,8 +74,9 @@ function familyExplanation(group: {
   return "Multiple sourced facts share this subject and predicate. They are grouped for inspection only; the grouping does not assert contradiction or replacement."
 }
 
-export function ClaimHistoryExplorer({ data, initialQuery = "" }: { data: UniverseData; initialQuery?: string }) {
-  const [query, setQuery] = useState(initialQuery)
+export function ClaimHistoryExplorer({ data }: { data: UniverseData }) {
+  const searchParams = useSearchParams()
+  const [query, setQuery] = useState(() => searchParams.get("q") ?? "")
   const [selectedKey, setSelectedKey] = useState<string | null>(null)
 
   const entitiesById = useMemo(
