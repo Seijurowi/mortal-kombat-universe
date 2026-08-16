@@ -6,8 +6,8 @@
   "participantIds": ["shang-tsung", "shao-kahn"],
   "realmIds": ["outworld"],
   "causeEventIds": ["mk9-tournament"],
-  "consequenceEventIds": [],
+  "consequenceEventIds": ["mk9-outworld-tournament"],
   "order": 214,
-  "description": "After the failed first tournament, Shang Tsung proposes another tournament in Outworld. This record represents the proposal itself, not evidence that the later tournament has already occurred.",
+  "description": "After the failed first tournament, Shang Tsung proposes another tournament in Outworld. Mortal Kombat (2011) subsequently shows Raiden accept the terms and the proposed tournament take place as a separate occurrence.",
   "tags": ["plan", "tournament"]
 }
