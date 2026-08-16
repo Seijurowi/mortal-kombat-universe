@@ -1,0 +1,13 @@
+{
+  "id": "onaga-returns-in-reptile-host-original",
+  "type": "event",
+  "name": "Onaga returns in Reptile's host body",
+  "timelineId": "original",
+  "participantIds": ["onaga", "reptile"],
+  "realmIds": [],
+  "causeEventIds": [],
+  "consequenceEventIds": [],
+  "order": 270,
+  "description": "Onaga returns to the physical world using Reptile as his host body. Later Armageddon material confirms Reptile as the host; the more specific dragon-egg energy transformation remains an earlier Deadly Alliance ending portrayal rather than a fully promoted canonical mechanism.",
+  "tags": ["deception", "return", "host", "reptile"]
+}

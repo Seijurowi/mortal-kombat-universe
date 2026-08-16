@@ -1,0 +1,12 @@
+{
+  "id": "fact-onaga-inhabited-reptile-host-original",
+  "type": "fact",
+  "name": "Onaga inhabited Reptile as his host body",
+  "subjectId": "onaga",
+  "predicate": "inhabited_host_body",
+  "objectId": "reptile",
+  "timelineIds": ["original"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkda-reptile-ending", "mk-armageddon-shujinko-bio", "mk-armageddon-onaga-bio"],
+  "notes": "Reptile's Deadly Alliance ending supplies the older detailed return portrayal. Armageddon later independently identifies the collapsed host as Reptile while Onaga describes being expelled from his host body, supporting the narrower host-body claim without canonizing every ending detail."
+}

@@ -1,0 +1,13 @@
+{
+  "id": "onaga-awakens-original-body-original",
+  "type": "event",
+  "name": "Onaga awakens in his original body",
+  "timelineId": "original",
+  "participantIds": ["onaga"],
+  "realmIds": [],
+  "causeEventIds": ["shinnok-frees-onaga-from-netherrealm-original"],
+  "consequenceEventIds": [],
+  "order": 291,
+  "description": "After Shinnok releases his soul from the Netherrealm binding, Onaga awakens in his original body. The source does not establish a structured Realm for the awakening itself, so the Event location remains empty.",
+  "tags": ["armageddon", "return", "original-body"]
+}

@@ -7,7 +7,7 @@
   "realmIds": ["outworld"],
   "causeEventIds": [],
   "consequenceEventIds": ["shujinko-defeats-onaga-original"],
-  "order": 90,
+  "order": 280,
   "description": "Shujinko destroys the Kamidogu that are the source of Onaga's invulnerability, weakening the Dragon King.",
   "tags": ["deception", "kamidogu", "weakening"]
 }
