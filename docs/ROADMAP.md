@@ -236,11 +236,11 @@ Kickoff coverage audit found the current Event store heavily weighted toward Ori
 - [x] Remove the unsupported `Raiden warning → tournament occurrence` causal edge while preserving chronological/reset context.
 - [x] Correct Bi-Han's MK9 death Realm from Earthrealm to Netherrealm.
 - [x] Add/index a Phase 6 slice manual with short maintainer test cases.
-- [ ] Review/update `CHANGELOG.md` for the Phase 6 kickoff outcome.
-- [ ] Confirm changed-file scope after documentation sync.
-- [ ] Open draft PR for the slice.
-- [ ] Maintainer manual source/UI pass completed.
-- [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
+- [x] Review/update `CHANGELOG.md` for the Phase 6 kickoff outcome.
+- [x] Confirm changed-file scope after documentation sync: exactly 10 expected files, limited to MK9/Reboot data corrections plus owning docs/manual.
+- [x] Open draft PR #24 for the slice.
+- [x] Maintainer manual source/UI pass completed.
+- [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
 - Current-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
