@@ -1,0 +1,13 @@
+{
+  "id": "shang-tsung-proposes-new-tournament-reboot",
+  "type": "event",
+  "name": "Shang Tsung proposes a new Outworld tournament",
+  "timelineId": "reboot",
+  "participantIds": ["shang-tsung", "shao-kahn"],
+  "realmIds": ["outworld"],
+  "causeEventIds": ["mk9-tournament"],
+  "consequenceEventIds": [],
+  "order": 214,
+  "description": "After the failed first tournament, Shang Tsung proposes another tournament in Outworld. This record represents the proposal itself, not evidence that the later tournament has already occurred.",
+  "tags": ["plan", "tournament"]
+}
