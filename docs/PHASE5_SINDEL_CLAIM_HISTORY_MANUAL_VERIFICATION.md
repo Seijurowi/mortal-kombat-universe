@@ -5,7 +5,7 @@ Use this checklist for the Original / Reboot / New Era Sindel comparison. These 
 ## Short maintainer test cases
 
 1. **Open `/claims?q=Sindel`** — the search should already be filtered to Sindel-related claim families.
-2. **Royal-role family** — expect `has_royal_role` to show Original `Queen of Edenia`, Reboot `Empress of Outworld`, and New Era `Empress of Outworld`; it must be labelled value variation rather than retcon evidence.
+2. **Royal-role family** — expect `has_royal_role` to show Original `Queen of Edenia`, Reboot `Shao Kahn's Empress`, and New Era `Empress of Outworld`; it must be labelled value variation rather than retcon evidence.
 3. **Jerrod spouse family** — expect `spouse_of = Jerrod` across all three continuities. Original remains `supplemental`; Reboot and New Era are `canon`. The family should expose both cross-continuity agreement and canon-status variation.
 4. **Jerrod killer family** — expect Original ending evidence to attribute Jerrod's death to Shao Kahn at `supplemental` strength and Reboot Aftermath to attribute it to Sindel at `canon` strength. The UI must not claim one continuity automatically supersedes the other.
 5. **New Era murder boundary** — expect a separate New Era `was_murdered = true` Fact with no invented killer. Do not backfill Shao Kahn or Sindel into MK1 merely to complete the comparison.
@@ -18,15 +18,15 @@ Use this checklist for the Original / Reboot / New Era Sindel comparison. These 
 - [ ] Confirm Original, Reboot, and New Era Facts each declare only their own timeline scope.
 - [ ] Confirm no Fact is marked `retconned` solely because a different continuity records another value.
 - [ ] Confirm the MK3 Sindel-ending relationship/death details remain `supplemental` where no stronger direct Original evidence is being asserted by this slice.
-- [ ] Confirm Aftermath directly supports Jerrod as Sindel's first husband and Sindel as Jerrod's killer in Reboot continuity.
-- [ ] Confirm MK1 directly supports Sindel as Empress, Jerrod as her late husband, and Jerrod having been murdered.
+- [ ] Confirm Aftermath directly supports Jerrod as Sindel's first husband, Sindel as Shao Kahn's Empress, and Sindel as Jerrod's killer in Reboot continuity.
+- [ ] Confirm MK1 directly supports Sindel as Empress of Outworld, Jerrod as her late husband, and Jerrod having been murdered.
 - [ ] Confirm MK1 evidence used here does not identify Jerrod's killer and the data does not invent one.
-- [ ] Confirm Deception material supports Sindel's Original-continuity Queen role.
+- [ ] Confirm Deception material supports Sindel's Original-continuity Queen of Edenia role and the separate Jerrod/Shao Kahn historical attribution used by the source record.
 
 ## Claim-history behavior
 
 - [ ] Open `/claims?q=Sindel` and confirm the URL query initializes the visible search field.
-- [ ] Confirm `has_royal_role` has three records across three timelines and two displayed values.
+- [ ] Confirm `has_royal_role` has three records across three timelines and three source-specific displayed values.
 - [ ] Confirm the role family explanation says value variation is not itself contradiction or retcon proof.
 - [ ] Confirm `spouse_of` has one displayed value across three timelines while preserving different canon statuses on individual records.
 - [ ] Confirm the spouse family label/explanation explicitly exposes cross-continuity agreement plus status variation.
