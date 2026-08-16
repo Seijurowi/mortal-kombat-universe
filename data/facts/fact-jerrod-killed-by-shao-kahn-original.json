@@ -1,12 +1,12 @@
 {
   "id": "fact-jerrod-killed-by-shao-kahn-original",
   "type": "fact",
-  "name": "Original ending material attributes Jerrod's death to Shao Kahn",
+  "name": "Shao Kahn killed Jerrod",
   "subjectId": "jerrod",
   "predicate": "killed_by",
   "objectId": "shao-kahn",
   "timelineIds": ["original"],
-  "canonStatus": "supplemental",
-  "sourceIds": ["mk3-sindel-ending"],
-  "notes": "Sindel's MK3 ending attributes King Jerrod's death to Shao Kahn. This remains supplemental ending evidence here rather than being promoted into a stronger universal death account."
+  "canonStatus": "canon",
+  "sourceIds": ["mkd-konquest"],
+  "notes": "Deception's Edenia Konquest dialogue directly identifies a statue as King Jerrod and states that he was killed by Shao Kahn. This is scoped to Original continuity and does not identify the killer in another continuity."
 }
