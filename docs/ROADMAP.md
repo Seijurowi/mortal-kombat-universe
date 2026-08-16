@@ -30,7 +30,7 @@ Complete and merged. Delivered `/claims`, evidence-safe claim-family labels, sou
 
 **Status: in progress.**
 
-**Current work:** Original-continuity **Onaga return and post-Deception fate** in PR #20 on `agent/phase5-onaga-return-fate`, branched exactly from verified PR #19 merge commit `4bb9b03afc744c8152e56fe88b1cd5d9eebe40bd`. The slice preserves ending-only detail at ending strength, uses later Armageddon biographies to establish the narrower Reptile-host and Nightwolf-binding outcomes, keeps Shujinko's broad responsibility for allowing Onaga's return separate from an invented physical-return causal mechanism, and follows Shinnok's later release of Onaga into his original body. Source recheck and maintainer visual pass are complete; final documentation synchronization, final contract review, and final-head CI are being completed before Ready for review. Merge remains an explicit user/maintainer action.
+**Current work:** Original-continuity **Onaga return and post-Deception fate** in PR #20 on `agent/phase5-onaga-return-fate`, branched exactly from verified PR #19 merge commit `4bb9b03afc744c8152e56fe88b1cd5d9eebe40bd`. The slice preserves ending-only detail at ending strength, uses later Armageddon biographies to establish the narrower Reptile-host and Nightwolf-binding outcomes, keeps Shujinko's broad responsibility for allowing Onaga's return separate from an invented physical-return causal mechanism, and follows Shinnok's later release of Onaga into his original body. Implementation, docs/CHANGELOG sync, source recheck, maintainer visual pass, and final AGENTS/LORE_MODEL/DoD review are complete. Ready for review requires green CI on the current final head; merge remains an explicit user/maintainer action.
 
 Goal: expand from character-scale lore into ancient and Original-continuity history while preserving source, continuity, causality, and evidence caveats instead of presenting one synthetic canon narrative.
 
@@ -162,8 +162,8 @@ This slice strengthens the bridge between Deadly Alliance/Deception and Armagedd
 - [x] Add/index a slice-specific manual verification checklist with short maintainer test cases.
 - [x] Source wording rechecked against the Deadly Alliance/Deception endings and later Armageddon biographies.
 - [x] Maintainer visual pass reported as looking correct.
-- [ ] Review/update CHANGELOG for this slice.
-- [ ] Final AGENTS + LORE_MODEL + DoD review complete.
+- [x] Review/update CHANGELOG for this slice.
+- [x] Final AGENTS + LORE_MODEL + DoD review complete; changed-file scope and causal/Realm/source-strength semantics rechecked with no unresolved review threads or known correctness blockers.
 - Current-head CI must be green before Ready for review; CI state is owned by the PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
