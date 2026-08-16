@@ -125,7 +125,7 @@ Examples:
 - MKII Liu Kang biography supports the narrower first-tournament-control outcome;
 - MK4 story supports that Shao Kahn was defeated by Earth warriors after MK3, but does not by itself establish Liu Kang as the individual victor.
 
-Reusable rule: **broad confirmation stays broad**. Do not strengthen later evidence into a more specific actor, method, death, or causal chain than the source establishes.
+Reusable rule: **broad confirmation stays broad**. Do not strengthen later evidence into a more specific actor, method, death, or causal chain than the source establishes. The same rule applies across continuity comparison: a New Era source saying Jerrod was murdered does not license importing a killer from Original or Reboot evidence.
 
 ## 7. Qualified states stay qualified
 
@@ -185,6 +185,8 @@ Treat retcon, continuity divergence, alternate portrayal, uncertainty, and ordin
 - `unconfirmed` means evidence is insufficient for stronger status.
 - claim-family grouping by `subject + predicate` is presentation only and does not create contradiction semantics.
 - source year is evidence-history context, not canonical priority.
+- the same displayed claim may appear in multiple continuities with different canon statuses; presentation should expose both the cross-continuity agreement and the record-specific evidence strength instead of flattening one into the other.
+- a cross-continuity change in actor attribution, such as Jerrod's killer, is value variation until stronger same-continuity evidence proves a retcon relationship; do not manufacture `retconned`, `contradicts`, or `supersedes` semantics merely to connect the versions.
 
 Do not add explicit `contradicts` / `supersedes` relations until a concrete sourced case proves the current model insufficient.
 
@@ -278,7 +280,8 @@ The current model has been tested by:
 - real multi-parent/DAG causality and merge rendering;
 - chronology made readable independently of causal topology;
 - later broad outcome confirmation kept broad rather than upgraded into a named victor;
-- cross-continuity cosmology comparison using scoped Facts and Sources without a merged hierarchy or automatic retcon, proving the current Character/Fact/Source/timeline model sufficient for the Deception-vs-MK11 case.
+- cross-continuity cosmology comparison using scoped Facts and Sources without a merged hierarchy or automatic retcon, proving the current Character/Fact/Source/timeline model sufficient for the Deception-vs-MK11 case;
+- Original/Reboot/New Era Sindel comparison where royal-role values diverge, the Jerrod spouse claim agrees while evidence strength differs, and killer attribution varies by continuity while New Era preserves only the broader sourced murder outcome. This case remains representable through stable Characters, scoped Facts, canon status, and claim-family presentation without new schema or automatic retcon relations.
 
 ## 17. Current model pressure
 
@@ -288,7 +291,6 @@ Pressure points that may justify future work, but are **not schema commitments**
 - dedicated timeline-reset presentation;
 - whether unique cosmic beings eventually justify a more specific entity type;
 - whether Kamidogu and other important objects justify a first-class Artifact entity;
-- Original/Reboot/New Era Sindel comparison;
 - whether work-level source records eventually require precise locators;
 - whether explicit contradiction/supersession relations become necessary;
 - whether graph scale eventually requires derived indexes or richer visualization.
