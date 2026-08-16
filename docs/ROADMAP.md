@@ -30,7 +30,7 @@ Complete and merged. Delivered `/claims`, evidence-safe claim-family labels, sou
 
 **Status: in progress.**
 
-**Current work:** **Original-continuity MKII/MK3/MK4 individual-victor attribution evidence audit** in draft PR #23 on `agent/phase5-original-victor-attribution`, branched exactly from verified PR #22 merge commit `6de5ffb3d7b27bf10f9e7dec948338dc2e0d8889`. The slice preserves Liu Kang's MKII, MK3, and MK4 ending portrayals as ending-strength source history while testing whether any later non-ending Original-continuity source independently confirms those exact individual-victor attributions. The current evidence result remains negative: existing canon outcomes stay broad, no `defeated_by = Liu Kang` canon Fact is added, and repeated protagonist endings are not treated as independent confirmation merely through repetition.
+**Current work:** **Original-continuity MKII/MK3/MK4 individual-victor attribution evidence audit** in PR #23 on `agent/phase5-original-victor-attribution`, branched exactly from verified PR #22 merge commit `6de5ffb3d7b27bf10f9e7dec948338dc2e0d8889`. The slice preserves Liu Kang's MKII, MK3, and MK4 ending portrayals as ending-strength source history while testing whether any later non-ending Original-continuity source independently confirms those exact individual-victor attributions. The evidence result remains negative: existing canon outcomes stay broad, no `defeated_by = Liu Kang` canon Fact is added, and repeated protagonist endings are not treated as independent confirmation merely through repetition. Source wording/provenance, changed-file scope, maintainer manual review, and final AGENTS/LORE_MODEL/DoD review are complete; final-head CI remains the required automated readiness gate and merge remains an explicit user/maintainer action.
 
 Goal: expand from character-scale lore into ancient history and cosmology while preserving source, continuity, causality, and evidence caveats instead of presenting one synthetic canon narrative.
 
@@ -41,7 +41,7 @@ Goal: expand from character-scale lore into ancient history and cosmology while 
 - Elder Gods as Faction and valid Event participant.
 - six Deception navigation realms represented.
 - creation-myth evidence and `game_manual` source category.
-- Event `realmIds` locked to location/scope rather than event outputs.
+- Event `realmIds` locked to location/scope rather than realm outputs.
 
 #### Onaga ancient history ✅
 - Onaga, Shao Kahn, Shujinko coverage.
@@ -185,9 +185,9 @@ This slice reopens the deliberately deferred question of whether Liu Kang can be
 - [x] Add/index a slice-specific manual verification checklist with short maintainer test cases.
 - [x] Review/update CHANGELOG without claiming a new canon victor.
 - [x] Open draft PR #23.
-- [ ] Confirm changed-file scope and final source wording/provenance after all documentation sync.
-- [ ] Maintainer manual source/UI pass completed.
-- [ ] Final AGENTS + LORE_MODEL + DoD review completed.
+- [x] Confirm changed-file scope and final source wording/provenance after all documentation sync.
+- [x] Maintainer manual source/UI pass completed.
+- [x] Final AGENTS + LORE_MODEL + DoD review completed; ending strength, broad-vs-narrow attribution, source provenance, documentation ownership, and no-Fact/Event/schema/UI scope were rechecked with no known correctness blocker.
 - Current-head CI must be green before Ready for review; CI state is owned by the PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
