@@ -221,33 +221,42 @@ Manual verification procedures are indexed in `docs/README.md`. Final readiness 
 
 **Status: in progress.**
 
-**Current work:** first Reboot-continuity MK9 event-first decomposition slice on `agent/phase6-kickoff`, branched exactly from verified PR #23 merge commit `1369869be29b42604d2f752fb0cc2f2dbed8ec48`.
+Phase 6 began with the first Reboot-continuity MK9 tournament decomposition in PR #24. That slice was merged after manual review and final-head CI as `8f52f542815035c584a40470457f277c03aa2c59`.
 
-Kickoff coverage audit found the current Event store heavily weighted toward Original continuity: **44 Original / 7 Reboot / 3 New Era Events** before this slice. Phase 6 therefore starts by expanding the underrepresented Reboot chronology rather than adding another Original slice.
+Kickoff coverage audit found the Event store heavily weighted toward Original continuity: **44 Original / 7 Reboot / 3 New Era Events** before Phase 6 expansion. Phase 6 therefore starts by expanding the underrepresented Reboot chronology rather than adding another Original slice.
 
-### Current MK9 first-tournament decomposition
+### MK9 first-tournament decomposition ✅ — PR #24
 
-- [x] Start exactly from verified PR #23 merge commit `1369869be29b42604d2f752fb0cc2f2dbed8ec48`.
-- [x] Audit continuity Event coverage and choose Reboot as the first systematic-expansion target.
-- [x] Narrow the old `mk9-tournament` umbrella to the first Earthrealm tournament only.
-- [x] Remove Kuai Liang from that first-tournament Event and add directly represented final opponents Goro and Shang Tsung.
-- [x] Separate Shang Tsung's later Outworld-tournament proposal into its own plan/proposal Event.
-- [x] Add canon Facts for Liu Kang's first-tournament victory and Shang Tsung's proposal using `mk9-story`.
-- [x] Remove the unsupported `Raiden warning → tournament occurrence` causal edge while preserving chronological/reset context.
-- [x] Correct Bi-Han's MK9 death Realm from Earthrealm to Netherrealm.
+- first altered-timeline tournament narrowed to Earthrealm scope;
+- Shang Tsung's later Outworld-tournament proposal separated from the first tournament occurrence;
+- Liu Kang's first-tournament win and Shang Tsung's proposal backed by Reboot canon Facts from `mk9-story`;
+- unsupported `Raiden warning → tournament occurrence` causality removed;
+- Bi-Han's tournament-era death corrected to Netherrealm scope;
+- merged as `8f52f542815035c584a40470457f277c03aa2c59` after maintainer manual/source review, final contract review, and final-head CI.
+
+### Current MK9 Outworld-tournament occurrence
+
+**Current work:** `agent/phase6-mk9-outworld-tournament`, branched exactly from verified PR #24 merge commit `8f52f542815035c584a40470457f277c03aa2c59`.
+
+- [x] Start exactly from verified PR #24 merge commit `8f52f542815035c584a40470457f277c03aa2c59`.
+- [x] Preserve Shang Tsung's proposal as a distinct plan/proposal Event.
+- [x] Add the separately evidenced Outworld tournament occurrence in Reboot continuity.
+- [x] Add mirrored `proposal → Outworld tournament` causality because the proposed terms are accepted and the tournament is shown taking place.
+- [x] Keep the occurrence Realm-scoped to Outworld.
+- [x] Add canon Facts for Liu Kang winning the Outworld tournament and defeating Shao Kahn there using `mk9-story`.
 - [x] Add/index a Phase 6 slice manual with short maintainer test cases.
-- [x] Review/update `CHANGELOG.md` for the Phase 6 kickoff outcome.
-- [x] Confirm changed-file scope after documentation sync: exactly 10 expected files, limited to MK9/Reboot data corrections plus owning docs/manual.
-- [x] Open draft PR #24 for the slice.
-- [x] Maintainer manual source/UI pass completed.
-- [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
+- [x] Review/update `CHANGELOG.md` for the material occurrence/causality outcome.
+- [ ] Confirm final changed-file scope.
+- [ ] Open draft PR for the slice.
+- [ ] Maintainer manual source/UI pass completed.
+- [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
 - Current-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
 ### Next lore slices
 
-1. Model the **actual later MK9 Outworld tournament occurrence** separately from Shang Tsung's proposal, with its own sourced participant/Realm scope and only evidence-supported causal edges.
-2. Continue event-first through the remaining MK9 invasion-era story before advancing to MKX/MK11, unless evidence/model pressure proves a smaller cross-continuity comparison is needed first.
+1. Continue event-first through the remaining MK9 invasion-era story, keeping tournament aftermath, Sindel/revenant developments, and Earthrealm invasion assertions as separately sourced Events rather than one umbrella.
+2. Advance to MKX/MK11 after the MK9 Reboot chronology has enough structure to make causal transitions inspectable without large gaps.
 3. Expand New Era / MK1 / Khaos Reigns after the Reboot chronology has enough structure to make cross-continuity navigation meaningful rather than sparse anchor comparison.
 
 ### Phase 6 working acceptance criteria
