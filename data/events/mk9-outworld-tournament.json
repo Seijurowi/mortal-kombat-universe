@@ -1,0 +1,13 @@
+{
+  "id": "mk9-outworld-tournament",
+  "type": "event",
+  "name": "Outworld tournament in the altered timeline",
+  "timelineId": "reboot",
+  "participantIds": ["liu-kang", "raiden", "shang-tsung", "shao-kahn"],
+  "realmIds": ["outworld"],
+  "causeEventIds": ["shang-tsung-proposes-new-tournament-reboot"],
+  "consequenceEventIds": [],
+  "order": 220,
+  "description": "After Raiden accepts Shao Kahn's proposed terms, Earthrealm attends the replacement tournament in Outworld. The tournament ends with Liu Kang defeating Shao Kahn and Earthrealm winning.",
+  "tags": ["tournament", "outworld"]
+}
