@@ -1,0 +1,12 @@
+{
+  "id": "fact-liu-kang-won-outworld-tournament-reboot",
+  "type": "fact",
+  "name": "Liu Kang won the Outworld tournament in the altered timeline",
+  "subjectId": "liu-kang",
+  "predicate": "won",
+  "value": "Outworld tournament in the altered timeline",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) story mode directly shows the Outworld tournament conclude with Liu Kang defeating Shao Kahn and Earthrealm being declared victorious."
+}
