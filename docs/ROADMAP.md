@@ -236,7 +236,7 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 
 ### Current MK9 Outworld-tournament occurrence
 
-**Current work:** `agent/phase6-mk9-outworld-tournament`, branched exactly from verified PR #24 merge commit `8f52f542815035c584a40470457f277c03aa2c59`.
+**Current work:** Draft PR #25 on `agent/phase6-mk9-outworld-tournament`, branched exactly from verified PR #24 merge commit `8f52f542815035c584a40470457f277c03aa2c59`.
 
 - [x] Start exactly from verified PR #24 merge commit `8f52f542815035c584a40470457f277c03aa2c59`.
 - [x] Preserve Shang Tsung's proposal as a distinct plan/proposal Event.
@@ -246,10 +246,10 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - [x] Add canon Facts for Liu Kang winning the Outworld tournament and defeating Shao Kahn there using `mk9-story`.
 - [x] Add/index a Phase 6 slice manual with short maintainer test cases.
 - [x] Review/update `CHANGELOG.md` for the material occurrence/causality outcome.
-- [ ] Confirm final changed-file scope.
-- [ ] Open draft PR for the slice.
-- [ ] Maintainer manual source/UI pass completed.
-- [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
+- [x] Confirm final changed-file scope: exactly 8 expected files, limited to the MK9 Outworld-tournament data plus owning docs/manual.
+- [x] Open draft PR #25 for the slice.
+- [x] Maintainer manual source/UI pass completed.
+- [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
 - Current-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
