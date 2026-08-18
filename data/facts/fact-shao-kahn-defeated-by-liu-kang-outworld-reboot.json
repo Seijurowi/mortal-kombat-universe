@@ -1,0 +1,12 @@
+{
+  "id": "fact-shao-kahn-defeated-by-liu-kang-outworld-reboot",
+  "type": "fact",
+  "name": "Shao Kahn was defeated by Liu Kang in the Outworld tournament",
+  "subjectId": "shao-kahn",
+  "predicate": "defeated_by",
+  "value": "Liu Kang",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) story mode directly shows Liu Kang defeat Shao Kahn at the conclusion of the replacement tournament in Outworld."
+}
