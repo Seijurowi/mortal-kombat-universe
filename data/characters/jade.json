@@ -1,0 +1,8 @@
+{
+  "id": "jade",
+  "type": "character",
+  "name": "Jade",
+  "timelineIds": ["reboot"],
+  "description": "A warrior allied with Kitana in the Reboot continuity.",
+  "tags": ["kitana-ally", "outworld-warrior"]
+}
