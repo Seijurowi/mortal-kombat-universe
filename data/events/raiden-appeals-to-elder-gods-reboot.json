@@ -1,0 +1,13 @@
+{
+  "id": "raiden-appeals-to-elder-gods-reboot",
+  "type": "event",
+  "name": "Raiden appeals to the Elder Gods for intervention",
+  "timelineId": "reboot",
+  "participantIds": ["raiden", "liu-kang", "elder-gods"],
+  "realmIds": [],
+  "causeEventIds": [],
+  "consequenceEventIds": ["elder-gods-refuse-intervention-reboot"],
+  "order": 285,
+  "description": "While Sindel attacks Earthrealm's defenders, Raiden and Liu Kang are away before the Elder Gods. Raiden asks the Elder Gods to intervene against Shao Kahn's invasion. The scene runs in parallel with the assault; no causal edge is inferred between them.",
+  "tags": ["elder-gods", "appeal", "invasion"]
+}

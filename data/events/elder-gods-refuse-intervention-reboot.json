@@ -1,0 +1,13 @@
+{
+  "id": "elder-gods-refuse-intervention-reboot",
+  "type": "event",
+  "name": "The Elder Gods refuse to intervene in Earthrealm's invasion",
+  "timelineId": "reboot",
+  "participantIds": ["elder-gods", "raiden", "liu-kang"],
+  "realmIds": [],
+  "causeEventIds": ["raiden-appeals-to-elder-gods-reboot"],
+  "consequenceEventIds": [],
+  "order": 286,
+  "description": "The Elder Gods refuse Raiden's request for intervention. They state that Shao Kahn's invasion is not itself a transgression under Mortal Kombat's rules and distinguish it from the proscribed merger of realms.",
+  "tags": ["elder-gods", "refusal", "mortal-kombat-rules"]
+}
