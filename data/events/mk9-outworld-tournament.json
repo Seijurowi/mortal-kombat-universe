@@ -6,8 +6,8 @@
   "participantIds": ["liu-kang", "raiden", "shang-tsung", "shao-kahn"],
   "realmIds": ["outworld"],
   "causeEventIds": ["shang-tsung-proposes-new-tournament-reboot"],
-  "consequenceEventIds": [],
+  "consequenceEventIds": ["quan-chi-proposes-earthrealm-invasion-reboot"],
   "order": 220,
-  "description": "After Raiden accepts Shao Kahn's proposed terms, Earthrealm attends the replacement tournament in Outworld. The tournament ends with Liu Kang defeating Shao Kahn and Earthrealm winning.",
+  "description": "After Raiden accepts Shao Kahn's proposed terms, Earthrealm attends the replacement tournament in Outworld. The tournament ends with Liu Kang defeating Shao Kahn and Earthrealm winning; Shao Kahn's resulting inability to merge the realms through tournament victory leads Quan Chi to propose invasion as an alternative.",
   "tags": ["tournament", "outworld"]
 }
