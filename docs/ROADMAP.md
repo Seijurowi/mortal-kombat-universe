@@ -243,7 +243,7 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 
 ### Current MK9 Sindel resurrection and Earthrealm invasion
 
-**Current work:** Draft PR #26 on `agent/phase6-mk9-sindel-invasion`, branched exactly from verified PR #25 merge commit `7dfdfa1518df3950e16ca109384ce65d4bf00044`.
+**Current work:** PR #26 on `agent/phase6-mk9-sindel-invasion`, branched exactly from verified PR #25 merge commit `7dfdfa1518df3950e16ca109384ce65d4bf00044`.
 
 - [x] Start exactly from verified PR #25 merge commit `7dfdfa1518df3950e16ca109384ce65d4bf00044`.
 - [x] Keep Quan Chi's Earthrealm-invasion proposal separate from the actual invasion occurrence.
@@ -256,7 +256,7 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - [x] Add/index a Phase 6 slice manual with short maintainer test cases.
 - [x] Review/update `CHANGELOG.md` for the material proposal/resurrection/invasion outcome.
 - [x] Confirm final changed-file scope: exactly 12 expected files, limited to this MK9 Reboot slice plus owning docs/manual.
-- [x] Open Draft PR #26 for the slice.
+- [x] Open PR #26 for the slice.
 - [x] Maintainer manual source/UI pass completed.
 - [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
 - Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
