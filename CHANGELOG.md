@@ -8,6 +8,7 @@ See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 
 ### Added
 
+- **Phase 6 MK9 Sindel assault and defender casualties:** Sindel's Earthrealm assault is now a distinct Reboot Event with canon `killed_by` Facts for Kabal, Stryker, Kuai Liang, Jax, Smoke, and Jade; Nightwolf's self-sacrifice/Sindel death and Kitana's later death from Sindel-inflicted injuries are separate sourced outcomes, while Jax, Jade, Kabal, Stryker, and Tomas Vrbada are added only as the stable casualty Characters required by this slice.
 - **Phase 6 MK9 Soulnado interruption:** Quan Chi's Earthrealm Soulnado and Nightwolf's destruction of it are now separate Reboot Events/Facts sourced to MK9 story mode; Nightwolf's stable Character now spans Original and Reboot, while Bi-Han being pulled into the Soulnado is preserved without promoting that moment into a confirmed death or final fate.
 - **Phase 6 MK9 Sindel resurrection and Earthrealm invasion:** Quan Chi's invasion proposal, Sindel's Earthrealm resurrection, ward nullification, and Shao Kahn's ensuing invasion are now separate Reboot Events/Facts sourced to MK9 story mode, without conflating invasion with the later attempted merger of the realms.
 - **Phase 6 MK9 Outworld tournament occurrence:** the replacement tournament is now a distinct Reboot Event in Outworld rather than only a proposal, with canon Facts for Liu Kang winning the tournament and specifically defeating Shao Kahn in that Reboot story outcome.
@@ -39,6 +40,7 @@ See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 
 ### Changed
 
+- **MK9 assault causality and state boundaries:** Sindel's assault begins a separate sourced causal component after the Soulnado chronology gap and branches to Nightwolf's self-sacrifice/Sindel death and Kitana's later death; chronology between those outcomes is not turned into causality, and the later Quan Chi revenant reveal remains deferred rather than being inferred from the deaths themselves.
 - **MK9 Soulnado causality:** Soulnado creation remains chronologically after Shao Kahn's invasion begins without an invented direct invasion→Soulnado causal edge; the sourced causal component begins with Quan Chi creating the Soulnado and continues to Nightwolf's explicit effort to disrupt and destroy it, while Raiden's vision of all Earthrealm souls being absorbed remains a threatened future rather than a completed occurrence.
 - **MK9 invasion causality:** the failed Outworld tournament now leads to Quan Chi's explicitly framed invasion alternative, which leads to the separately shown Sindel-resurrection mechanism; Sindel's ward nullification then leads to the separately modeled Earthrealm invasion, while realm merger remains a distinct later question.
 - **Reboot tournament causality:** Shang Tsung's proposal now points to the separately evidenced Outworld tournament occurrence, while Raiden's future warning remains reset/chronology context rather than an ordinary causal parent of either tournament.
