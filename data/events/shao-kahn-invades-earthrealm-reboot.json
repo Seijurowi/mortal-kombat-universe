@@ -1,0 +1,13 @@
+{
+  "id": "shao-kahn-invades-earthrealm-reboot",
+  "type": "event",
+  "name": "Shao Kahn's forces invade Earthrealm",
+  "timelineId": "reboot",
+  "participantIds": ["shao-kahn"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": ["quan-chi-resurrects-sindel-reboot"],
+  "consequenceEventIds": [],
+  "order": 250,
+  "description": "With Sindel's ward nullified, Shao Kahn's invasion of Earthrealm begins. This Event represents the invasion itself, not the later attempted merger of the realms.",
+  "tags": ["invasion", "earthrealm"]
+}

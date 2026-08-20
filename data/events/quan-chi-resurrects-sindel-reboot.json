@@ -1,0 +1,13 @@
+{
+  "id": "quan-chi-resurrects-sindel-reboot",
+  "type": "event",
+  "name": "Quan Chi resurrects Sindel on Earthrealm",
+  "timelineId": "reboot",
+  "participantIds": ["quan-chi", "sindel", "bi-han"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": ["quan-chi-proposes-earthrealm-invasion-reboot"],
+  "consequenceEventIds": ["shao-kahn-invades-earthrealm-reboot"],
+  "order": 240,
+  "description": "Quan Chi carries out the proposed invasion mechanism by resurrecting Sindel on Earthrealm. Her ward is nullified, removing the barrier that had prevented Shao Kahn from entering Earthrealm.",
+  "tags": ["resurrection", "sindel", "invasion-setup"]
+}

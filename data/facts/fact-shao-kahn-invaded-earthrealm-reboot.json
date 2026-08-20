@@ -1,0 +1,12 @@
+{
+  "id": "fact-shao-kahn-invaded-earthrealm-reboot",
+  "type": "fact",
+  "name": "Shao Kahn invaded Earthrealm",
+  "subjectId": "shao-kahn",
+  "predicate": "invaded",
+  "objectId": "earthrealm",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) story mode shows the invasion begin after Sindel's ward is nullified and later explicitly describes Shao Kahn as invading Earthrealm. This Fact does not assert that the realms were already merged."
+}

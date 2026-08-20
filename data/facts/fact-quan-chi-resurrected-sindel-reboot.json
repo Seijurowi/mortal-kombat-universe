@@ -1,0 +1,12 @@
+{
+  "id": "fact-quan-chi-resurrected-sindel-reboot",
+  "type": "fact",
+  "name": "Quan Chi resurrected Sindel",
+  "subjectId": "quan-chi",
+  "predicate": "resurrected",
+  "objectId": "sindel",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) story mode directly shows Quan Chi resurrect Sindel on Earthrealm as the mechanism for removing the protection that blocked Shao Kahn's entry."
+}

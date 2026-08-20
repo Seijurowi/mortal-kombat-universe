@@ -1,0 +1,13 @@
+{
+  "id": "quan-chi-proposes-earthrealm-invasion-reboot",
+  "type": "event",
+  "name": "Quan Chi proposes an invasion of Earthrealm",
+  "timelineId": "reboot",
+  "participantIds": ["quan-chi", "shao-kahn"],
+  "realmIds": ["outworld"],
+  "causeEventIds": ["mk9-outworld-tournament"],
+  "consequenceEventIds": ["quan-chi-resurrects-sindel-reboot"],
+  "order": 230,
+  "description": "After the failed Outworld tournament leaves Shao Kahn unable to merge Outworld with Earthrealm through tournament victory, Quan Chi proposes invasion as an alternative and offers Sindel's resurrection as the means to remove the ward blocking Shao Kahn's entry.",
+  "tags": ["plan", "invasion", "sindel"]
+}

@@ -8,6 +8,7 @@ See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 
 ### Added
 
+- **Phase 6 MK9 Sindel resurrection and Earthrealm invasion:** Quan Chi's invasion proposal, Sindel's Earthrealm resurrection, ward nullification, and Shao Kahn's ensuing invasion are now separate Reboot Events/Facts sourced to MK9 story mode, without conflating invasion with the later attempted merger of the realms.
 - **Phase 6 MK9 Outworld tournament occurrence:** the replacement tournament is now a distinct Reboot Event in Outworld rather than only a proposal, with canon Facts for Liu Kang winning the tournament and specifically defeating Shao Kahn in that Reboot story outcome.
 - **Phase 6 Reboot timeline kickoff:** the old broad MK9 tournament anchor is narrowed to the first Earthrealm tournament, Liu Kang's first-tournament victory is recorded as a canon Fact, and Shang Tsung's later proposal for a new Outworld tournament is represented separately as plan/proposal evidence rather than silently treating the later tournament as already completed.
 - **Phase 5 Original-continuity cosmology foundation:** One Being, Elder Gods, the six Deception navigation realms, creation-myth evidence, `game_manual` sources, and Factions as valid Event participants.
@@ -37,6 +38,7 @@ See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 
 ### Changed
 
+- **MK9 invasion causality:** the failed Outworld tournament now leads to Quan Chi's explicitly framed invasion alternative, which leads to the separately shown Sindel-resurrection mechanism; Sindel's ward nullification then leads to the separately modeled Earthrealm invasion, while realm merger remains a distinct later question.
 - **Reboot tournament causality:** Shang Tsung's proposal now points to the separately evidenced Outworld tournament occurrence, while Raiden's future warning remains reset/chronology context rather than an ordinary causal parent of either tournament.
 - **Reboot event semantics:** Raiden's warning remains reset/chronology context rather than an unsupported ordinary cause of the first tournament; Bi-Han's MK9 death Event is corrected from Earthrealm to Netherrealm; Kuai Liang is removed from the first-tournament umbrella because his MK9 story participation belongs to the later Outworld phase.
 - Event `participantIds` accepts `Character | Faction`, proven by the Elder Gods acting collectively.
