@@ -2,8 +2,8 @@
   "id": "nightwolf",
   "type": "character",
   "name": "Nightwolf",
-  "timelineIds": ["original"],
+  "timelineIds": ["original", "reboot"],
   "realmIds": ["earthrealm"],
-  "description": "An Earthrealm shaman in the original continuity whose post-Deception actions imprisoned Onaga's soul in the Netherrealm.",
+  "description": "An Earthrealm shaman and defender represented across the Original and Reboot continuities.",
   "tags": ["shaman", "earthrealm"]
 }

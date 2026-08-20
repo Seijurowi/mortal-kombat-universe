@@ -1,0 +1,12 @@
+{
+  "id": "fact-nightwolf-destroyed-soulnado-reboot",
+  "type": "fact",
+  "name": "Nightwolf destroyed the Soulnado",
+  "subjectId": "nightwolf",
+  "predicate": "destroyed",
+  "value": "Soulnado at St. Dominic's Cemetery",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) story mode shows Nightwolf knock Noob Saibot into the Soulnado, after which the vortex destabilizes and explodes. Nightwolf later reports that Earthrealm's souls are safe."
+}

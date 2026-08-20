@@ -1,0 +1,13 @@
+{
+  "id": "nightwolf-destroys-soulnado-reboot",
+  "type": "event",
+  "name": "Nightwolf destroys the Soulnado",
+  "timelineId": "reboot",
+  "participantIds": ["nightwolf", "quan-chi", "bi-han"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": ["quan-chi-creates-soulnado-reboot"],
+  "consequenceEventIds": [],
+  "order": 270,
+  "description": "Nightwolf arrives to disrupt the Soulnado, defeats Quan Chi, and knocks Bi-Han as Noob Saibot into the vortex. Bi-Han is pulled into it, the Soulnado destabilizes and explodes, and Nightwolf later reports that Earthrealm's souls are safe. This Event does not assert Bi-Han's death or final fate.",
+  "tags": ["soulnado", "nightwolf", "invasion"]
+}

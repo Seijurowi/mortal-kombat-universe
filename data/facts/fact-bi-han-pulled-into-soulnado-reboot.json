@@ -1,0 +1,12 @@
+{
+  "id": "fact-bi-han-pulled-into-soulnado-reboot",
+  "type": "fact",
+  "name": "Bi-Han was pulled into the Soulnado",
+  "subjectId": "bi-han",
+  "predicate": "was_pulled_into",
+  "value": "Soulnado at St. Dominic's Cemetery",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) story mode shows Nightwolf knock Bi-Han as Noob Saibot into the Soulnado and the vortex pull him upward before it destabilizes. This Fact does not assert Bi-Han's death, destruction, or final fate."
+}

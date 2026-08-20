@@ -1,0 +1,13 @@
+{
+  "id": "quan-chi-creates-soulnado-reboot",
+  "type": "event",
+  "name": "Quan Chi creates a Soulnado in Earthrealm",
+  "timelineId": "reboot",
+  "participantIds": ["quan-chi"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": [],
+  "consequenceEventIds": ["nightwolf-destroys-soulnado-reboot"],
+  "order": 260,
+  "description": "During Shao Kahn's invasion, Quan Chi completes a spell at St. Dominic's Cemetery and a newly created Soulnado absorbs captive soldiers. This occurrence is chronologically after the invasion begins, but the Event does not invent an invasion-to-Soulnado causal edge.",
+  "tags": ["soulnado", "soul-magic", "invasion"]
+}

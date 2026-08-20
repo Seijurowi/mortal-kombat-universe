@@ -62,6 +62,7 @@ For Phase 5 work, run the broad regression checklist when the change can affect 
 - [`PHASE6_MK9_FIRST_TOURNAMENT_MANUAL_VERIFICATION.md`](./PHASE6_MK9_FIRST_TOURNAMENT_MANUAL_VERIFICATION.md) — Reboot MK9 first-tournament decomposition, proposal-vs-occurrence discipline, warning-vs-causality separation, Bi-Han death Realm correction, and short maintainer test cases.
 - [`PHASE6_MK9_OUTWORLD_TOURNAMENT_MANUAL_VERIFICATION.md`](./PHASE6_MK9_OUTWORLD_TOURNAMENT_MANUAL_VERIFICATION.md) — Reboot MK9 Outworld-tournament occurrence, proposal→occurrence causality, Liu Kang's sourced tournament win over Shao Kahn, and short maintainer test cases.
 - [`PHASE6_MK9_SINDEL_INVASION_MANUAL_VERIFICATION.md`](./PHASE6_MK9_SINDEL_INVASION_MANUAL_VERIFICATION.md) — Reboot MK9 invasion proposal, Sindel resurrection/ward nullification, Earthrealm invasion, invasion-vs-merger separation, and short maintainer test cases.
+- [`PHASE6_MK9_SOULNADO_MANUAL_VERIFICATION.md`](./PHASE6_MK9_SOULNADO_MANUAL_VERIFICATION.md) — Reboot MK9 Soulnado creation/destruction, chronology-vs-causality separation from the broader invasion, Nightwolf continuity expansion, Bi-Han fate guardrail, and short maintainer test cases.
 
 For Phase 6 work, use the slice-specific checklist plus any earlier regression checklist whose shared behavior the slice actually touches.
 
