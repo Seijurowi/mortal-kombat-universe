@@ -103,7 +103,7 @@ Phase 5 expanded from character-scale lore into ancient history and cosmology wh
 - `docs/DEFINITION_OF_DONE.md` added as the authoritative readiness/completion gate.
 
 #### MK4 / Shinnok return bridge ✅ — PR #15
-- Shinnok escape and renewed-war framing added from the MK4 intro.
+- Shinnok escape from Netherrealm and renewed-war framing added from the MK4 intro.
 - MK3 defeat → Shinnok escape → renewed war kept chronological without unsupported causal edges.
 - continuity-wide chronology and Previous/Next navigation added across causal-component boundaries.
 - full Shadcn/Base UI inventory incorporated; `components/ui/` is now the default primitive layer in `AGENTS.md`.
@@ -251,7 +251,7 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 
 ### Current MK9 Soulnado interruption
 
-**Current work:** `agent/phase6-mk9-soulnado`, branched exactly from verified PR #26 merge commit `47d9096e11bfaeb8ceaec67bbf7bf5b26349d871`.
+**Current work:** Draft PR #27 on `agent/phase6-mk9-soulnado`, branched exactly from verified PR #26 merge commit `47d9096e11bfaeb8ceaec67bbf7bf5b26349d871`.
 
 - [x] Start exactly from verified PR #26 merge commit `47d9096e11bfaeb8ceaec67bbf7bf5b26349d871`.
 - [x] Expand the stable Nightwolf Character to Reboot continuity rather than creating a duplicate.
@@ -264,8 +264,8 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - [x] Keep Raiden's vision of all Earthrealm souls being absorbed as threatened-future context rather than a completed occurrence.
 - [x] Add/index a Phase 6 Soulnado manual with short maintainer test cases.
 - [x] Review/update `CHANGELOG.md` for the material Soulnado outcome and fate guardrail.
-- [ ] Confirm final changed-file scope.
-- [ ] Open Draft PR for the slice.
+- [x] Confirm current changed-file scope: exactly 10 expected files, limited to this MK9 Reboot slice plus owning docs/manual.
+- [x] Open Draft PR #27 for the slice.
 - [ ] Maintainer manual source/UI pass completed.
 - [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
 - Current-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
