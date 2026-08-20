@@ -1,0 +1,12 @@
+{
+  "id": "fact-kabal-killed-by-sindel-reboot",
+  "type": "fact",
+  "name": "Sindel killed Kabal",
+  "subjectId": "kabal",
+  "predicate": "killed_by",
+  "objectId": "sindel",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) story mode directly shows Sindel kill Kabal during her assault on Earthrealm's defenders."
+}
