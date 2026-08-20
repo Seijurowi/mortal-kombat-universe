@@ -1,0 +1,10 @@
+{
+  "id": "kurtis-stryker",
+  "type": "character",
+  "name": "Kurtis Stryker",
+  "aliases": ["Stryker"],
+  "timelineIds": ["reboot"],
+  "realmIds": ["earthrealm"],
+  "description": "An Earthrealm police officer recruited into Raiden's defense during Shao Kahn's invasion in the Reboot continuity.",
+  "tags": ["police", "earthrealm-defender"]
+}
