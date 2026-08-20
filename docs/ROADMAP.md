@@ -267,7 +267,7 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 
 ### Current MK9 Elder Gods refusal
 
-**Current work:** Draft PR #29 on `agent/phase6-mk9-elder-gods-refusal`, branched exactly from verified PR #28 merge commit `ad98e8afc46bdab4221d8745728511bbcaffc645`.
+**Current work:** PR #29 on `agent/phase6-mk9-elder-gods-refusal`, branched exactly from verified PR #28 merge commit `ad98e8afc46bdab4221d8745728511bbcaffc645`.
 
 - [x] Start exactly from verified PR #28 merge commit `ad98e8afc46bdab4221d8745728511bbcaffc645`.
 - [x] Expand the stable Elder Gods Faction to Reboot continuity rather than duplicating the collective actor.
@@ -281,8 +281,9 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - [x] Review/update `CHANGELOG.md` for the material refusal/rule distinction and parallel-chronology guardrail.
 - [x] Confirm final changed-file scope: exactly 11 expected files, limited to this MK9 Reboot slice plus owning docs/manual.
 - [x] Open Draft PR #29 for the slice.
-- [ ] Maintainer manual source/UI pass completed.
-- [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
+- [x] Maintainer manual source/UI pass completed.
+- [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
+- [x] Review comments/threads checked; none unresolved.
 - Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
