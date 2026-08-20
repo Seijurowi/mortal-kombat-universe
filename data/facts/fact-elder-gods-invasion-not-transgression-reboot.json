@@ -1,0 +1,12 @@
+{
+  "id": "fact-elder-gods-invasion-not-transgression-reboot",
+  "type": "fact",
+  "name": "The Elder Gods said invasion was not itself a transgression",
+  "subjectId": "elder-gods",
+  "predicate": "considered_invasion_a_transgression",
+  "value": false,
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) story mode has the Elder Gods explicitly tell Raiden that invasion is not itself a transgression under Mortal Kombat's rules."
+}
