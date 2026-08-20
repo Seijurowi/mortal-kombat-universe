@@ -251,7 +251,7 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 
 ### Current MK9 Soulnado interruption
 
-**Current work:** Draft PR #27 on `agent/phase6-mk9-soulnado`, branched exactly from verified PR #26 merge commit `47d9096e11bfaeb8ceaec67bbf7bf5b26349d871`.
+**Current work:** PR #27 on `agent/phase6-mk9-soulnado`, branched exactly from verified PR #26 merge commit `47d9096e11bfaeb8ceaec67bbf7bf5b26349d871`.
 
 - [x] Start exactly from verified PR #26 merge commit `47d9096e11bfaeb8ceaec67bbf7bf5b26349d871`.
 - [x] Expand the stable Nightwolf Character to Reboot continuity rather than creating a duplicate.
@@ -266,8 +266,8 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - [x] Review/update `CHANGELOG.md` for the material Soulnado outcome and fate guardrail.
 - [x] Confirm current changed-file scope: exactly 10 expected files, limited to this MK9 Reboot slice plus owning docs/manual.
 - [x] Open Draft PR #27 for the slice.
-- [ ] Maintainer manual source/UI pass completed.
-- [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
+- [x] Maintainer manual source/UI pass completed.
+- [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
 - Current-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
