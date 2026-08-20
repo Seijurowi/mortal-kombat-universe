@@ -241,32 +241,42 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - Liu Kang's tournament win and exact Shao Kahn defeat attribution are Reboot canon Facts from `mk9-story`;
 - merged as verified commit `7dfdfa1518df3950e16ca109384ce65d4bf00044` after maintainer manual/source review, final contract review, and final-head CI.
 
-### Current MK9 Sindel resurrection and Earthrealm invasion
+### MK9 Sindel resurrection and Earthrealm invasion ✅ — PR #26
 
-**Current work:** PR #26 on `agent/phase6-mk9-sindel-invasion`, branched exactly from verified PR #25 merge commit `7dfdfa1518df3950e16ca109384ce65d4bf00044`.
+- Quan Chi's invasion proposal remains separate from the actual invasion occurrence;
+- Sindel's Earthrealm resurrection is the separately modeled mechanism that nullifies her ward/barrier;
+- proposal → resurrection → invasion causality is mirrored only where MK9 explicitly supplies the mechanism/execution relationship;
+- invasion remains distinct from the later attempted realm merger;
+- merged as verified commit `47d9096e11bfaeb8ceaec67bbf7bf5b26349d871` after maintainer manual/source review, final contract review, and final-head CI.
 
-- [x] Start exactly from verified PR #25 merge commit `7dfdfa1518df3950e16ca109384ce65d4bf00044`.
-- [x] Keep Quan Chi's Earthrealm-invasion proposal separate from the actual invasion occurrence.
-- [x] Add Sindel's resurrection on Earthrealm as a separate Event with Quan Chi, Sindel, and Bi-Han/Noob Saibot as directly represented participants.
-- [x] Add mirrored tournament-loss → invasion-proposal causality because MK9 explicitly presents invasion as the alternative after the tournament defeat blocks Shao Kahn's merger path.
-- [x] Add mirrored proposal → Sindel-resurrection causality because the resurrection mechanism is proposed and then carried out.
-- [x] Add mirrored Sindel-resurrection → Earthrealm-invasion causality because MK9 explicitly says the ward/barrier is nullified and the invasion can now begin.
-- [x] Add canon Facts for Quan Chi's proposal, Sindel resurrection, ward nullification, and Shao Kahn's invasion using `mk9-story`.
-- [x] Keep invasion distinct from the later attempted realm merger and defer Soulnado, Sindel massacre/revenants, Elder Gods intervention, and merger-attempt outcomes.
-- [x] Add/index a Phase 6 slice manual with short maintainer test cases.
-- [x] Review/update `CHANGELOG.md` for the material proposal/resurrection/invasion outcome.
-- [x] Confirm final changed-file scope: exactly 12 expected files, limited to this MK9 Reboot slice plus owning docs/manual.
-- [x] Open PR #26 for the slice.
-- [x] Maintainer manual source/UI pass completed.
-- [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
-- Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
+### Current MK9 Soulnado interruption
+
+**Current work:** `agent/phase6-mk9-soulnado`, branched exactly from verified PR #26 merge commit `47d9096e11bfaeb8ceaec67bbf7bf5b26349d871`.
+
+- [x] Start exactly from verified PR #26 merge commit `47d9096e11bfaeb8ceaec67bbf7bf5b26349d871`.
+- [x] Expand the stable Nightwolf Character to Reboot continuity rather than creating a duplicate.
+- [x] Add Quan Chi's completed Soulnado creation as a separate Reboot Event in Earthrealm.
+- [x] Add Nightwolf's destruction of the Soulnado as a separate Reboot Event in Earthrealm.
+- [x] Add mirrored `Soulnado creation → Nightwolf destroys Soulnado` causality because Nightwolf explicitly commits to disrupting the identified Soulnado and the story shows him destroy it.
+- [x] Keep `Earthrealm invasion → Soulnado creation` chronology-only; do not create a direct causal edge from shared invasion context alone.
+- [x] Add Reboot canon Facts for Quan Chi creating the Soulnado, Nightwolf destroying it, and Bi-Han being pulled into it using `mk9-story`.
+- [x] Keep Bi-Han's Soulnado fate narrow: pulled into the vortex, without asserting death, destruction, or final fate.
+- [x] Keep Raiden's vision of all Earthrealm souls being absorbed as threatened-future context rather than a completed occurrence.
+- [x] Add/index a Phase 6 Soulnado manual with short maintainer test cases.
+- [x] Review/update `CHANGELOG.md` for the material Soulnado outcome and fate guardrail.
+- [ ] Confirm final changed-file scope.
+- [ ] Open Draft PR for the slice.
+- [ ] Maintainer manual source/UI pass completed.
+- [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
+- Current-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
 ### Next lore slices
 
-1. Continue MK9 invasion-era decomposition with the next smallest source-supported occurrence after the invasion begins, keeping Soulnado, Sindel's attack/deaths/revenant consequences, Elder Gods intervention, and the later merger attempt distinct unless direct evidence supports a narrower chain.
-2. Advance to MKX/MK11 after the MK9 Reboot chronology has enough structure to make causal transitions inspectable without large gaps.
-3. Expand New Era / MK1 / Khaos Reigns after the Reboot chronology has enough structure to make cross-continuity navigation meaningful rather than sparse anchor comparison.
+1. Continue MK9 invasion-era decomposition with Sindel's assault and its deaths/revenant consequences, keeping the assault, individual death outcomes, revenant state, Elder Gods intervention, and Shao Kahn's later merger attempt as narrow separately sourced claims/events rather than one umbrella.
+2. Continue through the Elder Gods refusal and the later merger-attempt/final-confrontation material only after the invasion casualties are represented without broad-to-narrow attribution mistakes.
+3. Advance to MKX/MK11 after the MK9 Reboot chronology has enough structure to make causal transitions inspectable without large gaps.
+4. Expand New Era / MK1 / Khaos Reigns after the Reboot chronology has enough structure to make cross-continuity navigation meaningful rather than sparse anchor comparison.
 
 ### Phase 6 working acceptance criteria
 
@@ -275,11 +285,12 @@ A user should be able to:
 1. read Reboot chronology as distinct events rather than one broad MK9 umbrella;
 2. distinguish tournament proposals/plans and invasion proposals from later occurrences;
 3. see Event participants and Realm scope only where the source supports them;
-4. follow chronology without warning/reset context being turned into unsupported ordinary causality;
+4. follow chronology without warning/reset context or shared invasion context being turned into unsupported ordinary causality;
 5. trace new event assertions back to primary story Sources and atomic Facts;
 6. distinguish an Earthrealm invasion from a later realm-merger attempt;
-7. retain Original, Reboot, and New Era as independently inspectable continuities while coverage grows;
-8. keep existing claim-history, chronology, DAG, source, and mobile behavior trustworthy as Event volume increases.
+7. distinguish a character being pulled into a destructive phenomenon from a sourced confirmed death/final-fate claim;
+8. retain Original, Reboot, and New Era as independently inspectable continuities while coverage grows;
+9. keep existing claim-history, chronology, DAG, source, and mobile behavior trustworthy as Event volume increases.
 
 ## Later infrastructure — only when justified
 
