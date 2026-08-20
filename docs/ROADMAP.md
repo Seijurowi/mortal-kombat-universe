@@ -259,7 +259,7 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 
 ### Current MK9 Sindel assault and defender casualties
 
-**Current work:** `agent/phase6-mk9-sindel-assault`, branched exactly from verified PR #27 merge commit `274a97602e8179ca5da072123852d9621559fb8e`. Draft PR will be opened after current scope review.
+**Current work:** Draft PR #28 on `agent/phase6-mk9-sindel-assault`, branched exactly from verified PR #27 merge commit `274a97602e8179ca5da072123852d9621559fb8e`.
 
 - [x] Start exactly from verified PR #27 merge commit `274a97602e8179ca5da072123852d9621559fb8e`.
 - [x] Add Jax Briggs, Jade, Kabal, Kurtis Stryker, and Tomas Vrbada/Smoke only as the stable Characters required for direct casualty assertions in this slice.
@@ -273,11 +273,11 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - [x] Keep later revenant conversion, Quan Chi's possession of the dead defenders' souls, the Elder Gods' refusal, Liu Kang's later death, and Shao Kahn's merger/final defeat outside this slice.
 - [x] Add/index a Phase 6 Sindel-assault manual with short maintainer test cases.
 - [x] Review/update `CHANGELOG.md` for the material assault/casualty outcome and state-boundary guardrails.
-- [ ] Confirm final changed-file scope is limited to this MK9 Reboot slice plus owning docs/manual.
-- [ ] Open Draft PR for the slice.
+- [x] Confirm current changed-file scope: exactly 22 expected files, limited to this MK9 Reboot slice plus owning docs/manual.
+- [x] Open Draft PR #28 for the slice.
 - [ ] Maintainer manual source/UI pass completed.
 - [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
-- Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
+- Current-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
 ### Next lore slices
