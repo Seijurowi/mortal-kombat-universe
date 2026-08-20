@@ -1,0 +1,13 @@
+{
+  "id": "sindel-assaults-earthrealm-defenders-reboot",
+  "type": "event",
+  "name": "Sindel attacks Earthrealm's defenders",
+  "timelineId": "reboot",
+  "participantIds": ["sindel", "nightwolf", "kitana", "kuai-liang", "jax-briggs", "jade", "kabal", "kurtis-stryker", "tomas-vrbada"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": [],
+  "consequenceEventIds": ["nightwolf-sacrifices-himself-kills-sindel-reboot", "kitana-dies-from-sindel-injuries-reboot"],
+  "order": 280,
+  "description": "During Shao Kahn's invasion, Sindel attacks the assembled Earthrealm defenders. She kills Kabal, Stryker, Cyber Sub-Zero (Kuai Liang), Jax, Smoke, and Jade, severely injures Kitana, and overwhelms Nightwolf before he confronts her again. This Event is chronologically after the Soulnado is destroyed but does not invent a Soulnado-to-assault causal edge.",
+  "tags": ["sindel", "invasion", "casualties"]
+}
