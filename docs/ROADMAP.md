@@ -162,7 +162,7 @@ Phase 5 expanded from character-scale lore into ancient history and cosmology wh
 - stable Sindel and Jerrod Characters span Original, Reboot, and New Era rather than being duplicated by continuity.
 - royal-role wording remains source-specific: Original `Queen of Edenia`, Reboot `Shao Kahn's Empress`, New Era `Empress of Outworld`.
 - `spouse_of = Jerrod` agrees across all three continuities while preserving Original `supplemental` versus Reboot/New Era `canon` evidence strength.
-- Original Deception canon attributes Jerrod's death to Shao Kahn; Reboot Aftermath canon attributes it to Sindel; New Era preserves only the broader murder outcome without inventing a killer.
+- Original Deception canon attributes Jerrod's death to Shao Kahn; Reboot Aftermath canon attributes it to Sindel; New Era preserves only the broader sourced murder outcome without inventing a killer.
 - `/claims?q=Sindel` deep-links into the comparison and same-value cross-continuity agreement can coexist visibly with status variation.
 - no schema or automatic contradiction/supersession/retcon relation was required.
 - merged as `6de5ffb3d7b27bf10f9e7dec948338dc2e0d8889` after source/manual review, final contract review, and final-head CI.
@@ -259,7 +259,7 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 
 ### Current MK9 Sindel assault and defender casualties
 
-**Current work:** Draft PR #28 on `agent/phase6-mk9-sindel-assault`, branched exactly from verified PR #27 merge commit `274a97602e8179ca5da072123852d9621559fb8e`.
+**Current work:** PR #28 on `agent/phase6-mk9-sindel-assault`, branched exactly from verified PR #27 merge commit `274a97602e8179ca5da072123852d9621559fb8e`.
 
 - [x] Start exactly from verified PR #27 merge commit `274a97602e8179ca5da072123852d9621559fb8e`.
 - [x] Add Jax Briggs, Jade, Kabal, Kurtis Stryker, and Tomas Vrbada/Smoke only as the stable Characters required for direct casualty assertions in this slice.
@@ -275,9 +275,10 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - [x] Review/update `CHANGELOG.md` for the material assault/casualty outcome and state-boundary guardrails.
 - [x] Confirm current changed-file scope: exactly 22 expected files, limited to this MK9 Reboot slice plus owning docs/manual.
 - [x] Open Draft PR #28 for the slice.
-- [ ] Maintainer manual source/UI pass completed.
-- [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
-- Current-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
+- [x] Maintainer manual source/UI pass completed.
+- [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
+- [x] Review comments/threads checked; none unresolved.
+- Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
 ### Next lore slices
