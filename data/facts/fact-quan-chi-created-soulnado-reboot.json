@@ -1,0 +1,12 @@
+{
+  "id": "fact-quan-chi-created-soulnado-reboot",
+  "type": "fact",
+  "name": "Quan Chi created a Soulnado in Earthrealm",
+  "subjectId": "quan-chi",
+  "predicate": "created",
+  "value": "Soulnado at St. Dominic's Cemetery in Earthrealm",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) story mode shows Quan Chi complete the spell at St. Dominic's Cemetery and the newly created Soulnado absorb captive soldiers."
+}
