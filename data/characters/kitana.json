@@ -2,8 +2,8 @@
   "id": "kitana",
   "type": "character",
   "name": "Kitana",
-  "timelineIds": ["original"],
+  "timelineIds": ["original", "reboot"],
   "realmIds": ["edenia"],
-  "description": "Princess of Edenia, raised under Shao Kahn after his conquest of her realm and later central to Edenia's liberation in the original continuity.",
+  "description": "An Edenian princess represented across the Original and Reboot continuities, with continuity-scoped history involving Sindel and Shao Kahn.",
   "tags": ["edenian", "princess", "ancient-history"]
 }
