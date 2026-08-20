@@ -1,0 +1,12 @@
+{
+  "id": "fact-quan-chi-nullified-sindel-ward-reboot",
+  "type": "fact",
+  "name": "Quan Chi nullified Sindel's ward by resurrecting her",
+  "subjectId": "quan-chi",
+  "predicate": "nullified",
+  "value": "Sindel's ward preventing Shao Kahn from entering Earthrealm",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) story mode explicitly states that resurrecting Sindel will nullify her ward and the barrier preventing Shao Kahn's entry into Earthrealm."
+}
