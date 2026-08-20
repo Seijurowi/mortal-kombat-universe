@@ -1,0 +1,9 @@
+{
+  "id": "kabal",
+  "type": "character",
+  "name": "Kabal",
+  "timelineIds": ["reboot"],
+  "realmIds": ["earthrealm"],
+  "description": "An Earthrealm defender and former Black Dragon member in the Reboot continuity.",
+  "tags": ["earthrealm", "black-dragon-history"]
+}

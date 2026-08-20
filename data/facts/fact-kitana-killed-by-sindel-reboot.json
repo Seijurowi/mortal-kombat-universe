@@ -1,0 +1,12 @@
+{
+  "id": "fact-kitana-killed-by-sindel-reboot",
+  "type": "fact",
+  "name": "Sindel killed Kitana",
+  "subjectId": "kitana",
+  "predicate": "killed_by",
+  "objectId": "sindel",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) story mode shows Sindel grievously injure Kitana during the assault; Kitana later dies from those injuries after Liu Kang and Raiden return."
+}

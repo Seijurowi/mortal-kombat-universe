@@ -1,0 +1,12 @@
+{
+  "id": "fact-stryker-killed-by-sindel-reboot",
+  "type": "fact",
+  "name": "Sindel killed Kurtis Stryker",
+  "subjectId": "kurtis-stryker",
+  "predicate": "killed_by",
+  "objectId": "sindel",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) story mode directly shows Sindel kill Stryker during her assault on Earthrealm's defenders."
+}

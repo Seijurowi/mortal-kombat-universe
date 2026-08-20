@@ -1,0 +1,13 @@
+{
+  "id": "kitana-dies-from-sindel-injuries-reboot",
+  "type": "event",
+  "name": "Kitana dies from injuries inflicted by Sindel",
+  "timelineId": "reboot",
+  "participantIds": ["kitana", "liu-kang"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": ["sindel-assaults-earthrealm-defenders-reboot"],
+  "consequenceEventIds": [],
+  "order": 300,
+  "description": "After Liu Kang and Raiden return, Kitana dies from the injuries Sindel inflicted during the assault, with Liu Kang at her side.",
+  "tags": ["kitana", "sindel", "death", "invasion"]
+}

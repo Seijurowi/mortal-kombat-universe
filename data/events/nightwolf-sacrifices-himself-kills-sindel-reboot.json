@@ -1,0 +1,13 @@
+{
+  "id": "nightwolf-sacrifices-himself-kills-sindel-reboot",
+  "type": "event",
+  "name": "Nightwolf sacrifices himself to kill Sindel",
+  "timelineId": "reboot",
+  "participantIds": ["nightwolf", "sindel"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": ["sindel-assaults-earthrealm-defenders-reboot"],
+  "consequenceEventIds": [],
+  "order": 290,
+  "description": "After Sindel overwhelms Earthrealm's defenders and moves to finish Kitana, Nightwolf confronts her again and gives his life in an attack that kills Sindel as well.",
+  "tags": ["nightwolf", "sindel", "sacrifice", "death"]
+}

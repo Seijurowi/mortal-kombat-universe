@@ -1,0 +1,10 @@
+{
+  "id": "tomas-vrbada",
+  "type": "character",
+  "name": "Tomas Vrbada",
+  "aliases": ["Smoke"],
+  "timelineIds": ["reboot"],
+  "realmIds": ["earthrealm"],
+  "description": "A Lin Kuei warrior known as Smoke in the Reboot continuity.",
+  "tags": ["lin-kuei", "smoke", "earthrealm"]
+}
