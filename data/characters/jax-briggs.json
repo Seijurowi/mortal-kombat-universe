@@ -1,0 +1,10 @@
+{
+  "id": "jax-briggs",
+  "type": "character",
+  "name": "Jax Briggs",
+  "aliases": ["Jackson Briggs", "Jax"],
+  "timelineIds": ["reboot"],
+  "realmIds": ["earthrealm"],
+  "description": "An Earthrealm Special Forces officer represented in the Reboot continuity.",
+  "tags": ["special-forces", "earthrealm"]
+}
