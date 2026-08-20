@@ -226,7 +226,6 @@ Phase 6 began with the first Reboot-continuity MK9 tournament decomposition in P
 Kickoff coverage audit found the Event store heavily weighted toward Original continuity: **44 Original / 7 Reboot / 3 New Era Events** before Phase 6 expansion. Phase 6 therefore starts by expanding the underrepresented Reboot chronology rather than adding another Original slice.
 
 ### MK9 first-tournament decomposition ✅ — PR #24
-
 - first altered-timeline tournament narrowed to Earthrealm scope;
 - Shang Tsung's later Outworld-tournament proposal separated from the first tournament occurrence;
 - Liu Kang's first-tournament win and Shang Tsung's proposal backed by Reboot canon Facts from `mk9-story`;
@@ -244,7 +243,7 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 
 ### Current MK9 Sindel resurrection and Earthrealm invasion
 
-**Current work:** `agent/phase6-mk9-sindel-invasion`, branched exactly from verified PR #25 merge commit `7dfdfa1518df3950e16ca109384ce65d4bf00044`.
+**Current work:** Draft PR #26 on `agent/phase6-mk9-sindel-invasion`, branched exactly from verified PR #25 merge commit `7dfdfa1518df3950e16ca109384ce65d4bf00044`.
 
 - [x] Start exactly from verified PR #25 merge commit `7dfdfa1518df3950e16ca109384ce65d4bf00044`.
 - [x] Keep Quan Chi's Earthrealm-invasion proposal separate from the actual invasion occurrence.
@@ -256,11 +255,11 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - [x] Keep invasion distinct from the later attempted realm merger and defer Soulnado, Sindel massacre/revenants, Elder Gods intervention, and merger-attempt outcomes.
 - [x] Add/index a Phase 6 slice manual with short maintainer test cases.
 - [x] Review/update `CHANGELOG.md` for the material proposal/resurrection/invasion outcome.
-- [ ] Confirm final changed-file scope.
-- [ ] Open Draft PR for the slice.
-- [ ] Maintainer manual source/UI pass completed.
-- [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
-- Current-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
+- [x] Confirm final changed-file scope: exactly 12 expected files, limited to this MK9 Reboot slice plus owning docs/manual.
+- [x] Open Draft PR #26 for the slice.
+- [x] Maintainer manual source/UI pass completed.
+- [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
+- Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
 ### Next lore slices
