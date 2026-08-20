@@ -103,7 +103,7 @@ Phase 5 expanded from character-scale lore into ancient history and cosmology wh
 - `docs/DEFINITION_OF_DONE.md` added as the authoritative readiness/completion gate.
 
 #### MK4 / Shinnok return bridge ✅ — PR #15
-- Shinnok escape from Netherrealm and renewed-war framing added from the MK4 intro.
+- Shinnok escape and renewed-war framing added from the MK4 intro.
 - MK3 defeat → Shinnok escape → renewed war kept chronological without unsupported causal edges.
 - continuity-wide chronology and Previous/Next navigation added across causal-component boundaries.
 - full Shadcn/Base UI inventory incorporated; `components/ui/` is now the default primitive layer in `AGENTS.md`.
