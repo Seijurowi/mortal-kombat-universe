@@ -2,7 +2,7 @@
   "id": "elder-gods",
   "type": "faction",
   "name": "Elder Gods",
-  "timelineIds": ["original"],
-  "description": "The collective of Elder Gods described in Mortal Kombat: Deception's creation myth.",
+  "timelineIds": ["original", "reboot"],
+  "description": "A collective of Elder Gods represented across the Original and Reboot continuities, with continuity-scoped roles in cosmology and the rules governing Mortal Kombat.",
   "tags": ["cosmology", "gods"]
 }
