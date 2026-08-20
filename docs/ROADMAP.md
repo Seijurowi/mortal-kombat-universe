@@ -162,7 +162,7 @@ Phase 5 expanded from character-scale lore into ancient history and cosmology wh
 - stable Sindel and Jerrod Characters span Original, Reboot, and New Era rather than being duplicated by continuity.
 - royal-role wording remains source-specific: Original `Queen of Edenia`, Reboot `Shao Kahn's Empress`, New Era `Empress of Outworld`.
 - `spouse_of = Jerrod` agrees across all three continuities while preserving Original `supplemental` versus Reboot/New Era `canon` evidence strength.
-- Original Deception canon attributes Jerrod's death to Shao Kahn; Reboot Aftermath canon attributes it to Sindel; New Era preserves only the broader sourced murder outcome without inventing a killer.
+- Original Deception canon attributes Jerrod's death to Shao Kahn; Reboot Aftermath canon attributes it to Sindel; New Era preserves only the broader murder outcome without inventing a killer.
 - `/claims?q=Sindel` deep-links into the comparison and same-value cross-continuity agreement can coexist visibly with status variation.
 - no schema or automatic contradiction/supersession/retcon relation was required.
 - merged as `6de5ffb3d7b27bf10f9e7dec948338dc2e0d8889` after source/manual review, final contract review, and final-head CI.
