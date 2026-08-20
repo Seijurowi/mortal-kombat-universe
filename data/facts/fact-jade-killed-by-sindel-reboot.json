@@ -1,0 +1,12 @@
+{
+  "id": "fact-jade-killed-by-sindel-reboot",
+  "type": "fact",
+  "name": "Sindel killed Jade",
+  "subjectId": "jade",
+  "predicate": "killed_by",
+  "objectId": "sindel",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) story mode directly shows Sindel kill Jade during her assault on Earthrealm's defenders."
+}
