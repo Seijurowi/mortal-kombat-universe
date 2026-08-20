@@ -1,0 +1,12 @@
+{
+  "id": "fact-nightwolf-sacrificed-himself-to-kill-sindel-reboot",
+  "type": "fact",
+  "name": "Nightwolf sacrificed himself to kill Sindel",
+  "subjectId": "nightwolf",
+  "predicate": "sacrificed_self_to_kill",
+  "objectId": "sindel",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) story mode directly shows Nightwolf give his life in the attack that kills Sindel."
+}
