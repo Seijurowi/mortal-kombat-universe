@@ -257,37 +257,41 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - Nightwolf remains one stable Character expanded to Reboot continuity;
 - merged as verified commit `274a97602e8179ca5da072123852d9621559fb8e` after maintainer manual/source review, final contract review, and final-head CI.
 
-### Current MK9 Sindel assault and defender casualties
+### MK9 Sindel assault and defender casualties ✅ — PR #28
 
-**Current work:** PR #28 on `agent/phase6-mk9-sindel-assault`, branched exactly from verified PR #27 merge commit `274a97602e8179ca5da072123852d9621559fb8e`.
+- Sindel's Earthrealm assault remains a separate Reboot occurrence from the earlier Soulnado component;
+- Kabal, Stryker, Kuai Liang, Jax, Smoke, and Jade have narrow Reboot canon `killed_by = Sindel` Facts from `mk9-story`;
+- Nightwolf's self-sacrifice/Sindel death and Kitana's later death from Sindel-inflicted injuries remain separate sourced outcomes of the assault;
+- death Facts do not silently imply later revenant state, and chronology between the outcomes does not manufacture causality;
+- merged as verified commit `ad98e8afc46bdab4221d8745728511bbcaffc645` after maintainer manual/source review, final contract review, and final-head CI.
 
-- [x] Start exactly from verified PR #27 merge commit `274a97602e8179ca5da072123852d9621559fb8e`.
-- [x] Add Jax Briggs, Jade, Kabal, Kurtis Stryker, and Tomas Vrbada/Smoke only as the stable Characters required for direct casualty assertions in this slice.
-- [x] Expand the existing stable Kitana Character to Reboot continuity rather than creating a duplicate.
-- [x] Add Sindel's assault on Earthrealm's defenders as a separate Reboot Event in Earthrealm.
-- [x] Add canon `killed_by = Sindel` Facts for Kabal, Stryker, Kuai Liang/Cyber Sub-Zero, Jax, Smoke, and Jade using `mk9-story`.
-- [x] Add Nightwolf's self-sacrifice/Sindel death as a separate Event plus narrow canon Facts for both outcomes.
-- [x] Add Kitana's later death from Sindel-inflicted injuries as a separate Event plus a canon `killed_by = Sindel` Fact.
-- [x] Add mirrored `Sindel assault → Nightwolf sacrifice` and `Sindel assault → Kitana death` causality because both outcomes directly result from the assault.
-- [x] Keep the Soulnado destruction → Sindel assault transition chronology-only and keep Nightwolf sacrifice → Kitana death chronology-only.
-- [x] Keep later revenant conversion, Quan Chi's possession of the dead defenders' souls, the Elder Gods' refusal, Liu Kang's later death, and Shao Kahn's merger/final defeat outside this slice.
-- [x] Add/index a Phase 6 Sindel-assault manual with short maintainer test cases.
-- [x] Review/update `CHANGELOG.md` for the material assault/casualty outcome and state-boundary guardrails.
-- [x] Confirm current changed-file scope: exactly 22 expected files, limited to this MK9 Reboot slice plus owning docs/manual.
-- [x] Open Draft PR #28 for the slice.
-- [x] Maintainer manual source/UI pass completed.
-- [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
-- [x] Review comments/threads checked; none unresolved.
+### Current MK9 Elder Gods refusal
+
+**Current work:** `agent/phase6-mk9-elder-gods-refusal`, branched exactly from verified PR #28 merge commit `ad98e8afc46bdab4221d8745728511bbcaffc645`.
+
+- [x] Start exactly from verified PR #28 merge commit `ad98e8afc46bdab4221d8745728511bbcaffc645`.
+- [x] Expand the stable Elder Gods Faction to Reboot continuity rather than duplicating the collective actor.
+- [x] Add Raiden's appeal to the Elder Gods as a separate Reboot Event with Raiden, Liu Kang, and the Elder Gods as participants.
+- [x] Add the Elder Gods' refusal as a separate Reboot Event and mirror the direct `appeal → refusal` request/response causal edge.
+- [x] Keep Sindel's concurrent assault/deaths as parallel chronology only; do not manufacture casualty → appeal/refusal causality from intercut timing.
+- [x] Keep both Elder Gods Events without a structured Realm because the temple/other-plane scene does not establish one of the repository's modeled Realms.
+- [x] Add Reboot canon Facts for Raiden's appeal, the refusal to intervene for Earthrealm, invasion not itself being a transgression, and realm merger being proscribed using `mk9-story`.
+- [x] Keep the later illegal-merger occurrence, Elder Gods punishment/intervention, Quan Chi bargain/revenant reveal, Liu Kang death, and Shao Kahn final defeat outside this slice.
+- [x] Add/index a Phase 6 Elder Gods refusal manual with short maintainer test cases.
+- [x] Review/update `CHANGELOG.md` for the material refusal/rule distinction and parallel-chronology guardrail.
+- [ ] Confirm final changed-file scope is limited to this MK9 Reboot slice plus owning docs/manual.
+- [ ] Open Draft PR for the slice.
+- [ ] Maintainer manual source/UI pass completed.
+- [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
 - Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
 ### Next lore slices
 
-1. Model the Elder Gods' refusal to intervene as a separate Reboot occurrence parallel to the Sindel-assault period; shared timing must not manufacture a causal edge to the casualties.
-2. Model Raiden's later appeal to Quan Chi and Quan Chi's reveal that he possesses the dead defenders' souls / has turned them into revenants, keeping death and later revenant state as separate sourced transitions.
-3. Continue through Raiden's `He must win` realization, Liu Kang's death, Shao Kahn's illegal merger attempt, Elder Gods intervention, and the final defeat only as narrow separately evidenced steps.
-4. Advance to MKX/MK11 after the MK9 Reboot chronology has enough structure to make causal transitions inspectable without large gaps.
-5. Expand New Era / MK1 / Khaos Reigns after the Reboot chronology has enough structure to make cross-continuity navigation meaningful rather than sparse anchor comparison.
+1. Model Raiden's later appeal/bargain with Quan Chi and Quan Chi's reveal that he already possesses the dead defenders' souls / commands them as revenants, keeping the bargain request and the revealed state as separate sourced transitions.
+2. Continue through Raiden's `He must win` realization, Liu Kang's death, Shao Kahn's illegal merger attempt, Elder Gods intervention, and the final defeat only as narrow separately evidenced steps.
+3. Advance to MKX/MK11 after the MK9 Reboot chronology has enough structure to make causal transitions inspectable without large gaps.
+4. Expand New Era / MK1 / Khaos Reigns after the Reboot chronology has enough structure to make cross-continuity navigation meaningful rather than sparse anchor comparison.
 
 ### Phase 6 working acceptance criteria
 
@@ -301,9 +305,11 @@ A user should be able to:
 6. distinguish an Earthrealm invasion from a later realm-merger attempt;
 7. distinguish a character being pulled into a destructive phenomenon from a sourced confirmed death/final-fate claim;
 8. inspect individual Sindel casualty attribution without treating the assault as proof of later revenant state;
-9. keep stable Characters continuity-scoped to the evidence actually added rather than projecting unmodeled Original/New Era history;
-10. retain Original, Reboot, and New Era as independently inspectable continuities while coverage grows;
-11. keep existing claim-history, chronology, DAG, source, and mobile behavior trustworthy as Event volume increases.
+9. inspect Raiden's Elder Gods appeal/refusal as a parallel causal component without being told the Sindel casualties caused it;
+10. distinguish the Reboot rule statement `invasion is not itself a transgression` from the separately proscribed realm merger and later punishment scene;
+11. keep stable Characters/Factions continuity-scoped to the evidence actually added rather than projecting unmodeled history;
+12. retain Original, Reboot, and New Era as independently inspectable continuities while coverage grows;
+13. keep existing claim-history, chronology, DAG, source, and mobile behavior trustworthy as Event volume increases.
 
 ## Later infrastructure — only when justified
 
