@@ -1,0 +1,12 @@
+{
+  "id": "fact-quan-chi-proposed-earthrealm-invasion-reboot",
+  "type": "fact",
+  "name": "Quan Chi proposed an invasion of Earthrealm",
+  "subjectId": "quan-chi",
+  "predicate": "proposed",
+  "value": "invasion of Earthrealm",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) story mode presents Quan Chi's invasion proposal as an alternative after Shao Kahn states that Outworld can no longer merge with Earthrealm following the failed Outworld tournament."
+}
