@@ -234,28 +234,38 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - Bi-Han's tournament-era death corrected to Netherrealm scope;
 - merged as `8f52f542815035c584a40470457f277c03aa2c59` after maintainer manual/source review, final contract review, and final-head CI.
 
-### Current MK9 Outworld-tournament occurrence
+### MK9 Outworld-tournament occurrence ✅ — PR #25
 
-**Current work:** Draft PR #25 on `agent/phase6-mk9-outworld-tournament`, branched exactly from verified PR #24 merge commit `8f52f542815035c584a40470457f277c03aa2c59`.
+- Shang Tsung's proposal remains a distinct plan/proposal Event;
+- the replacement Outworld tournament is separately modeled in Reboot continuity;
+- proposal → occurrence causality is mirrored because MK9 shows the terms accepted and tournament carried out;
+- Liu Kang's tournament win and exact Shao Kahn defeat attribution are Reboot canon Facts from `mk9-story`;
+- merged as verified commit `7dfdfa1518df3950e16ca109384ce65d4bf00044` after maintainer manual/source review, final contract review, and final-head CI.
 
-- [x] Start exactly from verified PR #24 merge commit `8f52f542815035c584a40470457f277c03aa2c59`.
-- [x] Preserve Shang Tsung's proposal as a distinct plan/proposal Event.
-- [x] Add the separately evidenced Outworld tournament occurrence in Reboot continuity.
-- [x] Add mirrored `proposal → Outworld tournament` causality because the proposed terms are accepted and the tournament is shown taking place.
-- [x] Keep the occurrence Realm-scoped to Outworld.
-- [x] Add canon Facts for Liu Kang winning the Outworld tournament and defeating Shao Kahn there using `mk9-story`.
+### Current MK9 Sindel resurrection and Earthrealm invasion
+
+**Current work:** `agent/phase6-mk9-sindel-invasion`, branched exactly from verified PR #25 merge commit `7dfdfa1518df3950e16ca109384ce65d4bf00044`.
+
+- [x] Start exactly from verified PR #25 merge commit `7dfdfa1518df3950e16ca109384ce65d4bf00044`.
+- [x] Keep Quan Chi's Earthrealm-invasion proposal separate from the actual invasion occurrence.
+- [x] Add Sindel's resurrection on Earthrealm as a separate Event with Quan Chi, Sindel, and Bi-Han/Noob Saibot as directly represented participants.
+- [x] Add mirrored tournament-loss → invasion-proposal causality because MK9 explicitly presents invasion as the alternative after the tournament defeat blocks Shao Kahn's merger path.
+- [x] Add mirrored proposal → Sindel-resurrection causality because the resurrection mechanism is proposed and then carried out.
+- [x] Add mirrored Sindel-resurrection → Earthrealm-invasion causality because MK9 explicitly says the ward/barrier is nullified and the invasion can now begin.
+- [x] Add canon Facts for Quan Chi's proposal, Sindel resurrection, ward nullification, and Shao Kahn's invasion using `mk9-story`.
+- [x] Keep invasion distinct from the later attempted realm merger and defer Soulnado, Sindel massacre/revenants, Elder Gods intervention, and merger-attempt outcomes.
 - [x] Add/index a Phase 6 slice manual with short maintainer test cases.
-- [x] Review/update `CHANGELOG.md` for the material occurrence/causality outcome.
-- [x] Confirm final changed-file scope: exactly 8 expected files, limited to the MK9 Outworld-tournament data plus owning docs/manual.
-- [x] Open draft PR #25 for the slice.
-- [x] Maintainer manual source/UI pass completed.
-- [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
+- [x] Review/update `CHANGELOG.md` for the material proposal/resurrection/invasion outcome.
+- [ ] Confirm final changed-file scope.
+- [ ] Open Draft PR for the slice.
+- [ ] Maintainer manual source/UI pass completed.
+- [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
 - Current-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
 ### Next lore slices
 
-1. Continue event-first through the remaining MK9 invasion-era story, keeping tournament aftermath, Sindel/revenant developments, and Earthrealm invasion assertions as separately sourced Events rather than one umbrella.
+1. Continue MK9 invasion-era decomposition with the next smallest source-supported occurrence after the invasion begins, keeping Soulnado, Sindel's attack/deaths/revenant consequences, Elder Gods intervention, and the later merger attempt distinct unless direct evidence supports a narrower chain.
 2. Advance to MKX/MK11 after the MK9 Reboot chronology has enough structure to make causal transitions inspectable without large gaps.
 3. Expand New Era / MK1 / Khaos Reigns after the Reboot chronology has enough structure to make cross-continuity navigation meaningful rather than sparse anchor comparison.
 
@@ -264,12 +274,13 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 A user should be able to:
 
 1. read Reboot chronology as distinct events rather than one broad MK9 umbrella;
-2. distinguish tournament proposals/plans from later tournament occurrences;
+2. distinguish tournament proposals/plans and invasion proposals from later occurrences;
 3. see Event participants and Realm scope only where the source supports them;
 4. follow chronology without warning/reset context being turned into unsupported ordinary causality;
 5. trace new event assertions back to primary story Sources and atomic Facts;
-6. retain Original, Reboot, and New Era as independently inspectable continuities while coverage grows;
-7. keep existing claim-history, chronology, DAG, source, and mobile behavior trustworthy as Event volume increases.
+6. distinguish an Earthrealm invasion from a later realm-merger attempt;
+7. retain Original, Reboot, and New Era as independently inspectable continuities while coverage grows;
+8. keep existing claim-history, chronology, DAG, source, and mobile behavior trustworthy as Event volume increases.
 
 ## Later infrastructure — only when justified
 
