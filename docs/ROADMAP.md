@@ -283,7 +283,7 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 
 ### Current MK9 He Must Win realization
 
-**Current work:** Draft PR #31 on `agent/phase6-mk9-he-must-win-realization`, branched exactly from verified PR #30 merge commit `543a109fb1da4fd43e640c528f9a0233d8beab9e`.
+**Current work:** PR #31 on `agent/phase6-mk9-he-must-win-realization`, branched exactly from verified PR #30 merge commit `543a109fb1da4fd43e640c528f9a0233d8beab9e`.
 
 - [x] Start exactly from verified PR #30 merge commit `543a109fb1da4fd43e640c528f9a0233d8beab9e`.
 - [x] Add Quan Chi's post-fight dismissal of the Elder Gods / Shao Kahn-arrival prediction as a separate Reboot Event in the Netherrealm.
@@ -297,9 +297,10 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - [x] Add/index a Phase 6 He Must Win realization manual with short maintainer test cases.
 - [x] Review/update `CHANGELOG.md` for the realization outcome and prediction/claim/causality boundaries.
 - [x] Confirm final changed-file scope: exactly 9 expected files, limited to this MK9 Reboot slice plus owning docs/manual.
-- [x] Open Draft PR #31 for the slice.
-- [ ] Maintainer manual source/UI pass completed.
-- [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
+- [x] Open PR #31 for the slice.
+- [x] Maintainer manual source/UI pass completed.
+- [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
+- [x] Review comments/threads checked; none unresolved.
 - Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
