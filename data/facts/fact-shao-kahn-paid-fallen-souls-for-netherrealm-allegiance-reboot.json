@@ -1,0 +1,12 @@
+{
+  "id": "fact-shao-kahn-paid-fallen-souls-for-netherrealm-allegiance-reboot",
+  "type": "fact",
+  "name": "Shao Kahn paid fallen warriors' souls for Netherrealm's allegiance",
+  "subjectId": "shao-kahn",
+  "predicate": "paid_for",
+  "value": "Netherrealm's allegiance with the fallen Earthrealm warriors' souls",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) story mode has Quan Chi identify the souls already in his possession as Shao Kahn's payment for Netherrealm's allegiance. This is narrower than claiming every death in the invasion automatically transferred a soul by one universal mechanism."
+}

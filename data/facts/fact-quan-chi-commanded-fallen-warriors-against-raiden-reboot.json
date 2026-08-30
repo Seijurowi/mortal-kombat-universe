@@ -1,0 +1,12 @@
+{
+  "id": "fact-quan-chi-commanded-fallen-warriors-against-raiden-reboot",
+  "type": "fact",
+  "name": "Quan Chi commanded fallen Earthrealm warriors to attack Raiden",
+  "subjectId": "quan-chi",
+  "predicate": "commanded",
+  "value": "fallen Earthrealm warriors to attack Raiden",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) story mode directly shows Quan Chi order fallen Earthrealm warriors under his control to finish Raiden, followed by their attacks. The Fact does not claim an exhaustive roster or use a later state label not needed by this scene."
+}

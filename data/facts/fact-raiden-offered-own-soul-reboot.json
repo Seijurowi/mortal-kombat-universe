@@ -1,0 +1,12 @@
+{
+  "id": "fact-raiden-offered-own-soul-reboot",
+  "type": "fact",
+  "name": "Raiden offered his own soul if he died",
+  "subjectId": "raiden",
+  "predicate": "offered_own_soul_if_he_died",
+  "value": true,
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) story mode directly shows Raiden add his own soul to the proposed bargain if he dies. This remains a conditional offer, not a completed soul transfer."
+}

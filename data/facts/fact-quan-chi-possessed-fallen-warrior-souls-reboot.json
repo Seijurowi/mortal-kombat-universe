@@ -1,0 +1,12 @@
+{
+  "id": "fact-quan-chi-possessed-fallen-warrior-souls-reboot",
+  "type": "fact",
+  "name": "Quan Chi possessed the fallen Earthrealm warriors' souls",
+  "subjectId": "quan-chi",
+  "predicate": "possessed_souls_of",
+  "value": "fallen Earthrealm warriors revealed under his control",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) story mode has Quan Chi directly tell Raiden that the fallen warriors' souls are already his, then display and command fallen Earthrealm warriors. This Fact stays at soul possession/control and does not require a later formal revenant label."
+}

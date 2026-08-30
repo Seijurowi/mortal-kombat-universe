@@ -1,0 +1,12 @@
+{
+  "id": "fact-raiden-offered-fallen-warrior-souls-reboot",
+  "type": "fact",
+  "name": "Raiden offered fallen Earthrealm warriors' souls for Netherrealm cooperation",
+  "subjectId": "raiden",
+  "predicate": "offered",
+  "value": "souls of Earthrealm warriors who die in the conflict in exchange for Netherrealm cooperation",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) story mode directly shows Raiden make this proposed bargain with Quan Chi. The offer does not establish that Raiden transferred or controlled those souls."
+}

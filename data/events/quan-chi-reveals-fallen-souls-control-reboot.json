@@ -1,0 +1,13 @@
+{
+  "id": "quan-chi-reveals-fallen-souls-control-reboot",
+  "type": "event",
+  "name": "Quan Chi reveals control of fallen Earthrealm warriors",
+  "timelineId": "reboot",
+  "participantIds": ["quan-chi", "raiden", "jax-briggs", "kurtis-stryker", "kabal", "kitana", "nightwolf"],
+  "realmIds": ["netherrealm"],
+  "causeEventIds": ["raiden-offers-souls-for-netherrealm-alliance-reboot"],
+  "consequenceEventIds": [],
+  "order": 320,
+  "description": "Quan Chi rejects Raiden's proposed payment by revealing that the fallen warriors' souls are already his, which he identifies as Shao Kahn's payment for Netherrealm's allegiance. He then orders fallen Earthrealm warriors under his control to attack Raiden. The represented participant list is intentionally non-exhaustive, and this Event does not rely on a later formal revenant label.",
+  "tags": ["quan-chi", "souls", "control", "netherrealm"]
+}

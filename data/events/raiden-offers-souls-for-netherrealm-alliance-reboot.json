@@ -1,0 +1,13 @@
+{
+  "id": "raiden-offers-souls-for-netherrealm-alliance-reboot",
+  "type": "event",
+  "name": "Raiden offers souls for Netherrealm cooperation",
+  "timelineId": "reboot",
+  "participantIds": ["raiden", "quan-chi"],
+  "realmIds": ["netherrealm"],
+  "causeEventIds": [],
+  "consequenceEventIds": ["quan-chi-reveals-fallen-souls-control-reboot"],
+  "order": 310,
+  "description": "After returning from the Elder Gods and the deaths of more Earthrealm defenders, Raiden seeks cooperation from Quan Chi in the Netherrealm. He offers the souls of Earthrealm warriors who die in the conflict, plus his own soul if he dies, in exchange for Netherrealm support. This Event represents the proposed bargain, not a completed transfer of those souls.",
+  "tags": ["quan-chi", "bargain", "souls", "netherrealm"]
+}

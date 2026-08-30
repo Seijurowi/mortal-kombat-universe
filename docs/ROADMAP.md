@@ -265,22 +265,31 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - death Facts do not silently imply later revenant state, and chronology between the outcomes does not manufacture causality;
 - merged as verified commit `ad98e8afc46bdab4221d8745728511bbcaffc645` after maintainer manual/source review, final contract review, and final-head CI.
 
-### Current MK9 Elder Gods refusal
+### MK9 Elder Gods refusal ✅ — PR #29
 
-**Current work:** PR #29 on `agent/phase6-mk9-elder-gods-refusal`, branched exactly from verified PR #28 merge commit `ad98e8afc46bdab4221d8745728511bbcaffc645`.
+- Raiden's appeal and the Elder Gods' refusal remain separate Reboot Events with only the direct request→response causal edge;
+- Sindel's concurrent assault/deaths remain parallel chronology rather than causal parents;
+- the Elder Gods' rule explanation keeps invasion distinct from the proscribed realm merger, and the scene carries no invented structured Realm;
+- the stable Elder Gods Faction spans Original and Reboot continuity without duplicating the collective actor;
+- merged as verified commit `a0111c5c56c9e9350b03b0fd0ad5a9f44e4dae73` after maintainer manual/source review, final contract review, and final-head CI.
 
-- [x] Start exactly from verified PR #28 merge commit `ad98e8afc46bdab4221d8745728511bbcaffc645`.
-- [x] Expand the stable Elder Gods Faction to Reboot continuity rather than duplicating the collective actor.
-- [x] Add Raiden's appeal to the Elder Gods as a separate Reboot Event with Raiden, Liu Kang, and the Elder Gods as participants.
-- [x] Add the Elder Gods' refusal as a separate Reboot Event and mirror the direct `appeal → refusal` request/response causal edge.
-- [x] Keep Sindel's concurrent assault/deaths as parallel chronology only; do not manufacture casualty → appeal/refusal causality from intercut timing.
-- [x] Keep both Elder Gods Events without a structured Realm because the temple/other-plane scene does not establish one of the repository's modeled Realms.
-- [x] Add Reboot canon Facts for Raiden's appeal, the refusal to intervene for Earthrealm, invasion not itself being a transgression, and realm merger being proscribed using `mk9-story`.
-- [x] Keep the later illegal-merger occurrence, Elder Gods punishment/intervention, Quan Chi bargain/revenant reveal, Liu Kang death, and Shao Kahn final defeat outside this slice.
-- [x] Add/index a Phase 6 Elder Gods refusal manual with short maintainer test cases.
-- [x] Review/update `CHANGELOG.md` for the material refusal/rule distinction and parallel-chronology guardrail.
+### Current MK9 Quan Chi soul bargain and control reveal
+
+**Current work:** PR #30 on `agent/phase6-mk9-quan-chi-soul-bargain`, branched exactly from verified PR #29 merge commit `a0111c5c56c9e9350b03b0fd0ad5a9f44e4dae73`.
+
+- [x] Start exactly from verified PR #29 merge commit `a0111c5c56c9e9350b03b0fd0ad5a9f44e4dae73`.
+- [x] Add Raiden's proposed soul bargain with Quan Chi as a separate Reboot Event in the Netherrealm.
+- [x] Keep the bargain a proposal rather than a completed soul transfer.
+- [x] Add Quan Chi's separate reveal that the fallen warriors' souls are already his and that Shao Kahn paid them for Netherrealm's allegiance.
+- [x] Mirror only the direct `Raiden bargain → Quan Chi reveal` request/response causal edge.
+- [x] Keep the earlier Elder Gods refusal, Sindel casualties, Nightwolf sacrifice, and Kitana death as chronology/context rather than invented causal parents.
+- [x] Add narrow Reboot canon Facts for Raiden's fallen-warrior soul offer, Raiden's conditional own-soul offer, Quan Chi's soul possession, Shao Kahn's payment, and Quan Chi's command of fallen warriors using `mk9-story`.
+- [x] Keep formal `revenant` terminology/state outside this MK9-only evidence slice rather than inferring the later label from soul possession/control alone.
+- [x] Keep the reveal Event participant list explicitly non-exhaustive; do not add Kung Lao merely to complete the roster and thereby pull his separate death coverage into this slice.
+- [x] Add/index a Phase 6 Quan Chi soul-bargain manual with short maintainer test cases.
+- [x] Review/update `CHANGELOG.md` for the material bargain/control outcome and evidence-boundary guardrails.
 - [x] Confirm final changed-file scope: exactly 11 expected files, limited to this MK9 Reboot slice plus owning docs/manual.
-- [x] Open Draft PR #29 for the slice.
+- [x] Open PR #30 for the slice.
 - [x] Maintainer manual source/UI pass completed.
 - [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
 - [x] Review comments/threads checked; none unresolved.
@@ -289,10 +298,12 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 
 ### Next lore slices
 
-1. Model Raiden's later appeal/bargain with Quan Chi and Quan Chi's reveal that he already possesses the dead defenders' souls / commands them as revenants, keeping the bargain request and the revealed state as separate sourced transitions.
-2. Continue through Raiden's `He must win` realization, Liu Kang's death, Shao Kahn's illegal merger attempt, Elder Gods intervention, and the final defeat only as narrow separately evidenced steps.
-3. Advance to MKX/MK11 after the MK9 Reboot chronology has enough structure to make causal transitions inspectable without large gaps.
-4. Expand New Era / MK1 / Khaos Reigns after the Reboot chronology has enough structure to make cross-continuity navigation meaningful rather than sparse anchor comparison.
+1. Model Raiden's `He must win` realization as a separate Reboot occurrence only if the Chapter 16 dialogue supports the narrow reveal→realization causal relation; keep the realization distinct from the later acts it motivates.
+2. Model Liu Kang's confrontation with Raiden and accidental death as a separate occurrence with exact participant/Realm/evidence boundaries.
+3. Model Shao Kahn's illegal realm-merger attempt, Elder Gods intervention/punishment, and final defeat as narrow separate occurrences rather than one endgame umbrella.
+4. Add later-primary formal revenant-state confirmation when MKX coverage begins, rather than retroactively strengthening the MK9 soul-control scene.
+5. Advance through MKX/MK11 after the MK9 Reboot chronology has enough structure to make causal transitions inspectable without large gaps.
+6. Expand New Era / MK1 / Khaos Reigns after the Reboot chronology has enough structure to make cross-continuity navigation meaningful rather than sparse anchor comparison.
 
 ### Phase 6 working acceptance criteria
 
@@ -310,7 +321,10 @@ A user should be able to:
 10. distinguish the Reboot rule statement `invasion is not itself a transgression` from the separately proscribed realm merger and later punishment scene;
 11. keep stable Characters/Factions continuity-scoped to the evidence actually added rather than projecting unmodeled history;
 12. retain Original, Reboot, and New Era as independently inspectable continuities while coverage grows;
-13. keep existing claim-history, chronology, DAG, source, and mobile behavior trustworthy as Event volume increases.
+13. keep existing claim-history, chronology, DAG, source, and mobile behavior trustworthy as Event volume increases;
+14. distinguish Raiden's proposed soul bargain from any completed transfer of those souls;
+15. inspect Quan Chi's sourced soul possession/control and Shao Kahn payment claim without requiring a later formal revenant label;
+16. understand that Event participant coverage may stay intentionally non-exhaustive when the broad sourced claim is represented literally rather than by manufacturing missing roster history.
 
 ## Later infrastructure — only when justified
 
