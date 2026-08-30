@@ -1,0 +1,12 @@
+{
+  "id": "fact-raiden-realized-he-must-win-meant-shao-kahn-reboot",
+  "type": "fact",
+  "name": "Raiden realized that He Must Win referred to Shao Kahn",
+  "subjectId": "raiden",
+  "predicate": "realized",
+  "value": "the future message 'He must win' referred to Shao Kahn",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) story mode shows Raiden repeat the Elder Gods' merger-judgment condition during his exchange with Quan Chi, exclaim 'He must win,' and state that he now knows what must be done. The later explicit plan to allow Shao Kahn to merge the realms remains a separate occurrence."
+}
