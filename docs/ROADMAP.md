@@ -170,7 +170,7 @@ Phase 5 expanded from character-scale lore into ancient history and cosmology wh
 #### Original-continuity individual-victor attribution audit ✅ — PR #23
 - MKII/MK3/MK4 Liu Kang endings are preserved as `game_ending` source history rather than promoted into stronger canon Facts.
 - existing MK3 canon `Shao Kahn defeated_by Earth warriors` and MK4 canon `Shinnok was_defeated = true` stay broad.
-- repeated protagonist endings do not count as independent canon confirmation merely through repetition.
+- repeated protagonist endings do not count as independent later confirmation merely because values repeat.
 - no canon `defeated_by = Liu Kang` Fact, Event participant, causal edge, schema change, or UI change was added from ending repetition alone.
 - merged as `1369869be29b42604d2f752fb0cc2f2dbed8ec48` after manual/source review, final contract review, and final-head CI.
 
@@ -275,7 +275,7 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 
 ### Current MK9 Quan Chi soul bargain and control reveal
 
-**Current work:** Draft PR #30 on `agent/phase6-mk9-quan-chi-soul-bargain`, branched exactly from verified PR #29 merge commit `a0111c5c56c9e9350b03b0fd0ad5a9f44e4dae73`.
+**Current work:** PR #30 on `agent/phase6-mk9-quan-chi-soul-bargain`, branched exactly from verified PR #29 merge commit `a0111c5c56c9e9350b03b0fd0ad5a9f44e4dae73`.
 
 - [x] Start exactly from verified PR #29 merge commit `a0111c5c56c9e9350b03b0fd0ad5a9f44e4dae73`.
 - [x] Add Raiden's proposed soul bargain with Quan Chi as a separate Reboot Event in the Netherrealm.
@@ -289,9 +289,10 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - [x] Add/index a Phase 6 Quan Chi soul-bargain manual with short maintainer test cases.
 - [x] Review/update `CHANGELOG.md` for the material bargain/control outcome and evidence-boundary guardrails.
 - [x] Confirm final changed-file scope: exactly 11 expected files, limited to this MK9 Reboot slice plus owning docs/manual.
-- [x] Open Draft PR #30 for the slice.
-- [ ] Maintainer manual source/UI pass completed.
-- [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
+- [x] Open PR #30 for the slice.
+- [x] Maintainer manual source/UI pass completed.
+- [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
+- [x] Review comments/threads checked; none unresolved.
 - Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
