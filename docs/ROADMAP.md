@@ -275,7 +275,7 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 
 ### Current MK9 Quan Chi soul bargain and control reveal
 
-**Current work:** `agent/phase6-mk9-quan-chi-soul-bargain`, branched exactly from verified PR #29 merge commit `a0111c5c56c9e9350b03b0fd0ad5a9f44e4dae73`.
+**Current work:** Draft PR #30 on `agent/phase6-mk9-quan-chi-soul-bargain`, branched exactly from verified PR #29 merge commit `a0111c5c56c9e9350b03b0fd0ad5a9f44e4dae73`.
 
 - [x] Start exactly from verified PR #29 merge commit `a0111c5c56c9e9350b03b0fd0ad5a9f44e4dae73`.
 - [x] Add Raiden's proposed soul bargain with Quan Chi as a separate Reboot Event in the Netherrealm.
@@ -288,8 +288,8 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - [x] Keep the reveal Event participant list explicitly non-exhaustive; do not add Kung Lao merely to complete the roster and thereby pull his separate death coverage into this slice.
 - [x] Add/index a Phase 6 Quan Chi soul-bargain manual with short maintainer test cases.
 - [x] Review/update `CHANGELOG.md` for the material bargain/control outcome and evidence-boundary guardrails.
-- [ ] Confirm final changed-file scope is limited to this MK9 Reboot slice plus owning docs/manual.
-- [ ] Open Draft PR for the slice.
+- [x] Confirm final changed-file scope: exactly 11 expected files, limited to this MK9 Reboot slice plus owning docs/manual.
+- [x] Open Draft PR #30 for the slice.
 - [ ] Maintainer manual source/UI pass completed.
 - [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
 - Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
