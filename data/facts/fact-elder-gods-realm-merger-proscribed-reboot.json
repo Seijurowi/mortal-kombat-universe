@@ -1,0 +1,12 @@
+{
+  "id": "fact-elder-gods-realm-merger-proscribed-reboot",
+  "type": "fact",
+  "name": "The Elder Gods said the merger of realms was proscribed",
+  "subjectId": "elder-gods",
+  "predicate": "stated_realm_merger_is_proscribed",
+  "value": true,
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) story mode directly contrasts invasion with the merger of realms and has the Elder Gods state that the merger is proscribed. This Fact does not yet model the later final-scene violation or punishment."
+}

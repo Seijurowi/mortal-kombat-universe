@@ -1,0 +1,12 @@
+{
+  "id": "fact-raiden-appealed-to-elder-gods-reboot",
+  "type": "fact",
+  "name": "Raiden appealed to the Elder Gods for intervention",
+  "subjectId": "raiden",
+  "predicate": "appealed_to",
+  "objectId": "elder-gods",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) story mode directly shows Raiden, accompanied by Liu Kang, beseech the Elder Gods to intervene on Earthrealm's behalf during Shao Kahn's invasion."
+}

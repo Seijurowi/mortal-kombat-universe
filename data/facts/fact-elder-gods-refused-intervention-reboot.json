@@ -1,0 +1,12 @@
+{
+  "id": "fact-elder-gods-refused-intervention-reboot",
+  "type": "fact",
+  "name": "The Elder Gods refused intervention on Earthrealm's behalf",
+  "subjectId": "elder-gods",
+  "predicate": "refused_intervention_for",
+  "objectId": "earthrealm",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) story mode directly shows the Elder Gods refuse Raiden's request that they intervene for Earthrealm during Shao Kahn's invasion."
+}
