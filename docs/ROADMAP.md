@@ -170,7 +170,7 @@ Phase 5 expanded from character-scale lore into ancient history and cosmology wh
 #### Original-continuity individual-victor attribution audit ✅ — PR #23
 - MKII/MK3/MK4 Liu Kang endings are preserved as `game_ending` source history rather than promoted into stronger canon Facts.
 - existing MK3 canon `Shao Kahn defeated_by Earth warriors` and MK4 canon `Shinnok was_defeated = true` stay broad.
-- repeated protagonist endings do not count as independent later confirmation merely because values repeat.
+- repeated protagonist endings do not count as independent canon confirmation merely through repetition.
 - no canon `defeated_by = Liu Kang` Fact, Event participant, causal edge, schema change, or UI change was added from ending repetition alone.
 - merged as `1369869be29b42604d2f752fb0cc2f2dbed8ec48` after manual/source review, final contract review, and final-head CI.
 
