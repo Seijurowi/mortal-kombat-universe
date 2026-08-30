@@ -1,0 +1,13 @@
+{
+  "id": "quan-chi-dismisses-elder-gods-reboot",
+  "type": "event",
+  "name": "Quan Chi dismisses the Elder Gods' intervention",
+  "timelineId": "reboot",
+  "participantIds": ["quan-chi", "raiden"],
+  "realmIds": ["netherrealm"],
+  "causeEventIds": [],
+  "consequenceEventIds": ["raiden-realizes-he-must-win-shao-kahn-reboot"],
+  "order": 330,
+  "description": "After Raiden defeats several fallen warriors under Quan Chi's control, Quan Chi says Shao Kahn's victory is nearly complete and that Shao Kahn will soon arrive in Earthrealm. When Raiden insists the Elder Gods cannot allow it, Quan Chi calls them toothless and says they do not act. This conversation prompts Raiden to restate the realm-merger rule; it does not itself establish Shao Kahn's arrival or the Elder Gods' later judgment as completed occurrences.",
+  "tags": ["quan-chi", "elder-gods", "taunt", "netherrealm"]
+}
