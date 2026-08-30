@@ -65,6 +65,7 @@ For Phase 5 work, run the broad regression checklist when the change can affect 
 - [`PHASE6_MK9_SOULNADO_MANUAL_VERIFICATION.md`](./PHASE6_MK9_SOULNADO_MANUAL_VERIFICATION.md) — Reboot MK9 Soulnado creation/destruction, chronology-vs-causality separation from the broader invasion, Nightwolf continuity expansion, Bi-Han fate guardrail, and short maintainer test cases.
 - [`PHASE6_MK9_SINDEL_ASSAULT_MANUAL_VERIFICATION.md`](./PHASE6_MK9_SINDEL_ASSAULT_MANUAL_VERIFICATION.md) — Reboot MK9 Sindel assault, individual casualty attribution, Nightwolf self-sacrifice, Kitana's later death, revenant deferral, and short maintainer test cases.
 - [`PHASE6_MK9_ELDER_GODS_REFUSAL_MANUAL_VERIFICATION.md`](./PHASE6_MK9_ELDER_GODS_REFUSAL_MANUAL_VERIFICATION.md) — Reboot MK9 Raiden appeal/Elder Gods refusal, parallel chronology without casualty causality, invasion-vs-merger rule distinction, stable Elder Gods Faction expansion, and short maintainer test cases.
+- [`PHASE6_MK9_QUAN_CHI_SOUL_BARGAIN_MANUAL_VERIFICATION.md`](./PHASE6_MK9_QUAN_CHI_SOUL_BARGAIN_MANUAL_VERIFICATION.md) — Reboot MK9 Raiden/Quan Chi soul bargain, direct bargain→reveal causality, soul-possession/control evidence, formal-revenant-label deferral, and short maintainer test cases.
 
 For Phase 6 work, use the slice-specific checklist plus any earlier regression checklist whose shared behavior the slice actually touches.
 
