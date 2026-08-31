@@ -1,0 +1,13 @@
+{
+  "id": "raiden-realizes-he-must-win-shao-kahn-reboot",
+  "type": "event",
+  "name": "Raiden realizes that Shao Kahn must win",
+  "timelineId": "reboot",
+  "participantIds": ["raiden", "quan-chi"],
+  "realmIds": ["netherrealm"],
+  "causeEventIds": ["quan-chi-dismisses-elder-gods-reboot"],
+  "consequenceEventIds": [],
+  "order": 340,
+  "description": "While answering Quan Chi's claim that the Elder Gods will not act, Raiden repeats that Shao Kahn may merge the realms only through Mortal Kombat or face the Elder Gods' judgment. He then realizes that his future message, 'He must win,' refers to Shao Kahn and says he now knows what must be done. This Event stops at the realization; Raiden's later explicit plan to allow the merger is separate.",
+  "tags": ["raiden", "he-must-win", "realization", "netherrealm"]
+}

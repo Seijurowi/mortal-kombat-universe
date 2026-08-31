@@ -1,0 +1,12 @@
+{
+  "id": "fact-quan-chi-claimed-elder-gods-would-not-act-reboot",
+  "type": "fact",
+  "name": "Quan Chi claimed the Elder Gods would not act",
+  "subjectId": "quan-chi",
+  "predicate": "claimed",
+  "value": "the Elder Gods would not act to save Earthrealm",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) story mode directly shows Quan Chi call the Elder Gods toothless and tell Raiden that Earthrealm nears destruction while they do not act. The Fact records Quan Chi's claim rather than promoting that taunt into a universal statement about the Elder Gods."
+}

@@ -1,0 +1,12 @@
+{
+  "id": "fact-quan-chi-predicted-shao-kahn-arrival-reboot",
+  "type": "fact",
+  "name": "Quan Chi predicted Shao Kahn would soon arrive in Earthrealm",
+  "subjectId": "quan-chi",
+  "predicate": "predicted",
+  "value": "Shao Kahn would soon arrive in Earthrealm",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) story mode directly shows Quan Chi tell Raiden that Shao Kahn's victory is nearly complete and that Shao Kahn will soon arrive in Earthrealm. This records Quan Chi's prediction, not the later arrival or merger as an occurrence."
+}

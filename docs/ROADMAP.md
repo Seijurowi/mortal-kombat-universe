@@ -273,23 +273,31 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - the stable Elder Gods Faction spans Original and Reboot continuity without duplicating the collective actor;
 - merged as verified commit `a0111c5c56c9e9350b03b0fd0ad5a9f44e4dae73` after maintainer manual/source review, final contract review, and final-head CI.
 
-### Current MK9 Quan Chi soul bargain and control reveal
+### MK9 Quan Chi soul bargain and control reveal ✅ — PR #30
 
-**Current work:** PR #30 on `agent/phase6-mk9-quan-chi-soul-bargain`, branched exactly from verified PR #29 merge commit `a0111c5c56c9e9350b03b0fd0ad5a9f44e4dae73`.
+- Raiden's proposed soul bargain and Quan Chi's separate soul-possession/control reveal remain distinct Reboot Events;
+- only the direct bargain → reveal request/response causal edge is modeled, while the earlier Elder Gods refusal and defender deaths remain chronology/context;
+- Shao Kahn's payment of fallen souls for Netherrealm allegiance and Quan Chi's command of the fallen remain narrow sourced Facts without requiring a formal later `revenant` label;
+- the reveal roster remains intentionally non-exhaustive rather than manufacturing missing death coverage solely to fill the participant list;
+- merged as verified commit `543a109fb1da4fd43e640c528f9a0233d8beab9e` after maintainer manual/source review, final contract review, and final-head CI.
 
-- [x] Start exactly from verified PR #29 merge commit `a0111c5c56c9e9350b03b0fd0ad5a9f44e4dae73`.
-- [x] Add Raiden's proposed soul bargain with Quan Chi as a separate Reboot Event in the Netherrealm.
-- [x] Keep the bargain a proposal rather than a completed soul transfer.
-- [x] Add Quan Chi's separate reveal that the fallen warriors' souls are already his and that Shao Kahn paid them for Netherrealm's allegiance.
-- [x] Mirror only the direct `Raiden bargain → Quan Chi reveal` request/response causal edge.
-- [x] Keep the earlier Elder Gods refusal, Sindel casualties, Nightwolf sacrifice, and Kitana death as chronology/context rather than invented causal parents.
-- [x] Add narrow Reboot canon Facts for Raiden's fallen-warrior soul offer, Raiden's conditional own-soul offer, Quan Chi's soul possession, Shao Kahn's payment, and Quan Chi's command of fallen warriors using `mk9-story`.
-- [x] Keep formal `revenant` terminology/state outside this MK9-only evidence slice rather than inferring the later label from soul possession/control alone.
-- [x] Keep the reveal Event participant list explicitly non-exhaustive; do not add Kung Lao merely to complete the roster and thereby pull his separate death coverage into this slice.
-- [x] Add/index a Phase 6 Quan Chi soul-bargain manual with short maintainer test cases.
-- [x] Review/update `CHANGELOG.md` for the material bargain/control outcome and evidence-boundary guardrails.
-- [x] Confirm final changed-file scope: exactly 11 expected files, limited to this MK9 Reboot slice plus owning docs/manual.
-- [x] Open PR #30 for the slice.
+### Current MK9 He Must Win realization
+
+**Current work:** PR #31 on `agent/phase6-mk9-he-must-win-realization`, branched exactly from verified PR #30 merge commit `543a109fb1da4fd43e640c528f9a0233d8beab9e`.
+
+- [x] Start exactly from verified PR #30 merge commit `543a109fb1da4fd43e640c528f9a0233d8beab9e`.
+- [x] Add Quan Chi's post-fight dismissal of the Elder Gods / Shao Kahn-arrival prediction as a separate Reboot Event in the Netherrealm.
+- [x] Add Raiden's `He must win` realization as a separate Reboot Event in the Netherrealm.
+- [x] Keep the earlier soul-control reveal → Quan Chi post-fight taunt transition chronology-only rather than manufacturing a causal edge from scene adjacency.
+- [x] Mirror only the direct `Quan Chi post-fight taunt → Raiden realization` causal edge supported by the dialogue/reasoning sequence.
+- [x] Add narrow Reboot canon Facts for Quan Chi's Shao Kahn-arrival prediction, Quan Chi's claim that the Elder Gods will not act, and Raiden's realization that `He must win` refers to Shao Kahn using `mk9-story`.
+- [x] Keep Quan Chi's Elder Gods statement explicitly as his sourced claim rather than an omniscient universal Fact.
+- [x] Keep Shao Kahn's arrival prediction weaker than a completed arrival/merger occurrence.
+- [x] Keep Raiden's later explicit plan to allow the merger, Liu Kang confrontation/death, illegal merger, Elder Gods intervention/punishment, and Shao Kahn final defeat outside this slice.
+- [x] Add/index a Phase 6 He Must Win realization manual with short maintainer test cases.
+- [x] Review/update `CHANGELOG.md` for the realization outcome and prediction/claim/causality boundaries.
+- [x] Confirm final changed-file scope: exactly 9 expected files, limited to this MK9 Reboot slice plus owning docs/manual.
+- [x] Open PR #31 for the slice.
 - [x] Maintainer manual source/UI pass completed.
 - [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
 - [x] Review comments/threads checked; none unresolved.
@@ -298,7 +306,7 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 
 ### Next lore slices
 
-1. Model Raiden's `He must win` realization as a separate Reboot occurrence only if the Chapter 16 dialogue supports the narrow reveal→realization causal relation; keep the realization distinct from the later acts it motivates.
+1. Model Raiden's explicit plan to allow Shao Kahn to merge the realms as a separate Reboot plan Event/Facts, verifying whether `realization → allow-merger plan` is directly supported before adding the causal edge.
 2. Model Liu Kang's confrontation with Raiden and accidental death as a separate occurrence with exact participant/Realm/evidence boundaries.
 3. Model Shao Kahn's illegal realm-merger attempt, Elder Gods intervention/punishment, and final defeat as narrow separate occurrences rather than one endgame umbrella.
 4. Add later-primary formal revenant-state confirmation when MKX coverage begins, rather than retroactively strengthening the MK9 soul-control scene.
@@ -324,7 +332,9 @@ A user should be able to:
 13. keep existing claim-history, chronology, DAG, source, and mobile behavior trustworthy as Event volume increases;
 14. distinguish Raiden's proposed soul bargain from any completed transfer of those souls;
 15. inspect Quan Chi's sourced soul possession/control and Shao Kahn payment claim without requiring a later formal revenant label;
-16. understand that Event participant coverage may stay intentionally non-exhaustive when the broad sourced claim is represented literally rather than by manufacturing missing roster history.
+16. understand that Event participant coverage may stay intentionally non-exhaustive when the broad sourced claim is represented literally rather than by manufacturing missing roster history;
+17. distinguish Quan Chi's prediction/claim about Shao Kahn and the Elder Gods from completed future occurrences or universal narrator truth;
+18. follow the directly supported Quan Chi-taunt → Raiden-realization causal relation while keeping the earlier soul-control reveal chronology-only and the later allow-merger plan separate.
 
 ## Later infrastructure — only when justified
 
