@@ -281,37 +281,41 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - the reveal roster remains intentionally non-exhaustive rather than manufacturing missing death coverage solely to fill the participant list;
 - merged as verified commit `543a109fb1da4fd43e640c528f9a0233d8beab9e` after maintainer manual/source review, final contract review, and final-head CI.
 
-### Current MK9 He Must Win realization
+### MK9 He Must Win realization ✅ — PR #31
 
-**Current work:** PR #31 on `agent/phase6-mk9-he-must-win-realization`, branched exactly from verified PR #30 merge commit `543a109fb1da4fd43e640c528f9a0233d8beab9e`.
+- Quan Chi's post-fight dismissal of the Elder Gods and Raiden's `He must win` realization remain separate Reboot Events;
+- the earlier soul-control reveal remains chronology/context while only the direct Quan Chi taunt → Raiden realization causal edge is modeled;
+- Quan Chi's Shao Kahn-arrival statement remains a prediction and his Elder Gods statement remains his sourced claim rather than universal narrator truth;
+- Raiden's realization remains distinct from the later allow-merger strategy;
+- merged as verified commit `c1804a91d6f9dd8adcfd9c7ac2a41b6fdda54cb8` after maintainer manual/source review, final contract review, and final-head CI.
 
-- [x] Start exactly from verified PR #30 merge commit `543a109fb1da4fd43e640c528f9a0233d8beab9e`.
-- [x] Add Quan Chi's post-fight dismissal of the Elder Gods / Shao Kahn-arrival prediction as a separate Reboot Event in the Netherrealm.
-- [x] Add Raiden's `He must win` realization as a separate Reboot Event in the Netherrealm.
-- [x] Keep the earlier soul-control reveal → Quan Chi post-fight taunt transition chronology-only rather than manufacturing a causal edge from scene adjacency.
-- [x] Mirror only the direct `Quan Chi post-fight taunt → Raiden realization` causal edge supported by the dialogue/reasoning sequence.
-- [x] Add narrow Reboot canon Facts for Quan Chi's Shao Kahn-arrival prediction, Quan Chi's claim that the Elder Gods will not act, and Raiden's realization that `He must win` refers to Shao Kahn using `mk9-story`.
-- [x] Keep Quan Chi's Elder Gods statement explicitly as his sourced claim rather than an omniscient universal Fact.
-- [x] Keep Shao Kahn's arrival prediction weaker than a completed arrival/merger occurrence.
-- [x] Keep Raiden's later explicit plan to allow the merger, Liu Kang confrontation/death, illegal merger, Elder Gods intervention/punishment, and Shao Kahn final defeat outside this slice.
-- [x] Add/index a Phase 6 He Must Win realization manual with short maintainer test cases.
-- [x] Review/update `CHANGELOG.md` for the realization outcome and prediction/claim/causality boundaries.
-- [x] Confirm final changed-file scope: exactly 9 expected files, limited to this MK9 Reboot slice plus owning docs/manual.
-- [x] Open PR #31 for the slice.
-- [x] Maintainer manual source/UI pass completed.
-- [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
-- [x] Review comments/threads checked; none unresolved.
+### Current MK9 allow-merger plan
+
+**Current work:** Draft PR #32 on `agent/phase6-mk9-allow-merger-plan`, branched exactly from verified PR #31 merge commit `c1804a91d6f9dd8adcfd9c7ac2a41b6fdda54cb8`.
+
+- [x] Start exactly from verified PR #31 merge commit `c1804a91d6f9dd8adcfd9c7ac2a41b6fdda54cb8`.
+- [x] Add Raiden's explicit allow-merger strategy as a separate Reboot plan Event in Earthrealm with Raiden and Liu Kang.
+- [x] Mirror the direct `He Must Win realization → allow-merger plan` causal edge supported by Raiden saying he knows what must be done and immediately stating the strategy to Liu Kang.
+- [x] Add narrow Reboot canon Facts for Raiden's plan to allow Shao Kahn's merger and his expectation that the Elder Gods would punish the illegal merger using `mk9-story`.
+- [x] Keep the plan distinct from a completed realm-merger occurrence, Shao Kahn rule violation, Elder Gods intervention/punishment, or final defeat.
+- [x] Keep Earthrealm `realmIds` as the plan-discussion scene's location/scope rather than using Realm references as action objects.
+- [x] Keep Liu Kang's later confrontation with Raiden and accidental death outside this slice.
+- [x] Add/index a Phase 6 allow-merger plan manual with short maintainer test cases.
+- [x] Review/update `CHANGELOG.md` for the material plan outcome and plan-vs-occurrence/punishment guardrails.
+- [x] Confirm current changed-file scope: exactly 8 expected files, limited to this MK9 Reboot slice plus owning docs/manual.
+- [x] Open Draft PR #32 for the slice.
+- [ ] Maintainer manual source/UI pass completed.
+- [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
 - Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
 ### Next lore slices
 
-1. Model Raiden's explicit plan to allow Shao Kahn to merge the realms as a separate Reboot plan Event/Facts, verifying whether `realization → allow-merger plan` is directly supported before adding the causal edge.
-2. Model Liu Kang's confrontation with Raiden and accidental death as a separate occurrence with exact participant/Realm/evidence boundaries.
-3. Model Shao Kahn's illegal realm-merger attempt, Elder Gods intervention/punishment, and final defeat as narrow separate occurrences rather than one endgame umbrella.
-4. Add later-primary formal revenant-state confirmation when MKX coverage begins, rather than retroactively strengthening the MK9 soul-control scene.
-5. Advance through MKX/MK11 after the MK9 Reboot chronology has enough structure to make causal transitions inspectable without large gaps.
-6. Expand New Era / MK1 / Khaos Reigns after the Reboot chronology has enough structure to make cross-continuity navigation meaningful rather than sparse anchor comparison.
+1. Model Liu Kang's confrontation with Raiden and accidental death with exact occurrence boundaries, deciding from Chapter 16 evidence whether the confrontation and death should be one Event or two linked Events.
+2. Model Shao Kahn's illegal realm-merger attempt, Elder Gods intervention/punishment, and final defeat as narrow separate occurrences rather than one endgame umbrella.
+3. Add later-primary formal revenant-state confirmation when MKX coverage begins, rather than retroactively strengthening the MK9 soul-control scene.
+4. Advance through MKX/MK11 after the MK9 Reboot chronology has enough structure to make causal transitions inspectable without large gaps.
+5. Expand New Era / MK1 / Khaos Reigns after the Reboot chronology has enough structure to make cross-continuity navigation meaningful rather than sparse anchor comparison.
 
 ### Phase 6 working acceptance criteria
 
@@ -334,7 +338,9 @@ A user should be able to:
 15. inspect Quan Chi's sourced soul possession/control and Shao Kahn payment claim without requiring a later formal revenant label;
 16. understand that Event participant coverage may stay intentionally non-exhaustive when the broad sourced claim is represented literally rather than by manufacturing missing roster history;
 17. distinguish Quan Chi's prediction/claim about Shao Kahn and the Elder Gods from completed future occurrences or universal narrator truth;
-18. follow the directly supported Quan Chi-taunt → Raiden-realization causal relation while keeping the earlier soul-control reveal chronology-only and the later allow-merger plan separate.
+18. follow the directly supported Quan Chi-taunt → Raiden-realization causal relation while keeping the earlier soul-control reveal chronology-only;
+19. distinguish Raiden's allow-merger strategy from an actual merger, rule violation, or Elder Gods punishment occurrence;
+20. follow the directly supported realization → plan causal relation without inventing a plan → merger edge before the later occurrence is separately evidenced.
 
 ## Later infrastructure — only when justified
 

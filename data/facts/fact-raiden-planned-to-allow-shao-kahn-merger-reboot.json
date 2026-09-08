@@ -1,0 +1,12 @@
+{
+  "id": "fact-raiden-planned-to-allow-shao-kahn-merger-reboot",
+  "type": "fact",
+  "name": "Raiden planned to allow Shao Kahn to merge the realms",
+  "subjectId": "raiden",
+  "predicate": "planned_to_allow",
+  "value": "Shao Kahn to merge Earthrealm and Outworld",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) Chapter 16 directly shows Raiden tell Liu Kang, after returning from the Netherrealm, that they must allow Shao Kahn to merge the realms. This is plan evidence and does not by itself establish that the merger occurred."
+}
