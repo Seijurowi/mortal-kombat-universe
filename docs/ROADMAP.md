@@ -291,7 +291,7 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 
 ### Current MK9 allow-merger plan
 
-**Current work:** `agent/phase6-mk9-allow-merger-plan`, branched exactly from verified PR #31 merge commit `c1804a91d6f9dd8adcfd9c7ac2a41b6fdda54cb8`.
+**Current work:** Draft PR #32 on `agent/phase6-mk9-allow-merger-plan`, branched exactly from verified PR #31 merge commit `c1804a91d6f9dd8adcfd9c7ac2a41b6fdda54cb8`.
 
 - [x] Start exactly from verified PR #31 merge commit `c1804a91d6f9dd8adcfd9c7ac2a41b6fdda54cb8`.
 - [x] Add Raiden's explicit allow-merger strategy as a separate Reboot plan Event in Earthrealm with Raiden and Liu Kang.
@@ -303,7 +303,7 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - [x] Add/index a Phase 6 allow-merger plan manual with short maintainer test cases.
 - [x] Review/update `CHANGELOG.md` for the material plan outcome and plan-vs-occurrence/punishment guardrails.
 - [x] Confirm current changed-file scope: exactly 8 expected files, limited to this MK9 Reboot slice plus owning docs/manual.
-- [ ] Open Draft PR for the slice.
+- [x] Open Draft PR #32 for the slice.
 - [ ] Maintainer manual source/UI pass completed.
 - [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
 - Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
