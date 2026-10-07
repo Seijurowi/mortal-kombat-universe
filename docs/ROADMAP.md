@@ -297,22 +297,29 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - Earthrealm remains the plan-discussion location/scope rather than an action-object encoding of the planned merger;
 - merged as verified commit `8603d36862627476b90ac482937667fc6f3075e8` after maintainer manual/source review, final contract review, and final-head CI.
 
-### Current MK9 Liu Kang confrontation and death
+### MK9 Liu Kang confrontation and death ✅ — PR #33
 
-**Current work:** Draft PR #33 on `agent/phase6-mk9-liu-kang-death`, branched exactly from verified PR #32 merge commit `8603d36862627476b90ac482937667fc6f3075e8`.
+- Liu Kang's confrontation with Raiden and his later death remain two distinct Reboot Events in Earthrealm;
+- the directly supported `allow-merger plan → confrontation → death` causal chain is mirrored;
+- `killed_by = Raiden` remains qualified by separate self-defense/unintended evidence rather than becoming an intentional-murder claim;
+- actual merger, Elder Gods intervention/punishment, final defeat, and later revenant-state confirmation remain outside that slice;
+- merged as verified commit `86025edf754fe73ca9d7a1529a9e911deb80af95`.
 
-- [x] Start exactly from verified PR #32 merge commit `8603d36862627476b90ac482937667fc6f3075e8`.
-- [x] Split Liu Kang's confrontation with Raiden from Liu Kang's later death as two distinct Reboot Events in Earthrealm.
-- [x] Mirror the direct `allow-merger plan → Raiden/Liu Kang confrontation → Liu Kang death` causal chain supported by Chapter 16.
-- [x] Add narrow Reboot canon `killed_by = Raiden` evidence for Liu Kang while preserving the unintended outcome.
-- [x] Add separate Reboot canon evidence that Raiden raises the lightning shield in self-defense against Liu Kang.
-- [x] Keep the death mechanism narrow: Liu Kang collides with Raiden's lightning shield while attacking with fire and dies moments later from the resulting injuries.
-- [x] Keep the death attribution distinct from an intentional execution/murder claim.
-- [x] Keep Shao Kahn's actual illegal merger, Elder Gods intervention/punishment, final defeat, and later Liu Kang revenant state outside this slice.
-- [x] Add/index a Phase 6 Liu Kang confrontation/death manual with short maintainer test cases.
-- [x] Review/update `CHANGELOG.md` for the material death outcome and accidental/self-defense evidence boundary.
-- [x] Confirm current changed-file scope: exactly 9 expected files, limited to this MK9 Reboot slice plus owning docs/manual.
-- [x] Open Draft PR #33 for the slice.
+### Current MK9 illegal realm merger
+
+**Current work:** `agent/phase6-mk9-illegal-merger`, branched exactly from verified PR #33 merge commit `86025edf754fe73ca9d7a1529a9e911deb80af95`.
+
+- [x] Start exactly from verified PR #33 merge commit `86025edf754fe73ca9d7a1529a9e911deb80af95`.
+- [x] Add Shao Kahn's actual illegal Earthrealm/Outworld merger as a distinct Reboot Event at story order 380.
+- [x] Keep the merger distinct from Raiden's earlier allow-merger plan and from Liu Kang's death.
+- [x] Preserve chronology without inventing `Liu Kang death → merger` or `allow-merger plan → merger` causal edges.
+- [x] Keep Earthrealm `realmIds` as scene location/scope only and represent the merger assertion through a sourced Realm-target Fact.
+- [x] Record the merger as begun/ongoing rather than asserting a permanent completed merged state.
+- [x] Keep Elder Gods intervention/punishment and Shao Kahn's final defeat outside this slice.
+- [x] Add/index a Phase 6 illegal-merger manual with action-level maintainer test cases.
+- [x] Review/update `CHANGELOG.md` for the material occurrence and causality/Realm-semantics boundary.
+- [ ] Confirm final changed-file scope is limited to the expected event/fact/docs files.
+- [ ] Open Draft PR for the slice.
 - [ ] Maintainer manual source/UI pass completed.
 - [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
 - Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
@@ -320,11 +327,10 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 
 ### Next lore slices
 
-1. Model Shao Kahn's actual illegal realm-merger occurrence, keeping the occurrence distinct from Raiden's earlier plan and Liu Kang's death.
-2. Model the Elder Gods' intervention/punishment and Shao Kahn's final defeat as narrow separate occurrences with only source-supported causal edges.
-3. Add later-primary formal revenant-state confirmation when MKX coverage begins, rather than retroactively strengthening MK9 death/soul-control scenes.
-4. Advance through MKX/MK11 after the MK9 Reboot chronology has enough structure to make causal transitions inspectable without large gaps.
-5. Expand New Era / MK1 / Khaos Reigns after the Reboot chronology has enough structure to make cross-continuity navigation meaningful rather than sparse anchor comparison.
+1. Model the Elder Gods' intervention/punishment and Shao Kahn's final defeat as narrow separate occurrences with only source-supported causal edges.
+2. Add later-primary formal revenant-state confirmation when MKX coverage begins, rather than retroactively strengthening MK9 death/soul-control scenes.
+3. Advance through MKX/MK11 after the MK9 Reboot chronology has enough structure to make causal transitions inspectable without large gaps.
+4. Expand New Era / MK1 / Khaos Reigns after the Reboot chronology has enough structure to make cross-continuity navigation meaningful rather than sparse anchor comparison.
 
 ### Phase 6 working acceptance criteria
 
@@ -352,7 +358,9 @@ A user should be able to:
 20. follow the directly supported realization → plan causal relation without inventing a plan → merger edge before the later occurrence is separately evidenced.
 21. distinguish the Raiden/Liu Kang confrontation from Liu Kang's later death rather than flattening the whole exchange into one umbrella Event;
 22. inspect `killed_by = Raiden` together with the sourced self-defense/unintended qualifier rather than reading the death as an intentional execution;
-23. follow `allow-merger plan → confrontation → death` without treating Liu Kang's death as proof that Shao Kahn's merger or Elder Gods punishment has already occurred.
+23. follow `allow-merger plan → confrontation → death` without treating Liu Kang's death as proof that Shao Kahn's merger or Elder Gods punishment has already occurred;
+24. inspect Shao Kahn's actual merger occurrence as a separate Reboot record after Liu Kang's death without seeing chronology converted into unsupported `death → merger` or `plan → merger` causality;
+25. see Earthrealm used only as Event scene scope while the merger itself is expressed through sourced Fact semantics rather than overloaded Event `realmIds`.
 
 ## Later infrastructure — only when justified
 
