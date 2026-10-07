@@ -1,0 +1,13 @@
+{
+  "id": "kotal-confronts-cassie-squad-reboot",
+  "type": "event",
+  "name": "Kotal Kahn confronts Cassie's squad in Outworld",
+  "timelineId": "reboot",
+  "participantIds": ["kotal-kahn", "cassie-cage", "jacqui-briggs", "takeda-takahashi", "kung-jin"],
+  "realmIds": ["outworld"],
+  "causeEventIds": [],
+  "consequenceEventIds": ["kung-jin-invokes-right-of-defense-reboot"],
+  "order": 540,
+  "description": "After Cassie's squad reaches Outworld and is brought before Kotal Kahn, the emperor reacts to the refugee news and the possibility that Mileena has Shinnok's amulet by suspecting the Earthrealmers may be allied with her. When Kotal orders punishment, Kung Jin invokes Outworld's right of defense by kombat. The squad's earlier deployment is chronology context rather than a direct causal parent of Kotal's accusation.",
+  "tags": ["kotal-kahn", "cassie-cage", "mileena", "outworld", "diplomacy", "mkx"]
+}

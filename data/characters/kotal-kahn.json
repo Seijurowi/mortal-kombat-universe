@@ -1,0 +1,10 @@
+{
+  "id": "kotal-kahn",
+  "type": "character",
+  "name": "Kotal Kahn",
+  "aliases": ["Ko'atal", "Buluc"],
+  "timelineIds": ["reboot"],
+  "realmIds": ["outworld"],
+  "description": "An Osh-Tekk warrior who becomes Emperor of Outworld in the Reboot continuity.",
+  "tags": ["outworld", "osh-tekk", "emperor"]
+}

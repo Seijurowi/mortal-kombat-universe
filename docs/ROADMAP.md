@@ -365,26 +365,34 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - Cassie's leadership, Kuai Liang's Grandmaster role, and the Johnny/Sub-Zero training arrangement remain sourced Facts;
 - merged as verified commit `522c6c4bc390d6776c40346c2bdf8225e097d30c` after maintainer manual/source review, final contract review, and final-head CI.
 
-### Current MKX Li Mei warning and Outworld deployment
+### MKX Li Mei warning and Outworld deployment ✅ — PR #41
 
-**Current work:** `agent/phase6-mkx-li-mei-outworld-deployment`, branched exactly from verified PR #40 merge commit `522c6c4bc390d6776c40346c2bdf8225e097d30c`.
+- Li Mei's refugee-camp warning remains report-qualified evidence about Mileena's destructive talisman;
+- Raiden's Shinnok-amulet identification remains explicit suspicion/verification-in-progress;
+- only the direct `Li Mei warning → Sonya Outworld deployment` decision edge is causal;
+- Outworld is represented as the deployment action object while the Event remains Earthrealm-scoped;
+- merged as verified commit `cd24b55849a075238929c111971d6317a7004c00` after maintainer manual/source review, final contract review, and final-head CI.
 
-- [x] Start exactly from verified PR #40 merge commit `522c6c4bc390d6776c40346c2bdf8225e097d30c`.
-- [x] Add stable Reboot Characters for Li Mei and Mileena.
-- [x] Add Li Mei's Earthrealm refugee-camp warning as a distinct Event at story order 520.
-- [x] Keep Sub-Zero's assessment → Li Mei warning chronology-only.
-- [x] Preserve Mileena's destructive-talisman claim as report-qualified evidence from Li Mei.
-- [x] Preserve Raiden's Shinnok-amulet identification as explicit suspicion/verification-in-progress rather than completed confirmation.
-- [x] Add Sonya's deployment of Cassie's squad to Outworld as a distinct Event at story order 530.
-- [x] Mirror direct `Li Mei warning → Sonya Outworld deployment` causality.
-- [x] Represent Outworld as the deployment action-object in a sourced Fact while the deployment Event itself remains Earthrealm-scoped.
-- [x] Do not introduce a first-class Artifact entity for Shinnok's amulet in this slice.
-- [x] Keep Kotal Kahn contact, civil-war combat, amulet confirmation/recovery, Mileena capture/death, and D'Vorah betrayal outside this slice.
-- [x] Extend MKX Story Mode source notes for the warning/deployment sequence.
-- [x] Add/index a Phase 6 Li Mei/Outworld deployment manual with action-level maintainer test cases.
-- [x] Review/update `CHANGELOG.md` for the report-vs-confirmation and Realm action-object boundaries.
+### Current MKX Kotal first contact and cooperation
+
+**Current work:** `agent/phase6-mkx-kotal-first-contact`, branched exactly from verified PR #41 merge commit `cd24b55849a075238929c111971d6317a7004c00`.
+
+- [x] Start exactly from verified PR #41 merge commit `cd24b55849a075238929c111971d6317a7004c00`.
+- [x] Add a stable Reboot Kotal Kahn Character.
+- [x] Add Kotal confronting Cassie's squad in Outworld as a distinct Event at story order 540.
+- [x] Keep Earthrealm deployment → Kotal confrontation chronology-only.
+- [x] Keep Kotal's claim that Earthrealm may be allied with Mileena as his accusation/suspicion rather than objective truth.
+- [x] Add Kung Jin invoking Outworld's right of defense and defeating Kotal as a distinct Event at story order 550.
+- [x] Add Kotal accepting limited cooperation with Cassie's squad as a distinct Event at story order 560.
+- [x] Mirror only the directly supported `Kotal confrontation/accusation → duel → cooperation` causal chain.
+- [x] Add sourced Facts for Kotal ruling Outworld, Mileena leading the rebellion/civil war against him, Kung Jin defeating Kotal, and Kotal agreeing to cooperate.
+- [x] Keep the Mileena/Kotal civil war as political-context Facts rather than one giant umbrella Event.
+- [x] Keep Shinnok-amulet identity/possession unconfirmed at this point.
+- [x] Extend MKX Story Mode and Character Biographies source notes for Kotal/Mileena and the duel/cooperation sequence.
+- [x] Add/index a Phase 6 Kotal first-contact manual with action-level maintainer test cases.
+- [x] Review/update `CHANGELOG.md` for the accusation/civil-war/cooperation evidence boundaries.
 - [x] Confirm final changed-file scope is limited to the expected source/character/event/fact/docs files.
-- [x] Open Draft PR #41 for the slice.
+- [x] Open Draft PR #42 for the slice.
 - [x] Maintainer manual source/UI pass completed.
 - [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
 - Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
@@ -392,10 +400,10 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 
 ### Next lore slices
 
-1. Add Cassie's squad arrival in Outworld, first contact with Kotal Kahn, and the Mileena/Kotal civil-war context without turning the broad war into an umbrella causal parent.
-2. Add the squad/Kotal cooperation against Mileena and the first direct confirmation/recovery path for Shinnok's amulet.
-3. Continue through Mileena's capture/execution and D'Vorah's theft/betrayal with direct Story Mode actor attribution.
-4. Add later Quan Chi capture / Shinnok-release material as separate occurrences.
+1. Add Kotal/Cassie pursuit of Mileena and the first direct confirmation/recovery path for Shinnok's amulet.
+2. Continue through Mileena's capture/execution and D'Vorah's theft/betrayal with direct Story Mode actor attribution.
+3. Add later Quan Chi capture / Shinnok-release material as separate occurrences.
+4. Continue through the remaining MKX chapters with chronology/causality separation.
 5. Continue into MK11 once MKX chronology is dense enough to avoid large narrative gaps.
 
 ### Phase 6 working acceptance criteria
@@ -446,7 +454,10 @@ A user should be able to:
 42. inspect Cassie's squad leadership and Kuai Liang's Grandmaster role as scoped sourced Facts rather than timeless Character metadata;
 43. distinguish Li Mei's report about Mileena's destructive talisman from Raiden's still-unconfirmed suspicion that it is Shinnok's amulet;
 44. follow the directly supported `Li Mei warning → Sonya Outworld deployment` decision without seeing the prior Lin Kuei assessment turned into a cause;
-45. see Outworld represented as the deployment action object while the deployment Event remains Earthrealm-scoped.
+45. see Outworld represented as the deployment action object while the deployment Event remains Earthrealm-scoped;
+46. read Kotal's Earthrealm/Mileena accusation as a character suspicion rather than a canon alliance claim;
+47. follow the directly supported `Kotal confrontation → Kung Jin right-of-defense duel → cooperation` chain;
+48. inspect Kotal's rule and Mileena's rebellion/civil-war context as scoped sourced Facts rather than one umbrella Event.
 
 ## Later infrastructure — only when justified
 

@@ -1,0 +1,12 @@
+{
+  "id": "fact-kotal-cooperated-with-cassie-squad-reboot",
+  "type": "fact",
+  "name": "Kotal Kahn agreed to cooperate with Cassie's squad against Mileena",
+  "subjectId": "kotal-kahn",
+  "predicate": "agreed_to_cooperate_with",
+  "objectId": "cassie-cage",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "After Kung Jin defeats Kotal Kahn and asks for his service instead of his life, Kung Jin proposes that the groups work together against Mileena if she has the missing amulet. Kotal accepts the arrangement. Cassie is used as the stable representative object for her squad; this does not imply the cooperation is exclusively personal to Cassie."
+}

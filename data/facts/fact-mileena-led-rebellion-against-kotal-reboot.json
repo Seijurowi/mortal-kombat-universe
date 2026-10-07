@@ -1,0 +1,12 @@
+{
+  "id": "fact-mileena-led-rebellion-against-kotal-reboot",
+  "type": "fact",
+  "name": "Mileena led a rebellion against Kotal Kahn",
+  "subjectId": "mileena",
+  "predicate": "led_rebellion_against",
+  "objectId": "kotal-kahn",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-character-bios"],
+  "notes": "Mileena's Mortal Kombat X biography states that after Kotal deposed her, she led a rebellion against his regime. Kotal's biography describes the same struggle as an ongoing civil war. This Fact provides the political context without collapsing the multi-year conflict into one umbrella Event."
+}
