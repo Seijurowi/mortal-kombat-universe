@@ -1,0 +1,12 @@
+{
+  "id": "fact-quan-chi-attempted-johnny-revenant-reboot",
+  "type": "fact",
+  "name": "Quan Chi attempted to turn Johnny Cage into a revenant",
+  "subjectId": "quan-chi",
+  "predicate": "attempted_to_turn_into_revenant",
+  "objectId": "johnny-cage",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "Mortal Kombat X Story Mode shows Quan Chi begin a revenant-creation spell on a mortally wounded Johnny Cage. Raiden reverses the process before it completes, so this is an attempt Fact rather than evidence that Johnny actually became a revenant."
+}

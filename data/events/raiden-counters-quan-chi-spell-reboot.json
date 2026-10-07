@@ -1,0 +1,13 @@
+{
+  "id": "raiden-counters-quan-chi-spell-reboot",
+  "type": "event",
+  "name": "Raiden counters Quan Chi's spell while Sonya defeats him",
+  "timelineId": "reboot",
+  "participantIds": ["raiden", "sonya-blade", "quan-chi", "johnny-cage"],
+  "realmIds": ["netherrealm"],
+  "causeEventIds": ["quan-chi-attempts-johnny-revenant-reboot"],
+  "consequenceEventIds": ["raiden-restores-revenants-reboot"],
+  "order": 470,
+  "description": "Raiden works to reverse Quan Chi's revenant spell on Johnny Cage. When Quan Chi interferes, Sonya Blade fights and defeats the sorcerer, removing his interruption and allowing Raiden to continue the reversal. This Event keeps Sonya's enabling combat role separate from Raiden's magical restoration.",
+  "tags": ["raiden", "sonya-blade", "quan-chi", "johnny-cage", "counterspell", "mkx"]
+}

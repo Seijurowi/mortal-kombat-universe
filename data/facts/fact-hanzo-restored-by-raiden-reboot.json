@@ -1,0 +1,12 @@
+{
+  "id": "fact-hanzo-restored-by-raiden-reboot",
+  "type": "fact",
+  "name": "Hanzo Hasashi was restored by Raiden",
+  "subjectId": "hanzo-hasashi",
+  "predicate": "restored_by",
+  "objectId": "raiden",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "Mortal Kombat X Story Mode directly shows Raiden's reversal restore Scorpion/Hanzo Hasashi to living human form and free will. This Fact records the restoration actor without flattening Hanzo's earlier specter/resurrection history into a generic 'became revenant' transition."
+}

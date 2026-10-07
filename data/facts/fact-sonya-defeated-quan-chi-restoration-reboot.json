@@ -1,0 +1,12 @@
+{
+  "id": "fact-sonya-defeated-quan-chi-restoration-reboot",
+  "type": "fact",
+  "name": "Sonya defeated Quan Chi during Raiden's reversal spell",
+  "subjectId": "sonya-blade",
+  "predicate": "defeated",
+  "objectId": "quan-chi",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "Mortal Kombat X Story Mode shows Sonya Blade defeat Quan Chi after he interferes with Raiden's attempt to reverse the revenant spell on Johnny Cage. Her victory removes Quan Chi's interruption and enables Raiden to complete the reversal."
+}

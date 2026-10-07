@@ -1,0 +1,13 @@
+{
+  "id": "earthrealm-warriors-confront-quan-chi-netherrealm-reboot",
+  "type": "event",
+  "name": "Earthrealm warriors confront Quan Chi in the Netherrealm",
+  "timelineId": "reboot",
+  "participantIds": ["johnny-cage", "sonya-blade", "raiden", "quan-chi", "jax-briggs", "hanzo-hasashi", "kuai-liang"],
+  "realmIds": ["netherrealm"],
+  "causeEventIds": [],
+  "consequenceEventIds": [],
+  "order": 450,
+  "description": "After Shinnok is imprisoned and Quan Chi escapes, Johnny Cage, Sonya Blade, and Raiden pursue the sorcerer to his Netherrealm stronghold, where Jax, Scorpion, and Sub-Zero remain under Quan Chi's control. This Event establishes the confrontation context only; it does not automatically become the causal parent of each specific spell or fight that follows.",
+  "tags": ["quan-chi", "johnny-cage", "sonya-blade", "raiden", "netherrealm", "revenants", "mkx"]
+}

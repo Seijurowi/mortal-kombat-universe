@@ -1,0 +1,13 @@
+{
+  "id": "quan-chi-attempts-johnny-revenant-reboot",
+  "type": "event",
+  "name": "Quan Chi attempts to turn Johnny Cage into a revenant",
+  "timelineId": "reboot",
+  "participantIds": ["quan-chi", "johnny-cage", "raiden", "sonya-blade"],
+  "realmIds": ["netherrealm"],
+  "causeEventIds": [],
+  "consequenceEventIds": ["raiden-counters-quan-chi-spell-reboot"],
+  "order": 460,
+  "description": "After Johnny Cage is mortally wounded during the confrontation, Quan Chi uses his magic to begin creating a revenant version of Johnny. Raiden intervenes to reverse the spell before the conversion is completed. The confrontation is chronological context rather than an encoded umbrella cause for this specific spell.",
+  "tags": ["quan-chi", "johnny-cage", "revenant", "spell", "netherrealm", "mkx"]
+}
