@@ -311,7 +311,7 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - [x] Keep Shao Kahn's actual illegal merger, Elder Gods intervention/punishment, final defeat, and later Liu Kang revenant state outside this slice.
 - [x] Add/index a Phase 6 Liu Kang confrontation/death manual with short maintainer test cases.
 - [x] Review/update `CHANGELOG.md` for the material death outcome and accidental/self-defense evidence boundary.
-- [ ] Confirm final changed-file scope after docs/status sync.
+- [x] Confirm current changed-file scope: exactly 9 expected files, limited to this MK9 Reboot slice plus owning docs/manual.
 - [ ] Open Draft PR for the slice.
 - [ ] Maintainer manual source/UI pass completed.
 - [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
