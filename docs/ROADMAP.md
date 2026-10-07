@@ -336,10 +336,10 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - [x] Defer Jax's revenant/restoration history because the MKX biography establishes both corruption and later restoration and deserves its own transition-focused slice.
 - [x] Add/index a Phase 6 MKX revenant confirmation manual with action-level maintainer test cases.
 - [x] Review/update `CHANGELOG.md` for the material later-primary state confirmation and evidence boundary.
-- [ ] Confirm final changed-file scope is limited to the expected source/character/fact/docs files.
+- [x] Confirm final changed-file scope is limited to the expected source/character/fact/docs files.
 - [x] Open Draft PR #36 for the slice.
-- [ ] Maintainer manual source/UI pass completed.
-- [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
+- [x] Maintainer manual source/UI pass completed.
+- [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
 - Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
