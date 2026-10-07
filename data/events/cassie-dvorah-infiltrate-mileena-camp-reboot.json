@@ -1,0 +1,13 @@
+{
+  "id": "cassie-dvorah-infiltrate-mileena-camp-reboot",
+  "type": "event",
+  "name": "Cassie and D'Vorah infiltrate Mileena's camp",
+  "timelineId": "reboot",
+  "participantIds": ["cassie-cage", "dvorah"],
+  "realmIds": ["outworld"],
+  "causeEventIds": ["kotal-launches-operation-against-mileena-reboot"],
+  "consequenceEventIds": ["dvorah-recovers-shinnok-amulet-reboot"],
+  "order": 590,
+  "description": "While Kotal's forces engage Mileena's rebels, Cassie Cage and D'Vorah infiltrate the rebel camp to reach the stolen talisman. During the infiltration, Story Mode directly identifies the object as Shinnok's amulet, resolving the earlier Earthrealm suspicion into confirmed knowledge before the amulet is physically recovered.",
+  "tags": ["cassie-cage", "dvorah", "mileena", "infiltration", "shinnok-amulet", "mkx"]
+}
