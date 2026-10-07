@@ -8,6 +8,7 @@ See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 
 ### Added
 
+- **Phase 6 MKX new-generation team and Lin Kuei exercise:** the twenty-years-later main-era bridge now introduces Cassie Cage, Jacqui Briggs, Takeda Takahashi, Kung Jin, a Reboot-scoped Special Forces Faction, Johnny's team briefing, the staged Lin Kuei mission, and Sub-Zero's teamwork assessment.
 - **Phase 6 MKX Quan Chi confrontation and revenant restoration:** early post-Shinnok chronology now separates the Netherrealm fortress confrontation, Quan Chi's failed Johnny Cage revenant conversion, Raiden's counterspell with Sonya defeating Quan Chi, and Raiden's restoration of Jax, Hanzo Hasashi/Scorpion, and Kuai Liang/Sub-Zero.
 - **Phase 6 MKX Netherrealm invasion and Shinnok imprisonment:** early MKX chronology now separates the broad Netherrealm invasion, the Jinsei-chamber assault, Johnny Cage's defensive green-power manifestation, and Raiden's imprisonment of Shinnok in his own amulet; direct Story Mode causality is preserved without turning the whole invasion into an umbrella causal parent.
 - **Phase 6 MKX Jax revenant/restoration transition:** MKX biography evidence now records Jax's Reboot state progression from Quan Chi-controlled revenant/undead warrior to freedom from Quan Chi and return to life, without inventing a precise restoration scene or overwriting the earlier MK9 death.
@@ -51,6 +52,7 @@ See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 
 ### Changed
 
+- **MKX main-era role/causality boundary:** the long time jump after the early Netherrealm restoration remains chronology-only, while the directly assigned `Johnny briefing → Lin Kuei exercise → Sub-Zero assessment` chain is causal; Cassie's squad leadership and Kuai Liang's Grandmaster role are sourced Facts rather than timeless Character metadata, and the Lin Kuei encounter is preserved as training rather than a real faction conflict.
 - **MKX restoration causality/state boundary:** the broad Quan Chi fortress confrontation remains chronology/context, while the directly shown `Johnny conversion attempt → Raiden counterspell/Sonya victory → selected revenant restoration` chain is mirrored; Johnny is attempt-only, Hanzo's prior specter history is not flattened into a generic revenant-origin claim, and Jax's biography-backed state Facts gain direct Story Mode corroboration.
 - **MKX early-war chronology/causality boundary:** MK9 final defeat → MKX invasion and broad invasion → Jinsei assault remain chronology-only, while the directly shown `Jinsei assault → Johnny intervention → Shinnok imprisonment` chain is mirrored; Shinnok's stable Character now spans Original and Reboot continuity.
 - **MKX Jax time-state boundary:** Jax's death, revenant state, freedom from Quan Chi, and later living state are represented as ordinary time-state changes rather than retcon/contradiction semantics; concept-art wording about Raiden cleansing Jax is not promoted into a stronger actor-attribution Fact in this slice.
