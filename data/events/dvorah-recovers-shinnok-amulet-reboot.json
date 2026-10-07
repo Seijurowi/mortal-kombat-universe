@@ -3,11 +3,27 @@
   "type": "event",
   "name": "D'Vorah recovers Shinnok's amulet from Mileena's camp",
   "timelineId": "reboot",
-  "participantIds": ["dvorah", "cassie-cage"],
-  "realmIds": ["outworld"],
-  "causeEventIds": ["cassie-dvorah-infiltrate-mileena-camp-reboot"],
-  "consequenceEventIds": [],
+  "participantIds": [
+    "dvorah",
+    "cassie-cage"
+  ],
+  "realmIds": [
+    "outworld"
+  ],
+  "causeEventIds": [
+    "cassie-dvorah-infiltrate-mileena-camp-reboot"
+  ],
+  "consequenceEventIds": [
+    "kotal-retains-amulet-detains-cassie-squad-reboot"
+  ],
   "order": 600,
   "description": "Cassie and D'Vorah reach the container holding the talisman, and D'Vorah opens it and takes possession of Shinnok's amulet. This Event records recovery from Mileena's rebel camp only; Mileena's later capture/execution and D'Vorah's later betrayal or theft remain outside this slice.",
-  "tags": ["dvorah", "cassie-cage", "shinnok-amulet", "recovery", "outworld", "mkx"]
+  "tags": [
+    "dvorah",
+    "cassie-cage",
+    "shinnok-amulet",
+    "recovery",
+    "outworld",
+    "mkx"
+  ]
 }
