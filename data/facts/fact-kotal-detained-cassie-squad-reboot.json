@@ -1,0 +1,12 @@
+{
+  "id": "fact-kotal-detained-cassie-squad-reboot",
+  "type": "fact",
+  "name": "Kotal Kahn detained Cassie's squad as leverage against Raiden",
+  "subjectId": "kotal-kahn",
+  "predicate": "detained_team_led_by",
+  "objectId": "cassie-cage",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "Mortal Kombat X Story Mode shows Kotal Kahn order Cassie Cage, Jacqui Briggs, Takeda Takahashi, and Kung Jin detained after deciding Outworld will keep Shinnok's amulet. Cassie is used as the stable representative object for the team; the detention is collective and intended as leverage in dealing with Raiden."
+}
