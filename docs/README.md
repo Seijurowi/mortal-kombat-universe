@@ -71,6 +71,7 @@ For Phase 5 work, run the broad regression checklist when the change can affect 
 - [`PHASE6_MK9_LIU_KANG_DEATH_MANUAL_VERIFICATION.md`](./PHASE6_MK9_LIU_KANG_DEATH_MANUAL_VERIFICATION.md) — Reboot MK9 Raiden/Liu Kang confrontation, accidental death attribution, self-defense qualifier, and short maintainer test cases.
 - [`PHASE6_MK9_ILLEGAL_REALM_MERGER_MANUAL_VERIFICATION.md`](./PHASE6_MK9_ILLEGAL_REALM_MERGER_MANUAL_VERIFICATION.md) — Reboot MK9 Shao Kahn illegal Earthrealm/Outworld merger occurrence, chronology-vs-causality guardrails, Realm action-object semantics, and short maintainer test cases.
 - [`PHASE6_MK9_ELDER_GODS_PUNISHMENT_MANUAL_VERIFICATION.md`](./PHASE6_MK9_ELDER_GODS_PUNISHMENT_MANUAL_VERIFICATION.md) — Reboot MK9 illegal-merger → Elder Gods intervention → final-defeat chain, Raiden empowerment, punishment/victor attribution boundaries, and short maintainer test cases.
+- [`PHASE6_MKX_REVENANT_CONFIRMATION_MANUAL_VERIFICATION.md`](./PHASE6_MKX_REVENANT_CONFIRMATION_MANUAL_VERIFICATION.md) — MKX later-primary revenant-state confirmation for Liu Kang, Kitana, and Kung Lao, stable-person identity separation from the Great Kung Lao, and no invented conversion chronology.
 
 For Phase 6 work, use the slice-specific checklist plus any earlier regression checklist whose shared behavior the slice actually touches.
 
