@@ -319,7 +319,7 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - [x] Add/index a Phase 6 illegal-merger manual with action-level maintainer test cases.
 - [x] Review/update `CHANGELOG.md` for the material occurrence and causality/Realm-semantics boundary.
 - [ ] Confirm final changed-file scope is limited to the expected event/fact/docs files.
-- [ ] Open Draft PR for the slice.
+- [x] Open Draft PR #34 for the slice.
 - [ ] Maintainer manual source/UI pass completed.
 - [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
 - Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
