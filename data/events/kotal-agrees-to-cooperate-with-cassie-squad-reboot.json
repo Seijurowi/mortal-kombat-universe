@@ -1,0 +1,13 @@
+{
+  "id": "kotal-agrees-to-cooperate-with-cassie-squad-reboot",
+  "type": "event",
+  "name": "Kotal Kahn agrees to cooperate with Cassie's squad",
+  "timelineId": "reboot",
+  "participantIds": ["kotal-kahn", "kung-jin", "cassie-cage", "jacqui-briggs", "takeda-takahashi"],
+  "realmIds": ["outworld"],
+  "causeEventIds": ["kung-jin-invokes-right-of-defense-reboot"],
+  "consequenceEventIds": [],
+  "order": 560,
+  "description": "After Kung Jin wins the right-of-defense duel, Kotal Kahn declares the charges against the Earthrealmers void. Kung Jin claims Kotal's service instead of his life and proposes cooperation against Mileena if she possesses the missing amulet; Kotal accepts the new arrangement. The agreement is cooperation toward a shared investigation/conflict objective, not proof that the amulet identity has already been confirmed.",
+  "tags": ["kotal-kahn", "kung-jin", "cassie-cage", "cooperation", "mileena", "mkx"]
+}
