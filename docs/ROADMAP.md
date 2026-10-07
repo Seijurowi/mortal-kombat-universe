@@ -322,22 +322,32 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - no unsupported permanent-death Fact is added for Shao Kahn;
 - merged as verified commit `d36e19e84e95721160eafe590290ce4a830571f6` after maintainer manual/source review, final contract review, and final-head CI.
 
-### Current MKX revenant-state confirmation
+### MKX revenant-state confirmation ✅ — PR #36
 
-**Current work:** `agent/phase6-mkx-revenant-confirmation`, branched exactly from verified PR #35 merge commit `d36e19e84e95721160eafe590290ce4a830571f6`.
+- MKX character biographies provide later-primary Reboot canon confirmation that Liu Kang, Kitana, and Kung Lao became revenants under Quan Chi;
+- Kung Lao is one stable Character distinct from the Great Kung Lao;
+- earlier MK9 death/soul-control records remain unchanged and narrower;
+- no shared conversion Event or exact conversion chronology is invented;
+- merged as verified commit `e66cd1e6c7591d122894430ae48c48ed9515e181` after maintainer manual/source review, final contract review, and final-head CI.
 
-- [x] Start exactly from verified PR #35 merge commit `d36e19e84e95721160eafe590290ce4a830571f6`.
-- [x] Add a later-primary `Mortal Kombat X — Character Biographies` source preserved through Mortal Kombat Warehouse as access infrastructure.
-- [x] Add narrow Reboot canon `became_revenant = true` Facts for Liu Kang, Kitana, and Kung Lao.
-- [x] Add Kung Lao as one stable Character distinct from the Great Kung Lao, scoped only to currently added Reboot evidence.
-- [x] Keep revenant state in Facts rather than timeless Character metadata.
-- [x] Do not create a synthetic shared revenant-conversion Event or exact conversion order the biographies do not establish.
-- [x] Preserve earlier MK9 death and soul-control records unchanged as narrower historical evidence.
-- [x] Defer Jax's revenant/restoration history because the MKX biography establishes both corruption and later restoration and deserves its own transition-focused slice.
-- [x] Add/index a Phase 6 MKX revenant confirmation manual with action-level maintainer test cases.
-- [x] Review/update `CHANGELOG.md` for the material later-primary state confirmation and evidence boundary.
-- [x] Confirm final changed-file scope is limited to the expected source/character/fact/docs files.
-- [x] Open Draft PR #36 for the slice.
+### Current MKX Jax revenant/restoration transition
+
+**Current work:** `agent/phase6-mkx-jax-restoration`, branched exactly from verified PR #36 merge commit `e66cd1e6c7591d122894430ae48c48ed9515e181`.
+
+- [x] Start exactly from verified PR #36 merge commit `e66cd1e6c7591d122894430ae48c48ed9515e181`.
+- [x] Add Reboot canon evidence that Jax became a Quan Chi-controlled revenant/undead warrior.
+- [x] Add separate Reboot canon evidence that Jax was later freed from Quan Chi's influence.
+- [x] Add separate Reboot canon evidence that Jax returned to life.
+- [x] Preserve Jax's earlier MK9 death as historically true rather than overwritten by the later living state.
+- [x] Keep death → revenant → restored living as ordinary time-state progression, not retcon/contradiction semantics.
+- [x] Keep state transitions in Facts rather than timeless Character metadata.
+- [x] Do not create a synthetic restoration Event/location/order from biography-only relative chronology.
+- [x] Do not promote concept-art wording that Jax was "cleansed" by Raiden into a stronger actor-attribution Fact in this slice.
+- [x] Extend the existing MKX character-bios Source notes for Jax while preserving Mortal Kombat Warehouse as access infrastructure only.
+- [x] Add/index a Phase 6 Jax restoration manual with action-level maintainer test cases.
+- [x] Review/update `CHANGELOG.md` for the time-state and actor-attribution boundary.
+- [x] Confirm final changed-file scope is limited to the expected source/fact/docs files.
+- [x] Open Draft PR #37 for the slice.
 - [x] Maintainer manual source/UI pass completed.
 - [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
 - Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
@@ -345,10 +355,11 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 
 ### Next lore slices
 
-1. Model Jax's MKX revenant → restored-to-life history as an explicit state transition without flattening the two states together.
-2. Begin the MKX Shinnok/Netherrealm invasion chronology with source-supported Events and causal edges.
-3. Advance through MKX/MK11 once the MK9→MKX bridge is explicit enough to avoid large narrative jumps.
-4. Expand New Era / MK1 / Khaos Reigns after Reboot coverage is dense enough for meaningful cross-continuity navigation.
+1. Begin the MKX Shinnok/Netherrealm invasion chronology with source-supported Events and causal edges.
+2. Add Sub-Zero/Scorpion restoration history where primary evidence supports the relevant state transitions and actors.
+3. Advance through the MKX 25-year-later storyline after the early Netherrealm-war bridge is explicit.
+4. Continue into MK11 once MKX chronology is dense enough to avoid large narrative gaps.
+5. Expand New Era / MK1 / Khaos Reigns after Reboot coverage is dense enough for meaningful cross-continuity navigation.
 
 ### Phase 6 working acceptance criteria
 
@@ -384,7 +395,9 @@ A user should be able to:
 28. inspect `defeated_by = Raiden` together with the Elder Gods empowerment/punishment evidence, without an unsupported permanent-death claim;
 29. see MKX later-primary biographies formally confirm revenant state for Liu Kang, Kitana, and Kung Lao without rewriting their earlier MK9 death/soul-control records;
 30. distinguish modern Kung Lao from the Great Kung Lao while keeping revenant state in scoped Facts rather than timeless Character metadata;
-31. see the absence of a fabricated shared conversion Event when the evidence does not establish precise conversion timing or ordering.
+31. see the absence of a fabricated shared conversion Event when the evidence does not establish precise conversion timing or ordering;
+32. inspect Jax's death → revenant → freed/restored progression as ordinary time-state change rather than contradiction or retcon;
+33. see Jax's restoration represented through sourced Facts without an invented exact Event/location/order or unsupported actor attribution.
 
 ## Later infrastructure — only when justified
 

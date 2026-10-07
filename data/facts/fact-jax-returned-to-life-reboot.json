@@ -1,0 +1,12 @@
+{
+  "id": "fact-jax-returned-to-life-reboot",
+  "type": "fact",
+  "name": "Jax returned to life after his revenant state",
+  "subjectId": "jax-briggs",
+  "predicate": "returned_to_life",
+  "value": true,
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-character-bios"],
+  "notes": "Mortal Kombat X's Jax biography states that soon after Netherrealm's defeat, Jax was freed of Quan Chi's influence and returned to life. This Fact records the later restored-living state while preserving the earlier revenant state as historically true rather than treating one state as a contradiction of the other."
+}

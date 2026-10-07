@@ -1,0 +1,12 @@
+{
+  "id": "fact-jax-became-revenant-reboot",
+  "type": "fact",
+  "name": "Jax became a revenant under Quan Chi",
+  "subjectId": "jax-briggs",
+  "predicate": "became_revenant",
+  "value": true,
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-character-bios"],
+  "notes": "Mortal Kombat X's Jax biography states that after he died in the Earthrealm fighting, Quan Chi confiscated his soul and recreated him as a vengeful undead warrior forced to fight against Earthrealm. Jacqui's biography also describes Jax's later experiences as a revenant in Quan Chi's service. This later-primary evidence formalizes the state without rewriting the earlier MK9 death and soul-control records."
+}
