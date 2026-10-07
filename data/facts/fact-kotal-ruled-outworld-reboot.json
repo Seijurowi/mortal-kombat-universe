@@ -1,0 +1,12 @@
+{
+  "id": "fact-kotal-ruled-outworld-reboot",
+  "type": "fact",
+  "name": "Kotal Kahn ruled Outworld after overthrowing Mileena",
+  "subjectId": "kotal-kahn",
+  "predicate": "ruled",
+  "objectId": "outworld",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-character-bios", "mkx-story"],
+  "notes": "Kotal Kahn's Mortal Kombat X biography states that he overthrew Mileena and assumed the emperorship of Outworld. Story Mode directly presents him as Outworld's emperor during Cassie's squad's first diplomatic contact. The ruler role is a scoped Fact rather than timeless Character metadata."
+}
