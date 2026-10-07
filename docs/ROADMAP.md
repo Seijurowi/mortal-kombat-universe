@@ -313,35 +313,42 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - the merger is represented as begun/ongoing rather than a permanent completed merged state;
 - merged as verified commit `7df4500078b00fca03ad905d78ecf7ca78b4c3f5` after maintainer manual/source review, final contract review, and final-head CI.
 
-### Current MK9 Elder Gods intervention and Shao Kahn final defeat
+### MK9 Elder Gods intervention and Shao Kahn final defeat ✅ — PR #35
 
-**Current work:** `agent/phase6-mk9-elder-gods-punishment`, branched exactly from verified PR #34 merge commit `7df4500078b00fca03ad905d78ecf7ca78b4c3f5`.
+- Shao Kahn's illegal merger leads to a separate Elder Gods intervention/empowerment occurrence;
+- the intervention leads to Shao Kahn's separate final MK9 defeat;
+- Raiden's final fight victory is qualified by separate Elder Gods empowerment and punishment Facts;
+- the earlier invasion-era refusal remains valid under the invasion-vs-illegal-merger rule distinction;
+- no unsupported permanent-death Fact is added for Shao Kahn;
+- merged as verified commit `d36e19e84e95721160eafe590290ce4a830571f6` after maintainer manual/source review, final contract review, and final-head CI.
 
-- [x] Start exactly from verified PR #34 merge commit `7df4500078b00fca03ad905d78ecf7ca78b4c3f5`.
-- [x] Add a separate Elder Gods intervention Event after Shao Kahn's illegal merger.
-- [x] Mirror direct `illegal merger → Elder Gods intervention` causality from the final Chapter 16 violation/penalty scene.
-- [x] Represent the Elder Gods restoring/empowering Raiden as a separate Reboot canon Fact.
-- [x] Add Shao Kahn's final MK9 defeat as a separate Event after the intervention.
-- [x] Mirror direct `Elder Gods intervention → final defeat` causality.
-- [x] Add separate Reboot canon Facts for Shao Kahn being punished by the Elder Gods and defeated by Raiden in the final fight.
-- [x] Keep `defeated_by = Raiden` qualified by the Elder Gods empowerment/punishment context rather than presenting the outcome as an ordinary unassisted Raiden victory.
-- [x] Do not add a separate permanent-death/`killed_by` Fact for Shao Kahn from this scene.
-- [x] Preserve the earlier Elder Gods refusal as valid under the invasion-vs-illegal-merger rule distinction.
-- [x] Keep Earthrealm `realmIds` as scene scope only.
-- [x] Add/index a Phase 6 Elder Gods intervention/punishment manual with action-level maintainer test cases.
-- [x] Review/update `CHANGELOG.md` for the material endgame outcome and evidence/causality boundaries.
-- [x] Confirm final changed-file scope is limited to the expected endgame data/docs files.
-- [x] Open Draft PR #35 for the slice.
-- [x] Maintainer manual source/UI pass completed.
-- [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
+### Current MKX revenant-state confirmation
+
+**Current work:** `agent/phase6-mkx-revenant-confirmation`, branched exactly from verified PR #35 merge commit `d36e19e84e95721160eafe590290ce4a830571f6`.
+
+- [x] Start exactly from verified PR #35 merge commit `d36e19e84e95721160eafe590290ce4a830571f6`.
+- [x] Add a later-primary `Mortal Kombat X — Character Biographies` source preserved through Mortal Kombat Warehouse as access infrastructure.
+- [x] Add narrow Reboot canon `became_revenant = true` Facts for Liu Kang, Kitana, and Kung Lao.
+- [x] Add Kung Lao as one stable Character distinct from the Great Kung Lao, scoped only to currently added Reboot evidence.
+- [x] Keep revenant state in Facts rather than timeless Character metadata.
+- [x] Do not create a synthetic shared revenant-conversion Event or exact conversion order the biographies do not establish.
+- [x] Preserve earlier MK9 death and soul-control records unchanged as narrower historical evidence.
+- [x] Defer Jax's revenant/restoration history because the MKX biography establishes both corruption and later restoration and deserves its own transition-focused slice.
+- [x] Add/index a Phase 6 MKX revenant confirmation manual with action-level maintainer test cases.
+- [x] Review/update `CHANGELOG.md` for the material later-primary state confirmation and evidence boundary.
+- [ ] Confirm final changed-file scope is limited to the expected source/character/fact/docs files.
+- [ ] Open Draft PR for the slice.
+- [ ] Maintainer manual source/UI pass completed.
+- [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
 - Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
 ### Next lore slices
 
-1. Add later-primary formal revenant-state confirmation when MKX coverage begins, rather than retroactively strengthening MK9 death/soul-control scenes.
-2. Advance through MKX/MK11 after the MK9 Reboot chronology has enough structure to make causal transitions inspectable without large gaps.
-3. Expand New Era / MK1 / Khaos Reigns after the Reboot chronology has enough structure to make cross-continuity navigation meaningful rather than sparse anchor comparison.
+1. Model Jax's MKX revenant → restored-to-life history as an explicit state transition without flattening the two states together.
+2. Begin the MKX Shinnok/Netherrealm invasion chronology with source-supported Events and causal edges.
+3. Advance through MKX/MK11 once the MK9→MKX bridge is explicit enough to avoid large narrative jumps.
+4. Expand New Era / MK1 / Khaos Reigns after Reboot coverage is dense enough for meaningful cross-continuity navigation.
 
 ### Phase 6 working acceptance criteria
 
@@ -374,7 +381,10 @@ A user should be able to:
 25. see Earthrealm used only as Event scene scope while the merger itself is expressed through sourced Fact semantics rather than overloaded Event `realmIds`;
 26. follow the directly supported `illegal merger → Elder Gods intervention → Shao Kahn final defeat` endgame chain without collapsing the violation, empowerment, fight, and punishment into one umbrella record;
 27. understand that the Elder Gods' earlier refusal during invasion and later intervention after illegal merger are conditionally different decisions rather than an automatic contradiction;
-28. inspect `defeated_by = Raiden` together with the Elder Gods empowerment/punishment evidence, without an unsupported permanent-death claim.
+28. inspect `defeated_by = Raiden` together with the Elder Gods empowerment/punishment evidence, without an unsupported permanent-death claim;
+29. see MKX later-primary biographies formally confirm revenant state for Liu Kang, Kitana, and Kung Lao without rewriting their earlier MK9 death/soul-control records;
+30. distinguish modern Kung Lao from the Great Kung Lao while keeping revenant state in scoped Facts rather than timeless Character metadata;
+31. see the absence of a fabricated shared conversion Event when the evidence does not establish precise conversion timing or ordering.
 
 ## Later infrastructure — only when justified
 
