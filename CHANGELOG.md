@@ -8,6 +8,7 @@ See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 
 ### Added
 
+- **Phase 6 MK9 illegal realm merger occurrence:** Shao Kahn's prohibited Earthrealm/Outworld merger is now a distinct Reboot Event plus canon Fact sourced to MK9 story mode, separate from Raiden's earlier plan, Liu Kang's death, and the later Elder Gods intervention/punishment.
 - **Phase 6 MK9 Liu Kang confrontation and death:** Liu Kang's dispute with Raiden over the allow-merger strategy and his later death during their clash are now separate Reboot Events/Facts sourced to MK9 story mode; Raiden is the confirmed killer while the self-defense and unintended-outcome context remains explicit.
 - **Phase 6 MK9 allow-merger plan:** Raiden's explicit strategy to allow Shao Kahn to merge Earthrealm and Outworld is now a separate Reboot plan Event/Facts sourced to MK9 story mode, directly following the `He must win` realization without treating the planned merger or Elder Gods punishment as already completed.
 - **Phase 6 MK9 He Must Win realization:** Quan Chi's post-fight dismissal of the Elder Gods and Raiden's separate realization that the future message `He must win` refers to Shao Kahn are now distinct Reboot Events/Facts sourced to MK9 story mode; Quan Chi's Shao Kahn-arrival statement remains a prediction and his Elder Gods statement remains his claim rather than an omniscient lore assertion.
@@ -45,6 +46,7 @@ See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 
 ### Changed
 
+- **MK9 merger occurrence/evidence boundary:** the actual realm-merger process is modeled as chronology after Liu Kang's death without inventing `death → merger` or `allow-merger plan → merger` causality; Earthrealm remains Event scene scope while the merger assertion itself is carried by a sourced Fact, and the later Elder Gods intervention/final defeat remain deferred.
 - **MK9 Liu Kang death causality/evidence boundary:** the allow-merger plan leads to the separately modeled Raiden/Liu Kang confrontation, which leads to Liu Kang's death; the death attribution does not become an intentional-murder claim, and the actual merger/Elder Gods punishment remain later occurrences.
 - **MK9 allow-merger plan evidence boundary:** Raiden's `He must win` realization now leads to his separately modeled allow-merger strategy, while the plan remains distinct from the later actual merger and from any completed Elder Gods intervention or punishment.
 - **MK9 He Must Win causality and evidence boundary:** the prior soul-control reveal remains chronology/context rather than an invented causal parent; the new causal component begins with Quan Chi's post-fight Elder Gods taunt and leads to Raiden's directly shown realization, while the realization remains separate from Raiden's later explicit allow-merger plan.
