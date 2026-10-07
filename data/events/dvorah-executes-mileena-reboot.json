@@ -1,0 +1,13 @@
+{
+  "id": "dvorah-executes-mileena-reboot",
+  "type": "event",
+  "name": "D'Vorah executes Mileena",
+  "timelineId": "reboot",
+  "participantIds": ["dvorah", "mileena", "kotal-kahn", "cassie-cage"],
+  "realmIds": ["outworld"],
+  "causeEventIds": ["kotal-orders-mileena-execution-reboot"],
+  "consequenceEventIds": [],
+  "order": 630,
+  "description": "Acting on Kotal Kahn's order, D'Vorah executes Mileena with her Kytinn parasites while Kotal and the Earthrealm team are present. This Event records the direct killing and does not make Mileena's death the cause of Kotal's separate decision to detain Cassie's squad.",
+  "tags": ["dvorah", "mileena", "kotal-kahn", "execution", "death", "outworld", "mkx"]
+}
