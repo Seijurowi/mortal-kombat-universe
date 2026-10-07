@@ -1,0 +1,12 @@
+{
+  "id": "fact-shao-kahn-began-merging-earthrealm-with-outworld-reboot",
+  "type": "fact",
+  "name": "Shao Kahn began merging Earthrealm with Outworld without a Mortal Kombat victory",
+  "subjectId": "shao-kahn",
+  "predicate": "began_merging",
+  "objectId": "earthrealm",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) Chapter 16 shows Shao Kahn complete his passage through the portal into Earthrealm. Moments later the Elder Gods explicitly accuse him of merging realms without victory in Mortal Kombat, and Shinnok later refers to Shao Kahn's merging of the realms. This Fact records an actual merger process and rule violation involving Earthrealm and Outworld, not a completed permanent merged state, and it does not include the subsequent Elder Gods punishment."
+}
