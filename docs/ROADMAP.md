@@ -306,6 +306,7 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - [x] Open Draft PR #32 for the slice.
 - [x] Maintainer manual source/UI pass completed.
 - [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
+- [x] Review comments/threads checked; none unresolved.
 - Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
