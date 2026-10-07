@@ -1,0 +1,12 @@
+{
+  "id": "fact-jax-restored-by-raiden-reboot",
+  "type": "fact",
+  "name": "Jax was restored by Raiden",
+  "subjectId": "jax-briggs",
+  "predicate": "restored_by",
+  "objectId": "raiden",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "Mortal Kombat X Story Mode directly shows Raiden complete the magical reversal that restores Jax, Scorpion, and Sub-Zero after Sonya defeats Quan Chi. This actor-attribution Fact supplements Jax's existing biography-backed return-to-life and freedom-from-Quan-Chi Facts."
+}
