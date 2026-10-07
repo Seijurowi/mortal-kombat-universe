@@ -1,0 +1,12 @@
+{
+  "id": "fact-raiden-acted-in-self-defense-against-liu-kang-reboot",
+  "type": "fact",
+  "name": "Raiden acted in self-defense against Liu Kang",
+  "subjectId": "raiden",
+  "predicate": "acted_in_self_defense_against",
+  "objectId": "liu-kang",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) Chapter 16 shows Liu Kang charge Raiden after saying that if Raiden must die, so be it. Raiden generates a lightning shield in self-defense. This Fact qualifies the later death attribution and does not imply that Raiden intended to kill Liu Kang."
+}

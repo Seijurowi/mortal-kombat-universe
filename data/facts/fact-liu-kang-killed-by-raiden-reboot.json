@@ -1,0 +1,12 @@
+{
+  "id": "fact-liu-kang-killed-by-raiden-reboot",
+  "type": "fact",
+  "name": "Raiden killed Liu Kang",
+  "subjectId": "liu-kang",
+  "predicate": "killed_by",
+  "objectId": "raiden",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) Chapter 16 shows Liu Kang collide with Raiden's lightning shield while attacking him; the backlash combines Raiden's lightning with Liu Kang's own fire, Liu Kang is mortally injured, and he dies moments later. Raiden immediately says the outcome was not meant to happen and asks Liu Kang's forgiveness, so this killer attribution must not be presented as an intentional execution."
+}
