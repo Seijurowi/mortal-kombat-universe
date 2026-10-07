@@ -1,0 +1,13 @@
+{
+  "id": "kotal-launches-operation-against-mileena-reboot",
+  "type": "event",
+  "name": "Kotal Kahn launches an operation against Mileena's camp",
+  "timelineId": "reboot",
+  "participantIds": ["kotal-kahn", "cassie-cage", "dvorah"],
+  "realmIds": ["outworld"],
+  "causeEventIds": ["sonya-relays-mileena-location-reboot"],
+  "consequenceEventIds": ["cassie-dvorah-infiltrate-mileena-camp-reboot"],
+  "order": 580,
+  "description": "Using the location intelligence relayed by Sonya, Kotal Kahn prepares an assault on Mileena's rebel position. D'Vorah proposes entering the camp covertly to seize the amulet, and Cassie insists on joining the infiltration. This Event records the operation decision rather than the broader civil war as a single causal parent.",
+  "tags": ["kotal-kahn", "cassie-cage", "dvorah", "mileena", "operation", "outworld", "mkx"]
+}
