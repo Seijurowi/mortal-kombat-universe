@@ -305,32 +305,43 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - actual merger, Elder Gods intervention/punishment, final defeat, and later revenant-state confirmation remain outside that slice;
 - merged as verified commit `86025edf754fe73ca9d7a1529a9e911deb80af95`.
 
-### Current MK9 illegal realm merger
+### MK9 illegal realm merger ✅ — PR #34
 
-**Current work:** `agent/phase6-mk9-illegal-merger`, branched exactly from verified PR #33 merge commit `86025edf754fe73ca9d7a1529a9e911deb80af95`.
+- Shao Kahn's prohibited Earthrealm/Outworld merger remains a distinct Reboot occurrence after Liu Kang's death;
+- chronology does not manufacture `death → merger` or `allow-merger plan → merger` causality;
+- Earthrealm remains Event scene scope while the merger assertion lives in a sourced Realm-target Fact;
+- the merger is represented as begun/ongoing rather than a permanent completed merged state;
+- merged as verified commit `7df4500078b00fca03ad905d78ecf7ca78b4c3f5` after maintainer manual/source review, final contract review, and final-head CI.
 
-- [x] Start exactly from verified PR #33 merge commit `86025edf754fe73ca9d7a1529a9e911deb80af95`.
-- [x] Add Shao Kahn's actual illegal Earthrealm/Outworld merger as a distinct Reboot Event at story order 380.
-- [x] Keep the merger distinct from Raiden's earlier allow-merger plan and from Liu Kang's death.
-- [x] Preserve chronology without inventing `Liu Kang death → merger` or `allow-merger plan → merger` causal edges.
-- [x] Keep Earthrealm `realmIds` as scene location/scope only and represent the merger assertion through a sourced Realm-target Fact.
-- [x] Record the merger as begun/ongoing rather than asserting a permanent completed merged state.
-- [x] Keep Elder Gods intervention/punishment and Shao Kahn's final defeat outside this slice.
-- [x] Add/index a Phase 6 illegal-merger manual with action-level maintainer test cases.
-- [x] Review/update `CHANGELOG.md` for the material occurrence and causality/Realm-semantics boundary.
-- [x] Confirm final changed-file scope is limited to the expected event/fact/docs files.
-- [x] Open Draft PR #34 for the slice.
-- [x] Maintainer manual source/UI pass completed.
-- [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
+### Current MK9 Elder Gods intervention and Shao Kahn final defeat
+
+**Current work:** `agent/phase6-mk9-elder-gods-punishment`, branched exactly from verified PR #34 merge commit `7df4500078b00fca03ad905d78ecf7ca78b4c3f5`.
+
+- [x] Start exactly from verified PR #34 merge commit `7df4500078b00fca03ad905d78ecf7ca78b4c3f5`.
+- [x] Add a separate Elder Gods intervention Event after Shao Kahn's illegal merger.
+- [x] Mirror direct `illegal merger → Elder Gods intervention` causality from the final Chapter 16 violation/penalty scene.
+- [x] Represent the Elder Gods restoring/empowering Raiden as a separate Reboot canon Fact.
+- [x] Add Shao Kahn's final MK9 defeat as a separate Event after the intervention.
+- [x] Mirror direct `Elder Gods intervention → final defeat` causality.
+- [x] Add separate Reboot canon Facts for Shao Kahn being punished by the Elder Gods and defeated by Raiden in the final fight.
+- [x] Keep `defeated_by = Raiden` qualified by the Elder Gods empowerment/punishment context rather than presenting the outcome as an ordinary unassisted Raiden victory.
+- [x] Do not add a separate permanent-death/`killed_by` Fact for Shao Kahn from this scene.
+- [x] Preserve the earlier Elder Gods refusal as valid under the invasion-vs-illegal-merger rule distinction.
+- [x] Keep Earthrealm `realmIds` as scene scope only.
+- [x] Add/index a Phase 6 Elder Gods intervention/punishment manual with action-level maintainer test cases.
+- [x] Review/update `CHANGELOG.md` for the material endgame outcome and evidence/causality boundaries.
+- [ ] Confirm final changed-file scope is limited to the expected endgame data/docs files.
+- [ ] Open Draft PR for the slice.
+- [ ] Maintainer manual source/UI pass completed.
+- [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
 - Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
 ### Next lore slices
 
-1. Model the Elder Gods' intervention/punishment and Shao Kahn's final defeat as narrow separate occurrences with only source-supported causal edges.
-2. Add later-primary formal revenant-state confirmation when MKX coverage begins, rather than retroactively strengthening MK9 death/soul-control scenes.
-3. Advance through MKX/MK11 after the MK9 Reboot chronology has enough structure to make causal transitions inspectable without large gaps.
-4. Expand New Era / MK1 / Khaos Reigns after the Reboot chronology has enough structure to make cross-continuity navigation meaningful rather than sparse anchor comparison.
+1. Add later-primary formal revenant-state confirmation when MKX coverage begins, rather than retroactively strengthening MK9 death/soul-control scenes.
+2. Advance through MKX/MK11 after the MK9 Reboot chronology has enough structure to make causal transitions inspectable without large gaps.
+3. Expand New Era / MK1 / Khaos Reigns after the Reboot chronology has enough structure to make cross-continuity navigation meaningful rather than sparse anchor comparison.
 
 ### Phase 6 working acceptance criteria
 
@@ -360,7 +371,10 @@ A user should be able to:
 22. inspect `killed_by = Raiden` together with the sourced self-defense/unintended qualifier rather than reading the death as an intentional execution;
 23. follow `allow-merger plan → confrontation → death` without treating Liu Kang's death as proof that Shao Kahn's merger or Elder Gods punishment has already occurred;
 24. inspect Shao Kahn's actual merger occurrence as a separate Reboot record after Liu Kang's death without seeing chronology converted into unsupported `death → merger` or `plan → merger` causality;
-25. see Earthrealm used only as Event scene scope while the merger itself is expressed through sourced Fact semantics rather than overloaded Event `realmIds`.
+25. see Earthrealm used only as Event scene scope while the merger itself is expressed through sourced Fact semantics rather than overloaded Event `realmIds`;
+26. follow the directly supported `illegal merger → Elder Gods intervention → Shao Kahn final defeat` endgame chain without collapsing the violation, empowerment, fight, and punishment into one umbrella record;
+27. understand that the Elder Gods' earlier refusal during invasion and later intervention after illegal merger are conditionally different decisions rather than an automatic contradiction;
+28. inspect `defeated_by = Raiden` together with the Elder Gods empowerment/punishment evidence, without an unsupported permanent-death claim.
 
 ## Later infrastructure — only when justified
 
