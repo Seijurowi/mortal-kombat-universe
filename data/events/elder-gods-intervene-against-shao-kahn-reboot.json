@@ -1,0 +1,13 @@
+{
+  "id": "elder-gods-intervene-against-shao-kahn-reboot",
+  "type": "event",
+  "name": "The Elder Gods intervene against Shao Kahn",
+  "timelineId": "reboot",
+  "participantIds": ["elder-gods", "raiden", "shao-kahn"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": ["shao-kahn-begins-illegal-realm-merger-reboot"],
+  "consequenceEventIds": ["shao-kahn-final-defeat-reboot"],
+  "order": 390,
+  "description": "As Shao Kahn prepares to finish Raiden, the Elder Gods finally intervene because Shao Kahn is merging the realms without victory in Mortal Kombat. Golden dragon forms surround and restore Raiden, and the Elder Gods speak through him to declare Shao Kahn's violation and penalty. This Event records the intervention and empowerment that begins the punishment, while the ensuing fight and Shao Kahn's final defeat remain a separate occurrence.",
+  "tags": ["elder-gods", "raiden", "shao-kahn", "intervention", "punishment", "earthrealm"]
+}
