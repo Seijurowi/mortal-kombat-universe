@@ -1,0 +1,9 @@
+{
+  "id": "li-mei",
+  "type": "character",
+  "name": "Li Mei",
+  "timelineIds": ["reboot"],
+  "realmIds": ["outworld"],
+  "description": "An Outworld refugee representative whose warning about Mileena's rebellion brings a new threat to Earthrealm's attention in the Reboot continuity.",
+  "tags": ["outworld", "refugee"]
+}

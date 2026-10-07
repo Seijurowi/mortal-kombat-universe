@@ -76,6 +76,7 @@ For Phase 5 work, run the broad regression checklist when the change can affect 
 - [`PHASE6_MKX_NETHERREALM_INVASION_MANUAL_VERIFICATION.md`](./PHASE6_MKX_NETHERREALM_INVASION_MANUAL_VERIFICATION.md) — early MKX Netherrealm invasion, Jinsei assault, Johnny Cage defensive power manifestation, Shinnok imprisonment, and chronology-vs-causality guardrails.
 - [`PHASE6_MKX_REVENANT_RESTORATION_MANUAL_VERIFICATION.md`](./PHASE6_MKX_REVENANT_RESTORATION_MANUAL_VERIFICATION.md) — post-Shinnok Quan Chi confrontation, failed Johnny revenant conversion, Raiden/Sonya counterspell sequence, and source-supported restoration of Jax, Hanzo, and Kuai Liang.
 - [`PHASE6_MKX_NEW_GENERATION_TEAM_MANUAL_VERIFICATION.md`](./PHASE6_MKX_NEW_GENERATION_TEAM_MANUAL_VERIFICATION.md) — twenty-years-later Cassie/Jacqui/Takeda/Kung Jin introduction, Special Forces role evidence, staged Lin Kuei exercise, and teamwork-assessment causality.
+- [`PHASE6_MKX_LI_MEI_OUTWORLD_DEPLOYMENT_MANUAL_VERIFICATION.md`](./PHASE6_MKX_LI_MEI_OUTWORLD_DEPLOYMENT_MANUAL_VERIFICATION.md) — Li Mei refugee warning, report-vs-confirmation discipline for Mileena's talisman/Shinnok's amulet, and Sonya's source-supported Outworld deployment.
 
 For Phase 6 work, use the slice-specific checklist plus any earlier regression checklist whose shared behavior the slice actually touches.
 

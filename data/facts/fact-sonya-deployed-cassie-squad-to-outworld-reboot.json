@@ -1,0 +1,12 @@
+{
+  "id": "fact-sonya-deployed-cassie-squad-to-outworld-reboot",
+  "type": "fact",
+  "name": "Sonya deployed Cassie's squad to Outworld to confirm Li Mei's report",
+  "subjectId": "sonya-blade",
+  "predicate": "deployed_team_to",
+  "objectId": "outworld",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "Mortal Kombat X Story Mode shows Sonya tell Cassie that she needs Li Mei's story confirmed with Kotal Kahn and orders Cassie and her team to Outworld. This records the deployment decision without treating later diplomacy, civil-war combat, or amulet recovery as already completed."
+}

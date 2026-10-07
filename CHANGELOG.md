@@ -8,6 +8,7 @@ See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 
 ### Added
 
+- **Phase 6 MKX Li Mei warning and Outworld deployment:** Li Mei's refugee-camp warning is now a distinct Reboot Event, Raiden's identification of the destructive talisman remains explicitly a suspicion requiring verification, and Sonya's deployment of Cassie's team to Outworld is a separate response Event/Fact.
 - **Phase 6 MKX new-generation team and Lin Kuei exercise:** the twenty-years-later main-era bridge now introduces Cassie Cage, Jacqui Briggs, Takeda Takahashi, Kung Jin, a Reboot-scoped Special Forces Faction, Johnny's team briefing, the staged Lin Kuei mission, and Sub-Zero's teamwork assessment.
 - **Phase 6 MKX Quan Chi confrontation and revenant restoration:** early post-Shinnok chronology now separates the Netherrealm fortress confrontation, Quan Chi's failed Johnny Cage revenant conversion, Raiden's counterspell with Sonya defeating Quan Chi, and Raiden's restoration of Jax, Hanzo Hasashi/Scorpion, and Kuai Liang/Sub-Zero.
 - **Phase 6 MKX Netherrealm invasion and Shinnok imprisonment:** early MKX chronology now separates the broad Netherrealm invasion, the Jinsei-chamber assault, Johnny Cage's defensive green-power manifestation, and Raiden's imprisonment of Shinnok in his own amulet; direct Story Mode causality is preserved without turning the whole invasion into an umbrella causal parent.
@@ -52,6 +53,7 @@ See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 
 ### Changed
 
+- **MKX warning/verification boundary:** the Lin Kuei assessment → Li Mei warning transition remains chronology-only, while `Li Mei warning → Sonya Outworld deployment` is directly causal; Mileena's destructive talisman is report-qualified and Raiden's Shinnok-amulet identification remains suspicion rather than premature confirmation, with Outworld encoded as the deployment action object rather than the Earthrealm Event scene.
 - **MKX main-era role/causality boundary:** the long time jump after the early Netherrealm restoration remains chronology-only, while the directly assigned `Johnny briefing → Lin Kuei exercise → Sub-Zero assessment` chain is causal; Cassie's squad leadership and Kuai Liang's Grandmaster role are sourced Facts rather than timeless Character metadata, and the Lin Kuei encounter is preserved as training rather than a real faction conflict.
 - **MKX restoration causality/state boundary:** the broad Quan Chi fortress confrontation remains chronology/context, while the directly shown `Johnny conversion attempt → Raiden counterspell/Sonya victory → selected revenant restoration` chain is mirrored; Johnny is attempt-only, Hanzo's prior specter history is not flattened into a generic revenant-origin claim, and Jax's biography-backed state Facts gain direct Story Mode corroboration.
 - **MKX early-war chronology/causality boundary:** MK9 final defeat → MKX invasion and broad invasion → Jinsei assault remain chronology-only, while the directly shown `Jinsei assault → Johnny intervention → Shinnok imprisonment` chain is mirrored; Shinnok's stable Character now spans Original and Reboot continuity.

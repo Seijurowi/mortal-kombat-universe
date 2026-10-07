@@ -1,0 +1,9 @@
+{
+  "id": "mileena",
+  "type": "character",
+  "name": "Mileena",
+  "timelineIds": ["reboot"],
+  "realmIds": ["outworld"],
+  "description": "An Outworld claimant and rebel leader opposed to Kotal Kahn in the Reboot continuity.",
+  "tags": ["outworld", "rebel", "royal-claimant"]
+}

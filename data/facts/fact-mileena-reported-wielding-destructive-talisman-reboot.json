@@ -1,0 +1,12 @@
+{
+  "id": "fact-mileena-reported-wielding-destructive-talisman-reboot",
+  "type": "fact",
+  "name": "Li Mei reported Mileena wielding a destructive talisman",
+  "subjectId": "mileena",
+  "predicate": "reported_to_wield_destructive_talisman",
+  "value": true,
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "Mortal Kombat X Story Mode has Li Mei report that Mileena's rebels possess a gold talisman with a center jewel whose crimson energy has erased entire battalions and shifted the Outworld conflict. This Fact preserves the report as reported evidence; it does not by itself assert that the talisman's identity has already been verified as Shinnok's amulet."
+}

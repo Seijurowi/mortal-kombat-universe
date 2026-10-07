@@ -356,28 +356,35 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - Hanzo's earlier specter history and Kuai Liang's off-screen body-state mechanism remain unflattened/uninvented;
 - merged as verified commit `aa151fa2ca0b523534f6acf0ab1a8c0a7313a5f9` after maintainer manual/source review, final contract review, and final-head CI.
 
-### Current MKX new-generation team and Lin Kuei exercise
+### MKX new-generation team and Lin Kuei exercise ✅ — PR #40
 
-**Current work:** `agent/phase6-mkx-new-generation-team`, branched exactly from verified PR #39 merge commit `aa151fa2ca0b523534f6acf0ab1a8c0a7313a5f9`.
+- Cassie Cage, Jacqui Briggs, Takeda Takahashi, and Kung Jin are introduced as stable Reboot Characters;
+- a Reboot-scoped Special Forces Faction supports the new-generation team without projecting unsupported continuity scope;
+- the twenty-years-later jump remains chronology-only;
+- the directly assigned `Johnny briefing → Lin Kuei exercise → Sub-Zero assessment` chain is causal;
+- Cassie's leadership, Kuai Liang's Grandmaster role, and the Johnny/Sub-Zero training arrangement remain sourced Facts;
+- merged as verified commit `522c6c4bc390d6776c40346c2bdf8225e097d30c` after maintainer manual/source review, final contract review, and final-head CI.
 
-- [x] Start exactly from verified PR #39 merge commit `aa151fa2ca0b523534f6acf0ab1a8c0a7313a5f9`.
-- [x] Add Reboot stable Characters for Cassie Cage, Jacqui Briggs, Takeda Takahashi, and Kung Jin.
-- [x] Add a Reboot-scoped Special Forces Faction without projecting unmodeled Original/New Era scope.
-- [x] Add Johnny Cage's twenty-years-later briefing/assignment as a distinct Event at story order 490.
-- [x] Add Cassie's squad entering the Lin Kuei temple as a distinct Event at story order 500.
-- [x] Add Sub-Zero's explicit team assessment/training reveal as a distinct Event at story order 510.
-- [x] Keep the early restoration → twenty-years-later briefing transition chronology-only.
-- [x] Mirror the directly supported `briefing/assignment → Lin Kuei exercise → Sub-Zero assessment` causal chain.
-- [x] Preserve the Lin Kuei encounter as a staged training exercise rather than a genuine Earthrealm/Lin Kuei war.
-- [x] Add a sourced Fact that Cassie leads the new-generation Special Forces squad.
-- [x] Add a sourced Fact that Kuai Liang is Lin Kuei Grandmaster in the Reboot main-era story.
-- [x] Add a sourced Fact that Johnny Cage and Sub-Zero arranged the training exercise.
-- [x] Keep leadership/office/training roles in Facts rather than timeless Character metadata.
-- [x] Extend MKX Story Mode and Character Biographies source notes for the new-generation/team evidence.
-- [x] Add/index a Phase 6 new-generation manual with action-level maintainer test cases.
-- [x] Review/update `CHANGELOG.md` for the time-jump, training, and role-evidence boundaries.
-- [x] Confirm final changed-file scope is limited to the expected source/faction/character/event/fact/docs files.
-- [x] Open Draft PR #40 for the slice.
+### Current MKX Li Mei warning and Outworld deployment
+
+**Current work:** `agent/phase6-mkx-li-mei-outworld-deployment`, branched exactly from verified PR #40 merge commit `522c6c4bc390d6776c40346c2bdf8225e097d30c`.
+
+- [x] Start exactly from verified PR #40 merge commit `522c6c4bc390d6776c40346c2bdf8225e097d30c`.
+- [x] Add stable Reboot Characters for Li Mei and Mileena.
+- [x] Add Li Mei's Earthrealm refugee-camp warning as a distinct Event at story order 520.
+- [x] Keep Sub-Zero's assessment → Li Mei warning chronology-only.
+- [x] Preserve Mileena's destructive-talisman claim as report-qualified evidence from Li Mei.
+- [x] Preserve Raiden's Shinnok-amulet identification as explicit suspicion/verification-in-progress rather than completed confirmation.
+- [x] Add Sonya's deployment of Cassie's squad to Outworld as a distinct Event at story order 530.
+- [x] Mirror direct `Li Mei warning → Sonya Outworld deployment` causality.
+- [x] Represent Outworld as the deployment action-object in a sourced Fact while the deployment Event itself remains Earthrealm-scoped.
+- [x] Do not introduce a first-class Artifact entity for Shinnok's amulet in this slice.
+- [x] Keep Kotal Kahn contact, civil-war combat, amulet confirmation/recovery, Mileena capture/death, and D'Vorah betrayal outside this slice.
+- [x] Extend MKX Story Mode source notes for the warning/deployment sequence.
+- [x] Add/index a Phase 6 Li Mei/Outworld deployment manual with action-level maintainer test cases.
+- [x] Review/update `CHANGELOG.md` for the report-vs-confirmation and Realm action-object boundaries.
+- [x] Confirm final changed-file scope is limited to the expected source/character/event/fact/docs files.
+- [x] Open Draft PR #41 for the slice.
 - [x] Maintainer manual source/UI pass completed.
 - [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
 - Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
@@ -385,9 +392,9 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 
 ### Next lore slices
 
-1. Add Li Mei's refugee warning, Mileena's possession/use of Shinnok's amulet, and Sonya sending Cassie's team to Outworld as separate source-supported occurrences.
-2. Model Kotal Kahn's Outworld rule/civil-war conflict with Mileena and the squad's first diplomatic contact without collapsing the whole civil war into one umbrella causal chain.
-3. Continue through Mileena's capture/amulet recovery and D'Vorah's betrayal with direct Story Mode actor attribution.
+1. Add Cassie's squad arrival in Outworld, first contact with Kotal Kahn, and the Mileena/Kotal civil-war context without turning the broad war into an umbrella causal parent.
+2. Add the squad/Kotal cooperation against Mileena and the first direct confirmation/recovery path for Shinnok's amulet.
+3. Continue through Mileena's capture/execution and D'Vorah's theft/betrayal with direct Story Mode actor attribution.
 4. Add later Quan Chi capture / Shinnok-release material as separate occurrences.
 5. Continue into MK11 once MKX chronology is dense enough to avoid large narrative gaps.
 
@@ -436,7 +443,10 @@ A user should be able to:
 39. inspect Jax, Hanzo Hasashi, and Kuai Liang restoration without being told every revenant was restored or that Hanzo's prior specter history was a generic revenant-origin transition;
 40. cross the twenty-years-later MKX jump as chronology without seeing the earlier restoration presented as its direct cause;
 41. follow the directly assigned `Johnny briefing → Lin Kuei exercise → Sub-Zero assessment` chain and understand that the apparent retrieval mission was training rather than a real faction war;
-42. inspect Cassie's squad leadership and Kuai Liang's Grandmaster role as scoped sourced Facts rather than timeless Character metadata.
+42. inspect Cassie's squad leadership and Kuai Liang's Grandmaster role as scoped sourced Facts rather than timeless Character metadata;
+43. distinguish Li Mei's report about Mileena's destructive talisman from Raiden's still-unconfirmed suspicion that it is Shinnok's amulet;
+44. follow the directly supported `Li Mei warning → Sonya Outworld deployment` decision without seeing the prior Lin Kuei assessment turned into a cause;
+45. see Outworld represented as the deployment action object while the deployment Event remains Earthrealm-scoped.
 
 ## Later infrastructure — only when justified
 

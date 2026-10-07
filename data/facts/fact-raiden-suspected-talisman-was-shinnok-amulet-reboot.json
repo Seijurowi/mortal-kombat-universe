@@ -1,0 +1,12 @@
+{
+  "id": "fact-raiden-suspected-talisman-was-shinnok-amulet-reboot",
+  "type": "fact",
+  "name": "Raiden suspected Mileena's talisman was Shinnok's amulet",
+  "subjectId": "raiden",
+  "predicate": "suspected_talisman_was",
+  "value": "Shinnok's amulet",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "After Li Mei describes the talisman, Raiden warns that if it is what he suspects everyone may be at risk. Kung Jin asks whether they are talking about Shinnok's amulet; Sonya objects that the amulet should be secured, and Raiden says he must be certain. The structured claim therefore remains suspicion/identification-in-progress rather than a completed possession confirmation."
+}

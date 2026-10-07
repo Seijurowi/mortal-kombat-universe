@@ -1,0 +1,13 @@
+{
+  "id": "sonya-deploys-cassie-squad-to-outworld-reboot",
+  "type": "event",
+  "name": "Sonya sends Cassie's squad to Outworld",
+  "timelineId": "reboot",
+  "participantIds": ["sonya-blade", "cassie-cage", "jacqui-briggs", "takeda-takahashi", "kung-jin"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": ["li-mei-warns-earthrealm-about-mileena-talisman-reboot"],
+  "consequenceEventIds": [],
+  "order": 530,
+  "description": "After Li Mei's warning, Sonya Blade says the report must be confirmed with Kotal Kahn and orders Cassie Cage's team to travel to Outworld. The deployment responds directly to the warning, while the team's later contact with Kotal Kahn, the Outworld civil-war conflict, and confirmation or recovery of the amulet remain separate later occurrences.",
+  "tags": ["sonya-blade", "cassie-cage", "special-forces", "outworld", "deployment", "mkx"]
+}
