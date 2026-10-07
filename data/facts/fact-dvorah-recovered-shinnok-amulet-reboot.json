@@ -1,0 +1,12 @@
+{
+  "id": "fact-dvorah-recovered-shinnok-amulet-reboot",
+  "type": "fact",
+  "name": "D'Vorah recovered Shinnok's amulet from Mileena's camp",
+  "subjectId": "dvorah",
+  "predicate": "recovered",
+  "value": "Shinnok's amulet",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "Mortal Kombat X Story Mode shows D'Vorah open the container holding Shinnok's amulet during the rebel-camp infiltration and take possession of it with Cassie present. This Fact records the recovery only, not D'Vorah's later theft/betrayal."
+}

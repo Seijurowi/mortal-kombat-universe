@@ -8,6 +8,7 @@ See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 
 ### Added
 
+- **Phase 6 MKX Shinnok amulet confirmation and recovery:** Sonya's Mileena-location intelligence now leads to Kotal's rebel-camp operation, Cassie/D'Vorah's infiltration, direct confirmation that Mileena's talisman is Shinnok's amulet, and D'Vorah's recovery of the amulet from the camp.
 - **Phase 6 MKX Kotal first contact and cooperation:** Cassie's squad now reaches Kotal Kahn's court, faces his Mileena-alliance accusation, resolves the death sentence through Kung Jin's right-of-defense duel, and secures a limited cooperation arrangement; Kotal's rule and Mileena's rebellion/civil-war context are represented as sourced Facts rather than one umbrella Event.
 - **Phase 6 MKX Li Mei warning and Outworld deployment:** Li Mei's refugee-camp warning is now a distinct Reboot Event, Raiden's identification of the destructive talisman remains explicitly a suspicion requiring verification, and Sonya's deployment of Cassie's team to Outworld is a separate response Event/Fact.
 - **Phase 6 MKX new-generation team and Lin Kuei exercise:** the twenty-years-later main-era bridge now introduces Cassie Cage, Jacqui Briggs, Takeda Takahashi, Kung Jin, a Reboot-scoped Special Forces Faction, Johnny's team briefing, the staged Lin Kuei mission, and Sub-Zero's teamwork assessment.
@@ -54,6 +55,7 @@ See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 
 ### Changed
 
+- **MKX evidence-strength progression:** earlier Li Mei report and Raiden suspicion records remain historically correct while a later direct Story Mode Fact confirms Mileena possessed Shinnok's amulet; Kotal cooperation → Sonya location intel remains chronology-only, and D'Vorah's recovery is kept separate from her later betrayal/theft.
 - **MKX Outworld-contact causality boundary:** Earthrealm deployment → Kotal confrontation remains chronology-only, while `Kotal accusation → Kung Jin duel → cooperation` is directly causal; Kotal's accusation remains his suspicion rather than objective truth, civil-war context remains Fact-level evidence, and Shinnok-amulet identity is still not promoted to confirmed possession.
 - **MKX warning/verification boundary:** the Lin Kuei assessment → Li Mei warning transition remains chronology-only, while `Li Mei warning → Sonya Outworld deployment` is directly causal; Mileena's destructive talisman is report-qualified and Raiden's Shinnok-amulet identification remains suspicion rather than premature confirmation, with Outworld encoded as the deployment action object rather than the Earthrealm Event scene.
 - **MKX main-era role/causality boundary:** the long time jump after the early Netherrealm restoration remains chronology-only, while the directly assigned `Johnny briefing → Lin Kuei exercise → Sub-Zero assessment` chain is causal; Cassie's squad leadership and Kuai Liang's Grandmaster role are sourced Facts rather than timeless Character metadata, and the Lin Kuei encounter is preserved as training rather than a real faction conflict.

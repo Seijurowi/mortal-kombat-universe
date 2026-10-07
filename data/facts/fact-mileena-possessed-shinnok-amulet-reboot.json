@@ -1,0 +1,12 @@
+{
+  "id": "fact-mileena-possessed-shinnok-amulet-reboot",
+  "type": "fact",
+  "name": "Mileena possessed Shinnok's amulet",
+  "subjectId": "mileena",
+  "predicate": "possessed",
+  "value": "Shinnok's amulet",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "The Mileena-camp sequence in Mortal Kombat X Story Mode directly identifies the destructive talisman as Shinnok's amulet. This later confirmed Fact supplements rather than invalidates the earlier Li Mei report and Raiden suspicion records, which remain accurate to what Earthrealm knew at those earlier moments."
+}

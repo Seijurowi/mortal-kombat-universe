@@ -1,0 +1,9 @@
+{
+  "id": "dvorah",
+  "type": "character",
+  "name": "D'Vorah",
+  "timelineIds": ["reboot"],
+  "realmIds": ["outworld"],
+  "description": "A Kytinn operative serving in Kotal Kahn's Outworld court during the Reboot continuity.",
+  "tags": ["outworld", "kytinn", "kotal-kahn"]
+}

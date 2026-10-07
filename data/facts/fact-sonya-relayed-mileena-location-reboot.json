@@ -1,0 +1,12 @@
+{
+  "id": "fact-sonya-relayed-mileena-location-reboot",
+  "type": "fact",
+  "name": "Sonya relayed Mileena's location to Cassie's team",
+  "subjectId": "sonya-blade",
+  "predicate": "relayed_location_of",
+  "objectId": "mileena",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "Mortal Kombat X Story Mode shows Sonya contact Cassie with Mileena's location after extracting the information from Kano. The Fact records Sonya's relay action without requiring Kano to be introduced as a stable Character in this narrow slice."
+}

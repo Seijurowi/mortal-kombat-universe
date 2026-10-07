@@ -1,0 +1,13 @@
+{
+  "id": "sonya-relays-mileena-location-reboot",
+  "type": "event",
+  "name": "Sonya relays Mileena's location to Cassie's team",
+  "timelineId": "reboot",
+  "participantIds": ["sonya-blade", "cassie-cage"],
+  "realmIds": [],
+  "causeEventIds": [],
+  "consequenceEventIds": ["kotal-launches-operation-against-mileena-reboot"],
+  "order": 570,
+  "description": "After Kotal Kahn agrees to cooperate with Cassie's squad, Sonya contacts Cassie with intelligence obtained from Kano that identifies Mileena's location in the Kuatan Jungle. The cooperation agreement precedes this call but is not encoded as its cause because the location intelligence comes from Sonya's separate investigation.",
+  "tags": ["sonya-blade", "cassie-cage", "mileena", "intelligence", "kuatan-jungle", "mkx"]
+}
