@@ -1,0 +1,12 @@
+{
+  "id": "fact-dvorah-captured-mileena-reboot",
+  "type": "fact",
+  "name": "D'Vorah captured Mileena",
+  "subjectId": "mileena",
+  "predicate": "captured_by",
+  "objectId": "dvorah",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "Mortal Kombat X Story Mode shows D'Vorah defeat Mileena during the Kuatan Jungle operation and bring her captured before Kotal Kahn."
+}
