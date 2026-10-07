@@ -1,0 +1,12 @@
+{
+  "id": "fact-shinnok-imprisoned-by-raiden-reboot",
+  "type": "fact",
+  "name": "Raiden imprisoned Shinnok in Shinnok's own amulet",
+  "subjectId": "shinnok",
+  "predicate": "imprisoned_by",
+  "objectId": "raiden",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story", "mkx-character-bios"],
+  "notes": "Mortal Kombat X Story Mode shows Johnny Cage's intervention create the opening for the amulet to reach Raiden, who then traps Shinnok inside it. Shinnok's MKX biography independently confirms that Raiden and Fujin were able to imprison Shinnok in his own amulet; the structured actor attribution remains Raiden because the Story Mode directly shows him perform the imprisonment."
+}
