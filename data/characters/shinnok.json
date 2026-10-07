@@ -2,17 +2,8 @@
   "id": "shinnok",
   "type": "character",
   "name": "Shinnok",
-  "timelineIds": [
-    "original",
-    "reboot"
-  ],
-  "realmIds": [
-    "netherrealm"
-  ],
+  "timelineIds": ["original", "reboot"],
+  "realmIds": ["netherrealm"],
   "description": "A fallen Elder God represented in the Original and Reboot continuities, repeatedly opposing Earthrealm and Raiden from a Netherrealm power base.",
-  "tags": [
-    "fallen-elder-god",
-    "ruler",
-    "ancient"
-  ]
+  "tags": ["fallen-elder-god", "ruler", "ancient"]
 }
