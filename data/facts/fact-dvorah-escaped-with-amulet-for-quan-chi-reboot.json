@@ -1,0 +1,12 @@
+{
+  "id": "fact-dvorah-escaped-with-amulet-for-quan-chi-reboot",
+  "type": "fact",
+  "name": "D'Vorah escaped with Shinnok's amulet for Quan Chi",
+  "subjectId": "dvorah",
+  "predicate": "escaped_with_for",
+  "objectId": "quan-chi",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "After stealing the amulet, D'Vorah escapes Outworld carrying it for Quan Chi as instructed. This Fact records the intended recipient and departure state without claiming that delivery has already occurred."
+}
