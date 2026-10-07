@@ -1,0 +1,13 @@
+{
+  "id": "li-mei-warns-earthrealm-about-mileena-talisman-reboot",
+  "type": "event",
+  "name": "Li Mei warns Earthrealm about Mileena's destructive talisman",
+  "timelineId": "reboot",
+  "participantIds": ["li-mei", "raiden", "sonya-blade", "johnny-cage", "cassie-cage", "kung-jin"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": [],
+  "consequenceEventIds": ["sonya-deploys-cassie-squad-to-outworld-reboot"],
+  "order": 520,
+  "description": "At an Earthrealm refugee camp, Li Mei reports that Mileena's rebels possess a gold talisman whose crimson power has erased entire battalions and devastated civilians caught in Outworld's conflict. Raiden says the object may be what he suspects, and Kung Jin asks whether it is Shinnok's amulet, but Raiden leaves to verify the possibility rather than confirming the identity on the spot.",
+  "tags": ["li-mei", "mileena", "talisman", "refugees", "earthrealm", "mkx"]
+}
