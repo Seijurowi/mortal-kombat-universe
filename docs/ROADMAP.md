@@ -299,7 +299,7 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 
 ### Current MK9 Liu Kang confrontation and death
 
-**Current work:** `agent/phase6-mk9-liu-kang-death`, branched exactly from verified PR #32 merge commit `8603d36862627476b90ac482937667fc6f3075e8`.
+**Current work:** Draft PR #33 on `agent/phase6-mk9-liu-kang-death`, branched exactly from verified PR #32 merge commit `8603d36862627476b90ac482937667fc6f3075e8`.
 
 - [x] Start exactly from verified PR #32 merge commit `8603d36862627476b90ac482937667fc6f3075e8`.
 - [x] Split Liu Kang's confrontation with Raiden from Liu Kang's later death as two distinct Reboot Events in Earthrealm.
@@ -312,7 +312,7 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - [x] Add/index a Phase 6 Liu Kang confrontation/death manual with short maintainer test cases.
 - [x] Review/update `CHANGELOG.md` for the material death outcome and accidental/self-defense evidence boundary.
 - [x] Confirm current changed-file scope: exactly 9 expected files, limited to this MK9 Reboot slice plus owning docs/manual.
-- [ ] Open Draft PR for the slice.
+- [x] Open Draft PR #33 for the slice.
 - [ ] Maintainer manual source/UI pass completed.
 - [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
 - Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
