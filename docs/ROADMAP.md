@@ -331,7 +331,7 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - [x] Add/index a Phase 6 Elder Gods intervention/punishment manual with action-level maintainer test cases.
 - [x] Review/update `CHANGELOG.md` for the material endgame outcome and evidence/causality boundaries.
 - [ ] Confirm final changed-file scope is limited to the expected endgame data/docs files.
-- [ ] Open Draft PR for the slice.
+- [x] Open Draft PR #35 for the slice.
 - [ ] Maintainer manual source/UI pass completed.
 - [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
 - Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
