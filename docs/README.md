@@ -80,6 +80,7 @@ For Phase 5 work, run the broad regression checklist when the change can affect 
 - [`PHASE6_MKX_KOTAL_FIRST_CONTACT_MANUAL_VERIFICATION.md`](./PHASE6_MKX_KOTAL_FIRST_CONTACT_MANUAL_VERIFICATION.md) — Cassie's first Kotal Kahn contact, Mileena/Kotal civil-war context, Kung Jin right-of-defense duel, and limited cooperation outcome.
 - [`PHASE6_MKX_AMULET_CONFIRMATION_RECOVERY_MANUAL_VERIFICATION.md`](./PHASE6_MKX_AMULET_CONFIRMATION_RECOVERY_MANUAL_VERIFICATION.md) — Sonya's Mileena-location intelligence, Kotal's operation, Cassie/D'Vorah infiltration, later confirmation of Shinnok's amulet, and D'Vorah's recovery boundary before betrayal.
 - [`PHASE6_MKX_MILEENA_EXECUTION_KOTAL_RESPONSE_MANUAL_VERIFICATION.md`](./PHASE6_MKX_MILEENA_EXECUTION_KOTAL_RESPONSE_MANUAL_VERIFICATION.md) — Mileena capture/execution actor attribution, Kotal's separate amulet-retention/detention response, and two-branch causality guardrails.
+- [`PHASE6_MKX_DVORAH_BETRAYAL_MANUAL_VERIFICATION.md`](./PHASE6_MKX_DVORAH_BETRAYAL_MANUAL_VERIFICATION.md) — D'Vorah's secret Quan Chi allegiance, amulet theft, escape-for-Quan-Chi boundary, and recovery-vs-theft chronology guardrails.
 
 For Phase 6 work, use the slice-specific checklist plus any earlier regression checklist whose shared behavior the slice actually touches.
 

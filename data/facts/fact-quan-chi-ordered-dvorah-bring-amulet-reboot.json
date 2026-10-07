@@ -1,0 +1,12 @@
+{
+  "id": "fact-quan-chi-ordered-dvorah-bring-amulet-reboot",
+  "type": "fact",
+  "name": "Quan Chi ordered D'Vorah to bring him Shinnok's amulet",
+  "subjectId": "quan-chi",
+  "predicate": "ordered",
+  "objectId": "dvorah",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "During their private contact, Quan Chi directs D'Vorah to obtain Shinnok's amulet and bring it to him. The action target remains described in the Fact notes because the current schema has no first-class Artifact entity for the amulet."
+}

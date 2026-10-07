@@ -390,37 +390,44 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - D'Vorah's physical recovery remains separate from her later betrayal/theft;
 - merged as verified commit `12d4e992eeb01a9542098126a9931419a10aa902` after maintainer manual/source review, final contract review, and final-head CI.
 
-### Current MKX Mileena execution and Kotal response
+### MKX Mileena execution and Kotal response ✅ — PR #44
 
-**Current work:** `agent/phase6-mkx-mileena-execution-kotal-response`, branched exactly from verified PR #43 merge commit `12d4e992eeb01a9542098126a9931419a10aa902`.
+- `D'Vorah captures Mileena → Kotal orders execution → D'Vorah executes Mileena` preserves ordering-authority versus direct-killer attribution;
+- `amulet recovery → Kotal retention/detention` remains a separate causal branch, so Mileena's execution does not falsely cause hostage-taking;
+- earlier Kotal cooperation remains historically true despite the later detention decision;
+- D'Vorah's double-agent reveal, theft, and Quan Chi movement remain outside that slice;
+- merged as verified commit `cde8703a26f8f9b83f6cc01ffb31843076acac8d` after maintainer manual/source review, final contract review, and final-head CI.
 
-- [x] Start exactly from verified PR #43 merge commit `12d4e992eeb01a9542098126a9931419a10aa902`.
-- [x] Add D'Vorah defeating/capturing Mileena as a distinct Event at story order 610.
-- [x] Add Kotal Kahn ordering Mileena's execution as a distinct Event at story order 620.
-- [x] Add D'Vorah executing Mileena as a distinct Event at story order 630.
-- [x] Mirror direct `capture → Kotal execution order → D'Vorah execution` causality.
-- [x] Keep Kotal as execution-order authority and D'Vorah as the direct `killed_by` actor.
-- [x] Add Kotal retaining Shinnok's amulet and detaining Cassie's squad as a distinct Event at story order 640.
-- [x] Link `D'Vorah recovers amulet → Kotal retention/detention` as a separate causal branch.
-- [x] Do not encode `Mileena execution → hostage-taking` causality.
-- [x] Add sourced Facts for Mileena's capture, Kotal's execution order, D'Vorah as Mileena's killer, Kotal's amulet-retention decision, and the team detention.
-- [x] Preserve earlier Kotal cooperation as historically true rather than marking the later detention as a retcon.
-- [x] Keep D'Vorah double-agent reveal, amulet theft, and Quan Chi delivery outside this slice.
-- [x] Extend MKX Story Mode source notes for the execution/security-response sequence.
-- [x] Add/index a Phase 6 Mileena execution/Kotal response manual with action-level maintainer test cases.
-- [x] Review/update `CHANGELOG.md` for actor attribution and parallel causal branches.
-- [x] Confirm final changed-file scope is limited to the expected source/event/fact/docs files.
-- [x] Open Draft PR #44 for the slice.
-- [x] Maintainer manual source/UI pass completed.
-- [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
+### Current MKX D'Vorah betrayal and amulet theft
+
+**Current work:** `agent/phase6-mkx-dvorah-betrayal`, branched exactly from verified PR #44 merge commit `cde8703a26f8f9b83f6cc01ffb31843076acac8d`.
+
+- [x] Start exactly from verified PR #44 merge commit `cde8703a26f8f9b83f6cc01ffb31843076acac8d`.
+- [x] Add D'Vorah's private Quan Chi contact/secret-allegiance reveal as a distinct Event at story order 650.
+- [x] Keep Kotal detention → D'Vorah secret contact chronology-only because her allegiance predates Kotal's decision.
+- [x] Add D'Vorah killing the amulet guards and stealing Shinnok's amulet as a distinct Event at story order 660.
+- [x] Add D'Vorah escaping Outworld with the amulet for Quan Chi as a distinct Event at story order 670.
+- [x] Mirror direct `secret contact/order → theft → escape` causality.
+- [x] Add sourced Facts for D'Vorah secretly serving Quan Chi, Quan Chi ordering her to bring the amulet, D'Vorah stealing it, and D'Vorah escaping with it for Quan Chi.
+- [x] Keep D'Vorah's earlier authorized recovery and later betrayal-theft as separate historical occurrences rather than contradiction/retcon.
+- [x] Do not claim physical delivery to Quan Chi has already occurred.
+- [x] Keep Takeda freeing Cassie's squad, the squad discovering the betrayal, Kotal's mistaken Earthrealm inference, and later Quan Chi/Shinnok-release material outside this slice.
+- [x] Avoid introducing incidental guard Characters or a first-class Artifact entity.
+- [x] Extend MKX Story Mode source notes for the secret-contact/theft/escape sequence.
+- [x] Add/index a Phase 6 D'Vorah betrayal manual with action-level maintainer test cases.
+- [x] Review/update `CHANGELOG.md` for betrayal chronology/causality and recovery-vs-theft boundaries.
+- [ ] Confirm final changed-file scope is limited to the expected source/event/fact/docs files.
+- [x] Open Draft PR #45 for the slice.
+- [ ] Maintainer manual source/UI pass completed.
+- [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
 - Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
 ### Next lore slices
 
-1. Add D'Vorah's double-agent reveal, theft of Shinnok's amulet, and movement toward Quan Chi as separate source-supported occurrences.
-2. Add Takeda freeing Cassie's squad and the team's discovery/pursuit of D'Vorah without folding Kotal's mistaken inference into objective truth.
-3. Add Quan Chi capture, Scorpion's intervention, and Shinnok's release as separate occurrences.
+1. Add Takeda freeing Cassie's squad and the team's discovery of D'Vorah's betrayal/theft as separate source-supported occurrences.
+2. Preserve Outworld retainers' mistaken inference that D'Vorah freed the Earthrealmers / took the amulet to Raiden as character belief rather than objective truth, then model Kotal's retaliation decision.
+3. Add Quan Chi capture, Scorpion's intervention, D'Vorah arrival, and Shinnok's release as separate occurrences.
 4. Continue through the remaining MKX chapters with chronology/causality separation.
 5. Continue into MK11 once MKX chronology is dense enough to avoid large narrative gaps.
 
@@ -481,7 +488,10 @@ A user should be able to:
 51. distinguish D'Vorah's physical recovery of the amulet from her later betrayal/theft;
 52. follow `D'Vorah captures Mileena → Kotal orders execution → D'Vorah executes Mileena` while preserving Kotal as ordering authority and D'Vorah as direct killer;
 53. follow the separate `amulet recovery → Kotal retention/detention` branch without seeing Mileena's execution presented as the cause of hostage-taking;
-54. read Kotal's earlier cooperation and later detention as changing decisions under new circumstances rather than an automatic retcon.
+54. read Kotal's earlier cooperation and later detention as changing decisions under new circumstances rather than an automatic retcon;
+55. follow `D'Vorah secret Quan Chi contact → amulet theft → escape` without being told Kotal's detention caused her pre-existing betrayal;
+56. distinguish D'Vorah's earlier authorized amulet recovery from her later theft without treating the two records as contradictory;
+57. see escape-with-for-Quan-Chi evidence without prematurely claiming physical delivery has already occurred.
 
 ## Later infrastructure — only when justified
 
