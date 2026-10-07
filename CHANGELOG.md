@@ -8,6 +8,7 @@ See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 
 ### Added
 
+- **Phase 6 MKX revenant-state confirmation:** Mortal Kombat X character biographies now provide later-primary Reboot canon confirmation that Liu Kang, Kitana, and Kung Lao became revenants under Quan Chi; Kung Lao is added as a stable Character distinct from the Great Kung Lao, while no synthetic shared conversion Event or exact conversion chronology is invented.
 - **Phase 6 MK9 Elder Gods intervention and Shao Kahn final defeat:** the illegal merger now leads to a separate Elder Gods intervention/empowerment Event and then to Shao Kahn's final MK9 defeat, with canon Facts for Raiden's Elder Gods empowerment, Shao Kahn's punishment by the Elder Gods, and Raiden as the final fight victor without adding an unsupported permanent-death Fact.
 - **Phase 6 MK9 illegal realm merger occurrence:** Shao Kahn's prohibited Earthrealm/Outworld merger is now a distinct Reboot Event plus canon Fact sourced to MK9 story mode, separate from Raiden's earlier plan, Liu Kang's death, and the later Elder Gods intervention/punishment.
 - **Phase 6 MK9 Liu Kang confrontation and death:** Liu Kang's dispute with Raiden over the allow-merger strategy and his later death during their clash are now separate Reboot Events/Facts sourced to MK9 story mode; Raiden is the confirmed killer while the self-defense and unintended-outcome context remains explicit.
@@ -47,6 +48,7 @@ See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 
 ### Changed
 
+- **MK9 → MKX state-evidence boundary:** earlier MK9 death and soul-control records remain narrow historical evidence, while MKX biographies supply the later formal `became_revenant` state claims; Jax restoration and broader MKX chronology remain separate follow-up work.
 - **MK9 endgame causality/evidence boundary:** `illegal merger → Elder Gods intervention → Shao Kahn final defeat` is now explicitly mirrored from the direct Chapter 16 sequence; the earlier invasion-era refusal remains valid under the invasion-vs-merger rule distinction, and `defeated_by = Raiden` is qualified by separate Elder Gods empowerment/punishment evidence.
 - **MK9 merger occurrence/evidence boundary:** the actual realm-merger process is modeled as chronology after Liu Kang's death without inventing `death → merger` or `allow-merger plan → merger` causality; Earthrealm remains Event scene scope while the merger assertion itself is carried by a sourced Fact, and the later Elder Gods intervention/final defeat remain deferred.
 - **MK9 Liu Kang death causality/evidence boundary:** the allow-merger plan leads to the separately modeled Raiden/Liu Kang confrontation, which leads to Liu Kang's death; the death attribution does not become an intentional-murder claim, and the actual merger/Elder Gods punishment remain later occurrences.
