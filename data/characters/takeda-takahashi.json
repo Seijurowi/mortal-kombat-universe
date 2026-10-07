@@ -1,0 +1,9 @@
+{
+  "id": "takeda-takahashi",
+  "type": "character",
+  "name": "Takeda Takahashi",
+  "timelineIds": ["reboot"],
+  "realmIds": ["earthrealm"],
+  "description": "A new-generation Earthrealm fighter and student of the Shirai Ryu in the Reboot continuity.",
+  "tags": ["earthrealm", "new-generation", "shirai-ryu"]
+}
