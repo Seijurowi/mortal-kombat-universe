@@ -383,10 +383,10 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - [x] Extend MKX Story Mode source notes for the warning/deployment sequence.
 - [x] Add/index a Phase 6 Li Mei/Outworld deployment manual with action-level maintainer test cases.
 - [x] Review/update `CHANGELOG.md` for the report-vs-confirmation and Realm action-object boundaries.
-- [ ] Confirm final changed-file scope is limited to the expected source/character/event/fact/docs files.
+- [x] Confirm final changed-file scope is limited to the expected source/character/event/fact/docs files.
 - [x] Open Draft PR #41 for the slice.
-- [ ] Maintainer manual source/UI pass completed.
-- [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
+- [x] Maintainer manual source/UI pass completed.
+- [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
 - Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
