@@ -373,35 +373,48 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - Outworld is represented as the deployment action object while the Event remains Earthrealm-scoped;
 - merged as verified commit `cd24b55849a075238929c111971d6317a7004c00` after maintainer manual/source review, final contract review, and final-head CI.
 
-### Current MKX Kotal first contact and cooperation
+### MKX Kotal first contact and cooperation ✅ — PR #42
 
-**Current work:** `agent/phase6-mkx-kotal-first-contact`, branched exactly from verified PR #41 merge commit `cd24b55849a075238929c111971d6317a7004c00`.
+- Earthrealm deployment → Kotal confrontation remains chronology-only;
+- Kotal's suspicion that Earthrealm may be allied with Mileena remains character accusation/context rather than objective truth;
+- the directly supported `Kotal confrontation → Kung Jin right-of-defense duel → cooperation` chain is causal;
+- Kotal's rule and Mileena's rebellion/civil-war context remain scoped sourced Facts rather than one umbrella Event;
+- Shinnok-amulet identity/possession remains unconfirmed at that point;
+- merged as verified commit `90dd1838dca01f989edbac9ea68020ff19f72262` after maintainer manual/source review, final contract review, and final-head CI.
 
-- [x] Start exactly from verified PR #41 merge commit `cd24b55849a075238929c111971d6317a7004c00`.
-- [x] Add a stable Reboot Kotal Kahn Character.
-- [x] Add Kotal confronting Cassie's squad in Outworld as a distinct Event at story order 540.
-- [x] Keep Earthrealm deployment → Kotal confrontation chronology-only.
-- [x] Keep Kotal's claim that Earthrealm may be allied with Mileena as his accusation/suspicion rather than objective truth.
-- [x] Add Kung Jin invoking Outworld's right of defense and defeating Kotal as a distinct Event at story order 550.
-- [x] Add Kotal accepting limited cooperation with Cassie's squad as a distinct Event at story order 560.
-- [x] Mirror only the directly supported `Kotal confrontation/accusation → duel → cooperation` causal chain.
-- [x] Add sourced Facts for Kotal ruling Outworld, Mileena leading the rebellion/civil war against him, Kung Jin defeating Kotal, and Kotal agreeing to cooperate.
-- [x] Keep the Mileena/Kotal civil war as political-context Facts rather than one giant umbrella Event.
-- [x] Keep Shinnok-amulet identity/possession unconfirmed at this point.
-- [x] Extend MKX Story Mode and Character Biographies source notes for Kotal/Mileena and the duel/cooperation sequence.
-- [x] Add/index a Phase 6 Kotal first-contact manual with action-level maintainer test cases.
-- [x] Review/update `CHANGELOG.md` for the accusation/civil-war/cooperation evidence boundaries.
-- [x] Confirm final changed-file scope is limited to the expected source/character/event/fact/docs files.
-- [x] Open Draft PR #42 for the slice.
-- [x] Maintainer manual source/UI pass completed.
-- [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
+### Current MKX Shinnok amulet confirmation and recovery
+
+**Current work:** `agent/phase6-mkx-amulet-confirmation-recovery`, branched exactly from verified PR #42 merge commit `90dd1838dca01f989edbac9ea68020ff19f72262`.
+
+- [x] Start exactly from verified PR #42 merge commit `90dd1838dca01f989edbac9ea68020ff19f72262`.
+- [x] Add stable Reboot D'Vorah Character.
+- [x] Add Sonya relaying Mileena's location to Cassie's team as a distinct Event at story order 570.
+- [x] Keep Kotal cooperation → Sonya location intel chronology-only because the location comes from Sonya's separate investigation.
+- [x] Leave the cross-realm Sonya/Cassie communication without a fabricated single Event Realm.
+- [x] Add Kotal launching the rebel-camp operation as a distinct Event at story order 580.
+- [x] Add Cassie/D'Vorah infiltrating Mileena's camp as a distinct Event at story order 590.
+- [x] Add D'Vorah recovering Shinnok's amulet as a distinct Event at story order 600.
+- [x] Mirror the directly supported `location intel → operation → infiltration → recovery` causal chain.
+- [x] Add a later confirmed canon Fact that Mileena possessed Shinnok's amulet.
+- [x] Preserve the earlier Li Mei report and Raiden suspicion as historically correct weaker evidence rather than rewriting them.
+- [x] Add a canon Fact that D'Vorah recovered the amulet from Mileena's camp.
+- [x] Keep D'Vorah's later betrayal/theft separate from this recovery occurrence.
+- [x] Avoid introducing Kano/Rain/Tanya stable Characters solely for incidental evidence inside this narrow slice.
+- [x] Keep Mileena capture/execution, Kotal hostage-taking, D'Vorah betrayal, and Quan Chi delivery outside this slice.
+- [x] Extend MKX Story Mode source notes for the location/operation/infiltration/recovery sequence.
+- [x] Add/index a Phase 6 amulet confirmation/recovery manual with action-level maintainer test cases.
+- [x] Review/update `CHANGELOG.md` for the report/suspicion → later-confirmation evidence progression.
+- [ ] Confirm final changed-file scope is limited to the expected source/character/event/fact/docs files.
+- [ ] Open Draft PR for the slice.
+- [ ] Maintainer manual source/UI pass completed.
+- [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
 - Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
 ### Next lore slices
 
-1. Add Kotal/Cassie pursuit of Mileena and the first direct confirmation/recovery path for Shinnok's amulet.
-2. Continue through Mileena's capture/execution and D'Vorah's theft/betrayal with direct Story Mode actor attribution.
+1. Add Mileena's capture/execution and Kotal's immediate response while keeping D'Vorah's later betrayal separate.
+2. Add Kotal taking the Earthrealmers hostage and D'Vorah stealing/carrying the amulet to Quan Chi as separate source-supported occurrences.
 3. Add later Quan Chi capture / Shinnok-release material as separate occurrences.
 4. Continue through the remaining MKX chapters with chronology/causality separation.
 5. Continue into MK11 once MKX chronology is dense enough to avoid large narrative gaps.
@@ -457,7 +470,10 @@ A user should be able to:
 45. see Outworld represented as the deployment action object while the deployment Event remains Earthrealm-scoped;
 46. read Kotal's Earthrealm/Mileena accusation as a character suspicion rather than a canon alliance claim;
 47. follow the directly supported `Kotal confrontation → Kung Jin right-of-defense duel → cooperation` chain;
-48. inspect Kotal's rule and Mileena's rebellion/civil-war context as scoped sourced Facts rather than one umbrella Event.
+48. inspect Kotal's rule and Mileena's rebellion/civil-war context as scoped sourced Facts rather than one umbrella Event;
+49. follow the directly supported `Sonya location intel → Kotal operation → Cassie/D'Vorah infiltration → amulet recovery` chain;
+50. compare earlier Li Mei/Raiden report-suspicion evidence with the later confirmed `Mileena possessed Shinnok's amulet` Fact without treating the earlier records as wrong;
+51. distinguish D'Vorah's physical recovery of the amulet from her later betrayal/theft.
 
 ## Later infrastructure — only when justified
 
