@@ -1,0 +1,13 @@
+{
+  "id": "shao-kahn-final-defeat-reboot",
+  "type": "event",
+  "name": "Shao Kahn suffers his final MK9 defeat",
+  "timelineId": "reboot",
+  "participantIds": ["shao-kahn", "raiden", "elder-gods"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": ["elder-gods-intervene-against-shao-kahn-reboot"],
+  "consequenceEventIds": [],
+  "order": 400,
+  "description": "Empowered by the Elder Gods, Raiden fights and defeats Shao Kahn. After Raiden knocks him down, the Elder Gods' golden power and dragon forms continue the declared punishment, overwhelming Shao Kahn until he disappears in a blast of golden light. This Event records the final MK9 defeat and completed punishment without creating a separate confirmed death Fact or projecting later timeline material backward.",
+  "tags": ["shao-kahn", "raiden", "elder-gods", "defeat", "punishment", "mk9-endgame"]
+}
