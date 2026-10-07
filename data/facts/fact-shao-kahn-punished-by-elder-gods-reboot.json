@@ -1,0 +1,12 @@
+{
+  "id": "fact-shao-kahn-punished-by-elder-gods-reboot",
+  "type": "fact",
+  "name": "The Elder Gods punished Shao Kahn for the illegal merger",
+  "subjectId": "shao-kahn",
+  "predicate": "punished_by",
+  "objectId": "elder-gods",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) Chapter 16 has the Elder Gods declare that Shao Kahn violated their will by merging realms without victory in Mortal Kombat and that the penalty is clear. Their power empowers Raiden and their golden dragon forms continue the punishment after the fight. This Fact does not by itself assert a separate permanent death state."
+}
