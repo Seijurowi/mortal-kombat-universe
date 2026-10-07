@@ -3,23 +3,11 @@
   "type": "event",
   "name": "Shao Kahn begins illegally merging Earthrealm and Outworld",
   "timelineId": "reboot",
-  "participantIds": [
-    "shao-kahn"
-  ],
-  "realmIds": [
-    "earthrealm"
-  ],
+  "participantIds": ["shao-kahn"],
+  "realmIds": ["earthrealm"],
   "causeEventIds": [],
-  "consequenceEventIds": [
-    "elder-gods-intervene-against-shao-kahn-reboot"
-  ],
+  "consequenceEventIds": ["elder-gods-intervene-against-shao-kahn-reboot"],
   "order": 380,
   "description": "After Liu Kang's death, Shao Kahn completes his passage through the portal into Earthrealm and begins the prohibited merger with Outworld. The Elder Gods later identify this act as merging realms without victory in Mortal Kombat. This Event records the illegal merger occurrence itself and stops before the Elder Gods' intervention, punishment, or Shao Kahn's final defeat. Earthrealm is the scene scope; the merger target is represented separately as a sourced Fact rather than by using Event realmIds as action objects.",
-  "tags": [
-    "shao-kahn",
-    "realm-merger",
-    "earthrealm",
-    "outworld",
-    "mortal-kombat-rules"
-  ]
+  "tags": ["shao-kahn", "realm-merger", "earthrealm", "outworld", "mortal-kombat-rules"]
 }
