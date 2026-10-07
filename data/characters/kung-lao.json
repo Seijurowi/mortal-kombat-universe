@@ -1,0 +1,10 @@
+{
+  "id": "kung-lao",
+  "type": "character",
+  "name": "Kung Lao",
+  "timelineIds": ["reboot"],
+  "realmIds": ["earthrealm"],
+  "factionIds": ["white-lotus"],
+  "description": "Shaolin warrior and friend of Liu Kang in the Reboot continuity; distinct from his ancestor, the Great Kung Lao.",
+  "tags": ["shaolin", "white-lotus"]
+}
