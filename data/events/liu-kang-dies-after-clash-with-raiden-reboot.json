@@ -1,0 +1,13 @@
+{
+  "id": "liu-kang-dies-after-clash-with-raiden-reboot",
+  "type": "event",
+  "name": "Liu Kang dies after clashing with Raiden",
+  "timelineId": "reboot",
+  "participantIds": ["liu-kang", "raiden"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": ["raiden-and-liu-kang-fight-reboot"],
+  "consequenceEventIds": [],
+  "order": 370,
+  "description": "After their fight, Liu Kang charges Raiden while powering his fist with fire. Raiden raises a lightning shield in self-defense; the collision blasts Liu Kang with lightning and his own fire. Raiden immediately reacts that this was not meant to happen, asks Liu Kang's forgiveness, and Liu Kang dies from the injuries. The Event attributes the death to the clash with Raiden without presenting it as an intentional killing.",
+  "tags": ["liu-kang", "raiden", "death", "accidental-death"]
+}
