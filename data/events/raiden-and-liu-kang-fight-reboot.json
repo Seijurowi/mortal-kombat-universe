@@ -1,0 +1,13 @@
+{
+  "id": "raiden-and-liu-kang-fight-reboot",
+  "type": "event",
+  "name": "Raiden and Liu Kang fight over Shao Kahn",
+  "timelineId": "reboot",
+  "participantIds": ["raiden", "liu-kang"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": ["raiden-proposes-allowing-shao-kahn-merger-reboot"],
+  "consequenceEventIds": ["liu-kang-dies-after-clash-with-raiden-reboot"],
+  "order": 360,
+  "description": "As Shao Kahn begins crossing the portal into Earthrealm, Liu Kang moves to confront him. Raiden, acting on his allow-merger strategy, repeatedly stops Liu Kang and says he cannot let Liu Kang fight Shao Kahn. Liu Kang declares Raiden his enemy and they fight. This Event ends before the lethal collision and does not assert that Shao Kahn's realm merger is already complete.",
+  "tags": ["raiden", "liu-kang", "confrontation", "earthrealm"]
+}
