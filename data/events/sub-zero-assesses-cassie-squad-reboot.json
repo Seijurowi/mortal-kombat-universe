@@ -1,0 +1,13 @@
+{
+  "id": "sub-zero-assesses-cassie-squad-reboot",
+  "type": "event",
+  "name": "Sub-Zero assesses Cassie's squad",
+  "timelineId": "reboot",
+  "participantIds": ["kuai-liang", "cassie-cage", "jacqui-briggs", "takeda-takahashi", "kung-jin"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": ["cassie-squad-enters-lin-kuei-temple-reboot"],
+  "consequenceEventIds": [],
+  "order": 510,
+  "description": "After defeating the young fighters, Sub-Zero reveals that the Lin Kuei mission was a training exercise arranged with Johnny Cage. He tells Cassie, Jacqui, Takeda, and Kung Jin that they show promise but will fail unless they begin functioning as a team. This Event records the assessment outcome rather than treating the exercise as a real breakdown in Earthrealm-Lin Kuei relations.",
+  "tags": ["sub-zero", "cassie-cage", "training", "teamwork", "lin-kuei", "mkx"]
+}
