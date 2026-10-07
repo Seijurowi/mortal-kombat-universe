@@ -1,0 +1,12 @@
+{
+  "id": "fact-johnny-sub-zero-training-exercise-reboot",
+  "type": "fact",
+  "name": "Johnny Cage and Sub-Zero arranged the Lin Kuei training exercise",
+  "subjectId": "johnny-cage",
+  "predicate": "arranged_training_with",
+  "objectId": "kuai-liang",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "After the squad's Lin Kuei mission, Sub-Zero reveals that the apparent retrieval operation was a training exercise arranged with Johnny Cage to test the new team's cooperation. This Fact preserves the exercise's true purpose without treating the staged conflict as a genuine hostile split."
+}
