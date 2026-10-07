@@ -1,0 +1,13 @@
+{
+  "id": "johnny-cage-awakens-power-against-shinnok-reboot",
+  "type": "event",
+  "name": "Johnny Cage awakens his power while protecting Sonya",
+  "timelineId": "reboot",
+  "participantIds": ["johnny-cage", "sonya-blade", "shinnok"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": ["shinnok-assaults-jinsei-chamber-reboot"],
+  "consequenceEventIds": ["shinnok-imprisoned-in-amulet-reboot"],
+  "order": 430,
+  "description": "When Shinnok turns his magic on Sonya, Johnny Cage moves to protect her and unexpectedly manifests green energy that neutralizes Shinnok's attack. Johnny then fights Shinnok and helps create the opening that allows Shinnok's amulet to reach Raiden. This Event records the defensive power manifestation and intervention rather than treating Johnny as the sole captor of Shinnok.",
+  "tags": ["johnny-cage", "sonya-blade", "shinnok", "power", "jinsei", "mkx"]
+}
