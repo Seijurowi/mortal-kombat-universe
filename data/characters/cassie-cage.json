@@ -1,0 +1,10 @@
+{
+  "id": "cassie-cage",
+  "type": "character",
+  "name": "Cassie Cage",
+  "aliases": ["Cassandra Cage"],
+  "timelineIds": ["reboot"],
+  "realmIds": ["earthrealm"],
+  "description": "The daughter of Johnny Cage and Sonya Blade and a new-generation Earthrealm fighter in the Reboot continuity.",
+  "tags": ["earthrealm", "new-generation"]
+}
