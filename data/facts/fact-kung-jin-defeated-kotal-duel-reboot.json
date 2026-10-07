@@ -1,0 +1,12 @@
+{
+  "id": "fact-kung-jin-defeated-kotal-duel-reboot",
+  "type": "fact",
+  "name": "Kung Jin defeated Kotal Kahn in a right-of-defense duel",
+  "subjectId": "kung-jin",
+  "predicate": "defeated",
+  "objectId": "kotal-kahn",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "Mortal Kombat X Story Mode shows Kung Jin invoke Outworld's right of defense by kombat, fight Kotal Kahn, and defeat him. Kotal then declares the charges against the Earthrealm team void."
+}
