@@ -347,28 +347,37 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - Shinnok is one stable Character across Original + Reboot;
 - merged as verified commit `a395860a3bd4f76f21bd8cee0eccae445da55953` after maintainer manual/source review, final contract review, and final-head CI.
 
-### Current MKX Quan Chi confrontation and revenant restoration
+### MKX Quan Chi confrontation and revenant restoration ✅ — PR #39
 
-**Current work:** `agent/phase6-mkx-revenant-restoration`, branched exactly from verified PR #38 merge commit `a395860a3bd4f76f21bd8cee0eccae445da55953`.
+- the post-Shinnok fortress confrontation remains chronology/context rather than an umbrella causal parent;
+- Quan Chi's attempted Johnny Cage revenant conversion is attempt-only;
+- the directly shown `conversion attempt → Raiden counterspell/Sonya victory → restoration` chain is mirrored;
+- Raiden restores Jax, Hanzo Hasashi/Scorpion, and Kuai Liang/Sub-Zero without generalizing the outcome to every revenant;
+- Hanzo's earlier specter history and Kuai Liang's off-screen body-state mechanism remain unflattened/uninvented;
+- merged as verified commit `aa151fa2ca0b523534f6acf0ab1a8c0a7313a5f9` after maintainer manual/source review, final contract review, and final-head CI.
 
-- [x] Start exactly from verified PR #38 merge commit `a395860a3bd4f76f21bd8cee0eccae445da55953`.
-- [x] Add the post-Shinnok Quan Chi fortress confrontation as a chronology/context Event at story order 450.
-- [x] Keep the broad confrontation from becoming an umbrella causal parent of every specific action in the fortress.
-- [x] Add Quan Chi's attempted Johnny Cage revenant conversion as a distinct Event at story order 460.
-- [x] Preserve Johnny's state as an attempted/incomplete conversion rather than adding `became_revenant`.
-- [x] Add Raiden's counterspell / Sonya defeating Quan Chi as a distinct Event at story order 470.
-- [x] Add Raiden restoring Jax, Hanzo Hasashi/Scorpion, and Kuai Liang/Sub-Zero as a distinct Event at story order 480.
-- [x] Mirror only the directly supported `conversion attempt → counterspell/Sonya victory → restoration` causal chain.
-- [x] Add canon Facts for the Johnny conversion attempt, Sonya defeating Quan Chi, and Raiden restoring Jax/Hanzo/Kuai Liang.
-- [x] Add direct `mkx-story` corroboration to Jax's existing freedom-from-Quan-Chi and returned-to-life Facts.
-- [x] Keep Hanzo's earlier specter/resurrection history intact instead of manufacturing a generic `became_revenant` origin Fact.
-- [x] Keep Kuai Liang's off-screen Cyber Sub-Zero → later revenant-body mechanism unasserted.
-- [x] Do not generalize the occurrence into restoration of every revenant.
-- [x] Extend the MKX Story Mode Source notes for the fortress/restoration sequence.
-- [x] Add/index a Phase 6 MKX revenant-restoration manual with action-level maintainer test cases.
-- [x] Review/update `CHANGELOG.md` for the restoration causality/state boundary.
-- [x] Confirm final changed-file scope is limited to the expected source/event/fact/docs files.
-- [x] Open Draft PR #39 for the slice.
+### Current MKX new-generation team and Lin Kuei exercise
+
+**Current work:** `agent/phase6-mkx-new-generation-team`, branched exactly from verified PR #39 merge commit `aa151fa2ca0b523534f6acf0ab1a8c0a7313a5f9`.
+
+- [x] Start exactly from verified PR #39 merge commit `aa151fa2ca0b523534f6acf0ab1a8c0a7313a5f9`.
+- [x] Add Reboot stable Characters for Cassie Cage, Jacqui Briggs, Takeda Takahashi, and Kung Jin.
+- [x] Add a Reboot-scoped Special Forces Faction without projecting unmodeled Original/New Era scope.
+- [x] Add Johnny Cage's twenty-years-later briefing/assignment as a distinct Event at story order 490.
+- [x] Add Cassie's squad entering the Lin Kuei temple as a distinct Event at story order 500.
+- [x] Add Sub-Zero's explicit team assessment/training reveal as a distinct Event at story order 510.
+- [x] Keep the early restoration → twenty-years-later briefing transition chronology-only.
+- [x] Mirror the directly supported `briefing/assignment → Lin Kuei exercise → Sub-Zero assessment` causal chain.
+- [x] Preserve the Lin Kuei encounter as a staged training exercise rather than a genuine Earthrealm/Lin Kuei war.
+- [x] Add a sourced Fact that Cassie leads the new-generation Special Forces squad.
+- [x] Add a sourced Fact that Kuai Liang is Lin Kuei Grandmaster in the Reboot main-era story.
+- [x] Add a sourced Fact that Johnny Cage and Sub-Zero arranged the training exercise.
+- [x] Keep leadership/office/training roles in Facts rather than timeless Character metadata.
+- [x] Extend MKX Story Mode and Character Biographies source notes for the new-generation/team evidence.
+- [x] Add/index a Phase 6 new-generation manual with action-level maintainer test cases.
+- [x] Review/update `CHANGELOG.md` for the time-jump, training, and role-evidence boundaries.
+- [x] Confirm final changed-file scope is limited to the expected source/faction/character/event/fact/docs files.
+- [x] Open Draft PR #40 for the slice.
 - [x] Maintainer manual source/UI pass completed.
 - [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
 - Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
@@ -376,11 +385,11 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 
 ### Next lore slices
 
-1. Advance into the MKX 25-year-later Special Forces / Outworld storyline now that the early Netherrealm-war bridge and selected revenant restoration are explicit.
-2. Add later Quan Chi pursuit/capture and Shinnok-release material as separate source-supported occurrences rather than one endgame umbrella.
-3. Continue through the remaining MKX chapters with chronology/causality separation.
-4. Continue into MK11 once MKX chronology is dense enough to avoid large narrative gaps.
-5. Expand New Era / MK1 / Khaos Reigns after Reboot coverage is dense enough for meaningful cross-continuity navigation.
+1. Add Li Mei's refugee warning, Mileena's possession/use of Shinnok's amulet, and Sonya sending Cassie's team to Outworld as separate source-supported occurrences.
+2. Model Kotal Kahn's Outworld rule/civil-war conflict with Mileena and the squad's first diplomatic contact without collapsing the whole civil war into one umbrella causal chain.
+3. Continue through Mileena's capture/amulet recovery and D'Vorah's betrayal with direct Story Mode actor attribution.
+4. Add later Quan Chi capture / Shinnok-release material as separate occurrences.
+5. Continue into MK11 once MKX chronology is dense enough to avoid large narrative gaps.
 
 ### Phase 6 working acceptance criteria
 
@@ -424,7 +433,10 @@ A user should be able to:
 36. follow the directly supported `Jinsei assault → Johnny intervention → Shinnok imprisonment` chain while preserving Raiden as the final captor and Johnny as the enabling actor;
 37. read the Quan Chi fortress confrontation as chronology/context without seeing it become an umbrella causal parent;
 38. follow the directly supported `Johnny conversion attempt → Raiden counterspell/Sonya victory → restoration` chain;
-39. inspect Jax, Hanzo Hasashi, and Kuai Liang restoration without being told every revenant was restored or that Hanzo's prior specter history was a generic revenant-origin transition.
+39. inspect Jax, Hanzo Hasashi, and Kuai Liang restoration without being told every revenant was restored or that Hanzo's prior specter history was a generic revenant-origin transition;
+40. cross the twenty-years-later MKX jump as chronology without seeing the earlier restoration presented as its direct cause;
+41. follow the directly assigned `Johnny briefing → Lin Kuei exercise → Sub-Zero assessment` chain and understand that the apparent retrieval mission was training rather than a real faction war;
+42. inspect Cassie's squad leadership and Kuai Liang's Grandmaster role as scoped sourced Facts rather than timeless Character metadata.
 
 ## Later infrastructure — only when justified
 

@@ -1,0 +1,12 @@
+{
+  "id": "fact-kuai-liang-grandmaster-lin-kuei-reboot",
+  "type": "fact",
+  "name": "Kuai Liang served as Grandmaster of the Lin Kuei",
+  "subjectId": "kuai-liang",
+  "predicate": "grandmaster_of",
+  "objectId": "lin-kuei",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "Mortal Kombat X Story Mode identifies Sub-Zero/Kuai Liang as the Lin Kuei Grandmaster during the twenty-years-later storyline. The role is represented as a scoped Fact rather than timeless Character metadata."
+}

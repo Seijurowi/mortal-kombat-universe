@@ -1,0 +1,12 @@
+{
+  "id": "fact-cassie-led-special-forces-squad-reboot",
+  "type": "fact",
+  "name": "Cassie Cage led the new-generation Special Forces squad",
+  "subjectId": "cassie-cage",
+  "predicate": "led_unit_of",
+  "objectId": "special-forces",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story", "mkx-character-bios"],
+  "notes": "Mortal Kombat X Story Mode introduces Cassie Cage as the leader of the four-person new-generation squad with Jacqui Briggs, Takeda Takahashi, and Kung Jin. Cassie's MKX biography independently places her in a Special Forces unit. This Fact records the role at this point in the Reboot timeline rather than storing command status as timeless Character metadata."
+}

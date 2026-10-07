@@ -1,0 +1,10 @@
+{
+  "id": "jacqui-briggs",
+  "type": "character",
+  "name": "Jacqui Briggs",
+  "aliases": ["Jacqueline Briggs"],
+  "timelineIds": ["reboot"],
+  "realmIds": ["earthrealm"],
+  "description": "The daughter of Jax Briggs and a new-generation Earthrealm fighter in the Reboot continuity.",
+  "tags": ["earthrealm", "new-generation"]
+}

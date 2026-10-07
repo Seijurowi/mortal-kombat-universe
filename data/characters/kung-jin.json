@@ -1,0 +1,9 @@
+{
+  "id": "kung-jin",
+  "type": "character",
+  "name": "Kung Jin",
+  "timelineIds": ["reboot"],
+  "realmIds": ["earthrealm"],
+  "description": "A new-generation Earthrealm archer connected to the Kung Lao family in the Reboot continuity.",
+  "tags": ["earthrealm", "new-generation", "archer"]
+}
