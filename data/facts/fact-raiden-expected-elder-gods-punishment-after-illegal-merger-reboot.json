@@ -1,0 +1,12 @@
+{
+  "id": "fact-raiden-expected-elder-gods-punishment-after-illegal-merger-reboot",
+  "type": "fact",
+  "name": "Raiden expected the Elder Gods to punish an illegal merger",
+  "subjectId": "raiden",
+  "predicate": "expected",
+  "value": "the Elder Gods' fury to fall upon Shao Kahn if he merged the realms without a Mortal Kombat victory",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) Chapter 16 directly shows Raiden explain his strategy to Liu Kang: the Elder Gods forbid Shao Kahn from merging the realms without victory in Mortal Kombat, and Raiden expects their fury to fall upon Shao Kahn if he does so. This records Raiden's stated expectation, not a completed punishment occurrence."
+}

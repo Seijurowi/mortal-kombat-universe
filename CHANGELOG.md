@@ -8,6 +8,7 @@ See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 
 ### Added
 
+- **Phase 6 MK9 allow-merger plan:** Raiden's explicit strategy to allow Shao Kahn to merge Earthrealm and Outworld is now a separate Reboot plan Event/Facts sourced to MK9 story mode, directly following the `He must win` realization without treating the planned merger or Elder Gods punishment as already completed.
 - **Phase 6 MK9 He Must Win realization:** Quan Chi's post-fight dismissal of the Elder Gods and Raiden's separate realization that the future message `He must win` refers to Shao Kahn are now distinct Reboot Events/Facts sourced to MK9 story mode; Quan Chi's Shao Kahn-arrival statement remains a prediction and his Elder Gods statement remains his claim rather than an omniscient lore assertion.
 - **Phase 6 MK9 Quan Chi soul bargain and control reveal:** Raiden's proposed soul bargain and Quan Chi's separate reveal that the fallen Earthrealm warriors' souls are already his are now distinct Reboot Events/Facts sourced to MK9 story mode; Shao Kahn's payment for Netherrealm allegiance and Quan Chi's direct command of fallen warriors are preserved without treating Raiden's offer as a completed transfer or requiring a later formal revenant label.
 - **Phase 6 MK9 Elder Gods refusal:** Raiden's appeal and the Elder Gods' refusal to intervene are now separate Reboot Events/Facts sourced to MK9 story mode; the stable Elder Gods Faction now spans Original and Reboot continuity, and the refusal preserves the sourced distinction that invasion is not itself a Mortal Kombat transgression while realm merger is proscribed.
@@ -43,6 +44,7 @@ See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 
 ### Changed
 
+- **MK9 allow-merger plan evidence boundary:** Raiden's `He must win` realization now leads to his separately modeled allow-merger strategy, while the plan remains distinct from the later actual merger and from any completed Elder Gods intervention or punishment.
 - **MK9 He Must Win causality and evidence boundary:** the prior soul-control reveal remains chronology/context rather than an invented causal parent; the new causal component begins with Quan Chi's post-fight Elder Gods taunt and leads to Raiden's directly shown realization, while the realization remains separate from Raiden's later explicit allow-merger plan.
 - **MK9 soul-bargain evidence boundary:** the proposed exchange of souls is kept separate from Quan Chi's already-existing possession/control reveal; earlier losses and the Elder Gods refusal remain chronology/context rather than invented causal parents, and formal revenant terminology is deferred instead of being inferred solely from the MK9 soul-control scene.
 - **MK9 Elder Gods parallel chronology and rules boundary:** Raiden's appeal leads only to the Elder Gods' direct refusal; the intercut Sindel assault remains parallel chronology rather than a causal parent, the scene carries no invented structured Realm, and the later illegal-merger violation/punishment remains separate from the refusal-era rule explanation.

@@ -67,6 +67,7 @@ For Phase 5 work, run the broad regression checklist when the change can affect 
 - [`PHASE6_MK9_ELDER_GODS_REFUSAL_MANUAL_VERIFICATION.md`](./PHASE6_MK9_ELDER_GODS_REFUSAL_MANUAL_VERIFICATION.md) — Reboot MK9 Raiden appeal/Elder Gods refusal, parallel chronology without casualty causality, invasion-vs-merger rule distinction, stable Elder Gods Faction expansion, and short maintainer test cases.
 - [`PHASE6_MK9_QUAN_CHI_SOUL_BARGAIN_MANUAL_VERIFICATION.md`](./PHASE6_MK9_QUAN_CHI_SOUL_BARGAIN_MANUAL_VERIFICATION.md) — Reboot MK9 Raiden/Quan Chi soul bargain, direct bargain→reveal causality, soul-possession/control evidence, formal-revenant-label deferral, and short maintainer test cases.
 - [`PHASE6_MK9_HE_MUST_WIN_REALIZATION_MANUAL_VERIFICATION.md`](./PHASE6_MK9_HE_MUST_WIN_REALIZATION_MANUAL_VERIFICATION.md) — Reboot MK9 Quan Chi post-fight Elder Gods taunt, Raiden's `He must win` realization, prediction/claim evidence boundaries, and short maintainer test cases.
+- [`PHASE6_MK9_ALLOW_MERGER_PLAN_MANUAL_VERIFICATION.md`](./PHASE6_MK9_ALLOW_MERGER_PLAN_MANUAL_VERIFICATION.md) — Reboot MK9 Raiden allow-merger strategy, realization→plan causality, plan-vs-occurrence discipline, Elder Gods punishment expectation boundary, and short maintainer test cases.
 
 For Phase 6 work, use the slice-specific checklist plus any earlier regression checklist whose shared behavior the slice actually touches.
 
