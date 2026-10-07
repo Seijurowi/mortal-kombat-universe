@@ -1,0 +1,12 @@
+{
+  "id": "fact-kuai-liang-restored-by-raiden-reboot",
+  "type": "fact",
+  "name": "Kuai Liang was restored by Raiden",
+  "subjectId": "kuai-liang",
+  "predicate": "restored_by",
+  "objectId": "raiden",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "Mortal Kombat X Story Mode directly shows Raiden's reversal restore Sub-Zero/Kuai Liang to living human form and free will alongside Jax and Scorpion. This actor-attribution Fact does not attempt to reconstruct the earlier off-screen changes between Cyber Sub-Zero and the revenant body."
+}
