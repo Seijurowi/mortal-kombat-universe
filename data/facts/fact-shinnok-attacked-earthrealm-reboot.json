@@ -1,0 +1,12 @@
+{
+  "id": "fact-shinnok-attacked-earthrealm-reboot",
+  "type": "fact",
+  "name": "Shinnok attacked Earthrealm after escaping confinement",
+  "subjectId": "shinnok",
+  "predicate": "attacked",
+  "objectId": "earthrealm",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story", "mkx-character-bios"],
+  "notes": "Mortal Kombat X Story Mode opens with Shinnok's Netherrealm offensive against Earthrealm. Shinnok's MKX biography independently states that twenty-five years before the main MKX present he escaped his bonds and attacked an Earthrealm weakened by war with Outworld."
+}
