@@ -1,0 +1,13 @@
+{
+  "id": "cassie-squad-enters-lin-kuei-temple-reboot",
+  "type": "event",
+  "name": "Cassie's squad enters the Lin Kuei temple",
+  "timelineId": "reboot",
+  "participantIds": ["cassie-cage", "jacqui-briggs", "takeda-takahashi", "kung-jin", "kuai-liang", "lin-kuei"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": ["johnny-briefs-cassie-squad-reboot"],
+  "consequenceEventIds": ["sub-zero-assesses-cassie-squad-reboot"],
+  "order": 500,
+  "description": "Following Johnny Cage's assignment, Cassie Cage, Jacqui Briggs, Takeda Takahashi, and Kung Jin infiltrate the Lin Kuei temple and fight through resistance before confronting Sub-Zero. The apparent retrieval mission is later revealed to have been a training exercise arranged to assess the team's ability to work together.",
+  "tags": ["cassie-cage", "lin-kuei", "sub-zero", "training", "teamwork", "mkx"]
+}
