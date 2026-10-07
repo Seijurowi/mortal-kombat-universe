@@ -1,0 +1,12 @@
+{
+  "id": "fact-liu-kang-became-revenant-reboot",
+  "type": "fact",
+  "name": "Liu Kang became a revenant under Quan Chi",
+  "subjectId": "liu-kang",
+  "predicate": "became_revenant",
+  "value": true,
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-character-bios"],
+  "notes": "Mortal Kombat X's Liu Kang biography states that after his accidental death, Quan Chi collected his soul and used it to create an evil revenant version of Liu Kang who serves Quan Chi and the Netherrealm. This later-primary confirmation does not change the narrower MK9 death Event or the earlier MK9 soul-control reveal into an already-labeled revenant transition."
+}

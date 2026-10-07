@@ -1,0 +1,12 @@
+{
+  "id": "fact-kitana-became-revenant-reboot",
+  "type": "fact",
+  "name": "Kitana became a revenant under Quan Chi",
+  "subjectId": "kitana",
+  "predicate": "became_revenant",
+  "value": true,
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-character-bios"],
+  "notes": "Mortal Kombat X's Kitana biography states that after she died defending Earthrealm, Quan Chi collected her soul and created an evil revenant version of Kitana who serves Quan Chi and the Netherrealm. The formal later label supplements rather than rewrites the narrower MK9 death and soul-control evidence."
+}

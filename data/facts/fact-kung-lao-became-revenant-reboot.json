@@ -1,0 +1,12 @@
+{
+  "id": "fact-kung-lao-became-revenant-reboot",
+  "type": "fact",
+  "name": "Kung Lao became a revenant under Quan Chi",
+  "subjectId": "kung-lao",
+  "predicate": "became_revenant",
+  "value": true,
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-character-bios"],
+  "notes": "Mortal Kombat X's Kung Lao biography states that after Shao Kahn killed him, Quan Chi collected his soul and used it to create an evil revenant version of Kung Lao who serves Quan Chi and the Netherrealm. This is later-primary state confirmation and does not manufacture an exact conversion scene or chronology within the post-MK9 interval."
+}
