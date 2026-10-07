@@ -1,0 +1,13 @@
+{
+  "id": "shinnok-invades-earthrealm-reboot",
+  "type": "event",
+  "name": "Shinnok's Netherrealm forces invade Earthrealm",
+  "timelineId": "reboot",
+  "participantIds": ["shinnok", "quan-chi"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": [],
+  "consequenceEventIds": [],
+  "order": 410,
+  "description": "After the MK9 conflict, Shinnok escapes his prior confinement and attacks a weakened Earthrealm with Netherrealm forces. Quan Chi and corrupted Earthrealm warriors operate as part of the offensive. This Event establishes the invasion occurrence but does not manufacture a causal edge to every later battle that happens during the wider campaign.",
+  "tags": ["shinnok", "quan-chi", "netherrealm", "invasion", "earthrealm", "mkx"]
+}
