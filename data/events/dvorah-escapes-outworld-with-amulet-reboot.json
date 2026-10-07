@@ -1,0 +1,13 @@
+{
+  "id": "dvorah-escapes-outworld-with-amulet-reboot",
+  "type": "event",
+  "name": "D'Vorah escapes Outworld with Shinnok's amulet for Quan Chi",
+  "timelineId": "reboot",
+  "participantIds": ["dvorah"],
+  "realmIds": ["outworld"],
+  "causeEventIds": ["dvorah-steals-shinnok-amulet-reboot"],
+  "consequenceEventIds": [],
+  "order": 670,
+  "description": "After stealing Shinnok's amulet, D'Vorah escapes Outworld carrying it for Quan Chi as instructed. This occurrence stops at her departure with the amulet; Cassie's squad discovering the betrayal, Kotal's mistaken inference about Earthrealm, and D'Vorah's later arrival at Quan Chi remain separate later slices.",
+  "tags": ["dvorah", "shinnok-amulet", "escape", "quan-chi", "outworld", "mkx"]
+}
