@@ -1,0 +1,13 @@
+{
+  "id": "kung-jin-invokes-right-of-defense-reboot",
+  "type": "event",
+  "name": "Kung Jin invokes the right of defense against Kotal Kahn",
+  "timelineId": "reboot",
+  "participantIds": ["kung-jin", "kotal-kahn", "cassie-cage", "jacqui-briggs", "takeda-takahashi"],
+  "realmIds": ["outworld"],
+  "causeEventIds": ["kotal-confronts-cassie-squad-reboot"],
+  "consequenceEventIds": ["kotal-agrees-to-cooperate-with-cassie-squad-reboot"],
+  "order": 550,
+  "description": "To answer Kotal Kahn's accusations and death sentence, Kung Jin invokes Outworld law and claims the right of defense by kombat. He fights Kotal and defeats him, voiding the charges against the Earthrealm team. This Event records the legal challenge and duel outcome without treating the entire Outworld civil war as its causal parent.",
+  "tags": ["kung-jin", "kotal-kahn", "duel", "outworld-law", "mkx"]
+}
