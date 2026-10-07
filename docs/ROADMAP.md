@@ -330,34 +330,45 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - no shared conversion Event or exact conversion chronology is invented;
 - merged as verified commit `e66cd1e6c7591d122894430ae48c48ed9515e181` after maintainer manual/source review, final contract review, and final-head CI.
 
-### Current MKX Jax revenant/restoration transition
+### MKX Jax revenant/restoration transition ✅ — PR #37
 
-**Current work:** `agent/phase6-mkx-jax-restoration`, branched exactly from verified PR #36 merge commit `e66cd1e6c7591d122894430ae48c48ed9515e181`.
+- Jax's MKX biography supports a Reboot state progression from Quan Chi-controlled revenant/undead warrior to freedom from Quan Chi and return to life;
+- the earlier MK9 death remains historically true rather than being overwritten;
+- changing states remain Facts rather than timeless Character metadata;
+- no precise restoration Event/location/order or unsupported Raiden attribution is invented;
+- merged as verified commit `ab8b19544f5d6b7a55bfea9369820d8b0b6a4c7e` after maintainer manual/source review, final contract review, and final-head CI.
 
-- [x] Start exactly from verified PR #36 merge commit `e66cd1e6c7591d122894430ae48c48ed9515e181`.
-- [x] Add Reboot canon evidence that Jax became a Quan Chi-controlled revenant/undead warrior.
-- [x] Add separate Reboot canon evidence that Jax was later freed from Quan Chi's influence.
-- [x] Add separate Reboot canon evidence that Jax returned to life.
-- [x] Preserve Jax's earlier MK9 death as historically true rather than overwritten by the later living state.
-- [x] Keep death → revenant → restored living as ordinary time-state progression, not retcon/contradiction semantics.
-- [x] Keep state transitions in Facts rather than timeless Character metadata.
-- [x] Do not create a synthetic restoration Event/location/order from biography-only relative chronology.
-- [x] Do not promote concept-art wording that Jax was "cleansed" by Raiden into a stronger actor-attribution Fact in this slice.
-- [x] Extend the existing MKX character-bios Source notes for Jax while preserving Mortal Kombat Warehouse as access infrastructure only.
-- [x] Add/index a Phase 6 Jax restoration manual with action-level maintainer test cases.
-- [x] Review/update `CHANGELOG.md` for the time-state and actor-attribution boundary.
-- [x] Confirm final changed-file scope is limited to the expected source/fact/docs files.
-- [x] Open Draft PR #37 for the slice.
-- [x] Maintainer manual source/UI pass completed.
-- [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
+### Current MKX Netherrealm invasion and Shinnok imprisonment
+
+**Current work:** `agent/phase6-mkx-netherrealm-invasion`, branched exactly from verified PR #37 merge commit `ab8b19544f5d6b7a55bfea9369820d8b0b6a4c7e`.
+
+- [x] Start exactly from verified PR #37 merge commit `ab8b19544f5d6b7a55bfea9369820d8b0b6a4c7e`.
+- [x] Add a primary-game `Mortal Kombat X — Story Mode` Source via gameplay footage, with the uploader treated only as access infrastructure.
+- [x] Add Shinnok's Netherrealm invasion of Earthrealm as a distinct Reboot chronology Event at story order 410.
+- [x] Add the Jinsei-chamber assault as a separate Reboot Event at story order 420.
+- [x] Keep broad invasion → Jinsei assault chronology-only rather than inventing umbrella→child causality.
+- [x] Add Johnny Cage's defensive green-power manifestation while protecting Sonya as a separate Event at story order 430.
+- [x] Add Raiden imprisoning Shinnok in Shinnok's own amulet as a separate Event at story order 440.
+- [x] Mirror only the directly supported `Jinsei assault → Johnny intervention → Shinnok imprisonment` causal chain.
+- [x] Add canon Facts for Shinnok attacking Earthrealm, Johnny's protective power manifestation, and Raiden imprisoning Shinnok.
+- [x] Keep Raiden as the structured final captor while preserving Johnny's enabling role in the preceding Event.
+- [x] Expand the stable Shinnok Character from Original to Original + Reboot rather than duplicating him by continuity.
+- [x] Add stable Reboot Characters for Fujin, Johnny Cage, and Sonya Blade only as required by this slice.
+- [x] Extend the existing MKX character-bios Source notes with Shinnok's attack/imprisonment confirmation.
+- [x] Add/index a Phase 6 early-MKX invasion manual with action-level maintainer test cases.
+- [x] Review/update `CHANGELOG.md` for the chronology/causality and actor-attribution boundaries.
+- [ ] Confirm final changed-file scope is limited to the expected source/character/event/fact/docs files.
+- [ ] Open Draft PR for the slice.
+- [ ] Maintainer manual source/UI pass completed.
+- [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
 - Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
 ### Next lore slices
 
-1. Begin the MKX Shinnok/Netherrealm invasion chronology with source-supported Events and causal edges.
-2. Add Sub-Zero/Scorpion restoration history where primary evidence supports the relevant state transitions and actors.
-3. Advance through the MKX 25-year-later storyline after the early Netherrealm-war bridge is explicit.
+1. Model the early post-imprisonment Quan Chi pursuit and restoration of selected revenants where Story Mode supports exact Events/actors.
+2. Add Sub-Zero/Scorpion restoration history with source-supported transition actors rather than biography-only inference.
+3. Advance into the MKX 25-year-later Special Forces / Outworld storyline after the early Netherrealm-war bridge is explicit.
 4. Continue into MK11 once MKX chronology is dense enough to avoid large narrative gaps.
 5. Expand New Era / MK1 / Khaos Reigns after Reboot coverage is dense enough for meaningful cross-continuity navigation.
 
@@ -397,7 +408,10 @@ A user should be able to:
 30. distinguish modern Kung Lao from the Great Kung Lao while keeping revenant state in scoped Facts rather than timeless Character metadata;
 31. see the absence of a fabricated shared conversion Event when the evidence does not establish precise conversion timing or ordering;
 32. inspect Jax's death → revenant → freed/restored progression as ordinary time-state change rather than contradiction or retcon;
-33. see Jax's restoration represented through sourced Facts without an invented exact Event/location/order or unsupported actor attribution.
+33. see Jax's restoration represented through sourced Facts without an invented exact Event/location/order or unsupported actor attribution;
+34. follow the MK9→MKX chronology into Shinnok's invasion without being told the MK9 final defeat directly caused that later attack;
+35. distinguish the broad invasion from the narrower Jinsei assault without an umbrella→child causal edge;
+36. follow the directly supported `Jinsei assault → Johnny intervention → Shinnok imprisonment` chain while preserving Raiden as the final captor and Johnny as the enabling actor.
 
 ## Later infrastructure — only when justified
 
