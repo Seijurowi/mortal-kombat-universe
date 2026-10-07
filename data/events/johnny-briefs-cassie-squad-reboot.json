@@ -1,0 +1,13 @@
+{
+  "id": "johnny-briefs-cassie-squad-reboot",
+  "type": "event",
+  "name": "Johnny Cage briefs Cassie's new-generation squad",
+  "timelineId": "reboot",
+  "participantIds": ["johnny-cage", "cassie-cage", "jacqui-briggs", "takeda-takahashi", "kung-jin"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": [],
+  "consequenceEventIds": ["cassie-squad-enters-lin-kuei-temple-reboot"],
+  "order": 490,
+  "description": "Twenty years after Shinnok's imprisonment, Johnny Cage recounts the earlier Netherrealm conflict to a new squad led by Cassie Cage and including Jacqui Briggs, Takeda Takahashi, and Kung Jin. He then assigns them to contact Sub-Zero after the Lin Kuei Grandmaster goes silent, presenting retrieval by force as necessary if Sub-Zero will not cooperate.",
+  "tags": ["johnny-cage", "cassie-cage", "special-forces", "new-generation", "briefing", "mkx"]
+}
