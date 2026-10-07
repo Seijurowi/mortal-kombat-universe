@@ -338,37 +338,47 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - no precise restoration Event/location/order or unsupported Raiden attribution is invented;
 - merged as verified commit `ab8b19544f5d6b7a55bfea9369820d8b0b6a4c7e` after maintainer manual/source review, final contract review, and final-head CI.
 
-### Current MKX Netherrealm invasion and Shinnok imprisonment
+### MKX Netherrealm invasion and Shinnok imprisonment ✅ — PR #38
 
-**Current work:** `agent/phase6-mkx-netherrealm-invasion`, branched exactly from verified PR #37 merge commit `ab8b19544f5d6b7a55bfea9369820d8b0b6a4c7e`.
+- early MKX chronology separates the broad Netherrealm invasion, Jinsei assault, Johnny Cage's defensive power manifestation, and Shinnok's imprisonment;
+- MK9 final defeat → MKX invasion and broad invasion → Jinsei assault remain chronology-only;
+- only the directly shown `Jinsei assault → Johnny intervention → Shinnok imprisonment` chain is causal;
+- Raiden remains the final captor while Johnny's enabling role stays visible separately;
+- Shinnok is one stable Character across Original + Reboot;
+- merged as verified commit `a395860a3bd4f76f21bd8cee0eccae445da55953` after maintainer manual/source review, final contract review, and final-head CI.
 
-- [x] Start exactly from verified PR #37 merge commit `ab8b19544f5d6b7a55bfea9369820d8b0b6a4c7e`.
-- [x] Add a primary-game `Mortal Kombat X — Story Mode` Source via gameplay footage, with the uploader treated only as access infrastructure.
-- [x] Add Shinnok's Netherrealm invasion of Earthrealm as a distinct Reboot chronology Event at story order 410.
-- [x] Add the Jinsei-chamber assault as a separate Reboot Event at story order 420.
-- [x] Keep broad invasion → Jinsei assault chronology-only rather than inventing umbrella→child causality.
-- [x] Add Johnny Cage's defensive green-power manifestation while protecting Sonya as a separate Event at story order 430.
-- [x] Add Raiden imprisoning Shinnok in Shinnok's own amulet as a separate Event at story order 440.
-- [x] Mirror only the directly supported `Jinsei assault → Johnny intervention → Shinnok imprisonment` causal chain.
-- [x] Add canon Facts for Shinnok attacking Earthrealm, Johnny's protective power manifestation, and Raiden imprisoning Shinnok.
-- [x] Keep Raiden as the structured final captor while preserving Johnny's enabling role in the preceding Event.
-- [x] Expand the stable Shinnok Character from Original to Original + Reboot rather than duplicating him by continuity.
-- [x] Add stable Reboot Characters for Fujin, Johnny Cage, and Sonya Blade only as required by this slice.
-- [x] Extend the existing MKX character-bios Source notes with Shinnok's attack/imprisonment confirmation.
-- [x] Add/index a Phase 6 early-MKX invasion manual with action-level maintainer test cases.
-- [x] Review/update `CHANGELOG.md` for the chronology/causality and actor-attribution boundaries.
-- [x] Confirm final changed-file scope is limited to the expected source/character/event/fact/docs files.
-- [x] Open Draft PR #38 for the slice.
-- [x] Maintainer manual source/UI pass completed.
-- [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
+### Current MKX Quan Chi confrontation and revenant restoration
+
+**Current work:** `agent/phase6-mkx-revenant-restoration`, branched exactly from verified PR #38 merge commit `a395860a3bd4f76f21bd8cee0eccae445da55953`.
+
+- [x] Start exactly from verified PR #38 merge commit `a395860a3bd4f76f21bd8cee0eccae445da55953`.
+- [x] Add the post-Shinnok Quan Chi fortress confrontation as a chronology/context Event at story order 450.
+- [x] Keep the broad confrontation from becoming an umbrella causal parent of every specific action in the fortress.
+- [x] Add Quan Chi's attempted Johnny Cage revenant conversion as a distinct Event at story order 460.
+- [x] Preserve Johnny's state as an attempted/incomplete conversion rather than adding `became_revenant`.
+- [x] Add Raiden's counterspell / Sonya defeating Quan Chi as a distinct Event at story order 470.
+- [x] Add Raiden restoring Jax, Hanzo Hasashi/Scorpion, and Kuai Liang/Sub-Zero as a distinct Event at story order 480.
+- [x] Mirror only the directly supported `conversion attempt → counterspell/Sonya victory → restoration` causal chain.
+- [x] Add canon Facts for the Johnny conversion attempt, Sonya defeating Quan Chi, and Raiden restoring Jax/Hanzo/Kuai Liang.
+- [x] Add direct `mkx-story` corroboration to Jax's existing freedom-from-Quan-Chi and returned-to-life Facts.
+- [x] Keep Hanzo's earlier specter/resurrection history intact instead of manufacturing a generic `became_revenant` origin Fact.
+- [x] Keep Kuai Liang's off-screen Cyber Sub-Zero → later revenant-body mechanism unasserted.
+- [x] Do not generalize the occurrence into restoration of every revenant.
+- [x] Extend the MKX Story Mode Source notes for the fortress/restoration sequence.
+- [x] Add/index a Phase 6 MKX revenant-restoration manual with action-level maintainer test cases.
+- [x] Review/update `CHANGELOG.md` for the restoration causality/state boundary.
+- [ ] Confirm final changed-file scope is limited to the expected source/event/fact/docs files.
+- [ ] Open Draft PR for the slice.
+- [ ] Maintainer manual source/UI pass completed.
+- [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
 - Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
 ### Next lore slices
 
-1. Model the early post-imprisonment Quan Chi pursuit and restoration of selected revenants where Story Mode supports exact Events/actors.
-2. Add Sub-Zero/Scorpion restoration history with source-supported transition actors rather than biography-only inference.
-3. Advance into the MKX 25-year-later Special Forces / Outworld storyline after the early Netherrealm-war bridge is explicit.
+1. Advance into the MKX 25-year-later Special Forces / Outworld storyline now that the early Netherrealm-war bridge and selected revenant restoration are explicit.
+2. Add later Quan Chi pursuit/capture and Shinnok-release material as separate source-supported occurrences rather than one endgame umbrella.
+3. Continue through the remaining MKX chapters with chronology/causality separation.
 4. Continue into MK11 once MKX chronology is dense enough to avoid large narrative gaps.
 5. Expand New Era / MK1 / Khaos Reigns after Reboot coverage is dense enough for meaningful cross-continuity navigation.
 
@@ -411,7 +421,10 @@ A user should be able to:
 33. see Jax's restoration represented through sourced Facts without an invented exact Event/location/order or unsupported actor attribution;
 34. follow the MK9→MKX chronology into Shinnok's invasion without being told the MK9 final defeat directly caused that later attack;
 35. distinguish the broad invasion from the narrower Jinsei assault without an umbrella→child causal edge;
-36. follow the directly supported `Jinsei assault → Johnny intervention → Shinnok imprisonment` chain while preserving Raiden as the final captor and Johnny as the enabling actor.
+36. follow the directly supported `Jinsei assault → Johnny intervention → Shinnok imprisonment` chain while preserving Raiden as the final captor and Johnny as the enabling actor;
+37. read the Quan Chi fortress confrontation as chronology/context without seeing it become an umbrella causal parent;
+38. follow the directly supported `Johnny conversion attempt → Raiden counterspell/Sonya victory → restoration` chain;
+39. inspect Jax, Hanzo Hasashi, and Kuai Liang restoration without being told every revenant was restored or that Hanzo's prior specter history was a generic revenant-origin transition.
 
 ## Later infrastructure — only when justified
 
