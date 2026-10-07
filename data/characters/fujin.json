@@ -1,0 +1,9 @@
+{
+  "id": "fujin",
+  "type": "character",
+  "name": "Fujin",
+  "timelineIds": ["reboot"],
+  "realmIds": ["earthrealm"],
+  "description": "An Earthrealm god who fights alongside Raiden against Shinnok's Netherrealm forces in the Reboot continuity.",
+  "tags": ["god", "earthrealm"]
+}
