@@ -1,0 +1,13 @@
+{
+  "id": "shinnok-assaults-jinsei-chamber-reboot",
+  "type": "event",
+  "name": "Shinnok assaults the Jinsei chamber",
+  "timelineId": "reboot",
+  "participantIds": ["shinnok", "raiden", "fujin", "quan-chi"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": [],
+  "consequenceEventIds": ["johnny-cage-awakens-power-against-shinnok-reboot"],
+  "order": 420,
+  "description": "At Raiden's Sky Temple, Raiden and Fujin fight Netherrealm attackers and Quan Chi's controlled warriors before Shinnok confronts them at the Jinsei chamber. Shinnok uses his amulet against the gods and threatens Earthrealm's life force. This occurrence is chronologically part of the broader invasion, but the project does not encode the broad invasion itself as a causal parent merely because the assault occurs during it.",
+  "tags": ["shinnok", "raiden", "fujin", "quan-chi", "jinsei", "sky-temple", "mkx"]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "shinnok-imprisoned-in-amulet-reboot",
+  "type": "event",
+  "name": "Raiden imprisons Shinnok in his own amulet",
+  "timelineId": "reboot",
+  "participantIds": ["shinnok", "raiden", "johnny-cage"],
+  "realmIds": ["earthrealm"],
+  "causeEventIds": ["johnny-cage-awakens-power-against-shinnok-reboot"],
+  "consequenceEventIds": [],
+  "order": 440,
+  "description": "After Johnny Cage's intervention disrupts Shinnok and the amulet reaches Raiden, Raiden uses Shinnok's own amulet to imprison the fallen Elder God. The Event attributes the final imprisonment to Raiden while preserving Johnny's directly shown enabling role as a separate causal parent occurrence.",
+  "tags": ["shinnok", "raiden", "johnny-cage", "amulet", "imprisonment", "mkx"]
+}

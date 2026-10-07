@@ -1,0 +1,12 @@
+{
+  "id": "fact-johnny-cage-manifested-power-against-shinnok-reboot",
+  "type": "fact",
+  "name": "Johnny Cage manifested protective power against Shinnok",
+  "subjectId": "johnny-cage",
+  "predicate": "manifested_protective_power_against",
+  "objectId": "shinnok",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "Mortal Kombat X Story Mode shows Johnny Cage glow with green energy when he moves to protect Sonya from Shinnok's magic. The power neutralizes the attack and allows Johnny to fight Shinnok; this Fact records the directly shown manifestation without generalizing its full mechanism."
+}

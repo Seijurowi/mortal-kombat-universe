@@ -73,6 +73,7 @@ For Phase 5 work, run the broad regression checklist when the change can affect 
 - [`PHASE6_MK9_ELDER_GODS_PUNISHMENT_MANUAL_VERIFICATION.md`](./PHASE6_MK9_ELDER_GODS_PUNISHMENT_MANUAL_VERIFICATION.md) — Reboot MK9 illegal-merger → Elder Gods intervention → final-defeat chain, Raiden empowerment, punishment/victor attribution boundaries, and short maintainer test cases.
 - [`PHASE6_MKX_REVENANT_CONFIRMATION_MANUAL_VERIFICATION.md`](./PHASE6_MKX_REVENANT_CONFIRMATION_MANUAL_VERIFICATION.md) — MKX later-primary revenant-state confirmation for Liu Kang, Kitana, and Kung Lao, stable-person identity separation from the Great Kung Lao, and no invented conversion chronology.
 - [`PHASE6_MKX_JAX_RESTORATION_MANUAL_VERIFICATION.md`](./PHASE6_MKX_JAX_RESTORATION_MANUAL_VERIFICATION.md) — MKX Jax death→revenant→freed/restored state progression, ordinary time-state semantics, and no invented restoration Event or unsupported Raiden attribution.
+- [`PHASE6_MKX_NETHERREALM_INVASION_MANUAL_VERIFICATION.md`](./PHASE6_MKX_NETHERREALM_INVASION_MANUAL_VERIFICATION.md) — early MKX Netherrealm invasion, Jinsei assault, Johnny Cage defensive power manifestation, Shinnok imprisonment, and chronology-vs-causality guardrails.
 
 For Phase 6 work, use the slice-specific checklist plus any earlier regression checklist whose shared behavior the slice actually touches.
 
