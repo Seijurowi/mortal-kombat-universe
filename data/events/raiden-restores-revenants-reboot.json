@@ -1,0 +1,13 @@
+{
+  "id": "raiden-restores-revenants-reboot",
+  "type": "event",
+  "name": "Raiden restores Jax, Scorpion, and Sub-Zero",
+  "timelineId": "reboot",
+  "participantIds": ["raiden", "johnny-cage", "jax-briggs", "hanzo-hasashi", "kuai-liang"],
+  "realmIds": ["netherrealm"],
+  "causeEventIds": ["raiden-counters-quan-chi-spell-reboot"],
+  "consequenceEventIds": [],
+  "order": 480,
+  "description": "With Quan Chi no longer disrupting the counterspell, Raiden completes the reversal, saves Johnny Cage from the attempted revenant conversion, and restores Jax Briggs, Hanzo Hasashi/Scorpion, and Kuai Liang/Sub-Zero to living human form and free will. This occurrence does not imply that every revenant was restored at the same time.",
+  "tags": ["raiden", "jax-briggs", "hanzo-hasashi", "kuai-liang", "restoration", "netherrealm", "mkx"]
+}
