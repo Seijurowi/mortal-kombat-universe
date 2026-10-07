@@ -1,0 +1,9 @@
+{
+  "id": "special-forces",
+  "type": "faction",
+  "name": "Special Forces",
+  "timelineIds": ["reboot"],
+  "realmIds": ["earthrealm"],
+  "description": "An Earthrealm military organization that fields the new-generation task force in the Reboot continuity.",
+  "tags": ["military", "earthrealm"]
+}
