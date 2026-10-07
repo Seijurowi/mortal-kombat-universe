@@ -6,7 +6,7 @@
   "participantIds": ["raiden", "liu-kang"],
   "realmIds": ["earthrealm"],
   "causeEventIds": ["raiden-realizes-he-must-win-shao-kahn-reboot"],
-  "consequenceEventIds": [],
+  "consequenceEventIds": ["raiden-and-liu-kang-fight-reboot"],
   "order": 350,
   "description": "After returning from the Netherrealm, Raiden tells Liu Kang that they must allow Shao Kahn to merge the realms so that the Elder Gods will punish the violation. This Event records Raiden's explicit strategy only; it does not assert that the merger has occurred, that Shao Kahn has already violated the rules, or that the Elder Gods have already intervened.",
   "tags": ["raiden", "plan", "realm-merger", "elder-gods"]
