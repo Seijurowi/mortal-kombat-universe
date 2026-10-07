@@ -5,13 +5,8 @@
   "subjectId": "jax-briggs",
   "predicate": "freed_from_influence_of",
   "objectId": "quan-chi",
-  "timelineIds": [
-    "reboot"
-  ],
+  "timelineIds": ["reboot"],
   "canonStatus": "canon",
-  "sourceIds": [
-    "mkx-character-bios",
-    "mkx-story"
-  ],
+  "sourceIds": ["mkx-character-bios", "mkx-story"],
   "notes": "Mortal Kombat X's Jax biography states that soon after Netherrealm's defeat, Jax was freed of Quan Chi's influence. Story Mode directly shows Raiden complete the reversal that frees and restores Jax after Sonya defeats Quan Chi. The Fact records the state transition while the separate `restored_by = Raiden` Fact carries the direct actor attribution."
 }
