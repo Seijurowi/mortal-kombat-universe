@@ -1,0 +1,12 @@
+{
+  "id": "fact-kotal-ordered-mileena-execution-reboot",
+  "type": "fact",
+  "name": "Kotal Kahn ordered Mileena's execution",
+  "subjectId": "kotal-kahn",
+  "predicate": "ordered_execution_of",
+  "objectId": "mileena",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "After Mileena is captured, Mortal Kombat X Story Mode shows Kotal Kahn order her death and permit D'Vorah to carry out the execution."
+}

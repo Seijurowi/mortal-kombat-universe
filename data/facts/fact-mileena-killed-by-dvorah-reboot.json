@@ -1,0 +1,12 @@
+{
+  "id": "fact-mileena-killed-by-dvorah-reboot",
+  "type": "fact",
+  "name": "Mileena was killed by D'Vorah",
+  "subjectId": "mileena",
+  "predicate": "killed_by",
+  "objectId": "dvorah",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "Mortal Kombat X Story Mode directly shows D'Vorah execute Mileena with Kytinn parasites after Kotal Kahn orders the execution. Kotal remains the ordering authority; D'Vorah is the direct killer."
+}

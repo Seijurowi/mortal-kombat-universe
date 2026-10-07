@@ -1,0 +1,13 @@
+{
+  "id": "dvorah-captures-mileena-reboot",
+  "type": "event",
+  "name": "D'Vorah defeats and captures Mileena",
+  "timelineId": "reboot",
+  "participantIds": ["dvorah", "mileena", "cassie-cage"],
+  "realmIds": ["outworld"],
+  "causeEventIds": [],
+  "consequenceEventIds": ["kotal-orders-mileena-execution-reboot"],
+  "order": 610,
+  "description": "During the Kuatan Jungle operation, Mileena confronts Cassie Cage and D'Vorah at the rebel camp. D'Vorah defeats Mileena in kombat and captures her, bringing the rebel claimant before Kotal Kahn. This capture is kept separate from the parallel amulet-recovery branch rather than treating one as the cause of the other.",
+  "tags": ["dvorah", "mileena", "capture", "outworld", "mkx"]
+}

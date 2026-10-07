@@ -1,0 +1,13 @@
+{
+  "id": "kotal-orders-mileena-execution-reboot",
+  "type": "event",
+  "name": "Kotal Kahn orders Mileena's execution",
+  "timelineId": "reboot",
+  "participantIds": ["kotal-kahn", "mileena", "dvorah"],
+  "realmIds": ["outworld"],
+  "causeEventIds": ["dvorah-captures-mileena-reboot"],
+  "consequenceEventIds": ["dvorah-executes-mileena-reboot"],
+  "order": 620,
+  "description": "After D'Vorah brings the captured Mileena before him, Kotal Kahn rejects Mileena's claim to the throne and orders her execution, delegating the final act to D'Vorah. The Event records Kotal's execution decision separately from both the capture and the later killing.",
+  "tags": ["kotal-kahn", "mileena", "dvorah", "execution-order", "outworld", "mkx"]
+}

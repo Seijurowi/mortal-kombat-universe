@@ -1,0 +1,12 @@
+{
+  "id": "fact-kotal-retained-shinnok-amulet-reboot",
+  "type": "fact",
+  "name": "Kotal Kahn decided to keep Shinnok's amulet in Outworld",
+  "subjectId": "kotal-kahn",
+  "predicate": "decided_to_retain",
+  "value": "Shinnok's amulet",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "After the amulet is recovered, Kotal Kahn states that he no longer trusts Earthrealm to safeguard it and decides Outworld will retain it. This decision is separate from Mileena's execution and precedes D'Vorah's later theft."
+}

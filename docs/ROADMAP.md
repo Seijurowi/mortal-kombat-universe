@@ -382,30 +382,35 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - Shinnok-amulet identity/possession remains unconfirmed at that point;
 - merged as verified commit `90dd1838dca01f989edbac9ea68020ff19f72262` after maintainer manual/source review, final contract review, and final-head CI.
 
-### Current MKX Shinnok amulet confirmation and recovery
+### MKX Shinnok amulet confirmation and recovery ✅ — PR #43
 
-**Current work:** `agent/phase6-mkx-amulet-confirmation-recovery`, branched exactly from verified PR #42 merge commit `90dd1838dca01f989edbac9ea68020ff19f72262`.
+- Kotal cooperation → Sonya location intel remains chronology-only because the location comes from Sonya's separate investigation;
+- the directly supported `location intel → Kotal operation → Cassie/D'Vorah infiltration → amulet recovery` chain is causal;
+- later Story Mode evidence confirms Mileena possessed Shinnok's amulet while preserving earlier Li Mei report and Raiden suspicion records as historically correct weaker evidence;
+- D'Vorah's physical recovery remains separate from her later betrayal/theft;
+- merged as verified commit `12d4e992eeb01a9542098126a9931419a10aa902` after maintainer manual/source review, final contract review, and final-head CI.
 
-- [x] Start exactly from verified PR #42 merge commit `90dd1838dca01f989edbac9ea68020ff19f72262`.
-- [x] Add stable Reboot D'Vorah Character.
-- [x] Add Sonya relaying Mileena's location to Cassie's team as a distinct Event at story order 570.
-- [x] Keep Kotal cooperation → Sonya location intel chronology-only because the location comes from Sonya's separate investigation.
-- [x] Leave the cross-realm Sonya/Cassie communication without a fabricated single Event Realm.
-- [x] Add Kotal launching the rebel-camp operation as a distinct Event at story order 580.
-- [x] Add Cassie/D'Vorah infiltrating Mileena's camp as a distinct Event at story order 590.
-- [x] Add D'Vorah recovering Shinnok's amulet as a distinct Event at story order 600.
-- [x] Mirror the directly supported `location intel → operation → infiltration → recovery` causal chain.
-- [x] Add a later confirmed canon Fact that Mileena possessed Shinnok's amulet.
-- [x] Preserve the earlier Li Mei report and Raiden suspicion as historically correct weaker evidence rather than rewriting them.
-- [x] Add a canon Fact that D'Vorah recovered the amulet from Mileena's camp.
-- [x] Keep D'Vorah's later betrayal/theft separate from this recovery occurrence.
-- [x] Avoid introducing Kano/Rain/Tanya stable Characters solely for incidental evidence inside this narrow slice.
-- [x] Keep Mileena capture/execution, Kotal hostage-taking, D'Vorah betrayal, and Quan Chi delivery outside this slice.
-- [x] Extend MKX Story Mode source notes for the location/operation/infiltration/recovery sequence.
-- [x] Add/index a Phase 6 amulet confirmation/recovery manual with action-level maintainer test cases.
-- [x] Review/update `CHANGELOG.md` for the report/suspicion → later-confirmation evidence progression.
-- [x] Confirm final changed-file scope is limited to the expected source/character/event/fact/docs files.
-- [x] Open Draft PR #43 for the slice.
+### Current MKX Mileena execution and Kotal response
+
+**Current work:** `agent/phase6-mkx-mileena-execution-kotal-response`, branched exactly from verified PR #43 merge commit `12d4e992eeb01a9542098126a9931419a10aa902`.
+
+- [x] Start exactly from verified PR #43 merge commit `12d4e992eeb01a9542098126a9931419a10aa902`.
+- [x] Add D'Vorah defeating/capturing Mileena as a distinct Event at story order 610.
+- [x] Add Kotal Kahn ordering Mileena's execution as a distinct Event at story order 620.
+- [x] Add D'Vorah executing Mileena as a distinct Event at story order 630.
+- [x] Mirror direct `capture → Kotal execution order → D'Vorah execution` causality.
+- [x] Keep Kotal as execution-order authority and D'Vorah as the direct `killed_by` actor.
+- [x] Add Kotal retaining Shinnok's amulet and detaining Cassie's squad as a distinct Event at story order 640.
+- [x] Link `D'Vorah recovers amulet → Kotal retention/detention` as a separate causal branch.
+- [x] Do not encode `Mileena execution → hostage-taking` causality.
+- [x] Add sourced Facts for Mileena's capture, Kotal's execution order, D'Vorah as Mileena's killer, Kotal's amulet-retention decision, and the team detention.
+- [x] Preserve earlier Kotal cooperation as historically true rather than marking the later detention as a retcon.
+- [x] Keep D'Vorah double-agent reveal, amulet theft, and Quan Chi delivery outside this slice.
+- [x] Extend MKX Story Mode source notes for the execution/security-response sequence.
+- [x] Add/index a Phase 6 Mileena execution/Kotal response manual with action-level maintainer test cases.
+- [x] Review/update `CHANGELOG.md` for actor attribution and parallel causal branches.
+- [x] Confirm final changed-file scope is limited to the expected source/event/fact/docs files.
+- [x] Open Draft PR #44 for the slice.
 - [x] Maintainer manual source/UI pass completed.
 - [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
 - Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
@@ -413,9 +418,9 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 
 ### Next lore slices
 
-1. Add Mileena's capture/execution and Kotal's immediate response while keeping D'Vorah's later betrayal separate.
-2. Add Kotal taking the Earthrealmers hostage and D'Vorah stealing/carrying the amulet to Quan Chi as separate source-supported occurrences.
-3. Add later Quan Chi capture / Shinnok-release material as separate occurrences.
+1. Add D'Vorah's double-agent reveal, theft of Shinnok's amulet, and movement toward Quan Chi as separate source-supported occurrences.
+2. Add Takeda freeing Cassie's squad and the team's discovery/pursuit of D'Vorah without folding Kotal's mistaken inference into objective truth.
+3. Add Quan Chi capture, Scorpion's intervention, and Shinnok's release as separate occurrences.
 4. Continue through the remaining MKX chapters with chronology/causality separation.
 5. Continue into MK11 once MKX chronology is dense enough to avoid large narrative gaps.
 
@@ -473,7 +478,10 @@ A user should be able to:
 48. inspect Kotal's rule and Mileena's rebellion/civil-war context as scoped sourced Facts rather than one umbrella Event;
 49. follow the directly supported `Sonya location intel → Kotal operation → Cassie/D'Vorah infiltration → amulet recovery` chain;
 50. compare earlier Li Mei/Raiden report-suspicion evidence with the later confirmed `Mileena possessed Shinnok's amulet` Fact without treating the earlier records as wrong;
-51. distinguish D'Vorah's physical recovery of the amulet from her later betrayal/theft.
+51. distinguish D'Vorah's physical recovery of the amulet from her later betrayal/theft;
+52. follow `D'Vorah captures Mileena → Kotal orders execution → D'Vorah executes Mileena` while preserving Kotal as ordering authority and D'Vorah as direct killer;
+53. follow the separate `amulet recovery → Kotal retention/detention` branch without seeing Mileena's execution presented as the cause of hostage-taking;
+54. read Kotal's earlier cooperation and later detention as changing decisions under new circumstances rather than an automatic retcon.
 
 ## Later infrastructure — only when justified
 

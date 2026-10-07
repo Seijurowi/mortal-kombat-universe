@@ -1,0 +1,13 @@
+{
+  "id": "kotal-retains-amulet-detains-cassie-squad-reboot",
+  "type": "event",
+  "name": "Kotal Kahn keeps the amulet and detains Cassie's squad",
+  "timelineId": "reboot",
+  "participantIds": ["kotal-kahn", "cassie-cage", "jacqui-briggs", "takeda-takahashi", "kung-jin", "dvorah"],
+  "realmIds": ["outworld"],
+  "causeEventIds": ["dvorah-recovers-shinnok-amulet-reboot"],
+  "consequenceEventIds": [],
+  "order": 640,
+  "description": "After Shinnok's amulet is recovered, Kotal Kahn says he no longer trusts Earthrealm to keep it safe and decides that Outworld will retain it. He orders Cassie Cage, Jacqui Briggs, Takeda Takahashi, and Kung Jin detained as leverage in dealing with Raiden. This Event is caused by the recovered-amulet security decision, not by Mileena's execution.",
+  "tags": ["kotal-kahn", "cassie-cage", "shinnok-amulet", "detention", "outworld", "mkx"]
+}
