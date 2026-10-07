@@ -1,0 +1,9 @@
+{
+  "id": "johnny-cage",
+  "type": "character",
+  "name": "Johnny Cage",
+  "timelineIds": ["reboot"],
+  "realmIds": ["earthrealm"],
+  "description": "An Earthrealm martial artist and Special Forces ally whose latent power becomes pivotal against Shinnok in the Reboot continuity.",
+  "tags": ["earthrealm", "special-forces", "martial-artist"]
+}
