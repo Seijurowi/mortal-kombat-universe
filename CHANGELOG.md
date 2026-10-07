@@ -8,6 +8,7 @@ See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 
 ### Added
 
+- **Phase 6 MKX D'Vorah betrayal and amulet theft:** D'Vorah's private Quan Chi contact, hidden allegiance, theft of Shinnok's amulet from Kotal's custody, and escape from Outworld with the amulet for Quan Chi are now separate sourced Reboot occurrences/Facts.
 - **Phase 6 MKX Mileena execution and Kotal response:** Mileena's capture, Kotal's execution order, and D'Vorah's direct killing are now separate sourced Reboot occurrences, while Kotal's decision to retain Shinnok's amulet and detain Cassie's squad is modeled as a separate security-response branch from the recovered amulet.
 - **Phase 6 MKX Shinnok amulet confirmation and recovery:** Sonya's Mileena-location intelligence now leads to Kotal's rebel-camp operation, Cassie/D'Vorah's infiltration, direct confirmation that Mileena's talisman is Shinnok's amulet, and D'Vorah's recovery of the amulet from the camp.
 - **Phase 6 MKX Kotal first contact and cooperation:** Cassie's squad now reaches Kotal Kahn's court, faces his Mileena-alliance accusation, resolves the death sentence through Kung Jin's right-of-defense duel, and secures a limited cooperation arrangement; Kotal's rule and Mileena's rebellion/civil-war context are represented as sourced Facts rather than one umbrella Event.
@@ -56,6 +57,7 @@ See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 
 ### Changed
 
+- **MKX betrayal chronology/causality boundary:** Kotal's detention decision → D'Vorah's secret contact remains chronology-only because her allegiance predates that decision, while `secret contact/order → amulet theft → escape` is directly causal; D'Vorah's earlier authorized recovery remains distinct from the later theft, and physical delivery to Quan Chi remains deferred.
 - **MKX execution/security-response boundary:** `capture → Kotal execution order → D'Vorah execution` preserves ordering-authority versus direct-killer attribution, while `amulet recovery → Kotal retention/detention` remains a separate causal branch so Mileena's death is not falsely presented as the cause of hostage-taking; D'Vorah's later betrayal/theft remains deferred.
 - **MKX evidence-strength progression:** earlier Li Mei report and Raiden suspicion records remain historically correct while a later direct Story Mode Fact confirms Mileena possessed Shinnok's amulet; Kotal cooperation → Sonya location intel remains chronology-only, and D'Vorah's recovery is kept separate from her later betrayal/theft.
 - **MKX Outworld-contact causality boundary:** Earthrealm deployment → Kotal confrontation remains chronology-only, while `Kotal accusation → Kung Jin duel → cooperation` is directly causal; Kotal's accusation remains his suspicion rather than objective truth, civil-war context remains Fact-level evidence, and Shinnok-amulet identity is still not promoted to confirmed possession.
