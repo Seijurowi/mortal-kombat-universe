@@ -1,0 +1,12 @@
+{
+  "id": "fact-raiden-empowered-by-elder-gods-reboot",
+  "type": "fact",
+  "name": "The Elder Gods empowered Raiden against Shao Kahn",
+  "subjectId": "raiden",
+  "predicate": "empowered_by",
+  "objectId": "elder-gods",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) Chapter 16 shows golden dragon forms descend after Shao Kahn's illegal merger violation, surround and restore Raiden, and speak through him as the Elder Gods declare Shao Kahn's penalty. The empowerment is part of their intervention and directly precedes Raiden's final fight with Shao Kahn."
+}
