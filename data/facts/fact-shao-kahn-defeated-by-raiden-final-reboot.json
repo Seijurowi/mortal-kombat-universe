@@ -1,0 +1,12 @@
+{
+  "id": "fact-shao-kahn-defeated-by-raiden-final-reboot",
+  "type": "fact",
+  "name": "Shao Kahn was finally defeated by Raiden in MK9",
+  "subjectId": "shao-kahn",
+  "predicate": "defeated_by",
+  "value": "Raiden",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mk9-story"],
+  "notes": "Mortal Kombat (2011) Chapter 16 shows the Elder-God-empowered Raiden defeat Shao Kahn in the final fight. The Elder Gods' dragon forms then continue their punishment, so this attribution identifies the fight victor without claiming that Raiden alone caused every part of Shao Kahn's subsequent destruction."
+}
