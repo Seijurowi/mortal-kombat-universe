@@ -74,6 +74,7 @@ For Phase 5 work, run the broad regression checklist when the change can affect 
 - [`PHASE6_MKX_REVENANT_CONFIRMATION_MANUAL_VERIFICATION.md`](./PHASE6_MKX_REVENANT_CONFIRMATION_MANUAL_VERIFICATION.md) — MKX later-primary revenant-state confirmation for Liu Kang, Kitana, and Kung Lao, stable-person identity separation from the Great Kung Lao, and no invented conversion chronology.
 - [`PHASE6_MKX_JAX_RESTORATION_MANUAL_VERIFICATION.md`](./PHASE6_MKX_JAX_RESTORATION_MANUAL_VERIFICATION.md) — MKX Jax death→revenant→freed/restored state progression, ordinary time-state semantics, and no invented restoration Event or unsupported Raiden attribution.
 - [`PHASE6_MKX_NETHERREALM_INVASION_MANUAL_VERIFICATION.md`](./PHASE6_MKX_NETHERREALM_INVASION_MANUAL_VERIFICATION.md) — early MKX Netherrealm invasion, Jinsei assault, Johnny Cage defensive power manifestation, Shinnok imprisonment, and chronology-vs-causality guardrails.
+- [`PHASE6_MKX_REVENANT_RESTORATION_MANUAL_VERIFICATION.md`](./PHASE6_MKX_REVENANT_RESTORATION_MANUAL_VERIFICATION.md) — post-Shinnok Quan Chi confrontation, failed Johnny revenant conversion, Raiden/Sonya counterspell sequence, and source-supported restoration of Jax, Hanzo, and Kuai Liang.
 
 For Phase 6 work, use the slice-specific checklist plus any earlier regression checklist whose shared behavior the slice actually touches.
 
