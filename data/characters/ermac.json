@@ -1,0 +1,9 @@
+{
+  "id": "ermac",
+  "type": "character",
+  "name": "Ermac",
+  "timelineIds": ["reboot"],
+  "realmIds": ["outworld"],
+  "description": "A soul-fused warrior serving Kotal Kahn's Outworld forces during the Reboot continuity.",
+  "tags": ["outworld", "souls", "kotal-kahn"]
+}
