@@ -1,0 +1,12 @@
+{
+  "id": "fact-kotal-prepared-invasion-earthrealm-reboot",
+  "type": "fact",
+  "name": "Kotal Kahn prepared to invade Earthrealm to recover the amulet",
+  "subjectId": "kotal-kahn",
+  "predicate": "prepared_invasion_of",
+  "objectId": "earthrealm",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "Mortal Kombat X Story Mode shows Kotal Kahn gather Outworld forces for retaliation against Earthrealm after accepting the mistaken Raiden/D'Vorah theory. This Fact records the plan/preparation, not a completed invasion occurrence."
+}
