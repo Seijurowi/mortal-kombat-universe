@@ -1,0 +1,13 @@
+{
+  "id": "kotal-prepares-earthrealm-retaliation-reboot",
+  "type": "event",
+  "name": "Kotal Kahn prepares retaliation against Earthrealm",
+  "timelineId": "reboot",
+  "participantIds": ["kotal-kahn"],
+  "realmIds": ["outworld"],
+  "causeEventIds": ["cassie-squad-clashes-with-kotal-retainers-reboot"],
+  "consequenceEventIds": [],
+  "order": 700,
+  "description": "After his retainers report the escaped Earthrealmers and the missing amulet, Kotal Kahn accepts the mistaken inference that D'Vorah is working with Raiden and prepares Outworld forces to move against Earthrealm and recover the amulet. The Event records Kotal's retaliation decision and belief-driven response, not an objective alliance between D'Vorah and Raiden.",
+  "tags": ["kotal-kahn", "raiden", "earthrealm", "retaliation", "outworld", "mkx"]
+}
