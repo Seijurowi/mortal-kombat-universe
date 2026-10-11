@@ -1,0 +1,13 @@
+{
+  "id": "dvorah-reveals-loyalty-to-quan-chi-reboot",
+  "type": "event",
+  "name": "D'Vorah reveals her secret loyalty to Quan Chi",
+  "timelineId": "reboot",
+  "participantIds": ["dvorah", "quan-chi"],
+  "realmIds": ["outworld"],
+  "causeEventIds": [],
+  "consequenceEventIds": ["dvorah-steals-shinnok-amulet-reboot"],
+  "order": 650,
+  "description": "After Kotal Kahn has decided to keep Shinnok's amulet in Outworld and detain Cassie's squad, D'Vorah privately contacts Quan Chi and reveals that her true allegiance lies with him. Quan Chi directs her to obtain the amulet and bring it to him. Kotal's detention decision is chronology context only; it does not cause D'Vorah's pre-existing secret allegiance.",
+  "tags": ["dvorah", "quan-chi", "double-agent", "outworld", "mkx"]
+}

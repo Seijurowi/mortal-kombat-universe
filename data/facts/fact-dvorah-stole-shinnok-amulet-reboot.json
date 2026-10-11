@@ -1,0 +1,12 @@
+{
+  "id": "fact-dvorah-stole-shinnok-amulet-reboot",
+  "type": "fact",
+  "name": "D'Vorah stole Shinnok's amulet from Kotal's custody",
+  "subjectId": "dvorah",
+  "predicate": "stole",
+  "value": "Shinnok's amulet",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "Mortal Kombat X Story Mode shows D'Vorah kill the guards protecting Shinnok's amulet and take it after Kotal Kahn decides Outworld will keep it. This theft is distinct from D'Vorah's earlier authorized recovery of the amulet from Mileena's camp."
+}
