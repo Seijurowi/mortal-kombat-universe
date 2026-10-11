@@ -1,0 +1,12 @@
+{
+  "id": "fact-takeda-freed-cassie-squad-reboot",
+  "type": "fact",
+  "name": "Takeda freed Cassie's squad from Kotal's custody",
+  "subjectId": "takeda-takahashi",
+  "predicate": "freed_team_led_by",
+  "objectId": "cassie-cage",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "Mortal Kombat X Story Mode shows Takeda use his telepathic abilities to incapacitate a guard, take the keys, and free Cassie Cage, Jacqui Briggs, and Kung Jin from Kotal Kahn's custody. Cassie is the stable representative object for the four-person squad."
+}
