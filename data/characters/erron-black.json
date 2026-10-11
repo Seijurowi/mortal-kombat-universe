@@ -1,0 +1,9 @@
+{
+  "id": "erron-black",
+  "type": "character",
+  "name": "Erron Black",
+  "timelineIds": ["reboot"],
+  "realmIds": ["outworld"],
+  "description": "A gunslinger serving Kotal Kahn's Outworld forces during the Reboot continuity.",
+  "tags": ["outworld", "gunslinger", "kotal-kahn"]
+}
