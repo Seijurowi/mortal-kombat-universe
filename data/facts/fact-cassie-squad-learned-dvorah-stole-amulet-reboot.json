@@ -1,0 +1,12 @@
+{
+  "id": "fact-cassie-squad-learned-dvorah-stole-amulet-reboot",
+  "type": "fact",
+  "name": "Cassie's squad learned D'Vorah had stolen Shinnok's amulet",
+  "subjectId": "cassie-cage",
+  "predicate": "learned_stolen_by",
+  "objectId": "dvorah",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "After escaping Kotal's custody and clashing with his retainers, Cassie's team learns that D'Vorah took Shinnok's amulet. Cassie is used as the stable representative subject for the squad; the amulet is the learned-about stolen object described in the Fact notes."
+}
