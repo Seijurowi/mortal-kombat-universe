@@ -1,0 +1,12 @@
+{
+  "id": "fact-sareena-aided-quan-chi-ambush-reboot",
+  "type": "fact",
+  "name": "Sareena aided Earthrealm's ambush of Quan Chi",
+  "subjectId": "sareena",
+  "predicate": "aided_operation_against",
+  "objectId": "quan-chi",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "Mortal Kombat X Story Mode places Sareena with Jax, Kenshi, and Special Forces at the Netherrealm ambush. She advises them about Quan Chi's weakened state and fights alongside the Earthrealm force."
+}
