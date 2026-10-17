@@ -82,6 +82,7 @@ For Phase 5 work, run the broad regression checklist when the change can affect 
 - [`PHASE6_MKX_MILEENA_EXECUTION_KOTAL_RESPONSE_MANUAL_VERIFICATION.md`](./PHASE6_MKX_MILEENA_EXECUTION_KOTAL_RESPONSE_MANUAL_VERIFICATION.md) — Mileena capture/execution actor attribution, Kotal's separate amulet-retention/detention response, and two-branch causality guardrails.
 - [`PHASE6_MKX_DVORAH_BETRAYAL_MANUAL_VERIFICATION.md`](./PHASE6_MKX_DVORAH_BETRAYAL_MANUAL_VERIFICATION.md) — D'Vorah's secret Quan Chi allegiance, amulet theft, escape-for-Quan-Chi boundary, and recovery-vs-theft chronology guardrails.
 - [`PHASE6_MKX_SQUAD_ESCAPE_KOTAL_RETALIATION_MANUAL_VERIFICATION.md`](./PHASE6_MKX_SQUAD_ESCAPE_KOTAL_RETALIATION_MANUAL_VERIFICATION.md) — Takeda's team escape, multi-parent missing-amulet confrontation, Kotal's mistaken D'Vorah/Raiden belief, and retaliation-plan guardrails.
+- [`PHASE6_MKX_QUAN_CHI_CAPTURE_MANUAL_VERIFICATION.md`](./PHASE6_MKX_QUAN_CHI_CAPTURE_MANUAL_VERIFICATION.md) — D'Vorah route reporting, cross-realm communication semantics, Jax/Kenshi/Sareena Netherrealm ambush, Jax pursuit, and Quan Chi capture.
 
 For Phase 6 work, use the slice-specific checklist plus any earlier regression checklist whose shared behavior the slice actually touches.
 

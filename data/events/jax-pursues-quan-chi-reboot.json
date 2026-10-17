@@ -1,0 +1,13 @@
+{
+  "id": "jax-pursues-quan-chi-reboot",
+  "type": "event",
+  "name": "Jax pursues Quan Chi after the Netherrealm ambush",
+  "timelineId": "reboot",
+  "participantIds": ["jax-briggs", "quan-chi"],
+  "realmIds": ["netherrealm"],
+  "causeEventIds": ["jax-kenshi-ambush-quan-chi-reboot"],
+  "consequenceEventIds": ["jax-captures-quan-chi-reboot"],
+  "order": 730,
+  "description": "After the ambush turns against Quan Chi's force and the surviving revenants withdraw, Jax chooses to continue after the weakened sorcerer instead of remaining with the wounded Special Forces troops. This pursuit directly follows from the ambush outcome and leads to Quan Chi's capture.",
+  "tags": ["jax-briggs", "quan-chi", "pursuit", "netherrealm", "mkx"]
+}

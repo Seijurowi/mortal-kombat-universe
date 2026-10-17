@@ -1,0 +1,9 @@
+{
+  "id": "sareena",
+  "type": "character",
+  "name": "Sareena",
+  "timelineIds": ["reboot"],
+  "realmIds": ["netherrealm"],
+  "description": "A Netherrealm native who aids Earthrealm forces against Quan Chi in the Reboot continuity.",
+  "tags": ["netherrealm", "ally"]
+}
