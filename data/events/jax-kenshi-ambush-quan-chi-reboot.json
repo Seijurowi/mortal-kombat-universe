@@ -1,0 +1,13 @@
+{
+  "id": "jax-kenshi-ambush-quan-chi-reboot",
+  "type": "event",
+  "name": "Jax, Kenshi, and Sareena ambush Quan Chi's force",
+  "timelineId": "reboot",
+  "participantIds": ["jax-briggs", "kenshi", "sareena", "quan-chi"],
+  "realmIds": ["netherrealm"],
+  "causeEventIds": [],
+  "consequenceEventIds": ["jax-pursues-quan-chi-reboot"],
+  "order": 720,
+  "description": "In the Netherrealm, Jax Briggs, Kenshi, Sareena, and Special Forces troops ambush Quan Chi and the revenants traveling with him. The Earthrealm operation is already in progress when Cassie's squad reports D'Vorah's route, so that report remains chronology/context rather than an encoded cause of the ambush.",
+  "tags": ["jax-briggs", "kenshi", "sareena", "quan-chi", "ambush", "netherrealm", "mkx"]
+}
