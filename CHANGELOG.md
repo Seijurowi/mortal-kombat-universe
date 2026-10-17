@@ -8,6 +8,7 @@ See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 
 ### Added
 
+- **Phase 6 MKX Quan Chi ambush and capture:** Cassie's squad now reports D'Vorah's likely Sea of Blood route, while the already-underway Netherrealm operation separately follows Jax/Kenshi/Sareena ambushing Quan Chi's force, Jax pursuing the weakened sorcerer, and Jax capturing Quan Chi.
 - **Phase 6 MKX squad escape and Kotal retaliation:** Takeda now frees Cassie's team from Kotal's custody, the escaped squad clashes with Erron Black/Reptile/Ermac over the missing amulet in a true multi-parent causal node, and Kotal's retaliation plan is represented together with his mistaken D'Vorah/Raiden belief.
 - **Phase 6 MKX D'Vorah betrayal and amulet theft:** D'Vorah's private Quan Chi contact, hidden allegiance, theft of Shinnok's amulet from Kotal's custody, and escape from Outworld with the amulet for Quan Chi are now separate sourced Reboot occurrences/Facts.
 - **Phase 6 MKX Mileena execution and Kotal response:** Mileena's capture, Kotal's execution order, and D'Vorah's direct killing are now separate sourced Reboot occurrences, while Kotal's decision to retain Shinnok's amulet and detain Cassie's squad is modeled as a separate security-response branch from the recovered amulet.
@@ -58,6 +59,7 @@ See [`docs/CHANGELOG_POLICY.md`](docs/CHANGELOG_POLICY.md).
 
 ### Changed
 
+- **MKX cross-realm-report/operation boundary:** Kotal retaliation → D'Vorah route report and route report → Quan Chi ambush remain chronology-only, while `Netherrealm ambush → Jax pursuit → Quan Chi capture` is directly causal; the communicator Event carries no fabricated single Realm, Takeda's route language stays report-qualified, and Jax remains the exact capture actor.
 - **MKX objective-truth versus mistaken-belief boundary:** `Kotal detention → Takeda escape` and `Takeda escape + D'Vorah theft → Outworld confrontation → Kotal retaliation plan` are mirrored without connecting the two parent branches to each other; Kotal's D'Vorah/Raiden theory remains belief-qualified, Earthrealm action remains preparation rather than completed invasion, and Reptile's stable Character expands to Reboot instead of being duplicated.
 - **MKX betrayal chronology/causality boundary:** Kotal's detention decision → D'Vorah's secret contact remains chronology-only because her allegiance predates that decision, while `secret contact/order → amulet theft → escape` is directly causal; D'Vorah's earlier authorized recovery remains distinct from the later theft, and physical delivery to Quan Chi remains deferred.
 - **MKX execution/security-response boundary:** `capture → Kotal execution order → D'Vorah execution` preserves ordering-authority versus direct-killer attribution, while `amulet recovery → Kotal retention/detention` remains a separate causal branch so Mileena's death is not falsely presented as the cause of hostage-taking; D'Vorah's later betrayal/theft remains deferred.
