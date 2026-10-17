@@ -1,0 +1,10 @@
+{
+  "id": "kenshi",
+  "type": "character",
+  "name": "Kenshi",
+  "aliases": ["Kenshi Takahashi"],
+  "timelineIds": ["reboot"],
+  "realmIds": ["earthrealm"],
+  "description": "A blind telepathic swordsman and Special Forces ally represented in the Reboot continuity.",
+  "tags": ["earthrealm", "telepath", "swordsman"]
+}
