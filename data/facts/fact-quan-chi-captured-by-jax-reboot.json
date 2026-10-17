@@ -1,0 +1,12 @@
+{
+  "id": "fact-quan-chi-captured-by-jax-reboot",
+  "type": "fact",
+  "name": "Quan Chi was captured by Jax",
+  "subjectId": "quan-chi",
+  "predicate": "captured_by",
+  "objectId": "jax-briggs",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "Mortal Kombat X Story Mode directly shows Jax pursue Quan Chi to his fortress, defeat the remaining resistance, knock Quan Chi unconscious, and report the capture to Kenshi."
+}
