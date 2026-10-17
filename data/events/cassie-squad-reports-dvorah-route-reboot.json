@@ -1,0 +1,13 @@
+{
+  "id": "cassie-squad-reports-dvorah-route-reboot",
+  "type": "event",
+  "name": "Cassie's squad reports D'Vorah's Sea of Blood route",
+  "timelineId": "reboot",
+  "participantIds": ["cassie-cage", "jacqui-briggs", "takeda-takahashi", "kung-jin", "kenshi", "jax-briggs"],
+  "realmIds": [],
+  "causeEventIds": [],
+  "consequenceEventIds": [],
+  "order": 710,
+  "description": "After escaping Kotal Kahn's forces, Cassie's squad reports by communicator that D'Vorah appears to be heading for the Sea of Blood. Jax identifies a secret route there leading toward Quan Chi. Because the Earthrealm team is still in Outworld while Jax and Kenshi are already operating in the Netherrealm, the cross-realm communication has no single Event Realm and does not cause the already-underway Quan Chi operation.",
+  "tags": ["cassie-cage", "takeda-takahashi", "dvorah", "sea-of-blood", "communication", "mkx"]
+}
