@@ -1,0 +1,12 @@
+{
+  "id": "fact-kotal-believed-dvorah-worked-for-raiden-reboot",
+  "type": "fact",
+  "name": "Kotal Kahn believed D'Vorah was working for Raiden",
+  "subjectId": "kotal-kahn",
+  "predicate": "believed_dvorah_worked_for",
+  "objectId": "raiden",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "After the Earthrealm prisoners escape and Shinnok's amulet disappears, Kotal Kahn accepts his retainers' mistaken inference that D'Vorah is working with Raiden. The Fact records Kotal's belief only; the repository separately records the objective Story Mode reveal that D'Vorah secretly serves Quan Chi."
+}

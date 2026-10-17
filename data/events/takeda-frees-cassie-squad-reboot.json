@@ -1,0 +1,13 @@
+{
+  "id": "takeda-frees-cassie-squad-reboot",
+  "type": "event",
+  "name": "Takeda frees Cassie's squad from Kotal's custody",
+  "timelineId": "reboot",
+  "participantIds": ["takeda-takahashi", "cassie-cage", "jacqui-briggs", "kung-jin"],
+  "realmIds": ["outworld"],
+  "causeEventIds": ["kotal-retains-amulet-detains-cassie-squad-reboot"],
+  "consequenceEventIds": ["cassie-squad-clashes-with-kotal-retainers-reboot"],
+  "order": 680,
+  "description": "While Cassie's team remains imprisoned in Outworld, Takeda uses his telepathic abilities to incapacitate a guard, take the keys, and free Cassie, Jacqui, and Kung Jin. The escape directly answers Kotal Kahn's detention decision, while D'Vorah's parallel theft and escape remain a separate branch until the freed team encounters Kotal's retainers.",
+  "tags": ["takeda-takahashi", "cassie-cage", "escape", "outworld", "mkx"]
+}

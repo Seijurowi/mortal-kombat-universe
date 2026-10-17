@@ -1,0 +1,13 @@
+{
+  "id": "cassie-squad-clashes-with-kotal-retainers-reboot",
+  "type": "event",
+  "name": "Cassie's squad clashes with Kotal's retainers over the missing amulet",
+  "timelineId": "reboot",
+  "participantIds": ["cassie-cage", "jacqui-briggs", "takeda-takahashi", "kung-jin", "reptile", "ermac", "erron-black"],
+  "realmIds": ["outworld"],
+  "causeEventIds": ["takeda-frees-cassie-squad-reboot", "dvorah-steals-shinnok-amulet-reboot"],
+  "consequenceEventIds": ["kotal-prepares-earthrealm-retaliation-reboot"],
+  "order": 690,
+  "description": "After Takeda frees the Earthrealm team, Erron Black, Reptile, and Ermac confront them after discovering the prison escape and Shinnok's amulet missing from Kotal's custody. The encounter reveals that D'Vorah took the amulet; the Outworld retainers form the mistaken theory that D'Vorah is aligned with Raiden and helped the Earthrealmers. This Event is a genuine multi-parent node: both the team's escape and the prior amulet theft are required context for the confrontation.",
+  "tags": ["cassie-cage", "takeda-takahashi", "reptile", "ermac", "erron-black", "shinnok-amulet", "outworld", "mkx"]
+}

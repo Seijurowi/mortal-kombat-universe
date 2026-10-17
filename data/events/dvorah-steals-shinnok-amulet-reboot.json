@@ -6,7 +6,7 @@
   "participantIds": ["dvorah"],
   "realmIds": ["outworld"],
   "causeEventIds": ["dvorah-reveals-loyalty-to-quan-chi-reboot"],
-  "consequenceEventIds": ["dvorah-escapes-outworld-with-amulet-reboot"],
+  "consequenceEventIds": ["dvorah-escapes-outworld-with-amulet-reboot", "cassie-squad-clashes-with-kotal-retainers-reboot"],
   "order": 660,
   "description": "Following Quan Chi's instruction, D'Vorah kills the Outworld guards assigned to protect Shinnok's amulet and steals it. This Event records the betrayal/theft itself and remains distinct from her earlier authorized recovery of the amulet from Mileena's camp.",
   "tags": ["dvorah", "shinnok-amulet", "theft", "betrayal", "outworld", "mkx"]

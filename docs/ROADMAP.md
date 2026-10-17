@@ -398,26 +398,36 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - D'Vorah's double-agent reveal, theft, and Quan Chi movement remain outside that slice;
 - merged as verified commit `cde8703a26f8f9b83f6cc01ffb31843076acac8d` after maintainer manual/source review, final contract review, and final-head CI.
 
-### Current MKX D'Vorah betrayal and amulet theft
+### MKX D'Vorah betrayal and amulet theft ✅ — PR #45
 
-**Current work:** `agent/phase6-mkx-dvorah-betrayal`, branched exactly from verified PR #44 merge commit `cde8703a26f8f9b83f6cc01ffb31843076acac8d`.
+- Kotal detention → D'Vorah secret contact remains chronology-only because her allegiance predates Kotal's decision;
+- the directly supported `secret contact/order → amulet theft → escape` chain is causal;
+- D'Vorah's earlier authorized recovery and later theft remain distinct historical occurrences;
+- escape-with-for-Quan-Chi evidence does not prematurely claim physical delivery;
+- merged as verified commit `3b431774d774aa4f3c6705fd1402cc79f805c8ad` after maintainer manual/source review, final contract review, and final-head CI.
 
-- [x] Start exactly from verified PR #44 merge commit `cde8703a26f8f9b83f6cc01ffb31843076acac8d`.
-- [x] Add D'Vorah's private Quan Chi contact/secret-allegiance reveal as a distinct Event at story order 650.
-- [x] Keep Kotal detention → D'Vorah secret contact chronology-only because her allegiance predates Kotal's decision.
-- [x] Add D'Vorah killing the amulet guards and stealing Shinnok's amulet as a distinct Event at story order 660.
-- [x] Add D'Vorah escaping Outworld with the amulet for Quan Chi as a distinct Event at story order 670.
-- [x] Mirror direct `secret contact/order → theft → escape` causality.
-- [x] Add sourced Facts for D'Vorah secretly serving Quan Chi, Quan Chi ordering her to bring the amulet, D'Vorah stealing it, and D'Vorah escaping with it for Quan Chi.
-- [x] Keep D'Vorah's earlier authorized recovery and later betrayal-theft as separate historical occurrences rather than contradiction/retcon.
-- [x] Do not claim physical delivery to Quan Chi has already occurred.
-- [x] Keep Takeda freeing Cassie's squad, the squad discovering the betrayal, Kotal's mistaken Earthrealm inference, and later Quan Chi/Shinnok-release material outside this slice.
-- [x] Avoid introducing incidental guard Characters or a first-class Artifact entity.
-- [x] Extend MKX Story Mode source notes for the secret-contact/theft/escape sequence.
-- [x] Add/index a Phase 6 D'Vorah betrayal manual with action-level maintainer test cases.
-- [x] Review/update `CHANGELOG.md` for betrayal chronology/causality and recovery-vs-theft boundaries.
-- [x] Confirm final changed-file scope is limited to the expected source/event/fact/docs files.
-- [x] Open Draft PR #45 for the slice.
+### Current MKX squad escape and Kotal retaliation
+
+**Current work:** `agent/phase6-mkx-squad-escape-kotal-retaliation`, branched exactly from verified PR #45 merge commit `3b431774d774aa4f3c6705fd1402cc79f805c8ad`.
+
+- [x] Start exactly from verified PR #45 merge commit `3b431774d774aa4f3c6705fd1402cc79f805c8ad`.
+- [x] Add Takeda freeing Cassie's squad from Kotal's custody as a distinct Event at story order 680.
+- [x] Mirror direct `Kotal detention → Takeda escape` causality.
+- [x] Add the escaped squad's confrontation with Erron Black, Reptile, and Ermac as a distinct Event at story order 690.
+- [x] Model the confrontation as a true multi-parent node: `Takeda escape + D'Vorah amulet theft → confrontation`.
+- [x] Do not connect Takeda's escape and D'Vorah's theft to each other with a fabricated causal edge.
+- [x] Add Kotal preparing retaliation against Earthrealm as a distinct Event at story order 700.
+- [x] Mirror direct `confrontation/report → Kotal retaliation plan` causality.
+- [x] Keep Kotal's theory that D'Vorah works for Raiden explicitly belief-qualified rather than objective truth.
+- [x] Keep Kotal's Earthrealm action at plan/preparation strength rather than completed-invasion strength.
+- [x] Add sourced Facts for Takeda freeing the squad, the squad learning D'Vorah stole the amulet, Kotal's mistaken belief, and Kotal's invasion preparation.
+- [x] Expand stable Reptile from Original to Original + Reboot rather than duplicating him by continuity.
+- [x] Add stable Reboot Ermac and Erron Black Characters as direct named participants in the confrontation.
+- [x] Extend MKX Story Mode source notes for the escape/confrontation/retaliation sequence.
+- [x] Add/index a Phase 6 squad-escape/Kotal-retaliation manual with action-level maintainer test cases.
+- [x] Review/update `CHANGELOG.md` for multi-parent causality and belief-vs-objective-truth boundaries.
+- [x] Confirm final changed-file scope is limited to the expected source/character/event/fact/docs files.
+- [x] Open Draft PR #46 for the slice.
 - [x] Maintainer manual source/UI pass completed.
 - [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
 - Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
@@ -425,9 +435,9 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 
 ### Next lore slices
 
-1. Add Takeda freeing Cassie's squad and the team's discovery of D'Vorah's betrayal/theft as separate source-supported occurrences.
-2. Preserve Outworld retainers' mistaken inference that D'Vorah freed the Earthrealmers / took the amulet to Raiden as character belief rather than objective truth, then model Kotal's retaliation decision.
-3. Add Quan Chi capture, Scorpion's intervention, D'Vorah arrival, and Shinnok's release as separate occurrences.
+1. Add Cassie's team reaching Earthrealm / warning Special Forces about D'Vorah and Quan Chi without conflating travel/reporting with Kotal's retaliation plan.
+2. Add Jax/Kenshi's Netherrealm assault and Quan Chi capture as separate source-supported occurrences.
+3. Add Scorpion/Hanzo's intervention, D'Vorah arrival, and Shinnok's release as separate occurrences with exact actor attribution.
 4. Continue through the remaining MKX chapters with chronology/causality separation.
 5. Continue into MK11 once MKX chronology is dense enough to avoid large narrative gaps.
 
@@ -491,7 +501,10 @@ A user should be able to:
 54. read Kotal's earlier cooperation and later detention as changing decisions under new circumstances rather than an automatic retcon;
 55. follow `D'Vorah secret Quan Chi contact → amulet theft → escape` without being told Kotal's detention caused her pre-existing betrayal;
 56. distinguish D'Vorah's earlier authorized amulet recovery from her later theft without treating the two records as contradictory;
-57. see escape-with-for-Quan-Chi evidence without prematurely claiming physical delivery has already occurred.
+57. see escape-with-for-Quan-Chi evidence without prematurely claiming physical delivery has already occurred;
+58. follow `Kotal detention → Takeda escape` and the multi-parent `Takeda escape + D'Vorah theft → confrontation` node without a fabricated edge between those parent branches;
+59. compare objective `D'Vorah secretly served Quan Chi` evidence with Kotal's contrary `believed D'Vorah worked for Raiden` Fact without treating belief as objective truth;
+60. see Kotal's Earthrealm response remain a preparation/plan rather than a completed invasion occurrence.
 
 ## Later infrastructure — only when justified
 

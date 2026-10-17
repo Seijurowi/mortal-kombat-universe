@@ -3,7 +3,8 @@
   "type": "character",
   "name": "Reptile",
   "aliases": ["Syzoth"],
-  "timelineIds": ["original"],
-  "description": "A Saurian warrior in the original continuity whose body later served as Onaga's host during the Dragon King's return.",
-  "tags": ["saurian", "host"]
+  "timelineIds": ["original", "reboot"],
+  "realmIds": ["outworld"],
+  "description": "A Saurian warrior represented in the Original and Reboot continuities; in Reboot MKX he serves Kotal Kahn in Outworld.",
+  "tags": ["saurian", "outworld", "host"]
 }
