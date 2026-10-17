@@ -1,0 +1,13 @@
+{
+  "id": "jax-captures-quan-chi-reboot",
+  "type": "event",
+  "name": "Jax captures Quan Chi in the Netherrealm",
+  "timelineId": "reboot",
+  "participantIds": ["jax-briggs", "quan-chi"],
+  "realmIds": ["netherrealm"],
+  "causeEventIds": ["jax-pursues-quan-chi-reboot"],
+  "consequenceEventIds": [],
+  "order": 740,
+  "description": "Jax reaches Quan Chi's fortress, defeats the remaining resistance around the weakened sorcerer, and knocks Quan Chi unconscious to capture him. Jax then tells Kenshi to take Quan Chi to Sonya while he remains behind expecting D'Vorah to arrive. Transport to Earthrealm and the later Scorpion/D'Vorah/Shinnok sequence remain separate later occurrences.",
+  "tags": ["jax-briggs", "quan-chi", "capture", "netherrealm", "mkx"]
+}
