@@ -1,0 +1,12 @@
+{
+  "id": "fact-takeda-reported-dvorah-sea-of-blood-route-reboot",
+  "type": "fact",
+  "name": "Takeda reported D'Vorah was heading toward the Sea of Blood",
+  "subjectId": "takeda-takahashi",
+  "predicate": "reported_dvorah_heading_to",
+  "value": "Sea of Blood",
+  "timelineIds": ["reboot"],
+  "canonStatus": "canon",
+  "sourceIds": ["mkx-story"],
+  "notes": "Mortal Kombat X Story Mode shows Takeda tell Kenshi that the squad believes D'Vorah is heading toward the Sea of Blood. Jax then identifies a secret route there connected to Quan Chi. The Fact preserves the team's report/belief rather than claiming Takeda directly observed D'Vorah's destination."
+}
