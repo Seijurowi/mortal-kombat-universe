@@ -406,38 +406,48 @@ Kickoff coverage audit found the Event store heavily weighted toward Original co
 - escape-with-for-Quan-Chi evidence does not prematurely claim physical delivery;
 - merged as verified commit `3b431774d774aa4f3c6705fd1402cc79f805c8ad` after maintainer manual/source review, final contract review, and final-head CI.
 
-### Current MKX squad escape and Kotal retaliation
+### MKX squad escape and Kotal retaliation ✅ — PR #46
 
-**Current work:** `agent/phase6-mkx-squad-escape-kotal-retaliation`, branched exactly from verified PR #45 merge commit `3b431774d774aa4f3c6705fd1402cc79f805c8ad`.
+- `Kotal detention → Takeda escape` is directly supported;
+- `Takeda escape + D'Vorah theft → missing-amulet confrontation` is a real multi-parent causal node without a fabricated edge between the two parent branches;
+- Kotal's D'Vorah/Raiden theory remains belief-qualified while the objective Quan Chi allegiance record remains separately true;
+- Kotal's Earthrealm response remains preparation/plan rather than a completed invasion;
+- Reptile's stable Character expands to Reboot and direct named participants Ermac/Erron Black are added without version duplication;
+- merged as verified commit `aead00998da38a4293db6ef1cca100067f1c56c8` after maintainer manual/source review, final contract review, and final-head CI.
 
-- [x] Start exactly from verified PR #45 merge commit `3b431774d774aa4f3c6705fd1402cc79f805c8ad`.
-- [x] Add Takeda freeing Cassie's squad from Kotal's custody as a distinct Event at story order 680.
-- [x] Mirror direct `Kotal detention → Takeda escape` causality.
-- [x] Add the escaped squad's confrontation with Erron Black, Reptile, and Ermac as a distinct Event at story order 690.
-- [x] Model the confrontation as a true multi-parent node: `Takeda escape + D'Vorah amulet theft → confrontation`.
-- [x] Do not connect Takeda's escape and D'Vorah's theft to each other with a fabricated causal edge.
-- [x] Add Kotal preparing retaliation against Earthrealm as a distinct Event at story order 700.
-- [x] Mirror direct `confrontation/report → Kotal retaliation plan` causality.
-- [x] Keep Kotal's theory that D'Vorah works for Raiden explicitly belief-qualified rather than objective truth.
-- [x] Keep Kotal's Earthrealm action at plan/preparation strength rather than completed-invasion strength.
-- [x] Add sourced Facts for Takeda freeing the squad, the squad learning D'Vorah stole the amulet, Kotal's mistaken belief, and Kotal's invasion preparation.
-- [x] Expand stable Reptile from Original to Original + Reboot rather than duplicating him by continuity.
-- [x] Add stable Reboot Ermac and Erron Black Characters as direct named participants in the confrontation.
-- [x] Extend MKX Story Mode source notes for the escape/confrontation/retaliation sequence.
-- [x] Add/index a Phase 6 squad-escape/Kotal-retaliation manual with action-level maintainer test cases.
-- [x] Review/update `CHANGELOG.md` for multi-parent causality and belief-vs-objective-truth boundaries.
-- [x] Confirm final changed-file scope is limited to the expected source/character/event/fact/docs files.
-- [x] Open Draft PR #46 for the slice.
-- [x] Maintainer manual source/UI pass completed.
-- [x] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed with no known correctness blocker.
+### Current MKX Quan Chi ambush and capture
+
+**Current work:** `agent/phase6-mkx-quan-chi-capture`, branched exactly from verified PR #46 merge commit `aead00998da38a4293db6ef1cca100067f1c56c8`.
+
+- [x] Start exactly from verified PR #46 merge commit `aead00998da38a4293db6ef1cca100067f1c56c8`.
+- [x] Add stable Reboot Kenshi and Sareena Characters as direct named actors required by the Netherrealm operation.
+- [x] Add Cassie's squad reporting D'Vorah's likely Sea of Blood route as a cross-realm communication Event at story order 710.
+- [x] Leave the cross-realm communication without a fabricated single Event Realm.
+- [x] Keep Kotal retaliation → route report chronology-only.
+- [x] Keep route report → Quan Chi ambush chronology-only because Jax/Kenshi are already operating in the Netherrealm.
+- [x] Add Jax/Kenshi/Sareena ambushing Quan Chi's force as a distinct Event at story order 720.
+- [x] Add Jax pursuing Quan Chi after the ambush as a distinct Event at story order 730.
+- [x] Add Jax capturing Quan Chi in the Netherrealm as a distinct Event at story order 740.
+- [x] Mirror only the directly supported `ambush → Jax pursuit → Quan Chi capture` causal chain.
+- [x] Add a report-qualified Fact for Takeda's Sea of Blood destination statement.
+- [x] Add a sourced Fact for Sareena aiding the anti-Quan-Chi operation.
+- [x] Add a canon `captured_by = Jax` Fact for Quan Chi.
+- [x] Keep Quan Chi transport to Earthrealm, refugee-camp imprisonment, Scorpion intervention, Quan Chi death, D'Vorah arrival, and Shinnok release outside this slice.
+- [x] Extend MKX Story Mode source notes for the route-report/ambush/pursuit/capture sequence.
+- [x] Add/index a Phase 6 Quan Chi capture manual with action-level maintainer test cases.
+- [x] Review/update `CHANGELOG.md` for chronology-vs-causality, cross-realm communication, and exact capture attribution.
+- [ ] Confirm final changed-file scope is limited to the expected source/character/event/fact/docs files.
+- [ ] Open Draft PR for the slice.
+- [ ] Maintainer manual source/UI pass completed.
+- [ ] Final `AGENTS.md` + `LORE_MODEL.md` + `DEFINITION_OF_DONE.md` review completed.
 - Final-head CI must be green before Ready for review; CI state is owned by PR checks rather than duplicated as a fragile checkbox here.
 - [ ] Merge only after explicit user/maintainer action.
 
 ### Next lore slices
 
-1. Add Cassie's team reaching Earthrealm / warning Special Forces about D'Vorah and Quan Chi without conflating travel/reporting with Kotal's retaliation plan.
-2. Add Jax/Kenshi's Netherrealm assault and Quan Chi capture as separate source-supported occurrences.
-3. Add Scorpion/Hanzo's intervention, D'Vorah arrival, and Shinnok's release as separate occurrences with exact actor attribution.
+1. Add Kenshi transporting Quan Chi to Earthrealm and Quan Chi's refugee-camp imprisonment/interrogation as separate source-supported occurrences.
+2. Add Scorpion/Hanzo's intervention and Quan Chi's death with exact actor/order attribution.
+3. Add D'Vorah's arrival with the amulet and Shinnok's release as separate occurrences without collapsing the timing race into one umbrella Event.
 4. Continue through the remaining MKX chapters with chronology/causality separation.
 5. Continue into MK11 once MKX chronology is dense enough to avoid large narrative gaps.
 
@@ -504,7 +514,10 @@ A user should be able to:
 57. see escape-with-for-Quan-Chi evidence without prematurely claiming physical delivery has already occurred;
 58. follow `Kotal detention → Takeda escape` and the multi-parent `Takeda escape + D'Vorah theft → confrontation` node without a fabricated edge between those parent branches;
 59. compare objective `D'Vorah secretly served Quan Chi` evidence with Kotal's contrary `believed D'Vorah worked for Raiden` Fact without treating belief as objective truth;
-60. see Kotal's Earthrealm response remain a preparation/plan rather than a completed invasion occurrence.
+60. see Kotal's Earthrealm response remain a preparation/plan rather than a completed invasion occurrence;
+61. read Cassie's D'Vorah route report as cross-realm chronology/context without a fabricated single Realm or report→ambush causal edge;
+62. follow the directly supported `Quan Chi ambush → Jax pursuit → Quan Chi capture` chain while keeping Jax as the exact capture actor;
+63. inspect Takeda's Sea of Blood statement as report-qualified evidence and Sareena's operation role without manufacturing a larger participant roster.
 
 ## Later infrastructure — only when justified
 
